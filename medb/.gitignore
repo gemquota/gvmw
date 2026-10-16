@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+/runs/
+/experiment/envelopes/
+*.sqlite
+/data/
+.~lock.*#
+/imports/

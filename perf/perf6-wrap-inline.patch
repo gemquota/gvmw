@@ -1,0 +1,47 @@
+diff --git a/src/physics/solver.js b/src/physics/solver.js
+index 0cc8da1..9e3519b 100644
+--- a/src/physics/solver.js
++++ b/src/physics/solver.js
+@@ -141,7 +141,7 @@ const REQ_SYMBIOSIS = Object.freeze({ resource: 0.2, behavioral: 0.2 });
+ const REQ_PARASITE = Object.freeze({ resource: 0.05 });
+ import { applyAlloy, adjoinParticles, maintainAdjoinedPair, isBondedPair, isAccretionPair } from './mergePhysics.js';
+ import { applyTide, applyFriction, applyHorizon, applyRadiationPressure, applyMassInertia, applyField } from './lawgroups/physicsLaws.js';
+-import { applyContactCorrection, applyCollisionImpulse, applyMomentum, applyTorque, applyConstraint, applyFragmentation, applyTopology, applyAdhesion, applyWrapBoundary } from './lawgroups/mechanicsLaws.js';
++import { applyContactCorrection, applyCollisionImpulse, applyMomentum, applyTorque, applyConstraint, applyFragmentation, applyTopology, applyAdhesion, wrapCoordinate } from './lawgroups/mechanicsLaws.js';
+ import { applyAdiabatic, applyCompression, applyExpansion, applyEquilibrium, applyLatentHeat, applyRunaway } from './lawgroups/thermoLaws.js';
+ import { applySymbiosis, applyParasite, applyHibernation, applyImmunity } from './lawgroups/biologyLaws.js';
+ import { applyElectrolysis, applyPhotolysis, applyPrecipitation, applyNeutralization, applyStoichiometry, applyAutocatalysis } from './lawgroups/chemistryLaws.js';
+@@ -1752,15 +1752,24 @@ export function solve(particleBuffer, particleCount, stride, lawState, dnaBuffer
+     // and the param is what seeds the bit at world load (see `syncWrapLaw`).
+     {
+       const wallReflect = Number.isFinite(WP.WALL_REFLECT) ? WP.WALL_REFLECT : 1;
+-      const boundary = applyWrapBoundary(
+-        { x: px, y: py, z: pz },
+-        { x: vx, y: vy, z: vz },
+-        worldSize,
+-        active[LAW_INDEXES.WRAP],
+-        wallReflect,
+-      );
+-      px = boundary.position.x; py = boundary.position.y; pz = boundary.position.z;
+-      vx = boundary.velocity.x; vy = boundary.velocity.y; vz = boundary.velocity.z;
++      // PERF-6: the per-particle body of applyWrapBoundary (mechanicsLaws.js),
++      // inlined so the hot loop allocates nothing (it built 5 objects and a
++      // `touched` array per particle per tick). Same arithmetic, same axis
++      // order. Keep the two in step: golden-parity covers both branches
++      // (WRAP on in all-laws/category-mechanics, walls in the rest).
++      const wrapBit = active[LAW_INDEXES.WRAP];
++      if (wrapBit === undefined || wrapBit) {
++        px = wrapCoordinate(px, worldSize);
++        py = wrapCoordinate(py, worldSize);
++        pz = wrapCoordinate(pz, worldSize);
++      } else {
++        if (px < 0) { px = 0; vx = Math.abs(vx) * wallReflect; }
++        else if (px >= worldSize) { px = worldSize - 0.01; vx = -Math.abs(vx) * wallReflect; }
++        if (py < 0) { py = 0; vy = Math.abs(vy) * wallReflect; }
++        else if (py >= worldSize) { py = worldSize - 0.01; vy = -Math.abs(vy) * wallReflect; }
++        if (pz < 0) { pz = 0; vz = Math.abs(vz) * wallReflect; }
++        else if (pz >= worldSize) { pz = worldSize - 0.01; vz = -Math.abs(vz) * wallReflect; }
++      }
+     }
+ 
+     // ── Field medium: portals + hard walls (v8.2 E.1) ──

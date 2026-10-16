@@ -1,0 +1,15 @@
+# Chain state: Friday 16 Oct 2026 (Brisbane, AEST)
+
+Owner: P1 (Ops) Mender. Written 16 Oct 2026, 8:08am AEST, by a manual Mender run (not the 10:50am routine, which isn't due yet). Today is not a missed run.
+
+| Step | Bot | Status | Evidence | Notes |
+|---|---|---|---|---|
+| 1 | P1 (Checks) Scorer | Done | `/workspace/governance/assessments/2026-10-16.md` (created 7:50:43am, last written 7:51:37am) | Handoff to Scrutineer at 7:51am (per both files). Weekly scorecard is Mondays, not due today |
+| 2 | P2 (Checks) Scrutineer | Done | `/workspace/governance/reviews/2026-10-16.md` (8:04:29am) | Started from Scorer's handoff |
+| 3 | P1 (Roles) Architect | Pending | No `proposals/2026-10-16/` yet at 8:08am | Next step |
+| 4 | Approver | Pending | — | P4 has been live since 11:30pm 15 Oct, so Imitator approves, except changes to Imitator or Investigator, which go to Gem (R-015) |
+| 5 | P1 (Roles) Archivist | Pending | — | After approval |
+| Digest | P1 (Work) Explorer | Done, late | `digest/sent/2026-10-16.md` (7:49:08am) | Due 7:41am. First digest since 10 Oct |
+| Watchdog | P1 (Ops) Mender | Routine not yet run today | — | Four unpaid-invoice failure notices for Mender's routine arrived together this morning. Today's 10:50am run will show whether it works again (INC-007) |
+
+Lookback: weekdays since `state/chain/2026-10-09.md` with no chain record on the day were Mon 12, Tue 13, Wed 14 and Thu 15 Oct (Sat 10 and Sun 11 are weekend). Lookback files for all four were written this morning. R-011: no missing-Scorer report reached Mender on any of those days (gap). INC-006's closing condition was met at about 8:05am today (Scrutineer S4). It is awaiting Scrutineer or Gem to close.

@@ -1,0 +1,382 @@
+{
+  "project": "vepa-v4",
+  "schema": "signoff-manifest/v1",
+  "description": "Current audit sign-offs. Each record classifies a claim, names its runtime implementation and dispatch evidence, and links executable tests (or an explicit not-tested status). Validated by scripts/validate-signoff.mjs via npm run repository:check.",
+  "records": [
+    {
+      "id": "exact-cpu-solver",
+      "claim": "The reference pairwise CPU solver (gravEngine 'reference'; 'exact' is a permanent legacy alias) is the default runtime path and the parity reference for every approximate backend.",
+      "status": "operational",
+      "implementation": "src/physics/solver.js",
+      "dispatch": "Every law is gated with isSet(lawState, LAW_INDEXES.*) inside solve(); runtimeConfig.gravEngine defaults to 'reference' (alias 'exact').",
+      "tests": [
+        "tests/unit/physics.test.js",
+        "tests/unit/lawGating.test.js",
+        "tests/unit/backendArchitecture.test.js",
+        "tests/unit/gravEngineAlias.test.js"
+      ]
+    },
+    {
+      "id": "barnes-hut-octree",
+      "claim": "Barnes-Hut octree gravity is an opt-in approximate backend with a measured error envelope against the exact reference.",
+      "status": "experimental",
+      "implementation": "src/physics/octree.js",
+      "dispatch": "runtimeConfig.gravEngine === 'bh' selects octreeGravity in solver.js.",
+      "tests": [
+        "tests/unit/octree.test.js",
+        "tests/unit/fmmParity.test.js"
+      ],
+      "notes": "Envelope measurements live in docs/BACKEND_ENVELOPES.md; exact solver remains the reference."
+    },
+    {
+      "id": "fmm-backend",
+      "claim": "The FMM cell evaluator is retained as an experimental opt-in backend; it is measured outside the shared error envelope and is never eligible to become the default backend.",
+      "status": "experimental",
+      "implementation": "src/physics/fmm.js",
+      "dispatch": "runtimeConfig.gravEngine === 'fmm' selects fmmGravity in solver.js; default remains exact.",
+      "tests": [
+        "tests/unit/fmmParity.test.js",
+        "tests/unit/backendArchitecture.test.js"
+      ],
+      "notes": "Decision recorded in docs/FEATURE_STATUS_MATRIX.md §3 and docs/BACKEND_ENVELOPES.md."
+    },
+    {
+      "id": "webgpu-compute",
+      "claim": "WebGPU gravity compute is an opt-in backend with a deterministic CPU fallback contract.",
+      "status": "experimental",
+      "implementation": "src/physics/gpuCompute.js",
+      "dispatch": "runtimeConfig.computeEngine === 'gpu' in physics.worker.js with GPU_FALLBACK on device failure; CONTACT/COLL stay CPU-owned.",
+      "tests": [
+        "tests/unit/webgpuContract.test.js",
+        "tests/e2e/physics-worker.spec.js",
+        "tests/unit/backendArchitecture.test.js"
+      ],
+      "notes": "Hardware WebGPU parity remains an external-environment gate: the browser spec runs GPU-vs-CPU comparison when a device is granted and asserts bounded fallback when navigator.gpu is absent."
+    },
+    {
+      "id": "mechanics-pair-geometry",
+      "claim": "Mechanics pair geometry is consolidated behind one shared scalar contract for diagnostics and orchestration consumers.",
+      "status": "proxy",
+      "implementation": "src/physics/pairGeometry.js",
+      "dispatch": "getPairGeometry feeds mechanicsDiagnostics and tests; the solver hot path uses equivalent allocation-free local scalars documented as performance-specialized.",
+      "tests": [
+        "tests/unit/mechanicsArchitecture.test.js"
+      ]
+    },
+    {
+      "id": "mechanics-diagnostics",
+      "claim": "Mechanics pair diagnostics are opt-in and side-effect free.",
+      "status": "proxy",
+      "implementation": "src/physics/mechanicsDiagnostics.js",
+      "dispatch": "inspectMechanicsPair is an explicit inspection utility; no solver gate consumes it by default.",
+      "tests": [
+        "tests/unit/mechanicsArchitecture.test.js"
+      ]
+    },
+    {
+      "id": "contact-law",
+      "claim": "CONTACT performs geometric separation correction and stays distinct from impact impulse.",
+      "status": "operational",
+      "law": "CONTACT",
+      "implementation": "src/physics/lawgroups/mechanicsLaws.js",
+      "dispatch": "isSet(lawState, LAW_INDEXES.CONTACT) gates the solver contact pass.",
+      "tests": [
+        "tests/unit/mechanics.test.js",
+        "tests/unit/mechanicsArchitecture.test.js"
+      ]
+    },
+    {
+      "id": "coll-law",
+      "claim": "COLL performs impact response as an operational proxy distinct from CONTACT geometry correction.",
+      "status": "proxy",
+      "law": "COLL",
+      "implementation": "src/physics/lawgroups/mechanicsLaws.js",
+      "dispatch": "isSet(lawState, LAW_INDEXES.COLL) gates the solver collision pass.",
+      "tests": [
+        "tests/unit/mechanics.test.js",
+        "tests/unit/physics.test.js"
+      ]
+    },
+    {
+      "id": "electric-field-law",
+      "claim": "ELECTRIC_FIELD applies the per-particle polarity drift (applyFieldDrift); FIELD applies only the central-field gradient.",
+      "status": "operational",
+      "law": "ELECTRIC_FIELD",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "active[LAW_INDEXES.ELECTRIC_FIELD] gates applyFieldDrift in solve() (src/physics/solver.js, per-particle electromagnetism block); FIELD gates applyField in the neighbour pass. Decision D-005 (2026-10-03).",
+      "tests": [
+        "tests/unit/electricFieldSplit.test.js",
+        "tests/audit/batch_14.test.js"
+      ]
+    },
+    {
+      "id": "law-registry",
+      "claim": "The 136-law registry is a metadata catalogue; registry presence does not prove behavioral depth for each law.",
+      "status": "metadata-only",
+      "implementation": "src/constants.js",
+      "tests": [
+        "tests/unit/lawCategories.test.js",
+        "tests/unit/lawImplementationManifest.test.js"
+      ]
+    },
+    {
+      "id": "law-ontology",
+      "claim": "The law relationship ontology is validated metadata with honestly reported coverage; it is descriptive evidence, never executable proof.",
+      "status": "metadata-only",
+      "implementation": "src/state/lawOntology.js",
+      "tests": [
+        "tests/unit/lawOntologyCoverage.test.js",
+        "tests/unit/lawGraph.test.js"
+      ]
+    },
+    {
+      "id": "systems-lifecycle-variants",
+      "claim": "The 48-variant systems lifecycle registry is operational with deterministic topology, relationships, and replay reporting.",
+      "status": "operational",
+      "implementation": "src/state/systemLifecycle.js",
+      "dispatch": "Lifecycle serialization/restore is consumed by worldSave save/load flows.",
+      "tests": [
+        "tests/unit/systemVariants.test.js",
+        "tests/unit/systemLifecycle.test.js"
+      ]
+    },
+    {
+      "id": "renderer-backend-selection",
+      "claim": "The renderer backend (PixiJS or Canvas2D) is user-selectable with automatic fallback when WebGL is unavailable.",
+      "status": "operational",
+      "implementation": "src/render/renderer.js",
+      "dispatch": "vepa-render-backend runtimeConfig selects the backend; renderer falls back to Canvas2D without WebGL.",
+      "tests": [
+        "tests/unit/renderer.test.js"
+      ],
+      "notes": "Performance comparison: docs/RENDERER_BENCHMARK_REPORT.md (bench:render artifact bench/results/renderer-benchmark.json)."
+    },
+    {
+      "id": "audit-provenance",
+      "claim": "Audit stage provenance manifests are present and validated for every declared audit stage family.",
+      "status": "metadata-only",
+      "implementation": "docs/audit/provenance.json",
+      "tests": [
+        "tests/unit/provenance.test.js"
+      ]
+    },
+    {
+      "id": "export-publication",
+      "claim": "Export snapshots follow a declared publication contract that is currently configured but not published.",
+      "status": "metadata-only",
+      "implementation": "exports/publication-plan.json",
+      "evidence": "not-tested",
+      "notes": "Validated by scripts/check-export-publication.mjs (npm run exports:check), not yet by an executable test — explicit evidence gap."
+    },
+    {
+      "id": "historical-tooling",
+      "claim": "Legacy runners and migration utilities are classified historical and excluded from active verification.",
+      "status": "historical",
+      "implementation": "scripts/patch-lawcat-test.mjs",
+      "evidence": "not-tested",
+      "notes": "Artifact inventory (npm run artifact:inventory) classifies scripts/patch-lawcat-test.mjs and tests/run.mjs as historical; they must never be invoked by CI or release gates."
+    },
+    {
+      "id": "priority-law-grav",
+      "law": "GRAV",
+      "claim": "GRAV (force): pulls a two-body pair together; gated off it does nothing; boundary: stays finite for coincident particles.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.GRAV] / isSet(lawState, LAW_INDEXES.GRAV) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-charge-law",
+      "law": "CHARGE_LAW",
+      "claim": "CHARGE_LAW (force): opposite charges approach, like charges separate; boundary: neutral particles feel no force.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.CHARGE_LAW] / isSet(lawState, LAW_INDEXES.CHARGE_LAW) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-drag",
+      "law": "DRAG",
+      "claim": "DRAG (force): reduces speed monotonically; boundary: never reverses velocity direction.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.DRAG] / isSet(lawState, LAW_INDEXES.DRAG) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-electric-field",
+      "law": "ELECTRIC_FIELD",
+      "claim": "ELECTRIC_FIELD (force): accelerates charged particles; boundary: leaves neutral particles unaccelerated.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.ELECTRIC_FIELD] / isSet(lawState, LAW_INDEXES.ELECTRIC_FIELD) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-life",
+      "law": "LIFE",
+      "claim": "LIFE (lifecycle): metabolism advances hunger and a starving particle dies; boundary: never touches a dead particle.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.LIFE] / isSet(lawState, LAW_INDEXES.LIFE) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-repro",
+      "law": "REPRO",
+      "claim": "REPRO (lifecycle): mature, driven particles produce offspring; boundary: immature particles (age < 100) never reproduce.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.REPRO] / isSet(lawState, LAW_INDEXES.REPRO) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-senescence",
+      "law": "SENESCENCE",
+      "claim": "SENESCENCE (lifecycle): old particles die over time; boundary: young particles (age ≤ 500) never die of age.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.SENESCENCE] / isSet(lawState, LAW_INDEXES.SENESCENCE) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-energy",
+      "law": "ENERGY",
+      "claim": "ENERGY (lifecycle): equalises energy between neighbours and conserves the total; boundary: equal-energy neighbours exchange nothing.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.ENERGY] / isSet(lawState, LAW_INDEXES.ENERGY) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-coll",
+      "law": "COLL",
+      "claim": "COLL (structural): separates overlapping particles; boundary: keeps speeds finite and bounded.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.COLL] / isSet(lawState, LAW_INDEXES.COLL) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-contact",
+      "law": "CONTACT",
+      "claim": "CONTACT (structural): pushes overlapping particles apart; boundary: leaves well-separated particles untouched.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.CONTACT] / isSet(lawState, LAW_INDEXES.CONTACT) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-bond",
+      "law": "BOND",
+      "claim": "BOND (structural): forms reciprocal bonds between near neighbours; boundary: never bonds a particle to itself or duplicates a partner.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.BOND] / isSet(lawState, LAW_INDEXES.BOND) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-memory",
+      "law": "MEMORY",
+      "claim": "MEMORY (information): accumulates memory in particles; boundary: keeps memory finite and non-negative.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.MEMORY] / isSet(lawState, LAW_INDEXES.MEMORY) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-signal-boost",
+      "law": "SIGNAL_BOOST",
+      "claim": "SIGNAL_BOOST (information): relays signal from a signalling particle to a neighbour; boundary: silent particles (signal ≤ 0.01) relay nothing and signal stays ≤ 1.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.SIGNAL_BOOST] / isSet(lawState, LAW_INDEXES.SIGNAL_BOOST) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-learn",
+      "law": "LEARN",
+      "claim": "LEARN (information): aligns neighbour velocities; boundary: leaves already-aligned particles aligned.",
+      "status": "operational",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.LEARN] / isSet(lawState, LAW_INDEXES.LEARN) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ]
+    },
+    {
+      "id": "priority-law-superposition",
+      "law": "SUPERPOSITION",
+      "claim": "SUPERPOSITION (quantum): prepares superposed amplitudes; boundary: amplitudes stay finite and within [0, 1].",
+      "status": "proxy",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.SUPERPOSITION] / isSet(lawState, LAW_INDEXES.SUPERPOSITION) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ],
+      "notes": "Quantum laws are bounded proxies over stride flags, not quantum mechanics; see src/physics/quantumStateMachine.js."
+    },
+    {
+      "id": "priority-law-wave-particle",
+      "law": "WAVE_PARTICLE",
+      "claim": "WAVE_PARTICLE (quantum): a measured particle decays back to wave mode; boundary: an unmeasured isolated particle stays in wave mode.",
+      "status": "proxy",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.WAVE_PARTICLE] / isSet(lawState, LAW_INDEXES.WAVE_PARTICLE) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ],
+      "notes": "Quantum laws are bounded proxies over stride flags, not quantum mechanics; see src/physics/quantumStateMachine.js."
+    },
+    {
+      "id": "priority-law-entanglement",
+      "law": "ENTANGLEMENT",
+      "claim": "ENTANGLEMENT (quantum): entangles neighbours with reciprocal links; boundary: isolated particles stay free.",
+      "status": "proxy",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.ENTANGLEMENT] / isSet(lawState, LAW_INDEXES.ENTANGLEMENT) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ],
+      "notes": "Quantum laws are bounded proxies over stride flags, not quantum mechanics; see src/physics/quantumStateMachine.js."
+    },
+    {
+      "id": "priority-law-observer",
+      "law": "OBSERVER",
+      "claim": "OBSERVER (quantum): with WAVE_PARTICLE, high-memory observers measure neighbours; boundary: low-memory observers measure nothing.",
+      "status": "proxy",
+      "implementation": "src/physics/laws.js",
+      "dispatch": "Gated by active[LAW_INDEXES.OBSERVER] / isSet(lawState, LAW_INDEXES.OBSERVER) in src/physics/solver.js and src/physics/laws.js.",
+      "tests": [
+        "tests/unit/priorityLawSemantics.test.js"
+      ],
+      "notes": "Quantum laws are bounded proxies over stride flags, not quantum mechanics; see src/physics/quantumStateMachine.js."
+    }
+  ]
+}

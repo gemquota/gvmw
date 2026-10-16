@@ -1,0 +1,52 @@
+{
+ "pop": 10000,
+ "mode": "single",
+ "worker": {
+  "n": 18,
+  "workerTickMs": 799.6,
+  "particles": 10000,
+  "intervalMs": 802
+ },
+ "simTicksPerSec": 1.3,
+ "hudParticles": "Population indicator",
+ "fps": 3.1,
+ "frameMs": {
+  "p50": 333.2,
+  "p95": 350.1,
+  "max": 366.6
+ },
+ "mainThreadBusyPct": 6.4,
+ "categoriesMsPerFrame": {
+  "idle": 314.29,
+  "other:main-Bs1Z0Ghg.js": 11.69,
+  "program/native": 5.29,
+  "other:(native)": 3.03,
+  "GC": 1.11,
+  "other:zeroCopy-D2u-Vsey.js": 0.32
+ },
+ "topSelf": [
+  "93.6% (idle) :0",
+  "2.2% Ot main-Bs1Z0Ghg.js:2",
+  "1.6% (program) :0",
+  "0.6% fill :0",
+  "0.4% rE main-Bs1Z0Ghg.js:708",
+  "0.3% (garbage collector) :0",
+  "0.2% Dt main-Bs1Z0Ghg.js:2",
+  "0.1% postMessage :0",
+  "0.1% gx main-Bs1Z0Ghg.js:352",
+  "0.1% ux main-Bs1Z0Ghg.js:352",
+  "0.1% arc :0",
+  "0.1% FE main-Bs1Z0Ghg.js:708",
+  "0.1% R zeroCopy-D2u-Vsey.js:1",
+  "0.0% cE main-Bs1Z0Ghg.js:708",
+  "0.0% fx main-Bs1Z0Ghg.js:352"
+ ],
+ "layoutCount": 23,
+ "recalcStyle": 43,
+ "jsHeapMB": 6.8,
+ "workers": 1,
+ "hud": [],
+ "logs": [
+  "Failed to load resource: the server responded with a status of 404 (File not found)"
+ ]
+}

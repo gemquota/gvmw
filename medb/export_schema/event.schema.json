@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:medb:export:1.0:event",
+  "title": "MedB hash-chained event (one line of events/<stream>.jsonl)",
+  "type": "object",
+  "required": ["stream", "seq", "event_id", "ts", "kind", "actor", "body", "prev_hash", "hash"],
+  "properties": {
+    "stream": {"enum": ["gov", "claims", "permissions", "policy", "suspension", "corpus", "delegation", "normative", "auditlog", "anchors"]},
+    "seq": {"type": "integer", "minimum": 1, "description": "1-based, contiguous within the stream"},
+    "event_id": {"type": "string"},
+    "ts": {"type": "string", "description": "UTC, YYYY-MM-DDTHH:MM:SS.ffffffZ (lexically sortable); transaction time"},
+    "kind": {"type": "string"},
+    "actor": {"type": "string", "description": "'user', 'system', 'environment', 'auditor', 'agent:<id>', 'inference:<id>'"},
+    "body": {"type": "object"},
+    "prev_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$", "description": "64 zeros for seq 1"},
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$",
+             "description": "sha256(canonical({'prev': prev_hash, 'record': {stream,seq,event_id,ts,kind,actor,body}})); canonical = JSON with sorted keys, separators (',',':'), UTF-8"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,20 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v7 (15 Oct 2026) detail A — governance / checks / ops
+flowchart TB
+  GEM(("Gem"))
+  ARX["Architect"] --> GEM
+  GEM ==>|chat or voice call R-018| ARC["Archivist v006"]
+  ASM["RETIRED Assembler"] -.-> ARC
+  SCO["Scorer"] --> SCR["Scrutineer"]
+  SCR --> ARX
+  SCR --> MEN["Mender"]
+  SCR --> ARB["Arbiter"]
+  ARB --> ARX
+  SFG["Safeguard v005<br/>all public/shared repo pushes first (R-020)"] --> GEM
+  IMI["Imitator, from P4"] ==>|approvals, 1:1 check only| ARC
+  IMI -.->|spending · irreversible · Imitator/Investigator stay with| GEM
+  BOTS["Any bot pushing to a public/shared repo"] -->|first| SFG
+  SFK["Safekeeper"] --> SFG
+  MAR["RETIRED Marshal"] -.-> MEN
+  MEN --> GEM
+  MED["Mediator"] --> GEM

@@ -1,0 +1,31 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://bugis9.app,1,1,0,0,merchant,parse_failed,200,,96294,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://bugis9.online
+https://bcoin888.com,1,1,1,1,,,200,,629712,71017,BTC8118,https://bcoin888.com/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://dolphinreef666.com
+https://bugatti881.com,1,1,1,1,,,200,,630658,71028,Bugatti881,https://bugatti881.com/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://dolphinreef666.com
+https://blackpink4u.com,1,1,1,1,,,200,,630699,71026,BlackPink4u,https://blackpink4u.com/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://dolphinreef666.com
+https://goyangkaki44.com,1,1,0,0,merchant,parse_failed,200,,103133,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://fengshen668.com
+https://bugis9.cc,1,1,1,1,,,200,,671544,695,Bugis9,https://bugis9.cc/api/v1/index.php,Invalid Action!,2.7,,homepage-links:https://bugis9.online
+https://bugis9.vip,1,1,1,1,,,200,,671544,695,Bugis9,https://bugis9.vip/api/v1/index.php,Invalid Action!,1.6,,homepage-links:https://bugis9.online
+https://bugis9.asia,1,1,1,1,,,200,,671544,695,Bugis9,https://bugis9.asia/api/v1/index.php,Invalid Action!,2.8,,homepage-links:https://bugis9.online
+https://ducati90.com,1,1,1,1,,,200,,630529,71015,Ducati90,https://ducati90.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://dolphinreef666.com
+https://captain918.live,1,1,1,1,,,200,,636398,72026,Captain918,https://captain918.live/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://captain918.net
+https://i1bsp.com,1,1,1,1,,,200,,662294,1696,I1BSP (PGK),https://i1bsp.com/api/v1/index.php,Invalid Action!,1.6,,homepage-links:https://soo88.club
+https://i1pgk.com,1,1,1,1,,,200,,663292,1695,I1PGK (PGK),https://i1pgk.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://soo88.club
+https://i1moni.com,1,1,1,1,,,200,,658122,1762,I1MONI (PGK),https://i1moni.com/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://soo88.club
+https://i1png.club,1,1,1,1,,,200,,659507,1751,I1PNG (PGK),https://i1png.club/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://soo88.club
+https://i1wantok.com,1,1,1,1,,,200,,659958,1761,I1WANTOK (PGK),https://i1wantok.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://soo88.club
+https://ibosspgk.com,1,1,1,1,,,200,,647790,30776,IBOSSPGK (PGK),https://ibosspgk.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://soo88.club
+https://j8sgd.app,1,1,1,1,,,200,,1234090,50276,J8SG,https://j8sgd.app/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://j8sg.com
+https://j8sgd.com,1,1,1,1,,,200,,1234090,50276,J8SG,https://j8sgd.com/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://j8sg.com
+https://j8sgd.vip,1,1,1,1,,,200,,1234090,50276,J8SG,https://j8sgd.vip/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://j8sg.com
+https://kof888.com,1,1,1,1,,,200,,634285,532,KOF888,https://kof888.com/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://dolphinreef666.com
+https://kumulplay.co,1,1,1,1,,,200,,748505,414,KumulPlay,https://kumulplay.co/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://kumulplay.com
+https://kumulplay.biz,1,1,1,1,,,200,,748872,414,KumulPlay,https://kumulplay.biz/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://kumulplay.com
+https://kumulplay.vip,1,1,1,1,,,200,,748872,414,KumulPlay,https://kumulplay.vip/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://kumulplay.com
+https://lamborghini37.com,1,1,1,1,,,200,,632384,71034,Lamborghini,https://lamborghini37.com/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://dolphinreef666.com
+https://pantermoon99.com,1,1,1,1,,,200,,628357,71020,PanterMoon99,https://pantermoon99.com/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://dolphinreef666.com
+https://sands33sg.app,1,1,1,1,,,200,,812246,50309,SANDS33SG,https://sands33sg.app/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://sands33sg.com
+https://rollsroyce66.vip,1,1,1,1,,,200,,630565,71025,RollsRoyce66,https://rollsroyce66.vip/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://dolphinreef666.com
+https://sands33sg.net,1,1,1,1,,,200,,812246,50309,SANDS33SG,https://sands33sg.net/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://sands33sg.com
+https://sands33sg.vip,1,1,1,1,,,200,,812246,50309,SANDS33SG,https://sands33sg.vip/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://sands33sg.com
+https://soo88.cc,1,1,1,1,,,200,,661482,1605,SOO88 (PGK),https://soo88.cc/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://soo88.club

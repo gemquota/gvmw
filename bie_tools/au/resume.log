@@ -1,0 +1,54 @@
+=== 23:58:09 urlscan resume
+[urlscan] harvested 3128, untested 121, resolving 0
+[urlscan] tested 0, confirmed 0
+=== 23:58:09 au listing pages
+page https://pokiesmate.bet/bonus: 3020784 bytes, 172 domains cumulative
+page https://truebluepokies.win/bonus: 3020433 bytes, 173 domains cumulative
+page https://auspokieslist.com: 228338 bytes, 197 domains cumulative
+page https://audplay.online: 837688 bytes, 228 domains cumulative
+page https://gday77-australia.co: 75518 bytes, 230 domains cumulative
+[au_pages] harvested 230, untested 1, resolving 0
+[au_pages] tested 0, confirmed 0
+=== 23:58:20 websearch file
+[au_websearch] harvested 19, untested 4, resolving 4
+[au_websearch] tested 4, confirmed 0
+=== 23:58:24 websearch pages
+page https://audplay.tech/partnership/: 61306 bytes, 40 domains cumulative
+page https://toponlinepokiesaus.com/partnership/: 74304 bytes, 51 domains cumulative
+page https://pokiesaus.online/: 150305 bytes, 56 domains cumulative
+page https://heylink.me/audplaypartnership/: 125601 bytes, 67 domains cumulative
+page https://igaustralia.live/: 1707134 bytes, 238 domains cumulative
+page https://ausonlinepokies.link/: 0 bytes, 238 domains cumulative
+page https://mrpokies.co/partnership/: 854639 bytes, 260 domains cumulative
+page https://aa7au.com/partnership88: 1270404 bytes, 298 domains cumulative
+page https://audplay.co/australian-online-pokies-casino-trend: 847672 bytes, 312 domains cumulative
+page https://tgadsspy.com/channels/freeauspokies2u/advertisers: 5852 bytes, 313 domains cumulative
+page https://tgadsspy.com/channels/auspokiesstation: 5797 bytes, 313 domains cumulative
+page https://tgadsspy.com/bots/pokies33_bot: 5773 bytes, 313 domains cumulative
+[au_webpages] harvested 313, untested 56, resolving 42
+[au_webpages] tested 42, confirmed 7
+=== 23:58:52 telegram AU
+telegram 100/2051 handles, 240 domains
+telegram 200/2051 handles, 388 domains
+telegram 300/2051 handles, 546 domains
+telegram 400/2051 handles, 681 domains
+telegram 500/2051 handles, 862 domains
+telegram 600/2051 handles, 999 domains
+telegram 700/2051 handles, 1111 domains
+telegram 800/2051 handles, 1243 domains
+telegram 900/2051 handles, 1396 domains
+telegram 1000/2051 handles, 1541 domains
+telegram 1100/2051 handles, 1651 domains
+telegram 1200/2051 handles, 1783 domains
+telegram 1300/2051 handles, 1912 domains
+telegram 1400/2051 handles, 2055 domains
+telegram 1500/2051 handles, 2142 domains
+telegram 1600/2051 handles, 2267 domains
+telegram 1700/2051 handles, 2360 domains
+telegram 1800/2051 handles, 2467 domains
+telegram 1900/2051 handles, 2604 domains
+telegram 2000/2051 handles, 2744 domains
+telegram handles 2051, with domains 1236, domains 2795
+[telegram] harvested 2795, untested 181, resolving 7
+[telegram] tested 7, confirmed 5
+=== RESUME DONE 23:59:26

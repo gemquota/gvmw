@@ -1,0 +1,5 @@
+preset,laws,sims,per_sim,tps_per_sim,tps_min,frame_p95_ms
+HIGH,full,20,2500,0.77,0.5,19.34
+MEDIUM,full,20,2500,1.72,1.25,20.05
+LOW,full top-48,20,2500,12.68,8.25,21.11
+LOWEST,full top-16,20,2500,21.22,17.74,20

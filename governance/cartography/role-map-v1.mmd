@@ -1,0 +1,92 @@
+%% Role map v1, 2 Oct 2026 - Role Cartographer. Source: role-graph.json (codex v001).
+%% Solid thick = governance approval flow; solid = direct hand-offs; dotted = fan-out to every bot.
+flowchart TB
+  GEM(("Gem Quota<br/>(human)"))
+  GGG["Genesis Gang God<br/><i>lead: runs bots (aspirational)</i><br/>⚠ no Rules / Limits"]
+
+  subgraph GOV["Governance"]
+    direction LR
+    IA["Instruction Architect<br/><i>designs instructions</i>"]
+    RC["Role Cartographer<br/><i>approves, delegates, role map</i>"]
+    CK["Codex Keeper<br/><i>records instructions</i>"]
+    AS["Assessor<br/><i>daily quality scores</i>"]
+    AU["Auditor<br/><i>daily reviews vs instructions</i>"]
+  end
+
+  subgraph IDN["Identity"]
+    direction LR
+    IQ["Identity Inquirer<br/><i>asks Gem questions</i>"]
+    IF["Identity Inferer<br/><i>builds profile</i>"]
+    CL["Clone<br/><i>identity understudy</i>"]
+  end
+
+  subgraph BLD["Build"]
+    SB["Swarm Builder<br/><i>Grok agent swarm</i><br/>⚠ no relationships"]
+  end
+
+  subgraph GEN["General / unassigned (gaps)"]
+    direction LR
+    GB["Grok Bot<br/>⚠ tagline only"]
+    CO["Codey<br/>⚠ no instructions"]
+    SC["Scraper<br/>⚠ no instructions"]
+  end
+
+  %% Invisible links (~~~) below are layout hints only, not relationships.
+  GEM ~~~ GGG
+  GGG ~~~ IA
+  GGG ~~~ SB
+  GGG ~~~ GB
+  GEM ~~~ IQ
+  ALL[["All 13 bots<br/>(fan-out)"]]
+
+  %% Governance approval flow
+  IA ==>|proposes| RC
+  RC ==>|approves for recording| CK
+  RC -->|rejects with reasons| IA
+  RC -->|escalates; governance-bot changes| GEM
+
+  %% Review loop
+  AS -->|daily scores| AU
+  AU -->|reviews; urgent redesign| IA
+  AU -->|reviews| RC
+  IA -.->|reviews Auditor's work ⚠| AU
+
+  %% Preferences
+  IA -->|asks preferences| CL
+  AS -->|asks preferences| CL
+
+  %% Identity pipeline
+  GEM <-->|question series| IQ
+  IQ -->|raw answers| IF
+  IF -->|follow-ups, confirmations| IQ
+  IF -->|profile updates| CL
+  CL -->|logs gaps| IF
+  CL -->|hands back big decisions| GEM
+
+  %% Lead and build
+  GGG -->|second only to| GEM
+  SB -->|spend approval; costs| GEM
+  AS -->|serious problems; weekly scorecard| GEM
+  AU -->|3 poor reviews in a row| GEM
+
+  %% Fan-out to every bot
+  CK -.->|records for| ALL
+  AS -.->|reviews| ALL
+  AU -.->|audits| ALL
+  RC -.->|assigns / maps| ALL
+  GGG -.->|runs, aspirational| ALL
+
+  classDef human fill:#fff3c4,stroke:#b38f00,color:#000
+  classDef lead fill:#e8dcff,stroke:#6a3fbf,color:#000
+  classDef gov fill:#dceeff,stroke:#2b6cb0,color:#000
+  classDef idn fill:#dcf5e3,stroke:#2f855a,color:#000
+  classDef bld fill:#ffe6d5,stroke:#c05621,color:#000
+  classDef gap fill:#f2f2f2,stroke:#c53030,stroke-dasharray:5 3,color:#000
+  classDef all fill:#ffffff,stroke:#555,color:#000
+  class GEM human
+  class GGG lead
+  class IA,RC,CK,AS,AU gov
+  class IQ,IF,CL idn
+  class SB bld
+  class GB,CO,SC gap
+  class ALL all

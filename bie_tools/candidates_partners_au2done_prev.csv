@@ -1,0 +1,5 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://nowaste.com,1,0,0,0,homepage,http_436,436,,,,,,,0.6,HTTPError: 436 Client Error: status code 436 for url: https://nowaste.com/,partner-dir:https://heylink.me/judiguruapp/
+https://winstar47b.com,1,1,1,1,,,200,,697487,60218,WinStar47,https://winstar47b.com/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://heylink.me/gengar47win/
+https://judiguru.net,1,1,1,1,,,200,,1258391,60879,JudiGuru,https://judiguru.net/api/v1/index.php,Invalid Action!,2.3,,partner-dir:https://heylink.me/judiguruapp/
+https://ada99.asia,1,1,0,0,merchant,parse_failed,200,,104166,,,,,7.9,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://ada99.vip/partnership

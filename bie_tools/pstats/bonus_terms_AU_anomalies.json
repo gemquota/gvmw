@@ -1,0 +1,118 @@
+[
+ {
+  "check": "turnover_x > 60 (platform rollover field likely holds the win-over target amount)",
+  "n_rows": 22,
+  "by_type": {
+   "REGISTER": 14,
+   "SHARE": 5,
+   "DOWNLINE_FIRST_DEPOSIT": 2,
+   "COMMISSION": 1
+  },
+  "examples": [
+   "50111 REGISTER amount_fixed=13.88 rollover_x=15.0 rollover_amt=260.0 turnover_x=260.0 max_withdraw=50.0",
+   "50166 REGISTER amount_fixed=18.0 rollover_amt=90.0 turnover_x=90.0 max_withdraw=18.0",
+   "50526 REGISTER amount_fixed=13.88 rollover_amt=188.0 turnover_x=128.0 max_withdraw=38.0",
+   "50595 REGISTER amount_fixed=13.88 rollover_amt=188.0 turnover_x=128.0 max_withdraw=28.0"
+  ]
+ },
+ {
+  "check": "turnover_x equals rollover_amt (same number in both fields)",
+  "n_rows": 12,
+  "by_type": {
+   "REGISTER": 9,
+   "SHARE": 2,
+   "DOWNLINE_FIRST_DEPOSIT": 1
+  },
+  "examples": [
+   "50111 REGISTER amount_fixed=13.88 rollover_x=15.0 rollover_amt=260.0 turnover_x=260.0 max_withdraw=50.0",
+   "50166 REGISTER amount_fixed=18.0 rollover_amt=90.0 turnover_x=90.0 max_withdraw=18.0",
+   "50601 REGISTER amount_fixed=13.88 rollover_amt=188.0 turnover_x=188.0 max_withdraw=38.0",
+   "50680 REGISTER amount_fixed=13.88 rollover_amt=128.0 turnover_x=128.0 max_withdraw=28.0"
+  ]
+ },
+ {
+  "check": "commission_pct > 30",
+  "n_rows": 2,
+  "by_type": {
+   "COMMISSION": 2
+  },
+  "examples": [
+   "313 COMMISSION min_deposit=50.0 rollover_x=5.0 commission_pct=120.0",
+   "844 COMMISSION commission_pct=40.0"
+  ]
+ },
+ {
+  "check": "WELCOME amount_pct > 200",
+  "n_rows": 2,
+  "by_type": {
+   "WELCOME": 2
+  },
+  "examples": [
+   "10942 WELCOME amount_pct=222.0 min_deposit=50.0 rollover_x=1.0 turnover_x=20.0",
+   "50223 WELCOME amount_pct=250.0 min_deposit=10.0 rollover_x=10.0"
+  ]
+ },
+ {
+  "check": "min_deposit >= 9999 (placeholder or accumulated downline deposit tier)",
+  "n_rows": 10,
+  "by_type": {
+   "WELCOME": 2,
+   "SHARE": 1,
+   "DOWNLINE_FIRST_DEPOSIT": 7
+  },
+  "examples": [
+   "30780 WELCOME amount_pct=89.0 max_bonus=300.0 min_deposit=9999.0 rollover_x=5.0 turnover_x=5.0",
+   "60752 WELCOME amount_pct=99.0 min_deposit=9999.0 rollover_x=8.0 turnover_x=8.0 max_withdraw=10.0",
+   "537 SHARE amount_fixed=8.0 min_deposit=100000.0 rollover_amt=100.0 max_withdraw=20.0",
+   "813 DOWNLINE_FIRST_DEPOSIT amount_fixed=388.88 min_deposit=30000.0 turnover_x=3.0 min_withdraw=50.0 max_withdraw=388.88"
+  ]
+ },
+ {
+  "check": "max_withdraw >= 30000 (likely an effectively uncapped placeholder)",
+  "n_rows": 31,
+  "by_type": {
+   "WELCOME": 31
+  },
+  "examples": [
+   "522 WELCOME amount_pct=70.0 max_bonus=500.0 min_deposit=30.0 rollover_x=5.0 max_withdraw=30000.0",
+   "522 WELCOME amount_pct=80.0 max_bonus=500.0 min_deposit=50.0 rollover_x=5.0 max_withdraw=30000.0",
+   "522 WELCOME amount_pct=90.0 max_bonus=500.0 min_deposit=100.0 rollover_x=5.0 max_withdraw=30000.0",
+   "819 WELCOME amount_pct=50.0 max_bonus=299.0 min_deposit=30.0 rollover_x=4.0 turnover_x=2.0 max_withdraw=50000.0"
+  ]
+ },
+ {
+  "check": "REGISTER amount_fixed > 500",
+  "n_rows": 10,
+  "by_type": {
+   "REGISTER": 10
+  },
+  "examples": [
+   "826 REGISTER amount_fixed=1188.0 rollover_amt=8888.0 max_withdraw=30.0",
+   "826 REGISTER amount_fixed=1188.0 rollover_amt=8888.0 max_withdraw=30.0",
+   "10135 REGISTER amount_fixed=888.0 rollover_amt=10000.0 max_withdraw=20.0",
+   "10182 REGISTER amount_fixed=1880.0 rollover_amt=18800.0 max_withdraw=30.0"
+  ]
+ },
+ {
+  "check": "rollover_amt below amount_fixed (target lower than the bonus)",
+  "n_rows": 0,
+  "by_type": {},
+  "examples": []
+ },
+ {
+  "check": "no numeric term published at all",
+  "n_rows": 57,
+  "by_type": {
+   "REGISTER": 4,
+   "SHARE": 16,
+   "DOWNLINE_FIRST_DEPOSIT": 18,
+   "COMMISSION": 19
+  },
+  "examples": [
+   "1261 REGISTER ",
+   "10522 REGISTER ",
+   "10853 REGISTER ",
+   "60318 REGISTER "
+  ]
+ }
+]

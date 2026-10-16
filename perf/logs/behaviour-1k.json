@@ -1,0 +1,149 @@
+{
+  "node": "v22.23.3",
+  "cpus": 8,
+  "laws": "tidal",
+  "runs": 1,
+  "load1Start": 0.26,
+  "sizes": {},
+  "speed": [
+    "none",
+    "SPEED_NEIGHBORS_48",
+    "SPEED_NARROW_MID",
+    "SPEED_PAIR_CAP",
+    "SPEED_NEAR_SYMBIOSIS",
+    "SPEED_SOCIAL_HALF",
+    "SPEED_FAST",
+    "all"
+  ],
+  "variants": {
+    "none": {
+      "1000": {
+        "medMsPerTick": 90.43,
+        "ticksPerSec": 11.06,
+        "runsMs": [
+          90.4
+        ],
+        "hash": "e4ee9837cbcad1c0/0",
+        "deterministic": true,
+        "alive": 965,
+        "species": 5,
+        "born": 0,
+        "bonded": 955,
+        "meanEnergy": 0.3
+      }
+    },
+    "SPEED_NEIGHBORS_48": {
+      "1000": {
+        "medMsPerTick": 46.37,
+        "ticksPerSec": 21.57,
+        "runsMs": [
+          46.4
+        ],
+        "hash": "67d6106686ce6d47/0",
+        "deterministic": true,
+        "alive": 968,
+        "species": 5,
+        "born": 0,
+        "bonded": 927,
+        "meanEnergy": 0.27
+      }
+    },
+    "SPEED_NARROW_MID": {
+      "1000": {
+        "medMsPerTick": 88.43,
+        "ticksPerSec": 11.31,
+        "runsMs": [
+          88.4
+        ],
+        "hash": "f53e73be5e1c7809/0",
+        "deterministic": true,
+        "alive": 962,
+        "species": 5,
+        "born": 0,
+        "bonded": 938,
+        "meanEnergy": null
+      }
+    },
+    "SPEED_PAIR_CAP": {
+      "1000": {
+        "medMsPerTick": 89.16,
+        "ticksPerSec": 11.22,
+        "runsMs": [
+          89.2
+        ],
+        "hash": "e4ee9837cbcad1c0/0",
+        "deterministic": true,
+        "alive": 965,
+        "species": 5,
+        "born": 0,
+        "bonded": 955,
+        "meanEnergy": 0.3
+      }
+    },
+    "SPEED_NEAR_SYMBIOSIS": {
+      "1000": {
+        "medMsPerTick": 56.06,
+        "ticksPerSec": 17.84,
+        "runsMs": [
+          56.1
+        ],
+        "hash": "41c41ce89d90e087/0",
+        "deterministic": true,
+        "alive": 970,
+        "species": 5,
+        "born": 0,
+        "bonded": 953,
+        "meanEnergy": null
+      }
+    },
+    "SPEED_SOCIAL_HALF": {
+      "1000": {
+        "medMsPerTick": 71.37,
+        "ticksPerSec": 14.01,
+        "runsMs": [
+          71.4
+        ],
+        "hash": "d3ea9803e81d0983/0",
+        "deterministic": true,
+        "alive": 970,
+        "species": 5,
+        "born": 0,
+        "bonded": 958,
+        "meanEnergy": 0.34
+      }
+    },
+    "SPEED_FAST": {
+      "1000": {
+        "medMsPerTick": 39.65,
+        "ticksPerSec": 25.22,
+        "runsMs": [
+          39.6
+        ],
+        "hash": "6f00775c62d1fa70/0",
+        "deterministic": true,
+        "alive": 972,
+        "species": 5,
+        "born": 0,
+        "bonded": 954,
+        "meanEnergy": null
+      }
+    },
+    "all": {
+      "1000": {
+        "medMsPerTick": 41.24,
+        "ticksPerSec": 24.25,
+        "runsMs": [
+          41.2
+        ],
+        "hash": "6f00775c62d1fa70/0",
+        "deterministic": true,
+        "alive": 972,
+        "species": 5,
+        "born": 0,
+        "bonded": 954,
+        "meanEnergy": null
+      }
+    }
+  },
+  "load1End": 1.77
+}

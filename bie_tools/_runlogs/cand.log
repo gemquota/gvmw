@@ -1,0 +1,42 @@
+25/527 done
+50/527 done
+75/527 done
+100/527 done
+125/527 done
+150/527 done
+175/527 done
+200/527 done
+225/527 done
+250/527 done
+275/527 done
+300/527 done
+325/527 done
+350/527 done
+375/527 done
+400/527 done
+425/527 done
+450/527 done
+475/527 done
+500/527 done
+525/527 done
+sites: 527
+  reachable    419/527 (79.5%)
+  homepage_ok  356/527 (67.6%)
+  merchant_ok  249/527 (47.2%)
+  api_ok       246/527 (46.7%)
+failures by stage/reason:
+  merchant   parse_failed       107
+  reachable  dns                75
+  homepage   cloudflare/403     51
+  reachable  ssl                32
+  homepage   http_403           3
+  homepage   http_530           3
+  api        api_not_json       2
+  api        connection         1
+  homepage   http_503           1
+  homepage   http_436           1
+  reachable  connection         1
+  homepage   http_418           1
+  homepage   http_429           1
+  homepage   http_404           1
+  homepage   http_451           1

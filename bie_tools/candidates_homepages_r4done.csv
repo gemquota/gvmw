@@ -1,0 +1,191 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://1xpngreward.com,0,0,0,0,reachable,ssl,,,,,,,,0.6,"SSLError: HTTPSConnectionPool(host='1xpngreward.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hos",homepage-links:https://1xpng.com
+https://1xgini.com,1,1,1,1,,,200,,723481,60057,1XGINI,https://1xgini.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://1xgini.net
+https://1xpng.net,1,1,1,1,,,200,,705041,30597,1XPNG,https://1xpng.net/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://1xpng.com
+https://365winhk.co,1,1,1,1,,,200,,892794,90089,365WINHK,https://365winhk.co/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://365winhk.xyz
+https://1xmee8.com,1,1,1,1,,,200,,839462,1921,1XACE,https://1xmee8.com/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://singbet8sg.com
+https://1xacesg1.com,1,1,1,1,,,200,,839462,1921,1XACE,https://1xacesg1.com/api/v1/index.php,Invalid Action!,2.3,,homepage-links:https://sgd8.com
+https://365winhk.com,1,1,1,1,,,200,,892794,90089,365WINHK,https://365winhk.com/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://365winhk.xyz
+https://88jse.vip,1,1,0,0,merchant,parse_failed,200,,4057,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://365winhk.xyz
+https://88luckyspin888.com,1,1,0,0,merchant,parse_failed,200,,97056,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://ufawin9.vip
+https://918kaya88reward.com,1,1,0,0,merchant,parse_failed,200,,82452,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://918kaya88.com
+https://777.com,1,1,0,0,merchant,parse_failed,200,,3616153,,,,,2.0,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://megakaya777.com
+https://aconvert.com,1,1,0,0,merchant,parse_failed,200,,16509,,,,,1.4,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://hh888hk.club
+https://ausinluck.store,1,1,1,1,,,200,,630983,814,AusinLuck,https://ausinluck.store/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://ausinluck.com
+https://bb9sg.vip,1,1,1,1,,,200,,667954,50563,BET9,https://bb9sg.vip/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://bet9sg.co
+https://alibet99.com,1,1,1,0,api,api_not_json,200,,828100,772,ETIQA33,https://alibet99.com/api/v1/index.php,HTTP 404 non-JSON,2.7,,homepage-links:https://etiqa33.site
+https://bet9sg.vip,1,1,1,1,,,200,,667954,50563,BET9,https://bet9sg.vip/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://bet9sg.co
+https://bet9sg.info,1,1,1,1,,,200,,667954,50563,BET9,https://bet9sg.info/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://bet9sg.co
+https://bbpokies.com,1,1,1,1,,,200,,692582,60063,BBpokies,https://bbpokies.com/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://bbpokies.net
+https://c.vip,1,1,0,0,merchant,parse_failed,200,,2620,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://ezy8.com
+https://betkaya.net,1,1,1,1,,,200,,704597,60050,BETKAYA,https://betkaya.net/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://betkaya.org
+https://bw47pro.com,1,1,0,0,merchant,parse_failed,200,,91726,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://betworld47.com
+https://bong123b.com,1,1,1,1,,,200,,690031,50519,BONG123,https://bong123b.com/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://bong123kh.com
+https://bong123.co,1,1,1,1,,,200,,690031,50519,BONG123,https://bong123.co/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://bong123kh.com
+https://bugis9.online,1,1,1,1,,,200,,671544,695,Bugis9,https://bugis9.online/api/v1/index.php,Invalid Action!,2.8,,homepage-links:https://sgd2u.com
+https://crown99.co,1,1,1,1,,,200,,940977,437,Crown99,https://crown99.co/api/v1/index.php,Invalid Action!,2.3,,homepage-links:https://crown99.store
+https://crown99.life,1,1,1,1,,,200,,940977,437,Crown99,https://crown99.life/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://crown99.store
+https://crown99.info,1,1,1,1,,,200,,940977,437,Crown99,https://crown99.info/api/v1/index.php,Invalid Action!,2.5,,homepage-links:https://crown99.store
+https://crown99h5api.shop,1,1,0,0,merchant,parse_failed,200,,13,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://crown99.store
+https://crown99.today,1,1,1,1,,,200,,940977,437,Crown99,https://crown99.today/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://crown99.store
+https://crown99.online,1,1,1,1,,,200,,940977,437,Crown99,https://crown99.online/api/v1/index.php,Invalid Action!,2.3,,homepage-links:https://crown99.store
+https://crown99.vip,1,1,1,1,,,200,,940977,437,Crown99,https://crown99.vip/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://crown99.store
+https://crown99.win,1,1,1,1,,,200,,940977,437,Crown99,https://crown99.win/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://crown99.store
+https://ddeluxe96.com,1,1,1,1,,,200,,638850,1628,DELUXE96,https://ddeluxe96.com/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://deluxe96.com
+https://deadpool888.com,1,1,1,1,,,200,,635755,73015,DeadPool888,https://deadpool888.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://deadpool888.live
+https://deadpool888.co,1,1,1,1,,,200,,635755,73015,DeadPool888,https://deadpool888.co/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://deadpool888.live
+https://ddpokies.net,1,1,1,1,,,200,,745159,60977,DDPOKIES,https://ddpokies.net/api/v1/index.php,Invalid Action!,2.4,,homepage-links:https://ddpokies.com
+https://deadpool888.vip,1,1,1,1,,,200,,635755,73015,DeadPool888,https://deadpool888.vip/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://deadpool888.live
+https://etiqa33.com,1,1,1,1,,,200,,828100,772,ETIQA33,https://etiqa33.com/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://etiqa33.site
+https://ek9pgk.online,1,1,1,1,,,200,,657351,345,EK9,https://ek9pgk.online/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://ek9pgk.com
+https://etiqa33b.com,1,1,1,1,,,200,,828100,772,ETIQA33,https://etiqa33b.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://etiqa33.site
+https://fightermaju.net,1,1,1,1,,,200,,882195,60818,FIGHTERMAJU,https://fightermaju.net/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://fightermaju.com
+https://first96.net,1,1,1,1,,,200,,748351,60969,First96,https://first96.net/api/v1/index.php,Invalid Action!,2.5,,homepage-links:https://first96.com
+https://gangcuci.com,1,1,1,1,,,200,,741027,10607,GANGCUCI,https://gangcuci.com/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://gangcucibest.com
+https://gangcuci.life,1,1,1,1,,,200,,741027,10607,GANGCUCI,https://gangcuci.life/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://gangcucibest.com
+https://gangcuci.org,1,1,1,1,,,200,,741027,10607,GANGCUCI,https://gangcuci.org/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://gangcucibest.com
+https://gdclubsgpartnership.club,1,1,0,0,merchant,parse_failed,200,,4509,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://gdclub99sg.com
+https://gangcuci.pro,1,1,1,1,,,200,,741027,10607,GANGCUCI,https://gangcuci.pro/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://gangcucibest.com
+https://gangcucireward.com,1,1,0,0,merchant,parse_failed,200,,83510,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://gangcucibest.com
+https://gangcuci.vip,1,1,1,1,,,200,,741027,10607,GANGCUCI,https://gangcuci.vip/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://gangcucibest.com
+https://gdc99.com,1,1,1,1,,,200,,1027337,60613,GDCLUB99 MY,https://gdc99.com/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://gdclub99sg.com
+https://ge888s.vip,1,1,1,1,,,200,,696769,10151,GE88 | Safe And Best To Play,https://ge888s.vip/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://ge88s.club
+https://ge888s.site,1,1,1,1,,,200,,696769,10151,GE88 | Safe And Best To Play,https://ge888s.site/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://ge88s.club
+https://ge88s.online,1,1,1,1,,,200,,696769,10151,GE88 | Safe And Best To Play,https://ge88s.online/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://ge88s.club
+https://ge88sg.com,1,1,1,1,,,200,,696769,10151,GE88 | Safe And Best To Play,https://ge88sg.com/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://ge88s.club
+https://ge88sg.online,1,1,1,1,,,200,,696769,10151,GE88 | Safe And Best To Play,https://ge88sg.online/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://ge88s.club
+https://goodvibes666.pro,1,1,1,1,,,200,,636089,73020,GoodVibes666,https://goodvibes666.pro/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://goodvibes666.com
+https://harbour1hkdreward.com,1,1,0,0,merchant,parse_failed,200,,79954,,,,,1.4,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://harbour1hkd.com
+https://guinnessworld88.world,1,1,1,1,,,200,,637109,73010,GuinnessWorld88,https://guinnessworld88.world/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://guinnessworld88.com
+https://harihari4d.com,1,1,1,1,,,200,,637027,70020,HariHari4D,https://harihari4d.com/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://harihari4d.online
+https://i5malaysiamyh5api.live,1,1,0,0,merchant,parse_failed,200,,23,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://i5malaysia.net
+https://freemyr.com,1,1,0,0,merchant,parse_failed,200,,201542,,,,,8.1,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://klaim99.com
+https://i5malaysia.bet,1,1,1,1,,,200,,638709,10610,i5Malaysia,https://i5malaysia.bet/api/v1/index.php,Invalid Action!,1.6,,homepage-links:https://i5malaysia.net
+https://hh888hk.info,1,1,1,1,,,200,,879455,10619,港望娛樂 HH888HK,https://hh888hk.info/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://hh888hk.club
+https://jewel996.club,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://jewelnns.cc
+https://jewelcs.site,1,1,0,0,merchant,parse_failed,200,,150834,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://jewelnns.cc
+https://jewel996.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://jewelnns.cc
+https://i8malaysia.club,1,1,1,1,,,200,,644954,30792,i8Malaysia,https://i8malaysia.club/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://i8malaysia.xyz
+https://jd88my.com,1,1,1,1,,,200,,848843,1703,JD88,https://jd88my.com/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://jd88.asia
+https://goldenpgkgames.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='goldenpgkgames.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol",homepage-links:https://pgk675.com
+https://jse88sport.com,1,1,0,0,merchant,parse_failed,200,,345090,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://365winhk.xyz
+https://judigang88.vip,1,1,1,1,,,200,,635819,73017,JudiGang88,https://judigang88.vip/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://judigang88.com
+https://judiwin188.net,1,1,1,1,,,200,,634499,73034,JudiWin188,https://judiwin188.net/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://judiwin188.com
+https://jjpokies.net,1,1,1,1,,,200,,734611,60976,JJPOKIES,https://jjpokies.net/api/v1/index.php,Invalid Action!,2.7,,homepage-links:https://jjpokies.com
+https://jwlnns.club,1,1,1,1,,,200,,681092,1292,JEWEL996,https://jwlnns.club/api/v1/index.php,Invalid Action!,2.4,,homepage-links:https://jewelnns.cc
+https://kayapgk.net,1,1,1,1,,,200,,686337,60055,KAYAPGK,https://kayapgk.net/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://kayapgk.com
+https://kingkaya.xyz,1,1,1,1,,,200,,667368,60771,KINGKAYA,https://kingkaya.xyz/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://kayapgk.com
+https://kissy918reward.com,1,1,0,0,merchant,parse_failed,200,,99472,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://kissy918.biz
+https://kumulplay.com,1,1,1,1,,,200,,748505,414,KumulPlay,https://kumulplay.com/api/v1/index.php,Invalid Action!,1.6,,homepage-links:https://kunduplay.com
+https://kissy918.online,1,1,1,1,,,200,,699847,93,Kissy918,https://kissy918.online/api/v1/index.php,Invalid Action!,2.6,,homepage-links:https://kissy918.biz
+https://ksy918.site,1,1,1,1,,,200,,699847,93,Kissy918,https://ksy918.site/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://kissy918.biz
+https://kissy918.org,1,1,1,1,,,200,,699847,93,Kissy918,https://kissy918.org/api/v1/index.php,Invalid Action!,2.8,,homepage-links:https://kissy918.biz
+https://kunduplay.biz,1,1,1,1,,,200,,715587,10076,KunduPlay,https://kunduplay.biz/api/v1/index.php,Invalid Action!,2.4,,homepage-links:https://kunduplay.com
+https://linksta.cc,1,1,0,0,merchant,parse_failed,200,,40021,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://sgdplay-sg.co
+https://kunduplay.co,1,1,1,1,,,200,,715220,10076,KunduPlay,https://kunduplay.co/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://kunduplay.com
+https://lambor68.site,1,1,1,1,,,200,,664586,10833,Lambor68 (MYR),https://lambor68.site/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://lambor68.com
+https://lbor68.com,1,1,1,1,,,200,,664586,10833,Lambor68 (MYR),https://lbor68.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://lambor68.com
+https://kunduplay.vip,1,1,1,1,,,200,,715587,10076,KunduPlay,https://kunduplay.vip/api/v1/index.php,Invalid Action!,2.4,,homepage-links:https://kunduplay.com
+https://live22.com,1,1,0,0,merchant,parse_failed,200,,164710,,,,,1.5,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://megakaya777.com
+https://luckybet777sgpartnership.club,1,1,0,0,merchant,parse_failed,200,,4524,,,,,0.7,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://luckybet777sg.com
+https://luckpng.net,1,1,1,1,,,200,,704944,30598,LUCKPNG,https://luckpng.net/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://luckpng.com
+https://leespin.net,1,1,1,1,,,200,,734032,60973,LeeSpin,https://leespin.net/api/v1/index.php,Invalid Action!,2.5,,homepage-links:https://leespin.com
+https://macluck9aus.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://macluck9hk.com
+https://macluck9sgh5api.store,1,1,0,0,merchant,parse_failed,200,,21,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://macluck9hk.com
+https://luckybet777my.com,1,1,1,1,,,200,,1053066,125,LuckyBet7,https://luckybet777my.com/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://luckybet777sg.com
+https://maucuci.asia,1,1,1,1,,,200,,735554,10968,MauCuci,https://maucuci.asia/api/v1/index.php,Invalid Action!,1.6,,homepage-links:https://maucuci.club
+https://maucuci.com,1,1,1,1,,,200,,735540,10968,MauCuci,https://maucuci.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://maucuci.club
+https://maggie8.co,1,1,1,1,,,200,,699611,1159,MAGGIE8,https://maggie8.co/api/v1/index.php,Invalid Action!,2.7,,homepage-links:https://onepiece8d.com
+https://maucuci.life,1,1,1,1,,,200,,735921,10968,MauCuci,https://maucuci.life/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://maucuci.club
+https://maucuci.biz,1,1,1,1,,,200,,735921,10968,MauCuci,https://maucuci.biz/api/v1/index.php,Invalid Action!,2.8,,homepage-links:https://maucuci.club
+https://maggie8a.com,1,1,1,1,,,200,,699611,1159,MAGGIE8,https://maggie8a.com/api/v1/index.php,Invalid Action!,3.5,,homepage-links:https://onepiece8d.com
+https://maucuci.net,1,1,1,1,,,200,,735554,10968,MauCuci,https://maucuci.net/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://maucuci.club
+https://megakaya777pngh5api.life,1,1,0,0,merchant,parse_failed,200,,25,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://megakaya777.com
+https://maucuci.vip,1,1,1,1,,,200,,735907,10968,MauCuci,https://maucuci.vip/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://maucuci.club
+https://mbs888.club,1,1,1,1,,,200,,678160,189,MBS888,https://mbs888.club/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://mbs888.online
+https://megakaya.com,1,1,0,0,merchant,parse_failed,200,,86799,,,,,1.5,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://megakaya777.com
+https://mekdi86888.net,1,1,1,1,,,200,,635347,73007,Mekdi86888,https://mekdi86888.net/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://mekdi86888.com
+https://mekdi86888.me,1,1,1,1,,,200,,635347,73007,Mekdi86888,https://mekdi86888.me/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://mekdi86888.com
+https://mekdi86888.xyz,1,1,1,1,,,200,,635347,73007,Mekdi86888,https://mekdi86888.xyz/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://mekdi86888.com
+https://mm88hk.com,1,1,1,0,api,api_not_json,200,,824718,50538,萬萬發發 MM88HK,https://mm88hk.com/api/v1/index.php,HTTP 200 non-JSON,2.1,,homepage-links:https://mm88hk.asia
+https://mm88hk.co,1,1,1,1,,,200,,824718,50538,萬萬發發 MM88HK,https://mm88hk.co/api/v1/index.php,Invalid Action!,2.6,,homepage-links:https://mm88hk.asia
+https://menang88.com,1,1,1,1,,,200,,699847,93,Kissy918,https://menang88.com/api/v1/index.php,Invalid Action!,2.9,,homepage-links:https://kissy918.biz
+https://mm88hk.online,1,1,1,1,,,200,,824718,50538,萬萬發發 MM88HK,https://mm88hk.online/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://mm88hk.asia
+https://mmhkd.shop,1,1,1,1,,,200,,896431,10725,MM Hong Kong,https://mmhkd.shop/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://mm88hk.asia
+https://mmhkd.net,1,1,1,1,,,200,,896431,10725,MM Hong Kong,https://mmhkd.net/api/v1/index.php,Invalid Action!,2.4,,homepage-links:https://mmhkd.com
+https://mrsg8.com,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://mrsg8.vip
+https://mmhkdreward.com,1,1,0,0,merchant,parse_failed,200,,81412,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://mmhkd.com
+https://mrsg8.net,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://mrsg8.vip
+https://mrsg8.org,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://mrsg8.vip
+https://mmhkd.vip,1,1,1,1,,,200,,896431,10725,MM Hong Kong,https://mmhkd.vip/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://mmhkd.com
+https://mrsg8.biz,1,1,1,1,,,200,,710035,1806,MRSG8,https://mrsg8.biz/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://mrsg8.vip
+https://mrsg8.co,1,1,1,1,,,200,,710035,1806,MRSG8,https://mrsg8.co/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://mrsg8.vip
+https://myjd88.com,1,1,1,1,,,200,,848843,1703,JD88,https://myjd88.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://jd88.asia
+https://onepiece8b.com,1,1,1,1,,,200,,667177,1559,ONEPIECE8,https://onepiece8b.com/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://onepiece8d.com
+https://papuaplay.biz,1,1,1,1,,,200,,769630,325,Papuaplay,https://papuaplay.biz/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://papuaplay.com
+https://ox38.vip,1,1,1,1,,,200,,748075,60998,OX38,https://ox38.vip/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://ox38.net
+https://papuaplay.co,1,1,1,1,,,200,,769263,325,Papuaplay,https://papuaplay.co/api/v1/index.php,Invalid Action!,1.6,,homepage-links:https://papuaplay.com
+https://papuaplay.net,1,1,1,1,,,200,,769263,325,Papuaplay,https://papuaplay.net/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://papuaplay.com
+https://png44.com,1,0,0,0,homepage,http_404,404,,,,,,,0.1,HTTPError: 404 Client Error: Not Found for url: https://png44.com/,homepage-links:https://png77.com
+https://playozaureward.com,0,0,0,0,reachable,ssl,,,,,,,,0.5,"SSLError: HTTPSConnectionPool(host='playozaureward.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: ",homepage-links:https://playozau.co
+https://pgk675.org,1,1,1,1,,,200,,710278,30615,PGK675,https://pgk675.org/api/v1/index.php,Invalid Action!,1.6,,homepage-links:https://pgk675.com
+https://pgk76.live,1,1,1,1,,,200,,689000,30251,PGK76,https://pgk76.live/api/v1/index.php,Invalid Action!,1.6,,homepage-links:https://pgk76.com
+https://playkaya9.net,1,1,1,1,,,200,,721338,30276,PLAYKAYA9,https://playkaya9.net/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://playkaya9.com
+https://powercuci.club,1,1,1,1,,,200,,720426,30825,POWERCUCI,https://powercuci.club/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://powercuci.vip
+https://powercucireward.com,1,1,0,0,merchant,parse_failed,200,,94100,,,,,1.5,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://powercuci.vip
+https://powercuci.com,1,1,1,1,,,200,,720426,30825,POWERCUCI,https://powercuci.com/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://powercuci.vip
+https://png77.co,1,1,1,1,,,200,,811837,30196,PNG77,https://png77.co/api/v1/index.php,Invalid Action!,2.4,,homepage-links:https://png77.com
+https://royalspnggames.com,0,0,0,0,reachable,ssl,,,,,,,,0.5,"SSLError: HTTPSConnectionPool(host='royalspnggames.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: ",homepage-links:https://pngvip.com
+https://rjbet77.online,1,1,1,1,,,200,,663662,89,Rjbet77,https://rjbet77.online/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://rjbet77myr.co
+https://rjbet77.vip,1,1,1,1,,,200,,663662,89,Rjbet77,https://rjbet77.vip/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://rjbet77myr.co
+https://royal8sg.club,1,1,1,1,,,200,,740315,60589,Royal8sg,https://royal8sg.club/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://royal8sg.asia
+https://royal8sg.com,1,1,1,0,api,api_not_json,200,,740315,60589,Royal8sg,https://royal8sg.com/api/v1/index.php,HTTP 200 non-JSON,1.8,,homepage-links:https://royal8sg.asia
+https://sgd2u.app,1,1,0,0,merchant,parse_failed,200,,113192,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://sgd2u.com
+https://playkaya9reward.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='playkaya9reward.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protoco",homepage-links:https://playkaya9.com
+https://sgd9.app,1,1,0,0,merchant,parse_failed,200,,108391,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://sgd9.live
+https://sgd8.club,1,1,1,1,,,200,,674047,10830,SGD8 (SGD),https://sgd8.club/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://sgd8.com
+https://sgd8.live,1,1,1,1,,,200,,674047,10830,SGD8 (SGD),https://sgd8.live/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://sgd8.com
+https://sgd2u.me,1,1,1,1,,,200,,674040,262,SGD2U,https://sgd2u.me/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://sgd2u.com
+https://sgd2u.live,1,1,1,1,,,200,,674040,262,SGD2U,https://sgd2u.live/api/v1/index.php,Invalid Action!,3.1,,homepage-links:https://sgd2u.com
+https://sgd9.xyz,1,1,1,1,,,200,,754861,377,SGD9,https://sgd9.xyz/api/v1/index.php,Invalid Action!,2.4,,homepage-links:https://sgd9.live
+https://sgdplay-sg.com,1,1,1,1,,,200,,795673,371,SGDPLAY168,https://sgdplay-sg.com/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://sgdplay-sg.co
+https://skyspin7788.com,1,1,0,0,merchant,parse_failed,200,,8462,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://skybet7788.com
+https://slotpgkreward.com,0,0,0,0,reachable,ssl,,,,,,,,0.5,"SSLError: HTTPSConnectionPool(host='slotpgkreward.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: H",homepage-links:https://slotpgk.com
+https://sgdplay.co,1,1,1,1,,,200,,795673,371,SGDPLAY168,https://sgdplay.co/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://sgdplay-sg.co
+https://spin4rich-leaderboard.com,1,1,0,0,merchant,parse_failed,200,,24817,,,,,0.1,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://spin4rich.net
+https://singbet8a.com,1,1,1,1,,,200,,676518,1892,SINGBET8,https://singbet8a.com/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://singbet8sg.com
+https://sgdplay3.com,1,1,1,1,,,200,,795673,371,SGDPLAY168,https://sgdplay3.com/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://sgdplay-sg.co
+https://singbet8.com,1,1,1,1,,,200,,676518,1892,SINGBET8,https://singbet8.com/api/v1/index.php,Invalid Action!,2.3,,homepage-links:https://singbet8sg.com
+https://stapwinreward.com,0,0,0,0,reachable,ssl,,,,,,,,0.5,"SSLError: HTTPSConnectionPool(host='stapwinreward.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: H",homepage-links:https://stapwin.com
+https://soo88.club,1,1,1,1,,,200,,661482,1605,SOO88 (PGK),https://soo88.club/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://kaboom8.com
+https://stapwin.net,1,1,1,1,,,200,,732301,30299,STAPWIN,https://stapwin.net/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://stapwin.com
+https://spinboom8.co,1,1,1,1,,,200,,899175,90065,轉爆娛樂 | SPINBOOMY,https://spinboom8.co/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://spinboom.biz
+https://spinboomy.com,1,1,1,1,,,200,,899175,90065,轉爆娛樂 | SPINBOOMY,https://spinboomy.com/api/v1/index.php,Invalid Action!,2.3,,homepage-links:https://spinboom.biz
+https://spinboomy.vip,1,1,1,1,,,200,,899175,90065,轉爆娛樂 | SPINBOOMY,https://spinboomy.vip/api/v1/index.php,Invalid Action!,2.4,,homepage-links:https://365winhk.xyz
+https://taxi666h5api.site,1,1,0,0,merchant,parse_failed,200,,20,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://taxi666.info
+https://syokcuci66.net,1,1,1,1,,,200,,636494,73003,SyokCuci66,https://syokcuci66.net/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://syokcuci66.com
+https://taxi666.org,1,1,1,1,,,200,,999937,497,TAXI666,https://taxi666.org/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://taxi666.info
+https://thesportsdb.com,1,1,0,0,merchant,parse_failed,200,,179648,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://jd88.asia
+https://taxi666.space,1,1,1,1,,,200,,999937,497,TAXI666,https://taxi666.space/api/v1/index.php,Invalid Action!,2.5,,homepage-links:https://taxi666.info
+https://taxi666.world,1,1,1,1,,,200,,999937,497,TAXI666,https://taxi666.world/api/v1/index.php,Invalid Action!,2.5,,homepage-links:https://taxi666.info
+https://tcm77.net,1,1,1,1,,,200,,711376,30255,TCM77,https://tcm77.net/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://tcm77.co
+https://suka2cuci.com,1,1,1,1,,,200,,1143819,10627,Suka2cuci (MYR),https://suka2cuci.com/api/v1/index.php,Invalid Action!,4.1,,homepage-links:https://mmhkd.com
+https://ufawin9h5api.shop,1,1,0,0,merchant,parse_failed,200,,20,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://ufawin9.vip
+https://ufawin9.club,1,1,1,1,,,200,,653686,778,UFAWin9,https://ufawin9.club/api/v1/index.php,Invalid Action!,2.3,,homepage-links:https://ufawin9.vip
+https://ufawin9.net,1,1,1,1,,,200,,653686,778,UFAWin9,https://ufawin9.net/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://ufawin9.vip
+https://ufawin9.com,1,1,1,0,api,api_not_json,200,,653686,778,UFAWin9,https://ufawin9.com/api/v1/index.php,HTTP 200 non-JSON,2.5,,homepage-links:https://ufawin9.vip
+https://v12betmy.asia,1,1,1,1,,,200,,1104160,560,V12MY,https://v12betmy.asia/api/v1/index.php,Invalid Action!,2.6,,homepage-links:https://ezy8.com
+https://v12betmy.net,1,1,1,1,,,200,,1105098,560,V12MY,https://v12betmy.net/api/v1/index.php,Invalid Action!,2.7,,homepage-links:https://ezy8.com
+https://tcm77reward.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='tcm77reward.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_",homepage-links:https://tcm77.co
+https://v12betmyr.com,1,1,0,0,merchant,parse_failed,200,,31507,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://ezy8.com
+https://win88png.com,0,0,0,0,reachable,ssl,,,,,,,,0.3,"SSLError: HTTPSConnectionPool(host='win88png.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostna",homepage-links:https://w88png.com
+https://wingo33.online,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://wingo33a.com
+https://v12betmy.online,1,1,1,1,,,200,,1104160,560,V12MY,https://v12betmy.online/api/v1/index.php,Invalid Action!,3.5,,homepage-links:https://ezy8.com
+https://wingo33c.com,1,1,1,1,,,200,,781816,1916,WINGO333 银宝娛樂,https://wingo33c.com/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://wingo33a.com
+https://winpapua88.com,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://w88png.com
+https://v12betmy2.com,1,1,1,1,,,200,,1104160,560,V12MY,https://v12betmy2.com/api/v1/index.php,Invalid Action!,3.6,,homepage-links:https://ezy8.com
+https://your-domain.com,1,1,0,0,merchant,parse_failed,200,,27360,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://i2cuci.com
+https://wingo33d.com,1,1,1,1,,,200,,781816,1916,WINGO333 银宝娛樂,https://wingo33d.com/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://wingo33a.com
+https://v12betmy.vip,1,1,1,1,,,200,,1104160,560,V12MY,https://v12betmy.vip/api/v1/index.php,Invalid Action!,4.4,,homepage-links:https://ezy8.com
+https://v12my.com,1,1,1,1,,,200,,1104160,560,V12MY,https://v12my.com/api/v1/index.php,Invalid Action!,3.4,,homepage-links:https://ezy8.com
+https://youwin777aus.com,1,1,1,1,,,200,,706267,60563,YouWin777,https://youwin777aus.com/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://youwin777au.com

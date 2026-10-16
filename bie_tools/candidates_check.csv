@@ -1,0 +1,528 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error
+https://123bet.club,1,1,1,1,,,200,,648846,1328,123BET,https://123bet.club/api/v1/index.php,Invalid Action!,2.9,
+https://22lol.net,1,1,1,1,,,200,,961703,1855,22LOL,https://22lol.net/api/v1/index.php,Invalid Action!,1.9,
+https://365aud.co,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.
+https://365aud.com,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.
+https://711au.co,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://888pokies.com,1,1,1,1,,,200,,972430,10711,888pokies,https://888pokies.com/api/v1/index.php,Invalid Action!,2.5,
+https://88pokies.com,0,0,0,0,reachable,dns,,,,,,,,0.3,"ConnectionError: HTTPSConnectionPool(host='88pokies.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='88pokies.com', port=443): Failed to resolve '88pokies.com' (["
+https://a6677a.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://a6677a.com/
+https://ac8et.com,1,1,1,1,,,200,,708142,50396,AC8ET,https://ac8et.com/api/v1/index.php,Invalid Action!,1.8,
+https://ac8et.net,1,1,1,1,,,200,,708142,50396,AC8ET,https://ac8et.net/api/v1/index.php,Invalid Action!,2.0,
+https://ace268.net,1,1,1,1,,,200,,696237,50253,ACE268,https://ace268.net/api/v1/index.php,Invalid Action!,1.8,
+https://acepokie.com,1,1,1,1,,,200,,814956,718,ACEPOKIE,https://acepokie.com/api/v1/index.php,Invalid Action!,2.9,
+https://amg33.com,1,1,1,1,,,200,,832036,50670,AMG33,https://amg33.com/api/v1/index.php,Invalid Action!,1.7,
+https://amplay8.com,1,1,1,1,,,200,,873214,1827,ASKMEPLAY,https://amplay8.com/api/v1/index.php,Invalid Action!,2.0,
+https://anzspin.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='anzspin.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='anzspin.com', port=443): Failed to resolve 'anzspin.com' ([Err"
+https://aubestpokies.com,1,1,0,0,merchant,parse_failed,200,,662,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://aud22.com,1,1,1,1,,,200,,736606,30360,AUD22,https://aud22.com/api/v1/index.php,Invalid Action!,1.9,
+https://aud33.vip,1,1,1,1,,,200,,702957,53,AUD33,https://aud33.vip/api/v1/index.php,Invalid Action!,1.8,
+https://aud99.live,1,1,1,1,,,200,,752160,880,Aud99,https://aud99.live/api/v1/index.php,Invalid Action!,1.7,
+https://audgamingpartner.com,0,0,0,0,reachable,ssl,,,,,,,,0.5,"SSLError: HTTPSConnectionPool(host='audgamingpartner.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl"
+https://audplay168.com,1,1,1,1,,,200,,837688,773,AUDPLAY168,https://audplay168.com/api/v1/index.php,Invalid Action!,1.7,
+https://audslot.com,1,1,1,0,api,connection,200,,747644,30570,AUDSLOT,https://audslot.com/api/v1/index.php,,1.4,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+https://augoodpokies.com,1,1,0,0,merchant,parse_failed,200,,520,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.
+https://auhotpokies.com,1,1,0,0,merchant,parse_failed,200,,520,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://aupopularpokies.com,1,1,0,0,merchant,parse_failed,200,,520,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://aurorabets.org,1,1,1,1,,,200,,833417,60387,Aurorabets,https://aurorabets.org/api/v1/index.php,Invalid Action!,2.0,
+https://ausmeth.com,1,1,1,1,,,200,,783506,11042,OzMeth,https://ausmeth.com/api/v1/index.php,Invalid Action!,2.3,
+https://auspade.com,1,1,1,1,,,200,,684096,10876,AuSpade,https://auspade.com/api/v1/index.php,Invalid Action!,2.9,
+https://auspin168.com,1,1,1,1,,,200,,691767,811,Online Pokies & Casino Australia – Auspin168,https://auspin168.com/api/v1/index.php,Invalid Action!,1.7,
+https://aussie21.com,1,1,0,0,merchant,parse_failed,200,,1584,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://aussieaces.com,1,1,1,1,,,200,,705244,10859,Aussieaces,https://aussieaces.com/api/v1/index.php,Invalid Action!,2.3,
+https://aussieluck.co,1,1,1,1,,,200,,768778,10083,AussieLuck33,https://aussieluck.co/api/v1/index.php,Invalid Action!,2.1,
+https://aussieqq.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://ausvip.org,1,1,1,1,,,200,,719497,60037,AUSVIP,https://ausvip.org/api/v1/index.php,Invalid Action!,2.5,
+https://avatarr8.com,1,1,1,1,,,200,,1161991,1862,AVATARR8,https://avatarr8.com/api/v1/index.php,Invalid Action!,2.1,
+https://aviator96.com,1,1,1,1,,,200,,839035,10578,Aviator96,https://aviator96.com/api/v1/index.php,Invalid Action!,2.8,
+https://azurefortunepalace.com,1,1,1,1,,,200,,786469,60285,AzureFortunePalace,https://azurefortunepalace.com/api/v1/index.php,Invalid Action!,1.7,
+https://bakedmate.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='bakedmate.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='bakedmate.com', port=443): Failed to resolve 'bakedmate.com'"
+https://bang96.com,1,1,1,1,,,200,,741786,60268,BANG96,https://bang96.com/api/v1/index.php,Invalid Action!,1.7,
+https://bang96.net,1,1,1,1,,,200,,741786,60268,BANG96,https://bang96.net/api/v1/index.php,Invalid Action!,1.6,
+https://beebee11.net,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='beebee11.net', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl"
+https://best77.asia,1,1,1,1,,,200,,769628,60009,Best77,https://best77.asia/api/v1/index.php,Invalid Action!,2.1,
+https://betaud.net,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://betaud.net/
+https://betbaked.net,1,1,1,1,,,200,,734687,60260,RAGEPOKIES,https://betbaked.net/api/v1/index.php,Invalid Action!,1.8,
+https://betblaze.org,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='betblaze.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='betblaze.org', port=443): Failed to resolve 'betblaze.org' (["
+https://betbuddypokies.com,1,1,0,0,merchant,parse_failed,200,,520,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://betclub11.online,1,1,1,1,,,200,,721101,50536,BETCLUB11,https://betclub11.online/api/v1/index.php,Invalid Action!,1.7,
+https://betclub6.net,1,1,1,1,,,200,,799357,60267,BETCLUB6,https://betclub6.net/api/v1/index.php,Invalid Action!,1.6,
+https://betjack21.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://bigbonus.me,1,1,1,1,,,200,,653817,1361,BB33,https://bigbonus.me/api/v1/index.php,Invalid Action!,2.1,
+https://billionaud.com,1,1,1,1,,,200,,680986,30357,BILLION AU,https://billionaud.com/api/v1/index.php,Invalid Action!,1.7,
+https://bizzo88.com,1,1,1,1,,,200,,670604,50526,BIZZO88,https://bizzo88.com/api/v1/index.php,Invalid Action!,1.7,
+https://bluntspin.com,1,1,1,1,,,200,,784401,30582,BLUNTSPIN,https://bluntspin.com/api/v1/index.php,Invalid Action!,3.1,
+https://bluntspin.net,1,1,1,1,,,200,,784401,30582,BLUNTSPIN,https://bluntspin.net/api/v1/index.php,Invalid Action!,3.2,
+https://bngplay7.net,1,1,1,1,,,200,,726321,10839,BNGPLAY7,https://bngplay7.net/api/v1/index.php,Invalid Action!,1.7,
+https://bong21.com,1,1,0,0,merchant,parse_failed,200,,109670,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://bonzaau.com,1,1,0,0,merchant,parse_failed,200,,33898,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.
+https://bonzbet.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='bonzbet.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='bonzbet.com', port=443): Failed to resolve 'bonzbet.com' ([Err"
+https://boomerangaus.com,1,1,1,1,,,200,,884431,60008,BOOMERANG AUS,https://boomerangaus.com/api/v1/index.php,Invalid Action!,1.7,
+https://boomerstakeaus.com,1,1,1,1,,,200,,928347,50716,BOOMERSTAKEAUS,https://boomerstakeaus.com/api/v1/index.php,Invalid Action!,2.9,
+https://br8aud.net,1,1,1,1,,,200,,982357,10002,BR8,https://br8aud.net/api/v1/index.php,Invalid Action!,2.0,
+https://breakwin.com,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='breakwin.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl"
+https://brisbets.net,1,1,1,1,,,200,,807411,30522,Heypokies,https://brisbets.net/api/v1/index.php,Invalid Action!,2.0,
+https://bx77aus.com,1,1,1,1,,,200,,706973,10452,Bx77au,https://bx77aus.com/api/v1/index.php,Invalid Action!,1.7,
+https://call96.com,1,1,1,1,,,200,,779195,60330,Call96,https://call96.com/api/v1/index.php,Invalid Action!,2.0,
+https://cashaud.co,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://cashpokies.com,1,1,1,1,,,200,,701023,60279,CashPokies,https://cashpokies.com/api/v1/index.php,Invalid Action!,1.7,
+https://clash2win.com,1,1,1,1,,,200,,731026,1253,CLASH2WIN,https://clash2win.com/api/v1/index.php,Invalid Action!,1.7,
+https://cobber96.com,1,1,1,1,,,200,,814811,11043,Cobber96,https://cobber96.com/api/v1/index.php,Invalid Action!,2.1,
+https://cocainespin.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='cocainespin.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='cocainespin.com', port=443): Failed to resolve 'cocainespi"
+https://cosmojack.net,1,1,1,1,,,200,,990830,1399,COSMOJACK,https://cosmojack.net/api/v1/index.php,Invalid Action!,2.3,
+https://cr33au.co,1,1,1,1,,,200,,659344,888,CR33,https://cr33au.co/api/v1/index.php,Invalid Action!,2.0,
+https://crazyaus.net,1,1,1,1,,,200,,744964,60036,CRAZYAUS,https://crazyaus.net/api/v1/index.php,Invalid Action!,2.3,
+https://crikey7.com,1,1,1,1,,,200,,650311,1617,Crikey7,https://crikey7.com/api/v1/index.php,Invalid Action!,1.7,
+https://crown76au.com,1,1,1,1,,,200,,807671,30180,CROWN76,https://crown76au.com/api/v1/index.php,Invalid Action!,2.0,
+https://crownbetking.com,1,1,1,1,,,200,,713328,1865,CROWNBETKING,https://crownbetking.com/api/v1/index.php,Invalid Action!,1.8,
+https://cuntboom.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='cuntboom.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='cuntboom.com', port=443): Failed to resolve 'cuntboom.com' (["
+https://cunthaus.com,1,1,1,1,,,200,,747231,30580,CUNTHAUS,https://cunthaus.com/api/v1/index.php,Invalid Action!,1.7,
+https://dealau.club,1,1,1,1,,,200,,686484,50388,DEALAU,https://dealau.club/api/v1/index.php,Invalid Action!,2.0,
+https://devegas99.com,1,1,0,0,merchant,parse_failed,200,,92757,,,,,1.4,ValueError: Could not find merchant identification details in HTML or JS.
+https://dinkydibets.com,1,1,1,1,,,200,,677713,60006,DinkyDiBets,https://dinkydibets.com/api/v1/index.php,Invalid Action!,2.9,
+https://dinkydidolla.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='dinkydidolla.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='dinkydidolla.com', port=443): Failed to resolve 'dinkydid"
+https://drpokies.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='drpokies.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='drpokies.com', port=443): Failed to resolve 'drpokies.com' (["
+https://duckyluckaus.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='duckyluckaus.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='duckyluckaus.com', port=443): Failed to resolve 'duckyluc"
+https://eckyspin.net,0,0,0,0,reachable,dns,,,,,,,,0.2,"ConnectionError: HTTPSConnectionPool(host='eckyspin.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='eckyspin.net', port=443): Failed to resolve 'eckyspin.net' (["
+https://ecl9.com,1,1,1,1,,,200,,845910,10720,ECL9,https://ecl9.com/api/v1/index.php,Invalid Action!,1.8,
+https://edenn21.com,1,1,1,1,,,200,,661565,50610,EDENN21,https://edenn21.com/api/v1/index.php,Invalid Action!,2.2,
+https://efa9aud.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='efa9aud.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='efa9aud.com', port=443): Failed to resolve 'efa9aud.com' ([Err"
+https://epicpokies.asia,1,1,1,0,api,api_not_json,200,,738616,10553,EPICPOKIES,https://epicpokies.asia/api/v1/index.php,HTTP 404 non-JSON,1.9,
+https://f1spin.com,1,0,0,0,homepage,http_503,503,,,,,,,1.9,HTTPError: 503 Server Error: Service Unavailable for url: https://www.f1spin.com/
+https://fafaau.org,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='fafaau.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c"
+https://fafabet9.com,1,1,1,1,,,200,,813748,10128,Fafabet9,https://fafabet9.com/api/v1/index.php,Invalid Action!,2.0,
+https://fairdinkumplay9.com,1,1,1,1,,,200,,743400,729,Fairdinkumplay9,https://fairdinkumplay9.com/api/v1/index.php,Invalid Action!,1.9,
+https://fairdinkumspins.com,0,0,0,0,reachable,ssl,,,,,,,,5.1,"SSLError: HTTPSConnectionPool(host='fairdinkumspins.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protoco"
+https://fairgo77.com,1,1,1,1,,,200,,712305,1702,FAIRGO77,https://fairgo77.com/api/v1/index.php,Invalid Action!,1.6,
+https://fairspin.asia,1,1,1,1,,,200,,654781,1100,FAIRSPINAUS,https://fairspin.asia/api/v1/index.php,Invalid Action!,1.7,
+https://fastaud.com,1,1,1,1,,,200,,698876,10454,FASTAUD,https://fastaud.com/api/v1/index.php,Invalid Action!,2.0,
+https://fastpay9.com,1,1,1,1,,,200,,772349,60066,Fastpay9 (AUD),https://fastpay9.com/api/v1/index.php,Invalid Action!,2.3,
+https://fastslotsau.com,1,1,1,1,,,200,,701159,1785,STAKEAU,https://fastslotsau.com/api/v1/index.php,Invalid Action!,3.0,
+https://fatdog9.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='fatdog9.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='fatdog9.com', port=443): Failed to resolve 'fatdog9.com' ([Err"
+https://fendipokies.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='fendipokies.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='fendipokies.com', port=443): Failed to resolve 'fendipokie"
+https://ff29.co,1,1,1,1,,,200,,796840,30526,FF29,https://ff29.co/api/v1/index.php,Invalid Action!,1.9,
+https://ff96.co,1,1,1,1,,,200,,825116,10209,FF96,https://ff96.co/api/v1/index.php,Invalid Action!,1.7,
+https://fipau.online,0,0,0,0,reachable,dns,,,,,,,,0.1,"ConnectionError: HTTPSConnectionPool(host='taxis33.cc', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='taxis33.cc', port=443): Failed to resolve 'taxis33.cc' ([Errno "
+https://fortunex99.com,1,1,1,1,,,200,,761218,10864,FortuneX99,https://fortunex99.com/api/v1/index.php,Invalid Action!,1.7,
+https://freakwin.com,1,0,0,0,homepage,http_436,436,,,,,,,0.7,HTTPError: 436 Client Error: status code 436 for url: https://freakwin.com/
+https://fridayfriday.co,1,1,1,1,,,200,,815579,30568,FRIDAYFRIDAY,https://fridayfriday.co/api/v1/index.php,Invalid Action!,1.7,
+https://fuckpokies.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='fuckpokies.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='fuckpokies.com', port=443): Failed to resolve 'fuckpokies.c"
+https://fuckwin.net,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://fuckwit9.com,1,1,0,0,merchant,parse_failed,200,,1584,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://funcity93.com,1,1,1,1,,,200,,664721,1609,FUNCITY93,https://funcity93.com/api/v1/index.php,Invalid Action!,3.0,
+https://funpokie.icu,1,1,1,1,,,200,,743087,10526,FunPokies,https://funpokie.icu/api/v1/index.php,Invalid Action!,1.6,
+https://furspin.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='furspin.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='furspin.com', port=443): Failed to resolve 'furspin.com' ([Err"
+https://gdaymate9.com,1,1,1,1,,,200,,780555,60211,GdayMate9,https://gdaymate9.com/api/v1/index.php,Invalid Action!,1.9,
+https://gofun333.com,1,1,1,1,,,200,,845500,329,GoFun333,https://gofun333.com/api/v1/index.php,Invalid Action!,2.0,
+https://gogopokies.com,1,1,0,0,merchant,parse_failed,200,,218,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.
+https://goldau.it.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='goldau.it.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='goldau.it.com', port=443): Failed to resolve 'goldau.it.com'"
+https://goldbet9.org,1,1,1,1,,,200,,689111,132,GoldBet9,https://goldbet9.org/api/v1/index.php,Invalid Action!,1.6,
+https://goldenempire8.site,1,1,1,1,,,200,,699518,50287,GOLDENEMPIRE,https://goldenempire8.site/api/v1/index.php,Invalid Action!,2.0,
+https://goodpokiessite.com,0,0,0,0,reachable,ssl,,,,,,,,0.3,"SSLError: HTTPSConnectionPool(host='goodpokiessite.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: "
+https://gopokies.net,0,0,0,0,reachable,dns,,,,,,,,0.3,"ConnectionError: HTTPSConnectionPool(host='gopokies.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='gopokies.net', port=443): Failed to resolve 'gopokies.net' (["
+https://gorichescasino.com,1,1,1,1,,,200,,701159,1785,STAKEAU,https://gorichescasino.com/api/v1/index.php,Invalid Action!,2.9,
+https://grandau777.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='grandau777.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='grandau777.com', port=443): Failed to resolve 'grandau777.c"
+https://gronkspin.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='gronkspin.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='gronkspin.com', port=443): Failed to resolve 'gronkspin.com'"
+https://gtbet9.com,1,1,1,1,,,200,,774361,537,GTBET9,https://gtbet9.com/api/v1/index.php,Invalid Action!,2.0,
+https://h4winau.com,1,1,1,1,,,200,,837519,10606,H4WIN E-Wallet Casino,https://h4winau.com/api/v1/index.php,Invalid Action!,2.0,
+https://h4winaus.com,1,1,1,1,,,200,,837519,10606,H4WIN E-Wallet Casino,https://h4winaus.com/api/v1/index.php,Invalid Action!,2.0,
+https://hb88aus.net,1,1,1,1,,,200,,846365,871,HB88 PayID Casino Australia,https://hb88aus.net/api/v1/index.php,Invalid Action!,1.9,
+https://highmate88.net,1,1,1,1,,,200,,773505,60277,HIGHMATE88,https://highmate88.net/api/v1/index.php,Invalid Action!,1.7,
+https://himeth.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='himeth.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='himeth.com', port=443): Failed to resolve 'himeth.com' ([Errno "
+https://hoh88aus.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='hoh88aus.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='hoh88aus.com', port=443): Failed to resolve 'hoh88aus.com' (["
+https://hydra888aus.com,1,1,1,1,,,200,,639668,1333,HYDRA888,https://hydra888aus.com/api/v1/index.php,Invalid Action!,1.7,
+https://hype777.com,1,1,1,1,,,200,,869735,869,HYPE777,https://hype777.com/api/v1/index.php,Invalid Action!,1.9,
+https://ienjoy88aub.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='ienjoy88aub.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='ienjoy88aub.com', port=443): Failed to resolve 'ienjoy88au"
+https://ig9aus.com,1,1,1,1,,,200,,721145,10814,IG9,https://ig9aus.com/api/v1/index.php,Invalid Action!,1.8,
+https://igaming88audc.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='igaming88audc.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol "
+https://ijoker88auc.com,1,1,1,1,,,200,,1169355,50263,IJOKER88,https://ijoker88auc.com/api/v1/index.php,Invalid Action!,2.3,
+https://ik118.com,0,0,0,0,reachable,dns,,,,,,,,0.3,"ConnectionError: HTTPSConnectionPool(host='ik118.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='ik118.com', port=443): Failed to resolve 'ik118.com' ([Errno -3]"
+https://ilovemeth.net,0,0,0,0,reachable,ssl,,,,,,,,5.6,"SSLError: HTTPSConnectionPool(host='ww38.ilovemeth.net', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol"
+https://ione8aus.com,1,1,1,1,,,200,,968462,10113,iOne8,https://ione8aus.com/api/v1/index.php,Invalid Action!,2.3,
+https://jackdom1.com,1,1,1,1,,,200,,940982,1657,JACKDOM,https://jackdom1.com/api/v1/index.php,Invalid Action!,3.1,
+https://jackpotmate88.net,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='jackpotmate88.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='jackpotmate88.net', port=443): Failed to resolve 'jackpo"
+https://jointmate.net,1,1,1,1,,,200,,784720,10633,FuckSpin,https://jointmate.net/api/v1/index.php,Invalid Action!,1.7,
+https://joofred.org,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='joofred.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='joofred.org', port=443): Failed to resolve 'joofred.org' ([Err"
+https://justwin9.net,1,1,1,1,,,200,,730036,30270,JUSTWIN9,https://justwin9.net/api/v1/index.php,Invalid Action!,1.7,
+https://juzspin.com,1,1,0,0,merchant,parse_failed,200,,1584,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://kazzo88.com,1,1,1,1,,,200,,753737,50601,KAZZO88,https://kazzo88.com/api/v1/index.php,Invalid Action!,1.7,
+https://ketawin.net,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='ketawin.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='ketawin.net', port=443): Failed to resolve 'ketawin.net' ([Err"
+https://kingsau.com,1,1,1,1,,,200,,794901,60027,KINGSAU,https://kingsau.com/api/v1/index.php,Invalid Action!,1.6,
+https://krakenbet.co,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='krakenbet.co', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='krakenbet.co', port=443): Failed to resolve 'krakenbet.co' (["
+https://limitedpokies.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='limitedpokies.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='limitedpokies.com', port=443): Failed to resolve 'limite"
+https://lot9ine.site,1,1,1,1,,,200,,772115,50600,LOT9INE,https://lot9ine.site/api/v1/index.php,Invalid Action!,2.0,
+https://lovepokies.com,0,0,0,0,reachable,dns,,,,,,,,0.2,"ConnectionError: HTTPSConnectionPool(host='lovepokies.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='lovepokies.com', port=443): Failed to resolve 'lovepokies.c"
+https://lsdbaby.co,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='lsdbaby.co', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='lsdbaby.co', port=443): Failed to resolve 'lsdbaby.co' ([Errno "
+https://lucky72au.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.
+https://luckyaceau.com,1,1,1,1,,,200,,743458,50650,LUCKYACEAU,https://luckyaceau.com/api/v1/index.php,Invalid Action!,2.5,
+https://luckyaus.com,1,1,0,0,merchant,parse_failed,200,,21581,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.
+https://luckypartnership.com,1,1,0,0,merchant,parse_failed,200,,520,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://lux96.com,1,1,0,0,merchant,parse_failed,200,,213,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://lvpokies.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='lvpokies.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl"
+https://lwin9.com,0,0,0,0,reachable,ssl,,,,,,,,0.6,"SSLError: HTTPSConnectionPool(host='lwin9.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname "
+https://madjili.net,1,1,1,1,,,200,,778692,60273,MADJILI,https://madjili.net/api/v1/index.php,Invalid Action!,1.7,
+https://mario666.com,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='mario666.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl"
+https://matemate11.com,1,1,1,1,,,200,,736471,30528,MATEMATE11,https://matemate11.com/api/v1/index.php,Invalid Action!,1.7,
+https://mb9.club,0,0,0,0,reachable,dns,,,,,,,,0.6,"ConnectionError: HTTPSConnectionPool(host='mb9.club', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='mb9.club', port=443): Failed to resolve 'mb9.club' ([Errno -2] Na"
+https://mbs77au.live,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='mbs77au.live', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='mbs77au.live', port=443): Failed to resolve 'mbs77au.live' (["
+https://megadice96.com,1,1,1,1,,,200,,969750,11056,MegaDice96 E-Wallet Casino Australia,https://megadice96.com/api/v1/index.php,Invalid Action!,1.9,
+https://methfreak.com,1,1,1,1,,,200,,724016,60338,MethFreak,https://methfreak.com/api/v1/index.php,Invalid Action!,1.7,
+https://methmate11.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://methpokie.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://methpokies.com,1,0,0,0,homepage,http_403,403,,,,,,,0.7,HTTPError: 403 Client Error: Forbidden for url: https://methpokies.com/
+https://miawin.com,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='miawin.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c"
+https://millionclub9aus.club,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.2,HTTPError: 403 Client Error: Forbidden for url: https://millionclub9aus.club/
+https://minorspin.net,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='minorspin.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='minorspin.net', port=443): Failed to resolve 'minorspin.net'"
+https://mofoaus.com,1,1,1,1,,,200,,743979,30339,MOFOAUS,https://mofoaus.com/api/v1/index.php,Invalid Action!,1.6,
+https://moneypotpokies.com,1,1,0,0,merchant,parse_failed,200,,520,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.
+https://monoaud.com,1,1,1,1,,,200,,778785,10017,MONOAUD,https://monoaud.com/api/v1/index.php,Invalid Action!,1.8,
+https://mooncunt.net,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://mpokies.com,1,1,1,1,,,200,,660547,822,Mpokies,https://mpokies.com/api/v1/index.php,Invalid Action!,2.1,
+https://mpower007.com,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.
+https://mrblueyau.com,1,1,1,1,,,200,,869695,1873,MRBLUEY,https://mrblueyau.com/api/v1/index.php,Invalid Action!,2.0,
+https://mrvip9.com,1,1,1,1,,,200,,902814,60308,MRVIP9,https://mrvip9.com/api/v1/index.php,Invalid Action!,1.8,
+https://mybet9au.net,1,1,1,1,,,200,,713935,475,MYBET9 AUSTRALIA,https://mybet9au.net/api/v1/index.php,Invalid Action!,2.3,
+https://netplay77.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='netplay77.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='netplay77.com', port=443): Failed to resolve 'netplay77.com'"
+https://nextpokies.org,1,1,1,1,,,200,,807830,10663,NextPokies,https://nextpokies.org/api/v1/index.php,Invalid Action!,1.7,
+https://nitro96.com,1,1,1,1,,,200,,924513,60125,NITRO96,https://nitro96.com/api/v1/index.php,Invalid Action!,2.2,
+https://novabet13.com,1,1,1,1,,,200,,1123093,30323,NOVABET13,https://novabet13.com/api/v1/index.php,Invalid Action!,2.1,
+https://okbet789.co,1,1,1,1,,,200,,844971,10849,Okbet789 Online Casino Australia,https://okbet789.co/api/v1/index.php,Invalid Action!,1.8,
+https://okvip7.net,1,1,1,1,,,200,,773589,10829,OKVip7 (AUD),https://okvip7.net/api/v1/index.php,Invalid Action!,2.2,
+https://onlymeth.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='onlymeth.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl"
+https://opalaud.com,1,1,1,1,,,200,,992951,50016,OpalAUD,https://opalaud.com/api/v1/index.php,Invalid Action!,2.6,
+https://oz2win.com,1,1,1,1,,,200,,713574,546,Oz2win,https://oz2win.com/api/v1/index.php,Invalid Action!,1.7,
+https://ozclub88.com,0,0,0,0,reachable,dns,,,,,,,,0.3,"ConnectionError: HTTPSConnectionPool(host='ozclub88.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='ozclub88.com', port=443): Failed to resolve 'ozclub88.com' (["
+https://oziwins.com,0,0,0,0,reachable,dns,,,,,,,,0.2,"ConnectionError: HTTPSConnectionPool(host='oziwins.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='oziwins.com', port=443): Failed to resolve 'oziwins.com' ([Err"
+https://ozmeth.com,1,1,1,1,,,200,,783506,11042,OzMeth,https://ozmeth.com/api/v1/index.php,Invalid Action!,2.2,
+https://ozspin.co,1,1,1,1,,,200,,658560,1878,OZSPIN,https://ozspin.co/api/v1/index.php,Invalid Action!,1.7,
+https://ozy777.com,1,1,1,1,,,200,,694626,60322,OZY777,https://ozy777.com/api/v1/index.php,Invalid Action!,1.9,
+https://payid123.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://payid123.com/
+https://peakbet.co,1,1,1,1,,,200,,862398,60367,PEAKBET96,https://peakbet.co/api/v1/index.php,Invalid Action!,3.2,
+https://perthspin.net,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='perthspin.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='perthspin.net', port=443): Failed to resolve 'perthspin.net'"
+https://playaus.co,1,1,1,1,,,200,,797102,30591,PLAYAUS,https://playaus.co/api/v1/index.php,Invalid Action!,1.6,
+https://playdash.asia,1,1,1,1,,,200,,655006,1099,PlaydashAus,https://playdash.asia/api/v1/index.php,Invalid Action!,1.7,
+https://playnuts.net,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://playnuts.net/
+https://pokemonau.vip,0,0,0,0,reachable,dns,,,,,,,,0.1,"ConnectionError: HTTPSConnectionPool(host='pokemonau.vip', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='pokemonau.vip', port=443): Failed to resolve 'pokemonau.vip'"
+https://pokies123.com,1,1,1,1,,,200,,835992,10576,Pokies123,https://pokies123.com/api/v1/index.php,Invalid Action!,2.9,
+https://pokies33aus.com,1,1,1,1,,,200,,718862,10141,Pokies33,https://pokies33aus.com/api/v1/index.php,Invalid Action!,2.3,
+https://pokiesboss.com,1,1,1,1,,,200,,875268,60395,POKIESBOSS,https://pokiesboss.com/api/v1/index.php,Invalid Action!,1.9,
+https://pokiesclub.co,1,1,1,1,,,200,,812323,50336,POKIESCLUB,https://pokiesclub.co/api/v1/index.php,Invalid Action!,3.0,
+https://pokiesgg.vip,1,1,1,1,,,200,,746310,10244,PokiesGG,https://pokiesgg.vip/api/v1/index.php,Invalid Action!,1.7,
+https://pokiesgod.com,1,1,1,1,,,200,,766884,60030,POKIESGOD,https://pokiesgod.com/api/v1/index.php,Invalid Action!,2.9,
+https://pokieskingdom.com,1,1,1,1,,,200,,732649,10837,POKIESKINGDOM,https://pokieskingdom.com/api/v1/index.php,Invalid Action!,2.0,
+https://pokieskingdom.icu,1,1,1,1,,,200,,732649,10837,POKIESKINGDOM,https://pokieskingdom.icu/api/v1/index.php,Invalid Action!,1.8,
+https://pokiesluck.com,1,0,0,0,homepage,cloudflare/403,200,,408,,,,,0.7,ValueError: Blocked: Access Denied.
+https://pokiesluxe.com,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://pokiesokay.com,1,0,0,0,homepage,cloudflare/403,200,,408,,,,,0.7,ValueError: Blocked: Access Denied.
+https://pokiesstation.vip,1,1,1,1,,,200,,735490,10754,POKIESSTATION,https://pokiesstation.vip/api/v1/index.php,Invalid Action!,1.7,
+https://pokiesww.org,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='pokiesww.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='pokiesww.org', port=443): Failed to resolve 'pokiesww.org' (["
+https://potstrike.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='potstrike.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ss"
+https://pp33au.com,1,1,1,1,,,200,,701963,10794,PP33au (AUD),https://pp33au.com/api/v1/index.php,Invalid Action!,1.7,
+https://predator9.vip,1,1,1,1,,,200,,688024,60381,Predator9,https://predator9.vip/api/v1/index.php,Invalid Action!,2.0,
+https://premium1au.com,1,1,1,1,,,200,,707585,10853,Premium1,https://premium1au.com/api/v1/index.php,Invalid Action!,1.9,
+https://psychospin.com,1,0,0,0,homepage,cloudflare/403,200,,408,,,,,0.7,ValueError: Blocked: Access Denied.
+https://punk11.com,1,1,0,0,merchant,parse_failed,200,,1580,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://quantumspin36.com,1,0,0,0,homepage,http_530,530,,,,,,,0.1,HTTPError: 530 Server Error: <none> for url: https://quantumspin36.com/
+https://ragemeth.com,1,1,1,1,,,200,,769607,60271,RAGEMETH,https://ragemeth.com/api/v1/index.php,Invalid Action!,1.7,
+https://raptor77.win,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='raptor77.win', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='raptor77.win', port=443): Failed to resolve 'raptor77.win' (["
+https://real9au.com,1,1,1,1,,,200,,773341,50301,REAL9AU,https://real9au.com/api/v1/index.php,Invalid Action!,2.1,
+https://redvortex8.com,1,1,1,1,,,200,,867750,326,Redvortex8,https://redvortex8.com/api/v1/index.php,Invalid Action!,1.7,
+https://redzzo88.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='redzzo88.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='redzzo88.com', port=443): Failed to resolve 'redzzo88.com' (["
+https://reels11.online,1,1,1,1,,,200,,807198,50535,REELS11,https://reels11.online/api/v1/index.php,Invalid Action!,1.8,
+https://richmama8.pro,1,1,1,1,,,200,,948552,1069,RICHMAMA,https://richmama8.pro/api/v1/index.php,Invalid Action!,1.9,
+https://richpapa8.vip,1,1,1,1,,,200,,956305,1063,RichPapa,https://richpapa8.vip/api/v1/index.php,Invalid Action!,1.8,
+https://richpokies.co,1,1,1,1,,,200,,738769,10753,RICHPOKIES,https://richpokies.co/api/v1/index.php,Invalid Action!,1.7,
+https://ridgydidgeau.com,1,1,1,1,,,200,,703109,1833,RIDGYDIDGE,https://ridgydidgeau.com/api/v1/index.php,Invalid Action!,2.0,
+https://ridgydidgebets.com,1,1,1,1,,,200,,693511,10789,RidgyDidgeBets,https://ridgydidgebets.com/api/v1/index.php,Invalid Action!,1.7,
+https://ripperroo.com,0,0,0,0,reachable,ssl,,,,,,,,5.1,"SSLError: HTTPSConnectionPool(host='ripperroo.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ss"
+https://rizzspin.com,0,0,0,0,reachable,ssl,,,,,,,,4.2,"SSLError: HTTPSConnectionPool(host='rizzspin.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl"
+https://robloxau.co,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://rolliespin.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://roocrown.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='roocrown.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='roocrown.com', port=443): Failed to resolve 'roocrown.com' (["
+https://rookash.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='rookash.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='rookash.com', port=443): Failed to resolve 'rookash.com' ([Err"
+https://rooplay168.com,1,1,1,1,,,200,,1424071,50500,ROOPLAY168,https://rooplay168.com/api/v1/index.php,Invalid Action!,2.0,
+https://rooroomate.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='rooroomate.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='rooroomate.com', port=443): Failed to resolve 'rooroomate.c"
+https://roospeedau.online,1,1,1,1,,,200,,694968,50502,ROOSPEEDAU,https://roospeedau.online/api/v1/index.php,Invalid Action!,1.7,
+https://roospeedau.space,1,1,1,1,,,200,,694968,50502,ROOSPEEDAU,https://roospeedau.space/api/v1/index.php,Invalid Action!,1.7,
+https://rr4winaus.com,1,1,1,1,,,200,,894486,10741,RR4WIN AUS,https://rr4winaus.com/api/v1/index.php,Invalid Action!,2.0,
+https://rr4winaus.net,1,1,1,1,,,200,,894486,10741,RR4WIN AUS,https://rr4winaus.net/api/v1/index.php,Invalid Action!,3.4,
+https://rtspin.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='rtspin.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c"
+https://saferoox.com,1,1,1,1,,,200,,799307,60331,SAFEROOX (AUD),https://saferoox.com/api/v1/index.php,Invalid Action!,2.1,
+https://sawspin.com,1,1,1,1,,,200,,824343,30555,SAWSPIN,https://sawspin.com/api/v1/index.php,Invalid Action!,1.6,
+https://sboomerang.com,1,1,1,1,,,200,,814100,1767,SBOOMERANG,https://sboomerang.com/api/v1/index.php,Invalid Action!,1.7,
+https://scarletsin88au.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='scarletsin88au.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='scarletsin88au.com', port=443): Failed to resolve 'scar"
+https://scc5.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://shardbet.net,1,0,0,0,homepage,cloudflare/403,200,,406,,,,,0.8,ValueError: Blocked: Access Denied.
+https://skycity88au.com,1,1,1,1,,,200,,696826,50679,SKYCITY88,https://skycity88au.com/api/v1/index.php,Invalid Action!,1.7,
+https://slotaud.com,1,0,0,0,homepage,cloudflare/403,200,,405,,,,,0.7,ValueError: Blocked: Access Denied.
+https://slotify7.com,1,1,1,1,,,200,,675806,1656,SLOTIFY7,https://slotify7.com/api/v1/index.php,Invalid Action!,1.8,
+https://slotrot.net,1,1,1,1,,,200,,738734,60261,SLOTROT,https://slotrot.net/api/v1/index.php,Invalid Action!,1.6,
+https://slutspins.com,1,1,1,1,,,200,,723997,30581,SLUTSPINS,https://slutspins.com/api/v1/index.php,Invalid Action!,1.9,
+https://spacecraft9.com,1,1,1,1,,,200,,732292,60132,SpaceCraft9,https://spacecraft9.com/api/v1/index.php,Invalid Action!,1.7,
+https://spacexpokies.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://sparksau.net,1,0,0,0,homepage,http_530,530,,,,,,,0.1,HTTPError: 530 Server Error: <none> for url: https://sparksau.net/
+https://speedwin88.com,1,1,1,1,,,200,,705545,50226,SPEEDWIN88,https://speedwin88.com/api/v1/index.php,Invalid Action!,1.7,
+https://speedwin96.com,1,1,1,1,,,200,,945276,50505,SPEEDWIN96,https://speedwin96.com/api/v1/index.php,Invalid Action!,2.2,
+https://spice77.site,1,1,1,1,,,200,,674956,50572,SPICE77,https://spice77.site/api/v1/index.php,Invalid Action!,1.7,
+https://spin4rich.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://spin4rich.com/
+https://spinbaby.org,0,0,0,0,reachable,dns,,,,,,,,0.2,"ConnectionError: HTTPSConnectionPool(host='spinbaby.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='spinbaby.org', port=443): Failed to resolve 'spinbaby.org' (["
+https://spincunt.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.
+https://spingoau.co,1,1,1,1,,,200,,724524,50367,SPINGOAU,https://spingoau.co/api/v1/index.php,Invalid Action!,3.7,
+https://spinkash.com,1,1,0,0,merchant,parse_failed,200,,53672,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.
+https://spinvegas9.com,1,1,0,0,merchant,parse_failed,200,,41122,,,,,0.7,ValueError: Could not find merchant identification details in HTML or JS.
+https://spinwoo.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='spinwoo.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl."
+https://spinza96.com,1,1,1,1,,,200,,998515,11001,Spinza96 $10 Minimum Deposit Australia Casino,https://spinza96.com/api/v1/index.php,Invalid Action!,2.2,
+https://spinzone11.club,1,1,1,1,,,200,,750768,50533,SPINZONE11,https://spinzone11.club/api/v1/index.php,Invalid Action!,1.7,
+https://splinkos.com,1,1,1,1,,,200,,829274,1768,SPLINKOS,https://splinkos.com/api/v1/index.php,Invalid Action!,1.8,
+https://spn99.net,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='spn99.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='spn99.net', port=443): Failed to resolve 'spn99.net' ([Errno -2]"
+https://sr7au.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='sr7au.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='sr7au.com', port=443): Failed to resolve 'sr7au.com' ([Errno -2]"
+https://stackau.online,0,0,0,0,reachable,dns,,,,,,,,0.1,"ConnectionError: HTTPSConnectionPool(host='taxis33.cc', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='taxis33.cc', port=443): Failed to resolve 'taxis33.cc' ([Errno "
+https://stakeau.com,1,1,1,1,,,200,,701159,1785,STAKEAU,https://stakeau.com/api/v1/index.php,Invalid Action!,2.8,
+https://strayaluck.com,1,1,1,1,,,200,,757755,30302,STRAYALUCK,https://strayaluck.com/api/v1/index.php,Invalid Action!,1.9,
+https://strayalux.com,0,0,0,0,reachable,dns,,,,,,,,0.1,"ConnectionError: HTTPSConnectionPool(host='strayalux.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='strayalux.com', port=443): Failed to resolve 'strayalux.com'"
+https://sugar96.com,1,1,1,1,,,200,,860916,549,Sugar96,https://sugar96.com/api/v1/index.php,Invalid Action!,5.1,
+https://supremepokies.icu,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://supremepokies.icu/
+https://svj33au.com,1,1,1,1,,,200,,1011724,50575,SVJ33AU,https://svj33au.com/api/v1/index.php,Invalid Action!,3.1,
+https://sydspin.org,1,1,1,1,,,200,,799522,10252,Sydspin,https://sydspin.org/api/v1/index.php,Invalid Action!,1.7,
+https://tab77au.co,1,1,1,1,,,200,,771301,1511,TAB77AU,https://tab77au.co/api/v1/index.php,Invalid Action!,1.7,
+https://tcl99.com,1,1,1,1,,,200,,743677,613,TCL99,https://tcl99.com/api/v1/index.php,Invalid Action!,2.5,
+https://tinniewin.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='tinniewin.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='tinniewin.com', port=443): Failed to resolve 'tinniewin.com'"
+https://tmzbet.com,0,0,0,0,reachable,ssl,,,,,,,,0.5,"SSLError: HTTPSConnectionPool(host='tmzbet.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable t"
+https://tonygame7.com,0,0,0,0,reachable,connection,,,,,,,,1.7,"InvalidSchema: No connection adapters were found for ""about:blank';\\n                window.location.pathname = \\"""
+https://trueaussiebet.vip,1,1,0,0,merchant,parse_failed,200,,170795,,,,,4.2,ValueError: Could not find merchant identification details in HTML or JS.
+https://truebluebetscasino.com,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://truebluex.com,0,0,0,0,reachable,ssl,,,,,,,,5.1,"SSLError: HTTPSConnectionPool(host='truebluex.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ss"
+https://ufc9aus.com,1,1,1,1,,,200,,660386,635,UFC9,https://ufc9aus.com/api/v1/index.php,Invalid Action!,2.0,
+https://unipokies.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='unipokies.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ss"
+https://unitedpokies.icu,1,1,1,0,api,api_not_json,200,,733976,10770,UNITEDPOKIES,https://unitedpokies.icu/api/v1/index.php,HTTP 404 non-JSON,1.9,
+https://v2plus.me,1,1,1,1,,,200,,682855,30358,V2PLUS,https://v2plus.me/api/v1/index.php,Invalid Action!,2.1,
+https://vanspin.com,1,1,0,0,merchant,parse_failed,200,,16301,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.
+https://ves88.com,1,1,1,1,,,200,,858968,10556,VES88,https://ves88.com/api/v1/index.php,Invalid Action!,2.3,
+https://ves88.vip,1,1,1,1,,,200,,858968,10556,VES88,https://ves88.vip/api/v1/index.php,Invalid Action!,2.1,
+https://vicspin.com,0,0,0,0,reachable,dns,,,,,,,,0.3,"ConnectionError: HTTPSConnectionPool(host='vicspin.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='vicspin.com', port=443): Failed to resolve 'vicspin.com' ([Err"
+https://victor96.com,1,1,1,1,,,200,,800185,135,Victor96,https://victor96.com/api/v1/index.php,Invalid Action!,2.1,
+https://victoria77au.com,1,1,1,1,,,200,,736776,50618,VICTORIA77 Australia Online Casino | High RTP,https://victoria77au.com/api/v1/index.php,Invalid Action!,2.5,
+https://viva96.com,1,1,0,0,merchant,parse_failed,200,,214,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.
+https://vv33v.com,1,1,1,1,,,200,,718331,10771,VV33V (AUD),https://vv33v.com/api/v1/index.php,Invalid Action!,2.3,
+https://wavepokies.com,0,0,0,0,reachable,ssl,,,,,,,,0.6,"SSLError: HTTPSConnectionPool(host='wavepokies.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Host"
+https://wegobet.asia,1,1,1,1,,,200,,651821,1155,WEGOBET,https://wegobet.asia/api/v1/index.php,Invalid Action!,1.9,
+https://wegobet.co,1,1,1,1,,,200,,651821,1155,WEGOBET,https://wegobet.co/api/v1/index.php,Invalid Action!,1.6,
+https://weplay9aus.casino,1,1,1,1,,,200,,667739,30137,WEPLAY9,https://weplay9aus.casino/api/v1/index.php,Invalid Action!,2.9,
+https://whackaus.com,1,1,1,1,,,200,,816549,30509,WHACKAUS,https://whackaus.com/api/v1/index.php,Invalid Action!,1.7,
+https://whackspin.net,1,1,1,1,,,200,,741378,60263,WHACKSPIN,https://whackspin.net/api/v1/index.php,Invalid Action!,1.7,
+https://win7au.com,1,1,1,1,,,200,,896110,60212,Win7ᴬᵁ,https://win7au.com/api/v1/index.php,Invalid Action!,3.0,
+https://winall365.com,1,1,1,1,,,200,,786675,50622,WINALL365,https://winall365.com/api/v1/index.php,Invalid Action!,4.1,
+https://winbox99au.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='winbox99au.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='winbox99au.com', port=443): Failed to resolve 'winbox99au.c"
+https://winfortune777.com,1,1,1,1,,,200,,765285,10005,WinFortune777,https://winfortune777.com/api/v1/index.php,Invalid Action!,2.2,
+https://wink9.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='wink9.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:"
+https://winmate88.org,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='winmate88.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unabl"
+https://winshark88.com,1,1,1,1,,,200,,838109,11033,WinShark88 Casino Australia,https://winshark88.com/api/v1/index.php,Invalid Action!,1.9,
+https://winspin99.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='winspin99.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='winspin99.com', port=443): Failed to resolve 'winspin99.com'"
+https://winstar96au.com,1,1,1,1,,,200,,926752,10656,WinStar96 E-Wallet Casino,https://winstar96au.com/api/v1/index.php,Invalid Action!,2.8,
+https://wintrue18.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.
+https://winwin9.org,0,0,0,0,reachable,ssl,,,,,,,,5.1,"SSLError: HTTPSConnectionPool(host='winwin9.org', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl."
+https://winzamate.com,1,1,1,1,,,200,,806226,11051,WinzaMate,https://winzamate.com/api/v1/index.php,Invalid Action!,2.9,
+https://won29.com,0,0,0,0,reachable,dns,,,,,,,,0.1,"ConnectionError: HTTPSConnectionPool(host='won29.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='won29.com', port=443): Failed to resolve 'won29.com' ([Errno -5]"
+https://wonpokies.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='wonpokies.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='wonpokies.com', port=443): Failed to resolve 'wonpokies.com'"
+https://woohoo9.com,1,1,0,0,merchant,parse_failed,200,,20445,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.
+https://woospin.org,1,1,1,1,,,200,,809539,10030,WooSpin,https://woospin.org/api/v1/index.php,Invalid Action!,1.7,
+https://wow11.site,1,1,1,1,,,200,,738292,50298,WOW11,https://wow11.site/api/v1/index.php,Invalid Action!,1.7,
+https://wowbet9.net,0,0,0,0,reachable,dns,,,,,,,,0.3,"ConnectionError: HTTPSConnectionPool(host='wowbet9.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='wowbet9.net', port=443): Failed to resolve 'wowbet9.net' ([Err"
+https://www.28mars.com,1,0,0,0,homepage,http_418,418,,,,,,,0.5,HTTPError: 418 Client Error: Fastly Internal CDN Blocked Error:00002 for url: https://unstoppabledomains.com/d/28mars.com
+https://www.adultsbet.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='www.adultsbet.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.adultsbet.com', port=443): Failed to resolve 'www.ad"
+https://www.aussiebt.com,1,1,1,1,,,200,,756704,630,AussieBT,https://www.aussiebt.com/api/v1/index.php,Invalid Action!,3.0,
+https://www.bankcunt.net,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='www.bankcunt.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.bankcunt.net', port=443): Failed to resolve 'www.bank"
+https://www.betjason.com,0,0,0,0,reachable,dns,,,,,,,,0.1,"ConnectionError: HTTPSConnectionPool(host='www.betjason.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.betjason.com', port=443): Failed to resolve 'www.betj"
+https://www.bomboclat9.net,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='www.bomboclat9.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.bomboclat9.net', port=443): Failed to resolve 'www."
+https://www.boombaby9.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='www.boombaby9.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.boombaby9.com', port=443): Failed to resolve 'www.bo"
+https://www.fuckingluck.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='www.fuckingluck.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.fuckingluck.com', port=443): Failed to resolve 'ww"
+https://www.fuckmate.co,1,1,1,1,,,200,,785551,10640,FuckMate,https://www.fuckmate.co/api/v1/index.php,Invalid Action!,2.7,
+https://www.lsdbaby.net,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='www.lsdbaby.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.lsdbaby.net', port=443): Failed to resolve 'www.lsdbab"
+https://www.masonspin.net,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='www.masonspin.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.masonspin.net', port=443): Failed to resolve 'www.ma"
+https://www.methbet.net,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='www.methbet.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.methbet.net', port=443): Failed to resolve 'www.methbe"
+https://www.mullet28.net,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='www.mullet28.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.mullet28.net', port=443): Failed to resolve 'www.mull"
+https://www.nelspin.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://www.nelspin.com/
+https://www.pokiesgg.com,1,1,0,0,merchant,parse_failed,200,,26023,,,,,0.7,ValueError: Could not find merchant identification details in HTML or JS.
+https://www.roospin.com,1,0,0,0,homepage,cloudflare/403,200,,413,,,,,0.8,ValueError: Blocked: Access Denied.
+https://www.slotmeth.org,1,1,1,1,,,200,,759091,10573,SlotMeth,https://www.slotmeth.org/api/v1/index.php,Invalid Action!,3.1,
+https://www.spinbizzo.org,0,0,0,0,reachable,dns,,,,,,,,0.1,"ConnectionError: HTTPSConnectionPool(host='www.spinbizzo.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.spinbizzo.org', port=443): Failed to resolve 'www.sp"
+https://www.winsavage.net,0,0,0,0,reachable,dns,,,,,,,,0.3,"ConnectionError: HTTPSConnectionPool(host='www.winsavage.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='www.winsavage.net', port=443): Failed to resolve 'www.wi"
+https://www.winstreak9.com,1,1,0,0,merchant,parse_failed,200,,27526,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.
+https://www.wintrue18auh5api.shop,1,1,0,0,merchant,parse_failed,200,,21,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.
+https://xox96.com,1,1,1,1,,,200,,1206732,60223,XOX96,https://xox96.com/api/v1/index.php,Invalid Action!,2.0,
+https://xpay9.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://xturn33aus.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='xturn33aus.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='xturn33aus.com', port=443): Failed to resolve 'xturn33aus.c"
+https://legend-9.com,1,1,1,1,,,200,,729853,10868,Legend9 (AUD),https://legend-9.com/api/v1/index.php,Invalid Action!,1.7,
+https://500px.com,1,1,0,0,merchant,parse_failed,200,,3337,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://96pro.net,1,1,1,1,,,200,,754401,60813,96Pro,https://96pro.net/api/v1/index.php,Invalid Action!,1.8,
+https://9au.net,1,1,1,1,,,200,,793637,10520,9AU,https://9au.net/api/v1/index.php,Invalid Action!,1.8,
+https://abigcandy.com,1,1,0,0,merchant,parse_failed,200,,55843,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://about.me,1,1,0,0,merchant,parse_failed,200,,233018,,,,,0.1,ValueError: Could not find merchant identification details in HTML or JS.
+https://ace4win.co,1,1,1,1,,,200,,945419,346,Ace4Win,https://ace4win.co/api/v1/index.php,Invalid Action!,2.2,
+https://ak8au.com,1,1,1,1,,,200,,679244,724,AK8Au,https://ak8au.com/api/v1/index.php,Invalid Action!,2.0,
+https://allstarcasino.com,1,1,0,0,merchant,parse_failed,200,,20235,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.
+https://app996.com,1,1,0,0,merchant,parse_failed,200,,214,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://app996.net,1,1,0,0,merchant,parse_failed,200,,214,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://audplay.co,1,1,1,1,,,200,,837688,773,AUDPLAY168,https://audplay.co/api/v1/index.php,Invalid Action!,1.9,
+https://audplay.com,1,1,1,1,,,200,,837688,773,AUDPLAY168,https://audplay.com/api/v1/index.php,Invalid Action!,1.9,
+https://audplay.site,1,1,1,1,,,200,,837688,773,AUDPLAY168,https://audplay.site/api/v1/index.php,Invalid Action!,1.7,
+https://audply.com,1,1,1,1,,,200,,837688,773,AUDPLAY168,https://audply.com/api/v1/index.php,Invalid Action!,1.8,
+https://auplay88.app,1,1,0,0,merchant,parse_failed,200,,2251,,,,,2.1,ValueError: Could not find merchant identification details in HTML or JS.
+https://aus96.co,1,1,1,1,,,200,,1058036,601,AUS96,https://aus96.co/api/v1/index.php,Invalid Action!,2.0,
+https://aussieplay-games.com,1,1,0,0,merchant,parse_failed,200,,87400,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://australiapokiesplatform.com,1,1,0,0,merchant,parse_failed,200,,260828,,,,,1.7,ValueError: Could not find merchant identification details in HTML or JS.
+https://backuptesting.vip,1,1,1,1,,,200,,658622,41,BOSSKU,https://backuptesting.vip/api/v1/index.php,Invalid Action!,2.2,
+https://bb96.com,1,1,0,0,merchant,parse_failed,200,,212,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://behance.net,1,0,0,0,homepage,http_429,429,,,,,,,9.8,HTTPError: 429 Client Error: Too many requests for url: https://www.behance.net/
+https://bettywins.net,1,1,0,0,merchant,parse_failed,200,,104160,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://bitdreams2.com,1,1,0,0,merchant,parse_failed,200,,111066,,,,,3.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://bitkingz.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.3,HTTPError: 403 Client Error: Forbidden for url: https://www.bitkingz.com/
+https://bitstarz.com,1,1,0,0,merchant,parse_failed,200,,392450,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://bizzocasino-au.net,0,0,0,0,reachable,ssl,,,,,,,,5.1,"SSLError: HTTPSConnectionPool(host='bizzocasino.bet', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_"
+https://blaze007.io,1,1,1,1,,,200,,816695,10512,Blaze007,https://blaze007.io/api/v1/index.php,Invalid Action!,2.2,
+https://bluespin88.com,1,1,1,1,,,200,,822919,870,BlueSpin88,https://bluespin88.com/api/v1/index.php,Invalid Action!,2.1,
+https://bluespin88.net,1,1,1,1,,,200,,822919,870,BlueSpin88,https://bluespin88.net/api/v1/index.php,Invalid Action!,1.8,
+https://brbet9.com,1,1,0,0,merchant,parse_failed,200,,23871,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.
+https://bs96.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://bsb007.com,1,1,1,1,,,200,,693900,74,BSB007,https://bsb007.com/api/v1/index.php,Invalid Action!,2.2,
+https://bunny96.co,1,1,1,1,,,200,,846559,10523,Bunny96 (AUD),https://bunny96.co/api/v1/index.php,Invalid Action!,2.2,
+https://call96.co,1,1,1,1,,,200,,779195,60330,Call96,https://call96.co/api/v1/index.php,Invalid Action!,1.8,
+https://candy96.co,1,1,1,1,,,200,,861321,842,CANDY96,https://candy96.co/api/v1/index.php,Invalid Action!,2.5,
+https://candy96.site,1,1,1,1,,,200,,861321,842,CANDY96,https://candy96.site/api/v1/index.php,Invalid Action!,2.1,
+https://casino-slotmafia.com,1,0,0,0,homepage,cloudflare/403,503,,,,,,,1.1,HTTPError: 503 Server Error: Service Unavailable for url: https://casino-slotmafia.com/
+https://casinojaxs.com,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='casinojaxs.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:108"
+https://casinorocket.com,1,1,0,0,merchant,parse_failed,200,,22064,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://choose96.com,1,1,0,0,merchant,parse_failed,200,,216,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://class777.co,1,1,1,1,,,200,,697715,10220,Class777,https://class777.co/api/v1/index.php,Invalid Action!,1.8,
+https://cpau365.co,1,1,1,1,,,200,,1108850,485,CPAU365,https://cpau365.co/api/v1/index.php,Invalid Action!,2.0,
+https://cpau365.com,1,1,1,1,,,200,,1108850,485,CPAU365,https://cpau365.com/api/v1/index.php,Invalid Action!,1.9,
+https://crocoslots1.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.3,HTTPError: 403 Client Error: Forbidden for url: https://www.crocoslots1.com/
+https://crownplay4.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.2,HTTPError: 403 Client Error: Forbidden for url: https://crownplay4.com/
+https://crownslots1.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.2,HTTPError: 403 Client Error: Forbidden for url: https://www.crownslots1.com/
+https://dragonslotz.com,1,1,0,0,merchant,parse_failed,200,,40692,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://empire96.com,1,1,1,1,,,200,,810914,60685,Empire96,https://empire96.com/api/v1/index.php,Invalid Action!,2.0,
+https://empire96.net,1,1,1,1,,,200,,810914,60685,Empire96,https://empire96.net/api/v1/index.php,Invalid Action!,1.7,
+https://enjoy96.co,1,1,1,1,,,200,,788673,200,Enjoy96,https://enjoy96.co/api/v1/index.php,Invalid Action!,2.0,
+https://fairgocasino.com.au,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='fairgocasino.com.au', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='fairgocasino.com.au', port=443): Failed to resolve 'fa"
+https://fastspinau.online,1,1,1,1,,,200,,703322,50339,FASTSPINAU,https://fastspinau.online/api/v1/index.php,Invalid Action!,1.6,
+https://gday96.com,1,1,1,1,,,200,,1288833,10891,Gday96,https://gday96.com/api/v1/index.php,Invalid Action!,2.1,
+https://gday96.net,1,1,1,1,,,200,,1288833,10891,Gday96,https://gday96.net/api/v1/index.php,Invalid Action!,2.2,
+https://godofwins1.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://godofwins1.com/
+https://goldenstar-casino.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.7,HTTPError: 403 Client Error: Forbidden for url: https://goldenstar-casino.com/
+https://gwcasino582.com,0,0,0,0,reachable,ssl,,,,,,,,0.5,"SSLError: HTTPSConnectionPool(host='gwcasino582.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: cer"
+https://hb88th.com,1,0,0,0,homepage,http_530,530,,,,,,,0.1,HTTPError: 530 Server Error: <none> for url: https://hb88th.com/
+https://heapsowin.com,0,0,0,0,reachable,ssl,,,,,,,,0.3,"SSLError: HTTPSConnectionPool(host='heapsowin.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1082"
+https://hellspin36.com,1,1,0,0,merchant,parse_failed,200,,29827,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.
+https://heylink.me,1,1,0,0,merchant,parse_failed,200,,100632,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.
+https://hillbet88.com,1,0,0,0,homepage,cloudflare/403,200,,407,,,,,0.8,ValueError: Blocked: Access Denied.
+https://hugocasino11.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://hugocasino11.com/
+https://hype777.io,1,1,1,1,,,200,,869735,869,HYPE777,https://hype777.io/api/v1/index.php,Invalid Action!,2.2,
+https://ilove96.com,1,1,0,0,merchant,parse_failed,200,,215,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://itk.asia,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='itk.asia', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1"
+https://jackpotjill.xyz,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.2,HTTPError: 403 Client Error: Forbidden for url: https://www.jackpotjill.mobi/
+https://jackpoty122.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.5,HTTPError: 403 Client Error: Forbidden for url: https://www.jackpoty122.com/
+https://joefortune.fun,1,1,0,0,merchant,parse_failed,200,,8642,,,,,3.2,ValueError: Could not find merchant identification details in HTML or JS.
+https://jokacasino.me,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.3,HTTPError: 403 Client Error: Forbidden for url: https://www.jokacasino.com/
+https://kangaau.site,1,1,1,1,,,200,,1180232,50501,KANGAAU,https://kangaau.site/api/v1/index.php,Invalid Action!,2.2,
+https://kinbet6.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://kinbet6.com/
+https://kingbillywin24.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://www.kingbillywin31.com/
+https://kingjohnnie.me,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.3,HTTPError: 403 Client Error: Forbidden for url: https://www.kingjohnnie.ai/en
+https://le88win.com,1,1,1,1,,,200,,799208,770,LEBET88 AUSTRALIA,https://le88win.com/api/v1/index.php,Invalid Action!,1.8,
+https://leon109.bet,1,1,0,0,merchant,parse_failed,200,,56221,,,,,1.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://levelupcasino35.com,1,1,0,0,merchant,parse_failed,200,,263158,,,,,14.6,ValueError: Could not find merchant identification details in HTML or JS.
+https://luckygreen.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://luckygreen.com/
+https://luckyhour1.com,0,0,0,0,reachable,dns,,,,,,,,4.0,"ConnectionError: HTTPSConnectionPool(host='luckyhour1.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='luckyhour1.com', port=443): Failed to resolve 'luckyhour1.c"
+https://luckymatecasino.vip,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://luckymatecasino.vip/
+https://luckywins.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.8,HTTPError: 403 Client Error: Forbidden for url: https://www.luckywins.com/
+https://lux96.co,1,1,0,0,merchant,parse_failed,200,,212,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://mariongong.com,1,0,0,0,homepage,http_404,404,,,,,,,0.9,HTTPError: 404 Client Error: Not Found for url: https://mariongong.com/
+https://megamedusa.com,1,1,0,0,merchant,parse_failed,200,,44661,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://mm96.com,1,1,0,0,merchant,parse_failed,200,,212,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://mybestgod.com,1,1,0,0,merchant,parse_failed,200,,12057,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://n1bet.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.8,HTTPError: 403 Client Error: Forbidden for url: https://n1bet.com/
+https://national-casinowin.com,1,1,0,0,merchant,parse_failed,200,,40172,,,,,0.1,ValueError: Could not find merchant identification details in HTML or JS.
+https://nitro96.io,1,1,1,1,,,200,,924513,60125,NITRO96,https://nitro96.io/api/v1/index.php,Invalid Action!,2.0,
+https://novajackpot.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://novajackpot.com/
+https://nsw96.com,1,1,1,1,,,200,,896857,60225,NSW96,https://nsw96.com/api/v1/index.php,Invalid Action!,1.7,
+https://omg96.com,1,1,0,0,merchant,parse_failed,200,,213,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://opal96.com,1,1,1,1,,,200,,798235,60121,OPAL96,https://opal96.com/api/v1/index.php,Invalid Action!,1.8,
+https://oz777.net,1,1,0,0,merchant,parse_failed,200,,213,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://ozluxe96.co,1,1,0,0,merchant,parse_failed,200,,215,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://ozluxe96.com,1,1,0,0,merchant,parse_failed,200,,216,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.
+https://ozwin96.co,1,1,1,1,,,200,,717707,60591,Ozwin96,https://ozwin96.co/api/v1/index.php,Invalid Action!,1.7,
+https://ozwin96.net,1,1,1,1,,,200,,717707,60591,Ozwin96,https://ozwin96.net/api/v1/index.php,Invalid Action!,2.0,
+https://pinterest.com,1,1,0,0,merchant,parse_failed,200,,1021023,,,,,5.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://playamo.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.8,HTTPError: 403 Client Error: Forbidden for url: https://www.playamo.com/
+https://playcroco-online.com,1,1,0,0,merchant,parse_failed,200,,175794,,,,,1.5,ValueError: Could not find merchant identification details in HTML or JS.
+https://playfina6.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.7,HTTPError: 403 Client Error: Forbidden for url: https://playfina6.com/en/
+https://playmojo-au.com,1,1,0,0,merchant,parse_failed,200,,85399,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://pocketpokies.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://pocketpokies.com/
+https://pokiemate917.com,1,1,0,0,merchant,parse_failed,200,,20613,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://pokies4bet.co,1,1,1,1,,,200,,937340,740,POKIES4BET,https://pokies4bet.co/api/v1/index.php,Invalid Action!,1.9,
+https://pokieskingau.live,1,1,1,1,,,200,,712812,50337,POKIESKINGAU,https://pokieskingau.live/api/v1/index.php,Invalid Action!,1.7,
+https://pokiespins812.com,0,0,0,0,reachable,ssl,,,,,,,,0.5,"SSLError: HTTPSConnectionPool(host='pokiespins812.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: c"
+https://pokiesurf-casino.online,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://pokiesurf-casino.online/
+https://pokiez33.com,1,1,0,0,merchant,parse_failed,200,,83217,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://postimg.cc,1,1,0,0,merchant,parse_failed,200,,41790,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.
+https://pwa-marketing.com,1,1,0,0,merchant,parse_failed,200,,9968,,,,,2.0,ValueError: Could not find merchant identification details in HTML or JS.
+https://quora.com,1,1,0,0,merchant,parse_failed,200,,80114,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://race96.co,1,1,1,1,,,200,,803979,758,Race96,https://race96.co/api/v1/index.php,Invalid Action!,2.2,
+https://red96.com,1,1,0,0,merchant,parse_failed,200,,213,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://regal96.com,1,1,0,0,merchant,parse_failed,200,,215,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://regal96.net,1,1,0,0,merchant,parse_failed,200,,215,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.
+https://retro33.io,1,1,1,1,,,200,,860318,751,Retro33,https://retro33.io/api/v1/index.php,Invalid Action!,1.9,
+https://richardcasino6.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.2,HTTPError: 403 Client Error: Forbidden for url: https://www.richardcasino13.com/
+https://ricky-casino.com,1,1,0,0,merchant,parse_failed,200,,240347,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://ripperpokies.com,1,1,0,0,merchant,parse_failed,200,,50023,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.
+https://ritzo3.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.2,HTTPError: 403 Client Error: Forbidden for url: https://ritzo3.com/
+https://rivieracasino.com,1,1,0,0,merchant,parse_failed,200,,9935,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.
+https://rocketplay.com,1,0,0,0,homepage,http_451,451,,,,,,,0.2,HTTPError: 451 Client Error: Unavailable For Legal Reasons for url: https://rocketplay.com/
+https://rocketspin.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.4,HTTPError: 403 Client Error: Forbidden for url: https://www.rocketspin.com/
+https://rocknreels.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://rocknreels.com/
+https://roo96.com,1,1,1,1,,,200,,748085,10517,ROO96,https://roo96.com/api/v1/index.php,Invalid Action!,1.7,
+https://roo96.net,1,1,1,1,,,200,,748085,10517,ROO96,https://roo96.net/api/v1/index.php,Invalid Action!,1.9,
+https://roocasino423.com,1,1,0,0,merchant,parse_failed,200,,51055,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.
+https://rooplay.net,1,1,1,1,,,200,,1424071,50500,ROOPLAY168,https://rooplay.net/api/v1/index.php,Invalid Action!,2.0,
+https://skillshare.com,1,1,0,0,merchant,parse_failed,200,,984438,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.
+https://skycrown.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.9,HTTPError: 403 Client Error: Forbidden for url: https://www.skycrown.com/
+https://skystar96.co,1,1,1,1,,,200,,1024569,841,SKYSTAR96,https://skystar96.co/api/v1/index.php,Invalid Action!,2.2,
+https://skystar96.com,1,1,1,1,,,200,,1024569,841,SKYSTAR96,https://skystar96.com/api/v1/index.php,Invalid Action!,1.9,
+https://slot-monster.com,1,1,0,0,merchant,parse_failed,200,,127771,,,,,0.7,ValueError: Could not find merchant identification details in HTML or JS.
+https://slotspalace.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://slotspalace.com/
+https://speedau.net,1,1,1,1,,,200,,930470,313,SpeedAU,https://speedau.net/api/v1/index.php,Invalid Action!,2.3,
+https://spin96.com,1,1,1,1,,,200,,794783,843,SPIN96,https://spin96.com/api/v1/index.php,Invalid Action!,1.8,
+https://spinsamurai65.com,1,1,0,0,merchant,parse_failed,200,,121030,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.
+https://spinsup.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.6,HTTPError: 403 Client Error: Forbidden for url: https://www.spinsup.com/
+https://spiritcasino.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.3,HTTPError: 403 Client Error: Forbidden for url: https://www.spiritcasino.com/
+https://staycasino6.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://www.staycasino10.com/
+https://stellarspins.fun,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.2,HTTPError: 403 Client Error: Forbidden for url: https://www.stellarspins.ai/
+https://the-pokies-net.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://the-pokies-net.com/
+https://thepokies33.vip,1,1,1,1,,,200,,1072427,520,ThePokies33,https://thepokies33.vip/api/v1/index.php,Invalid Action!,1.9,
+https://thepokies96.net,1,1,1,1,,,200,,1182843,10014,ThePokies96,https://thepokies96.net/api/v1/index.php,Invalid Action!,2.0,
+https://tianxiadiyiapps.com,1,1,0,0,merchant,parse_failed,200,,38575,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.
+https://top96.com,1,1,0,0,merchant,parse_failed,200,,213,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://topplayau.com,1,1,1,1,,,200,,698627,50350,TOPPLAYAU,https://topplayau.com/api/v1/index.php,Invalid Action!,1.7,
+https://trello.com,1,1,0,0,merchant,parse_failed,200,,534655,,,,,0.7,ValueError: Could not find merchant identification details in HTML or JS.
+https://truewin77.co,1,1,1,1,,,200,,932597,10524,TRUEWIN77,https://truewin77.co/api/v1/index.php,Invalid Action!,2.2,
+https://trustpilot.com,1,0,0,0,homepage,http_403,403,,,,,,,1.0,HTTPError: 403 Client Error: Forbidden for url: https://www.trustpilot.com/
+https://uptownpokies-casino.com,1,0,0,0,homepage,http_403,403,,,,,,,0.8,HTTPError: 403 Client Error: Forbidden for url: https://uptownpokies-casino.com/
+https://vefrop.com,0,0,0,0,reachable,dns,,,,,,,,0.0,"ConnectionError: HTTPSConnectionPool(host='vefrop.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='vefrop.com', port=443): Failed to resolve 'vefrop.com' ([Errno "
+https://vegasnow.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.3,HTTPError: 403 Client Error: Forbidden for url: https://www.vegasnow.com/
+https://velvetspins.com,0,0,0,0,reachable,ssl,,,,,,,,0.3,"SSLError: HTTPSConnectionPool(host='velvetspins.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:10"
+https://venus55.co,1,1,1,1,,,200,,814199,844,Venus55,https://venus55.co/api/v1/index.php,Invalid Action!,1.7,
+https://victor96.co,1,1,1,1,,,200,,800185,135,Victor96,https://victor96.co/api/v1/index.php,Invalid Action!,2.4,
+https://wewin96.co,1,1,1,1,,,200,,998450,10892,WeWin96,https://wewin96.co/api/v1/index.php,Invalid Action!,1.9,
+https://wewin96.com,1,1,1,1,,,200,,998450,10892,WeWin96,https://wewin96.com/api/v1/index.php,Invalid Action!,2.2,
+https://winshark4.com,1,1,0,0,merchant,parse_failed,200,,69044,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.
+https://winx96.co,1,1,1,1,,,200,,709446,102,Winx96,https://winx96.co/api/v1/index.php,Invalid Action!,1.9,
+https://wolfwinner.fun,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.3,HTTPError: 403 Client Error: Forbidden for url: https://www.wolfwinner.club/en
+https://woocasino.bet,1,1,0,0,merchant,parse_failed,200,,52185,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.
+https://xbet96.co,1,1,0,0,merchant,parse_failed,200,,213,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://xbet96.com,1,1,0,0,merchant,parse_failed,200,,214,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://xox96.net,1,1,1,1,,,200,,1206732,60223,XOX96,https://xox96.net/api/v1/index.php,Invalid Action!,1.9,
+https://xplay96.club,1,1,0,0,merchant,parse_failed,200,,216,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.
+https://xplay96.com,1,1,0,0,merchant,parse_failed,200,,215,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.
+https://xwin96.co,1,1,1,1,,,200,,1096021,60138,XWin96,https://xwin96.co/api/v1/index.php,Invalid Action!,2.0,
+https://xwin96.com,1,1,1,1,,,200,,1096021,60138,XWin96,https://xwin96.com/api/v1/index.php,Invalid Action!,2.0,
+https://yeah96.co,1,1,1,1,,,200,,814556,140,YEAH96,https://yeah96.co/api/v1/index.php,Invalid Action!,1.7,
+https://yeah96.com,1,1,1,1,,,200,,814556,140,YEAH96,https://yeah96.com/api/v1/index.php,Invalid Action!,1.9,

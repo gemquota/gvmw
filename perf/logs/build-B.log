@@ -1,0 +1,34 @@
+vite v8.1.5 building client environment for production...
+[2Ktransforming...✓ 841 modules transformed.
+rendering chunks...
+computing gzip size...
+../../tmp/dist-B/index.html                                    15.22 kB │ gzip:   3.39 kB
+../../tmp/dist-B/assets/shardWorker-CZB2hsUQ.js               127.41 kB
+../../tmp/dist-B/assets/physics.worker-sHNn5_Vw.js            137.52 kB
+../../tmp/dist-B/assets/main-DG_iPYu1.css                      10.23 kB │ gzip:   2.59 kB
+../../tmp/dist-B/assets/index-DeGA5fta.css                     85.46 kB │ gzip:  14.61 kB
+../../tmp/dist-B/assets/webworkerAll-DtuNUOg3.js                0.05 kB │ gzip:   0.06 kB
+../../tmp/dist-B/assets/getTextureBatchBindGroup-BncH57ql.js    0.34 kB │ gzip:   0.26 kB
+../../tmp/dist-B/assets/rolldown-runtime-QTnfLwEv.js            0.69 kB │ gzip:   0.42 kB
+../../tmp/dist-B/assets/CanvasPool-CzgUrivN.js                  0.75 kB │ gzip:   0.42 kB
+../../tmp/dist-B/assets/canvasUtils-Du1s4gOC.js                 6.02 kB │ gzip:   2.02 kB
+../../tmp/dist-B/assets/BufferResource-CcZq-hS1.js             10.51 kB │ gzip:   2.77 kB
+../../tmp/dist-B/assets/init-Cz2nqDkC.js                       15.57 kB │ gzip:   4.87 kB
+../../tmp/dist-B/assets/init-8V_lD14y.js                       24.72 kB │ gzip:   8.47 kB
+../../tmp/dist-B/assets/pixiRenderer-Dgrs1z7C.js               26.29 kB │ gzip:   8.46 kB
+../../tmp/dist-B/assets/WebGPURenderer-BlajKO59.js             38.49 kB │ gzip:  10.71 kB
+../../tmp/dist-B/assets/browserAll-Ch918tB9.js                 42.58 kB │ gzip:  11.12 kB
+../../tmp/dist-B/assets/WebGLRenderer-CyHLetyU.js              68.03 kB │ gzip:  18.55 kB
+../../tmp/dist-B/assets/RenderTargetSystem-CNLCc21U.js         71.07 kB │ gzip:  20.05 kB
+../../tmp/dist-B/assets/CanvasRenderer-CxrNuX_0.js             87.45 kB │ gzip:  27.73 kB
+../../tmp/dist-B/assets/Geometry-DA76qXi9.js                  101.15 kB │ gzip:  30.98 kB
+../../tmp/dist-B/assets/zeroCopy-D2u-Vsey.js                  104.31 kB │ gzip:  35.67 kB
+../../tmp/dist-B/assets/index-jdr4dH7y.js                     220.90 kB │ gzip:  69.17 kB
+../../tmp/dist-B/assets/main-DcIOwriJ.js                      579.80 kB │ gzip: 192.85 kB
+
+✓ built in 351ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

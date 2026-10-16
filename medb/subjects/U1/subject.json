@@ -1,0 +1,6 @@
+{
+  "scenario": "base",
+  "seed": 1004,
+  "config_overrides": {},
+  "components": "subject_components.py"
+}

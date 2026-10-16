@@ -1,0 +1,50 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v4 detail A — P1/P2 governance, checks, ops. Archivist. 9 Oct 2026.
+flowchart TB
+  GEM(("Gem"))
+
+  subgraph Roles["Roles"]
+    ARX["Architect"]
+    ARC["Archivist<br/>codex + cartography"]
+    ARB["Arbiter"]
+    ASM["RETIRED Assembler"]
+  end
+
+  subgraph Checks["Checks"]
+    SCO["Scorer"]
+    SCR["Scrutineer"]
+    SFG["Safeguard"]
+    SFK["Safekeeper"]
+  end
+
+  subgraph Ops["Ops"]
+    MEN["Mender<br/>state + schedule"]
+    MED["Mediator<br/>P2 per phases; live name P4"]
+    MAR["RETIRED Marshal"]
+  end
+
+  ARX ==>|proposes| GEM
+  GEM ==>|records| ARC
+  ASM -.->|role map| ARC
+  ASM -.->|approvals→Gem then Imitator| GEM
+
+  SCO --> SCR
+  SCR --> ARX
+  SCR --> MEN
+  SCR --> ARB
+  ARB --> ARX
+  ARB --> GEM
+  ARB --> MEN
+  SFG --> GEM
+  SFG --> ARX
+  SFK --> SFG
+  SFK --> GEM
+  MAR -.->|merged| MEN
+  MEN --> GEM
+  MED --> GEM
+  ARC -.->|instruction text| ARX
+  ARC -.->|instruction text| ARB
+  ARC -.->|instruction text| SCO
+  ARC -.->|instruction text| SCR
+  ARC -.->|instruction text| SFG
+  ARC -.->|instruction text| SFK

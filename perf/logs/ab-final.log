@@ -1,0 +1,5 @@
+   300: A   61.22 t/s  B   73.26 t/s  gain 1.197x  hashes SAME
+  1000: A    7.86 t/s  B   11.80 t/s  gain 1.501x  hashes SAME
+  2500: A    2.38 t/s  B    3.62 t/s  gain 1.523x  hashes SAME
+ 10000: A    1.22 t/s  B    1.86 t/s  gain 1.520x  hashes SAME
+done

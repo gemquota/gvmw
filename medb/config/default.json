@@ -1,0 +1,88 @@
+{
+  "config_id": "medb-default",
+  "version": 1,
+  "appointer": {
+    "id": null,
+    "key_fingerprint": null,
+    "method": "hmac-sha256",
+    "verify_key_file": null,
+    "_note": "F-04 (D-69): the independent appointer of auditors. Fixed at genesis; a pre-F-04 database binds it once. null = no appointer, so nobody can audit. Deployments set it via data/appointer.json (python -m medb.api) or a config override."
+  },
+  "audit": {
+    "suspend_on": ["UNDETERMINED", "CONSTITUTIONAL_UNDERDETERMINATION"],
+    "suspend_on_note": "AUDIT_INDETERMINACY is never in suspend_on: per spec II-C it means re-audit required, no automatic suspension (F-08, D-40)"
+  },
+  "ranking": {
+    "objective": "relevance",
+    "weights": {"relevance": 1.0, "recency": 0.1},
+    "record_inputs": true
+  },
+  "rendering": {
+    "statement_format": "{subject} {predicate} {object}",
+    "templates": {
+      "user_asserted": "You stated: {statement}",
+      "user_confirmed": "You confirmed (MedB had proposed it): {statement}",
+      "unconfirmed": "MedB inference, not confirmed by you: {statement}"
+    },
+    "mediated_marker": " [MedB-mediated]",
+    "possibly_mediated_marker": " [MedB-mediation possible]",
+    "self_check": true
+  },
+  "anchoring": {
+    "enabled": false,
+    "method": "rfc3161",
+    "tsa_url": null,
+    "_note": "Optional external anchoring of stream-head hashes (F-13, D-62). Off by default; only hashes leave the machine."
+  },
+  "integrations": {
+    "_note": "All integrations are OFF by default (D-72..D-75). Enable locally in data/integrations.json (merged by python -m medb.api and the MCP server); never needs network beyond 127.0.0.1.",
+    "mcp": {
+      "enabled": false,
+      "actor": "agent:assistant",
+      "inference_actor": "inference:assistant",
+      "api_url": "http://127.0.0.1:8765",
+      "tools": null,
+      "_note": "MCP stdio server (python -m medb.integrations.mcp_server). Acts as these token actors through the local API; never the user. tools: null = all MCP tools."
+    },
+    "importers": {
+      "enabled": false,
+      "allowed_roots": ["imports"],
+      "formats": null,
+      "default_sensitivity": "high",
+      "max_file_mb": 512,
+      "max_json_mb": 64,
+      "max_items_per_run": 100000,
+      "max_item_chars": 200000,
+      "_note": "User-only local file importers (corpus.ingest; ingest grant required). Files only, under allowed_roots (relative to the repo root). formats: null = every recognised format; unknown formats are refused."
+    },
+    "sync": {
+      "enabled": false,
+      "schedule": {"enabled": false, "interval_minutes": 60},
+      "max_items_per_run": 2000,
+      "max_item_chars": 200000,
+      "connect_timeout_s": 300,
+      "token_dir": "data/sync_tokens",
+      "clients_file": "data/sync_clients.json",
+      "services": {
+        "google_gmail": {"enabled": false, "scope": "correspondence", "query": "newer_than:365d"},
+        "google_calendar": {"enabled": false, "scope": "calendar"},
+        "google_contacts": {"enabled": false, "scope": "contacts"},
+        "github": {"enabled": false, "scope": "code"},
+        "chrome_local": {"enabled": false, "scope": "browsing", "profile_path": null, "cookies": true},
+        "firefox_local": {"enabled": false, "scope": "browsing", "profile_path": null, "cookies": true}
+      },
+      "_note": "Live account sync (D-76..D-78). OFF by default; per-service opt-in by the user in data/integrations.json. Outbound HTTPS only, to the per-provider host allowlist in medb/integrations/sync_http.py. OAuth client ids/secrets live in data/sync_clients.json and tokens in data/sync_tokens/ (both gitignored; never in this config, which is recorded at GENESIS and exported). Ingest grants for source sync:<service> are required."
+    },
+    "outbox": {
+      "enabled": false,
+      "events": ["ESCALATION_OPENED", "SUSPENSION", "OBLIGATION_BREACHED", "INFERENCE_PROPOSED", "SYNC_REMOTE_DELETION", "SYNC_FAILED"],
+      "webhook": {"enabled": false, "url": null, "timeout_s": 2},
+      "_note": "Append-only local notification feed (ids and kinds only, no content). Optional webhook to http://127.0.0.1 or http://[::1] only."
+    }
+  },
+  "context": {
+    "default_ttl_minutes": 60,
+    "max_ttl_minutes": 1440,
+    "single_valued_predicates": ["directive", "prefers_treatment_decider", "decides"]
+  }
+}

@@ -1,0 +1,25 @@
+
+Running 12 tests using 4 workers
+
+(node:511923) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:511922) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:511930) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:511924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/boot-render-worker.spec.js:5:1 › renders frames: the sim canvas paints non-uniform content (AC-24) (7.6s)
+  ✓   2 tests/e2e/boot-render-worker.spec.js:13:1 › worker ticks advance while running and stop while paused (AC-24) (9.1s)
+  ✓   4 tests/e2e/civ-runtime.spec.js:7:1 › civilisation runtime adapter: off by default, live when enabled, survives save/restore (12.2s)
+  ✓   5 tests/e2e/physics-worker.spec.js:4:1 › boots the simulation shell without a module error (4.6s)
+  ✓   7 tests/e2e/physics-worker.spec.js:24:1 › GPU force output matches CPU for a fixed browser fixture (943ms)
+  ✓   8 tests/e2e/physics-worker.spec.js:54:1 › GPU opt-in remains safe when WebGPU is unavailable (1.7s)
+  ✓   6 tests/e2e/physics-worker.spec.js:11:1 › runs worker ticks asynchronously when SharedArrayBuffer is available (5.8s)
+  ✓   3 tests/e2e/mechanics-worker.spec.js:5:1 › toggling the CONTACT mechanics law changes worker particle state (AC-25) (16.9s)
+  ✓   9 tests/e2e/runtime-acceptance.spec.js:11:3 › VEPA browser acceptance boundary › boots the real application with cross-origin isolation (4.1s)
+  ✓  10 tests/e2e/runtime-acceptance.spec.js:20:3 › VEPA browser acceptance boundary › renders all eight Mechanics law toggles and toggles CONTACT in the browser (4.6s)
+  ✓  11 tests/e2e/runtime-acceptance.spec.js:40:3 › VEPA browser acceptance boundary › reports WebGPU availability without treating fallback as GPU execution (3.8s)
+  ✓  12 tests/e2e/timeline-dashboard.spec.js:5:1 › timeline dashboard: renders, REC toggles, scrub moves the timeline (AC-91) (5.5s)
+
+  12 passed (24.0s)

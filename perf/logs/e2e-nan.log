@@ -1,0 +1,319 @@
+
+Running 12 tests using 4 workers
+
+(node:258319) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:258320) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:258326) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 tests/e2e/boot-render-worker.spec.js:13:1 › worker ticks advance while running and stop while paused (AC-24) (13ms)
+  ✘   2 tests/e2e/boot-render-worker.spec.js:5:1 › renders frames: the sim canvas paints non-uniform content (AC-24) (2ms)
+(node:258328) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 tests/e2e/civ-runtime.spec.js:7:1 › civilisation runtime adapter: off by default, live when enabled, survives save/restore (2ms)
+  ✘   4 tests/e2e/mechanics-worker.spec.js:5:1 › toggling the CONTACT mechanics law changes worker particle state (AC-25) (3ms)
+(node:258375) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:258374) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:258392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   6 tests/e2e/physics-worker.spec.js:4:1 › boots the simulation shell without a module error (2ms)
+  ✘   5 tests/e2e/physics-worker.spec.js:11:1 › runs worker ticks asynchronously when SharedArrayBuffer is available (7ms)
+  ✘   7 tests/e2e/physics-worker.spec.js:24:1 › GPU force output matches CPU for a fixed browser fixture (2ms)
+(node:258401) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 tests/e2e/physics-worker.spec.js:54:1 › GPU opt-in remains safe when WebGPU is unavailable (2ms)
+(node:258424) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:258422) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 tests/e2e/runtime-acceptance.spec.js:11:3 › VEPA browser acceptance boundary › boots the real application with cross-origin isolation (2ms)
+  ✘  10 tests/e2e/runtime-acceptance.spec.js:20:3 › VEPA browser acceptance boundary › renders all eight Mechanics law toggles and toggles CONTACT in the browser (6ms)
+(node:258436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:258450) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  11 tests/e2e/runtime-acceptance.spec.js:40:3 › VEPA browser acceptance boundary › reports WebGPU availability without treating fallback as GPU execution (2ms)
+  ✘  12 tests/e2e/timeline-dashboard.spec.js:5:1 › timeline dashboard: renders, REC toggles, scrub moves the timeline (AC-91) (2ms)
+
+
+  1) tests/e2e/boot-render-worker.spec.js:5:1 › renders frames: the sim canvas paints non-uniform content (AC-24) 
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/boot-render-worker-renders-f3251--non-uniform-content-AC-24-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/boot-render-worker-renders-f3251--non-uniform-content-AC-24-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/boot-render-worker-renders-f3251--non-uniform-content-AC-24-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/e2e/boot-render-worker.spec.js:13:1 › worker ticks advance while running and stop while paused (AC-24) 
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/boot-render-worker-worker--97943-nd-stop-while-paused-AC-24-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/boot-render-worker-worker--97943-nd-stop-while-paused-AC-24-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/boot-render-worker-worker--97943-nd-stop-while-paused-AC-24-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/e2e/civ-runtime.spec.js:7:1 › civilisation runtime adapter: off by default, live when enabled, survives save/restore 
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/civ-runtime-civilisation-r-c33d2-abled-survives-save-restore/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/civ-runtime-civilisation-r-c33d2-abled-survives-save-restore/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/civ-runtime-civilisation-r-c33d2-abled-survives-save-restore/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/e2e/mechanics-worker.spec.js:5:1 › toggling the CONTACT mechanics law changes worker particle state (AC-25) 
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/mechanics-worker-toggling--141ef-orker-particle-state-AC-25-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/mechanics-worker-toggling--141ef-orker-particle-state-AC-25-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/mechanics-worker-toggling--141ef-orker-particle-state-AC-25-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) tests/e2e/physics-worker.spec.js:4:1 › boots the simulation shell without a module error ──────
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/physics-worker-boots-the-s-546ec-hell-without-a-module-error/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/physics-worker-boots-the-s-546ec-hell-without-a-module-error/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/physics-worker-boots-the-s-546ec-hell-without-a-module-error/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) tests/e2e/physics-worker.spec.js:11:1 › runs worker ticks asynchronously when SharedArrayBuffer is available 
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/physics-worker-runs-worker-10686-redArrayBuffer-is-available/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/physics-worker-runs-worker-10686-redArrayBuffer-is-available/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/physics-worker-runs-worker-10686-redArrayBuffer-is-available/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) tests/e2e/physics-worker.spec.js:24:1 › GPU force output matches CPU for a fixed browser fixture 
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/physics-worker-GPU-force-o-42c66-for-a-fixed-browser-fixture/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/physics-worker-GPU-force-o-42c66-for-a-fixed-browser-fixture/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/physics-worker-GPU-force-o-42c66-for-a-fixed-browser-fixture/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) tests/e2e/physics-worker.spec.js:54:1 › GPU opt-in remains safe when WebGPU is unavailable ────
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/physics-worker-GPU-opt-in--0adb6--when-WebGPU-is-unavailable/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/physics-worker-GPU-opt-in--0adb6--when-WebGPU-is-unavailable/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/physics-worker-GPU-opt-in--0adb6--when-WebGPU-is-unavailable/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) tests/e2e/runtime-acceptance.spec.js:11:3 › VEPA browser acceptance boundary › boots the real application with cross-origin isolation 
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/runtime-acceptance-VEPA-br-ba53d-with-cross-origin-isolation/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/runtime-acceptance-VEPA-br-ba53d-with-cross-origin-isolation/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/runtime-acceptance-VEPA-br-ba53d-with-cross-origin-isolation/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) tests/e2e/runtime-acceptance.spec.js:20:3 › VEPA browser acceptance boundary › renders all eight Mechanics law toggles and toggles CONTACT in the browser 
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/runtime-acceptance-VEPA-br-aec0d-gles-CONTACT-in-the-browser/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/runtime-acceptance-VEPA-br-aec0d-gles-CONTACT-in-the-browser/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/runtime-acceptance-VEPA-br-aec0d-gles-CONTACT-in-the-browser/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) tests/e2e/runtime-acceptance.spec.js:40:3 › VEPA browser acceptance boundary › reports WebGPU availability without treating fallback as GPU execution 
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/runtime-acceptance-VEPA-br-a3957-g-fallback-as-GPU-execution/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/runtime-acceptance-VEPA-br-a3957-g-fallback-as-GPU-execution/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/runtime-acceptance-VEPA-br-a3957-g-fallback-as-GPU-execution/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) tests/e2e/timeline-dashboard.spec.js:5:1 › timeline dashboard: renders, REC toggles, scrub moves the timeline (AC-91) 
+
+    Error: browserType.launch: Executable doesn't exist at /home/box/.cache/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-linux64/chrome-headless-shell
+    ╔════════════════════════════════════════════════════════════╗
+    ║ Looks like Playwright was just installed or updated.       ║
+    ║ Please run the following command to download new browsers: ║
+    ║                                                            ║
+    ║     npx playwright install                                 ║
+    ║                                                            ║
+    ║ <3 Playwright Team                                         ║
+    ╚════════════════════════════════════════════════════════════╝
+
+    Error Context: test-results/timeline-dashboard-timelin-22d82-b-moves-the-timeline-AC-91-/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/timeline-dashboard-timelin-22d82-b-moves-the-timeline-AC-91-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/timeline-dashboard-timelin-22d82-b-moves-the-timeline-AC-91-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12 failed
+    tests/e2e/boot-render-worker.spec.js:5:1 › renders frames: the sim canvas paints non-uniform content (AC-24) 
+    tests/e2e/boot-render-worker.spec.js:13:1 › worker ticks advance while running and stop while paused (AC-24) 
+    tests/e2e/civ-runtime.spec.js:7:1 › civilisation runtime adapter: off by default, live when enabled, survives save/restore 
+    tests/e2e/mechanics-worker.spec.js:5:1 › toggling the CONTACT mechanics law changes worker particle state (AC-25) 
+    tests/e2e/physics-worker.spec.js:4:1 › boots the simulation shell without a module error ───────
+    tests/e2e/physics-worker.spec.js:11:1 › runs worker ticks asynchronously when SharedArrayBuffer is available 
+    tests/e2e/physics-worker.spec.js:24:1 › GPU force output matches CPU for a fixed browser fixture 
+    tests/e2e/physics-worker.spec.js:54:1 › GPU opt-in remains safe when WebGPU is unavailable ─────
+    tests/e2e/runtime-acceptance.spec.js:11:3 › VEPA browser acceptance boundary › boots the real application with cross-origin isolation 
+    tests/e2e/runtime-acceptance.spec.js:20:3 › VEPA browser acceptance boundary › renders all eight Mechanics law toggles and toggles CONTACT in the browser 
+    tests/e2e/runtime-acceptance.spec.js:40:3 › VEPA browser acceptance boundary › reports WebGPU availability without treating fallback as GPU execution 
+    tests/e2e/timeline-dashboard.spec.js:5:1 › timeline dashboard: renders, REC toggles, scrub moves the timeline (AC-91) 
+rc=1

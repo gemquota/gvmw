@@ -1,0 +1,51 @@
+{
+  "batches": [
+    {
+      "file": "m00",
+      "local": 2929,
+      "insertedRange": [
+        195137,
+        198066
+      ],
+      "len": 2929
+    },
+    {
+      "file": "m01",
+      "local": 4898,
+      "insertedRange": [
+        198066,
+        202964
+      ],
+      "len": 4898
+    },
+    {
+      "file": "m02",
+      "local": 4151,
+      "insertedRange": [
+        202964,
+        207115
+      ],
+      "len": 4151
+    },
+    {
+      "file": "m03",
+      "local": 5369,
+      "insertedRange": [
+        207115,
+        212484
+      ],
+      "len": 5369
+    },
+    {
+      "file": "m04",
+      "local": 5020,
+      "insertedRange": [
+        212484,
+        217504
+      ],
+      "len": 5020
+    }
+  ],
+  "total": 22367,
+  "end_marker": "End of Sync 2026-10-09 ~9:16am AEST (four merges + explorer-copy v001)."
+}

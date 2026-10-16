@@ -1,0 +1,67 @@
+%%{init: {"flowchart": {"wrappingWidth": 700}}}%%
+%% Role map v3, 4 Oct 2026 - DETAIL A: governance, checks and ops (P1 + P2 governance bots). Assembler.
+%% Solid = current (latest codex). Red dashed = UNVERIFIED. Orange dashed = stale reference or conflict.
+flowchart TB
+  GEM(("Gem Quota"))
+  NOTE["<b>Duties over every bot</b> (not drawn)<br/>Archivist records · Assembler routes and maps · Arbiter rules on conflicts and pause-lifting<br/>Scorer scores (incl. itself?) · Scrutineer audits live bots · Safeguard reviews and dry-runs risky actions<br/>Safekeeper secrets, threats, input cleaning · Marshal run order and routing · Mender incidents, state, cleanup<br/>Explorer oversees (aspirational) · Mediator spend and pauses (P4) · Messenger collects updates (P4) · Imitator answers preferences (P4)"]
+  DIRECT["<b>Straight to Gem</b> (not drawn)<br/>Safeguard and Safekeeper alerts · Scorer serious problems and weekly scorecard<br/>Scrutineer: 3 poor reviews · Marshal: unfixable chain · Arbiter: Architect stalled >24 h<br/>Explorer: Gem's 2IC, keeps phases.md"]
+  GEM ~~~ DIRECT
+  IMIx["Imitator (P4, dormant)"]
+  MEDx["Mediator (P4, dormant)"]
+
+  subgraph P1["P1 · LIVE"]
+    ARX["Architect"]
+    ARC["Archivist"]
+    SCO["Scorer"]
+    SFG["Safeguard ⚠"]
+    SFK["Safekeeper"]
+    MAR["Marshal"]
+    MEN["Mender ⚠"]
+    EXP["Explorer ⚠"]
+  end
+  subgraph P2["P2 · LIVE"]
+    ASM["Assembler"]
+    ARB["Arbiter"]
+    SCR["Scrutineer"]
+  end
+
+  %% Instruction pipeline
+  ARX ==>|1 proposes| ASM
+  ASM ==>|2 prepares and routes| GEM
+  GEM ==>|3 approves; recorded| ARC
+  ASM -->|rejects with reasons| ARX
+  ASM -->|precedence conflicts| ARB
+  ARB -->|rulings needing changes| ARX
+  IMIx -.->|UNVERIFIED approvals| ARC
+
+  %% Review loop and daily chain
+  SCO -->|daily results| SCR
+  SCR -->|reviews; urgent redesign| ARX
+  SCR -.->|"reviews to 'Arbiter's role map' (stale)"| ARB
+  ARX -.->|reviews Scrutineer ⚠ conflicts w/ own brief| SCR
+  MAR -->|"chain: Scorer, Scrutineer, Architect, 'Arbiter or Gem' (stale), Archivist"| SCO
+  MAR -->|reports stalls| MEN
+  SCR -->|"reality conflicts ('Minder')"| MEN
+  MEN -->|defers on reality| SCR
+  SCO -->|asks preferences| IMIx
+  ARX -->|asks preferences| IMIx
+  MEDx -->|cost data| SCO
+  MEDx -->|cost data| SCR
+
+  %% Risk and security
+  SFG -->|rule changes via| ARX
+  SFK -->|exposed secrets, threats| SFG
+  SFK -->|guards codex access| ARC
+
+  classDef human fill:#fff3c4,stroke:#b38f00,color:#000
+  classDef p1 fill:#dceeff,stroke:#2b6cb0,color:#000
+  classDef p2 fill:#dcf5e3,stroke:#2f855a,color:#000
+  classDef ext fill:#ffffff,stroke:#6b46c1,stroke-dasharray:3 3,color:#000
+  classDef note fill:#fafafa,stroke:#999,color:#333
+  class GEM human
+  class ARX,ARC,SCO,SFG,SFK,MAR,MEN,EXP p1
+  class ASM,ARB,SCR p2
+  class IMIx,MEDx ext
+  class NOTE,DIRECT note
+  linkStyle 7 stroke:#c53030,stroke-width:2px,stroke-dasharray:6 4,color:#c53030
+  linkStyle 10,11,12 stroke:#c05621,stroke-dasharray:4 4

@@ -1,0 +1,92 @@
+%%{init: {"flowchart": {"wrappingWidth": 260}}}%%
+%% Role map v3, 4 Oct 2026 - OVERVIEW. Assembler. Phases from /workspace/governance/phases.md.
+%% Source: role-graph.json (latest codex version per bot, directory.md, Merge F proposal). 23 active bots; retired bots excluded.
+%% Thick = approval flow; solid = key hand-offs; red dashed = UNVERIFIED; ⚠ = self-check or gap. ~~~ = layout only.
+flowchart TB
+  GEM(("Gem Quota<br/>approves directly<br/>until P4 is live"))
+  LEG["<b>Legend</b><br/>thick = approval flow · solid = key hand-off<br/>red dashed = UNVERIFIED claim<br/>⚠ = self-check risk or gap · grey dashed = no real instructions<br/>Detail: role-map-detail-governance.png, role-map-detail-identity-work.png"]
+
+  subgraph P1["P1 · LIVE since 3 Oct"]
+    ARX["Architect<br/><i>designs instructions</i>"]
+    ARC["Archivist<br/><i>records instructions</i>"]
+    SCO["Scorer<br/><i>daily 1-5 scores</i><br/>⚠ no self-exclusion"]
+    SFG["Safeguard<br/><i>risk review + dry runs</i><br/>⚠ dry-runs then reviews"]
+    SFK["Safekeeper<br/><i>secrets, threats, input cleaning</i>"]
+    MAR["Marshal<br/><i>run order, pacing, routing</i>"]
+    MEN["Mender<br/><i>incidents, state, cleanup</i><br/>⚠ cleans own records"]
+    EXP["Explorer<br/><i>Gem's 2IC</i><br/>⚠ no Rules / Limits"]
+  end
+
+  subgraph P2["P2 · LIVE since 4 Oct 3:12pm"]
+    ASM["Assembler<br/><i>prepares, routes, role map</i>"]
+    ARB["Arbiter<br/><i>precedence rulings</i>"]
+    SCR["Scrutineer<br/><i>audits vs instructions + reality</i>"]
+    INQ["Inquirer<br/><i>asks Gem questions</i>"]
+    INF["Inferer<br/><i>builds profile</i>"]
+  end
+
+  subgraph P3["P3 · Dormant"]
+    SRC["Sourcer<br/><i>provenance ledger</i>"]
+    INV["Investigator<br/><i>confirms identity details</i>"]
+    INT["Interrogator<br/><i>tests Imitator</i>"]
+  end
+
+  subgraph P4["P4 · Dormant"]
+    IMI["Imitator<br/><i>understudy; alignment</i><br/>⚠ claims approval power"]
+    MED["Mediator<br/><i>connector health + spend</i>"]
+    MSG["Messenger<br/><i>daily digest to Gem</i>"]
+  end
+
+  subgraph P5["P5 · Dormant"]
+    EMI["Emissary<br/><i>general worker</i>"]
+    ENG["Engineer<br/><i>code + swarm</i><br/>⚠ checker unnamed"]
+    EXT["Extractor<br/>⚠ no instructions"]
+    EDI["Editor<br/><i>polishes output</i>"]
+  end
+
+  %% layout hints only (invisible): stack the phase rows top to bottom
+  GEM ~~~ ARX
+  LEG ~~~ ARX
+  ARX ~~~ ASM
+  ASM ~~~ SRC
+  SRC ~~~ IMI
+  IMI ~~~ EMI
+
+  %% Approval flow (Gem approves directly until P4)
+  ARX ==>|proposes| ASM
+  ASM ==>|prepares and routes| GEM
+  GEM ==>|approved changes recorded| ARC
+  IMI -.->|"UNVERIFIED: delegated approver"| ARC
+
+  %% Review loop
+  SCO -->|daily scores| SCR
+  SCR -->|reviews, redesign requests| ARX
+  ARX -.->|"reviews Scrutineer ⚠ mutual check"| SCR
+
+  %% Identity pipeline
+  INQ -->|raw answers| INF
+  INF -->|profile| IMI
+  INV -->|confirms details| INF
+  INT -->|tests| IMI
+
+  %% Ops
+  MAR -->|reports stalls| MEN
+  MED -->|cost alerts| MSG
+
+  classDef human fill:#fff3c4,stroke:#b38f00,color:#000
+  classDef legend fill:#fafafa,stroke:#999,color:#333
+  classDef live fill:#dceeff,stroke:#2b6cb0,color:#000
+  classDef live2 fill:#dcf5e3,stroke:#2f855a,color:#000
+  classDef dormant fill:#f4f0ff,stroke:#6b46c1,color:#000
+  classDef warn fill:#ffe9e0,stroke:#c05621,color:#000
+  classDef gap fill:#f2f2f2,stroke:#777,stroke-dasharray:5 3,color:#000
+  class GEM human
+  class LEG legend
+  class ARX,ARC,SFK,MAR live
+  class SCO,SFG,MEN,EXP warn
+  class ASM,ARB,SCR,INQ,INF live2
+  class SRC,INV,INT,MED,MSG,EMI,EDI dormant
+  class IMI,ENG warn
+  class EXT gap
+  linkStyle 9 stroke:#c53030,stroke-width:2px,stroke-dasharray:6 4,color:#c53030
+  linkStyle 12 stroke:#c05621,stroke-dasharray:4 4

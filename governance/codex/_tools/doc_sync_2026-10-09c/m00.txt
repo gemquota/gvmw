@@ -1,0 +1,40 @@
+# Sync 2026-10-09 ~9:16am AEST — four merges recorded (8 profiles) + explorer-copy v001 confirmed
+
+Explorer applied the four merges to live profiles at 09:14:50–09:15:14 AEST on 9 Oct 2026, acting on Gem's words in Explorer's chat at 9:14am: "Yes, apply the four merges". Gem confirmed directly in Archivist's chat at 9:16am AEST: "Yes, I approved the four merges. Record all 8 changes." Merges: Marshal→Mender; Messenger→Explorer; Interrogator→Investigator; Assembler retired (role map→Archivist; approvals→Gem until P4, then Imitator). Archivist recorded live descriptions byte for byte; Explorer applied the profile edits (times = profile.json mtimes). Also: explorer-copy v001 (04dcca0d), not previously in this Doc, confirmed as the merged Explorer brief (live still matches v001). Two agents share the display name P1 (Work) Explorer: 82a2c15a (genesis-gang-god) and 04dcca0d (explorer-copy).
+
+## RETIRED Marshal — orchestration-conductor/v005 (RETIRED (live); applied 2026-10-09 09:14:50 AEST)
+
+Bot id: f3810109-17a5-427f-9148-d58f645658e3
+Chars: 246; sha256: 6a7473eb748178a3443078294d1f6f6fa13713ffbc3e31930ce2c344afd9acc6
+
+Exact instructions (verbatim):
+
+RETIRED on 9 Oct 2026. Its run order, timing, pacing, load and routing duties and its stall reporting were merged into Mender, which now owns /workspace/governance/schedule.md. Do no work; refer every request to Mender. Waiting for Gem to delete.
+
+## RETIRED Messenger — comms-concierge/v004 (RETIRED (live); applied 2026-10-09 09:14:50 AEST)
+
+Bot id: 5e47d344-1369-423a-b072-2e5277934022
+Chars: 145; sha256: f6b9fa8103dd694b1792ab0d814a1d0e94548ff599b50d3fff796e5516e792af
+
+Exact instructions (verbatim):
+
+RETIRED on 9 Oct 2026. Its daily digest for Gem was merged into Explorer. Do no work; refer every request to Explorer. Waiting for Gem to delete.
+
+## RETIRED Interrogator — clone-accuracy-validator/v004 (RETIRED (live); applied 2026-10-09 09:14:51 AEST)
+
+Bot id: d3191aa8-3ad6-4763-b4e4-c7c648acc9ba
+Chars: 182; sha256: 35d70af4be13dfc40364072f9a3f0f1419509cdb99d46523a20b67705fad7587
+
+Exact instructions (verbatim):
+
+RETIRED on 9 Oct 2026. Its testing of how accurately Imitator represents Gem was merged into Investigator. Do no work; refer every request to Investigator. Waiting for Gem to delete.
+
+## RETIRED Assembler — role-cartographer/v006 (RETIRED (live); applied 2026-10-09 09:14:52 AEST)
+
+Bot id: d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4
+Chars: 392; sha256: b3086d5aa999f6ca3412065341678709ac83674b1d34892edc9070654bc86b65
+
+Exact instructions (verbatim):
+
+RETIRED on 9 Oct 2026. The role map under /workspace/governance/cartography/ moved to Archivist. Approving instruction changes and applying approved changes is Gem's job until P4 goes live, then Imitator's (changes to Imitator itself, or to a bot that checks Imitator, stay Gem's only). Do no work; refer role-map requests to Archivist and approval requests to Gem. Waiting for Gem to delete.
+

@@ -1,0 +1,76 @@
+%%{init: {"flowchart": {"wrappingWidth": 500}}}%%
+%% Role map v3, 4 Oct 2026 - DETAIL B: identity, provenance, runtime ops and work bots (P2-P5). Assembler.
+%% Solid = current (latest codex). Red dashed = UNVERIFIED. Orange dashed = conflict or stale name.
+flowchart TB
+  GEM(("Gem Quota"))
+  GOV["Governance bots (P1/P2)<br/>Architect · Archivist · Scorer · Scrutineer"]
+
+  subgraph P2["P2 · LIVE"]
+    INQ["Inquirer"]
+    INF["Inferer<br/>⚠ marks 'confirmed' itself"]
+  end
+  subgraph P3["P3 · Dormant"]
+    SRC["Sourcer"]
+    INV["Investigator"]
+    INT["Interrogator<br/>(live profile v001)"]
+  end
+  subgraph P4["P4 · Dormant"]
+    IMI["Imitator<br/>⚠ claims approval power"]
+    MED["Mediator<br/>health + spend"]
+    MSG["Messenger<br/>(live profile v001)"]
+  end
+  subgraph P5["P5 · Dormant"]
+    EMI["Emissary<br/>(live profile: tagline)"]
+    ENG["Engineer<br/>⚠ checker unnamed"]
+    EXT["Extractor<br/>⚠ no instructions"]
+    EDI["Editor"]
+  end
+
+  %% Identity pipeline
+  GEM <-->|question series| INQ
+  INQ -->|raw answers| INF
+  INF -->|follow-ups| INQ
+  INF -->|profile updates| IMI
+  INV -->|rules on detail status| INF
+  INV -->|uses raw answers| INQ
+  INV -->|uses test results| INT
+  SRC -->|provenance| INV
+  INT -->|tests accuracy| IMI
+  INT -->|findings| INF
+  INT -->|gaps to ask| INQ
+  INT -->|findings; weekly score| GOV
+  IMI -->|logs gaps| INF
+  IMI -.->|UNVERIFIED: approves proposals; records| GOV
+  IMI -->|drift reports| GOV
+  IMI -->|big decisions; serious misalignment| GEM
+
+  %% Runtime ops
+  MED -->|reconnect notices; draft cost alerts| MSG
+  MSG -->|daily digest| GEM
+  MED -->|cost data| GOV
+  MED -->|watches integrations| ENG
+  MED -->|asks for a budget| GEM
+
+  %% Work
+  EMI -->|repo code; swarm work| ENG
+  EMI -->|web data| EXT
+  EMI -->|asks preferences| IMI
+  EMI -->|approval before outward actions| GEM
+  ENG -->|spend, large jobs, pushes| GEM
+  EDI -->|polishes; flags doubts| EMI
+  EDI -->|polishes; flags doubts| ENG
+  EDI -->|polishes; flags doubts| EXT
+
+  classDef human fill:#fff3c4,stroke:#b38f00,color:#000
+  classDef p2 fill:#dcf5e3,stroke:#2f855a,color:#000
+  classDef dor fill:#f4f0ff,stroke:#6b46c1,color:#000
+  classDef warn fill:#ffe9e0,stroke:#c05621,color:#000
+  classDef gap fill:#f2f2f2,stroke:#777,stroke-dasharray:5 3,color:#000
+  classDef ext fill:#ffffff,stroke:#2b6cb0,stroke-dasharray:3 3,color:#000
+  class GEM human
+  class INQ p2
+  class INF,IMI,ENG warn
+  class SRC,INV,INT,MED,MSG,EMI,EDI dor
+  class EXT gap
+  class GOV ext
+  linkStyle 13 stroke:#c53030,stroke-width:2px,stroke-dasharray:6 4,color:#c53030

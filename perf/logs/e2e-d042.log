@@ -1,0 +1,129 @@
+
+Running 24 tests using 1 worker
+
+
+(node:1214056) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/24] tests/e2e/boot-render-worker.spec.js:5:1 › renders frames: the sim canvas paints non-uniform content (AC-24)
+[2/24] tests/e2e/boot-render-worker.spec.js:13:1 › worker ticks advance while running and stop while paused (AC-24)
+[3/24] tests/e2e/civ-runtime.spec.js:7:1 › civilisation runtime adapter: off by default, live when enabled, survives save/restore
+[4/24] tests/e2e/mechanics-worker.spec.js:5:1 › toggling the CONTACT mechanics law changes worker particle state (AC-25)
+  1) tests/e2e/mechanics-worker.spec.js:5:1 › toggling the CONTACT mechanics law changes worker particle state (AC-25) 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 6.008130855582327
+    Received:   5.860802499182895
+
+      31 |   expect(on.before).toBeLessThan(0.1);
+      32 |   // CONTACT pushes the staged overlapping pairs apart; without it they stay close.
+    > 33 |   expect(on.after).toBeGreaterThan(off.after + 0.3);
+         |                    ^
+      34 | });
+      35 |
+        at /workspace/vepa/tests/e2e/mechanics-worker.spec.js:33:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/mechanics-worker-toggling--141ef-orker-particle-state-AC-25-/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/mechanics-worker-toggling--141ef-orker-particle-state-AC-25-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/mechanics-worker-toggling--141ef-orker-particle-state-AC-25-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/mechanics-worker-toggling--141ef-orker-particle-state-AC-25-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+(node:1214335) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[5/24] tests/e2e/physics-worker.spec.js:4:1 › boots the simulation shell without a module error
+[6/24] tests/e2e/physics-worker.spec.js:11:1 › runs worker ticks asynchronously when SharedArrayBuffer is available
+[7/24] tests/e2e/physics-worker.spec.js:24:1 › GPU force output matches CPU for a fixed browser fixture
+[8/24] tests/e2e/physics-worker.spec.js:54:1 › GPU opt-in remains safe when WebGPU is unavailable
+[9/24] tests/e2e/rb-browser-stages.spec.js:54:3 › RB 00–11 browser stage matrix › RB-00 current program baseline: page shell and visible controls
+[10/24] tests/e2e/rb-browser-stages.spec.js:67:3 › RB 00–11 browser stage matrix › RB-01 shell/orchestrator: startup, pause/resume and restart lifecycle
+  2) tests/e2e/rb-browser-stages.spec.js:67:3 › RB 00–11 browser stage matrix › RB-01 shell/orchestrator: startup, pause/resume and restart lifecycle 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: locator.click: Test timeout of 60000ms exceeded.
+    Call log:
+      - waiting for locator('#play-pause-btn')
+        - locator resolved to <button title="Play/Pause" id="play-pause-btn" class="sq-btn active">⏸</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div class="vepa-debug-header" title="Tap to copy all debug messages">…</div> from <div id="vepa-debug" class="vepa-debug">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div class="vepa-debug-header" title="Tap to copy all debug messages">…</div> from <div id="vepa-debug" class="vepa-debug">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        116 × waiting for element to be visible, enabled and stable
+            - element is visible, enabled and stable
+            - scrolling into view if needed
+            - done scrolling
+            - <div class="vepa-debug-header" title="Tap to copy all debug messages">…</div> from <div id="vepa-debug" class="vepa-debug">…</div> subtree intercepts pointer events
+          - retrying click action
+            - waiting 500ms
+
+
+      66 |
+      67 |   test('RB-01 shell/orchestrator: startup, pause/resume and restart lifecycle', async ({ page }) => {
+    > 68 |     await page.locator('#play-pause-btn').click();
+         |                                           ^
+      69 |     await expect(page.locator('#play-pause-btn')).toContainText('▶');
+      70 |     const pausedLabel = await page.locator('#hud-tick').getAttribute('aria-label');
+      71 |     const pausedTick = pausedLabel.match(/Tick (\d+),/)?.[1];
+        at /workspace/vepa/tests/e2e/rb-browser-stages.spec.js:68:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rb-browser-stages-RB-00–11-66dc6-esume-and-restart-lifecycle/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rb-browser-stages-RB-00–11-66dc6-esume-and-restart-lifecycle/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/rb-browser-stages-RB-00–11-66dc6-esume-and-restart-lifecycle/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/rb-browser-stages-RB-00–11-66dc6-esume-and-restart-lifecycle/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+(node:1214916) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[11/24] tests/e2e/rb-browser-stages.spec.js:83:3 › RB 00–11 browser stage matrix › RB-02 visual shell/UI: top-level and nested drawer navigation
+[12/24] tests/e2e/rb-browser-stages.spec.js:95:3 › RB 00–11 browser stage matrix › RB-03 world parameters: slider edits appear as pending and can be discarded
+[13/24] tests/e2e/rb-browser-stages.spec.js:108:3 › RB 00–11 browser stage matrix › RB-04 species/genome: roster and DNA editor expose the current 64 traits
+[14/24] tests/e2e/rb-browser-stages.spec.js:128:3 › RB 00–11 browser stage matrix › RB-05 laws/fidelity: declared law grid, search and staged toggles
+[15/24] tests/e2e/rb-browser-stages.spec.js:144:3 › RB 00–11 browser stage matrix › RB-06 physics/performance: actual compute ticks advance and telemetry is finite
+[16/24] tests/e2e/rb-browser-stages.spec.js:152:3 › RB 00–11 browser stage matrix › RB-07 execution/cloud: report actual local isolation and fallback capabilities
+[17/24] tests/e2e/rb-browser-stages.spec.js:166:3 › RB 00–11 browser stage matrix › RB-08 rendering: selected browser renderer is live and canvases resize
+[18/24] tests/e2e/rb-browser-stages.spec.js:188:3 › RB 00–11 browser stage matrix › RB-09 state/presets: save, list and undo surfaces are mounted
+[19/24] tests/e2e/rb-browser-stages.spec.js:203:3 › RB 00–11 browser stage matrix › RB-10 emergent systems/observability: data panels expose populated projections
+[20/24] tests/e2e/rb-browser-stages.spec.js:217:3 › RB 00–11 browser stage matrix › RB-11 module/package integration: app assets, worker and module shell are reachable
+[21/24] tests/e2e/runtime-acceptance.spec.js:11:3 › VEPA browser acceptance boundary › boots the real application with cross-origin isolation
+[22/24] tests/e2e/runtime-acceptance.spec.js:20:3 › VEPA browser acceptance boundary › renders all eight Mechanics law toggles and toggles CONTACT in the browser
+[23/24] tests/e2e/runtime-acceptance.spec.js:40:3 › VEPA browser acceptance boundary › reports WebGPU availability without treating fallback as GPU execution
+[24/24] tests/e2e/timeline-dashboard.spec.js:5:1 › timeline dashboard: renders, REC toggles, scrub moves the timeline (AC-91)
+  2 failed
+    tests/e2e/mechanics-worker.spec.js:5:1 › toggling the CONTACT mechanics law changes worker particle state (AC-25) 
+    tests/e2e/rb-browser-stages.spec.js:67:3 › RB 00–11 browser stage matrix › RB-01 shell/orchestrator: startup, pause/resume and restart lifecycle 
+  22 passed (2.6m)

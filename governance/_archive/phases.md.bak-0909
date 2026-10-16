@@ -1,0 +1,17 @@
+# Phase tracker (source of truth for rollout phases)
+Owner: P1 (Work) Explorer, on Gem's instruction. Name prefixes must match this file.
+Last updated: 4 Oct 2026, 3:12pm AEST (UTC+10)
+
+| Phase | Status | Bots |
+|---|---|---|
+| P1 | LIVE (since 3 Oct 2026) | Marshal, Mender, Scorer, Safeguard, Safekeeper, Archivist, Architect, Explorer |
+| P2 | LIVE (started 4 Oct 2026, 3:12pm AEST) | Scrutineer, Arbiter, Assembler, Inquirer, Inferer |
+| P3 | Dormant | Sourcer, Investigator, Interrogator |
+| P4 | Dormant | Mediator, Messenger, Imitator |
+| P5 | Dormant | Emissary, Engineer, Extractor, Editor |
+
+Rules: Gem approves instruction changes directly until P4 (Imitator) goes live. No bot grades or verifies its own work.
+Dormant bots do no scheduled work until their phase starts; Gem starts each phase.
+
+## Change log
+- 4 Oct 2026 3:12pm: Gem reshuffled the phases. Inquirer and Inferer moved to P2; Investigator and Interrogator to P3; Mediator, Messenger and Imitator to P4; the old P6 Work bots to P5. P2 started.

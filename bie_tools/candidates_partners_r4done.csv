@@ -1,0 +1,100 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://365cuci.net,0,0,0,0,reachable,connection,,,,,,,,2.0,"InvalidSchema: No connection adapters were found for ""about:blank';\\n            window.location.pathname = \\""",partner-dir:https://ekplus8.co/partnershippp
+https://918kiss.com,1,1,0,0,merchant,parse_failed,200,,562,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://pgk918kaya.com/partnership-info
+https://100cuci.net,1,1,1,1,,,200,,1176388,760,100Cuci,https://100cuci.net/api/v1/index.php,Invalid Action!,2.3,,partner-dir:https://ekplus8.co/partnershippp
+https://1mjudi.net,1,1,1,1,,,200,,846158,90088,1MJUDI,https://1mjudi.net/api/v1/index.php,Invalid Action!,2.9,,partner-dir:https://heylink.me/1mjudi/
+https://918kissdaftar.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,1.1,HTTPError: 403 Client Error: Forbidden for url: https://918kissdaftar.com/,partner-dir:https://heylink.me/B2W99/
+https://1mjudi.com,1,1,1,1,,,200,,846158,90088,1MJUDI,https://1mjudi.com/api/v1/index.php,Invalid Action!,3.3,,partner-dir:https://heylink.me/1mjudi/
+https://711cuci.net,1,1,1,1,,,200,,1049603,10172,711Cuci,https://711cuci.net/api/v1/index.php,Invalid Action!,3.8,,partner-dir:https://ekplus8.co/partnershippp
+https://12cuci.com,1,1,1,1,,,200,,1085835,576,12Cuci,https://12cuci.com/api/v1/index.php,Invalid Action!,3.8,,partner-dir:https://ekplus8.co/partnershippp
+https://999cc.online,1,1,1,1,,,200,,1255622,90075,999CUCI - Trusted Online Casino Malaysia,https://999cc.online/api/v1/index.php,Invalid Action!,2.3,,partner-dir:https://heylink.me/999cuci/
+https://999cc.shop,1,1,1,1,,,200,,1255622,90075,999CUCI - Trusted Online Casino Malaysia,https://999cc.shop/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://heylink.me/999cuci/
+https://999cuci.org,1,1,1,1,,,200,,1255622,90075,999CUCI - Trusted Online Casino Malaysia,https://999cuci.org/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://heylink.me/999cuci/
+https://999cuci.club,1,1,1,0,api,api_not_json,200,,1255622,90075,999CUCI - Trusted Online Casino Malaysia,https://999cuci.club/api/v1/index.php,HTTP 200 non-JSON,2.3,,partner-dir:https://heylink.me/999cuci/
+https://b2w99a.com,1,1,1,1,,,200,,897178,30861,B2W99,https://b2w99a.com/api/v1/index.php,Invalid Action!,2.1,,partner-dir:https://heylink.me/B2W99/
+https://b2w99.online,1,1,1,1,,,200,,897178,30861,B2W99,https://b2w99.online/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://kk99a.com/dmcslot_blog
+https://bcb88a.vip,1,0,0,0,homepage,http_403,403,,,,,,,1.0,HTTPError: 403 Client Error: Forbidden for url: https://bcb88a.vip/,partner-dir:https://heylink.me/99GANG/
+https://b2w99b.com,1,1,1,1,,,200,,897178,30861,B2W99,https://b2w99b.com/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://heylink.me/B2W99/
+https://b2w99c.com,1,1,1,1,,,200,,897178,30861,B2W99,https://b2w99c.com/api/v1/index.php,Invalid Action!,2.5,,partner-dir:https://heylink.me/B2W99/
+https://bet9sg.co,1,1,1,1,,,200,,667954,50563,BET9,https://bet9sg.co/api/v1/index.php,Invalid Action!,1.9,,partner-dir:https://efa99sg.info/ac9partnership
+https://b2w99d.com,1,1,1,1,,,200,,897178,30861,B2W99,https://b2w99d.com/api/v1/index.php,Invalid Action!,2.6,,partner-dir:https://heylink.me/B2W99/
+https://bersatu88.co,1,1,0,0,merchant,parse_failed,200,,180211,,,,,2.6,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://444cuci.xyz/syabas99
+https://c8asia.com,1,1,0,0,merchant,parse_failed,200,,197631,,,,,2.1,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://jk9.asia/partnership
+https://bosskumy.online,1,1,1,1,,,200,,1064628,126,BOSSKU,https://bosskumy.online/api/v1/index.php,Invalid Action!,2.8,,partner-dir:https://heylink.me/bosskumy/
+https://crownpluspng.com,1,1,0,0,merchant,parse_failed,200,,1076,,,,,2.0,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://heylink.me/Crownplus/
+https://cita66.club,0,0,0,0,reachable,connection,,,,,,,,2.6,"InvalidSchema: No connection adapters were found for ""about:blank';\\n            window.location.pathname = \\""",partner-dir:https://444cuci.xyz/syabas99
+https://bosskumy.io,1,1,1,1,,,200,,1064628,126,BOSSKU,https://bosskumy.io/api/v1/index.php,Invalid Action!,4.2,,partner-dir:https://heylink.me/bosskumy/
+https://bosskumy.net,1,1,1,1,,,200,,1064628,126,BOSSKU,https://bosskumy.net/api/v1/index.php,Invalid Action!,4.3,,partner-dir:https://bosskumy.xyz/partnership
+https://dapatcuci.asia,1,1,1,1,,,200,,662684,10847,DapatCuci,https://dapatcuci.asia/api/v1/index.php,Invalid Action!,2.0,,partner-dir:https://dapatcuci.com/partnership-dapatcuci
+https://do-it.org,1,1,0,0,merchant,parse_failed,200,,64421,,,,,1.4,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://heylink.me/99GANG/
+https://dapatcuci.co,1,1,1,1,,,200,,662684,10847,DapatCuci,https://dapatcuci.co/api/v1/index.php,Invalid Action!,1.9,,partner-dir:https://dapatcuci.com/partnership-dapatcuci
+https://doktorjudi.co,1,1,1,1,,,200,,873318,401,DoktorJudi,https://doktorjudi.co/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://doktorjudi.store/partnership
+https://dapatcuci.xyz,1,1,1,1,,,200,,662684,10847,DapatCuci,https://dapatcuci.xyz/api/v1/index.php,Invalid Action!,1.9,,partner-dir:https://dapatcuci.com/partnership-dapatcuci
+https://dominiongroup.com,1,1,0,0,merchant,parse_failed,200,,1219143,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://woonpng.com/dominionpartner
+https://doktorjudi.com,1,1,1,1,,,200,,873318,401,DoktorJudi,https://doktorjudi.com/api/v1/index.php,Invalid Action!,1.9,,partner-dir:https://doktorjudi.store/partnership
+https://doktorjudi.online,1,1,1,1,,,200,,873318,401,DoktorJudi,https://doktorjudi.online/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://doktorjudi.store/partnership
+https://doktorreward88.com,1,1,0,0,merchant,parse_failed,200,,205204,,,,,1.7,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://doktorjudi.store/partnership
+https://easywin77.shop,1,1,1,1,,,200,,774253,365,EasyWin77,https://easywin77.shop/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://happycuci.live/bosskucuci-partnership
+https://fachai68.live,1,1,1,1,,,200,,803466,10165,Fachai68,https://fachai68.live/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://444cuci.xyz/syabas99
+https://gangcucibest.com,1,1,1,1,,,200,,741027,10607,GANGCUCI,https://gangcucibest.com/api/v1/index.php,Invalid Action!,1.6,,partner-dir:https://dapatcuci.com/partnership-dapatcuci
+https://hiso168b.com,1,0,0,0,homepage,http_500,500,,,,,,,0.8,HTTPError: 500 Server Error: Internal Server Error for url: https://hiso168b.com/,partner-dir:https://luckysuper7.com/partnership
+https://goldensky88.online,1,1,1,1,,,200,,677233,292,GoldenSky88,https://goldensky88.online/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://happycuci.live/bosskucuci-partnership
+https://fortune8hkd.xyz,1,1,1,1,,,200,,957670,10613,Fortune8 HongKong,https://fortune8hkd.xyz/api/v1/index.php,Invalid Action!,3.6,,partner-dir:https://fortune8.fun/partnership__
+https://hh888hk.world,1,1,1,1,,,200,,879455,10619,港望娛樂 HH888HK,https://hh888hk.world/api/v1/index.php,Invalid Action!,2.3,,partner-dir:https://fortune8.fun/partnership__
+https://gangcucivip.com,1,1,1,1,,,200,,741394,10607,GANGCUCI,https://gangcucivip.com/api/v1/index.php,Invalid Action!,3.0,,partner-dir:https://kingcuci.site/partnership-kingcuci
+https://iplay918.vip,1,0,0,0,homepage,http_403,403,,,,,,,0.3,HTTPError: 403 Client Error: Forbidden for url: https://iplay918.vip/,partner-dir:https://kk99a.com/dmcslot_blog
+https://happysini.net,1,1,0,0,merchant,parse_failed,200,,27330,,,,,2.8,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://happycuci.live/happy-partnership
+https://i1cash88.vip,1,1,1,1,,,200,,789449,143,iCash88,https://i1cash88.vip/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://magnum918.cc/918grouppartnership
+https://i5malaysia.net,1,1,1,1,,,200,,638709,10610,i5Malaysia,https://i5malaysia.net/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://kk99a.com/dmcslot_blog
+https://i2cuci4.com,1,1,1,1,,,200,,967774,30863,i2CUCi,https://i2cuci4.com/api/v1/index.php,Invalid Action!,2.6,,partner-dir:https://heylink.me/99GANG/
+https://kingcuci.biz,1,1,1,1,,,200,,879184,30826,KINGCUCI,https://kingcuci.biz/api/v1/index.php,Invalid Action!,1.9,,partner-dir:https://kingcuci.site/partnership-kingcuci
+https://kingcuci.club,1,1,1,1,,,200,,879184,30826,KINGCUCI,https://kingcuci.club/api/v1/index.php,Invalid Action!,1.8,,partner-dir:https://kingcuci.site/partnership-kingcuci
+https://kingcuci.co,1,1,1,1,,,200,,879184,30826,KINGCUCI,https://kingcuci.co/api/v1/index.php,Invalid Action!,2.0,,partner-dir:https://kingcuci.site/partnership-kingcuci
+https://jse88.xyz,1,1,0,0,merchant,parse_failed,200,,3690,,,,,2.8,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://fortune8.fun/partnership__
+https://kingcuci.com,1,1,1,1,,,200,,879184,30826,KINGCUCI,https://kingcuci.com/api/v1/index.php,Invalid Action!,1.8,,partner-dir:https://kingcuci.site/partnership-kingcuci
+https://kingcuci.net,1,1,1,1,,,200,,879184,30826,KINGCUCI,https://kingcuci.net/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://kingcuci.site/partnership-kingcuci
+https://kingcucireward.com,1,1,0,0,merchant,parse_failed,200,,79885,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://kingcuci.site/partnership-kingcuci
+https://linkfreekredit365.com,1,1,0,0,merchant,parse_failed,200,,740157,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://kingcuci.site/partnership-kingcuci
+https://luckysuper.net,1,1,0,0,merchant,parse_failed,200,,0,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://luckysuper7.com/partnership
+https://klaim99.com,1,1,1,1,,,200,,1026798,719,KLAIM99,https://klaim99.com/api/v1/index.php,Invalid Action!,1.9,,partner-dir:https://kk99a.com/dmcslot_blog
+https://kissy918.info,1,1,1,1,,,200,,699847,93,Kissy918,https://kissy918.info/api/v1/index.php,Invalid Action!,2.7,,partner-dir:https://happycuci.live/bosskucuci-partnership
+https://lambor68.xyz,1,1,1,1,,,200,,664586,10833,Lambor68 (MYR),https://lambor68.xyz/api/v1/index.php,Invalid Action!,1.9,,partner-dir:https://444cuci.xyz/syabas99
+https://magnum88.com,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='magnum88.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl",partner-dir:https://kk99a.com/dmcslot_blog
+https://m-pussy888.com,1,1,0,0,merchant,parse_failed,200,,17963,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://heylink.me/99GANG/
+https://lucksuper.co,1,1,1,1,,,200,,956732,50020,LUCKYSUPER,https://lucksuper.co/api/v1/index.php,Invalid Action!,2.8,,partner-dir:https://luckysuper7.com/partnership
+https://m-918kiss.net,1,1,0,0,merchant,parse_failed,200,,39024,,,,,2.4,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://heylink.me/99GANG/
+https://missav.live,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://missav.live/,partner-dir:https://kk99a.com/dmcslot_blog
+https://maucuci.club,1,1,1,1,,,200,,735921,10968,MauCuci,https://maucuci.club/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://kingcuci.site/partnership-kingcuci
+https://luckysuper8.com,1,1,1,1,,,200,,956732,50020,LUCKYSUPER,https://luckysuper8.com/api/v1/index.php,Invalid Action!,3.3,,partner-dir:https://luckysuper7.com/partnership
+https://luckysuper9.com,1,1,1,1,,,200,,956365,50020,LUCKYSUPER,https://luckysuper9.com/api/v1/index.php,Invalid Action!,3.3,,partner-dir:https://luckysuper7.com/partnership
+https://maucuci.pro,1,1,1,1,,,200,,735921,10968,MauCuci,https://maucuci.pro/api/v1/index.php,Invalid Action!,2.0,,partner-dir:https://dapatcuci.com/partnership-dapatcuci
+https://mega888daftar.com,1,1,0,0,merchant,parse_failed,200,,65884,,,,,2.0,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://heylink.me/B2W99/
+https://mm88hk.asia,1,1,1,1,,,200,,824718,50538,萬萬發發 MM88HK,https://mm88hk.asia/api/v1/index.php,Invalid Action!,2.1,,partner-dir:https://fortune8.fun/partnership__
+https://mmhkd.org,1,1,1,1,,,200,,896431,10725,MM Hong Kong,https://mmhkd.org/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://fortune8.fun/partnership__
+https://okbossku.store,1,1,1,1,,,200,,794277,416,OKBOSSKU,https://okbossku.store/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://happycuci.live/bosskucuci-partnership
+https://mohd88.biz,0,0,0,0,reachable,connection,,,,,,,,2.6,"InvalidSchema: No connection adapters were found for ""about:blank';\\n            window.location.pathname = \\""",partner-dir:https://444cuci.xyz/syabas99
+https://mrgroup44.com,1,1,1,1,,,200,,1189317,10945,MrGroup88,https://mrgroup44.com/api/v1/index.php,Invalid Action!,3.5,,partner-dir:https://kk99a.com/dmcslot_blog
+https://ozwin777au.org,1,1,1,1,,,200,,711808,50755,OZWIN777AU,https://ozwin777au.org/api/v1/index.php,Invalid Action!,2.0,,partner-dir:https://ozwin777au.com/partneship
+https://ozwin777au.live,1,1,1,1,,,200,,711808,50755,OZWIN777AU,https://ozwin777au.live/api/v1/index.php,Invalid Action!,2.4,,partner-dir:https://ozwin777au.com/partneship
+https://panda95.com,1,1,1,1,,,200,,808846,85,Panda95,https://panda95.com/api/v1/index.php,Invalid Action!,2.0,,partner-dir:https://club33.xyz/partnership-scrplay
+https://pelita88.com,1,1,1,1,,,200,,774221,10193,PELITA88,https://pelita88.com/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://kk99a.com/dmcslot_blog
+https://powercuci.vip,1,1,1,1,,,200,,720426,30825,POWERCUCI,https://powercuci.vip/api/v1/index.php,Invalid Action!,1.9,,partner-dir:https://dapatcuci.com/partnership-dapatcuci
+https://mrlucky88.vip,1,1,1,1,,,200,,1216236,10008,MrLucky88,https://mrlucky88.vip/api/v1/index.php,Invalid Action!,5.3,,partner-dir:https://ekplus8.co/partnershippp
+https://rjbet77myr.co,1,1,1,1,,,200,,663662,89,Rjbet77,https://rjbet77myr.co/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://dapatcuci.com/partnership-dapatcuci
+https://pgk918kaya.net,1,1,1,1,,,200,,733807,50719,PGK918KAYA Online Casino,https://pgk918kaya.net/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://pgk918kaya.com/partnership-info
+https://ramly888.com,1,0,0,0,homepage,cloudflare/403,200,,406,,,,,2.3,ValueError: Blocked: Access Denied.,partner-dir:https://kk99a.com/dmcslot_blog
+https://rmadrid888.com,1,1,0,0,merchant,parse_failed,200,,374992,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://kk99a.com/dmcslot_blog
+https://royale96.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://showspeed96.com/partnership96
+https://rr88vippanel.org,1,1,0,0,merchant,parse_failed,200,,8198,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://rr88luck.com/partnership
+https://rr88asia.net,1,1,1,1,,,200,,1016744,11106,RR88 | DigiNova,https://rr88asia.net/api/v1/index.php,Invalid Action!,2.0,,partner-dir:https://rr88luck.com/partnership
+https://rr88sg.xyz,1,1,1,1,,,200,,1016744,11106,RR88 | DigiNova,https://rr88sg.xyz/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://rr88luck.com/partnership
+https://rr88sgwin.com,1,1,1,1,,,200,,1016744,11106,RR88 | DigiNova,https://rr88sgwin.com/api/v1/index.php,Invalid Action!,2.4,,partner-dir:https://rr88luck.com/partnership
+https://spadeclub888my.com,1,1,1,1,,,200,,1110676,194,Spadeclub88,https://spadeclub888my.com/api/v1/index.php,Invalid Action!,2.0,,partner-dir:https://spadeclub88my.club/partnership
+https://spadeclub88my.vip,1,1,1,1,,,200,,1110676,194,Spadeclub88,https://spadeclub88my.vip/api/v1/index.php,Invalid Action!,2.0,,partner-dir:https://spadeclub88my.club/partnership
+https://wisma66.com,1,0,0,0,homepage,cloudflare/403,200,,405,,,,,0.7,ValueError: Blocked: Access Denied.,partner-dir:https://kk99a.com/dmcslot_blog
+https://spinboomy.store,1,1,1,1,,,200,,899175,90065,轉爆娛樂 | SPINBOOMY,https://spinboomy.store/api/v1/index.php,Invalid Action!,2.1,,partner-dir:https://fortune8.fun/partnership__
+https://showspeed96.online,1,1,1,1,,,200,,975515,50192,SHOWSPEED96,https://showspeed96.online/api/v1/index.php,Invalid Action!,4.1,,partner-dir:https://showspeed96.com/partnership96
+https://vip2cuci.com,1,1,1,1,,,200,,1076919,10904,VIP2CUCI - Trusted Online Casino Malaysia,https://vip2cuci.com/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://kk99a.com/dmcslot_blog
+https://showspeed96.vip,1,1,1,1,,,200,,975515,50192,SHOWSPEED96,https://showspeed96.vip/api/v1/index.php,Invalid Action!,4.4,,partner-dir:https://showspeed96.com/partnership96
+https://zus888z2.com,1,1,1,1,,,200,,749736,1312,ZUS888,https://zus888z2.com/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://kaki21.com/freecreditnew
+https://woonpngreward.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='woonpngreward.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol ",partner-dir:https://woonpng.com/dominionpartner

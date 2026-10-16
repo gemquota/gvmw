@@ -1,0 +1,17 @@
+# Cost & Budget Sentinel: changelog
+
+Bot id: f8b83b15-0ea1-4f99-9550-c3b8607ba999
+
+| Version | Date | Author | Approved by | Reason | File |
+|---|---|---|---|---|---|
+| 1 | 2026-10-03 (AEST, UTC+10) | Gem, via the main assistant (Genesis Gang God) | Gem (via the main assistant) | Created after the bot landscape review | v001.md |
+| 2 | 2026-10-03 (AEST, UTC+10) | Instruction Architect | Role Cartographer (/workspace/governance/approvals/2026-10-03-batch1-review.md) | Fix the alert channel clash with the Comms Concierge, keep budgets in one place, and separate cost pauses from the Compliance & Risk Officer's risk pauses. Review: Approve, none material. | v002.md |
+| (rename, no version change) | 2026-10-03 (AEST, UTC+10) | Gem | Gem | Renamed: Cost & Budget Sentinel → (Ops) Meter. Id and instruction text unchanged; see ../RENAMES.md | (no new file) |
+| (rename, no version change) | 2026-10-04 (AEST, UTC+10) | Gem | Gem | Renamed: (Ops) Meter → P5 (Ops) Meter (phase prefix). Id and instruction text unchanged; see ../RENAMES.md | (no new file) |
+| (live-profile check, no version change) | 2026-10-04 (AEST, UTC+10) | Codex Keeper (sync at Gem's request) | n/a | Live profile description still matches v001.md byte for byte; approved v002.md has NOT been applied to the profile. Codex current version stays v002 (approved); the bot is running v001. | (no new file) |
+| 3 | 2026-10-04 (AEST, UTC+10) | Gem | Gem (Merge F / Assembler restored, approved in chat 4 Oct 2026 ~3:05pm, relayed by P1 (Work) Explorer; text taken from the live profile; matches proposals/merge-F-unretire-assembler-2026-10-04.md byte for byte) | Merge F / Assembler restored (retirement brief) | v003.md |
+| (supersession note, no version change) | 2026-10-04 (AEST, UTC+10) | Gem | Gem (Merge F) | v003 (live) supersedes v002. v002 was approved by Role Cartographer on 2026-10-03 but never deployed (the profile ran v001 until now). v002 is kept as history. | (no new file) |
+| RETIRED | 2026-10-04 (AEST, UTC+10) | Gem | Gem (Merge F / Assembler restored, approved in chat 4 Oct 2026 ~3:05pm, relayed by P1 (Work) Explorer; text taken from the live profile; matches proposals/merge-F-unretire-assembler-2026-10-04.md byte for byte) | Retired in the second merge; duties merged into (Ops) Mediator. Awaiting deletion by Gem. Folder and all versions are kept as history. | v003.md |
+| (rename, no version change) | 2026-10-04 (AEST, UTC+10) | Gem | Gem (Merge F / Assembler restored, approved in chat 4 Oct 2026 ~3:05pm, relayed by P1 (Work) Explorer) | Renamed: P5 (Ops) Meter → RETIRED Meter (Merge F / Assembler restored). Id unchanged; see ../RENAMES.md | (no new file) |
+| (provenance clarification, no version change) | 2026-10-04 (AEST, UTC+10) | Archivist | n/a | v003.md (Merge F / Assembler restored (~3:05pm)) shows Author 'Gem'. That overstates it: Gem's approval of that change was relayed by P1 (Work) Explorer, Explorer applied the profile edit, and the Archivist recorded the text from the live profile and checked it against it (and, for Merge F, against proposals/merge-F-unretire-assembler-2026-10-04.md). Gem did not write the text directly. Raised by (Checks) Scrutineer. v003.md is not edited. | (no new file) |
+| (deletion status, no version change) | 2026-10-09 (AEST, UTC+10) | Archivist | n/a (noticed) | DELETED from live (profile gone, noticed 9 Oct 2026). Folder and all versions kept as history; no version change. | (no new file) |

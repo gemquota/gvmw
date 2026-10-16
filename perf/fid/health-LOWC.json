@@ -1,0 +1,41 @@
+{
+  "node": "v22.23.3",
+  "cpus": 8,
+  "laws": "tidal",
+  "runs": 1,
+  "load1Start": 0.32,
+  "sizes": {
+    "2500": {
+      "medMsPerTick": 22.44,
+      "ticksPerSec": 44.56,
+      "runsMs": [
+        22.4
+      ],
+      "hash": "9027d5bf380e4971/0",
+      "deterministic": true,
+      "alive": 2500,
+      "species": 5,
+      "born": 0,
+      "bonded": 2183,
+      "meanEnergy": 74.87,
+      "nanEnergy": 0
+    },
+    "10000": {
+      "medMsPerTick": 71.12,
+      "ticksPerSec": 14.06,
+      "runsMs": [
+        71.1
+      ],
+      "hash": "cc64b5e9ebcc88f8/0",
+      "deterministic": true,
+      "alive": 10000,
+      "species": 5,
+      "born": 0,
+      "bonded": 5510,
+      "meanEnergy": 75.24,
+      "nanEnergy": 0
+    }
+  },
+  "speed": "PAIRWISE_BUDGET=16,SPEED_PAIR_BUDGET=8,SPEED_SOCIAL_EVERY=4,SPEED_MID_RANGE=60,SPEED_SYMBIOSIS_RANGE=10,SPEED_EXPENSIVE_EVERY=4,SPEED_NEAR_RANGE=20",
+  "load1End": 1.43
+}

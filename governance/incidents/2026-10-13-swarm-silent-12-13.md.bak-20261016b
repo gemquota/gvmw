@@ -1,0 +1,44 @@
+# INC-006: No chain, digest or governance writes since Sat 10 Oct afternoon
+
+- Opened: Tue 13 Oct 2026, about 11:05am AEST, by P1 (Ops) Mender (weekday stall check)
+- Owner: P1 (Ops) Mender (stall detection). Stalled step owners: P1 (Checks) Scorer (step 1), P1 (Work) Explorer (daily digest).
+- Why an incident: two weekdays in a row (Mon 12 and Tue 13 Oct) with no chain run, which also meets INC-004's reopen condition.
+
+## What is on disk (checked 13 Oct, 11:01am)
+- Newest file anywhere under `/workspace/governance/` is `risk/register.md`, 10 Oct 1:23pm. Nothing has been written there since.
+- No `assessments/2026-10-12.md`, `assessments/2026-10-13.md`, `reviews/2026-10-12.md` or `reviews/2026-10-13.md`. Last assessment is `assessments/2026-10-09.md`.
+- No Monday weekly scorecard for 12 Oct (`assessments/weekly-*` newest is 5 Oct).
+- Scrutineer's 11:45am backup left nothing on 12 Oct either.
+- Explorer's daily digest: `digest/sent/` holds only `2026-10-10.md` (7:52am). `digest/state.json` says compiled through 10 Oct, with 10 Oct still unread. `digest/inbox/2026-10-11/Explorer.md` was written 10 Oct, 12:01pm and never compiled.
+- Mender's own 10:50am stall routine failed on Mon 12 Oct (cause not visible to this run). Today's run is going.
+- Agent folders for all 17 current bots are present; their local transcript stores are empty, so no transcript evidence was available to this run.
+
+## Likely cause (inferred, not confirmed)
+The 8 Oct stop was an unpaid Cursor invoice (INC-004). The 10 Oct backlog triage (B6) still asks Gem whether that invoice is paid, and nothing on disk says it was. A swarm-wide silence from Saturday afternoon fits a billing stop better than one bot failing, but this run can't see routine run status for other bots.
+
+## Notified
+- P1 (Checks) Scorer, priority message, 13 Oct.
+- P1 (Work) Explorer (04dcca0d), priority message, 13 Oct.
+- Gem, via Mender's chat, 13 Oct.
+
+## Status
+Open. Closes when a weekday chain runs again (Scorer file plus Scrutineer review) and Explorer's digest resumes, or Gem gives a cause.
+
+## Update 16 Oct 2026, 8:10am AEST (Mender, from Scrutineer's 16 Oct review S1, S3, S4)
+Nothing above is changed. This adds what the 13 Oct text couldn't see.
+
+### Scope extended to Mon 12 to Thu 15 Oct (four weekdays)
+- No `assessments/2026-10-12.md` to `-15.md` and no `reviews/2026-10-12.md` to `-15.md`.
+- No `state/chain/` file was written on any of those days. Lookback files for 12–15 Oct were written retrospectively this morning at 8:08am.
+- No Mon 12 Oct weekly scorecard (`assessments/weekly-*` newest is still `weekly-2026-10-05.md`).
+- No Safeguard 1:15pm artefacts. `risk/register.md` was last written 10 Oct 1:23pm (its last heading reads 13:25).
+- No digest sent from 11 to 15 Oct. `digest/sent/` goes from `2026-10-10.md` (7:52am) to `2026-10-16.md` (7:49:08am).
+- R-011 gap: no missing-Scorer report to Mender is on file for 12, 13, 14 or 15 Oct.
+- Nothing at all was written under `governance/` on 12 or 14 Oct. On 13 Oct the only writes were this incident and Mender's `log.md` and `open.md` at 11:03am. On 15 Oct there was evening work outside the chain: Architect's drafts at 9:37pm, Gem's direct approval at 10:38pm, Archivist's recording at 10:40pm, and Explorer's `phases.md` update at 11:30pm.
+- Mender's own missed watchdog runs (12, 14 and 15 Oct) are logged separately as INC-007, because that's a stall in Mender's own duty and has a different closing condition.
+
+### Closing condition (Scrutineer S4)
+On disk this morning: `assessments/2026-10-16.md` (created 7:50:43am), `reviews/2026-10-16.md` (8:04:29am) and `digest/sent/2026-10-16.md` (7:49:08am). On that evidence Scrutineer finds the closing condition met as of about 8:05am 16 Oct. The cause is still unconfirmed: billing is inferred, not confirmed, and B6 (is the invoice paid?) is still open with Gem.
+
+### Status
+Open: closing condition met; awaiting Scrutineer or Gem to close. Mender won't close this one, because it includes stalls in Mender's own watchdog duty.

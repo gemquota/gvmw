@@ -1,0 +1,46 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v4 detail B — identity, explorers, work, retirements. Archivist. 9 Oct 2026.
+flowchart TB
+  GEM(("Gem"))
+
+  subgraph Explorers["Explorers · same display name"]
+    EXP["Explorer 04dcca0d<br/>ACTIVE · merged brief"]
+    EXP0["Explorer 82a2c15a<br/>prior · records unchanged"]
+  end
+
+  subgraph Identity["Identity"]
+    INQ["Inquirer e613112b<br/>recorded; not live ~9:14"]
+    INF["Inferer"]
+    INV["Investigator P3"]
+    IMI["Imitator P4"]
+    INT["RETIRED Interrogator"]
+    U031["0314faa4 unrecorded<br/>no role"]
+  end
+
+  subgraph Work["Work P5 dormant"]
+    EMI["Emissary"]
+    ENG["Engineer"]
+    EXT["Extractor"]
+    ENS["RETIRED Ensembler"]
+    EDI["RETIRED Editor"]
+    MSG["RETIRED Messenger"]
+  end
+
+  EXP0 -.->|active brief| EXP
+  EXP --> EMI
+  EXP --> ENG
+  EXP --> EXT
+  EXP --> GEM
+  MSG -.->|digest 9 Oct| EXP
+  MEDI["Mediator"] -->|cost alerts| EXP
+
+  INQ -.-> INF
+  INF --> INV
+  INV --> IMI
+  INT -.->|merged 9 Oct| INV
+  IMI -.->|once P4 may approve| GEM
+  U031 -.->|awaiting Gem| GEM
+
+  ENS -.-> ENG
+  EDI -.->|outright| GEM
+  SRC2["RETIRED Sourcer"] -.->|outright| GEM

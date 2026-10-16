@@ -1,0 +1,21 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v8 (15 Oct 2026 ~11:35pm) detail B — identity + explorers + work
+flowchart TB
+  GEM(("Gem"))
+  INQ0["e613112b former · verified"] -.->|v003 re-key| INQ["Inquirer 0314faa4 ACTIVE · verified"]
+  INQ --> INF["Inferer v004"]
+  INF --> INV["Investigator v003 · LIVE"]
+  INV -->|reviews after the fact| IMI["Imitator v005 · LIVE · decides within limits"]
+  INT["RETIRED Interrogator"] -.-> INV
+  EXP0["82a2c15a former"] -.-> EXP["Explorer v002 04dcca0d ACTIVE"]
+  MSG["RETIRED Messenger"] -.-> EXP
+  EXP --> EMI["Emissary"]
+  EXP --> ENG["Engineer"]
+  EXP --> EXT["Extractor"]
+  EXP --> GEM
+  MED["Mediator"] -->|cost alerts| EXP
+  ENS["RETIRED Ensembler"] -.-> ENG
+  INQ0 -.->|series accepted if it reappears| INF
+  EMI -.->|decisions within limits| IMI
+  EXT -.->|decisions within limits| IMI
+  IMI -.->|limits stay with| GEM

@@ -1,0 +1,14 @@
+done defaults
+done + neighbour 48
+done + pair budget 20
+done + social every 2
+done + mid range 120
+done + symbiosis 30 (= FAST)
+done + expensive every 2 (new, not in FAST)
+done aggressive: neighbour 24
+done + pair budget 12
+done + social every 4
+done + mid range 60
+done + symbiosis 10
+done + expensive every 4
+done + near range 20

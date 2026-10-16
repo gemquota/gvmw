@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>MedB</title>
+<link rel="stylesheet" href="/app/app.css">
+<link rel="icon" href="/app/favicon.svg" type="image/svg+xml">
+<script type="module" src="/app/js/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="shell" class="shell">
+  <aside id="sidebar" class="sidebar" aria-label="Navigation">
+    <div class="brand"><span class="logo" aria-hidden="true"></span><span><b>MedB</b><small>local · 127.0.0.1</small></span></div>
+    <nav id="nav"></nav>
+    <div class="side-foot"><kbd>?</kbd> shortcuts</div>
+  </aside>
+  <div class="content">
+    <header class="topbar">
+      <button id="menu" class="icon-btn only-mobile" aria-label="Menu">☰</button>
+      <h1 id="title">MedB</h1>
+      <div class="spacer"></div>
+      <span id="live" class="live" title="Live updates">● live</span>
+      <span id="actor" class="actor-chip" title="Authenticated actor"></span>
+      <button id="theme" class="icon-btn" aria-label="Toggle dark/light mode" title="Toggle theme (t)">◐</button>
+      <button id="logout" class="icon-btn" aria-label="Sign out" title="Sign out">⎋</button>
+    </header>
+    <main id="main" tabindex="-1"></main>
+  </div>
+</div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<dialog id="dialog" class="dialog"></dialog>
+<noscript>This app needs JavaScript. The read-only inspector at / works without the app.</noscript>
+</body>
+</html>

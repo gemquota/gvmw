@@ -1,0 +1,10 @@
+# Open stalls and waits (owner: P1 (Ops) Mender)
+
+Last updated: 13 Oct 2026, 11:05am AEST.
+
+| Id | Began | Summary | Next step | Status |
+|---|---|---|---|---|
+| INC-004 | Wed 7 Oct 2026 | No chain files for Wed 7 and Thu 8 Oct. Second missed weekday in a row. | Mender logged it; Gem told 9 Oct. Resume is today's chain (Scorer and Scrutineer already done). | Open until Scrutineer or Gem closes it. Mender does not close its own stall. |
+| INC-005 | Fri 9 Oct 2026, between 9:20 and 9:26am | Nine agent folders present at 9:20am were gone by about 9:26am. No deletion quote in approvals/. Cause not stated. | Gem (Scrutineer already asked). | Open |
+| Verification rule | 5 Oct 2026, 11:33am | Gem approved the message-checking rule in Mender's chat. Archivist still needs Gem to confirm in Archivist's own chat before recording. | Gem, in Archivist's chat | Open |
+| INC-006 | Sat 10 Oct 2026, after 1:23pm | No chain for Mon 12 or Tue 13 Oct, no digest since 10 Oct, no governance writes since 10 Oct 1:23pm. Likely billing (inferred). | Scorer and Explorer to resume; Gem to confirm the Cursor invoice (triage B6). | Open |

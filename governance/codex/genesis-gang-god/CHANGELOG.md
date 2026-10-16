@@ -1,0 +1,20 @@
+# Genesis Gang God: changelog
+
+Bot id: 82a2c15a-2694-4ac2-b2f4-f7f463f85fce
+
+| Version | Date | Author | Approved by | Reason | File |
+|---|---|---|---|---|---|
+| 1 | 2026-10-02 (AEST, UTC+10) | Codex Keeper (baseline capture) | n/a (baseline capture of existing instructions) | Baseline: current instructions recorded at codex kick-off requested by Genesis Gang God | v001.md |
+| (rename, no version change) | 2026-10-03 (AEST, UTC+10) | Gem | Gem | Renamed: Genesis Gang God → (Work) Explorer. Id and instruction text unchanged; see ../RENAMES.md | (no new file) |
+| (rename, no version change) | 2026-10-04 (AEST, UTC+10) | Gem | Gem | Renamed: (Work) Explorer → P1 (Work) Explorer (phase prefix). Id and instruction text unchanged; see ../RENAMES.md | (no new file) |
+| 2 | 2026-10-04 (AEST, UTC+10) | (Roles) Architect (id 51af1200-ca1a-45ff-8350-848091e00f96) | Gem, confirmed directly in Archivist's chat 4 Oct 2026 5:45–5:46pm AEST | Reconciled: adds 2IC/never-merge clause (benefits the relayer; confirmed by Gem directly); adds R-007 deployment-delegation limit; adds Rules/Limits. | v002.md |
+| (deployment status, no version change) | 2026-10-04 (AEST, UTC+10) | Archivist | n/a | PENDING-DEPLOY v002.md: approved, not yet deployed. Deployment to the live profile is Gem's action. | (no new file) |
+| 3 | 2026-10-04 (AEST, UTC+10) | (Roles) Architect (id 51af1200-ca1a-45ff-8350-848091e00f96) | Gem, directly in Archivist's chat 4 Oct 2026 7:37pm AEST | Imitator no longer limited to preference questions — may approve instruction changes once P4; keeps the "never for outward-facing/consequential decisions" limit. | v003.md |
+| (deployment status, no version change) | 2026-10-04 (AEST, UTC+10) | Archivist | n/a | PENDING-DEPLOY v003.md: approved; Gem asked for deployment at 7:37pm, not yet applied to the live profile (no profile-editing tool available to the Archivist). | (no new file) |
+| (deployment status, no version change) | 2026-10-04 (AEST, UTC+10) | Archivist | n/a | v002.md superseded by v003.md before it was ever deployed (Gem approved v003 at 7:37pm); deploy v003, not v002. | (no new file) |
+| (deployment status, no version change) | 2026-10-04 (AEST, UTC+10) | Archivist | Gem, directly in Archivist's chat 7:37pm AEST | DEPLOYED v003.md to the live profile at ~7:58–8:00pm AEST by Archivist (UpdateAgent) at Gem's direct request; byte-checked against the recorded text (sha256 1c2ae92df382…). Independent check requested from Scrutineer (Scorer for Scrutineer's own profile). | (no new file) |
+| 4 | 2026-10-09 (AEST, UTC+10) | (Roles) Architect (id 51af1200-ca1a-45ff-8350-848091e00f96) | Gem, directly in Archivist's chat 9 Oct 2026 9:00am AEST | Unlisted agents with R-012 carve-out; never route to dormant bots (R-013); review-findings rule; Messenger interim; Safeguard pre-action route. | v004.md |
+| (deployment status, no version change) | 2026-10-09 (AEST, UTC+10) | Archivist | n/a | PENDING-DEPLOY v004.md: approved; Gem asked for deployment at 9:00am AEST 9 Oct 2026 ('Record and deploy them'); not yet applied to the live profile. | (no new file) |
+| (deployment status, no version change) | 2026-10-09 (AEST, UTC+10) | Archivist | Gem, directly in Archivist's chat 9:00am AEST ("Yes, I approve all 11. Record and deploy them, and leave the evasion-code clause out of Engineer.") | DEPLOYED v004.md to the live profile at 09:04:08 AEST (profile.json mtime; corrected from ~9:10 per Scrutineer 2026-10-09-deploy-check) by Archivist at Gem's direct request; Safeguard told beforehand; independent check requested from Scrutineer. | (no new file) |
+| (status, no version change) | 2026-10-09 (AEST, UTC+10) | Archivist | n/a (fact notice) | Live profile for 82a2c15a gone from disk (noticed ~9:26am AEST during post-deploy verify). Treated as former Explorer; active Explorer remains 04dcca0d / explorer-copy. Index flag set RETIRED. No new instruction version. | (no new file) |
+| (status, no version change) | 2026-10-09 (AEST, UTC+10) | Archivist | n/a (fact notice) | DELETED from live (agent folder gone, noticed 9 Oct 2026 ~9:29am AEST); who removed it not recorded. | (no new file) |

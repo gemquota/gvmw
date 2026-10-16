@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-AU" class="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BIE project report — Gem Quota · 10 Oct 2026 (finished 15 Oct)</title>
+<style>
+:root {
+  --bg: #0f1419;
+  --bg2: #1a222d;
+  --bg3: #243040;
+  --card: #1e2836;
+  --text: #e7ecf3;
+  --muted: #9aa8b8;
+  --accent: #5b9fd4;
+  --good: #3dba7a;
+  --warn: #e0a14a;
+  --bad: #e06a6a;
+  --line: #2c3a4d;
+  --chip: #2a3545;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f4f6f9;
+    --bg2: #ffffff;
+    --bg3: #e8eef5;
+    --card: #ffffff;
+    --text: #1a2330;
+    --muted: #5a6a7a;
+    --accent: #2a6fad;
+    --good: #1f8a54;
+    
+    --warn: #b5760b;
+    --bad: #c0392b;
+    --line: #d0d8e2;
+    --chip: #eef2f7;
+  }
+}
+html.light {
+  --bg: #f4f6f9; --bg2: #fff; --bg3: #e8eef5; --card: #fff;
+  --text: #1a2330; --muted: #5a6a7a; --accent: #2a6fad;
+  --good: #1f8a54; --warn: #b5760b; --bad: #c0392b;
+  --line: #d0d8e2; --chip: #eef2f7;
+}
+html.dark {
+  --bg: #0f1419; --bg2: #1a222d; --bg3: #243040; --card: #1e2836;
+  --text: #e7ecf3; --muted: #9aa8b8; --accent: #5b9fd4;
+  --good: #3dba7a; --warn: #e0a14a; --bad: #e06a6a;
+  --line: #2c3a4d; --chip: #2a3545;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.45;
+  font-size: 15px;
+}
+header {
+  background: var(--bg2); border-bottom: 1px solid var(--line);
+  padding: 1.4rem 1.6rem; display: flex; flex-wrap: wrap;
+  align-items: flex-start; justify-content: space-between; gap: 1rem;
+}
+header h1 { margin: 0 0 .35rem; font-size: 1.45rem; font-weight: 650; }
+header .meta { color: var(--muted); font-size: .9rem; max-width: 52rem; }
+.theme-btn {
+  background: var(--chip); color: var(--text); border: 1px solid var(--line);
+  border-radius: 8px; padding: .45rem .8rem; cursor: pointer; font-size: .85rem;
+}
+main { max-width: 1100px; margin: 0 auto; padding: 1.4rem 1.2rem 3rem; }
+.cards {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: .75rem; margin-bottom: 1.5rem;
+}
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: .9rem 1rem;
+}
+.card .n { font-size: 1.65rem; font-weight: 700; letter-spacing: -.02em; }
+.card .l { color: var(--muted); font-size: .78rem; margin-top: .15rem; }
+.card.accent .n { color: var(--accent); }
+.card.good .n { color: var(--good); }
+.card.warn .n { color: var(--warn); }
+.card.bad .n { color: var(--bad); }
+h2 {
+  font-size: 1.15rem; margin: 1.8rem 0 .7rem; padding-bottom: .35rem;
+  border-bottom: 1px solid var(--line);
+}
+h3 { font-size: 1rem; margin: 1.2rem 0 .5rem; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); }
+table {
+  width: 100%; border-collapse: collapse; font-size: .88rem;
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  overflow: hidden; margin: .5rem 0 1rem;
+}
+th, td { text-align: left; padding: .45rem .65rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--bg3); color: var(--muted); font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .03em; }
+tr:last-child td { border-bottom: none; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+blockquote {
+  margin: .6rem 0; padding: .55rem .9rem; border-left: 3px solid var(--accent);
+  background: var(--bg3); border-radius: 0 8px 8px 0; color: var(--text); font-size: .92rem;
+}
+.chip {
+  display: inline-block; background: var(--chip); border: 1px solid var(--line);
+  border-radius: 999px; padding: .1rem .55rem; font-size: .75rem; color: var(--muted);
+  margin-right: .25rem;
+}
+.flow-wrap {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 1rem; overflow-x: auto; margin: .8rem 0 1.2rem;
+}
+.chart-wrap {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 1rem; margin: .8rem 0 1.2rem;
+}
+.chart-wrap h3 { margin-top: 0; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 800px) { .two { grid-template-columns: 1fr; } }
+.rec {
+  background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+  border-radius: 10px; padding: .75rem 1rem; margin: .5rem 0;
+}
+.rec strong { color: var(--accent); }
+.findings { display: grid; gap: .55rem; margin: .8rem 0 1.2rem; }
+.find {
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: .7rem .95rem;
+}
+.find b { color: var(--warn); }
+footer {
+  margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .82rem;
+}
+svg text { font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; }
+
+.toc { display:flex; flex-wrap:wrap; gap:.4rem; margin: .6rem 0 1.2rem; }
+.toc a {
+  text-decoration:none; background:var(--chip); border:1px solid var(--line);
+  border-radius:999px; padding:.2rem .7rem; font-size:.78rem; color:var(--muted);
+}
+.toc a:hover { color:var(--accent); border-color:var(--accent); }
+pre.flow {
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:1rem 1.1rem; overflow-x:auto; font-size:.82rem; line-height:1.35;
+  color:var(--muted);
+}
+table.files td:nth-child(2), table.files td:nth-child(3) { text-align:right; font-variant-numeric: tabular-nums; }
+.note {
+  background:var(--bg3); border:1px solid var(--line); border-left:4px solid var(--warn);
+  border-radius:10px; padding:.7rem 1rem; margin: .8rem 0 1.2rem; font-size:.92rem;
+}
+</style>
+
+</head>
+<body>
+<header>
+  <div>
+    <h1>Bonus Intelligence Engine — project report</h1>
+    <div class="meta">
+      Gem Quota · Brisbane AEST · Asked Saturday 10 Oct 2026 · Finished Thursday 15 Oct 2026, about 11:36pm AEST (UTC+10) ·
+      Read-only research over files on disk (engine idle; no new scrape).
+    </div>
+  </div>
+  <button class="theme-btn" onclick="toggleTheme()" type="button">Toggle theme</button>
+</header>
+<main>
+<div class="cards"><div class="card accent"><div class="n">580</div><div class="l">Seed URLs</div></div><div class="card accent"><div class="n">7,629</div><div class="l">Combined hosts</div></div><div class="card good"><div class="n">1,055</div><div class="l">AU merchants</div></div><div class="card good"><div class="n">540</div><div class="l">AU partnership sites</div></div><div class="card "><div class="n">262</div><div class="l">AU groups</div></div><div class="card warn"><div class="n">46k</div><div class="l">Promo rows seen</div></div><div class="card bad"><div class="n">0</div><div class="l">Engine log lines</div></div><div class="card bad"><div class="n">RR-015</div><div class="l">Pause in force</div></div></div>
+
+<div class="note">
+  <b>Pause:</b> RR-015 blocks further shipping/running of the scraper packages. RR-002 (Interactive Gambling Act 2001) remains Gem's legal call.
+  AU partnership/terms rebuilds on 10 Oct were offline from existing data only.
+</div>
+
+<nav class="toc">
+  <a href="#topline">Top line</a>
+  <a href="#what">What it is</a>
+  <a href="#inputs">Inputs</a>
+  <a href="#flow">Flow</a>
+  <a href="#outputs">Outputs</a>
+  <a href="#source">Source files</a>
+  <a href="#docs">Docs files</a>
+  <a href="#tools">Tooling</a>
+  <a href="#config">Config paths</a>
+  <a href="#risks">Risks</a>
+  <a href="#findings">Findings</a>
+  <a href="#recs">Recommendations</a>
+</nav>
+
+<h2 id="topline">Top line</h2>
+
+<table class=""><thead><tr><th>Measure</th><th>Count</th></tr></thead><tbody><tr><td>Seed URLs (urls.txt)</td><td class="num">580</td></tr><tr><td>Combined confirmed hosts</td><td class="num">7,629</td></tr><tr><td>New hosts found</td><td>7,049 (detail CSV 6,978 rows)</td></tr><tr><td>Merchants with one verified URL</td><td class="num">1,847</td></tr><tr><td>Australian merchants</td><td class="num">1,055</td></tr><tr><td><code>AU registered / unregistered / unknown</code></td><td>422 / 558 / 75</td></tr><tr><td><code>Original-580 reachable / merchant-ok / api-ok</code></td><td>421 / 315 / 310</td></tr><tr><td><code>AU partnership sites / groups / families</code></td><td>540 / 262 / 173</td></tr><tr><td>Unknown-country sites held out</td><td class="num">622</td></tr><tr><td>AU merchants with public promos</td><td>983 of 1,055</td></tr><tr><td>Promo rows seen in terms build</td><td class="num">46,266</td></tr><tr><td><code>Engine source lines (bie/*.py)</code></td><td>~2,241</td></tr><tr><td><code>Docs markdown lines (docs/**)</code></td><td>~1,906</td></tr><tr><td><code>Engine log / proxies loaded</code></td><td>empty / 0</td></tr><tr><td>Archived scrape caches</td><td>~1.8 GB</td></tr><tr><td><code>Open legal/packaging risks</code></td><td>RR-002, RR-015</td></tr></tbody></table>
+
+<h2 id="what">1. What BIE is</h2>
+<p>BIE is Gem's casino-bonus scraper and analysis stack. Live code: <code>/workspace/bie/</code>. Clean package copy: <code>bie_deliverables/scraper/</code>. Discovery + partnership tooling: <code>/workspace/bie_tools/</code>. Organised lists/reports: <code>/workspace/bie_deliverables/</code>.</p>
+
+<table class=""><thead><tr><th>Layer</th><th>File</th><th>Job</th></tr></thead><tbody><tr><td>Foundation</td><td>base.py</td><td>Config, DB, IO, system state</td></tr><tr><td>Execution</td><td>run.py</td><td>Orchestrator + scrape workers</td></tr><tr><td>Connectivity</td><td>net.py</td><td>HTTP, proxies, AbuseIPDB</td></tr><tr><td>Interaction</td><td>flow.py</td><td>Login, API, merchant parse</td></tr><tr><td>Intelligence</td><td>logic.py</td><td>PV score, fingerprint, dedup</td></tr><tr><td>Visualization</td><td>ui.py</td><td>Rich TUI</td></tr><tr><td>Communication</td><td>web_server.py</td><td>FastAPI + WebSocket dashboard</td></tr></tbody></table>
+
+<p><strong>Site path:</strong> proxy → session → MERCHANTID → login → syncData → map → fingerprint/dedup → PV → SQLite/CSV → TUI/WebSocket.</p>
+<ul>
+<li>Extractor pause (RR-015): no shipping/running of scraper packages until Arbiter lifts it.</li>
+<li>RR-002 IGA exposure is open — Gem's legal call. Private research is lowest risk.</li>
+<li>AU rebuilds (RR-018/019) were offline only. <code>engine.log</code> and <code>proxies.txt</code> are empty.</li>
+</ul>
+
+<h2 id="inputs">2. Inputs</h2>
+<h3>2.1 URL lists (<code>bie/in/config/</code>)</h3>
+
+<table class="files"><thead><tr><th>File</th><th>Rows</th><th>Description</th></tr></thead><tbody><tr><td><code>urls.txt</code></td><td class="num">580</td><td>Seed URL list the engine reads (original 580).</td></tr><tr><td><code>urls_backup.txt</code></td><td class="num">579</td><td>Backup of the seed list.</td></tr><tr><td><code>urls_combined.txt</code></td><td class="num">7629</td><td>Seed + all confirmed new domains, deduped.</td></tr><tr><td><code>newurls_found.txt</code></td><td class="num">7049</td><td>Confirmed new domains alone.</td></tr><tr><td><code>newurls.txt</code></td><td class="num">354</td><td>Older candidate / interim new-URL list.</td></tr><tr><td><code>urls_by_merchant.txt</code></td><td class="num">1847</td><td>One verified working URL per merchant ID.</td></tr><tr><td><code>urls_by_merchant.csv</code></td><td class="num">1848</td><td>Same with merchant_id, name, mirror_count, checked_at.</td></tr><tr><td><code>urls_au.txt</code></td><td class="num">1055</td><td>One verified URL per Australian merchant.</td></tr><tr><td><code>urls_au.csv</code></td><td class="num">1055</td><td>AU merchants with details.</td></tr><tr><td><code>au_registered.csv</code></td><td class="num">422</td><td>AU sites tied to an account record (all under U1).</td></tr><tr><td><code>au_unregistered.csv</code></td><td class="num">558</td><td>AU sites with no account on record (+ matching .txt).</td></tr><tr><td><code>au_unknown.csv</code></td><td class="num">75</td><td>AU sites matched to old records by brand name only.</td></tr><tr><td><code>au_unregistered.txt</code></td><td class="num">558</td><td>Plain-URL form of au_unregistered.</td></tr><tr><td><code>check.txt</code></td><td class="num">399</td><td>Working checklist / subset used during checks.</td></tr><tr><td><code>newregistered.txt</code></td><td class="num">194</td><td>Newly registered AU hosts (relative to prior cut).</td></tr><tr><td><code>newunregistered.txt</code></td><td class="num">77</td><td>Newly unregistered AU hosts.</td></tr><tr><td><code>test_url.txt</code></td><td class="num">1</td><td>Single-URL test fixture.</td></tr><tr><td><code>proxies.txt</code></td><td class="num">0</td><td>Proxy list. Empty (0 bytes). Engine has no proxies loaded.</td></tr><tr><td><code>config.ini</code></td><td class="num">26</td><td>PRIVATE. Account logins / API keys / UI auth. Values not described here. Keep private. (RR-015 / T-009.)</td></tr></tbody></table>
+
+<h3>2.2 Discovery inputs</h3>
+<p>Homepage/partner/telegram HTML caches were archived then deleted on 10 Oct (Gem: <em>“Delete the original scrape caches (archives kept)”</em>). Archives at <code>backups/bie-caches-2026-10-10/</code> (~1.8 GB). Still on disk: harvest JSONs, candidate CSVs, <code>partner_dirs.json</code>, <code>pubinfo.jsonl</code> (1,827), <code>pages_content.jsonl</code> (2,502), <code>sites_config.csv</code> (7,237).</p>
+
+<h2 id="flow">3. Process / flow</h2>
+<pre class="flow">urls.txt (580)
+   │
+   ├─ nologin_check / reach_check ──► reachability.csv
+   │
+   ├─ discover.py sources
+   │     partners │ homepages │ telegram │ urlscan │ sameip │ pages │ file
+   │         └─► candidates_*.csv ── merge ──► newurls_found.txt
+   │                                              urls_combined.txt
+   │
+   ├─ au/* ──► urls_au + registered/unregistered/unknown
+   │
+   └─ pstats (public APIs only)
+         A pages → B getPage → C pubinfo → D by_merchant
+         → E groups → G/H/J stats → (AU) g_build_au / k_bonus_terms_au
+              └─► partnership_*_AU.* , bonus_terms_AU.* , bonus_scores_AU.xlsx</pre>
+<p>Discovery rule: homepage exposes MERCHANTID/MERCHANTNAME <strong>and</strong> <code>GET /api/v1/index.php</code> returns the platform JSON error shape. Bare hosts only; referral paths stripped. Top detail-CSV source: urlscan CDN fingerprint (1,038 rows).</p>
+
+<h2 id="outputs">4. Outputs</h2>
+<h3>4.1 Organised deliverables</h3>
+
+<table class=""><thead><tr><th>Path</th><th>What it is</th></tr></thead><tbody><tr><td><code>README.md</code></td><td>Index of the organised snapshot (4 Oct 2026 AEST).</td></tr><tr><td><code>scraper/</code></td><td>Clean copy of the engine (venv/caches removed). Same source set as `/workspace/bie/`.</td></tr><tr><td><code>lists/all/urls_original.txt</code></td><td>580 starting URLs.</td></tr><tr><td><code>lists/all/urls_combined.txt</code></td><td>7,629 combined.</td></tr><tr><td><code>lists/all/newurls_found.txt</code></td><td>7,049 confirmed new.</td></tr><tr><td><code>lists/all/urls_by_merchant.txt/.csv</code></td><td>1,847 one-URL-per-merchant.</td></tr><tr><td><code>lists/australia/urls_au.txt/.csv</code></td><td>1,055 AU merchants.</td></tr><tr><td><code>lists/australia/au_registered.csv</code></td><td>422 with account on record.</td></tr><tr><td><code>lists/australia/au_unregistered.csv/.txt</code></td><td>558 with no account.</td></tr><tr><td><code>lists/australia/au_unknown.csv</code></td><td>75 brand-name-only matches.</td></tr><tr><td><code>reports/DISCOVERY.md</code></td><td>Repeatable discovery method.</td></tr><tr><td><code>reports/reachability.csv</code></td><td>Original-580 no-login results.</td></tr><tr><td><code>reports/newurls_found_detail.csv</code></td><td>Every new domain with merchant, source, mirror flag (6,978 rows).</td></tr><tr><td><code>reports/partnership_stats_AU.xlsx/.csv</code></td><td>AU-only partnership table (262 groups / 173 families / 540 sites).</td></tr><tr><td><code>reports/partnership_sites_AU.csv</code></td><td>One row per AU site.</td></tr><tr><td><code>reports/partnership_summary_AU.md</code></td><td>AU method + caveats.</td></tr><tr><td><code>reports/partnership_sites_unknown_country.csv</code></td><td>622 unknown-country sites held out.</td></tr><tr><td><code>reports/bonus_terms_AU.csv/.xlsx</code></td><td>Per-promo terms for AU merchants (built 10 Oct 13:30 AEST).</td></tr><tr><td><code>reports/bonus_scores_AU.xlsx</code></td><td>Scored share / downline-FD / welcome offers (updated 15 Oct).</td></tr><tr><td><code>reports/_all-countries/</code></td><td>Pre-AU partnership files (1,615 sites).</td></tr></tbody></table>
+
+<h3>4.2 AU partnership (10 Oct 13:10 AEST, offline)</h3>
+<ul>
+<li>540 AU sites · 262 groups · 173 families.</li>
+<li>537 with promo data · 451 no-deposit · 506 welcome.</li>
+<li>Largest: eb7png.com partnership — 37 AU sites.</li>
+<li>622 unknown-country held out for review.</li>
+</ul>
+<h3>4.3 Terms + scores</h3>
+
+<table class=""><thead><tr><th>Promo type</th><th>Merchants</th><th>Promos</th></tr></thead><tbody><tr><td>REGISTER</td><td class="num">834</td><td class="num">905</td></tr><tr><td>WELCOME</td><td class="num">917</td><td class="num">1,636</td></tr><tr><td>SHARE</td><td class="num">934</td><td class="num">1,429</td></tr><tr><td>DOWNLINE_FIRST_DEPOSIT</td><td class="num">792</td><td class="num">1,016</td></tr><tr><td>COMMISSION</td><td class="num">778</td><td class="num">866</td></tr></tbody></table>
+
+<p><code>bonus_scores_AU.xlsx</code> (15 Oct) scores share / downline-FD / welcome on a 0–100 geometric mean (Value, Playthrough, Cashout, Access). Share tasks split from share bonuses per Gem the same evening.</p>
+<h3>4.4 Packages (paused)</h3>
+
+<table class=""><thead><tr><th>Zip</th><th>Size</th><th>Note</th></tr></thead><tbody><tr><td>bie_scraper_and_lists.zip</td><td>1.29 MB</td><td>Pause covers shipping/running</td></tr><tr><td>bie_organized.zip</td><td>1.29 MB</td><td>Byte-identical twin</td></tr><tr><td>bie_scraper.zip</td><td>282 KB</td><td>Engine-only older pack</td></tr></tbody></table>
+<h2 id="source">5. Every source file (<code>/workspace/bie/*.py</code>)</h2>
+<table class="files"><thead><tr><th>File</th><th>Lines</th><th>Size</th><th>Description</th></tr></thead><tbody><tr><td><code>base.py</code></td><td class="num">228</td><td>12.7 KB</td><td>Foundation layer. Config/INI, URL+credential parse, thread-local SQLite pool (`db/base.db`), session load/save as JSON (not pickle), CSV append helpers, logging, and `SystemState` pause/resume/stop events.</td></tr><tr><td><code>run.py</code></td><td class="num">356</td><td>22.6 KB</td><td>Execution layer. Async orchestrator, DB/CSV writer threads, `ScrapeWorker` lifecycle (proxy → merchant parse → login → syncData → score/dedup → save), CLI flags (`-v`, `-r`, `-s`, `dash`).</td></tr><tr><td><code>net.py</code></td><td class="num">155</td><td>6.7 KB</td><td>Connectivity. `cloudscraper` sync sessions, `aiohttp` async manager (`ssl=False`), HTML/JSON helpers, AbuseIPDB proxy health (`check`/`burned`/`status`), proxy rotation helpers.</td></tr><tr><td><code>flow.py</code></td><td class="num">140</td><td>5.8 KB</td><td>Interaction. Login payload, API endpoint `/api/v1/index.php`, auth-token + syncData fetch, MERCHANTID/MERCHANTNAME extraction from HTML/JS.</td></tr><tr><td><code>logic.py</code></td><td class="num">213</td><td>9.7 KB</td><td>Intelligence. Bonus normalize/extract/map, SHA-256 fingerprint, fuzzy name match (≥0.80), PV Algorithm V14 (`score`), junk filter, high-value flag, expiry parse.</td></tr><tr><td><code>ui.py</code></td><td class="num">583</td><td>23.1 KB</td><td>Visualization. Rich TUI init/live/final dashboards, rolling health metrics, colour helpers, posts telemetry to the web dashboard `/update`.</td></tr><tr><td><code>web_server.py</code></td><td class="num">168</td><td>5.8 KB</td><td>Communication. FastAPI on `127.0.0.1:8000`, Basic Auth on control routes, WebSocket broadcast, pause/resume/stop + config read/update, serves dashboard HTML.</td></tr><tr><td><code>generate_final_report.py</code></td><td class="num">92</td><td>3.7 KB</td><td>Offline report helper. Reads `db/base.db` for commission/referral-style bonuses ≥$5, concurrent reachability check, writes `final_bonus_report.md`.</td></tr><tr><td><code>generate_stats_report.py</code></td><td class="num">96</td><td>3.8 KB</td><td>Sibling of final report. Same filter, writes `online_stats_report.md` / related online lists.</td></tr><tr><td><code>test_api_live.py</code></td><td class="num">34</td><td>1.0 KB</td><td>Live smoke: fetch one site HTML, extract merchant, hit API endpoint.</td></tr><tr><td><code>test_links.py</code></td><td class="num">43</td><td>2.0 KB</td><td>Concurrent HEAD/GET reachability over a hard-coded ~40-URL commission list.</td></tr><tr><td><code>test_links_expanded.py</code></td><td class="num">50</td><td>2.6 KB</td><td>Same pattern on a larger expanded bonus-site list.</td></tr><tr><td><code>test_parse.py</code></td><td class="num">4</td><td>97 B</td><td>Tiny parse smoke: calls `base.parse()` and prints URL/cred counts. (Note: live `base.py` exposes `parse_targets_and_credentials`, so this may be stale.)</td></tr><tr><td><code>test_parser_live.py</code></td><td class="num">17</td><td>457 B</td><td>Live merchant-parser check against one host.</td></tr><tr><td><code>test_scrape_site.py</code></td><td class="num">62</td><td>2.0 KB</td><td>Single-site end-to-end scrape test with mock DB/CSV queues.</td></tr></tbody></table>
+
+<div class="findings">
+  <div class="find"><b>Doc drift.</b> <code>stats.md</code> quotes ~1,634 lines; current <code>bie/*.py</code> total ~2,241. README mentions <code>lab/</code> and <code>in/meta/config.ini.example</code> — missing. <code>test_parse.py</code> calls <code>base.parse()</code>; live name is <code>parse_targets_and_credentials</code>. <code>pyproject.toml</code> lists no deps.</div>
+</div>
+
+<h2 id="docs">6. Every docs file (<code>/workspace/bie/docs/</code>)</h2>
+
+<table class="files"><thead><tr><th>File</th><th>Lines</th><th>Description</th></tr></thead><tbody><tr><td><code>docs/index.md</code></td><td class="num">121</td><td>Hub page. Mermaid of the 7-layer model, links into manuals/specs, live-status placeholders.</td></tr><tr><td><code>docs/MANUAL.md</code></td><td class="num">100</td><td>Operator manual. CLI flags for `run.py`, TUI + web dashboard, config layout, common workflows.</td></tr><tr><td><code>docs/FEATURES.md</code></td><td class="num">54</td><td>Feature catalogue: multi-thread scrape, session persistence, dedup, priority engine, PV, proxies, dashboard.</td></tr><tr><td><code>docs/runbook.md</code></td><td class="num">60</td><td>Troubleshooting. E-codes (E101–E500), target lifecycle (New/Active/Purgatory/Pruned), log locations.</td></tr><tr><td><code>docs/api_reference.md</code></td><td class="num">55</td><td>REST control API + WebSocket schema for the dashboard.</td></tr><tr><td><code>docs/algorithm_v14.md</code></td><td class="num">101</td><td>PV Scorer V14 formula (log reward / exponential difficulty) with mermaid.</td></tr><tr><td><code>docs/schema_reference.md</code></td><td class="num">121</td><td>SQLite ERD: `targets`, `bonuses`, `sessions`, `metrics`, `logs`, `ip_cache`.</td></tr><tr><td><code>docs/opsec.md</code></td><td class="num">30</td><td>Fingerprint evasion, AbuseIPDB proxy strategy, session hygiene, operational practices. (Contains evasion guidance; packaging/running of that code is paused under RR-015.)</td></tr><tr><td><code>docs/dictionary.md</code></td><td class="num">48</td><td>Term map for the consolidated architecture (module nicknames, common abbreviations).</td></tr><tr><td><code>docs/stats.md</code></td><td class="num">41</td><td>Code size table (~1.6k lines claimed), golfed→consolidated evolution notes, docs footprint.</td></tr><tr><td><code>docs/review.md</code></td><td class="num">74</td><td>Internal architecture review of each layer and directory layout.</td></tr><tr><td><code>docs/ui_audit.md</code></td><td class="num">46</td><td>Every TUI init/final display value: static vs calculated vs config-driven.</td></tr><tr><td><code>docs/diagrams.md</code></td><td class="num">350</td><td>Mermaid set: architecture, scrape sequence, state lifecycles, ERD, PV flow, dedup, extraction, WebSocket.</td></tr><tr><td><code>docs/NEXT_PHASE.md</code></td><td class="num">88</td><td>20 planned updates: 10 hardenings + 10 experimental (Telegram bot, decay priority, Termux IP reset, etc.).</td></tr><tr><td><code>docs/PRIORITY_RANKING.md</code></td><td class="num">59</td><td>Weighted ranking of the 20 planned features for Termux (Telegram #1 at 9.6).</td></tr><tr><td><code>docs/agents.md</code></td><td class="num">256</td><td>AI coding-agent guidelines (plan mode, smallest change, prove it works). Generic, not BIE-specific.</td></tr><tr><td><code>docs/source_code/base.md</code></td><td class="num">32</td><td>Source guide for `base.py` sections: CONFIG, DB, IO, STATE.</td></tr><tr><td><code>docs/source_code/run.md</code></td><td class="num">72</td><td>Source guide for orchestrator + `ScrapeWorker` sequence diagram.</td></tr><tr><td><code>docs/source_code/flow.md</code></td><td class="num">41</td><td>Source guide for AUTH/API/PARSER and extraction ritual.</td></tr><tr><td><code>docs/source_code/logic.md</code></td><td class="num">35</td><td>Source guide for MODELS, DEDUPLICATION, FILTER &amp; PV.</td></tr><tr><td><code>docs/source_code/net.md</code></td><td class="num">33</td><td>Source guide for NETWORK + HEALTH (proxy state machine).</td></tr><tr><td><code>docs/source_code/ui.md</code></td><td class="num">33</td><td>Source guide for Rich TUI state, rendering, web bridge.</td></tr><tr><td><code>docs/source_code/web_server.md</code></td><td class="num">56</td><td>Source guide for ConnectionManager, control API, telemetry flow.</td></tr></tbody></table>
+<h3>Root markdown beside the code</h3>
+<table class="files"><thead><tr><th>File</th><th>Lines</th><th>Description</th></tr></thead><tbody><tr><td><code>README.md</code></td><td class="num">49</td><td>Project readme: features, quick start, security notes, 7-layer map. Mentions `in/meta/config.ini.example` and `lab/` that are not present in this tree.</td></tr><tr><td><code>mkdocs.yml</code></td><td class="num">47</td><td>MkDocs Material nav for the docs site (deep purple / teal).</td></tr><tr><td><code>pyproject.toml</code></td><td class="num">17</td><td>uv packaging stub (`name=base`, requires-python ≥3.14, empty deps). Not a full dependency lock.</td></tr><tr><td><code>commission_sites.md</code></td><td class="num">46</td><td>Static list of sites historically tagged with ≥$10 commission / downline FD bonuses.</td></tr><tr><td><code>expanded_bonus_sites.md</code></td><td class="num">75</td><td>Broader static list: commissions, downlines, rebates, airdrops.</td></tr><tr><td><code>final_bonus_report.md</code></td><td class="num">42</td><td>Enriched table (URL, last/avg/total commission, best type, last seen) from `generate_final_report.py`.</td></tr><tr><td><code>online_commission_sites.md</code></td><td class="num">41</td><td>Subset of commission list found online at last check.</td></tr><tr><td><code>online_expanded_bonus_sites.md</code></td><td class="num">66</td><td>Subset of expanded list found online.</td></tr><tr><td><code>online_stats_report.md</code></td><td class="num">63</td><td>Online sites with commission statistics table.</td></tr></tbody></table>
+<h2 id="tools">7. Tooling files (<code>/workspace/bie_tools/</code>)</h2>
+<p>Not in the engine package. This is what grew the lists and AU reports after the core scraper existed.</p>
+<table class="files"><thead><tr><th>File</th><th>Lines</th><th>Description</th></tr></thead><tbody><tr><td><code>discover.py</code></td><td class="num">294</td><td>Repeatable same-platform discovery. Sources: partners, homepages, telegram, urlscan, sameip, file, pages. Never logs in; strips referral paths.</td></tr><tr><td><code>nologin_check.py</code></td><td class="num">109</td><td>Four-stage no-login check: reachable → homepage OK → merchant id/name → platform API JSON signature.</td></tr><tr><td><code>partners.py</code></td><td class="num">35</td><td>Cached crawl for partner directories + social leads from confirmed homepages.</td></tr><tr><td><code>partner_report.py</code></td><td class="num">31</td><td>Accounting per partner directory vs baseline and confirmation status.</td></tr><tr><td><code>run_all.sh</code></td><td class="num">20</td><td>Sequential checkpointed discovery pipeline with merge after each step.</td></tr><tr><td><code>DISCOVERY.md</code></td><td>—</td><td>Method note (copy also in deliverables/reports).</td></tr><tr><td><code>dash.html / app.js</code></td><td>—</td><td>Dashboard HTML + RequireJS bundle (parallel to bie/in/templates).</td></tr><tr><td><code>scripts/extract_bie.py</code></td><td class="num">34</td><td>Unpack a dumped codebase tree (TOC + File: headers) into a folder.</td></tr><tr><td><code>scripts/reach_check.py</code></td><td class="num">45</td><td>Standalone no-login reachability CLI wrapping BIE net/flow.</td></tr><tr><td><code>au/au_discover.sh</code></td><td class="num">15</td><td>AU discovery runner (homepages/partners rounds, telegram).</td></tr><tr><td><code>au/au_discover2.sh</code></td><td class="num">8</td><td>AU follow-on: websearch file/pages + AU telegram channels.</td></tr><tr><td><code>au/au_resume.sh</code></td><td class="num">9</td><td>Resume urlscan + AU listing pages + websearch/telegram.</td></tr><tr><td><code>au/checkrun.py</code></td><td class="num">22</td><td>Generic polite no-login checker (6 workers, 90s cap, checkpointed).</td></tr><tr><td><code>au/k_map.py</code></td><td class="num">38</td><td>Build host→merchant_id map from local no-login results.</td></tr><tr><td><code>au/l_classify.py</code></td><td class="num">84</td><td>Classify AUD merchants registered / unregistered / unknown from local records only. No passwords in output.</td></tr><tr><td><code>au/m_au_merge.py</code></td><td class="num">61</td><td>AU-only merge of newly confirmed AUD merchants into urls_au + combined lists.</td></tr><tr><td><code>pstats/common.py</code></td><td class="num">23</td><td>Shared polite public API helper (`/page/getPage`, `/merchants/getPublicInfo`).</td></tr><tr><td><code>pstats/a_pages.py</code></td><td class="num">33</td><td>Step A: enumerate partner pages from cached homepages + site config.</td></tr><tr><td><code>pstats/b_getpage.py</code></td><td class="num">26</td><td>Step B: fetch partner page bodies via public getPage → pages_content.jsonl.</td></tr><tr><td><code>pstats/c_pubinfo.py</code></td><td class="num">45</td><td>Step C: public promotions per merchant → pubinfo.jsonl.</td></tr><tr><td><code>pstats/d_by_merchant.py</code></td><td class="num">50</td><td>Step D: one verified URL per merchant across mirrors.</td></tr><tr><td><code>pstats/e_groups.py</code></td><td class="num">48</td><td>Step E: build partnership groups from partner pages.</td></tr><tr><td><code>pstats/e_build.py</code></td><td class="num">48</td><td>Early/alternate step-E stats builder.</td></tr><tr><td><code>pstats/f_merchant_out.py</code></td><td class="num">13</td><td>Write urls_by_merchant.txt/.csv from by_merchant.jsonl.</td></tr><tr><td><code>pstats/g_build.py</code></td><td class="num">116</td><td>All-countries partnership stats + sites CSV/XLSX/MD.</td></tr><tr><td><code>pstats/g_build_au.py</code></td><td class="num">129</td><td>AU-only offline rebuild of partnership stats (RR-018).</td></tr><tr><td><code>pstats/g_build.draft.py</code></td><td class="num">38</td><td>Draft of g_build.</td></tr><tr><td><code>pstats/h_report.py</code></td><td class="num">20</td><td>XLSX writer (Partnerships / Sites / Notes) for all-countries.</td></tr><tr><td><code>pstats/h_report_au.py</code></td><td class="num">22</td><td>XLSX writer for AU-only.</td></tr><tr><td><code>pstats/i_members.py</code></td><td class="num">19</td><td>No-login check of never-tested partner-directory members.</td></tr><tr><td><code>pstats/j_md.py</code></td><td class="num">31</td><td>All-countries partnership_summary.md.</td></tr><tr><td><code>pstats/j_md_au.py</code></td><td class="num">68</td><td>AU summary MD + unknown-country review CSV.</td></tr><tr><td><code>pstats/au_classify.py</code></td><td class="num">45</td><td>Exact-match AU classifier (country/currency/merchant_id/host). No fuzzy.</td></tr><tr><td><code>pstats/parse_promos.py</code></td><td class="num">66</td><td>Classify/parse public promotions; reuses BIE `logic`.</td></tr><tr><td><code>pstats/k_bonus_terms_au.py</code></td><td class="num">255</td><td>AU per-promotion terms table (offline from pubinfo/pages). Structured fields only (RR-019).</td></tr><tr><td><code>pstats/k_write_au.py</code></td><td class="num">95</td><td>Write bonus_terms_AU.csv/.xlsx and copy into deliverables.</td></tr><tr><td><code>pstats/k_safety_check_au.py</code></td><td class="num">40</td><td>Pattern safety check: no URLs, ref codes, emails, phones in bonus_terms_AU outputs.</td></tr></tbody></table>
+<p class="muted">Also present: harvest JSONs, candidate CSVs, partner_dirs.json, pstats JSONL/JSON, HTML fixtures, copies of AU outputs. Not line-described.</p>
+<h2 id="config">8. Config and support paths</h2>
+<table class=""><thead><tr><th>Path</th><th>Description</th></tr></thead><tbody><tr><td><code>bie/in/config/urls.txt</code></td><td>Seed URL list the engine reads (original 580).</td></tr><tr><td><code>bie/in/config/urls_backup.txt</code></td><td>Backup of the seed list.</td></tr><tr><td><code>bie/in/config/urls_combined.txt</code></td><td>Seed + all confirmed new domains, deduped.</td></tr><tr><td><code>bie/in/config/newurls_found.txt</code></td><td>Confirmed new domains alone.</td></tr><tr><td><code>bie/in/config/newurls.txt</code></td><td>Older candidate / interim new-URL list.</td></tr><tr><td><code>bie/in/config/urls_by_merchant.txt</code></td><td>One verified working URL per merchant ID.</td></tr><tr><td><code>bie/in/config/urls_by_merchant.csv</code></td><td>Same with merchant_id, name, mirror_count, checked_at.</td></tr><tr><td><code>bie/in/config/urls_au.txt</code></td><td>One verified URL per Australian merchant.</td></tr><tr><td><code>bie/in/config/urls_au.csv</code></td><td>AU merchants with details.</td></tr><tr><td><code>bie/in/config/au_registered.csv</code></td><td>AU sites tied to an account record (all under U1).</td></tr><tr><td><code>bie/in/config/au_unregistered.csv</code></td><td>AU sites with no account on record (+ matching .txt).</td></tr><tr><td><code>bie/in/config/au_unknown.csv</code></td><td>AU sites matched to old records by brand name only.</td></tr><tr><td><code>bie/in/config/au_unregistered.txt</code></td><td>Plain-URL form of au_unregistered.</td></tr><tr><td><code>bie/in/config/check.txt</code></td><td>Working checklist / subset used during checks.</td></tr><tr><td><code>bie/in/config/newregistered.txt</code></td><td>Newly registered AU hosts (relative to prior cut).</td></tr><tr><td><code>bie/in/config/newunregistered.txt</code></td><td>Newly unregistered AU hosts.</td></tr><tr><td><code>bie/in/config/test_url.txt</code></td><td>Single-URL test fixture.</td></tr><tr><td><code>bie/in/config/proxies.txt</code></td><td>Proxy list. Empty (0 bytes). Engine has no proxies loaded.</td></tr><tr><td><code>bie/in/config/config.ini</code></td><td>PRIVATE. Account logins / API keys / UI auth. Values not described here. Keep private. (RR-015 / T-009.)</td></tr><tr><td><code>bie/in/templates/index.html</code></td><td>Scraper dashboard SPA shell served by FastAPI.</td></tr><tr><td><code>bie/in/templates/docs.html</code></td><td>In-app documentation browser (marked + mermaid CDN).</td></tr><tr><td><code>bie/db/reachability.csv</code></td><td>No-login check results for the original 580 seeds (copy also in deliverables).</td></tr><tr><td><code>bie/err/log/engine.log</code></td><td>Engine log. Empty — no scrape run since the 9 Oct restore.</td></tr></tbody></table>
+<h2 id="risks">9. Risks, pause, and ownership</h2>
+<table class=""><thead><tr><th>ID</th><th>Status</th><th>One line</th></tr></thead><tbody><tr><td>RR-002</td><td>Open, Gem&#x27;s legal call</td><td>IGA 2001 exposure from casino/pokies dataset + scraper features</td></tr><tr><td>RR-015</td><td>Open, pause in force</td><td>Zip with proxy rotation, cloudscraper, config.ini; Arbiter alone can lift</td></tr><tr><td>RR-018</td><td>Dry-run then done</td><td>AU-only partnership rebuild; offline; unknowns separate</td></tr><tr><td>RR-019</td><td>Dry-run then done</td><td>AU bonus_terms; structured fields; safety check for refs/PII</td></tr><tr><td>T-009</td><td>Open (Safekeeper)</td><td>config.ini credential copies unprotected in several places</td></tr></tbody></table>
+<p>Extractor owns lists/reports/packaging. Explorer archived caches on Gem's words. Safeguard dry-runs gambling-adjacent collection. Codey owns non-trivial engine changes. Governance bots do not run the scraper.</p>
+
+<h2 id="findings">10. Findings</h2>
+<div class="findings">
+  <div class="find"><b>1.</b> The useful product today is the offline AU dataset, not a live scrape.</div>
+  <div class="find"><b>2.</b> Docs almost match code volume, with a few drifted paths and counts (§5).</div>
+  <div class="find"><b>3.</b> Discovery scaled 580 → 7.6k hosts mainly via urlscan CDN fingerprint, partner directories and homepage sister links — no login.</div>
+  <div class="find"><b>4.</b> AU filtering was exact-match only; unknowns held out — matches Gem's 10 Oct instruction.</div>
+  <div class="find"><b>5.</b> Legal/packaging pause is real. New scrape, zip share, or promotional use of AU terms needs Gem's call.</div>
+  <div class="find"><b>6.</b> Scoring continued 15 Oct on the 10 Oct terms table — keep them distinct.</div>
+</div>
+
+<h2 id="recs">11. Recommendations</h2>
+<p class="muted">Suggestions for Gem. Nothing below was applied.</p>
+<div class="rec"><strong>1. Keep the pause</strong> until the IGA call is written down. Private research on existing files is the safe default.</div>
+<div class="rec"><strong>2. Canonical AU view</strong> — treat <code>reports/*_AU*</code> as current; leave <code>_all-countries/</code> as archive.</div>
+<div class="rec"><strong>3. Resolve T-009</strong> via Safekeeper — change passwords if those logins are real.</div>
+<div class="rec"><strong>4. Refresh docs drift</strong> — lab/example paths, <code>test_parse.py</code>, <code>stats.md</code> counts.</div>
+<div class="rec"><strong>5. Version score workbooks</strong> with the date in the filename next to terms.</div>
+<div class="rec"><strong>6. Do not rehydrate caches</strong> unless Gem explicitly asks; archives already exist.</div>
+
+<h2>Data gaps</h2>
+<ul>
+<li>No live <code>db/base.db</code> — only <code>reachability.csv</code> under <code>db/</code>.</li>
+<li>Extractor chat history incomplete in the search index; file evidence used instead.</li>
+<li><code>app.js</code> is a minified RequireJS bundle — not hand-described line-by-line.</li>
+<li>Credential values intentionally unread.</li>
+<li>Promo classification is heuristic (see partnership_summary_AU caveats).</li>
+</ul>
+
+<h2>Appendix A — original-580 reachability</h2>
+
+<table class=""><thead><tr><th>Stage</th><th>Count</th></tr></thead><tbody><tr><td>Reachable</td><td class="num">421</td></tr><tr><td>Not reachable</td><td class="num">159</td></tr><tr><td>Merchant OK</td><td class="num">315</td></tr><tr><td>API OK</td><td class="num">310</td></tr><tr><td>Fail @ reachable</td><td class="num">159</td></tr><tr><td>Fail @ homepage</td><td class="num">26</td></tr><tr><td>Fail @ merchant</td><td class="num">80</td></tr><tr><td>Fail @ api</td><td class="num">5</td></tr></tbody></table>
+<h2>Appendix B — path map</h2>
+<table class=""><thead><tr><th>Tree</th><th>Role</th><th>Approx size</th></tr></thead><tbody><tr><td><code>/workspace/bie/</code></td><td>Live engine + docs + config</td><td>1.3 MB</td></tr><tr><td><code>/workspace/bie_tools/</code></td><td>Discovery + pstats + artefacts</td><td>222 MB</td></tr><tr><td><code>/workspace/bie_deliverables/</code></td><td>Organised lists/reports/scraper</td><td>7.2 MB</td></tr><tr><td><code>/workspace/backups/bie-caches-2026-10-10/</code></td><td>Archived scrape caches</td><td>1.8 GB</td></tr></tbody></table>
+
+<footer>
+  Paths: <code>/workspace/bie_deliverables/reports/bie-project-report-2026-10-10.html</code> ·
+  <code>.md</code> · screenshot <code>.png</code>.<br>
+  Companion: <code>governance/reviews/2026-10-10-governance-io-report.md</code>,
+  <code>bie_deliverables/README.md</code>,
+  <code>reports/partnership_summary_AU.md</code>,
+  <code>reports/DISCOVERY.md</code>.<br>
+  Asked 10 Oct 2026 · finished 15 Oct 2026 after the unpaid-invoice cut-off.
+</footer>
+</main>
+<script>
+function toggleTheme(){
+  const h=document.documentElement;
+  if(h.classList.contains('light')){h.classList.remove('light');h.classList.add('dark');}
+  else if(h.classList.contains('dark')){h.classList.remove('dark');h.classList.add('light');}
+  else {
+    const pref=matchMedia('(prefers-color-scheme: light)').matches;
+    h.classList.add(pref?'dark':'light');
+  }
+}
+</script>
+</body>
+</html>

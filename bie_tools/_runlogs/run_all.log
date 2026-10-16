@@ -1,0 +1,185 @@
+=== 11:52:47 .venv/bin/python /workspace/bie_tools/discover.py testharvest telegram
+[telegram] harvested 1216, untested 365, resolving 293
+[telegram] 100/293 tested, 64 confirmed
+[telegram] 200/293 tested, 140 confirmed
+[telegram] tested 293, confirmed 213
+added 213 (mirrors 204), combined total 4126
+=== 11:54:23 .venv/bin/python /workspace/bie_tools/discover.py testharvest urlscan
+[urlscan] harvested 1743, untested 1128, resolving 1096
+[urlscan] 100/1096 tested, 88 confirmed
+[urlscan] 200/1096 tested, 186 confirmed
+[urlscan] 300/1096 tested, 278 confirmed
+[urlscan] 400/1096 tested, 372 confirmed
+[urlscan] 500/1096 tested, 466 confirmed
+[urlscan] 600/1096 tested, 559 confirmed
+[urlscan] 700/1096 tested, 655 confirmed
+[urlscan] 800/1096 tested, 751 confirmed
+[urlscan] 900/1096 tested, 846 confirmed
+[urlscan] 1000/1096 tested, 946 confirmed
+[urlscan] tested 1096, confirmed 1038
+added 1038 (mirrors 762), combined total 5164
+=== 12:01:35 .venv/bin/python /workspace/bie_tools/discover.py testharvest sameip
+[sameip] harvested 137, untested 103, resolving 101
+[sameip] 100/101 tested, 77 confirmed
+[sameip] tested 101, confirmed 78
+added 78 (mirrors 31), combined total 5242
+=== 12:02:14 .venv/bin/python /workspace/bie_tools/discover.py file /workspace/bie_tools/search_v3.txt
+[websearch] harvested 35, untested 17, resolving 13
+[websearch] tested 13, confirmed 2
+added 2 (mirrors 0), combined total 5244
+=== 12:02:19 .venv/bin/python /workspace/bie_tools/discover.py partners
+cached 50/2002
+cached 100/2002
+cached 150/2002
+cached 200/2002
+cached 250/2002
+cached 300/2002
+cached 350/2002
+cached 400/2002
+cached 450/2002
+cached 500/2002
+cached 550/2002
+cached 600/2002
+cached 650/2002
+cached 700/2002
+cached 750/2002
+cached 800/2002
+cached 850/2002
+cached 900/2002
+cached 950/2002
+cached 1000/2002
+cached 1050/2002
+cached 1100/2002
+cached 1150/2002
+cached 1200/2002
+cached 1250/2002
+cached 1300/2002
+cached 1350/2002
+cached 1400/2002
+cached 1450/2002
+cached 1500/2002
+cached 1550/2002
+cached 1600/2002
+cached 1650/2002
+cached 1700/2002
+cached 1750/2002
+cached 1800/2002
+cached 1850/2002
+cached 1900/2002
+cached 1950/2002
+cached 2000/2002
+partner directories found: 1342
+[partners] harvested 5620, untested 1746, resolving 1101
+[partners] 100/1101 tested, 81 confirmed
+[partners] 200/1101 tested, 164 confirmed
+[partners] 300/1101 tested, 225 confirmed
+[partners] 400/1101 tested, 278 confirmed
+[partners] 500/1101 tested, 354 confirmed
+[partners] 600/1101 tested, 430 confirmed
+[partners] 700/1101 tested, 506 confirmed
+[partners] 800/1101 tested, 588 confirmed
+[partners] 900/1101 tested, 654 confirmed
+[partners] 1000/1101 tested, 716 confirmed
+[partners] 1100/1101 tested, 777 confirmed
+[partners] tested 1101, confirmed 778
+added 778 (mirrors 648), combined total 6022
+=== 12:35:37 .venv/bin/python /workspace/bie_tools/discover.py homepages
+cached 50/778
+cached 100/778
+cached 150/778
+cached 200/778
+cached 250/778
+cached 300/778
+cached 350/778
+cached 400/778
+cached 450/778
+cached 500/778
+cached 550/778
+cached 600/778
+cached 650/778
+cached 700/778
+cached 750/778
+[homepages] harvested 12616, untested 2376, resolving 1336
+[homepages] 100/1336 tested, 78 confirmed
+[homepages] 200/1336 tested, 150 confirmed
+[homepages] 300/1336 tested, 223 confirmed
+[homepages] 400/1336 tested, 296 confirmed
+[homepages] 500/1336 tested, 359 confirmed
+[homepages] 600/1336 tested, 433 confirmed
+[homepages] 700/1336 tested, 504 confirmed
+[homepages] 800/1336 tested, 575 confirmed
+[homepages] 900/1336 tested, 650 confirmed
+[homepages] 1000/1336 tested, 725 confirmed
+[homepages] 1100/1336 tested, 791 confirmed
+[homepages] 1200/1336 tested, 860 confirmed
+[homepages] 1300/1336 tested, 929 confirmed
+[homepages] tested 1336, confirmed 945
+added 945 (mirrors 838), combined total 6967
+=== 13:21:21 .venv/bin/python /workspace/bie_tools/discover.py testharvest telegram
+[telegram] harvested 2612, untested 583, resolving 405
+[telegram] 100/405 tested, 71 confirmed
+[telegram] 200/405 tested, 148 confirmed
+[telegram] 300/405 tested, 230 confirmed
+[telegram] 400/405 tested, 304 confirmed
+[telegram] tested 405, confirmed 307
+added 307 (mirrors 276), combined total 7274
+round 3 added 2030
+=== 13:24:07 .venv/bin/python /workspace/bie_tools/discover.py partners
+cached 50/1252
+cached 100/1252
+cached 150/1252
+cached 200/1252
+cached 250/1252
+cached 300/1252
+cached 350/1252
+cached 400/1252
+cached 450/1252
+cached 500/1252
+cached 550/1252
+cached 600/1252
+cached 650/1252
+cached 700/1252
+cached 750/1252
+cached 800/1252
+cached 850/1252
+cached 900/1252
+cached 950/1252
+cached 1000/1252
+cached 1050/1252
+cached 1100/1252
+cached 1150/1252
+cached 1200/1252
+cached 1250/1252
+partner directories found: 1497
+[partners] harvested 6154, untested 808, resolving 99
+[partners] tested 99, confirmed 68
+added 68 (mirrors 62), combined total 7342
+=== 13:41:49 .venv/bin/python /workspace/bie_tools/discover.py homepages
+cached 50/68
+[homepages] harvested 13136, untested 1274, resolving 190
+[homepages] 100/190 tested, 74 confirmed
+[homepages] tested 190, confirmed 135
+added 135 (mirrors 129), combined total 7477
+=== 13:52:20 .venv/bin/python /workspace/bie_tools/discover.py testharvest telegram
+[telegram] harvested 2751, untested 234, resolving 52
+[telegram] tested 52, confirmed 46
+added 46 (mirrors 35), combined total 7523
+round 4 added 249
+=== 13:52:56 .venv/bin/python /workspace/bie_tools/discover.py partners
+cached 50/181
+cached 100/181
+cached 150/181
+partner directories found: 1504
+[partners] harvested 6179, untested 718, resolving 5
+[partners] tested 5, confirmed 3
+added 3 (mirrors 1), combined total 7526
+=== 13:56:01 .venv/bin/python /workspace/bie_tools/discover.py homepages
+[homepages] harvested 13206, untested 1115, resolving 30
+[homepages] tested 30, confirmed 28
+added 28 (mirrors 14), combined total 7554
+=== 14:02:18 .venv/bin/python /workspace/bie_tools/discover.py testharvest telegram
+[telegram] harvested 2765, untested 187, resolving 5
+[telegram] tested 5, confirmed 4
+added 4 (mirrors 1), combined total 7558
+round 5 added 35
+=== ALL DONE 14:02:40

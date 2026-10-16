@@ -1,0 +1,174 @@
+--- a/net.py	2026-10-02 09:53:05.629402218 +1000
++++ b/net.py	2026-10-02 09:53:05.665403792 +1000
+@@ -127,7 +127,7 @@
+     """Actual AbuseIPDB check with caching."""
+     import base
+     if not api_key: return 0, "No Key"
+-    res = base.query("SELECT score, ts FROM ip_cache WHERE ip=?", (ip,))
++    res = base.query("SELECT score, timestamp FROM ip_cache WHERE ip=?", (ip,))
+     if res:
+         score, timestamp = res[0]
+         if datetime.fromisoformat(timestamp) + timedelta(hours=1) > datetime.utcnow(): return score, "Cached"
+@@ -137,7 +137,7 @@
+         resp = requests.get(url, headers=headers, params={'ipAddress': ip, 'maxAgeInDays': '90'}, timeout=10)
+         if resp.status_code == 200:
+             score = resp.json()['data']['abuseConfidenceScore']
+-            base.query("REPLACE INTO ip_cache (ip, score, ts) VALUES (?, ?, CURRENT_TIMESTAMP)", (ip, score))
++            base.query("REPLACE INTO ip_cache (ip, score, timestamp) VALUES (?, ?, CURRENT_TIMESTAMP)", (ip, score))
+             return score, "Live"
+         if resp.status_code == 429: return 0, "Rate Limit"
+         return 100, f"HTTP {resp.status_code}"
+--- a/base.py	2026-10-02 09:53:05.629402218 +1000
++++ b/base.py	2026-10-02 09:53:05.669403966 +1000
+@@ -95,6 +95,12 @@
+   CREATE TABLE IF NOT EXISTS metrics(run_id INTEGER PRIMARY KEY AUTOINCREMENT, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, duration_seconds REAL, total_scraped INT, new_bonuses INT, spv REAL, errors INT);
+   CREATE TABLE IF NOT EXISTS logs(log_id INTEGER PRIMARY KEY, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, level TEXT, source TEXT, message TEXT);
+   """); conn.commit()
++    # Migration: older DBs may have ip_cache.ts instead of ip_cache.timestamp
++    ip_cols = [row[1] for row in conn.execute("PRAGMA table_info(ip_cache)")]
++    if 'timestamp' not in ip_cols:
++        if 'ts' in ip_cols: conn.execute("ALTER TABLE ip_cache RENAME COLUMN ts TO timestamp")
++        else: conn.execute("ALTER TABLE ip_cache ADD COLUMN timestamp DATETIME")
++        conn.commit()
+ 
+ def query(query_str, args=()):
+     """Executes args synchronous query."""
+--- a/web_server.py	2026-10-02 09:53:05.625402043 +1000
++++ b/web_server.py	2026-10-02 09:53:18.342501824 +1000
+@@ -8,13 +8,16 @@
+ import uvicorn
+ import asyncio
+ import os
++import secrets
+ import base
+ 
+ # --- Security ---
+ security = HTTPBasic()
+ 
+ def get_current_user(credentials: HTTPBasicCredentials = Depends(security)):
+-    if credentials.username != base.UI_USER or credentials.password != base.UI_PASS:
++    user_ok = secrets.compare_digest(credentials.username.encode(), str(base.UI_USER).encode())
++    pass_ok = secrets.compare_digest(credentials.password.encode(), str(base.UI_PASS).encode())
++    if not (user_ok and pass_ok):
+         raise HTTPException(
+             status_code=status.HTTP_401_UNAUTHORIZED,
+             detail="Incorrect username or password",
+@@ -22,6 +25,17 @@
+         )
+     return credentials.username
+ 
++def websocket_authorized(websocket: WebSocket) -> bool:
++    """Basic Auth check for the WebSocket handshake (browsers resend cached Basic credentials)."""
++    import base64
++    header = websocket.headers.get("authorization", "")
++    if not header.lower().startswith("basic "): return False
++    try: username, _, password = base64.b64decode(header[6:]).decode().partition(":")
++    except Exception: return False
++    return secrets.compare_digest(username.encode(), str(base.UI_USER).encode()) and secrets.compare_digest(password.encode(), str(base.UI_PASS).encode())
++
++AUTH = [Depends(get_current_user)]
++
+ # --- Models ---
+ 
+ class ScraperSettings(BaseModel):
+@@ -36,7 +50,7 @@
+ 
+ # --- Configuration ---
+ 
+-app = FastAPI()
++app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)  # no unauthenticated auto-docs
+ 
+ app.add_middleware(
+     CORSMiddleware,
+@@ -74,7 +88,10 @@
+ 
+ @app.websocket("/ws")
+ async def websocket_endpoint(websocket: WebSocket):
+-    """Public WebSocket endpoint for real-time data."""
++    """Authenticated WebSocket endpoint for real-time data."""
++    if not websocket_authorized(websocket):
++        await websocket.close(code=status.WS_1008_POLICY_VIOLATION)
++        return
+     await manager.connect(websocket)
+     try:
+         while True:
+@@ -82,7 +99,7 @@
+     except WebSocketDisconnect:
+         manager.disconnect(websocket)
+ 
+-@app.post("/update")
++@app.post("/update", dependencies=AUTH)
+ async def update_dashboard_data(data: dict):
+     """Internal endpoint for pushing real-time updates."""
+     data['is_paused'] = base.state.is_paused
+@@ -90,36 +107,36 @@
+     await manager.broadcast(json.dumps(data))
+     return {"status": "ok"}
+ 
+-@app.post("/api/control/pause")
++@app.post("/api/control/pause", dependencies=AUTH)
+ async def pause_scraper():
+     base.state.pause()
+     return {"status": "paused"}
+ 
+-@app.post("/api/control/resume")
++@app.post("/api/control/resume", dependencies=AUTH)
+ async def resume_scraper():
+     base.state.resume()
+     return {"status": "running"}
+ 
+-@app.post("/api/control/stop")
++@app.post("/api/control/stop", dependencies=AUTH)
+ async def stop_scraper():
+     base.state.stop()
+     return {"status": "stopping"}
+ 
+-@app.get("/api/control/status")
++@app.get("/api/control/status", dependencies=AUTH)
+ async def get_system_status():
+     return {
+         "is_paused": base.state.is_paused,
+         "is_stopped": base.state.is_stopped
+     }
+ 
+-@app.get("/api/config")
++@app.get("/api/config", dependencies=AUTH)
+ async def get_current_config():
+     import configparser
+     config_parser = configparser.ConfigParser()
+     config_parser.read('in/config/config.ini')
+     return {section: dict(config_parser.items(section)) for section in config_parser.sections()}
+ 
+-@app.post("/api/config")
++@app.post("/api/config", dependencies=AUTH)
+ async def update_config(new_config: ConfigUpdate):
+     """Updates config.ini with validated settings."""
+     import configparser
+@@ -139,11 +156,13 @@
+         
+     return {"status": "updated"}
+ 
+-@app.get("/")
++@app.get("/", dependencies=AUTH)
+ async def get_dashboard():
+     with open("in/templates/index.html", "r") as f:
+         return HTMLResponse(f.read())
+ 
+ def start_server():
+-    print(f"[*] Dashboard active at: http://0.0.0.0:8000 (No Authentication Required)")
+-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="error")
++    host = os.getenv("BIE_HOST", "127.0.0.1")
++    port = int(os.getenv("BIE_PORT", "8000"))
++    print(f"[*] Dashboard active at: http://{host}:{port} (HTTP Basic Auth: ui_user/ui_pass)")
++    uvicorn.run(app, host=host, port=port, log_level="error")
+--- a/ui.py	2026-10-02 09:53:05.629402218 +1000
++++ b/ui.py	2026-10-02 09:53:05.669403966 +1000
+@@ -565,7 +565,7 @@
+     )
+ 
+     def _send_update(payload):
+-        try: requests.post('http://localhost:8000/update', json=payload, timeout=0.1)
++        try: requests.post('http://localhost:8000/update', json=payload, auth=(base.UI_USER, base.UI_PASS), timeout=0.1)
+         except: pass
+ 
+     if not hasattr(update_dashboard, "_queue"):

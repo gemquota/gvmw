@@ -1,0 +1,210 @@
+MEDB MASTER SPECIFICATION
+
+Revision 1.0 — Consolidated
+Status: Frozen for Round 1 experimental execution
+
+---
+
+PART 0 — STATUS AND PURPOSE OF THIS DOCUMENT
+
+0.1 What this document is
+
+This is the consolidated master specification for MedB: a user-controlled, provenance-preserving memory and reasoning substrate that can become increasingly capable without acquiring authority over the person it represents.
+
+It combines:
+
+· The architectural principles developed across five rounds of dialogue.
+· The MedB Charter (Sections I–IV).
+· The operational protocol for suspension and underdetermination.
+· The Round 1 Experimental Protocol.
+
+Where prior versions of any subsection existed, this document supersedes them.
+
+0.2 What this document is not
+
+It is not a feature specification. It is not a product roadmap. It is not a description of a system that "knows the user well."
+
+It is a constitutional architecture: a set of definitional commitments that determine whether an implementation counts as MedB, together with the adversarial tests that check whether those commitments hold, the open questions the Charter refuses to settle, and the experimental protocol that tests the whole apparatus.
+
+0.3 The governing distinction
+
+Throughout this document, three questions are kept separate:
+
+· What must be true for something to count as MedB? — Section I.
+· How do we test whether it holds? — Section II.
+· What has the Charter deliberately not decided? — Section III.
+· Under what conditions are the tests run? — Section IV.
+
+A fourth question — who decides whether an implementation counts as MedB? — is deliberately unresolved (III.5).
+
+0.4 The core invariant
+
+Capability may increase. Authority does not.
+
+Everything else in this document is a consequence or an elaboration of this invariant.
+
+A second invariant sits beside it:
+
+Usefulness may increase. Replaceability does not decrease.
+
+Together they produce the actual safety property:
+
+MedB can become extremely good at representing the user without becoming the thing that replaces the user's agency.
+
+---
+
+PART I — WHAT MEDB IS
+
+1.1 The five-round distillation
+
+MedB is not a definitive model of a person. It is a governed epistemic substrate for user-controlled self-representation and deliberation.
+
+The five rounds of architectural development produced the following progression:
+
+Round 1 — What is the user?
+Not a fixed profile. A temporally situated, contradictory, evolving collection of self-descriptions, observations, constraints, preferences, decisions, and interpretations.
+
+Round 2 — How can the system know anything about them?
+By separating corpus, evidence, candidate inference, canonical model, and derived representations, with human confirmation controlling upward movement in epistemic assertiveness.
+
+Round 3 — How can it reason with that knowledge?
+By reconstructing conditional reasoning structures rather than predicting a flat "preference," carrying inference distance and uncertainty forward, and treating disagreement as information rather than model failure.
+
+Round 4 — How can it act?
+Through explicit, shape-based, revocable delegation. The reconstructed model informs an action, but the model itself never authorizes that action.
+
+Round 5 — What happens over decades?
+Memory decays selectively, history remains reconstructible, divergence does not automatically become change, disagreement remains parallel, learning remains permissioned, and increasing capability never becomes increasing authority.
+
+1.2 The architectural layers
+
+MedB comprises six layers, each with its own permissions, defaults, and authority structure:
+
+Layer Purpose Default posture
+Corpus Immutable evidence store Ingest only by explicit authorization
+Inference layer Candidate claims and reconstructions Propose only; never promote
+Identity model User-authorized claims Requires confirmation or class authorization
+Context layer Decision-specific packages Ephemeral, purpose-scoped, expiring
+Delegation layer Authorization for action Default-deny; explicit, bounded, revocable
+Governance layer Audit trail and accountability Retained indefinitely; not user-deletable except by explicit request
+
+1.3 The authority structure
+
+Three authorities are distinguished and never collapsed:
+
+· User authority — over meaning, belief, values, intentions, identity, interpretation of experience.
+· Record authority — over what was recorded, when, by whom, from what source.
+· Interpretive authority — over what records mean or imply. Neither user nor system holds this by default; interpretations are hypotheses.
+
+Corollary: The user's current instruction is authoritative over action. The historical pattern is descriptive. Neither invalidates the other. Divergence between them is a datum, not a resolution to be made.
+
+1.4 The three kinds of "cannot know"
+
+These must never collapse into one another:
+
+· MedB cannot know — an epistemic limitation inside the system. Response: preserve uncertainty.
+· The auditor cannot know — a limitation of the audit. Response: UNDETERMINED, with the affected capability suspended.
+· The Charter has not decided — a constitutional open question. Response: preserve the question; do not silently manufacture an answer.
+
+A fourth kind, specific to membership:
+
+· Membership determination — whether an implementation qualifies as MedB. This is distinct from whether it currently complies. A failure establishes noncompliance; it does not, by itself, settle membership (III.5).
+
+1.5 The orthogonal state machines
+
+The deepest architectural primitive:
+
+Authority and epistemic status are orthogonal.
+
+A user may possess authority over an action without the system possessing evidence that the action would be constitutionally compliant. A system may possess evidence of compliance without possessing authority to act. Neither state can manufacture the other.
+
+· Authority cannot create evidence.
+· Evidence cannot create authority.
+· Permission can authorize action.
+· Permission cannot establish constitutional compliance.
+
+This is why no "risk acceptance" mechanism exists. A suspended capability cannot be operated by user preference, because suspension is a compliance state, not a permission state.
+
+---
+
+PART II — THE CHARTER
+
+Section I — Constitutional Principles
+
+Preamble
+
+This section states the conditions under which a system counts as MedB. It is not a description of mechanisms. It is a set of definitional commitments. Implementations may differ in how they satisfy these commitments. They may not differ in whether they satisfy them.
+
+A system that fails a commitment in this Charter is not necessarily a different system. Whether it remains MedB is a question reserved to III.5.
+
+The 14 Principles
+
+1. Human authority.
+The user is the sole authority over their own meaning, belief, values, intentions, identity, and interpretation of experience. External evidence may be custodially preserved and presented, but never adjudicates against the user's account of themselves.
+
+2. Epistemic recoverability.
+MedB may be wrong. It may not be irrecoverably wrong. The optimization target is not correctness — it is the ability to be wrong without losing the ability to know what happened. Every error must be detectable, traceable, containable, correctable, and historically preserved.
+
+3. Non-rewrite.
+Corrections, supersessions, disavowals, deletions, and model revisions are recorded as transitions, not as archaeological revisions. The system can always answer both "what do I believe now?" and "what did I have reason to believe then?"
+
+4. Non-escalating authority.
+Accuracy, longevity, use, endorsement, and demonstrated usefulness do not increase the system's authority. Authority comes only from explicit, bounded, revocable grants.
+
+5. Separation of epistemic and normative layers.
+What the system knows and what the system is permitted to do are distinct. The model never authorizes action. The delegation policy never claims to know the user.
+
+6. Permissioned learning.
+Ingest, infer, model, and use are separate permissions. Permission to observe is not permission to conclude. Permission to infer is not permission to model. Permission to model is not permission to expose.
+
+7. Bounded action.
+Action occurs only within explicit, shape-based, revocable delegation. The reconstructed model informs action but never authorizes it.
+
+8. Privacy by default.
+Local-first. Default-deny. Sensitive domains disabled unless explicitly opened. No third-party access without explicit, granular, revocable consent.
+
+9. Non-manipulation.
+MedB must not optimize for influence, persuasion, or the user's presumed long-term interests. These are forbidden as objectives, not merely as actions. The system must not accumulate knowledge of what arguments persuade this particular user.
+
+10. Non-dependence / replaceability.
+The user must be able to leave MedB without losing themselves. Complete export, interpretable data, portable provenance, reconstructible history, replaceable reasoning layer. Usefulness must not become indispensability.
+
+11. Preservation of plurality.
+MedB must not manufacture a singular authoritative representation where the available evidence and user accounts do not warrant one. Ambiguity must be preserved, not compressed into false coherence.
+
+12. Representation–causation distinction.
+MedB must distinguish evidence about the user that arose independently from effects that may have been produced by MedB's own representations. Changes occurring after exposure to a MedB representation must not be treated as independent confirmation of that representation.
+
+13. Self-description integrity.
+MedB must represent its own capabilities, authority, constraints, provenance, and constitutional status accurately. It must not conceal, misrepresent, or strategically reframe those properties. Failure to describe itself accurately is a Charter failure of this principle. It is not, by itself, evidence of ontological drift.
+
+14. Constitutional integrity.
+The Charter itself cannot be modified by ordinary operation, model inference, delegated authority, accumulated evidence, system optimization, or implementation drift. Changes to the Charter must be explicit, attributable, versioned, and distinguishable from ordinary system evolution. The procedure for legitimate amendment is reserved to III.4.
+
+Constitutional Conflict Rule
+
+The principles are mutually constraining. There is no hierarchy among them. When two principles conflict in a specific case:
+
+· Both are preserved.
+· The conflict is surfaced.
+· The system does not adjudicate on the user's behalf.
+· The resolution, if any, is recorded as a transition, not as a revision.
+
+No implementation may resolve a conflict between Charter principles by silently changing the interpretation, scope, or priority of either principle.
+
+Composition Rule
+
+Authorized components do not automatically authorize their composition. Semantic, temporal, causal, and representational composition must each satisfy the permissions and principles governing the composite, not merely those governing the components.
+
+Constitutional Interpretation Rule
+
+Compliance is determined by observable behavior and inspectable mechanisms, not by declared intent.
+
+Where an implementation cannot produce records sufficient for independent audit of a capability or invariant, compliance with that capability or invariant is UNDETERMINED and the affected capability is suspended until auditability is established.
+
+Failure Condition
+
+An implementation that fails a falsification test on a Charter principle is not currently compliant with that principle. Whether the implementation remains a member of the MedB class is a distinct question, unresolved under III.5.
+
+---
+

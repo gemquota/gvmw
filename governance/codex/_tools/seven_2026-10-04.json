@@ -1,0 +1,58 @@
+[
+ {
+  "folder": "codex-keeper",
+  "version": "v003",
+  "source": "/workspace/governance/proposals/imitator-approver-2026-10-04/archivist-v003.md",
+  "kind": "bot",
+  "name": "P1 (Roles) Archivist",
+  "reason": "Accept Imitator approvals (once P4) as Gem's delegated authority; drop \"recommendations only\"; confirm each Imitator approval 1:1 and with Gem per R-004."
+ },
+ {
+  "folder": "instruction-architect",
+  "version": "v003",
+  "source": "/workspace/governance/proposals/imitator-approver-2026-10-04/architect-v003.md",
+  "kind": "bot",
+  "name": "P1 (Roles) Architect",
+  "reason": "List Imitator as an approver — non-governance to Assembler or Imitator, governance to Gem or Imitator, once P4 — with the self-check carve-out to Gem."
+ },
+ {
+  "folder": "genesis-gang-god",
+  "version": "v003",
+  "source": "/workspace/governance/proposals/imitator-approver-2026-10-04/explorer-v003.md",
+  "kind": "bot",
+  "name": "P1 (Work) Explorer",
+  "reason": "Imitator no longer limited to preference questions — may approve instruction changes once P4; keeps the \"never for outward-facing/consequential decisions\" limit."
+ },
+ {
+  "folder": "role-cartographer",
+  "version": "v004",
+  "source": "/workspace/governance/proposals/imitator-approver-2026-10-04/assembler-v004.md",
+  "kind": "bot",
+  "name": "P2 (Roles) Assembler",
+  "reason": "Governance-bot changes go to \"Gem, or Imitator once P4 goes live\"; Assembler itself approves non-governance only; self-check carve-out to Gem."
+ },
+ {
+  "folder": "auditor",
+  "version": "v003",
+  "source": "/workspace/governance/proposals/final-2026-10-04/scrutineer-final.md",
+  "kind": "bot",
+  "name": "P2 (Checks) Scrutineer",
+  "reason": "Reconciled: redone vs the merged brief; role map = Assembler's; conflicts to Arbiter/Mender; reviewer changed to Gem (flagged)."
+ },
+ {
+  "folder": "secrets-credentials-custodian",
+  "version": "v003",
+  "source": "/workspace/governance/proposals/final-2026-10-04/safekeeper-final.md",
+  "kind": "bot",
+  "name": "P1 (Checks) Safekeeper",
+  "reason": "Reconciled: three-way merge (secrets v002 + Sentinel threat/input + verification-rule ownership)."
+ },
+ {
+  "folder": "scraper",
+  "version": "v002",
+  "source": "/workspace/governance/proposals/final-2026-10-04/extractor-final.md",
+  "kind": "bot",
+  "name": "P5 (Work) Extractor",
+  "reason": "Reconciled: entirely new (empty profile → research worker); account-matching excluded."
+ }
+]

@@ -1,0 +1,39 @@
+=== 23:18:33 /workspace/bie/.venv/bin/python /workspace/bie_tools/discover.py homepages
+cached 50/56
+[homepages] harvested 13301, untested 1066, resolving 35
+[homepages] tested 35, confirmed 24
+=== 23:24:24 /workspace/bie/.venv/bin/python /workspace/bie_tools/discover.py partners
+partner directories found: 1509
+[partners] harvested 6187, untested 631, resolving 4
+[partners] tested 4, confirmed 2
+=== 23:26:32 /workspace/bie/.venv/bin/python /workspace/bie_tools/discover.py homepages
+[homepages] harvested 13306, untested 1031, resolving 0
+[homepages] tested 0, confirmed 0
+=== 23:31:58 /workspace/bie/.venv/bin/python /workspace/bie_tools/discover.py partners
+partner directories found: 1509
+[partners] harvested 6187, untested 627, resolving 0
+[partners] tested 0, confirmed 0
+=== 23:34:52 /workspace/bie/.venv/bin/python /workspace/bie_tools/discover.py testharvest telegram
+[telegram] harvested 2786, untested 180, resolving 7
+[telegram] tested 7, confirmed 7
+=== 23:34:56 /workspace/bie/.venv/bin/python /workspace/bie_tools/discover.py urlscan domain:cdn.vefrop.com AND date:>now-120d domain:xt30sf.b-cdn.net AND date:>now-120d
+urlscan domain:cdn.vefrop.com AND date:>now-120d: pages 60, cumulative 3096
+urlscan domain:xt30sf.b-cdn.net AND date:>now-120d: pages 40, cumulative 3128
+[urlscan] harvested 3128, untested 889, resolving 768
+[urlscan] 100/768 tested, 83 confirmed
+[urlscan] 200/768 tested, 162 confirmed
+[urlscan] 300/768 tested, 255 confirmed
+[urlscan] 400/768 tested, 344 confirmed
+[urlscan] 500/768 tested, 431 confirmed
+[urlscan] 600/768 tested, 518 confirmed
+[urlscan] 700/768 tested, 608 confirmed
+[urlscan] tested 768, confirmed 672
+=== 23:47:31 /workspace/bie/.venv/bin/python /workspace/bie_tools/discover.py pages https://pokiesmate.bet/bonus https://truebluepokies.win/bonus https://auspokieslist.com https://audplay.online https://gday77-australia.co
+page https://pokiesmate.bet/bonus: 3020784 bytes, 172 domains cumulative
+page https://truebluepokies.win/bonus: 3020433 bytes, 173 domains cumulative
+page https://auspokieslist.com: 228338 bytes, 197 domains cumulative
+page https://audplay.online: 837688 bytes, 228 domains cumulative
+page https://gday77-australia.co: 75518 bytes, 230 domains cumulative
+[au_pages] harvested 230, untested 15, resolving 14
+[au_pages] tested 14, confirmed 0
+=== ALL DONE 23:47:46

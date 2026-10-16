@@ -1,0 +1,48 @@
+site_name: Bonus Intelligence Engine
+site_url: https://example.com/bie
+site_description: High-performance casino bonus scraper documentation.
+theme:
+  name: material
+  palette:
+    primary: deep purple
+    accent: teal
+  features:
+    - navigation.expand
+    - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Operator Manual: MANUAL.md
+  - Features: FEATURES.md
+  - Troubleshooting: runbook.md
+  - Source Code:
+      - Base Layer: source_code/base.md
+      - Execution Layer: source_code/run.md
+      - Interaction Layer: source_code/flow.md
+      - Intelligence Layer: source_code/logic.md
+      - Connectivity Layer: source_code/net.md
+      - Visualization Layer: source_code/ui.md
+      - Communication Layer: source_code/web_server.md
+  - Technical References:
+      - API Reference: api_reference.md
+      - Algorithm V14: algorithm_v14.md
+      - Database Schema: schema_reference.md
+      - OpSec Guide: opsec.md
+      - Dictionary: dictionary.md
+      - Project Stats: stats.md
+      - Review: review.md
+      - UI Audit: ui_audit.md
+  - Planning:
+      - Next Phase: NEXT_PHASE.md
+      - Priorities: PRIORITY_RANKING.md
+      - Agent Guidelines: agents.md
+  - Diagrams: diagrams.md

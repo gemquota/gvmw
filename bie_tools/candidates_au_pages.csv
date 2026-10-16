@@ -1,0 +1,15 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://ogp.me,1,1,0,0,merchant,parse_failed,200,,23127,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,page:https://auspokieslist.com
+https://olympia3.casino,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://www.olympia3.casino/,page:https://pokiesmate.bet/bonus
+https://gday77-australia.co,1,1,0,0,merchant,parse_failed,200,,75885,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,page:https://gday77-australia.co
+https://asino.casino,1,1,0,0,merchant,parse_failed,200,,139092,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://pokiesmate.bet/bonus
+https://ladbrokes.com,1,1,0,0,merchant,parse_failed,200,,9527,,,,,0.7,ValueError: Could not find merchant identification details in HTML or JS.,page:https://pokiesmate.bet/bonus
+https://rankmath.com,1,0,0,0,homepage,cloudflare/403,200,,298369,,,,,0.1,ValueError: Blocked: Access Denied.,page:https://auspokieslist.com
+https://monsterinsights.com,1,1,0,0,merchant,parse_failed,200,,224066,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,page:https://auspokieslist.com
+https://auspokieslist.com,1,1,0,0,merchant,parse_failed,200,,228338,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,page:https://auspokieslist.com
+https://oshi-casino.org,1,1,0,0,merchant,parse_failed,200,,83932,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.,page:https://pokiesmate.bet/bonus
+https://zoome17.casino,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://zoome17.casino/,page:https://pokiesmate.bet/bonus
+https://w.org,1,1,0,0,merchant,parse_failed,200,,165025,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,page:https://auspokieslist.com
+https://ozwins.casino,1,1,0,0,merchant,parse_failed,200,,231341,,,,,1.8,ValueError: Could not find merchant identification details in HTML or JS.,page:https://pokiesmate.bet/bonus
+https://pokiesmate.bet,1,1,0,0,merchant,parse_failed,200,,4974851,,,,,4.2,ValueError: Could not find merchant identification details in HTML or JS.,page:https://pokiesmate.bet/bonus
+https://truebluepokies.win,1,1,0,0,merchant,parse_failed,200,,3334245,,,,,4.4,ValueError: Could not find merchant identification details in HTML or JS.,page:https://truebluepokies.win/bonus

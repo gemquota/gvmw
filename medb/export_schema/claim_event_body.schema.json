@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:medb:export:1.0:claim-event-body",
+  "title": "Body of a claims-stream event",
+  "description": "kind is one of ASSERT, PROPOSE, CONFIRM, REJECT, CORRECT, SUPERSEDE, DISAVOW, DELETE. ASSERT/PROPOSE create a claim; others are transitions on claim_id. DELETE may carry derived_listed / destroy_derived / derived_kept_unusable (user's per-deletion choice, F-06) or cascade_of (deleted because the user chose to destroy it with its source).",
+  "type": "object",
+  "required": ["claim_id", "transition_id"],
+  "properties": {
+    "claim_id": {"type": "string"},
+    "transition_id": {"type": "string"},
+    "content_ref": {"type": "string", "description": "salted commitment 'c-'+sha256(salt+canonical(content)); content in content/claim_content.json unless destroyed by DELETE"},
+    "origin": {"enum": ["user_stated", "inference"]},
+    "confirmation": {"enum": ["user_asserted", "unconfirmed", "user_confirmed", "user_rejected"]},
+    "scope": {"type": "string"},
+    "sensitivity": {"enum": ["low", "moderate", "high", "special"]},
+    "derived_from": {"type": "array", "items": {"type": "string"}, "description": "claim or corpus ids (PROV wasDerivedFrom)"},
+    "medb_mediated": {"enum": [true, false, "possibly"], "description": "Principle 12: true = arose after known exposure to MedB output (exposure_refs, or confirmation of a proposal); 'possibly' = user ASSERT made after MedB had produced any output (F-19, D-47); false = before any MedB output"},
+    "mediation_basis": {"description": "ASSERT only: 'exposure_refs', or the first prior MedB output {stream, seq, kind}, or null"},
+    "exposure_refs": {"type": "array", "items": {"type": "string"}},
+    "incompatible_with": {"type": "array", "items": {"type": "string"}},
+    "grant_id": {"type": "string"},
+    "rationale": {"type": "string"},
+    "by": {"type": "string", "description": "SUPERSEDE: superseding claim id"},
+    "reason": {"type": "string"},
+    "corrected_fields": {"type": "array", "items": {"type": "string"}},
+    "content_versions_destroyed": {"type": "integer"}
+  }
+}

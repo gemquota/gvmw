@@ -1,0 +1,282 @@
+
+ RUN  v3.2.7 /workspace/vepa
+
+ ✓ tests/unit/perfKnobs.test.js (8 tests) 4ms
+ ✓ tests/unit/nanEnergy.test.js (7 tests) 26365ms
+   ✓ D-035 seeded repro: 200 particles × 120 ticks > all speed sliders at defaults: no particle ends with a non-finite field  12400ms
+   ✓ D-035 seeded repro: 200 particles × 120 ticks > narrow mid range: no particle ends with a non-finite field  11778ms
+   ✓ D-035 seeded repro: 200 particles × 120 ticks > FAST: no particle ends with a non-finite field  2166ms
+ ✓ tests/unit/lawFeedbackStability.test.js (8 tests) 17578ms
+   ✓ runaway scenarios stay bounded (300 ticks; all-laws 120 ticks) > all 136 laws  3915ms
+   ✓ runaway scenarios stay bounded (300 ticks; all-laws 120 ticks) > positive-feedback chemistry (AUTOCATALYSIS, FEEDBACK, EXOTHERMIC, CATALYSIS, ENERGY, HEAT)  4276ms
+   ✓ runaway scenarios stay bounded (300 ticks; all-laws 120 ticks) > thermal-EM loop (HEAT, EXOTHERMIC, PLASMA, DISCHARGE, IONIZATION, RESISTANCE, CURRENT, COLL)  3956ms
+   ✓ runaway scenarios stay bounded (300 ticks; all-laws 120 ticks) > dense gravitational collapse (GRAV, ACCR, COLL, CONTACT, SINGULARITY)  5395ms
+ ✓ tests/unit/speedOptions.test.js (22 tests) 13102ms
+   ✓ speed sliders: shared contract (D-036) > defaults are bit-identical to a world that has never heard of them  2895ms
+   ✓ speed sliders: shared contract (D-036) > is deterministic under a seed with every slider moved (FAST)  529ms
+   ✓ NEIGHBOUR LIMIT (PAIRWISE_BUDGET) > caps how many neighbours a particle sees  443ms
+   ✓ NEIGHBOUR LIMIT (PAIRWISE_BUDGET) > changes a crowded world and leaves a sparse one alone  1881ms
+   ✓ MID RANGE > changes a world with pairs 120–200 apart  1301ms
+   ✓ MID RANGE > is identical while every pair stays inside the range (cube side 60: max distance ≈ 104)  602ms
+   ✓ NEAR / CONTACT RANGE > changes a crowded world  829ms
+   ✓ PAIR BUDGET / PARTICLE (per particle, not per world) > never exceeds the neighbour limit, and OFF is the default  1271ms
+   ✓ SYMBIOSIS & PARASITE RANGE > changes a world where SYMBIOSIS pairs are far apart  723ms
+   ✓ SOCIAL & INFO LAWS EVERY N TICKS > runs them on the first tick, then every Nth  1898ms
+ ✓ tests/unit/civRuntime.test.js (9 tests) 8799ms
+   ✓ civilisation runtime adapter (B7) > every record survives world save → JSON → restore, and the restored world keeps running  1359ms
+   ✓ civilisation runtime adapter (B7) > is deterministic and bounded  2543ms
+ ✓ tests/unit/crossCategoryScenarios.test.js (7 tests) 7164ms
+   ✓ cross-category scenarios (LRA-9) > thermal→chemistry→EM: heat drives ionisation, the cloud stays bounded and energy is conserved  953ms
+   ✓ cross-category scenarios (LRA-9) > physics+mechanics: gravity contracts the cloud while collisions keep speeds bounded  1426ms
+   ✓ cross-category scenarios (LRA-9) > quantum+metaphysics: entanglement forms, links stay reciprocal and every quantum transition is legal  886ms
+   ✓ cross-category scenarios (LRA-9) > EM+thermal: equilibrium wins over spark heating — temperature spread shrinks, energy conserved  932ms
+   ✓ cross-category scenarios (LRA-9) > biology+information: living particles accumulate memory without creating energy  919ms
+   ✓ cross-category scenarios (LRA-9) > all categories together: every law enabled stays finite and speed-capped  2044ms
+ ✓ tests/unit/specHelpCoverage.test.js (2 tests) 6658ms
+   ✓ spec generator help coverage > reports canonical LAW_HELP_DB coverage for every law  6656ms
+ ✓ tests/unit/multiplexIsolation.test.js (3 tests) 6257ms
+   ✓ multiplex sim isolation (HIDDEN-STATE, AC-97) > a sim evolves identically whether or not other sims and the main world step in between  2771ms
+   ✓ solver contexts (HIDDEN-STATE, AC-97) > two fresh runs with every law on are identical when each gets a fresh solver context  1914ms
+   ✓ multiplex worker pool (MX-20) > the pool reproduces the in-thread run bit for bit  1572ms
+ ✓ tests/unit/solverReset.test.js (3 tests) 5214ms
+   ✓ resetSolverState (world restart) > a restarted world matches a pristine one; without the reset it does not  2911ms
+   ✓ resetSolverState(tick) (world-save restore, D-023) > restoring a save clears stale solver state and resumes the saved tick  2301ms
+ ✓ tests/unit/lawCouplingChains.test.js (8 tests) 5243ms
+   ✓ coupling chains (LRA-5) > thermal-agitation: EXOTHERMIC → HEAT changes VEL_X end-to-end  975ms
+   ✓ coupling chains (LRA-5) > thermal-phase: EXOTHERMIC → BOIL changes MASS end-to-end  885ms
+   ✓ coupling chains (LRA-5) > thermal-ionisation: EXOTHERMIC → PLASMA changes CHARGE end-to-end  779ms
+   ✓ coupling chains (LRA-5) > spark-heating: DISCHARGE → HEAT changes VEL_X end-to-end  815ms
+   ✓ coupling chains (LRA-5) > plasma-heating: PLASMA → HEAT changes VEL_X end-to-end  762ms
+   ✓ coupling chains (LRA-5) > acid-charge-force: ACIDITY → CHARGE_LAW changes VEL_X end-to-end  1023ms
+ ✓ tests/unit/multiplexScheduler.test.js (10 tests) 4689ms
+   ✓ decoupled tick scheduler (in-thread) > 'frame' ticks every sim once per frame  999ms
+   ✓ decoupled tick scheduler (in-thread) > 'fixed' ticks each sim at ticksPerSecond regardless of frame rate  3625ms
+ ✓ tests/unit/priorityLawSemantics.test.js (37 tests) 4036ms
+   ✓ priority law semantics (ARP-8) > SENESCENCE (lifecycle) > behaviour: old particles die over time  593ms
+   ✓ priority law semantics (ARP-8) > COLL (structural) > boundary: keeps speeds finite and bounded  578ms
+   ✓ priority law semantics (ARP-8) > BOND (structural) > behaviour: forms reciprocal bonds between near neighbours  354ms
+   ✓ priority law semantics (ARP-8) > MEMORY (information) > boundary: keeps memory finite and non-negative  818ms
+   ✓ priority law semantics (ARP-8) > SUPERPOSITION (quantum) > boundary: amplitudes stay finite and within [0, 1]  799ms
+ ✓ tests/unit/bhThetaEnvelope.test.js (10 tests) 2955ms
+   ✓ Barnes–Hut population-scaled θ (BH-ENV) > rmsRelative ≤ 0.1 at N = 1024  316ms
+   ✓ Barnes–Hut population-scaled θ (BH-ENV) > rmsRelative ≤ 0.1 at N = 2048  853ms
+   ✓ Barnes–Hut population-scaled θ (BH-ENV) > holds on two more seeds at the largest scale  1625ms
+ ✓ tests/unit/relationshipLab.test.js (4 tests) 2913ms
+   ✓ relationship laboratory (MD-REL) > consumes live relationship events from the runtime adapter  2907ms
+ ✓ tests/unit/lawClock.test.js (4 tests) 2285ms
+   ✓ law clock (DET-1) > the same world gives identical results whatever the wall clock reads  2281ms
+ ✓ tests/unit/launchModal.test.js (42 tests) 1585ms
+   ✓ launch modal > saves the edited launch setup and can select it again  305ms
+ ✓ tests/unit/fmmParity.test.js (6 tests) 1000ms
+   ✓ FMM backend boundaries > FMM-HUNT regressions: far field attracts, no cell is dropped, error well below the old 1.15-2.02  889ms
+ ✓ tests/unit/multiplex.test.js (54 tests) 973ms
+   ✓ Multiplex fitness + iteration (v4.6.24) > config seed > 0 makes the shard lineage deterministic  548ms
+ ✓ tests/unit/informationTrace.test.js (6 tests) 808ms
+ ✓ tests/unit/lazyPairCompat.test.js (4 tests) 696ms
+   ✓ lazy pair compatibility (PERF-7) > matches compatibilityForViewsInto bit-for-bit, in any order  359ms
+   ✓ lazy pair compatibility (PERF-7) > matches compatibilityForViewsInto bit-for-bit on edge values, in any order  334ms
+ ✓ tests/unit/lawGrid.test.js (14 tests) 617ms
+ ✓ tests/unit/compatibilityFastPath.test.js (2 tests) 528ms
+ ✓ tests/unit/gravEngineAlias.test.js (4 tests) 556ms
+   ✓ gravEngine naming (AUD-EXACT) > 'exact' and 'reference' produce bit-identical solver output  395ms
+ ✓ tests/unit/octree.test.js (5 tests) 417ms
+   ✓ solver GRAV_ENGINE=bh > moves particles similarly to the exact engine and stays finite  302ms
+ ✓ tests/unit/worldSaveRng.test.js (3 tests) 323ms
+   ✓ world save PRNG persistence (E9) > two restores of one save produce identical PRNG draws and simulation hashes  320ms
+ ✓ tests/unit/lawImplementedBy.test.js (4 tests) 277ms
+ ✓ tests/unit/multiplexRefill.test.js (8 tests) 231ms
+ ✓ tests/unit/lawGating.test.js (6 tests) 145ms
+ ✓ tests/unit/fields.test.js (17 tests) 109ms
+ ✓ tests/unit/multiplexScale.test.js (6 tests) 111ms
+ ✓ tests/unit/workerCopyMode.test.js (2 tests) 95ms
+ ✓ tests/unit/settingsPrecedence.test.js (7 tests) 65ms
+ ✓ tests/unit/prng.test.js (5 tests) 87ms
+ ✓ tests/unit/fieldAdvanceOnce.test.js (2 tests) 87ms
+ ✓ tests/unit/octreeQuadrupole.test.js (3 tests) 89ms
+ ✓ tests/unit/exportHeaders.test.js (3 tests) 88ms
+ ✓ tests/unit/lawCategories.test.js (16 tests) 73ms
+ ✓ tests/unit/patchLawcatGuard.test.js (2 tests) 65ms
+ ✓ tests/unit/computeEngines.test.js (3 tests) 54ms
+ ✓ tests/unit/lawInspectorPanel.test.js (5 tests) 42ms
+ ✓ tests/unit/structureFormation.test.js (5 tests) 45ms
+ ✓ tests/audit/batch_05.test.js (23 tests) 48ms
+ ✓ tests/audit/batch_21.test.js (11 tests) 38ms
+ ✓ tests/unit/a3Reconciliation.test.js (2 tests) 47ms
+ ✓ tests/audit/batch_03.test.js (13 tests) 44ms
+ ✓ tests/unit/logPanel.test.js (15 tests) 43ms
+ ✓ tests/unit/multiplexPenta.test.js (6 tests) 36ms
+ ✓ tests/audit/batch_14.test.js (9 tests) 39ms
+ ✓ tests/audit/batch_04.test.js (15 tests) 36ms
+ ✓ tests/audit/batch_02.test.js (16 tests) 35ms
+ ✓ tests/unit/worldSave.test.js (14 tests) 45ms
+ ✓ tests/unit/synergyCache.test.js (4 tests) 32ms
+ ✓ tests/audit/batch_15.test.js (10 tests) 34ms
+ ✓ tests/unit/analyticsDrawPaths.test.js (6 tests) 24ms
+ ✓ tests/unit/lawAuditMatrices.test.js (3 tests) 25ms
+ ✓ tests/audit/params_batch_06.test.js (4 tests) 19ms
+ ✓ tests/unit/codex.test.js (45 tests) 26ms
+ ✓ tests/unit/pairScalarParity.test.js (4 tests) 27ms
+ ✓ tests/audit/params_batch_01.test.js (8 tests) 23ms
+ ✓ tests/unit/panelMounts.test.js (15 tests) 29ms
+ ✓ tests/unit/batch4Reports.test.js (3 tests) 27ms
+ ✓ tests/unit/touchSupport.test.js (12 tests) 24ms
+ ✓ tests/audit/params_batch_15.test.js (4 tests) 22ms
+ ✓ tests/audit/params_batch_04.test.js (4 tests) 25ms
+ ✓ tests/unit/tidalBloom.test.js (25 tests) 11ms
+ ✓ tests/audit/batch_01.test.js (12 tests) 24ms
+ ✓ tests/audit/batch_16.test.js (9 tests) 25ms
+ ✓ tests/audit/batch_22.test.js (9 tests) 23ms
+ ✓ tests/audit/batch_18.test.js (19 tests) 17ms
+ ✓ tests/audit/params_batch_02.test.js (8 tests) 29ms
+ ✓ tests/audit/params_batch_05.test.js (4 tests) 21ms
+ ✓ tests/unit/hud.test.js (9 tests) 21ms
+ ✓ tests/unit/electricFieldSplit.test.js (7 tests) 16ms
+ ✓ tests/unit/systemVariants.test.js (3 tests) 20ms
+ ✓ tests/audit/params_batch_09.test.js (4 tests) 20ms
+ ✓ tests/audit/batch_29.test.js (4 tests) 15ms
+ ✓ tests/unit/deadLawToggles.test.js (4 tests) 21ms
+ ✓ tests/audit/batch_17.test.js (18 tests) 17ms
+ ✓ tests/audit/params_batch_13.test.js (4 tests) 19ms
+ ✓ tests/unit/helpRegistry.test.js (33 tests) 20ms
+ ✓ tests/audit/batch_23.test.js (8 tests) 20ms
+ ✓ tests/audit/params_batch_12.test.js (4 tests) 17ms
+ ✓ tests/unit/helpTierContract.test.js (138 tests) 16ms
+ ✓ tests/unit/provenanceHeaders.test.js (6 tests) 18ms
+ ✓ tests/audit/batch_13.test.js (6 tests) 20ms
+ ✓ tests/audit/params_batch_03.test.js (7 tests) 18ms
+ ✓ tests/audit/params_batch_16.test.js (4 tests) 18ms
+ ✓ tests/audit/batch_06.test.js (21 tests) 18ms
+ ✓ tests/audit/batch_10.test.js (14 tests) 17ms
+ ✓ tests/unit/selectionContext.test.js (13 tests) 15ms
+ ✓ tests/unit/culturalSelection.test.js (4 tests) 17ms
+ ✓ tests/audit/batch_11.test.js (10 tests) 18ms
+ ✓ tests/unit/settingsTabs.test.js (7 tests) 18ms
+ ✓ tests/unit/structures.test.js (49 tests) 17ms
+ ✓ tests/audit/params_batch_11.test.js (4 tests) 16ms
+ ✓ tests/audit/batch_31.test.js (4 tests) 17ms
+ ✓ tests/unit/lawGraph.test.js (5 tests) 12ms
+ ✓ tests/audit/params_batch_14.test.js (4 tests) 16ms
+ ✓ tests/audit/batch_07.test.js (25 tests) 16ms
+ ✓ tests/audit/batch_27.test.js (9 tests) 14ms
+ ✓ tests/audit/params_batch_17.test.js (4 tests) 15ms
+ ✓ tests/audit/params_batch_10.test.js (4 tests) 17ms
+ ✓ tests/audit/batch_20.test.js (18 tests) 15ms
+ ✓ tests/audit/batch_28.test.js (8 tests) 14ms
+ ✓ tests/unit/civilizationPanel.test.js (16 tests) 13ms
+ ✓ tests/unit/dataPanels.test.js (30 tests) 14ms
+ ✓ tests/audit/batch_12.test.js (8 tests) 13ms
+ ✓ tests/unit/civilizationSequelWiring.test.js (31 tests) 15ms
+ ✓ tests/audit/batch_08.test.js (22 tests) 14ms
+ ✓ tests/audit/batch_19.test.js (14 tests) 16ms
+ ✓ tests/audit/batch_32.test.js (4 tests) 13ms
+ ✓ tests/audit/params_batch_18.test.js (4 tests) 16ms
+ ✓ tests/unit/drawer.test.js (11 tests) 12ms
+ ✓ tests/unit/livingWorld.test.js (8 tests) 11ms
+ ✓ tests/audit/batch_24.test.js (8 tests) 14ms
+ ✓ tests/audit/batch_09.test.js (8 tests) 14ms
+ ❯ tests/unit/uiModuleReport.test.js (8 tests | 1 failed) 20ms
+   ✓ UI module report — semantic map > is regenerated from the source the committed file was written from 2ms
+   ✓ UI module report — semantic map > lists every tab panel the generator maps 6ms
+   ✓ UI module report — semantic map > lists every step initUI runs 1ms
+   ✓ UI module report — semantic map > only lists "no producer" rows that really have no producer 1ms
+   × UI module report — semantic map > lists every dangling subscription the source contains 8ms
+     → SPEED_NARROW_MID has no producer but is not in the map: expected [ 'epoch:list', 'epoch:restore', …(6) ] to include 'SPEED_NARROW_MID'
+   ✓ UI module report — semantic map > push rows really are consumed by a panel 1ms
+   ✓ UI module report — semantic map > command rows really are sent by a panel and answered outside src/ui/ 1ms
+   ✓ UI module report — semantic map > does not claim a module is unreachable when something loads it 0ms
+ ✓ tests/audit/batch_30.test.js (4 tests) 13ms
+ ✓ tests/audit/params_batch_08.test.js (4 tests) 15ms
+ ✓ tests/audit/batch_25.test.js (8 tests) 15ms
+ ✓ tests/audit/batch_26.test.js (8 tests) 13ms
+ ✓ tests/unit/helpNavigation.test.js (40 tests) 11ms
+ ✓ tests/audit/params_batch_07.test.js (4 tests) 13ms
+ ✓ tests/unit/groupRegistry.test.js (8 tests) 9ms
+ ✓ tests/unit/exoticMatter.test.js (18 tests) 10ms
+ ✓ tests/unit/lawsets.test.js (3 tests) 12ms
+ ✓ tests/unit/civilization.test.js (20 tests) 11ms
+ ✓ tests/unit/provenance.test.js (5 tests) 11ms
+ ✓ tests/unit/tooltipDismiss.test.js (19 tests) 15ms
+ ✓ tests/unit/artifacts.test.js (11 tests) 8ms
+ ✓ tests/unit/continuity.test.js (31 tests) 10ms
+ ✓ tests/unit/cultureTransmission.test.js (22 tests) 14ms
+ ✓ tests/unit/quantumMacro.test.js (17 tests) 12ms
+ ✓ tests/unit/typeScale.test.js (10 tests) 7ms
+ ✓ tests/unit/governance.test.js (11 tests) 9ms
+ ✓ tests/unit/infrastructure.test.js (11 tests) 10ms
+ ✓ tests/unit/stateBudgets.test.js (5 tests) 10ms
+ ✓ tests/unit/relationshipExplorer.test.js (4 tests) 9ms
+ ✓ tests/unit/stellar.test.js (13 tests) 11ms
+ ✓ tests/unit/multiplexNaN.test.js (7 tests) 8ms
+ ✓ tests/unit/dnaCacheCodec.test.js (3 tests) 8ms
+ ✓ tests/unit/synthetic.test.js (21 tests) 10ms
+ ✓ tests/unit/relativity.test.js (11 tests) 8ms
+ ✓ tests/unit/civilizationWiring.test.js (8 tests) 8ms
+ ✓ tests/unit/constructionEconomy.test.js (7 tests) 9ms
+ ✓ tests/unit/lawgroupsQuantum.test.js (24 tests) 8ms
+ ✓ tests/unit/webgpuContract.test.js (7 tests) 5ms
+ ✓ tests/unit/quantumStateMachine.test.js (5 tests) 7ms
+ ✓ tests/unit/tabHelpSwitcher.test.js (24 tests) 6ms
+ ✓ tests/unit/auditSignoff.test.js (10 tests) 6ms
+ ✓ tests/unit/dna.test.js (9 tests) 6ms
+ ✓ tests/unit/worldSaveCompat.test.js (7 tests) 6ms
+ ✓ tests/unit/lawHelpFold.test.js (3 tests) 7ms
+ ✓ tests/unit/mechanics.test.js (7 tests) 7ms
+ ✓ tests/unit/helpOverlay.test.js (15 tests) 6ms
+ ✓ tests/unit/sliderControl.test.js (21 tests) 6ms
+ ✓ tests/unit/mechanicsArchitecture.test.js (5 tests) 6ms
+ ✓ tests/unit/relationshipGraph.test.js (5 tests) 6ms
+ ✓ tests/unit/wrapLaw.test.js (5 tests) 4ms
+ ✓ tests/unit/laws.test.js (8 tests) 4ms
+ ✓ tests/unit/lawgroupsPhysicsThermo.test.js (12 tests) 5ms
+ ✓ tests/unit/lawgroupsBiologyChemistry.test.js (11 tests) 5ms
+ ✓ tests/unit/engines.test.js (5 tests) 7ms
+ ✓ tests/unit/singleImplementations.test.js (2 tests) 6ms
+ ✓ tests/unit/deepTime.test.js (6 tests) 5ms
+ ✓ tests/unit/lawImplementationManifest.test.js (2 tests) 3ms
+ ✓ tests/unit/lawgroupsEmInfoMeta.test.js (9 tests) 5ms
+ ✓ tests/unit/analyticsPanels.test.js (3 tests) 5ms
+ ✓ tests/unit/systemLifecycle.test.js (4 tests) 4ms
+ ✓ tests/unit/htmlEscaping.test.js (9 tests) 6ms
+ ✓ tests/unit/agencyNarrative.test.js (9 tests) 5ms
+ ✓ tests/unit/relationshipCompatibility.test.js (4 tests) 4ms
+ ✓ tests/unit/memoryCulture.test.js (6 tests) 4ms
+ ✓ tests/unit/strideWriteContract.test.js (3 tests) 4ms
+ ✓ tests/unit/physics.test.js (6 tests) 4ms
+ ✓ tests/unit/helpLawNames.test.js (8 tests) 5ms
+ ✓ tests/unit/experimentalBackends.test.js (3 tests) 4ms
+ ✓ tests/unit/lawsSingleton.test.js (6 tests) 4ms
+ ✓ tests/unit/systemFoundation.test.js (4 tests) 4ms
+ ✓ tests/unit/mechanicsDiagnosticsFields.test.js (2 tests) 4ms
+ ✓ tests/unit/interactionSpace.test.js (4 tests) 4ms
+ ✓ tests/unit/createEngine.test.js (3 tests) 3ms
+ ✓ tests/unit/batch5Reports.test.js (3 tests) 4ms
+ ✓ tests/unit/signal.test.js (3 tests) 3ms
+ ✓ tests/unit/spawnDistribution.test.js (2 tests) 3ms
+ ✓ tests/unit/lawOntologyCoverage.test.js (2 tests) 3ms
+ ✓ tests/unit/chaosMenu.test.js (3 tests) 3ms
+ ✓ tests/unit/buffer.test.js (7 tests) 3ms
+ ✓ tests/unit/backendArchitecture.test.js (2 tests) 3ms
+ ✓ tests/unit/workerRequeue.test.js (3 tests) 3ms
+ ✓ tests/unit/renderer.test.js (3 tests) 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/uiModuleReport.test.js > UI module report — semantic map > lists every dangling subscription the source contains
+AssertionError: SPEED_NARROW_MID has no producer but is not in the map: expected [ 'epoch:list', 'epoch:restore', …(6) ] to include 'SPEED_NARROW_MID'
+ ❯ tests/unit/uiModuleReport.test.js:140:76
+    138|     expect(actual.length).toBeGreaterThan(0);
+    139|     for (const name of actual) {
+    140|       expect([...listed], `${name} has no producer but is not in the m…
+       |                                                                            ^
+    141|     }
+    142|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 190 passed (191)
+      Tests  1 failed | 1978 passed (1979)
+   Start at  19:51:50
+   Duration  164.43s (transform 1.27s, setup 0ms, collect 11.14s, tests 124.60s, environment 27ms, prepare 8.89s)
+
+rc=1

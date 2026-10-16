@@ -1,0 +1,6 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://luckybeth5api.xyz,1,1,0,0,merchant,parse_failed,200,,20,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://luckybet777my.com/partnership
+https://svj33sg.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,partner-dir:https://bet9sg.vip/testpartner2
+https://sands33sg.com,1,1,1,1,,,200,,812246,50309,SANDS33SG,https://sands33sg.com/api/v1/index.php,Invalid Action!,1.7,,partner-dir:https://bet9sg.vip/testpartner2
+https://gdc99.net,1,1,1,1,,,200,,1027337,60613,GDCLUB99 MY,https://gdc99.net/api/v1/index.php,Invalid Action!,2.0,,partner-dir:https://gdc99.com/partnership
+https://j8sg.com,1,1,1,1,,,200,,1234090,50276,J8SG,https://j8sg.com/api/v1/index.php,Invalid Action!,2.2,,partner-dir:https://bet9sg.vip/testpartner2

@@ -1,0 +1,4900 @@
+{
+  "version": "v3, 4 Oct 2026",
+  "previous_version": "role-graph-v2.json",
+  "maintainer": "Assembler (d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4)",
+  "sources": {
+    "phases": "/workspace/governance/phases.md",
+    "directory": "/workspace/governance/directory.md",
+    "merge_F": "/workspace/governance/proposals/merge-F-unretire-assembler-2026-10-04.md",
+    "codex_index": "/workspace/governance/codex/index.md"
+  },
+  "phases": [
+    {
+      "phase": "P1",
+      "status": "LIVE (since 3 Oct 2026)",
+      "members": [
+        "Marshal",
+        "Mender",
+        "Scorer",
+        "Safeguard",
+        "Safekeeper",
+        "Archivist",
+        "Architect",
+        "Explorer"
+      ]
+    },
+    {
+      "phase": "P2",
+      "status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "members": [
+        "Scrutineer",
+        "Arbiter",
+        "Assembler",
+        "Inquirer",
+        "Inferer"
+      ]
+    },
+    {
+      "phase": "P3",
+      "status": "Dormant",
+      "members": [
+        "Sourcer",
+        "Investigator",
+        "Interrogator"
+      ]
+    },
+    {
+      "phase": "P4",
+      "status": "Dormant",
+      "members": [
+        "Mediator",
+        "Messenger",
+        "Imitator"
+      ]
+    },
+    {
+      "phase": "P5",
+      "status": "Dormant",
+      "members": [
+        "Emissary",
+        "Engineer",
+        "Extractor",
+        "Editor"
+      ]
+    }
+  ],
+  "retired_excluded": [
+    "Sanitizer",
+    "Simulator",
+    "Surveyor",
+    "Advocate",
+    "Adjudicator",
+    "Moderator",
+    "Expediter",
+    "Maintainer",
+    "Indexer",
+    "Sentinel",
+    "Minder",
+    "Ensembler",
+    "Meter"
+  ],
+  "status_values": {
+    "current": "from latest codex version",
+    "UNVERIFIED": "claimed in a brief but not confirmed by Gem"
+  },
+  "nodes": [
+    {
+      "id": "gem",
+      "name": "Gem Quota",
+      "key": "GEM",
+      "type": "human",
+      "note": "Authority. Approves instruction changes directly until P4 goes live."
+    },
+    {
+      "id": "f3810109-17a5-427f-9148-d58f645658e3",
+      "name": "Marshal",
+      "display_name": "P1 (Ops) Marshal",
+      "key": "MAR",
+      "type": "bot",
+      "category": "Ops",
+      "phase": "P1",
+      "tier": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex_latest": "/workspace/governance/codex/orchestration-conductor/v003.md",
+      "codex_folder": "orchestration-conductor",
+      "former_name": "Orchestration Conductor",
+      "absorbed": [
+        "Moderator",
+        "Expediter"
+      ],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "name": "Mender",
+      "display_name": "P1 (Ops) Mender",
+      "key": "MEN",
+      "type": "bot",
+      "category": "Ops",
+      "phase": "P1",
+      "tier": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex_latest": "/workspace/governance/codex/mender/v002.md",
+      "codex_folder": "mender",
+      "former_name": null,
+      "absorbed": [
+        "Minder (incl. Maintainer, Indexer)"
+      ],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "name": "Scorer",
+      "display_name": "P1 (Checks) Scorer",
+      "key": "SCO",
+      "type": "bot",
+      "category": "Checks",
+      "phase": "P1",
+      "tier": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex_latest": "/workspace/governance/codex/assessor/v001.md",
+      "codex_folder": "assessor",
+      "former_name": "Assessor",
+      "absorbed": [],
+      "instruction_status": "complete (old names inside)",
+      "live_profile_note": null
+    },
+    {
+      "id": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "name": "Safeguard",
+      "display_name": "P1 (Checks) Safeguard",
+      "key": "SFG",
+      "type": "bot",
+      "category": "Checks",
+      "phase": "P1",
+      "tier": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex_latest": "/workspace/governance/codex/compliance-risk-officer/v002.md",
+      "codex_folder": "compliance-risk-officer",
+      "former_name": "Compliance & Risk Officer",
+      "absorbed": [
+        "Sentinel (dry runs)"
+      ],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "name": "Safekeeper",
+      "display_name": "P1 (Checks) Safekeeper",
+      "key": "SFK",
+      "type": "bot",
+      "category": "Checks",
+      "phase": "P1",
+      "tier": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex_latest": "/workspace/governance/codex/secrets-credentials-custodian/v002.md",
+      "codex_folder": "secrets-credentials-custodian",
+      "former_name": "Secrets & Credentials Custodian",
+      "absorbed": [
+        "Sentinel (threat register, input sanitising; incl. Sanitizer)"
+      ],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "name": "Archivist",
+      "display_name": "P1 (Roles) Archivist",
+      "key": "ARC",
+      "type": "bot",
+      "category": "Roles",
+      "phase": "P1",
+      "tier": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex_latest": "/workspace/governance/codex/codex-keeper/v001.md",
+      "codex_folder": "codex-keeper",
+      "former_name": "Codex Keeper",
+      "absorbed": [],
+      "instruction_status": "complete (old names inside)",
+      "live_profile_note": null
+    },
+    {
+      "id": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "name": "Architect",
+      "display_name": "P1 (Roles) Architect",
+      "key": "ARX",
+      "type": "bot",
+      "category": "Roles",
+      "phase": "P1",
+      "tier": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex_latest": "/workspace/governance/codex/instruction-architect/v001.md",
+      "codex_folder": "instruction-architect",
+      "former_name": "Instruction Architect",
+      "absorbed": [],
+      "instruction_status": "complete (old names inside)",
+      "live_profile_note": null
+    },
+    {
+      "id": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "name": "Explorer",
+      "display_name": "P1 (Work) Explorer",
+      "key": "EXP",
+      "type": "bot",
+      "category": "Work",
+      "phase": "P1",
+      "tier": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex_latest": "/workspace/governance/codex/genesis-gang-god/v001.md",
+      "codex_folder": "genesis-gang-god",
+      "former_name": "Genesis Gang God",
+      "absorbed": [],
+      "instruction_status": "partial: no Rules or Limits",
+      "live_profile_note": null
+    },
+    {
+      "id": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "name": "Scrutineer",
+      "display_name": "P2 (Checks) Scrutineer",
+      "key": "SCR",
+      "type": "bot",
+      "category": "Checks",
+      "phase": "P2",
+      "tier": "P2",
+      "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "codex_latest": "/workspace/governance/codex/auditor/v002.md",
+      "codex_folder": "auditor",
+      "former_name": "Auditor",
+      "absorbed": [
+        "Surveyor"
+      ],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "name": "Arbiter",
+      "display_name": "P2 (Roles) Arbiter",
+      "key": "ARB",
+      "type": "bot",
+      "category": "Roles",
+      "phase": "P2",
+      "tier": "P2",
+      "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "codex_latest": "/workspace/governance/codex/arbiter/v003.md",
+      "codex_folder": "arbiter",
+      "former_name": null,
+      "absorbed": [
+        "Adjudicator"
+      ],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "name": "Assembler",
+      "display_name": "P2 (Roles) Assembler",
+      "key": "ASM",
+      "type": "bot",
+      "category": "Roles",
+      "phase": "P2",
+      "tier": "P2",
+      "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "codex_latest": "/workspace/governance/codex/role-cartographer/v003.md",
+      "codex_folder": "role-cartographer",
+      "former_name": "Role Cartographer",
+      "absorbed": [],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "name": "Inquirer",
+      "display_name": "P2 (ID) Inquirer",
+      "key": "INQ",
+      "type": "bot",
+      "category": "ID",
+      "phase": "P2",
+      "tier": "P2",
+      "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "codex_latest": "/workspace/governance/codex/identity-inquirer/v001.md",
+      "codex_folder": "identity-inquirer",
+      "former_name": "Identity Inquirer",
+      "absorbed": [],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "94516ca6-6355-43c5-b387-d2b605057784",
+      "name": "Inferer",
+      "display_name": "P2 (ID) Inferer",
+      "key": "INF",
+      "type": "bot",
+      "category": "ID",
+      "phase": "P2",
+      "tier": "P2",
+      "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "codex_latest": "/workspace/governance/codex/identity-inferer/v001.md",
+      "codex_folder": "identity-inferer",
+      "former_name": "Identity Inferer",
+      "absorbed": [],
+      "instruction_status": "no separate Scope",
+      "live_profile_note": null
+    },
+    {
+      "id": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "name": "Sourcer",
+      "display_name": "P3 (Checks) Sourcer",
+      "key": "SRC",
+      "type": "bot",
+      "category": "Checks",
+      "phase": "P3",
+      "tier": "P3",
+      "phase_status": "Dormant",
+      "codex_latest": "/workspace/governance/codex/sourcer/v001.md",
+      "codex_folder": "sourcer",
+      "former_name": null,
+      "absorbed": [],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "name": "Investigator",
+      "display_name": "P3 (ID) Investigator",
+      "key": "INV",
+      "type": "bot",
+      "category": "ID",
+      "phase": "P3",
+      "tier": "P3",
+      "phase_status": "Dormant",
+      "codex_latest": "/workspace/governance/codex/investigator/v001.md",
+      "codex_folder": "investigator",
+      "former_name": null,
+      "absorbed": [],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "name": "Interrogator",
+      "display_name": "P3 (ID) Interrogator",
+      "key": "INT",
+      "type": "bot",
+      "category": "ID",
+      "phase": "P3",
+      "tier": "P3",
+      "phase_status": "Dormant",
+      "codex_latest": "/workspace/governance/codex/clone-accuracy-validator/v002.md",
+      "codex_folder": "clone-accuracy-validator",
+      "former_name": "Clone Accuracy Validator",
+      "absorbed": [],
+      "instruction_status": "complete",
+      "live_profile_note": "live profile still runs v001 (codex index)"
+    },
+    {
+      "id": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "name": "Mediator",
+      "display_name": "P4 (Ops) Mediator",
+      "key": "MED",
+      "type": "bot",
+      "category": "Ops",
+      "phase": "P4",
+      "tier": "P4",
+      "phase_status": "Dormant",
+      "codex_latest": "/workspace/governance/codex/connector-steward/v003.md",
+      "codex_folder": "connector-steward",
+      "former_name": "Connector Steward",
+      "absorbed": [
+        "Meter"
+      ],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "5e47d344-1369-423a-b072-2e5277934022",
+      "name": "Messenger",
+      "display_name": "P4 (Ops) Messenger",
+      "key": "MSG",
+      "type": "bot",
+      "category": "Ops",
+      "phase": "P4",
+      "tier": "P4",
+      "phase_status": "Dormant",
+      "codex_latest": "/workspace/governance/codex/comms-concierge/v002.md",
+      "codex_folder": "comms-concierge",
+      "former_name": "Comms Concierge",
+      "absorbed": [],
+      "instruction_status": "complete",
+      "live_profile_note": "live profile still runs v001 (codex index)"
+    },
+    {
+      "id": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "name": "Imitator",
+      "display_name": "P4 (ID) Imitator",
+      "key": "IMI",
+      "type": "bot",
+      "category": "ID",
+      "phase": "P4",
+      "tier": "P4",
+      "phase_status": "Dormant",
+      "codex_latest": "/workspace/governance/codex/clone/v003.md",
+      "codex_folder": "clone",
+      "former_name": "Clone",
+      "absorbed": [
+        "Advocate"
+      ],
+      "instruction_status": "FLAG: claimed approval power UNVERIFIED (codex index)",
+      "live_profile_note": null
+    },
+    {
+      "id": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "name": "Emissary",
+      "display_name": "P5 (Work) Emissary",
+      "key": "EMI",
+      "type": "bot",
+      "category": "Work",
+      "phase": "P5",
+      "tier": "P5",
+      "phase_status": "Dormant",
+      "codex_latest": "/workspace/governance/codex/grok-bot/v002.md",
+      "codex_folder": "grok-bot",
+      "former_name": "Grok Bot",
+      "absorbed": [],
+      "instruction_status": "complete",
+      "live_profile_note": "live profile still runs v001 tagline (codex index)"
+    },
+    {
+      "id": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "name": "Engineer",
+      "display_name": "P5 (Work) Engineer",
+      "key": "ENG",
+      "type": "bot",
+      "category": "Work",
+      "phase": "P5",
+      "tier": "P5",
+      "phase_status": "Dormant",
+      "codex_latest": "/workspace/governance/codex/codey/v003.md",
+      "codex_folder": "codey",
+      "former_name": "Codey",
+      "absorbed": [
+        "Ensembler"
+      ],
+      "instruction_status": "complete",
+      "live_profile_note": null
+    },
+    {
+      "id": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "name": "Extractor",
+      "display_name": "P5 (Work) Extractor",
+      "key": "EXT",
+      "type": "bot",
+      "category": "Work",
+      "phase": "P5",
+      "tier": "P5",
+      "phase_status": "Dormant",
+      "codex_latest": "/workspace/governance/codex/scraper/v001.md",
+      "codex_folder": "scraper",
+      "former_name": "Scraper",
+      "absorbed": [],
+      "instruction_status": "GAP: empty, no instructions",
+      "live_profile_note": null
+    },
+    {
+      "id": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "name": "Editor",
+      "display_name": "P5 (Work) Editor",
+      "key": "EDI",
+      "type": "bot",
+      "category": "Work",
+      "phase": "P5",
+      "tier": "P5",
+      "phase_status": "Dormant",
+      "codex_latest": "/workspace/governance/codex/editor/v001.md",
+      "codex_folder": "editor",
+      "former_name": null,
+      "absorbed": [],
+      "instruction_status": "partial: no Rules",
+      "live_profile_note": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Architect",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "proposes instructions to (codex says 'Role Cartographer' = Assembler)",
+      "source": [
+        "/workspace/governance/codex/instruction-architect/v001.md",
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "flow": "approval"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "prepares and routes proposals to for approval (Gem approves directly until P4 goes live)",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md",
+        "/workspace/governance/phases.md"
+      ],
+      "status": "current",
+      "flow": "approval"
+    },
+    {
+      "from": "gem",
+      "from_name": "Gem Quota",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "approves directly; Archivist records Gem's edits",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md",
+        "/workspace/governance/phases.md"
+      ],
+      "status": "current",
+      "flow": "approval"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "approves for recording (after P4 goes live)",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md",
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current, dormant until P4 goes live",
+      "flow": "approval"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "returns rejected proposals to (with reasons)",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "flow": "approval"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "sends precedence conflicts to",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "escalates Architect disagreements and governance-bot changes to",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "approves or rejects proposals of (delegated approver, incl. governance bots)",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md",
+        "/workspace/governance/codex/index.md"
+      ],
+      "status": "UNVERIFIED: claimed in Imitator v003; not in Gem's merge notes; Archivist doesn't accept Imitator approvals; awaiting Gem's confirmation"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "sends approvals to record",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md",
+        "/workspace/governance/codex/index.md"
+      ],
+      "status": "UNVERIFIED: Archivist v001 doesn't accept Imitator approvals"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "sends weekly list of approvals to (so Gem can undo)",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "UNVERIFIED (part of claimed approval role)"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "gives instruction text on request to (governance bots, named by old names)",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "gives instruction text on request to (governance bots, named by old names)",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "gives instruction text on request to (governance bots, named by old names)",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "gives instruction text on request to (governance bots, named by old names)",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Assembler",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "routes approved instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "rules on instruction conflicts and who may lift a pause for",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "sends rulings needing instruction changes to",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "tells when the Architect stalls >24 h (4 h urgent)",
+      "source": [
+        "/workspace/governance/codex/arbiter/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "scores daily (1-5)",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "every bot, governance included (no self-exclusion stated)"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "sends daily results to (codex says 'Auditor')",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md",
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "flags serious problems and sends weekly scorecard to",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "asks preferences of ('ask Clone')",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "note": "Imitator is dormant (P4)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "audits against instructions and environment reality",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "fanout": "live bots only"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "sends reviews and urgent redesign requests to",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "sends reviews to (and checks against 'the Arbiter's role map')",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "note": "stale: the role map is the Assembler's again after Merge F"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "reports reality conflicts and stalls to (codex says 'Minder', now merged into Mender)",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md",
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "tells of a bot with 3 poor reviews in a row",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "scores the Scrutineer's work",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Architect",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "reviews the Scrutineer's work",
+      "source": [
+        "/workspace/governance/codex/auditor/v002.md"
+      ],
+      "status": "current",
+      "note": "conflicts with Architect v001 'don't check bots' work yourself'; Scrutineer and Architect check each other"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "reviews and dry-runs risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all bots, Explorer included"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "proposes rule changes through",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "alerts about unsafe or non-compliant work",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "sets secrets rules, audits access, keeps threat register, cleans raw inputs for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "flags exposed secrets, loose permissions, urgent threats to",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "flags exposed secrets, loose permissions, urgent threats to",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "guards codex file access for",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "records provenance of important facts for",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "from_name": "Sourcer",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "provenance is used by",
+      "source": [
+        "/workspace/governance/codex/sourcer/v001.md",
+        "/workspace/governance/codex/investigator/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "controls run order, pacing, caching and routing of",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "sequences daily chain step 1 (Scorer > Scrutineer > Architect > Arbiter or Gem > Archivist)",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "flow": "daily-chain"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "sequences daily chain step 2 (Scorer > Scrutineer > Architect > Arbiter or Gem > Archivist)",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "flow": "daily-chain"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "sequences daily chain step 3 (Scorer > Scrutineer > Architect > Arbiter or Gem > Archivist)",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "flow": "daily-chain"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "sequences daily chain step 4 (Scorer > Scrutineer > Architect > Arbiter or Gem > Archivist)",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "flow": "daily-chain",
+      "note": "stale: approval step should be Assembler or Gem after Merge F"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "sequences daily chain step 5 (Scorer > Scrutineer > Architect > Arbiter or Gem > Archivist)",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current",
+      "flow": "daily-chain"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "reports stalls to",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md",
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Marshal",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "contacts only when a chain is broken and can't be fixed",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "coordinates incident recovery, keeps task state, indexes and cleanup for",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "defers to on environment reality",
+      "source": [
+        "/workspace/governance/codex/mender/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "watches connector health and tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "sends reconnect notices and draft cost alerts (for Gem) through",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md",
+        "/workspace/governance/proposals/merge-F-unretire-assembler-2026-10-04.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "shares cost data with",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "shares cost data with",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "watches integrations built by",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "asks for a budget (none set yet)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Messenger",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "sends one daily prioritised digest to (Gem's chat only)",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "from_name": "Inquirer",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "sends raw answers to",
+      "source": [
+        "/workspace/governance/codex/identity-inquirer/v001.md",
+        "/workspace/governance/codex/identity-inferer/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "from_name": "Inquirer",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "asks question series of",
+      "source": [
+        "/workspace/governance/codex/identity-inquirer/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "94516ca6-6355-43c5-b387-d2b605057784",
+      "from_name": "Inferer",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "asks for follow-ups and confirmations from",
+      "source": [
+        "/workspace/governance/codex/identity-inferer/v001.md",
+        "/workspace/governance/codex/identity-inquirer/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "94516ca6-6355-43c5-b387-d2b605057784",
+      "from_name": "Inferer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "sends profile updates to ('Clone')",
+      "source": [
+        "/workspace/governance/codex/identity-inferer/v001.md",
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "note": "Imitator dormant (P4)"
+    },
+    {
+      "from": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "from_name": "Investigator",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "rules on status of the hypotheses of (only the Investigator promotes a detail)",
+      "source": [
+        "/workspace/governance/codex/investigator/v001.md",
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "note": "Inferer v001 still marks details 'confirmed' itself"
+    },
+    {
+      "from": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "from_name": "Investigator",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "uses raw answers of",
+      "source": [
+        "/workspace/governance/codex/investigator/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "from_name": "Investigator",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "uses test results of",
+      "source": [
+        "/workspace/governance/codex/investigator/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "logs unanswerable gaps with",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "hands outward-facing or irreversible actions back to; reports serious misalignment to",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "sends workflow drift reports to",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Explorer",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "answers preference questions for; gives alignment verdicts (on request) on",
+      "source": [
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "from_name": "Interrogator",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "tests accuracy and confidence calibration of",
+      "source": [
+        "/workspace/governance/codex/clone-accuracy-validator/v002.md",
+        "/workspace/governance/codex/clone/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "from_name": "Interrogator",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "sends findings to",
+      "source": [
+        "/workspace/governance/codex/clone-accuracy-validator/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "from_name": "Interrogator",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "sends findings to ('Auditor')",
+      "source": [
+        "/workspace/governance/codex/clone-accuracy-validator/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "from_name": "Interrogator",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "sends weekly accuracy score to ('Assessor')",
+      "source": [
+        "/workspace/governance/codex/clone-accuracy-validator/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "from_name": "Interrogator",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "gives gaps to ask Gem about to",
+      "source": [
+        "/workspace/governance/codex/clone-accuracy-validator/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Architect",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "asks preferences of for every draft ('Clone')",
+      "source": [
+        "/workspace/governance/codex/instruction-architect/v001.md"
+      ],
+      "status": "current",
+      "note": "Imitator dormant (P4)"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "second only to; Gem's 2IC (never merged); keeps the phase tracker",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md",
+        "/workspace/governance/directory.md",
+        "/workspace/governance/phases.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Marshal",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Safekeeper",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "to_name": "Arbiter",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Assembler",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Inquirer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "to_name": "Sourcer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Interrogator",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Messenger",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer",
+      "to": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "to_name": "Editor",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all active bots"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Emissary",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "routes repo code work to ('Codey')",
+      "source": [
+        "/workspace/governance/codex/grok-bot/v002.md"
+      ],
+      "status": "current",
+      "note": "Emissary's live profile still runs the v001 tagline"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Emissary",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "routes web data collection to ('Scraper')",
+      "source": [
+        "/workspace/governance/codex/grok-bot/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Emissary",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "routes swarm work to ('Swarm Builder', now merged into Engineer)",
+      "source": [
+        "/workspace/governance/codex/grok-bot/v002.md",
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Emissary",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "asks preferences of ('Clone')",
+      "source": [
+        "/workspace/governance/codex/grok-bot/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Emissary",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "asks explicit approval of before any outward-facing action",
+      "source": [
+        "/workspace/governance/codex/grok-bot/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "from_name": "Engineer",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "asks before spending, large jobs or pushing to shared repos; reports costs to",
+      "source": [
+        "/workspace/governance/codex/codey/v003.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "from_name": "Editor",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "polishes drafts of; flags doubtful content back to",
+      "source": [
+        "/workspace/governance/codex/editor/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "from_name": "Editor",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "polishes drafts of; flags doubtful content back to",
+      "source": [
+        "/workspace/governance/codex/editor/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "from_name": "Editor",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "polishes drafts of; flags doubtful content back to",
+      "source": [
+        "/workspace/governance/codex/editor/v001.md"
+      ],
+      "status": "current"
+    }
+  ]
+}

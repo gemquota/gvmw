@@ -1,0 +1,440 @@
+diff --git a/src/physics/force.js b/src/physics/force.js
+index 3fb77f7..0cb0a4f 100644
+--- a/src/physics/force.js
++++ b/src/physics/force.js
+@@ -41,3 +41,24 @@ export function force3(ax, ay, az, limit = DEFAULT_FORCE_LIMIT) {
+     az: clamp(nanGuard(az), -limit, limit),
+   };
+ }
++
++/**
++ * PERF-5: write a force triple into a caller-owned scratch object instead of
++ * allocating one. With no `out` this is exactly the old object literal, so
++ * callers that keep the result (tests, diagnostics) behave as before. The
++ * solver passes one scratch and consumes each result before the next call.
++ * Arguments are evaluated in the same order as the old { ax, ay, az } literal.
++ */
++export function outForce(out, ax, ay, az) {
++  if (out) { out.ax = ax; out.ay = ay; out.az = az; return out; }
++  return { ax, ay, az };
++}
++
++/** force3() written into `out` when given (PERF-5); identical values. */
++export function force3Into(out, ax, ay, az, limit = DEFAULT_FORCE_LIMIT) {
++  if (!out) return force3(ax, ay, az, limit);
++  out.ax = clamp(nanGuard(ax), -limit, limit);
++  out.ay = clamp(nanGuard(ay), -limit, limit);
++  out.az = clamp(nanGuard(az), -limit, limit);
++  return out;
++}
+diff --git a/src/physics/lawgroups/physicsLaws.js b/src/physics/lawgroups/physicsLaws.js
+index 3736712..cbc2c34 100644
+--- a/src/physics/lawgroups/physicsLaws.js
++++ b/src/physics/lawgroups/physicsLaws.js
+@@ -9,17 +9,17 @@
+ 
+ import { PARTICLE_STRIDE, STRIDE_INDEXES as S, DNA_INDEXES as D } from '../../constants.js';
+ import { clamp, nanGuard } from '../../core/numeric.js';
+-import { force3 } from '../force.js';
++import { force3, force3Into, outForce } from '../force.js';
+ 
+ /**
+  * TIDE — long-range tidal pull on i toward j, ∝ massJ * k / dist.
+  * Not inverse-square: reaches much farther than gravity.
+  */
+-function applyTide(view, iBase, jBase, dx, dy, dz, dist, k) {
++function applyTide(view, iBase, jBase, dx, dy, dz, dist, k, out) {
+   const massJ = nanGuard(view[jBase + S.MASS]);
+   const mag = (massJ * k) / dist;
+   const invDist = 1 / dist;
+-  return force3(dx * invDist * mag, dy * invDist * mag, dz * invDist * mag);
++  return force3Into(out, dx * invDist * mag, dy * invDist * mag, dz * invDist * mag);
+ }
+ 
+ /**
+@@ -50,7 +50,7 @@ function applyFriction(view, iBase, k) {
+  * HORIZON — bounded event-horizon repulsion/absorption proxy. Massive bodies
+  * create a capture radius; particles inside it receive an inward acceleration.
+  */
+-function applyHorizon(view, iBase, jBase, dx, dy, dz, dist, k) {
++function applyHorizon(view, iBase, jBase, dx, dy, dz, dist, k, out) {
+   const massJ = Math.max(0, nanGuard(view[jBase + S.MASS]));
+   const radiusJ = Math.max(0.01, nanGuard(view[jBase + S.RADIUS]));
+   const horizon = radiusJ + Math.sqrt(massJ) * 0.5;
+@@ -58,18 +58,18 @@ function applyHorizon(view, iBase, jBase, dx, dy, dz, dist, k) {
+   const falloff = Math.max(0, 1 - dist / (horizon * 4));
+   const mag = Math.min(50, k * massJ * falloff * falloff / Math.max(dist, 0.1));
+   const invDist = 1 / dist;
+-  return force3(dx * invDist * mag, dy * invDist * mag, dz * invDist * mag);
++  return force3Into(out, dx * invDist * mag, dy * invDist * mag, dz * invDist * mag);
+ }
+ 
+ /** Radiation pressure — outward momentum transfer from radiant/energetic bodies. */
+-function applyRadiationPressure(view, iBase, jBase, dx, dy, dz, dist, k) {
++function applyRadiationPressure(view, iBase, jBase, dx, dy, dz, dist, k, out) {
+   if (dist <= 0) return null;
+   const energy = Math.max(0, nanGuard(view[jBase + S.ENERGY])) +
+     Math.max(0, nanGuard(view[jBase + S.ELECTRIC_ENERGY])) +
+     Math.max(0, nanGuard(view[jBase + S.STORED_ENERGY]));
+   const mag = Math.min(50, k * energy / Math.max(1, dist * dist));
+   const invDist = 1 / dist;
+-  return force3(-dx * invDist * mag, -dy * invDist * mag, -dz * invDist * mag);
++  return force3Into(out, -dx * invDist * mag, -dy * invDist * mag, -dz * invDist * mag);
+ }
+ 
+ /** Mass inertia — applies a bounded inertial resistance to acceleration. */
+@@ -80,14 +80,14 @@ function applyMassInertia(view, iBase, ax, ay, az, k) {
+ }
+ 
+ /** FIELD — central field gradient, distinct from electromagnetism's electric field. */
+-function applyField(view, iBase, cx, cy, cz, k) {
++function applyField(view, iBase, cx, cy, cz, k, out) {
+   const dx = cx - nanGuard(view[iBase + S.POS_X]);
+   const dy = cy - nanGuard(view[iBase + S.POS_Y]);
+   const dz = cz - nanGuard(view[iBase + S.POS_Z]);
+   const dist = Math.hypot(dx, dy, dz);
+-  if (dist <= 0) return { ax: 0, ay: 0, az: 0 };
++  if (dist <= 0) return outForce(out, 0, 0, 0);
+   const mag = Math.min(50, Math.max(0, k) * Math.min(dist, 100) / 100);
+-  return { ax: dx / dist * mag, ay: dy / dist * mag, az: dz / dist * mag };
++  return outForce(out, dx / dist * mag, dy / dist * mag, dz / dist * mag);
+ }
+ 
+ /**
+diff --git a/src/physics/laws.js b/src/physics/laws.js
+index 9e7f96e..3cf8bf9 100644
+--- a/src/physics/laws.js
++++ b/src/physics/laws.js
+@@ -18,6 +18,7 @@ import { clamp } from '../core/numeric.js';
+ // CA-DUP1: the single accretion-pair predicate lives in mergePhysics.js.
+ import { isAccretionPair } from './mergePhysics.js';
+ import { cipherKey } from './cipherKey.js';
++import { outForce } from './force.js';
+ import { readDNAParam as readSpeciesDNAParam, writeDNAParam as writeSpeciesDNAParam } from '../dna/codec.js';
+ 
+ // ── Law clock (DET-1) ──
+@@ -259,17 +260,17 @@ export function applyTracking(p1Ptr, p2Ptr, stride, dx, dy, dz, dist) {
+ // ============================================================================
+ // 6b. PREDATION (Mass-difference based pursuit/flee + gene absorption on contact)
+ // ============================================================================
+-export function applyPredation(p1Ptr, p2Ptr, stride, dx, dy, dz, dist, prng) {
++export function applyPredation(p1Ptr, p2Ptr, stride, dx, dy, dz, dist, prng, out) {
+   const buf = buffer_global;
+   // A predator never hunts its own kind (matches TRACK's documented
+   // ecosystem behavior — predation is strictly cross-species).
+   if (buf[p1Ptr + S.SPECIES_ID] === buf[p2Ptr + S.SPECIES_ID]) {
+-    return { ax: 0, ay: 0, az: 0 };
++    return outForce(out, 0, 0, 0);
+   }
+   const mass1 = buf[p1Ptr + S.MASS];
+   const mass2 = buf[p2Ptr + S.MASS];
+   const massDiff = mass1 - mass2;
+-  if (Math.abs(massDiff) < 0.5) return { ax: 0, ay: 0, az: 0 };
++  if (Math.abs(massDiff) < 0.5) return outForce(out, 0, 0, 0);
+ 
+   const r1 = buf[p1Ptr + S.RADIUS];
+   const r2 = buf[p2Ptr + S.RADIUS];
+@@ -279,11 +280,7 @@ export function applyPredation(p1Ptr, p2Ptr, stride, dx, dy, dz, dist, prng) {
+     // p1 is predator: pursue p2
+     const predBias = readDNA(p1Ptr, D.PREDATION_BIAS) || 0;
+     const strength = predBias * 0.1 * mass2 * invDist;
+-    const force = {
+-      ax: nanGuard(dx * invDist * strength),
+-      ay: nanGuard(dy * invDist * strength),
+-      az: nanGuard(dz * invDist * strength),
+-    };
++    const force = outForce(out, nanGuard(dx * invDist * strength), nanGuard(dy * invDist * strength), nanGuard(dz * invDist * strength));
+     // Gene absorption on contact
+     if (dist < r1 + r2 && predBias > 0.1) {
+       const absorpRate = 0.05;
+@@ -304,11 +301,7 @@ export function applyPredation(p1Ptr, p2Ptr, stride, dx, dy, dz, dist, prng) {
+     // p1 is prey: flee from p2
+     const jitter = readDNA(p1Ptr, D.JITTER) || 0.1;
+     const strength = jitter * 0.2 * invDist;
+-    return {
+-      ax: nanGuard(-dx * invDist * strength),
+-      ay: nanGuard(-dy * invDist * strength),
+-      az: nanGuard(-dz * invDist * strength),
+-    };
++    return outForce(out, nanGuard(-dx * invDist * strength), nanGuard(-dy * invDist * strength), nanGuard(-dz * invDist * strength));
+   }
+ }
+ 
+@@ -622,7 +615,7 @@ function channelMatch(receiverDna, senderDna) {
+ /** ENCRYPTION key: see ./cipherKey.js (re-exported here for API compatibility). */
+ export { cipherKey };
+ 
+-export function applySignalExchange(lawState, view, iBase, jBase, dx, dy, dz, dist, dnaI, dnaJ, dt) {
++export function applySignalExchange(lawState, view, iBase, jBase, dx, dy, dz, dist, dnaI, dnaJ, dt, out) {
+   if (!isSet(lawState, LAW_INDEXES.COMMS)) return null; // COMMS=52
+   const sI = view[iBase + S.SIGNAL] || 0;
+   const sJ = view[jBase + S.SIGNAL] || 0;
+@@ -683,7 +676,7 @@ export function applySignalExchange(lawState, view, iBase, jBase, dx, dy, dz, di
+   }
+ 
+   if (ax === 0 && ay === 0 && az === 0) return null;
+-  return { ax: nanGuard(ax), ay: nanGuard(ay), az: nanGuard(az) };
++  return outForce(out, nanGuard(ax), nanGuard(ay), nanGuard(az));
+ }
+ 
+ 
+@@ -1731,7 +1724,7 @@ export function applyRadiationDamage(lawState, view, base, dt, synergy, prng) {
+ // ============================================================================
+ // 47. TRACK — Predation tracking
+ // ============================================================================
+-export function applyTrackingBehavior(lawState, view, iBase, jBase, dx, dy, dz, dist, synergy) {
++export function applyTrackingBehavior(lawState, view, iBase, jBase, dx, dy, dz, dist, synergy, out) {
+   if (!isSet(lawState, LAW_INDEXES.TRACK)) return null;
+   if (dist < 1) return null;
+   const massI = view[iBase + S.MASS];
+@@ -1744,11 +1737,7 @@ export function applyTrackingBehavior(lawState, view, iBase, jBase, dx, dy, dz,
+   if (massJ < massI * 0.8) {
+     const strength = predationBias * 0.05 * synergy;
+     const invDist = 1.0 / dist;
+-    return {
+-      ax: dx * invDist * strength,
+-      ay: dy * invDist * strength,
+-      az: dz * invDist * strength,
+-    };
++    return outForce(out, dx * invDist * strength, dy * invDist * strength, dz * invDist * strength);
+   }
+   return null;
+ }
+@@ -2358,7 +2347,7 @@ export function applyPlasma(p1Ptr, k) {
+ }
+ 
+ /** SUPERCONDUCTIVITY — cold pairs couple: relative motion damped + charge equalized. */
+-export function applySuperconductivity(p1Ptr, p2Ptr, k) {
++export function applySuperconductivity(p1Ptr, p2Ptr, k, out) {
+   const buf = buffer_global;
+   const t1 = buf[p1Ptr + S.TEMPERATURE] || 0;
+   const t2 = buf[p2Ptr + S.TEMPERATURE] || 0;
+@@ -2367,11 +2356,7 @@ export function applySuperconductivity(p1Ptr, p2Ptr, k) {
+   buf[p1Ptr + S.CHARGE] = (buf[p1Ptr + S.CHARGE] || 0) + dq;
+   buf[p2Ptr + S.CHARGE] = (buf[p2Ptr + S.CHARGE] || 0) - dq;
+   // Coupling force: damps the subject's motion toward the neighbor's velocity
+-  return {
+-    ax: nanGuard((buf[p2Ptr + S.VEL_X] - buf[p1Ptr + S.VEL_X]) * k),
+-    ay: nanGuard((buf[p2Ptr + S.VEL_Y] - buf[p1Ptr + S.VEL_Y]) * k),
+-    az: nanGuard((buf[p2Ptr + S.VEL_Z] - buf[p1Ptr + S.VEL_Z]) * k),
+-  };
++  return outForce(out, nanGuard((buf[p2Ptr + S.VEL_X] - buf[p1Ptr + S.VEL_X]) * k), nanGuard((buf[p2Ptr + S.VEL_Y] - buf[p1Ptr + S.VEL_Y]) * k), nanGuard((buf[p2Ptr + S.VEL_Z] - buf[p1Ptr + S.VEL_Z]) * k));
+ }
+ 
+ // ============================================================================
+@@ -2397,15 +2382,11 @@ export function applyMemoryDecay(p1Ptr, decay, k) {
+ }
+ 
+ /** PATTERN — cohesion: dense regions pull particles together. */
+-export function applyPatternForce(p1Ptr, p2Ptr, dx, dy, dz, dist, k) {
++export function applyPatternForce(p1Ptr, p2Ptr, dx, dy, dz, dist, k, out) {
+   if (dist < 1.0) return null;
+   const force = k / (dist + 1.0);
+   const invDist = 1.0 / dist;
+-  return {
+-    ax: nanGuard(dx * invDist * force),
+-    ay: nanGuard(dy * invDist * force),
+-    az: nanGuard(dz * invDist * force),
+-  };
++  return outForce(out, nanGuard(dx * invDist * force), nanGuard(dy * invDist * force), nanGuard(dz * invDist * force));
+ }
+ 
+ /** STIGMERGY — lay a predicted-path trail marker, or let it evaporate.
+@@ -2473,9 +2454,11 @@ export function applySignalBoost(p1Ptr, p2Ptr, k) {
+ export function applyLearnAlign(p1Ptr, p2Ptr, k) {
+   const buf = buffer_global;
+   const kk = k * 0.1;
+-  for (const slot of [S.VEL_X, S.VEL_Y, S.VEL_Z]) {
+-    buf[p1Ptr + slot] += (buf[p2Ptr + slot] - buf[p1Ptr + slot]) * kk;
+-  }
++  // PERF-5: unrolled (was a for…of over a fresh 3-element array per call);
++  // same three updates in the same order.
++  buf[p1Ptr + S.VEL_X] += (buf[p2Ptr + S.VEL_X] - buf[p1Ptr + S.VEL_X]) * kk;
++  buf[p1Ptr + S.VEL_Y] += (buf[p2Ptr + S.VEL_Y] - buf[p1Ptr + S.VEL_Y]) * kk;
++  buf[p1Ptr + S.VEL_Z] += (buf[p2Ptr + S.VEL_Z] - buf[p1Ptr + S.VEL_Z]) * kk;
+ }
+ 
+ /** SYMBOL — token-gated social force with contact imprinting (v4.6.29).
+@@ -2483,7 +2466,7 @@ export function applyLearnAlign(p1Ptr, p2Ptr, k) {
+  * its token on contact; same-token particles attract (homing on shared
+  * meaning), different-token pairs repel weakly. Grouping follows learned
+  * identity, not species — distinct from AFFINITY. */
+-export function applySymbolForce(p1Ptr, p2Ptr, dx, dy, dz, dist, k) {
++export function applySymbolForce(p1Ptr, p2Ptr, dx, dy, dz, dist, k, out) {
+   const buf = buffer_global;
+   const t1 = Math.round((buf[p1Ptr + S.SYMBOL_TOKEN] || 0) * 7);
+   const t2 = Math.round((buf[p2Ptr + S.SYMBOL_TOKEN] || 0) * 7);
+@@ -2505,29 +2488,21 @@ export function applySymbolForce(p1Ptr, p2Ptr, dx, dy, dz, dist, k) {
+   const strength = t1 === t2 ? 0.15 : -0.05;
+   const force = k * strength / (dist + 1.0);
+   const invDist = 1.0 / (dist + 0.001);
+-  return {
+-    ax: nanGuard(dx * invDist * force),
+-    ay: nanGuard(dy * invDist * force),
+-    az: nanGuard(dz * invDist * force),
+-  };
++  return outForce(out, nanGuard(dx * invDist * force), nanGuard(dy * invDist * force), nanGuard(dz * invDist * force));
+ }
+ 
+ /** METRIC — climb the energy gradient. */
+-export function applyMetricForce(p1Ptr, p2Ptr, dx, dy, dz, dist, k) {
++export function applyMetricForce(p1Ptr, p2Ptr, dx, dy, dz, dist, k, out) {
+   const buf = buffer_global;
+   const dE = (buf[p2Ptr + S.ENERGY] || 50) - (buf[p1Ptr + S.ENERGY] || 50);
+   if (dE === 0) return null;
+   const force = k * dE / (dist + 1.0);
+   const invDist = 1.0 / (dist + 0.001);
+-  return {
+-    ax: nanGuard(dx * invDist * force),
+-    ay: nanGuard(dy * invDist * force),
+-    az: nanGuard(dz * invDist * force),
+-  };
++  return outForce(out, nanGuard(dx * invDist * force), nanGuard(dy * invDist * force), nanGuard(dz * invDist * force));
+ }
+ 
+ /** PREDICT — aim at the neighbor's extrapolated position. */
+-export function applyPredictForce(p1Ptr, p2Ptr, dx, dy, dz, dist, k) {
++export function applyPredictForce(p1Ptr, p2Ptr, dx, dy, dz, dist, k, out) {
+   const buf = buffer_global;
+   const t = 3.0;
+   const pdx = dx + (buf[p2Ptr + S.VEL_X] - buf[p1Ptr + S.VEL_X]) * t;
+@@ -2535,11 +2510,7 @@ export function applyPredictForce(p1Ptr, p2Ptr, dx, dy, dz, dist, k) {
+   const pdz = dz + (buf[p2Ptr + S.VEL_Z] - buf[p1Ptr + S.VEL_Z]) * t;
+   const pd = Math.sqrt(pdx * pdx + pdy * pdy + pdz * pdz) + 0.001;
+   const force = k / (dist + 1.0);
+-  return {
+-    ax: nanGuard((pdx / pd) * force),
+-    ay: nanGuard((pdy / pd) * force),
+-    az: nanGuard((pdz / pd) * force),
+-  };
++  return outForce(out, nanGuard((pdx / pd) * force), nanGuard((pdy / pd) * force), nanGuard((pdz / pd) * force));
+ }
+ 
+ /** CODE — blend DNA cache loci between contacting particles. */
+diff --git a/src/physics/solver.js b/src/physics/solver.js
+index 0cc8da1..81b2d2f 100644
+--- a/src/physics/solver.js
++++ b/src/physics/solver.js
+@@ -123,6 +123,9 @@ const _pairCompatScratch = createCompatibilityScratch();
+ // PERF-3: per-pair compatibility, computed lazily at first use within a pair
+ // and reused for the rest of that pair (exactly the old closure's semantics),
+ // without allocating closures per pair. Reset at the top of every pair.
++// PERF-5: one scratch force for the pairwise laws that return { ax, ay, az };
++// every result is added to the accumulator before the next law runs.
++const _lawOut = { ax: 0, ay: 0, az: 0 };
+ let _pairCompatValid = false;
+ function pairCompat(view, iBase, jBase) {
+   if (!_pairCompatValid) {
+@@ -1072,7 +1075,7 @@ export function solve(particleBuffer, particleCount, stride, lawState, dnaBuffer
+       // ── Signal exchange (mid) ──
+       if (mid && active[LAW_INDEXES.COMMS] && ((view[iBase + S.SIGNAL] || 0) > 0.01 || (view[jBase + S.SIGNAL] || 0) > 0.01)) {
+         readDNAFromCache(view, jBase, _dnaJ);
+-        const sigForce = applySignalExchange(lawState, view, iBase, jBase, dx, dy, dz, dist, dnaI, _dnaJ, localTimeStep);
++        const sigForce = applySignalExchange(lawState, view, iBase, jBase, dx, dy, dz, dist, dnaI, _dnaJ, localTimeStep, _lawOut);
+         if (sigForce) {
+           ax += sigForce.ax;
+           ay += sigForce.ay;
+@@ -1083,7 +1086,7 @@ export function solve(particleBuffer, particleCount, stride, lawState, dnaBuffer
+       // ── Track (mid) ──
+       if (mid && active[LAW_INDEXES.TRACK]) {
+         const trackSynergy = syn[LAW_INDEXES.TRACK];
+-        const trackForce = applyTrackingBehavior(lawState, view, iBase, jBase, dx, dy, dz, dist, trackSynergy);
++        const trackForce = applyTrackingBehavior(lawState, view, iBase, jBase, dx, dy, dz, dist, trackSynergy, _lawOut);
+         if (trackForce) {
+           ax += trackForce.ax;
+           ay += trackForce.ay;
+@@ -1093,7 +1096,7 @@ export function solve(particleBuffer, particleCount, stride, lawState, dnaBuffer
+ 
+       // ── Predation (mid-range pursuit) ──
+       if (mid && active[LAW_INDEXES.PREDATION] && meetsCompatibility(pairCompat(view, iBase, jBase), REQ_PREDATION)) {
+-        const predForce = applyPredation(iBase, jBase, stride, dx, dy, dz, dist, prng);
++        const predForce = applyPredation(iBase, jBase, stride, dx, dy, dz, dist, prng, _lawOut);
+         if (predForce) {
+           ax += predForce.ax;
+           ay += predForce.ay;
+@@ -1198,7 +1201,7 @@ export function solve(particleBuffer, particleCount, stride, lawState, dnaBuffer
+ 
+       // ── Information (pairwise) ──
+       if (active[LAW_INDEXES.SYMBOL]) {
+-        const symForce = applySymbolForce(iBase, jBase, dx, dy, dz, dist, 0.3 * syn[LAW_INDEXES.SYMBOL]);
++        const symForce = applySymbolForce(iBase, jBase, dx, dy, dz, dist, 0.3 * syn[LAW_INDEXES.SYMBOL], _lawOut);
+         if (symForce) {
+           ax += symForce.ax;
+           ay += symForce.ay;
+@@ -1206,7 +1209,7 @@ export function solve(particleBuffer, particleCount, stride, lawState, dnaBuffer
+         }
+       }
+       if (active[LAW_INDEXES.METRIC]) {
+-        const metForce = applyMetricForce(iBase, jBase, dx, dy, dz, dist, 0.2);
++        const metForce = applyMetricForce(iBase, jBase, dx, dy, dz, dist, 0.2, _lawOut);
+         if (metForce) {
+           ax += metForce.ax;
+           ay += metForce.ay;
+@@ -1214,7 +1217,7 @@ export function solve(particleBuffer, particleCount, stride, lawState, dnaBuffer
+         }
+       }
+       if (active[LAW_INDEXES.PREDICT]) {
+-        const predForce = applyPredictForce(iBase, jBase, dx, dy, dz, dist, 0.3 * syn[LAW_INDEXES.PREDICT]);
++        const predForce = applyPredictForce(iBase, jBase, dx, dy, dz, dist, 0.3 * syn[LAW_INDEXES.PREDICT], _lawOut);
+         if (predForce) {
+           ax += predForce.ax;
+           ay += predForce.ay;
+@@ -1222,7 +1225,7 @@ export function solve(particleBuffer, particleCount, stride, lawState, dnaBuffer
+         }
+       }
+       if (active[LAW_INDEXES.PATTERN]) {
+-        const patForce = applyPatternForce(iBase, jBase, dx, dy, dz, dist, 0.2);
++        const patForce = applyPatternForce(iBase, jBase, dx, dy, dz, dist, 0.2, _lawOut);
+         if (patForce) {
+           ax += patForce.ax;
+           ay += patForce.ay;
+@@ -1243,7 +1246,7 @@ export function solve(particleBuffer, particleCount, stride, lawState, dnaBuffer
+       if (active[LAW_INDEXES.PROTOCOL]) applyProtocolSync(iBase, jBase, 0.1 * syn[LAW_INDEXES.PROTOCOL]);
+       if (active[LAW_INDEXES.SIGNAL_BOOST]) applySignalBoost(iBase, jBase, 0.08 * syn[LAW_INDEXES.SIGNAL_BOOST]);
+       if (active[LAW_INDEXES.SUPERCONDUCTIVITY]) {
+-        const scForce = applySuperconductivity(iBase, jBase, 0.05 * syn[LAW_INDEXES.SUPERCONDUCTIVITY]);
++        const scForce = applySuperconductivity(iBase, jBase, 0.05 * syn[LAW_INDEXES.SUPERCONDUCTIVITY], _lawOut);
+         if (scForce) {
+           ax += scForce.ax;
+           ay += scForce.ay;
+@@ -1257,19 +1260,19 @@ export function solve(particleBuffer, particleCount, stride, lawState, dnaBuffer
+ 
+       // Physics
+       if (active[LAW_INDEXES.TIDE]) {
+-        const tideForce = applyTide(view, iBase, jBase, dx, dy, dz, dist, 0.3);
++        const tideForce = applyTide(view, iBase, jBase, dx, dy, dz, dist, 0.3, _lawOut);
+         if (tideForce) { ax += tideForce.ax; ay += tideForce.ay; az += tideForce.az; }
+       }
+       if (active[LAW_INDEXES.HORIZON]) {
+-        const f = applyHorizon(view, iBase, jBase, dx, dy, dz, dist, 0.08 * syn[LAW_INDEXES.HORIZON]);
++        const f = applyHorizon(view, iBase, jBase, dx, dy, dz, dist, 0.08 * syn[LAW_INDEXES.HORIZON], _lawOut);
+         if (f) { ax += f.ax; ay += f.ay; az += f.az; }
+       }
+       if (active[LAW_INDEXES.RADIATION_PRESSURE]) {
+-        const f = applyRadiationPressure(view, iBase, jBase, dx, dy, dz, dist, 0.12 * syn[LAW_INDEXES.RADIATION_PRESSURE]);
++        const f = applyRadiationPressure(view, iBase, jBase, dx, dy, dz, dist, 0.12 * syn[LAW_INDEXES.RADIATION_PRESSURE], _lawOut);
+         if (f) { ax += f.ax; ay += f.ay; az += f.az; }
+       }
+       if (active[LAW_INDEXES.FIELD]) {
+-        const f = applyField(view, iBase, halfWorld, halfWorld, halfWorld, 0.02 * syn[LAW_INDEXES.FIELD]);
++        const f = applyField(view, iBase, halfWorld, halfWorld, halfWorld, 0.02 * syn[LAW_INDEXES.FIELD], _lawOut);
+         ax += f.ax; ay += f.ay; az += f.az;
+       }
+ 
+diff --git a/src/state/lawImplementations.generated.js b/src/state/lawImplementations.generated.js
+index 95366cb..f82bcf3 100644
+--- a/src/state/lawImplementations.generated.js
++++ b/src/state/lawImplementations.generated.js
+@@ -874,7 +874,11 @@ export const LAW_IMPLEMENTATIONS = Object.freeze({
+       "VEL_Y",
+       "VEL_Z"
+     ],
+-    "writes": [],
++    "writes": [
++      "VEL_X",
++      "VEL_Y",
++      "VEL_Z"
++    ],
+     "derivedBy": "static-scan: gated call"
+   },
+   "SYMBOL": {

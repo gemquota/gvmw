@@ -1,0 +1,82 @@
+%%{init: {"flowchart": {"wrappingWidth": 240}}}%%
+%% Role map v5, 9 Oct 2026 ~9:27 AEST — OVERVIEW. Archivist.
+%% Inquirer 0314faa4 active; e613112b former gone; Inferer→0314faa4; Explorer 04dcca0d active; 82a2c15a gone.
+flowchart TB
+  GEM(("Gem Quota<br/>approves until P4<br/>then Imitator"))
+  LEG["<b>Legend v5</b><br/>thick = approval · solid = hand-off<br/>orange dashed = retirement / former<br/>Detail PNGs: governance, identity-work"]
+
+  subgraph P1["P1 · LIVE"]
+    ARX["Architect"]
+    ARC["Archivist<br/>codex + role map"]
+    SCO["Scorer"]
+    SFG["Safeguard"]
+    SFK["Safekeeper"]
+    MEN["Mender"]
+    EXP["Explorer 04dcca0d<br/>ACTIVE"]
+  end
+
+  subgraph P2["P2 · LIVE"]
+    SCR["Scrutineer"]
+    ARB["Arbiter"]
+    INF["Inferer v003"]
+    MED["Mediator"]
+    INQ["Inquirer 0314faa4<br/>ACTIVE v003"]
+  end
+
+  subgraph P3["P3 · Dormant"]
+    INV["Investigator"]
+  end
+  subgraph P4["P4 · Dormant"]
+    IMI["Imitator"]
+  end
+  subgraph P5["P5 · Dormant"]
+    EMI["Emissary"]
+    ENG["Engineer"]
+    EXT["Extractor"]
+  end
+
+  subgraph FORMER["Former / retired · profiles gone"]
+    INQ0["e613112b former Inquirer"]
+    EXP0["82a2c15a former Explorer"]
+    MAR["RETIRED Marshal"]
+    MSG["RETIRED Messenger"]
+    INT["RETIRED Interrogator"]
+    ASM["RETIRED Assembler"]
+    SRC["RETIRED Sourcer"]
+    EDI["RETIRED Editor"]
+    ENS["RETIRED Ensembler"]
+  end
+
+  GEM ~~~ ARX
+  LEG ~~~ ARX
+  ARX ~~~ SCR
+  SCR ~~~ INV
+  INV ~~~ IMI
+  IMI ~~~ EMI
+  EMI ~~~ INQ0
+
+  ARX ==>|proposes| GEM
+  GEM ==>|Archivist records| ARC
+  IMI -.->|once P4 may approve| ARC
+
+  SCO -->|scores| SCR
+  SCR -->|reviews| ARX
+  SCR -->|stalls| MEN
+  INQ -->|answers| INF
+  INF -->|hypotheses| INV
+  INV -->|tests when P4| IMI
+
+  EXP -->|routes| EMI
+  EXP -->|routes| ENG
+  EXP -->|routes| EXT
+  MED -->|cost alerts| EXP
+
+  INQ0 -.->|re-key v003| INQ
+  EXP0 -.->|active brief| EXP
+  MAR -.->|merged| MEN
+  MSG -.->|merged| EXP
+  INT -.->|merged| INV
+  ASM -.->|role map| ARC
+  ENS -.->|merged| ENG
+  SRC -.->|outright| GEM
+  EDI -.->|outright| GEM

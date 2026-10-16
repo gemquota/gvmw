@@ -1,0 +1,75 @@
+merchant_id,merchant_name,url,country,currency,source,candidate_file,chosen,verified_now
+10034,Enjoy11,https://enjoy11au.club,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+10195,Woohoo9,https://woohoo9.live,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+10196,PokiesOkay,https://pokiesokay.vip,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+10256,SpinFred,https://spinfred.net,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+10397,Aussie2win,https://methspins.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+10397,Aussie2win,https://aussie2win.shop,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,0,1
+1052,AUPLAY99,https://auplay99.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+1052,AUPLAY99,https://auplay991.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,0,1
+10631,AuClick,https://auclick.co,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+1070,CTBET,https://ctbet.live,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+10843,PayID123,https://payid123.com,AU,AUD,record-host-recheck,candidates_members.csv,1,1
+10863,MARIO96,https://mario96.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+1117,Pokies9,https://pokies9au.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+1209,DMD188 Australia's Best Online Casino,https://dmd188.net,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+1709,SUPER BILLION,https://superbillion.net,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+1719,Gometh88,https://gometh88.net,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+1925,Dinkum33,https://dinkum33.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+1926,AUSLOT9,https://auslot9.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+1965,OBSIDIAN7,https://obsidian7aud.online,AU,AUD,homepage-links:https://obsidian7aud.com,candidates_homepages_au2done_prev.csv,1,1
+1965,OBSIDIAN7,https://obsidian7aud8.com,AU,AUD,homepage-links:https://obsidian7aud.com,candidates_homepages_au2done_prev.csv,0,1
+1965,OBSIDIAN7,https://obsidian7aud.com,AU,AUD,partner-member-check,candidates_members.csv,0,1
+245,NUGGET77,https://ngt77.vip,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+30031,22DDWIN,https://22ddwin.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+30057,KFCAU,https://kfcau.co,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+30109,MEGA98,https://mega98au.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+30190,2USWIN,https://2uswin.net,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+30295,SUPERAUS,https://superaus.net,AU,AUD,partner-member-check,candidates_members.csv,1,1
+30592,SLUTCUNT,https://slutcunt.net,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+30809,V9SPIN,https://v9spin.casino,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+30810,GODMETH,https://godmeth.casino,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+30811,HEYBITCH99,https://heybitch99.net,AU,AUD,homepage-links:https://heybitch99.com,candidates_homepages_au2done_prev.csv,1,1
+30811,HEYBITCH99,https://heybitch99.com,AU,AUD,partner-member-check,candidates_members.csv,0,1
+30817,WELLPOKIES,https://wellpokies.casino,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+30822,AUSWINWIN,https://auswinwin.org,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+30822,AUSWINWIN,https://auswinwin.online,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,0,1
+50,MWAUS,https://maxwinaus.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+50,MWAUS,https://maxwinaus.co,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,0,1
+50123,POKIES88,https://pkss88.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+50178,LUCKYROO66,https://luckyroo66.online,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+50323,PRIMEPLAY,https://primeplayau.co,AU,AUD,partner-dir:https://spingoau.co/sqaud,candidates_partnersr1.csv,1,1
+50328,MINECRAFT,https://minecraftau.co,AU,AUD,partner-dir:https://spingoau.co/sqaud,candidates_partnersr1.csv,1,1
+50367,SPINGOAU,https://spingoau.co,AU,AUD,candidates_check.csv,candidates_check.csv,1,1
+50515,SPEED365,https://speed365b.vip,AU,AUD,page:https://igaustralia.live/,candidates_au_webpages.csv,1,1
+50570,MATEDOLLAR,https://mate76397639.site,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+50571,MILLIE777,https://millie777.pro,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+50685,AUSPIN996,https://auspin996.net,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+50726,THE SOVEREIGN,https://thesovereignaud8.com,AU,AUD,homepage-links:https://thesovereignaud.com,candidates_homepages_au2done_prev.csv,1,1
+50726,THE SOVEREIGN,https://thesovereignaud.online,AU,AUD,homepage-links:https://thesovereignaud.com,candidates_homepages_au2done_prev.csv,0,1
+50726,THE SOVEREIGN,https://thesovereignaud.com,AU,AUD,partner-member-check,candidates_members.csv,0,1
+50777,SUNCITYG,https://suncitygroup.co,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+50815,SPEEDYAUS,https://speedy-aus.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+50873,IPAY33,https://ipay33.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60079,REX7,https://rex7au.vip,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60221,SR7,https://sr7aus.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60262,SMACKPOKIES,https://smackpokies.net,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60383,Squidgame9,https://squidgame9.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60536,WinX,https://winxau.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60628,HAPPYBETZ9,https://happybetz9.org,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60628,HAPPYBETZ9,https://happybetz9.net,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,0,1
+60630,AUSSIX,https://aussix.live,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60630,AUSSIX,https://aussix.casino,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,0,1
+60737,BEESPIN,https://beespin.vip,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60739,cunt9,https://cunt9.com,AU,AUD,partner-member-check,candidates_members.csv,1,1
+60820,ATOMIC96,https://atomic96.net,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60853,ISPIN77,https://ispin77.co,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60853,ISPIN77,https://ispin77.vip,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,0,1
+60975,VeeClub,https://veeclb.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+60995,DICKYSLOT,https://dickyslot.co,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+61006,Raraspin,https://raraspin.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+61012,Dingo88,https://dingo88.net,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1
+61012,Dingo88,https://dingo88.vip,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,0,1
+655,ROYAL ACE,https://royalaceau.net,AU,AUD,homepage-links:https://royalaceau.com,candidates_homepages_au2done_prev.csv,1,1
+655,ROYAL ACE,https://royalaceau.com,AU,AUD,partner-member-check,candidates_members.csv,0,1
+81,ScoobyWin,https://scoobywin.com,AU,AUD,urlscan:domain:cdn.vefrop.com AND date:>now-120d,candidates_urlscan.csv,1,1

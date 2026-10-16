@@ -1,0 +1,965 @@
+{
+ "generated": "2026-10-09 AEST (UTC+10)",
+ "by": "Explorer 04dcca0d",
+ "status": "PLAN ONLY. Nothing has been moved, renamed or deleted.",
+ "reference_search": "rg -F across /workspace (excluding vepa/node_modules, .git, bie_tools/cache*, bie_tools/pstats/*.jsonl, tools/node22, .toolchain, .playwright-mcp) and /home/box/agent-data/agents/*/profile.json; agent profile paths shown as agents/<id>/profile.json",
+ "safe_total_bytes": 8842107009,
+ "counts": {
+  "safe": 14,
+  "organise": 28,
+  "needs-gem": 26
+ },
+ "actions": [
+  {
+   "action": "delete",
+   "path": "/workspace/bie_tools/cache/",
+   "category": "safe",
+   "reason": "Scraper HTML cache: 7,853 fetched pages. Final lists already in bie_deliverables/ (4 Oct). Regenerable only by re-scraping, so ask Extractor first if a re-run is planned (RR-002 legal risk on re-scrape). Alternative: tar+compress instead of delete.",
+   "owner": "Extractor",
+   "bytes": 6865353505,
+   "referenced_by": [
+    "bie_tools/discover.py",
+    "bie_tools/partners.py",
+    "bie_tools/pstats/a_pages.py",
+    "governance/secrets-inventory.md"
+   ]
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/bie_tools/cache_partner/",
+   "category": "safe",
+   "reason": "Scraper HTML cache of partner pages (1,975 files). Same caveat as bie_tools/cache/.",
+   "owner": "Extractor",
+   "bytes": 1370872228,
+   "referenced_by": [
+    "bie_tools/discover.py",
+    "governance/secrets-inventory.md"
+   ]
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/bie_tools/cache_tg/",
+   "category": "safe",
+   "reason": "Scraper HTML cache of Telegram pages (2,055 files). Same caveat. Also holds key-shaped strings from third-party pages (secrets-inventory #40).",
+   "owner": "Extractor",
+   "bytes": 305860041,
+   "referenced_by": [
+    "bie_tools/discover.py",
+    "governance/secrets-inventory.md"
+   ]
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/.toolchain/",
+   "category": "safe",
+   "reason": "Second copy of Node v22.23.3 (extracted folder + 55 MB tarball + symlink + old test log). No file or bot instruction references .toolchain; tools/codey/env.sh and verify.sh use tools/node22/.",
+   "owner": "Engineer",
+   "bytes": 241644310,
+   "referenced_by": []
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/tools/node22/node-v22.23.3-linux-x64.tar.gz",
+   "category": "safe",
+   "reason": "Download tarball for the already-extracted tools/node22/node-v22.23.3-linux-x64/ (in use). Scripts use the extracted bin only.",
+   "owner": "Engineer",
+   "bytes": 56792076,
+   "referenced_by": []
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/bie_organized.zip",
+   "category": "safe",
+   "reason": "Byte-identical to bie_scraper_and_lists.zip (md5 bce6025e...) and every one of its 89 files matches bie_deliverables/ exactly. A copy also sits in Extractor attachments.",
+   "owner": "Extractor",
+   "bytes": 1294243,
+   "referenced_by": [
+    "governance/reviews/2026-10-09-explorer-bot-value-review.md",
+    "governance/risk/register.md"
+   ]
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/bie_scraper.zip",
+   "category": "safe",
+   "reason": "All 70 files match bie/ and bie_deliverables/scraper/ exactly. A copy also sits in Extractor attachments.",
+   "owner": "Extractor",
+   "bytes": 289171,
+   "referenced_by": [
+    "governance/risk/register.md"
+   ]
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/dash.log",
+   "category": "safe",
+   "reason": "Empty (0-byte) log at workspace root.",
+   "owner": "Extractor",
+   "bytes": 0,
+   "referenced_by": []
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/dash2.log",
+   "category": "safe",
+   "reason": "Empty (0-byte) log at workspace root.",
+   "owner": "Extractor",
+   "bytes": 0,
+   "referenced_by": []
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/disc_home.log",
+   "category": "safe",
+   "reason": "Empty (0-byte) log at workspace root.",
+   "owner": "Extractor",
+   "bytes": 0,
+   "referenced_by": []
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/dash.pid",
+   "category": "safe",
+   "reason": "Stale PID file (pid 253292 not running; box restarted 10:37am 9 Oct).",
+   "owner": "Extractor",
+   "bytes": 7,
+   "referenced_by": []
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/perf/nanhunt/__pycache__/",
+   "category": "safe",
+   "reason": "Python bytecode cache.",
+   "owner": "Engineer",
+   "bytes": 1300,
+   "referenced_by": []
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/vepa/test-results/",
+   "category": "safe",
+   "reason": "Gitignored Playwright test-results cache (45 bytes). Inside the vepa repo folder but not tracked. Do it when Engineer is idle.",
+   "owner": "Engineer",
+   "bytes": 45,
+   "referenced_by": []
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/medb/docs/.~lock.DECISIONS.md#",
+   "category": "safe",
+   "reason": "Stale LibreOffice lock file (no LibreOffice running since the 10:37am restart). Gitignored.",
+   "owner": "Emissary",
+   "bytes": 83,
+   "referenced_by": []
+  },
+  {
+   "action": "mkdir",
+   "path": "/workspace/bie_tools/_runlogs/",
+   "category": "organise",
+   "reason": "New home for Extractor run logs now loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 0,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/disc_h2.log",
+   "dest": "/workspace/bie_tools/_runlogs/disc_h2.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 651,
+   "referenced_by": [
+    "governance/reviews/2026-10-04-reality-baseline.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/disc_ip.log",
+   "dest": "/workspace/bie_tools/_runlogs/disc_ip.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 1186,
+   "referenced_by": [
+    "governance/reviews/2026-10-04-reality-baseline.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/disc_p2.log",
+   "dest": "/workspace/bie_tools/_runlogs/disc_p2.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 451,
+   "referenced_by": [
+    "governance/reviews/2026-10-04-reality-baseline.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/disc_ph.log",
+   "dest": "/workspace/bie_tools/_runlogs/disc_ph.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 627,
+   "referenced_by": [
+    "governance/reviews/2026-10-04-reality-baseline.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/disc_ph2.log",
+   "dest": "/workspace/bie_tools/_runlogs/disc_ph2.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 311,
+   "referenced_by": [
+    "governance/reviews/2026-10-04-reality-baseline.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/disc_tg.log",
+   "dest": "/workspace/bie_tools/_runlogs/disc_tg.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 443,
+   "referenced_by": [
+    "governance/reviews/2026-10-04-reality-baseline.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/disc_us.log",
+   "dest": "/workspace/bie_tools/_runlogs/disc_us.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 160,
+   "referenced_by": [
+    "governance/reviews/2026-10-04-reality-baseline.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/pstats_b.log",
+   "dest": "/workspace/bie_tools/_runlogs/pstats_b.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 247,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/pstats_c.log",
+   "dest": "/workspace/bie_tools/_runlogs/pstats_c.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 200,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/pstats_d.log",
+   "dest": "/workspace/bie_tools/_runlogs/pstats_d.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 540,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/pstats_g.log",
+   "dest": "/workspace/bie_tools/_runlogs/pstats_g.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 57,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/pstats_i.log",
+   "dest": "/workspace/bie_tools/_runlogs/pstats_i.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 20,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/cand.log",
+   "dest": "/workspace/bie_tools/_runlogs/cand.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 946,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/reach.log",
+   "dest": "/workspace/bie_tools/_runlogs/reach.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 904,
+   "referenced_by": [
+    "governance/reviews/2026-10-04-reality-baseline.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/run_all.log",
+   "dest": "/workspace/bie_tools/_runlogs/run_all.log",
+   "category": "organise",
+   "reason": "Extractor BIE discovery/verification run log loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 6064,
+   "referenced_by": []
+  },
+  {
+   "action": "mkdir",
+   "path": "/workspace/bie_tools/scripts/",
+   "category": "organise",
+   "reason": "New home for loose Extractor helper scripts.",
+   "owner": "Extractor",
+   "bytes": 0,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/extract_bie.py",
+   "dest": "/workspace/bie_tools/scripts/extract_bie.py",
+   "category": "organise",
+   "reason": "Extractor helper script loose at workspace root. reach_check.py docstring calls itself by its old path; update that line on move.",
+   "owner": "Extractor",
+   "bytes": 1573,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/reach_check.py",
+   "dest": "/workspace/bie_tools/scripts/reach_check.py",
+   "category": "organise",
+   "reason": "Extractor helper script loose at workspace root. reach_check.py docstring calls itself by its old path; update that line on move.",
+   "owner": "Extractor",
+   "bytes": 2319,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/dash.html",
+   "dest": "/workspace/bie_tools/dash.html",
+   "category": "organise",
+   "reason": "\"Scraper Dashboard\" page loose at workspace root.",
+   "owner": "Extractor",
+   "bytes": 9846,
+   "referenced_by": []
+  },
+  {
+   "action": "mkdir",
+   "path": "/workspace/bie_tools/_history/",
+   "category": "organise",
+   "reason": "New home for superseded BIE scraper code and patches.",
+   "owner": "Extractor",
+   "bytes": 0,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/base.py.orig",
+   "dest": "/workspace/bie_tools/_history/base.py.orig",
+   "category": "organise",
+   "reason": "Pre-patch copy / patch of BIE scraper code (2 Oct). Keep for history, not at root.",
+   "owner": "Extractor",
+   "bytes": 12235,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/run.py.orig",
+   "dest": "/workspace/bie_tools/_history/run.py.orig",
+   "category": "organise",
+   "reason": "Pre-patch copy / patch of BIE scraper code (2 Oct). Keep for history, not at root.",
+   "owner": "Extractor",
+   "bytes": 22554,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/bie_v2.diff",
+   "dest": "/workspace/bie_tools/_history/bie_v2.diff",
+   "category": "organise",
+   "reason": "Pre-patch copy / patch of BIE scraper code (2 Oct). Keep for history, not at root.",
+   "owner": "Extractor",
+   "bytes": 7040,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/orig_v2/",
+   "dest": "/workspace/bie_tools/_history/orig_v2/",
+   "category": "organise",
+   "reason": "Original v2 BIE scraper code. Its config.ini is listed in secrets-inventory #35, so update that row on move.",
+   "owner": "Extractor",
+   "bytes": 46884,
+   "referenced_by": [
+    "governance/secrets-inventory.md"
+   ]
+  },
+  {
+   "action": "mkdir",
+   "path": "/workspace/medb-research/",
+   "category": "organise",
+   "reason": "New home for MedB research notes kept outside the medb git repo.",
+   "owner": "Emissary",
+   "bytes": 0,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/medb-spec/",
+   "dest": "/workspace/medb-research/medb-spec/",
+   "category": "organise",
+   "reason": "MedB master spec text (2 parts). Sits next to the repo, not in it.",
+   "owner": "Emissary",
+   "bytes": 23992,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/medb-prior-work.md",
+   "dest": "/workspace/medb-research/medb-prior-work.md",
+   "category": "organise",
+   "reason": "MedB prior-work brief (2 Oct). Named in secrets-inventory #29 and threat register (sk-shaped line), so update those rows on move; get Safekeeper to check the sk- line first.",
+   "owner": "Emissary",
+   "bytes": 27030,
+   "referenced_by": [
+    "governance/secrets-inventory.md",
+    "governance/security/threat-register.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/.playwright-mcp/",
+   "dest": "/home/box/quarantine/2026-10-09/playwright-mcp/",
+   "category": "needs-gem",
+   "reason": "PRIVACY. Browser snapshots and console logs from 1-4 Oct: 72 .yml page snapshots (29 mention Facebook, Gmail, LinkedIn, Twitter or Reddit), 32 console logs (one 75 MB), 16 screenshots. Gem approved deleting only the 5 Facebook snapshots (done 9:05am). Suggest quarantine to /home/box/quarantine/ (chmod 700) or delete, Gem to choose.",
+   "owner": "Emissary/Extractor (shared browser tool)",
+   "bytes": 88114663,
+   "referenced_by": [
+    "agents/04dcca0d-1479-4e01-bf29-a13b4fc3c3a7/profile.json",
+    "agents/28cf987d-ee94-4839-a6d3-33c04a11b9d6/profile.json",
+    "agents/52772b1d-4a85-4ea3-ae15-f3912c901a3b/profile.json",
+    "agents/f8e3fdc6-ee60-410e-bdb7-d437fc1500d1/profile.json",
+    "agents/febac500-d854-4dc7-a6a7-23b3feb07f80/profile.json",
+    "governance/approvals/2026-10-09-gem-direct-words.md",
+    "governance/assessments/2026-10-06.md",
+    "governance/codex/_tools/deploy_manifest_2026-10-09.json",
+    "governance/codex/_tools/deploy_manifest_2026-10-09c.json",
+    "governance/codex/_tools/doc_sync_2026-10-09/chunkA.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09/chunkB.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09/part02.json",
+    "governance/codex/_tools/doc_sync_2026-10-09/part02.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09/part03.json",
+    "governance/codex/_tools/doc_sync_2026-10-09/part03.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09/part04.json",
+    "governance/codex/_tools/doc_sync_2026-10-09/part04.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09/part05.json",
+    "governance/codex/_tools/doc_sync_2026-10-09/part05.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09/part06.json",
+    "governance/codex/_tools/doc_sync_2026-10-09/part06.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09c/m04.json",
+    "governance/codex/_tools/doc_sync_2026-10-09c/m04.txt",
+    "governance/codex/codey/v005.md",
+    "governance/codex/explorer-copy/v001.md",
+    "governance/codex/genesis-gang-god/v004.md",
+    "governance/codex/grok-bot/v004.md",
+    "governance/codex/scraper/v003.md",
+    "governance/codex/secrets-credentials-custodian/v004.md",
+    "governance/handover/explorer-handover-2026-10-09.md",
+    "governance/incidents/2026-10-09-live-risks.md",
+    "governance/proposals/2026-10-05/README.md",
+    "governance/proposals/2026-10-05/emissary-v004.md",
+    "governance/proposals/2026-10-05/engineer-v005.md",
+    "governance/proposals/2026-10-05/explorer-v004.md",
+    "governance/proposals/2026-10-05/extractor-v003.md",
+    "governance/proposals/2026-10-05/safekeeper-v004.md",
+    "governance/proposals/2026-10-06/explorer-v004.md",
+    "governance/proposals/2026-10-06/safekeeper-v004.md",
+    "governance/proposals/2026-10-09-retire-merge/apply.json",
+    "governance/proposals/2026-10-09/emissary-v005.md",
+    "governance/proposals/2026-10-09/engineer-v006.md",
+    "governance/proposals/2026-10-09/explorer-v002.md",
+    "governance/reviews/2026-10-06.md",
+    "governance/reviews/2026-10-09.md",
+    "governance/risk/register.md",
+    "governance/secrets-inventory.md",
+    "governance/security/threat-register.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/profile.txt",
+   "dest": "/home/box/quarantine/2026-10-09/profile.txt",
+   "category": "needs-gem",
+   "reason": "PRIVACY. 80 KB copy of a shared ChatGPT chat describing Gem personally (\"Describe Your Work\"). Personal content in shared folder. Nothing references it. Suggest quarantine.",
+   "owner": "unknown (likely Gem upload)",
+   "bytes": 80265,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/agent-tools/6a30c768-0a14-45c0-97c3-b65fb4e22a70.txt",
+   "dest": "/home/box/quarantine/2026-10-09/agent-tools/",
+   "category": "needs-gem",
+   "reason": "PRIVACY. 90 KB raw Gmail thread dump (tool output), written 11:26am 9 Oct. Mailbox content in shared folder. Suggest quarantine.",
+   "owner": "unknown (tool output)",
+   "bytes": 89870,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/agent-tools/ebb569bf-2b08-4a01-8582-042f200d83f7.txt",
+   "dest": "/home/box/quarantine/2026-10-09/agent-tools/",
+   "category": "needs-gem",
+   "reason": "PRIVACY/governance. 100 KB export of Google Doc \"Gem's Bot Codex (governance, restricted)\". Restricted doc copy in shared folder. Archivist owns the mirror.",
+   "owner": "Archivist",
+   "bytes": 100331,
+   "referenced_by": []
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/id-investigator/",
+   "category": "needs-gem",
+   "reason": "PRIVACY. Now only a 188-byte stub; the real file is in /home/box/quarantine/2026-10-09/ (moved 9:07am). Quarantine folders are now mode 755, not the 700 recorded in incidents/2026-10-09-live-risks.md (files still 600). Gem to decide whether to remove the stub and re-tighten folder modes.",
+   "owner": "Investigator",
+   "bytes": 188,
+   "referenced_by": [
+    "governance/assessments/2026-10-05.md",
+    "governance/assessments/2026-10-06.md",
+    "governance/assessments/2026-10-09.md",
+    "governance/incidents/2026-10-09-live-risks.md",
+    "governance/reviews/2026-10-09-explorer-bot-value-review.md",
+    "governance/reviews/2026-10-09.md",
+    "governance/risk/register.md",
+    "governance/secrets-inventory.md",
+    "governance/security/threat-register.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/governance/incidents/2026-10-03-identity-set5-unverified.md",
+   "dest": "/home/box/quarantine/ (Gem decides)",
+   "category": "needs-gem",
+   "reason": "PRIVACY + governance record. Quotes sensitive personal details (T-005 / RR-010). Never delete; Gem to decide quarantine vs redaction.",
+   "owner": "Mender",
+   "bytes": 7425,
+   "referenced_by": [
+    "governance/incidents/2026-10-09-live-risks.md",
+    "governance/incidents/log.md",
+    "governance/incidents/log.md.bak-20261005",
+    "governance/proposals/clone-accuracy-validator-v002.md",
+    "governance/proposals/voice-call-messaging-v001.md",
+    "governance/reviews/2026-10-04-reality-baseline.md",
+    "governance/risk/register.md",
+    "governance/secrets-inventory.md",
+    "governance/security/threat-register.md",
+    "governance/security/verification-log.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/urls.txt",
+   "dest": "(owner decides)",
+   "category": "needs-gem",
+   "reason": "PRIVACY/secret. 43-line research link list (mostly arXiv) with one sk-shaped line (secrets-inventory #33). Architect's scraper.md lists it as Extractor evidence, but content looks like MedB research; owner unclear. Safekeeper to check the sk- line before any move.",
+   "owner": "unclear (Extractor or Emissary)",
+   "bytes": 1904,
+   "referenced_by": [
+    "governance/proposals/scraper.md",
+    "governance/reviews/2026-10-04-reality-baseline.md",
+    "governance/secrets-inventory.md",
+    "governance/security/threat-register.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/medb/data/",
+   "dest": "(no move; review only)",
+   "category": "needs-gem",
+   "reason": "SECRET-by-name. api_tokens.json and sync_clients.json (secrets-inventory #27-28) inside the medb repo (gitignored). Owner to confirm test-only.",
+   "owner": "Emissary",
+   "bytes": 62129,
+   "referenced_by": [
+    "governance/secrets-inventory.md",
+    "governance/security/threat-register.md",
+    "medb/README.md",
+    "medb/app/js/main.js",
+    "medb/docs/DECISIONS.html",
+    "medb/docs/DECISIONS.md",
+    "medb/docs/INTEGRATIONS.md",
+    "medb/medb/api.py",
+    "medb/medb/integrations/mcp_server.py",
+    "medb/tools/medb_mcp.py",
+    "medb/tools/medb_sync.py"
+   ]
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/bie_scraper_and_lists.zip",
+   "category": "needs-gem",
+   "reason": "Gem's 9 Oct upload (copy in Extractor attachments). Holds config.ini with credential-like fields (T-009). Referenced by governance. Identical to bie_organized.zip.",
+   "owner": "Extractor / Gem",
+   "bytes": 1294243,
+   "referenced_by": [
+    "governance/assessments/2026-10-09.md",
+    "governance/reviews/2026-10-09-explorer-bot-value-review.md",
+    "governance/reviews/2026-10-09.md",
+    "governance/risk/register.md",
+    "governance/secrets-inventory.md",
+    "governance/security/threat-register.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/bie/",
+   "dest": "(dedupe against bie_deliverables/scraper/)",
+   "category": "needs-gem",
+   "reason": "Working copy of BIE scraper. 70 files identical to bie_deliverables/scraper/, plus extra reports and db. Dedupe only with Extractor. config.ini in secrets-inventory #35.",
+   "owner": "Extractor",
+   "bytes": 1160904,
+   "referenced_by": [
+    "bie_tools/au/au_discover.sh",
+    "bie_tools/au/au_discover2.sh",
+    "bie_tools/au/au_resume.sh",
+    "bie_tools/au/discover.log",
+    "bie_tools/au/m_au_merge.py",
+    "bie_tools/au/merge.log",
+    "bie_tools/discover.py",
+    "bie_tools/partner_report.py",
+    "bie_tools/partners.py",
+    "bie_tools/pstats/e_groups.py",
+    "governance/approvals/2026-10-03-batch1-review.md",
+    "governance/audits/2026-10-03-initial-audit.md",
+    "governance/proposals/collaboration-map.md",
+    "governance/proposals/scraper.md",
+    "governance/reviews/2026-10-04-reality-baseline.md",
+    "governance/secrets-inventory.md",
+    "reach_check.py"
+   ]
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/bie_tools/pstats/",
+   "category": "needs-gem",
+   "reason": "196 MB: scraped page content (pubinfo.jsonl 140 MB, pages_content.jsonl 51 MB) mixed with scripts. Not a pure cache. Extractor to say what is still needed.",
+   "owner": "Extractor",
+   "bytes": 204471609,
+   "referenced_by": [
+    "bie_tools/au/k_map.py"
+   ]
+  },
+  {
+   "action": "delete",
+   "path": "/workspace/vepa/node_modules/",
+   "category": "needs-gem",
+   "reason": "210 MB. Regenerable with npm ci, but inside a git repo and Engineer is mid-change (uncommitted edits at 6pm 9 Oct). Leave unless Engineer agrees.",
+   "owner": "Engineer",
+   "bytes": 204163766,
+   "referenced_by": [
+    "perf/mx-collapse.mjs",
+    "perf/mx-refill-check.mjs",
+    "perf/profile.mjs",
+    "perf/settings-shot.mjs",
+    "perf/topbar-shot.mjs",
+    "tools/codey/verify.sh"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/vepa/",
+   "dest": "(no action)",
+   "category": "needs-gem",
+   "reason": "Git repo (197 commits, 25 today). No action.",
+   "owner": "Engineer",
+   "bytes": 236152505,
+   "referenced_by": [
+    "governance/handover/explorer-handover-2026-10-09.md",
+    "governance/reviews/2026-10-04-reality-baseline.md",
+    "governance/reviews/2026-10-05.md",
+    "governance/reviews/2026-10-06.md",
+    "governance/reviews/2026-10-09.md",
+    "governance/risk/register.md",
+    "governance/secrets-inventory.md",
+    "perf/addspeed.py",
+    "perf/disthist.mjs",
+    "perf/lines.py",
+    "perf/logs/nantest.log",
+    "perf/logs/zipbuild.log",
+    "perf/logs/zipbuild2.log",
+    "perf/mx-carry.mjs",
+    "perf/mx-collapse.mjs",
+    "perf/mx-nan.mjs",
+    "perf/mx-refill-check.mjs",
+    "perf/nanhunt/make.py",
+    "perf/pairs.mjs",
+    "perf/prof.sh",
+    "perf/prof/CPU.20261004.101816.36423.0.001.cpuprofile",
+    "perf/profile.mjs",
+    "perf/settings-shot.mjs",
+    "perf/single-nan.mjs",
+    "perf/solve-bench.mjs",
+    "perf/topbar-shot.mjs",
+    "tools/codey/cp.sh",
+    "tools/codey/env.sh",
+    "tools/codey/fix_agents.py",
+    "tools/codey/fix_agents2.py",
+    "tools/codey/fmm-hunt/base.mjs",
+    "tools/codey/fmm-hunt/measure.mjs",
+    "tools/codey/linkcheck.py",
+    "tools/codey/sync_counts.py",
+    "tools/codey/verify.sh",
+    "vepa-plans/build_data.py",
+    "vepa-plans/codey/gen.py",
+    "vepa-plans/codey/gen_plan.py",
+    "vepa-plans/embed.py",
+    "vepa-plans/feasibility-2026-10-09.md",
+    "vepa-plans/index.html",
+    "vepa-plans/items.json",
+    "vepa-plans/roadmap-from-interviews.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/medb/",
+   "dest": "(no action)",
+   "category": "needs-gem",
+   "reason": "Git repo (22 commits). No action.",
+   "owner": "Emissary",
+   "bytes": 46239713,
+   "referenced_by": [
+    "governance/handover/explorer-handover-2026-10-09.md",
+    "governance/proposals/2026-10-05/emissary-v004.md",
+    "governance/reviews/2026-10-05.md",
+    "governance/reviews/2026-10-09.md",
+    "governance/risk/register.md",
+    "governance/secrets-inventory.md",
+    "governance/security/threat-register.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/codey/",
+   "dest": "(no move; named by instructions)",
+   "category": "needs-gem",
+   "reason": "Codey 3.x operating specs. Named in bot instructions (codex codey v002) so do not move without Gem.",
+   "owner": "Engineer",
+   "bytes": 43771,
+   "referenced_by": [
+    "governance/approvals/2026-10-03-batch1-review.md",
+    "governance/audits/2026-10-03-initial-audit.md",
+    "governance/codex/_tools/build_v002_batch1.py",
+    "governance/codex/codey/CHANGELOG.md",
+    "governance/codex/codey/v002.md",
+    "governance/proposals/codey.md",
+    "governance/proposals/collaboration-map.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/grok-swarm-research/",
+   "dest": "(no move; named by instructions)",
+   "category": "needs-gem",
+   "reason": "Named in Engineer profile.json and codex. No move.",
+   "owner": "Engineer (Ensembler retired)",
+   "bytes": 45388,
+   "referenced_by": [
+    "agent-tools/ebb569bf-2b08-4a01-8582-042f200d83f7.txt",
+    "agents/f8e3fdc6-ee60-410e-bdb7-d437fc1500d1/profile.json",
+    "governance/audits/2026-10-03-initial-audit.md",
+    "governance/bot-landscape-review.md",
+    "governance/cartography/summaries-v1.md",
+    "governance/cartography/summaries-v2.md",
+    "governance/codex/_tools/deploy_manifest_2026-10-04.json",
+    "governance/codex/_tools/deploy_manifest_2026-10-09.json",
+    "governance/codex/_tools/doc_chunks.json",
+    "governance/codex/_tools/doc_sync_2026-10-04/chunkB.txt",
+    "governance/codex/_tools/doc_sync_2026-10-04/part3.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09/chunkB.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09/part06.json",
+    "governance/codex/_tools/doc_sync_2026-10-09/part06.txt",
+    "governance/codex/codey/v003.md",
+    "governance/codex/codey/v004.md",
+    "governance/codex/codey/v005.md",
+    "governance/codex/swarm-builder/v001.md",
+    "governance/costs/README.md",
+    "governance/costs/ledger.md",
+    "governance/proposals/2026-10-05/engineer-v005.md",
+    "governance/proposals/2026-10-09-retire-merge/apply.json",
+    "governance/proposals/2026-10-09/engineer-v006.md",
+    "governance/proposals/final-2026-10-04/engineer-final.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/governance/directory.md.bak-0909",
+   "dest": "/workspace/governance/_archive/directory.md.bak-0909",
+   "category": "needs-gem",
+   "reason": "Governance record backup. Never delete. Option: move to governance/_archive/ if Gem and the owner agree.",
+   "owner": "Archivist / file owner",
+   "bytes": 3809,
+   "referenced_by": [
+    "governance/directory.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/governance/directory.md.bak-1504",
+   "dest": "/workspace/governance/_archive/directory.md.bak-1504",
+   "category": "needs-gem",
+   "reason": "Governance record backup. Never delete. Option: move to governance/_archive/ if Gem and the owner agree.",
+   "owner": "Archivist / file owner",
+   "bytes": 6696,
+   "referenced_by": [
+    "governance/reviews/2026-10-04-reality-baseline.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/governance/directory.md.bak-1525",
+   "dest": "/workspace/governance/_archive/directory.md.bak-1525",
+   "category": "needs-gem",
+   "reason": "Governance record backup. Never delete. Option: move to governance/_archive/ if Gem and the owner agree.",
+   "owner": "Archivist / file owner",
+   "bytes": 7807,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/governance/phases.md.bak-0909",
+   "dest": "/workspace/governance/_archive/phases.md.bak-0909",
+   "category": "needs-gem",
+   "reason": "Governance record backup. Never delete. Option: move to governance/_archive/ if Gem and the owner agree.",
+   "owner": "Archivist / file owner",
+   "bytes": 1019,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/governance/schedule.md.bak-20261005",
+   "dest": "/workspace/governance/_archive/schedule.md.bak-20261005",
+   "category": "needs-gem",
+   "reason": "Governance record backup. Never delete. Option: move to governance/_archive/ if Gem and the owner agree.",
+   "owner": "Archivist / file owner",
+   "bytes": 5485,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/governance/schedule.md.bak-p1",
+   "dest": "/workspace/governance/_archive/schedule.md.bak-p1",
+   "category": "needs-gem",
+   "reason": "Governance record backup. Never delete. Option: move to governance/_archive/ if Gem and the owner agree.",
+   "owner": "Archivist / file owner",
+   "bytes": 4548,
+   "referenced_by": [
+    "governance/reviews/2026-10-04-reality-baseline.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/governance/incidents/log.md.bak-20261005",
+   "dest": "/workspace/governance/_archive/log.md.bak-20261005",
+   "category": "needs-gem",
+   "reason": "Governance record backup. Never delete. Option: move to governance/_archive/ if Gem and the owner agree.",
+   "owner": "Archivist / file owner",
+   "bytes": 1902,
+   "referenced_by": [
+    "governance/incidents/log.md",
+    "governance/reviews/2026-10-05.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/governance/risk/register.md.bak-20261005",
+   "dest": "/workspace/governance/_archive/register.md.bak-20261005",
+   "category": "needs-gem",
+   "reason": "Governance record backup. Never delete. Option: move to governance/_archive/ if Gem and the owner agree.",
+   "owner": "Archivist / file owner",
+   "bytes": 442,
+   "referenced_by": []
+  },
+  {
+   "action": "move",
+   "path": "/workspace/governance/cartography/",
+   "dest": "/workspace/governance/cartography/_archive/",
+   "category": "needs-gem",
+   "reason": "7.4 MB of role-map versions v1-v6 (png/svg/json each). v5 files duplicate the current files byte for byte. Governance record: optional move of v1-v5 into cartography/_archive/, Archivist and Gem decide.",
+   "owner": "Archivist",
+   "bytes": 7539194,
+   "referenced_by": [
+    "agent-tools/ebb569bf-2b08-4a01-8582-042f200d83f7.txt",
+    "agents/61ef3abd-87b8-49f1-b8d6-b52969afa315/profile.json",
+    "governance/bot-landscape-review.md",
+    "governance/codex/PENDING-FOR-ARBITER.md",
+    "governance/codex/PENDING-FOR-ASSEMBLER.md",
+    "governance/codex/_tools/deploy_manifest_2026-10-04.json",
+    "governance/codex/_tools/deploy_manifest_2026-10-09.json",
+    "governance/codex/_tools/deploy_manifest_2026-10-09c.json",
+    "governance/codex/_tools/doc_chunks.json",
+    "governance/codex/_tools/doc_sync_2026-10-04/chunkB.txt",
+    "governance/codex/_tools/doc_sync_2026-10-04/chunkE.txt",
+    "governance/codex/_tools/doc_sync_2026-10-04/part3.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09/chunkA.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09/part01.json",
+    "governance/codex/_tools/doc_sync_2026-10-09/part01.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09c/m00.json",
+    "governance/codex/_tools/doc_sync_2026-10-09c/m00.txt",
+    "governance/codex/_tools/doc_sync_2026-10-09c/m03.json",
+    "governance/codex/_tools/doc_sync_2026-10-09c/m03.txt",
+    "governance/codex/arbiter/v002.md",
+    "governance/codex/codex-keeper/CHANGELOG.md",
+    "governance/codex/codex-keeper/v005.md",
+    "governance/codex/role-cartographer/v001.md",
+    "governance/codex/role-cartographer/v003.md",
+    "governance/codex/role-cartographer/v004.md",
+    "governance/codex/role-cartographer/v005.md",
+    "governance/codex/role-cartographer/v006.md",
+    "governance/directory.md",
+    "governance/proposals/2026-10-06/assembler-v005.md",
+    "governance/proposals/2026-10-09-retire-merge/README.md",
+    "governance/proposals/2026-10-09-retire-merge/_build.py",
+    "governance/proposals/2026-10-09-retire-merge/apply.json",
+    "governance/proposals/collaboration-map.md",
+    "governance/proposals/imitator-approver-2026-10-04/assembler-v004.md",
+    "governance/proposals/merge-F-unretire-assembler-2026-10-04.md",
+    "governance/reviews/2026-10-04-reality-baseline.md",
+    "governance/reviews/2026-10-09.md",
+    "governance/rulings.md"
+   ]
+  },
+  {
+   "action": "move",
+   "path": "/workspace/governance/codex/_tools/doc_sync_2026-10-04/",
+   "dest": "/workspace/governance/codex/_tools/_archive/",
+   "category": "needs-gem",
+   "reason": "Chunks used to sync the Google Doc mirror. Codex tooling; Archivist decides.",
+   "owner": "Archivist",
+   "bytes": 198221,
+   "referenced_by": [
+    "governance/codex/MIRROR.md"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+preset,size,particles_seen,page_ready_ms,respawn_to_first_full_tick_ms,fps,frame_ms_p50,frame_ms_p95,sim_ticks_per_s,js_heap_main_mb,worker_heap_mb,chrome_rss_mb,alive,species,bonded_pct,note
+HIGH,2500,2526,362,422,60.0,16.7,16.7,2.33,11.1,n/a,623,2526,5,26.9,headless Chrome, NO GPU (SwiftShader), 1280x800
+MEDIUM,2500,2619,162,116,59.1,16.7,16.7,11.82,12.2,n/a,662,2617,5,16.8,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOW,2500,2687,161,96,59.2,16.7,16.7,18.31,14.7,n/a,650,2678,5,27.3,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOWEST,2500,2756,151,93,58.6,16.7,16.7,25.98,11.5,n/a,648,2751,5,11.3,headless Chrome, NO GPU (SwiftShader), 1280x800
+HIGH,10000,10000,134,774,25.3,33.3,50.0,1.16,9.7,n/a,644,10000,5,13.0,headless Chrome, NO GPU (SwiftShader), 1280x800
+MEDIUM,10000,10000,137,387,22.5,33.3,50.0,3.26,17.9,n/a,632,10000,5,10.7,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOW,10000,10000,144,260,22.1,50.0,50.0,5.28,14.7,n/a,701,9995,5,9.8,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOWEST,10000,10000,151,190,23.0,50.0,50.0,7.29,13.6,n/a,674,9993,5,3.5,headless Chrome, NO GPU (SwiftShader), 1280x800
+HIGH,50000,50000,143,1639,5.7,166.7,200.0,0.58,12.0,n/a,651,50000,5,13.1,headless Chrome, NO GPU (SwiftShader), 1280x800
+MEDIUM,50000,50000,145,948,5.4,183.3,250.0,1.08,16.7,n/a,670,49996,5,10.6,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOW,50000,50000,150,780,5.1,183.3,283.3,1.47,17.0,n/a,723,50000,5,5.9,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOWEST,50000,50000,159,860,5.2,183.3,216.7,1.66,18.7,n/a,711,49993,5,2.4,headless Chrome, NO GPU (SwiftShader), 1280x800

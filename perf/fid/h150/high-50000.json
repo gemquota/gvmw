@@ -1,0 +1,30 @@
+{
+  "node": "v22.23.3",
+  "cpus": 8,
+  "laws": "tidal",
+  "runs": 1,
+  "load1Start": 0.38,
+  "sizes": {
+    "50000": {
+      "medMsPerTick": 1992.97,
+      "ticksPerSec": 0.5,
+      "runsMs": [
+        1993
+      ],
+      "hash": "33c69709efcd7002/0",
+      "deterministic": true,
+      "alive": 50000,
+      "species": 5,
+      "born": 0,
+      "bonded": 49555,
+      "meanEnergy": 67.93,
+      "nanEnergy": 0,
+      "nanRepairs": 0,
+      "rssMB": 200.9,
+      "heapMB": 39.6,
+      "bufferMB": 38.15
+    }
+  },
+  "speed": "high",
+  "load1End": 2.72
+}

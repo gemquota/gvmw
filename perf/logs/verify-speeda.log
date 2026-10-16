@@ -1,0 +1,12 @@
+head 33fde13 node v22.23.3
+test rc=0
+tests 1974 / 1974 failed 0 files 191
+spec:check rc=0
+check-repository rc=0
+report:ui:check rc=0
+repository:check rc=0
+build rc=0
+tree-dirty-after-build: 0
+golden rc=0
+links: BROKEN 0 generated 0 hand 0
+exit 0

@@ -1,0 +1,3773 @@
+{
+ "generated_by": "build/meta_map.py",
+ "embedding_model": "bge-small-en-v1.5 + bge-base-en-v1.5 + all-MiniLM-L6-v2",
+ "semantic_layout": "tsne_emb",
+ "alt_layout": "umap_emb",
+ "layout_metrics": {
+  "umap_emb": {
+   "trustworthiness_k7": 0.849,
+   "category_knn5_purity": 0.358
+  },
+  "tsne_emb": {
+   "trustworthiness_k7": 0.843,
+   "category_knn5_purity": 0.386
+  },
+  "pca_emb": {
+   "trustworthiness_k7": 0.73,
+   "category_knn5_purity": 0.162
+  },
+  "umap_tfidf": {
+   "trustworthiness_k7": 0.72,
+   "category_knn5_purity": 0.226
+  },
+  "tsne_tfidf": {
+   "trustworthiness_k7": 0.737,
+   "category_knn5_purity": 0.255
+  },
+  "axes": {
+   "trustworthiness_k7": 0.685,
+   "category_knn5_purity": 0.319
+  }
+ },
+ "axes": {
+  "x": {
+   "label": "Control: centralized → decentralized",
+   "definition": "0.7 × rule score parsed from control_flow (centralized≈0.08, hierarchical≈0.28, hybrid≈0.5, decentralized≈0.92, averaged over matched terms) + 0.3 × rank-normalised embedding projection onto the anchor axis 'single central orchestrator' → 'autonomous peers, no controller'."
+  },
+  "y": {
+   "label": "Coordination: fixed workflow → conversational/deliberative → emergent/evolutionary",
+   "definition": "0.55 × category prior (e.g. Pipeline 0.05, Conversational 0.55, Evolutionary 0.9, Classical swarm 0.95) + 0.45 × rank-normalised soft-assignment of the structure's embedding to three anchor descriptions (fixed workflow=0, conversational=0.5, emergent/evolutionary=1)."
+  },
+  "size": "complexity_rating (1-5)",
+  "color": "category (alternatives in viewer: complexity, research fit, scraping fit)",
+  "note": "Displayed positions are slightly decluttered (repulsion) from the raw scores; raw scores are in axes_x_raw/axes_y_raw."
+ },
+ "points": [
+  {
+   "id": "crewai_hierarchical",
+   "name": "CrewAI Hierarchical Process (manager-delegated crew)",
+   "short_name": "CrewAI Hierarchical Process",
+   "category": "Centralized orchestration",
+   "axes_x": 0.0707,
+   "axes_y": 0.2376,
+   "axes_x_raw": 0.068,
+   "axes_y_raw": 0.232,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.04,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.21,
+   "sem_x": 0.3014,
+   "sem_y": 0.2044,
+   "alt_x": 0.9137,
+   "alt_y": 0.493,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 3,
+   "nearest_other_category": "sequential_pipeline"
+  },
+  {
+   "id": "evolving_orchestration_puppeteer",
+   "name": "Evolving / Learned Orchestrator (Puppeteer)",
+   "short_name": "Evolving / Learned Orchestrator",
+   "category": "Centralized orchestration",
+   "axes_x": 0.1281,
+   "axes_y": 0.4972,
+   "axes_x_raw": 0.128,
+   "axes_y_raw": 0.4975,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.24,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.8,
+   "sem_x": 0.3755,
+   "sem_y": 0.3611,
+   "alt_x": 0.7014,
+   "alt_y": 0.4074,
+   "complexity": 5,
+   "research_fit": 3,
+   "scraping_fit": 2,
+   "nearest_other_category": "agentnet_decentralized"
+  },
+  {
+   "id": "hierarchical_teams",
+   "name": "Hierarchical Teams (supervisor of supervisors)",
+   "short_name": "Hierarchical Teams",
+   "category": "Centralized orchestration",
+   "axes_x": 0.1746,
+   "axes_y": 0.4602,
+   "axes_x_raw": 0.177,
+   "axes_y_raw": 0.4615,
+   "centralization_rule": 0.18,
+   "centralization_embed": 0.17,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.72,
+   "sem_x": 0.3637,
+   "sem_y": 0.1955,
+   "alt_x": 0.8901,
+   "alt_y": 0.5835,
+   "complexity": 3,
+   "research_fit": 4,
+   "scraping_fit": 4,
+   "nearest_other_category": "self_organized_agents"
+  },
+  {
+   "id": "hugginggpt_controller",
+   "name": "HuggingGPT-style Controller + Expert Models",
+   "short_name": "HuggingGPT-style Controller + Ex…",
+   "category": "Centralized orchestration",
+   "axes_x": 0.0928,
+   "axes_y": 0.1951,
+   "axes_x_raw": 0.083,
+   "axes_y_raw": 0.1915,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.09,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.12,
+   "sem_x": 0.2339,
+   "sem_y": 0.1753,
+   "alt_x": 0.9804,
+   "alt_y": 0.4198,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "model_swarms_pso"
+  },
+  {
+   "id": "llmcompiler_dag",
+   "name": "LLMCompiler (parallel task DAG)",
+   "short_name": "LLMCompiler",
+   "category": "Centralized orchestration",
+   "axes_x": 0.0577,
+   "axes_y": 0.1354,
+   "axes_x_raw": 0.065,
+   "axes_y_raw": 0.142,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.03,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.01,
+   "sem_x": 0.0987,
+   "sem_y": 0.29,
+   "alt_x": 0.8917,
+   "alt_y": 0.1938,
+   "complexity": 3,
+   "research_fit": 4,
+   "scraping_fit": 5,
+   "nearest_other_category": "dag_workflow"
+  },
+  {
+   "id": "magentic_one_ledger",
+   "name": "Magentic-One (Orchestrator with task & progress ledgers)",
+   "short_name": "Magentic-One",
+   "category": "Centralized orchestration",
+   "axes_x": 0.042,
+   "axes_y": 0.1916,
+   "axes_x_raw": 0.059,
+   "axes_y_raw": 0.187,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.01,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.11,
+   "sem_x": 0.3227,
+   "sem_y": 0.3583,
+   "alt_x": 0.8447,
+   "alt_y": 0.3258,
+   "complexity": 4,
+   "research_fit": 5,
+   "scraping_fit": 4,
+   "nearest_other_category": "loop_agent"
+  },
+  {
+   "id": "orchestrator_worker",
+   "name": "Orchestrator-Worker (Lead agent + subagents)",
+   "short_name": "Orchestrator-Worker",
+   "category": "Centralized orchestration",
+   "axes_x": 0.0431,
+   "axes_y": 0.2255,
+   "axes_x_raw": 0.056,
+   "axes_y_raw": 0.2185,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.0,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.18,
+   "sem_x": 0.3456,
+   "sem_y": 0.3328,
+   "alt_x": 0.8768,
+   "alt_y": 0.2819,
+   "complexity": 2,
+   "research_fit": 5,
+   "scraping_fit": 5,
+   "nearest_other_category": "chain_of_agents"
+  },
+  {
+   "id": "plan_and_execute",
+   "name": "Plan-and-Execute",
+   "short_name": "Plan-and-Execute",
+   "category": "Centralized orchestration",
+   "axes_x": 0.0941,
+   "axes_y": 0.1649,
+   "axes_x_raw": 0.089,
+   "axes_y_raw": 0.1645,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.11,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.06,
+   "sem_x": 0.1427,
+   "sem_y": 0.202,
+   "alt_x": 1.0,
+   "alt_y": 0.2645,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 4,
+   "nearest_other_category": "graph_state_machine"
+  },
+  {
+   "id": "rewoo",
+   "name": "ReWOO (Reasoning WithOut Observation)",
+   "short_name": "ReWOO",
+   "category": "Centralized orchestration",
+   "axes_x": 0.1213,
+   "axes_y": 0.157,
+   "axes_x_raw": 0.095,
+   "axes_y_raw": 0.169,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.13,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.07,
+   "sem_x": 0.1217,
+   "sem_y": 0.1835,
+   "alt_x": 0.9674,
+   "alt_y": 0.3051,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "graph_state_machine"
+  },
+  {
+   "id": "supervisor_router",
+   "name": "Supervisor (LLM-routed worker graph)",
+   "short_name": "Supervisor",
+   "category": "Centralized orchestration",
+   "axes_x": 0.0678,
+   "axes_y": 0.1784,
+   "axes_x_raw": 0.074,
+   "axes_y_raw": 0.1735,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.06,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.08,
+   "sem_x": 0.2986,
+   "sem_y": 0.264,
+   "alt_x": 0.8676,
+   "alt_y": 0.4346,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 3,
+   "nearest_other_category": "graph_state_machine"
+  },
+  {
+   "id": "talkhier",
+   "name": "TalkHier (structured hierarchical talk)",
+   "short_name": "TalkHier",
+   "category": "Centralized orchestration",
+   "axes_x": 0.204,
+   "axes_y": 0.322,
+   "axes_x_raw": 0.204,
+   "axes_y_raw": 0.322,
+   "centralization_rule": 0.18,
+   "centralization_embed": 0.26,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.41,
+   "sem_x": 0.4069,
+   "sem_y": 0.1873,
+   "alt_x": 0.4771,
+   "alt_y": 0.4269,
+   "complexity": 4,
+   "research_fit": 4,
+   "scraping_fit": 2,
+   "nearest_other_category": "chat_chain_chatdev"
+  },
+  {
+   "id": "task_queue_babyagi",
+   "name": "Task-Queue Agent Loop (BabyAGI-style)",
+   "short_name": "Task-Queue Agent Loop",
+   "category": "Centralized orchestration",
+   "axes_x": 0.1401,
+   "axes_y": 0.2102,
+   "axes_x_raw": 0.14,
+   "axes_y_raw": 0.2095,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.28,
+   "coordination_prior": 0.25,
+   "coordination_embed": 0.16,
+   "sem_x": 0.3065,
+   "sem_y": 0.439,
+   "alt_x": 0.6575,
+   "alt_y": 0.3527,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "loop_agent"
+  },
+  {
+   "id": "actor_model",
+   "name": "Actor Model (message-passing runtime)",
+   "short_name": "Actor Model",
+   "category": "Classical MAS architectures & organizations",
+   "axes_x": 0.8,
+   "axes_y": 0.438,
+   "axes_x_raw": 0.8,
+   "axes_y_raw": 0.438,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.52,
+   "coordination_prior": 0.6,
+   "coordination_embed": 0.24,
+   "sem_x": 0.207,
+   "sem_y": 0.7563,
+   "alt_x": 0.7249,
+   "alt_y": 0.6531,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 5,
+   "nearest_other_category": "pubsub_message_pool"
+  },
+  {
+   "id": "bdi_agents",
+   "name": "BDI Agents (Belief-Desire-Intention)",
+   "short_name": "BDI Agents",
+   "category": "Classical MAS architectures & organizations",
+   "axes_x": 0.71,
+   "axes_y": 0.4965,
+   "axes_x_raw": 0.71,
+   "axes_y_raw": 0.4965,
+   "centralization_rule": 0.8,
+   "centralization_embed": 0.5,
+   "coordination_prior": 0.6,
+   "coordination_embed": 0.37,
+   "sem_x": 0.4483,
+   "sem_y": 0.4603,
+   "alt_x": 0.4737,
+   "alt_y": 0.6093,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 2,
+   "nearest_other_category": "blackboard_llm"
+  },
+  {
+   "id": "consensus_networks",
+   "name": "Networked Consensus / Cooperative Control",
+   "short_name": "Networked Consensus / Cooperativ…",
+   "category": "Classical MAS architectures & organizations",
+   "axes_x": 0.9323,
+   "axes_y": 0.7241,
+   "axes_x_raw": 0.932,
+   "axes_y_raw": 0.7215,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.96,
+   "coordination_prior": 0.6,
+   "coordination_embed": 0.87,
+   "sem_x": 0.605,
+   "sem_y": 0.8558,
+   "alt_x": 0.3284,
+   "alt_y": 0.7924,
+   "complexity": 3,
+   "research_fit": 2,
+   "scraping_fit": 1,
+   "nearest_other_category": "boids_flocking"
+  },
+  {
+   "id": "federation_facilitator",
+   "name": "Federation / Facilitator (broker-mediated)",
+   "short_name": "Federation / Facilitator",
+   "category": "Classical MAS architectures & organizations",
+   "axes_x": 0.4208,
+   "axes_y": 0.5421,
+   "axes_x_raw": 0.431,
+   "axes_y_raw": 0.537,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.27,
+   "coordination_prior": 0.6,
+   "coordination_embed": 0.46,
+   "sem_x": 0.6813,
+   "sem_y": 0.2351,
+   "alt_x": 0.7421,
+   "alt_y": 0.7718,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 3,
+   "nearest_other_category": "a2a_federation"
+  },
+  {
+   "id": "holonic",
+   "name": "Holonic Multi-Agent System (holarchy)",
+   "short_name": "Holonic Multi-Agent System",
+   "category": "Classical MAS architectures & organizations",
+   "axes_x": 0.5282,
+   "axes_y": 0.6862,
+   "axes_x_raw": 0.536,
+   "axes_y_raw": 0.681,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.62,
+   "coordination_prior": 0.6,
+   "coordination_embed": 0.78,
+   "sem_x": 0.5892,
+   "sem_y": 0.0947,
+   "alt_x": 0.6671,
+   "alt_y": 0.9379,
+   "complexity": 4,
+   "research_fit": 4,
+   "scraping_fit": 3,
+   "nearest_other_category": "self_organized_agents"
+  },
+  {
+   "id": "subsumption_layered",
+   "name": "Subsumption / Layered Reactive Architecture",
+   "short_name": "Subsumption / Layered Reactive A…",
+   "category": "Classical MAS architectures & organizations",
+   "axes_x": 0.821,
+   "axes_y": 0.636,
+   "axes_x_raw": 0.821,
+   "axes_y_raw": 0.636,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.59,
+   "coordination_prior": 0.6,
+   "coordination_embed": 0.68,
+   "sem_x": 0.4405,
+   "sem_y": 0.5612,
+   "alt_x": 0.2339,
+   "alt_y": 0.5894,
+   "complexity": 2,
+   "research_fit": 2,
+   "scraping_fit": 4,
+   "nearest_other_category": "mixture_of_agents"
+  },
+  {
+   "id": "ant_colony_optimization",
+   "name": "Ant Colony Optimization (Ant System / ACS)",
+   "short_name": "Ant Colony Optimization",
+   "category": "Classical swarm intelligence",
+   "axes_x": 0.8705,
+   "axes_y": 0.9475,
+   "axes_x_raw": 0.875,
+   "axes_y_raw": 0.95,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.77,
+   "coordination_prior": 0.95,
+   "coordination_embed": 0.95,
+   "sem_x": 0.739,
+   "sem_y": 0.9576,
+   "alt_x": 0.3179,
+   "alt_y": 0.9555,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "swarmsys"
+  },
+  {
+   "id": "artificial_bee_colony",
+   "name": "Artificial Bee Colony (employed / onlooker / scout)",
+   "short_name": "Artificial Bee Colony",
+   "category": "Classical swarm intelligence",
+   "axes_x": 0.8914,
+   "axes_y": 0.9261,
+   "axes_x_raw": 0.89,
+   "axes_y_raw": 0.9275,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.82,
+   "coordination_prior": 0.95,
+   "coordination_embed": 0.9,
+   "sem_x": 0.7855,
+   "sem_y": 0.96,
+   "alt_x": 0.2496,
+   "alt_y": 1.0,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 5,
+   "nearest_other_category": "swarmsys"
+  },
+  {
+   "id": "boids_flocking",
+   "name": "Boids / Flocking",
+   "short_name": "Boids / Flocking",
+   "category": "Classical swarm intelligence",
+   "axes_x": 0.944,
+   "axes_y": 0.968,
+   "axes_x_raw": 0.944,
+   "axes_y_raw": 0.968,
+   "centralization_rule": 0.92,
+   "centralization_embed": 1.0,
+   "coordination_prior": 0.95,
+   "coordination_embed": 0.99,
+   "sem_x": 0.6456,
+   "sem_y": 0.8753,
+   "alt_x": 0.327,
+   "alt_y": 0.9127,
+   "complexity": 1,
+   "research_fit": 2,
+   "scraping_fit": 3,
+   "nearest_other_category": "consensus_networks"
+  },
+  {
+   "id": "firefly_gwo_family",
+   "name": "Metaheuristic Swarm Family (Firefly, Grey Wolf, Bacterial Foraging)",
+   "short_name": "Metaheuristic Swarm Family",
+   "category": "Classical swarm intelligence",
+   "axes_x": 0.8681,
+   "axes_y": 0.9773,
+   "axes_x_raw": 0.875,
+   "axes_y_raw": 0.9725,
+   "centralization_rule": 0.86,
+   "centralization_embed": 0.91,
+   "coordination_prior": 0.95,
+   "coordination_embed": 1.0,
+   "sem_x": 0.7818,
+   "sem_y": 0.9055,
+   "alt_x": 0.175,
+   "alt_y": 0.969,
+   "complexity": 2,
+   "research_fit": 2,
+   "scraping_fit": 2,
+   "nearest_other_category": "swarmsys"
+  },
+  {
+   "id": "particle_swarm_optimization",
+   "name": "Particle Swarm Optimization",
+   "short_name": "Particle Swarm Optimization",
+   "category": "Classical swarm intelligence",
+   "axes_x": 0.895,
+   "axes_y": 0.9646,
+   "axes_x_raw": 0.887,
+   "axes_y_raw": 0.9635,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.81,
+   "coordination_prior": 0.95,
+   "coordination_embed": 0.98,
+   "sem_x": 0.77,
+   "sem_y": 0.8107,
+   "alt_x": 0.1965,
+   "alt_y": 0.8684,
+   "complexity": 2,
+   "research_fit": 2,
+   "scraping_fit": 2,
+   "nearest_other_category": "model_swarms_pso"
+  },
+  {
+   "id": "swarm_robotics",
+   "name": "Swarm Robotics (swarm engineering)",
+   "short_name": "Swarm Robotics",
+   "category": "Classical swarm intelligence",
+   "axes_x": 0.916,
+   "axes_y": 0.9434,
+   "axes_x_raw": 0.914,
+   "axes_y_raw": 0.9455,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.9,
+   "coordination_prior": 0.95,
+   "coordination_embed": 0.94,
+   "sem_x": 0.695,
+   "sem_y": 0.8853,
+   "alt_x": 0.2562,
+   "alt_y": 0.9269,
+   "complexity": 3,
+   "research_fit": 2,
+   "scraping_fit": 3,
+   "nearest_other_category": "swarmsys"
+  },
+  {
+   "id": "agentverse_dynamic_team",
+   "name": "Dynamic Expert Recruitment (AgentVerse)",
+   "short_name": "Dynamic Expert Recruitment",
+   "category": "Conversational teams & role-play",
+   "axes_x": 0.482,
+   "axes_y": 0.5365,
+   "axes_x_raw": 0.482,
+   "axes_y_raw": 0.5365,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.44,
+   "coordination_prior": 0.55,
+   "coordination_embed": 0.52,
+   "sem_x": 0.5376,
+   "sem_y": 0.5793,
+   "alt_x": 0.4202,
+   "alt_y": 0.3555,
+   "complexity": 3,
+   "research_fit": 4,
+   "scraping_fit": 2,
+   "nearest_other_category": "ai_scientist_pipeline"
+  },
+  {
+   "id": "cooperative_embodied_coela",
+   "name": "Modular Cooperative Agents with Communication Module (CoELA)",
+   "short_name": "Modular Cooperative Agents with…",
+   "category": "Conversational teams & role-play",
+   "axes_x": 0.911,
+   "axes_y": 0.5635,
+   "axes_x_raw": 0.911,
+   "axes_y_raw": 0.5635,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.89,
+   "coordination_prior": 0.55,
+   "coordination_embed": 0.58,
+   "sem_x": 0.5722,
+   "sem_y": 0.3904,
+   "alt_x": 0.4912,
+   "alt_y": 0.7308,
+   "complexity": 3,
+   "research_fit": 2,
+   "scraping_fit": 2,
+   "nearest_other_category": "agentnet_decentralized"
+  },
+  {
+   "id": "generative_agents_sim",
+   "name": "Generative Agent Society Simulation",
+   "short_name": "Generative Agent Society Simulat…",
+   "category": "Conversational teams & role-play",
+   "axes_x": 0.9437,
+   "axes_y": 0.6409,
+   "axes_x_raw": 0.941,
+   "axes_y_raw": 0.6445,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.99,
+   "coordination_prior": 0.55,
+   "coordination_embed": 0.76,
+   "sem_x": 0.6548,
+   "sem_y": 0.4259,
+   "alt_x": 0.4835,
+   "alt_y": 0.8194,
+   "complexity": 4,
+   "research_fit": 2,
+   "scraping_fit": 1,
+   "nearest_other_category": "agentnet_decentralized"
+  },
+  {
+   "id": "group_chat_selector",
+   "name": "Group Chat with Speaker Selection (AutoGen)",
+   "short_name": "Group Chat with Speaker Selection",
+   "category": "Conversational teams & role-play",
+   "axes_x": 0.1193,
+   "axes_y": 0.5258,
+   "axes_x_raw": 0.113,
+   "axes_y_raw": 0.523,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.19,
+   "coordination_prior": 0.55,
+   "coordination_embed": 0.49,
+   "sem_x": 0.4996,
+   "sem_y": 0.2424,
+   "alt_x": 0.6235,
+   "alt_y": 0.5578,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 2,
+   "nearest_other_category": "blackboard_llm"
+  },
+  {
+   "id": "perspective_conversations_storm",
+   "name": "Perspective-Guided Simulated Conversations (STORM / Co-STORM)",
+   "short_name": "Perspective-Guided Simulated Con…",
+   "category": "Conversational teams & role-play",
+   "axes_x": 0.1619,
+   "axes_y": 0.4871,
+   "axes_x_raw": 0.164,
+   "axes_y_raw": 0.4825,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.36,
+   "coordination_prior": 0.55,
+   "coordination_embed": 0.4,
+   "sem_x": 0.665,
+   "sem_y": 0.5598,
+   "alt_x": 0.3161,
+   "alt_y": 0.3009,
+   "complexity": 3,
+   "research_fit": 5,
+   "scraping_fit": 3,
+   "nearest_other_category": "ai_coscientist_tournament"
+  },
+  {
+   "id": "role_play_camel",
+   "name": "Role-Playing Agents (CAMEL)",
+   "short_name": "Role-Playing Agents",
+   "category": "Conversational teams & role-play",
+   "axes_x": 0.804,
+   "axes_y": 0.4915,
+   "axes_x_raw": 0.804,
+   "axes_y_raw": 0.4915,
+   "centralization_rule": 0.81,
+   "centralization_embed": 0.79,
+   "coordination_prior": 0.55,
+   "coordination_embed": 0.42,
+   "sem_x": 0.3799,
+   "sem_y": 0.4582,
+   "alt_x": 0.5846,
+   "alt_y": 0.3939,
+   "complexity": 2,
+   "research_fit": 2,
+   "scraping_fit": 1,
+   "nearest_other_category": "task_queue_babyagi"
+  },
+  {
+   "id": "round_robin_chat",
+   "name": "Round-Robin Team",
+   "short_name": "Round-Robin Team",
+   "category": "Conversational teams & role-play",
+   "axes_x": 0.131,
+   "axes_y": 0.442,
+   "axes_x_raw": 0.131,
+   "axes_y_raw": 0.442,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.25,
+   "coordination_prior": 0.55,
+   "coordination_embed": 0.31,
+   "sem_x": 0.4765,
+   "sem_y": 0.2595,
+   "alt_x": 0.6365,
+   "alt_y": 0.5115,
+   "complexity": 1,
+   "research_fit": 2,
+   "scraping_fit": 1,
+   "nearest_other_category": "multi_agent_debate"
+  },
+  {
+   "id": "society_of_mind",
+   "name": "Society of Mind (NLSOM / nested inner team)",
+   "short_name": "Society of Mind",
+   "category": "Conversational teams & role-play",
+   "axes_x": 0.539,
+   "axes_y": 0.5725,
+   "axes_x_raw": 0.539,
+   "axes_y_raw": 0.5725,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.63,
+   "coordination_prior": 0.55,
+   "coordination_embed": 0.6,
+   "sem_x": 0.6431,
+   "sem_y": 0.0709,
+   "alt_x": 0.7203,
+   "alt_y": 0.9028,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 2,
+   "nearest_other_category": "multi_agent_debate"
+  },
+  {
+   "id": "evaluator_optimizer",
+   "name": "Evaluator-Optimizer (Generator-Critic loop)",
+   "short_name": "Evaluator-Optimizer",
+   "category": "Critique & refinement loops",
+   "axes_x": 0.1252,
+   "axes_y": 0.3221,
+   "axes_x_raw": 0.125,
+   "axes_y_raw": 0.321,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.23,
+   "coordination_prior": 0.42,
+   "coordination_embed": 0.2,
+   "sem_x": 0.2889,
+   "sem_y": 0.5687,
+   "alt_x": 0.0688,
+   "alt_y": 0.3073,
+   "complexity": 1,
+   "research_fit": 5,
+   "scraping_fit": 4,
+   "nearest_other_category": "loop_agent"
+  },
+  {
+   "id": "llm_judge_panel",
+   "name": "Agent-as-a-Judge / Judge Panel",
+   "short_name": "Agent-as-a-Judge / Judge Panel",
+   "category": "Critique & refinement loops",
+   "axes_x": 0.1663,
+   "axes_y": 0.3913,
+   "axes_x_raw": 0.167,
+   "axes_y_raw": 0.402,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.37,
+   "coordination_prior": 0.42,
+   "coordination_embed": 0.38,
+   "sem_x": 0.3323,
+   "sem_y": 0.557,
+   "alt_x": 0.1863,
+   "alt_y": 0.2927,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 3,
+   "nearest_other_category": "ai_scientist_pipeline"
+  },
+  {
+   "id": "multi_agent_verification",
+   "name": "Multi-Verifier Panel (MAV)",
+   "short_name": "Multi-Verifier Panel",
+   "category": "Critique & refinement loops",
+   "axes_x": 0.1188,
+   "axes_y": 0.2929,
+   "axes_x_raw": 0.119,
+   "axes_y_raw": 0.294,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.21,
+   "coordination_prior": 0.42,
+   "coordination_embed": 0.14,
+   "sem_x": 0.322,
+   "sem_y": 0.6646,
+   "alt_x": 0.0346,
+   "alt_y": 0.4585,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 4,
+   "nearest_other_category": "mixture_of_agents"
+  },
+  {
+   "id": "reflection_self_critique",
+   "name": "Reflection / Reflexion (verbal self-improvement)",
+   "short_name": "Reflection / Reflexion",
+   "category": "Critique & refinement loops",
+   "axes_x": 0.2272,
+   "axes_y": 0.4489,
+   "axes_x_raw": 0.218,
+   "axes_y_raw": 0.447,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.54,
+   "coordination_prior": 0.42,
+   "coordination_embed": 0.48,
+   "sem_x": 0.8191,
+   "sem_y": 0.3298,
+   "alt_x": 0.0759,
+   "alt_y": 0.2165,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "talkhier"
+  },
+  {
+   "id": "tool_verified_critique",
+   "name": "Tool-Verified Critique (CRITIC / Chain-of-Verification)",
+   "short_name": "Tool-Verified Critique",
+   "category": "Critique & refinement loops",
+   "axes_x": 0.1645,
+   "axes_y": 0.4209,
+   "axes_x_raw": 0.173,
+   "axes_y_raw": 0.4065,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.39,
+   "coordination_prior": 0.42,
+   "coordination_embed": 0.39,
+   "sem_x": 0.2787,
+   "sem_y": 0.6076,
+   "alt_x": 0.1004,
+   "alt_y": 0.2928,
+   "complexity": 2,
+   "research_fit": 5,
+   "scraping_fit": 4,
+   "nearest_other_category": "skill_library_voyager"
+  },
+  {
+   "id": "chateval_referee_debate",
+   "name": "Referee Team Debate (ChatEval)",
+   "short_name": "Referee Team Debate",
+   "category": "Debate & deliberation",
+   "axes_x": 0.7435,
+   "axes_y": 0.5125,
+   "axes_x_raw": 0.7435,
+   "axes_y_raw": 0.5125,
+   "centralization_rule": 0.835,
+   "centralization_embed": 0.53,
+   "coordination_prior": 0.58,
+   "coordination_embed": 0.43,
+   "sem_x": 0.443,
+   "sem_y": 0.7465,
+   "alt_x": 0.2222,
+   "alt_y": 0.4167,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 1,
+   "nearest_other_category": "talkhier"
+  },
+  {
+   "id": "corex_collab_modes",
+   "name": "Corex (Discuss / Review / Retrieve modes)",
+   "short_name": "Corex",
+   "category": "Debate & deliberation",
+   "axes_x": 0.101,
+   "axes_y": 0.481,
+   "axes_x_raw": 0.101,
+   "axes_y_raw": 0.481,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.15,
+   "coordination_prior": 0.58,
+   "coordination_embed": 0.36,
+   "sem_x": 0.423,
+   "sem_y": 0.0962,
+   "alt_x": 0.3551,
+   "alt_y": 0.3952,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 1,
+   "nearest_other_category": "perspective_conversations_storm"
+  },
+  {
+   "id": "exchange_of_thought",
+   "name": "Exchange-of-Thought (cross-model communication)",
+   "short_name": "Exchange-of-Thought",
+   "category": "Debate & deliberation",
+   "axes_x": 0.563,
+   "axes_y": 0.5485,
+   "axes_x_raw": 0.563,
+   "axes_y_raw": 0.5485,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.71,
+   "coordination_prior": 0.58,
+   "coordination_embed": 0.51,
+   "sem_x": 0.5181,
+   "sem_y": 0.736,
+   "alt_x": 0.2371,
+   "alt_y": 0.4913,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 1,
+   "nearest_other_category": "graph_of_thoughts"
+  },
+  {
+   "id": "mad_judge_debate",
+   "name": "Adversarial Debate with Judge (MAD)",
+   "short_name": "Adversarial Debate with Judge",
+   "category": "Debate & deliberation",
+   "axes_x": 0.266,
+   "axes_y": 0.517,
+   "axes_x_raw": 0.266,
+   "axes_y_raw": 0.517,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.7,
+   "coordination_prior": 0.58,
+   "coordination_embed": 0.44,
+   "sem_x": 0.4095,
+   "sem_y": 0.727,
+   "alt_x": 0.1687,
+   "alt_y": 0.3791,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 1,
+   "nearest_other_category": "llm_judge_panel"
+  },
+  {
+   "id": "multi_agent_debate",
+   "name": "Multi-Agent Debate (society of minds, rounds)",
+   "short_name": "Multi-Agent Debate",
+   "category": "Debate & deliberation",
+   "axes_x": 0.8665,
+   "axes_y": 0.5215,
+   "axes_x_raw": 0.8665,
+   "axes_y_raw": 0.5215,
+   "centralization_rule": 0.835,
+   "centralization_embed": 0.94,
+   "coordination_prior": 0.58,
+   "coordination_embed": 0.45,
+   "sem_x": 0.4616,
+   "sem_y": 0.7043,
+   "alt_x": 0.1776,
+   "alt_y": 0.4887,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 1,
+   "nearest_other_category": "voting_ensemble"
+  },
+  {
+   "id": "sparse_debate_topology",
+   "name": "Sparse-Topology Debate",
+   "short_name": "Sparse-Topology Debate",
+   "category": "Debate & deliberation",
+   "axes_x": 0.9258,
+   "axes_y": 0.6647,
+   "axes_x_raw": 0.929,
+   "axes_y_raw": 0.6655,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.95,
+   "coordination_prior": 0.58,
+   "coordination_embed": 0.77,
+   "sem_x": 0.5649,
+   "sem_y": 0.7559,
+   "alt_x": 0.2027,
+   "alt_y": 0.6551,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 1,
+   "nearest_other_category": "consensus_networks"
+  },
+  {
+   "id": "a2a_federation",
+   "name": "Protocol Federation (A2A + MCP)",
+   "short_name": "Protocol Federation",
+   "category": "Decentralized & peer-to-peer",
+   "axes_x": 0.7052,
+   "axes_y": 0.5483,
+   "axes_x_raw": 0.701,
+   "axes_y_raw": 0.549,
+   "centralization_rule": 0.71,
+   "centralization_embed": 0.68,
+   "coordination_prior": 0.72,
+   "coordination_embed": 0.34,
+   "sem_x": 0.6565,
+   "sem_y": 0.2521,
+   "alt_x": 0.6934,
+   "alt_y": 0.8067,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "federation_facilitator"
+  },
+  {
+   "id": "agentnet_decentralized",
+   "name": "AgentNet (decentralized evolving DAG of agents)",
+   "short_name": "AgentNet",
+   "category": "Decentralized & peer-to-peer",
+   "axes_x": 0.9333,
+   "axes_y": 0.7573,
+   "axes_x_raw": 0.935,
+   "axes_y_raw": 0.765,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.97,
+   "coordination_prior": 0.72,
+   "coordination_embed": 0.82,
+   "sem_x": 0.5935,
+   "sem_y": 0.4641,
+   "alt_x": 0.5212,
+   "alt_y": 0.6967,
+   "complexity": 4,
+   "research_fit": 3,
+   "scraping_fit": 3,
+   "nearest_other_category": "cooperative_embodied_coela"
+  },
+  {
+   "id": "dylan_dynamic_network",
+   "name": "Dynamic LLM-Agent Network (DyLAN)",
+   "short_name": "Dynamic LLM-Agent Network",
+   "category": "Decentralized & peer-to-peer",
+   "axes_x": 0.599,
+   "axes_y": 0.7335,
+   "axes_x_raw": 0.599,
+   "axes_y_raw": 0.7335,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.83,
+   "coordination_prior": 0.72,
+   "coordination_embed": 0.75,
+   "sem_x": 0.5176,
+   "sem_y": 0.511,
+   "alt_x": 0.4235,
+   "alt_y": 0.4929,
+   "complexity": 4,
+   "research_fit": 3,
+   "scraping_fit": 2,
+   "nearest_other_category": "blackboard_llm"
+  },
+  {
+   "id": "gossip_p2p",
+   "name": "Gossip / Epidemic Peer-to-Peer Dissemination",
+   "short_name": "Gossip / Epidemic Peer-to-Peer D…",
+   "category": "Decentralized & peer-to-peer",
+   "axes_x": 0.9397,
+   "axes_y": 0.7862,
+   "axes_x_raw": 0.938,
+   "axes_y_raw": 0.7785,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.98,
+   "coordination_prior": 0.72,
+   "coordination_embed": 0.85,
+   "sem_x": 0.5581,
+   "sem_y": 0.8438,
+   "alt_x": 0.3828,
+   "alt_y": 0.7568,
+   "complexity": 3,
+   "research_fit": 2,
+   "scraping_fit": 4,
+   "nearest_other_category": "consensus_networks"
+  },
+  {
+   "id": "internet_of_agents",
+   "name": "Internet of Agents (heterogeneous agent network)",
+   "short_name": "Internet of Agents",
+   "category": "Decentralized & peer-to-peer",
+   "axes_x": 0.5528,
+   "axes_y": 0.6698,
+   "axes_x_raw": 0.545,
+   "axes_y_raw": 0.675,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.65,
+   "coordination_prior": 0.72,
+   "coordination_embed": 0.62,
+   "sem_x": 0.613,
+   "sem_y": 0.2638,
+   "alt_x": 0.6728,
+   "alt_y": 0.7624,
+   "complexity": 4,
+   "research_fit": 3,
+   "scraping_fit": 3,
+   "nearest_other_category": "handoff_swarm"
+  },
+  {
+   "id": "macnet_dag",
+   "name": "MacNet (DAG-organised large-scale collaboration)",
+   "short_name": "MacNet",
+   "category": "Decentralized & peer-to-peer",
+   "axes_x": 0.311,
+   "axes_y": 0.639,
+   "axes_x_raw": 0.311,
+   "axes_y_raw": 0.639,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.85,
+   "coordination_prior": 0.72,
+   "coordination_embed": 0.54,
+   "sem_x": 0.6103,
+   "sem_y": 0.4997,
+   "alt_x": 0.3484,
+   "alt_y": 0.5355,
+   "complexity": 4,
+   "research_fit": 3,
+   "scraping_fit": 1,
+   "nearest_other_category": "g_designer_topology"
+  },
+  {
+   "id": "network_all_to_all",
+   "name": "Agent Network (many-to-many, any agent routes)",
+   "short_name": "Agent Network",
+   "category": "Decentralized & peer-to-peer",
+   "axes_x": 0.9289,
+   "axes_y": 0.6944,
+   "axes_x_raw": 0.923,
+   "axes_y_raw": 0.693,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.93,
+   "coordination_prior": 0.72,
+   "coordination_embed": 0.66,
+   "sem_x": 0.5688,
+   "sem_y": 0.451,
+   "alt_x": 0.5792,
+   "alt_y": 0.8123,
+   "complexity": 2,
+   "research_fit": 2,
+   "scraping_fit": 1,
+   "nearest_other_category": "graph_state_machine"
+  },
+  {
+   "id": "swarmsys",
+   "name": "SwarmSys (explorer / worker / validator swarm)",
+   "short_name": "SwarmSys",
+   "category": "Decentralized & peer-to-peer",
+   "axes_x": 0.8942,
+   "axes_y": 0.8355,
+   "axes_x_raw": 0.896,
+   "axes_y_raw": 0.8325,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.84,
+   "coordination_prior": 0.72,
+   "coordination_embed": 0.97,
+   "sem_x": 0.7364,
+   "sem_y": 0.8864,
+   "alt_x": 0.2593,
+   "alt_y": 0.8704,
+   "complexity": 4,
+   "research_fit": 4,
+   "scraping_fit": 4,
+   "nearest_other_category": "swarm_robotics"
+  },
+  {
+   "id": "adas_meta_agent",
+   "name": "Meta Agent Search (ADAS)",
+   "short_name": "Meta Agent Search",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.257,
+   "axes_y": 0.7425,
+   "axes_x_raw": 0.257,
+   "axes_y_raw": 0.7425,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.67,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.55,
+   "sem_x": 0.071,
+   "sem_y": 0.5568,
+   "alt_x": 0.3675,
+   "alt_y": 0.1681,
+   "complexity": 5,
+   "research_fit": 3,
+   "scraping_fit": 2,
+   "nearest_other_category": "lats_mcts"
+  },
+  {
+   "id": "aflow_workflow_search",
+   "name": "AFlow (MCTS over agentic workflows)",
+   "short_name": "AFlow",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.0916,
+   "axes_y": 0.515,
+   "axes_x_raw": 0.098,
+   "axes_y_raw": 0.5175,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.14,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.05,
+   "sem_x": 0.1269,
+   "sem_y": 0.4589,
+   "alt_x": 0.5768,
+   "alt_y": 0.2311,
+   "complexity": 5,
+   "research_fit": 3,
+   "scraping_fit": 3,
+   "nearest_other_category": "lats_mcts"
+  },
+  {
+   "id": "agentprune_sparsification",
+   "name": "Communication Pruning (AgentPrune)",
+   "short_name": "Communication Pruning",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.542,
+   "axes_y": 0.8055,
+   "axes_x_raw": 0.542,
+   "axes_y_raw": 0.8055,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.64,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.69,
+   "sem_x": 0.6119,
+   "sem_y": 0.7325,
+   "alt_x": 0.2577,
+   "alt_y": 0.6779,
+   "complexity": 4,
+   "research_fit": 3,
+   "scraping_fit": 3,
+   "nearest_other_category": "sparse_debate_topology"
+  },
+  {
+   "id": "ai_coscientist_tournament",
+   "name": "Generate-Debate-Evolve Tournament (AI co-scientist)",
+   "short_name": "Generate-Debate-Evolve Tournament",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.572,
+   "axes_y": 0.8145,
+   "axes_x_raw": 0.572,
+   "axes_y_raw": 0.8145,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.74,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.71,
+   "sem_x": 0.6233,
+   "sem_y": 0.5752,
+   "alt_x": 0.2973,
+   "alt_y": 0.3755,
+   "complexity": 5,
+   "research_fit": 5,
+   "scraping_fit": 1,
+   "nearest_other_category": "ai_scientist_pipeline"
+  },
+  {
+   "id": "evoagent_evolutionary",
+   "name": "Evolutionary Agent Generation (EvoAgent)",
+   "short_name": "Evolutionary Agent Generation",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.3169,
+   "axes_y": 0.9292,
+   "axes_x_raw": 0.314,
+   "axes_y_raw": 0.927,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.86,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.96,
+   "sem_x": 0.911,
+   "sem_y": 0.8135,
+   "alt_x": 0.1,
+   "alt_y": 0.8429,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 2,
+   "nearest_other_category": "self_organized_agents"
+  },
+  {
+   "id": "g_designer_topology",
+   "name": "Learned Communication Topology (G-Designer)",
+   "short_name": "Learned Communication Topology",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.208,
+   "axes_y": 0.8839,
+   "axes_x_raw": 0.209,
+   "axes_y_raw": 0.882,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.51,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.86,
+   "sem_x": 0.644,
+   "sem_y": 0.6834,
+   "alt_x": 0.2818,
+   "alt_y": 0.651,
+   "complexity": 5,
+   "research_fit": 2,
+   "scraping_fit": 2,
+   "nearest_other_category": "macnet_dag"
+  },
+  {
+   "id": "gptswarm_optimizable_graph",
+   "name": "GPTSwarm (agents as optimizable graphs)",
+   "short_name": "GPTSwarm",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.284,
+   "axes_y": 0.8505,
+   "axes_x_raw": 0.284,
+   "axes_y_raw": 0.8505,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.76,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.79,
+   "sem_x": 0.68,
+   "sem_y": 0.701,
+   "alt_x": 0.3371,
+   "alt_y": 0.6701,
+   "complexity": 4,
+   "research_fit": 3,
+   "scraping_fit": 3,
+   "nearest_other_category": "graph_state_machine"
+  },
+  {
+   "id": "island_evolution_funsearch",
+   "name": "Island-Model Evolutionary Program Search (FunSearch / AlphaEvolve)",
+   "short_name": "Island-Model Evolutionary Progra…",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.317,
+   "axes_y": 0.873,
+   "axes_x_raw": 0.317,
+   "axes_y_raw": 0.873,
+   "centralization_rule": 0.14,
+   "centralization_embed": 0.73,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.84,
+   "sem_x": 0.96,
+   "sem_y": 0.8324,
+   "alt_x": 0.005,
+   "alt_y": 0.9346,
+   "complexity": 4,
+   "research_fit": 2,
+   "scraping_fit": 3,
+   "nearest_other_category": "firefly_gwo_family"
+  },
+  {
+   "id": "mass_optimizer",
+   "name": "MASS (joint prompt + topology optimisation)",
+   "short_name": "MASS",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.222,
+   "axes_y": 0.8576,
+   "axes_x_raw": 0.221,
+   "axes_y_raw": 0.8595,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.55,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.81,
+   "sem_x": 0.7238,
+   "sem_y": 0.7304,
+   "alt_x": 0.1923,
+   "alt_y": 0.7187,
+   "complexity": 5,
+   "research_fit": 3,
+   "scraping_fit": 2,
+   "nearest_other_category": "particle_swarm_optimization"
+  },
+  {
+   "id": "model_swarms_pso",
+   "name": "Model Swarms (PSO over LLM experts)",
+   "short_name": "Model Swarms",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.738,
+   "axes_y": 0.9045,
+   "axes_x_raw": 0.738,
+   "axes_y_raw": 0.9045,
+   "centralization_rule": 0.81,
+   "centralization_embed": 0.57,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.91,
+   "sem_x": 0.769,
+   "sem_y": 0.8386,
+   "alt_x": 0.1392,
+   "alt_y": 0.9396,
+   "complexity": 4,
+   "research_fit": 2,
+   "scraping_fit": 2,
+   "nearest_other_category": "particle_swarm_optimization"
+  },
+  {
+   "id": "population_based_training",
+   "name": "Population-Based Training (PBT)",
+   "short_name": "Population-Based Training",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.851,
+   "axes_y": 0.891,
+   "axes_x_raw": 0.851,
+   "axes_y_raw": 0.891,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.69,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.88,
+   "sem_x": 0.9278,
+   "sem_y": 0.8927,
+   "alt_x": 0.0378,
+   "alt_y": 0.9165,
+   "complexity": 3,
+   "research_fit": 2,
+   "scraping_fit": 3,
+   "nearest_other_category": "swarmsys"
+  },
+  {
+   "id": "promptbreeder",
+   "name": "Promptbreeder (self-referential prompt evolution)",
+   "short_name": "Promptbreeder",
+   "category": "Evolutionary & self-optimizing",
+   "axes_x": 0.2931,
+   "axes_y": 0.9113,
+   "axes_x_raw": 0.296,
+   "axes_y_raw": 0.9135,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.8,
+   "coordination_prior": 0.9,
+   "coordination_embed": 0.93,
+   "sem_x": 0.93,
+   "sem_y": 0.8361,
+   "alt_x": 0.0,
+   "alt_y": 0.8619,
+   "complexity": 3,
+   "research_fit": 2,
+   "scraping_fit": 3,
+   "nearest_other_category": "evaluator_optimizer"
+  },
+  {
+   "id": "auction_market_allocation",
+   "name": "Auction / Market-Based Task Allocation",
+   "short_name": "Auction / Market-Based Task Allo…",
+   "category": "Market & negotiation",
+   "axes_x": 0.677,
+   "axes_y": 0.656,
+   "axes_x_raw": 0.677,
+   "axes_y_raw": 0.656,
+   "centralization_rule": 0.71,
+   "centralization_embed": 0.6,
+   "coordination_prior": 0.62,
+   "coordination_embed": 0.7,
+   "sem_x": 0.3674,
+   "sem_y": 0.9063,
+   "alt_x": 0.5036,
+   "alt_y": 0.6309,
+   "complexity": 4,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "voting_ensemble"
+  },
+  {
+   "id": "coalitions_congregations",
+   "name": "Coalitions, Teams & Congregations (organizational paradigms)",
+   "short_name": "Coalitions, Teams & Congregations",
+   "category": "Market & negotiation",
+   "axes_x": 0.446,
+   "axes_y": 0.7145,
+   "axes_x_raw": 0.446,
+   "axes_y_raw": 0.7145,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.32,
+   "coordination_prior": 0.62,
+   "coordination_embed": 0.83,
+   "sem_x": 0.5562,
+   "sem_y": 0.0562,
+   "alt_x": 0.754,
+   "alt_y": 0.9259,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 3,
+   "nearest_other_category": "holonic"
+  },
+  {
+   "id": "contract_net",
+   "name": "Contract Net Protocol",
+   "short_name": "Contract Net Protocol",
+   "category": "Market & negotiation",
+   "axes_x": 0.6675,
+   "axes_y": 0.4445,
+   "axes_x_raw": 0.6675,
+   "axes_y_raw": 0.4445,
+   "centralization_rule": 0.885,
+   "centralization_embed": 0.16,
+   "coordination_prior": 0.62,
+   "coordination_embed": 0.23,
+   "sem_x": 0.3297,
+   "sem_y": 0.8944,
+   "alt_x": 0.6316,
+   "alt_y": 0.6964,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "crewai_hierarchical"
+  },
+  {
+   "id": "llm_auction_marketplace",
+   "name": "LLM Agent Auctions & Marketplaces",
+   "short_name": "LLM Agent Auctions & Marketplaces",
+   "category": "Market & negotiation",
+   "axes_x": 0.6758,
+   "axes_y": 0.5532,
+   "axes_x_raw": 0.68,
+   "axes_y_raw": 0.5525,
+   "centralization_rule": 0.71,
+   "centralization_embed": 0.61,
+   "coordination_prior": 0.62,
+   "coordination_embed": 0.47,
+   "sem_x": 0.3902,
+   "sem_y": 0.9225,
+   "alt_x": 0.5668,
+   "alt_y": 0.6234,
+   "complexity": 4,
+   "research_fit": 3,
+   "scraping_fit": 3,
+   "nearest_other_category": "blackboard_llm"
+  },
+  {
+   "id": "llm_blender_rank_fuse",
+   "name": "Rank-and-Fuse Ensemble (LLM-Blender)",
+   "short_name": "Rank-and-Fuse Ensemble",
+   "category": "Parallel & ensemble",
+   "axes_x": 0.122,
+   "axes_y": 0.398,
+   "axes_x_raw": 0.122,
+   "axes_y_raw": 0.398,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.22,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.64,
+   "sem_x": 0.3746,
+   "sem_y": 0.6369,
+   "alt_x": 0.012,
+   "alt_y": 0.5229,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 3,
+   "nearest_other_category": "evaluator_optimizer"
+  },
+  {
+   "id": "mixture_of_agents",
+   "name": "Mixture-of-Agents (layered proposers + aggregator)",
+   "short_name": "Mixture-of-Agents",
+   "category": "Parallel & ensemble",
+   "axes_x": 0.1912,
+   "axes_y": 0.4079,
+   "axes_x_raw": 0.182,
+   "axes_y_raw": 0.4115,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.42,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.67,
+   "sem_x": 0.4419,
+   "sem_y": 0.6054,
+   "alt_x": 0.0859,
+   "alt_y": 0.5546,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 1,
+   "nearest_other_category": "dylan_dynamic_network"
+  },
+  {
+   "id": "parallel_fanout_mapreduce",
+   "name": "Parallel Fan-out / Fan-in (Map-Reduce, Sectioning)",
+   "short_name": "Parallel Fan-out / Fan-in",
+   "category": "Parallel & ensemble",
+   "axes_x": 0.0671,
+   "axes_y": 0.2075,
+   "axes_x_raw": 0.071,
+   "axes_y_raw": 0.1955,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.05,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.19,
+   "sem_x": 0.04,
+   "sem_y": 0.325,
+   "alt_x": 0.8388,
+   "alt_y": 0.1571,
+   "complexity": 2,
+   "research_fit": 5,
+   "scraping_fit": 5,
+   "nearest_other_category": "orchestrator_worker"
+  },
+  {
+   "id": "voting_ensemble",
+   "name": "Voting / Self-Consistency Ensemble",
+   "short_name": "Voting / Self-Consistency Ensemble",
+   "category": "Parallel & ensemble",
+   "axes_x": 0.29,
+   "axes_y": 0.4385,
+   "axes_x_raw": 0.29,
+   "axes_y_raw": 0.4385,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.78,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.73,
+   "sem_x": 0.4442,
+   "sem_y": 0.6513,
+   "alt_x": 0.0904,
+   "alt_y": 0.5556,
+   "complexity": 1,
+   "research_fit": 4,
+   "scraping_fit": 4,
+   "nearest_other_category": "multi_agent_debate"
+  },
+  {
+   "id": "chain_of_agents",
+   "name": "Chain of Agents (long-context relay)",
+   "short_name": "Chain of Agents",
+   "category": "Pipeline & workflow",
+   "axes_x": 0.0872,
+   "axes_y": 0.1366,
+   "axes_x_raw": 0.08,
+   "axes_y_raw": 0.1535,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.08,
+   "coordination_prior": 0.05,
+   "coordination_embed": 0.28,
+   "sem_x": 0.3635,
+   "sem_y": 0.2783,
+   "alt_x": 0.8351,
+   "alt_y": 0.3702,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 3,
+   "nearest_other_category": "orchestrator_worker"
+  },
+  {
+   "id": "chat_chain_chatdev",
+   "name": "Chat Chain (ChatDev)",
+   "short_name": "Chat Chain",
+   "category": "Pipeline & workflow",
+   "axes_x": 0.1475,
+   "axes_y": 0.1719,
+   "axes_x_raw": 0.146,
+   "axes_y_raw": 0.1715,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.3,
+   "coordination_prior": 0.05,
+   "coordination_embed": 0.32,
+   "sem_x": 0.4557,
+   "sem_y": 0.1905,
+   "alt_x": 0.5605,
+   "alt_y": 0.4988,
+   "complexity": 3,
+   "research_fit": 2,
+   "scraping_fit": 3,
+   "nearest_other_category": "talkhier"
+  },
+  {
+   "id": "crewai_flows",
+   "name": "Event-driven Flows (CrewAI Flows)",
+   "short_name": "Event-driven Flows",
+   "category": "Pipeline & workflow",
+   "axes_x": 0.3798,
+   "axes_y": 0.0444,
+   "axes_x_raw": 0.38,
+   "axes_y_raw": 0.0455,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.1,
+   "coordination_prior": 0.05,
+   "coordination_embed": 0.04,
+   "sem_x": 0.2091,
+   "sem_y": 0.3136,
+   "alt_x": 0.7179,
+   "alt_y": 0.2887,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 4,
+   "nearest_other_category": "crewai_hierarchical"
+  },
+  {
+   "id": "dag_workflow",
+   "name": "Static DAG Workflow (parallel dependencies)",
+   "short_name": "Static DAG Workflow",
+   "category": "Pipeline & workflow",
+   "axes_x": 0.077,
+   "axes_y": 0.0275,
+   "axes_x_raw": 0.077,
+   "axes_y_raw": 0.0275,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.07,
+   "coordination_prior": 0.05,
+   "coordination_embed": 0.0,
+   "sem_x": 0.1147,
+   "sem_y": 0.3134,
+   "alt_x": 0.7159,
+   "alt_y": 0.1766,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 5,
+   "nearest_other_category": "llmcompiler_dag"
+  },
+  {
+   "id": "graph_state_machine",
+   "name": "Graph / State-Machine Workflow (LangGraph-style)",
+   "short_name": "Graph / State-Machine Workflow",
+   "category": "Pipeline & workflow",
+   "axes_x": 0.473,
+   "axes_y": 0.041,
+   "axes_x_raw": 0.473,
+   "axes_y_raw": 0.041,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.41,
+   "coordination_prior": 0.05,
+   "coordination_embed": 0.03,
+   "sem_x": 0.2704,
+   "sem_y": 0.3034,
+   "alt_x": 0.6099,
+   "alt_y": 0.2774,
+   "complexity": 3,
+   "research_fit": 5,
+   "scraping_fit": 5,
+   "nearest_other_category": "supervisor_router"
+  },
+  {
+   "id": "human_in_the_loop",
+   "name": "Human-in-the-Loop Checkpoints (user proxy)",
+   "short_name": "Human-in-the-Loop Checkpoints",
+   "category": "Pipeline & workflow",
+   "axes_x": 0.449,
+   "axes_y": 0.1265,
+   "axes_x_raw": 0.449,
+   "axes_y_raw": 0.1265,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.33,
+   "coordination_prior": 0.05,
+   "coordination_embed": 0.22,
+   "sem_x": 0.2334,
+   "sem_y": 0.4104,
+   "alt_x": 0.7328,
+   "alt_y": 0.388,
+   "complexity": 1,
+   "research_fit": 4,
+   "scraping_fit": 4,
+   "nearest_other_category": "handoff_swarm"
+  },
+  {
+   "id": "loop_agent",
+   "name": "Loop Agent (iterate until condition)",
+   "short_name": "Loop Agent",
+   "category": "Pipeline & workflow",
+   "axes_x": 0.158,
+   "axes_y": 0.068,
+   "axes_x_raw": 0.158,
+   "axes_y_raw": 0.068,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.34,
+   "coordination_prior": 0.05,
+   "coordination_embed": 0.09,
+   "sem_x": 0.2795,
+   "sem_y": 0.4489,
+   "alt_x": 0.7194,
+   "alt_y": 0.3157,
+   "complexity": 1,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "task_queue_babyagi"
+  },
+  {
+   "id": "sequential_pipeline",
+   "name": "Sequential Pipeline / Prompt Chaining (assembly line)",
+   "short_name": "Sequential Pipeline / Prompt Cha…",
+   "category": "Pipeline & workflow",
+   "axes_x": 0.116,
+   "axes_y": 0.0365,
+   "axes_x_raw": 0.116,
+   "axes_y_raw": 0.0365,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.2,
+   "coordination_prior": 0.05,
+   "coordination_embed": 0.02,
+   "sem_x": 0.2214,
+   "sem_y": 0.2655,
+   "alt_x": 0.7787,
+   "alt_y": 0.2907,
+   "complexity": 1,
+   "research_fit": 3,
+   "scraping_fit": 5,
+   "nearest_other_category": "ai_scientist_pipeline"
+  },
+  {
+   "id": "sop_assembly_line_metagpt",
+   "name": "SOP-based Software Company (MetaGPT)",
+   "short_name": "SOP-based Software Company",
+   "category": "Pipeline & workflow",
+   "axes_x": 0.3862,
+   "axes_y": 0.0736,
+   "axes_x_raw": 0.386,
+   "axes_y_raw": 0.0725,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.12,
+   "coordination_prior": 0.05,
+   "coordination_embed": 0.1,
+   "sem_x": 0.1278,
+   "sem_y": 0.7614,
+   "alt_x": 0.8426,
+   "alt_y": 0.679,
+   "complexity": 3,
+   "research_fit": 4,
+   "scraping_fit": 3,
+   "nearest_other_category": "pubsub_message_pool"
+  },
+  {
+   "id": "ai_scientist_pipeline",
+   "name": "Automated Research Lab Pipeline (AI Scientist / Agent Laboratory)",
+   "short_name": "Automated Research Lab Pipeline",
+   "category": "Research & web-scraping reference systems",
+   "axes_x": 0.1651,
+   "axes_y": 0.2268,
+   "axes_x_raw": 0.17,
+   "axes_y_raw": 0.2225,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.38,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.25,
+   "sem_x": 0.5813,
+   "sem_y": 0.5856,
+   "alt_x": 0.3943,
+   "alt_y": 0.2351,
+   "complexity": 4,
+   "research_fit": 4,
+   "scraping_fit": 2,
+   "nearest_other_category": "ai_coscientist_tournament"
+  },
+  {
+   "id": "anthropic_research_system",
+   "name": "Lead Researcher + Parallel Subagents + Citation Agent (Anthropic Research)",
+   "short_name": "Lead Researcher + Parallel Subag…",
+   "category": "Research & web-scraping reference systems",
+   "axes_x": 0.191,
+   "axes_y": 0.362,
+   "axes_x_raw": 0.191,
+   "axes_y_raw": 0.362,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.45,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.56,
+   "sem_x": 0.746,
+   "sem_y": 0.5638,
+   "alt_x": 0.3091,
+   "alt_y": 0.1327,
+   "complexity": 3,
+   "research_fit": 5,
+   "scraping_fit": 4,
+   "nearest_other_category": "orchestrator_worker"
+  },
+  {
+   "id": "autoscraper_progressive",
+   "name": "Progressive Scraper Generation (AutoScraper)",
+   "short_name": "Progressive Scraper Generation",
+   "category": "Research & web-scraping reference systems",
+   "axes_x": 0.2001,
+   "axes_y": 0.2408,
+   "axes_x_raw": 0.2,
+   "axes_y_raw": 0.2405,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.48,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.29,
+   "sem_x": 0.9467,
+   "sem_y": 0.5425,
+   "alt_x": 0.4543,
+   "alt_y": 0.0,
+   "complexity": 3,
+   "research_fit": 2,
+   "scraping_fit": 5,
+   "nearest_other_category": "evoagent_evolutionary"
+  },
+  {
+   "id": "distributed_crawler_frontier",
+   "name": "Centralized-Frontier Distributed Crawler (Mercator-style)",
+   "short_name": "Centralized-Frontier Distributed…",
+   "category": "Research & web-scraping reference systems",
+   "axes_x": 0.1215,
+   "axes_y": 0.1868,
+   "axes_x_raw": 0.11,
+   "axes_y_raw": 0.1865,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.18,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.17,
+   "sem_x": 0.8692,
+   "sem_y": 0.5951,
+   "alt_x": 0.5343,
+   "alt_y": 0.046,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 5,
+   "nearest_other_category": "orchestrator_worker"
+  },
+  {
+   "id": "gpt_researcher",
+   "name": "Planner + Parallel Crawler Agents (GPT Researcher)",
+   "short_name": "Planner + Parallel Crawler Agents",
+   "category": "Research & web-scraping reference systems",
+   "axes_x": 0.224,
+   "axes_y": 0.3755,
+   "axes_x_raw": 0.224,
+   "axes_y_raw": 0.3755,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.56,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.59,
+   "sem_x": 0.772,
+   "sem_y": 0.5534,
+   "alt_x": 0.3728,
+   "alt_y": 0.0863,
+   "complexity": 3,
+   "research_fit": 5,
+   "scraping_fit": 4,
+   "nearest_other_category": "gptswarm_optimizable_graph"
+  },
+  {
+   "id": "scrapegraph_pipelines",
+   "name": "Graph-Pipeline LLM Scrapers (ScrapeGraphAI)",
+   "short_name": "Graph-Pipeline LLM Scrapers",
+   "category": "Research & web-scraping reference systems",
+   "axes_x": 0.194,
+   "axes_y": 0.1685,
+   "axes_x_raw": 0.194,
+   "axes_y_raw": 0.1685,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.46,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.13,
+   "sem_x": 0.9193,
+   "sem_y": 0.548,
+   "alt_x": 0.4891,
+   "alt_y": 0.0889,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "graph_state_machine"
+  },
+  {
+   "id": "self_organized_agents",
+   "name": "Self-Organized Agents (self-multiplying hierarchy)",
+   "short_name": "Self-Organized Agents",
+   "category": "Research & web-scraping reference systems",
+   "axes_x": 0.533,
+   "axes_y": 0.524,
+   "axes_x_raw": 0.533,
+   "axes_y_raw": 0.524,
+   "centralization_rule": 0.44,
+   "centralization_embed": 0.75,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.92,
+   "sem_x": 0.5895,
+   "sem_y": 0.1295,
+   "alt_x": 0.57,
+   "alt_y": 0.9451,
+   "complexity": 4,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "holonic"
+  },
+  {
+   "id": "skill_library_voyager",
+   "name": "Curriculum + Skill Library + Critic (Voyager)",
+   "short_name": "Curriculum + Skill Library + Cri…",
+   "category": "Research & web-scraping reference systems",
+   "axes_x": 0.23,
+   "axes_y": 0.245,
+   "axes_x_raw": 0.23,
+   "axes_y_raw": 0.245,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.58,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.3,
+   "sem_x": 0.8008,
+   "sem_y": 0.3984,
+   "alt_x": 0.1285,
+   "alt_y": 0.2001,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 5,
+   "nearest_other_category": "tool_verified_critique"
+  },
+  {
+   "id": "ubicrawler_decentralized",
+   "name": "Fully Distributed Crawler (UbiCrawler, consistent hashing)",
+   "short_name": "Fully Distributed Crawler",
+   "category": "Research & web-scraping reference systems",
+   "axes_x": 0.86,
+   "axes_y": 0.443,
+   "axes_x_raw": 0.86,
+   "axes_y_raw": 0.443,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.72,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.74,
+   "sem_x": 0.8518,
+   "sem_y": 0.6184,
+   "alt_x": 0.4227,
+   "alt_y": 0.0396,
+   "complexity": 4,
+   "research_fit": 2,
+   "scraping_fit": 5,
+   "nearest_other_category": "agentnet_decentralized"
+  },
+  {
+   "id": "webwalker_explorer_critic",
+   "name": "Explorer-Critic Web Traversal (WebWalker)",
+   "short_name": "Explorer-Critic Web Traversal",
+   "category": "Research & web-scraping reference systems",
+   "axes_x": 0.254,
+   "axes_y": 0.3845,
+   "axes_x_raw": 0.254,
+   "axes_y_raw": 0.3845,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.66,
+   "coordination_prior": 0.2,
+   "coordination_embed": 0.61,
+   "sem_x": 0.7953,
+   "sem_y": 0.4905,
+   "alt_x": 0.2386,
+   "alt_y": 0.1037,
+   "complexity": 2,
+   "research_fit": 4,
+   "scraping_fit": 4,
+   "nearest_other_category": "evaluator_optimizer"
+  },
+  {
+   "id": "handoff_swarm",
+   "name": "Handoff Swarm (OpenAI Swarm / Agents SDK handoffs)",
+   "short_name": "Handoff Swarm",
+   "category": "Routing & handoff",
+   "axes_x": 0.764,
+   "axes_y": 0.3915,
+   "axes_x_raw": 0.764,
+   "axes_y_raw": 0.3915,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.4,
+   "coordination_prior": 0.18,
+   "coordination_embed": 0.65,
+   "sem_x": 0.5793,
+   "sem_y": 0.3049,
+   "alt_x": 0.635,
+   "alt_y": 0.7595,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 2,
+   "nearest_other_category": "internet_of_agents"
+  },
+  {
+   "id": "model_routing",
+   "name": "Model / LLM Routing (cost-quality router)",
+   "short_name": "Model / LLM Routing",
+   "category": "Routing & handoff",
+   "axes_x": 0.191,
+   "axes_y": 0.2122,
+   "axes_x_raw": 0.185,
+   "axes_y_raw": 0.216,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.43,
+   "coordination_prior": 0.18,
+   "coordination_embed": 0.26,
+   "sem_x": 0.2601,
+   "sem_y": 0.0566,
+   "alt_x": 0.7329,
+   "alt_y": 0.5595,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 5,
+   "nearest_other_category": "dylan_dynamic_network"
+  },
+  {
+   "id": "router_dispatcher",
+   "name": "Router / Dispatcher",
+   "short_name": "Router / Dispatcher",
+   "category": "Routing & handoff",
+   "axes_x": 0.044,
+   "axes_y": 0.1618,
+   "axes_x_raw": 0.062,
+   "axes_y_raw": 0.1665,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.02,
+   "coordination_prior": 0.18,
+   "coordination_embed": 0.15,
+   "sem_x": 0.2384,
+   "sem_y": 0.039,
+   "alt_x": 0.7589,
+   "alt_y": 0.4949,
+   "complexity": 1,
+   "research_fit": 3,
+   "scraping_fit": 5,
+   "nearest_other_category": "supervisor_router"
+  },
+  {
+   "id": "graph_of_thoughts",
+   "name": "Graph of Thoughts",
+   "short_name": "Graph of Thoughts",
+   "category": "Search-based reasoning",
+   "axes_x": 0.149,
+   "axes_y": 0.3664,
+   "axes_x_raw": 0.149,
+   "axes_y_raw": 0.3665,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.31,
+   "coordination_prior": 0.38,
+   "coordination_embed": 0.35,
+   "sem_x": 0.1718,
+   "sem_y": 0.5958,
+   "alt_x": 0.2876,
+   "alt_y": 0.2918,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 2,
+   "nearest_other_category": "graph_state_machine"
+  },
+  {
+   "id": "lats_mcts",
+   "name": "Language Agent Tree Search (LATS)",
+   "short_name": "Language Agent Tree Search",
+   "category": "Search-based reasoning",
+   "axes_x": 0.332,
+   "axes_y": 0.4655,
+   "axes_x_raw": 0.332,
+   "axes_y_raw": 0.4655,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.92,
+   "coordination_prior": 0.38,
+   "coordination_embed": 0.57,
+   "sem_x": 0.1432,
+   "sem_y": 0.5257,
+   "alt_x": 0.4111,
+   "alt_y": 0.2048,
+   "complexity": 4,
+   "research_fit": 3,
+   "scraping_fit": 3,
+   "nearest_other_category": "aflow_workflow_search"
+  },
+  {
+   "id": "tree_of_thoughts",
+   "name": "Tree of Thoughts (multi-branch deliberate search)",
+   "short_name": "Tree of Thoughts",
+   "category": "Search-based reasoning",
+   "axes_x": 0.1983,
+   "axes_y": 0.4422,
+   "axes_x_raw": 0.203,
+   "axes_y_raw": 0.4475,
+   "centralization_rule": 0.08,
+   "centralization_embed": 0.49,
+   "coordination_prior": 0.38,
+   "coordination_embed": 0.53,
+   "sem_x": 0.1657,
+   "sem_y": 0.5512,
+   "alt_x": 0.2479,
+   "alt_y": 0.2017,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 2,
+   "nearest_other_category": "evaluator_optimizer"
+  },
+  {
+   "id": "blackboard_classic",
+   "name": "Blackboard Architecture (classical, Hearsay-II)",
+   "short_name": "Blackboard Architecture",
+   "category": "Shared-state & stigmergic coordination",
+   "axes_x": 0.4472,
+   "axes_y": 0.5289,
+   "axes_x_raw": 0.437,
+   "axes_y_raw": 0.534,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.29,
+   "coordination_prior": 0.75,
+   "coordination_embed": 0.27,
+   "sem_x": 0.4804,
+   "sem_y": 0.3982,
+   "alt_x": 0.3582,
+   "alt_y": 0.4804,
+   "complexity": 3,
+   "research_fit": 4,
+   "scraping_fit": 3,
+   "nearest_other_category": "talkhier"
+  },
+  {
+   "id": "blackboard_llm",
+   "name": "LLM Blackboard Multi-Agent System",
+   "short_name": "LLM Blackboard Multi-Agent System",
+   "category": "Shared-state & stigmergic coordination",
+   "axes_x": 0.491,
+   "axes_y": 0.6375,
+   "axes_x_raw": 0.491,
+   "axes_y_raw": 0.6375,
+   "centralization_rule": 0.5,
+   "centralization_embed": 0.47,
+   "coordination_prior": 0.75,
+   "coordination_embed": 0.5,
+   "sem_x": 0.4817,
+   "sem_y": 0.4268,
+   "alt_x": 0.4783,
+   "alt_y": 0.5475,
+   "complexity": 3,
+   "research_fit": 5,
+   "scraping_fit": 4,
+   "nearest_other_category": "dylan_dynamic_network"
+  },
+  {
+   "id": "pubsub_message_pool",
+   "name": "Publish-Subscribe Message Pool / Event Bus",
+   "short_name": "Publish-Subscribe Message Pool /…",
+   "category": "Shared-state & stigmergic coordination",
+   "axes_x": 0.749,
+   "axes_y": 0.561,
+   "axes_x_raw": 0.749,
+   "axes_y_raw": 0.561,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.35,
+   "coordination_prior": 0.75,
+   "coordination_embed": 0.33,
+   "sem_x": 0.1761,
+   "sem_y": 0.7656,
+   "alt_x": 0.7944,
+   "alt_y": 0.6963,
+   "complexity": 3,
+   "research_fit": 4,
+   "scraping_fit": 5,
+   "nearest_other_category": "actor_model"
+  },
+  {
+   "id": "stigmergy_classic",
+   "name": "Stigmergy (indirect coordination via environment)",
+   "short_name": "Stigmergy",
+   "category": "Shared-state & stigmergic coordination",
+   "axes_x": 0.9098,
+   "axes_y": 0.81,
+   "axes_x_raw": 0.908,
+   "axes_y_raw": 0.813,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.88,
+   "coordination_prior": 0.75,
+   "coordination_embed": 0.89,
+   "sem_x": 0.6531,
+   "sem_y": 0.3644,
+   "alt_x": 0.451,
+   "alt_y": 0.8954,
+   "complexity": 2,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "agentnet_decentralized"
+  },
+  {
+   "id": "stigmergy_llm",
+   "name": "Stigmergic LLM Agents (pressure fields, shared artifacts)",
+   "short_name": "Stigmergic LLM Agents",
+   "category": "Shared-state & stigmergic coordination",
+   "axes_x": 0.8992,
+   "axes_y": 0.6964,
+   "axes_x_raw": 0.905,
+   "axes_y_raw": 0.696,
+   "centralization_rule": 0.92,
+   "centralization_embed": 0.87,
+   "coordination_prior": 0.75,
+   "coordination_embed": 0.63,
+   "sem_x": 0.6203,
+   "sem_y": 0.3725,
+   "alt_x": 0.5095,
+   "alt_y": 0.8132,
+   "complexity": 3,
+   "research_fit": 3,
+   "scraping_fit": 4,
+   "nearest_other_category": "cooperative_embodied_coela"
+  }
+ ],
+ "edges": [
+  [
+   "a2a_federation",
+   "federation_facilitator"
+  ],
+  [
+   "a2a_federation",
+   "hugginggpt_controller"
+  ],
+  [
+   "a2a_federation",
+   "internet_of_agents"
+  ],
+  [
+   "a2a_federation",
+   "llm_auction_marketplace"
+  ],
+  [
+   "actor_model",
+   "gossip_p2p"
+  ],
+  [
+   "actor_model",
+   "pubsub_message_pool"
+  ],
+  [
+   "actor_model",
+   "ubicrawler_decentralized"
+  ],
+  [
+   "adas_meta_agent",
+   "aflow_workflow_search"
+  ],
+  [
+   "adas_meta_agent",
+   "evoagent_evolutionary"
+  ],
+  [
+   "adas_meta_agent",
+   "gptswarm_optimizable_graph"
+  ],
+  [
+   "adas_meta_agent",
+   "mass_optimizer"
+  ],
+  [
+   "aflow_workflow_search",
+   "gptswarm_optimizable_graph"
+  ],
+  [
+   "aflow_workflow_search",
+   "mass_optimizer"
+  ],
+  [
+   "aflow_workflow_search",
+   "sop_assembly_line_metagpt"
+  ],
+  [
+   "agentnet_decentralized",
+   "dylan_dynamic_network"
+  ],
+  [
+   "agentnet_decentralized",
+   "evoagent_evolutionary"
+  ],
+  [
+   "agentnet_decentralized",
+   "gossip_p2p"
+  ],
+  [
+   "agentprune_sparsification",
+   "g_designer_topology"
+  ],
+  [
+   "agentprune_sparsification",
+   "gptswarm_optimizable_graph"
+  ],
+  [
+   "agentprune_sparsification",
+   "sparse_debate_topology"
+  ],
+  [
+   "agentverse_dynamic_team",
+   "dylan_dynamic_network"
+  ],
+  [
+   "agentverse_dynamic_team",
+   "evoagent_evolutionary"
+  ],
+  [
+   "agentverse_dynamic_team",
+   "group_chat_selector"
+  ],
+  [
+   "ai_coscientist_tournament",
+   "island_evolution_funsearch"
+  ],
+  [
+   "ai_coscientist_tournament",
+   "mad_judge_debate"
+  ],
+  [
+   "ai_coscientist_tournament",
+   "orchestrator_worker"
+  ],
+  [
+   "ai_scientist_pipeline",
+   "evaluator_optimizer"
+  ],
+  [
+   "ai_scientist_pipeline",
+   "sequential_pipeline"
+  ],
+  [
+   "ai_scientist_pipeline",
+   "sop_assembly_line_metagpt"
+  ],
+  [
+   "ant_colony_optimization",
+   "artificial_bee_colony"
+  ],
+  [
+   "ant_colony_optimization",
+   "particle_swarm_optimization"
+  ],
+  [
+   "ant_colony_optimization",
+   "stigmergy_classic"
+  ],
+  [
+   "ant_colony_optimization",
+   "stigmergy_llm"
+  ],
+  [
+   "ant_colony_optimization",
+   "swarmsys"
+  ],
+  [
+   "anthropic_research_system",
+   "gpt_researcher"
+  ],
+  [
+   "anthropic_research_system",
+   "llm_judge_panel"
+  ],
+  [
+   "anthropic_research_system",
+   "orchestrator_worker"
+  ],
+  [
+   "anthropic_research_system",
+   "parallel_fanout_mapreduce"
+  ],
+  [
+   "anthropic_research_system",
+   "perspective_conversations_storm"
+  ],
+  [
+   "anthropic_research_system",
+   "tool_verified_critique"
+  ],
+  [
+   "artificial_bee_colony",
+   "firefly_gwo_family"
+  ],
+  [
+   "artificial_bee_colony",
+   "orchestrator_worker"
+  ],
+  [
+   "artificial_bee_colony",
+   "swarmsys"
+  ],
+  [
+   "auction_market_allocation",
+   "coalitions_congregations"
+  ],
+  [
+   "auction_market_allocation",
+   "contract_net"
+  ],
+  [
+   "auction_market_allocation",
+   "llm_auction_marketplace"
+  ],
+  [
+   "autoscraper_progressive",
+   "evaluator_optimizer"
+  ],
+  [
+   "autoscraper_progressive",
+   "reflection_self_critique"
+  ],
+  [
+   "autoscraper_progressive",
+   "scrapegraph_pipelines"
+  ],
+  [
+   "autoscraper_progressive",
+   "skill_library_voyager"
+  ],
+  [
+   "bdi_agents",
+   "plan_and_execute"
+  ],
+  [
+   "bdi_agents",
+   "subsumption_layered"
+  ],
+  [
+   "blackboard_classic",
+   "blackboard_llm"
+  ],
+  [
+   "blackboard_classic",
+   "pubsub_message_pool"
+  ],
+  [
+   "blackboard_classic",
+   "stigmergy_classic"
+  ],
+  [
+   "blackboard_llm",
+   "cooperative_embodied_coela"
+  ],
+  [
+   "blackboard_llm",
+   "exchange_of_thought"
+  ],
+  [
+   "blackboard_llm",
+   "group_chat_selector"
+  ],
+  [
+   "blackboard_llm",
+   "pubsub_message_pool"
+  ],
+  [
+   "blackboard_llm",
+   "stigmergy_llm"
+  ],
+  [
+   "blackboard_llm",
+   "task_queue_babyagi"
+  ],
+  [
+   "boids_flocking",
+   "particle_swarm_optimization"
+  ],
+  [
+   "boids_flocking",
+   "swarm_robotics"
+  ],
+  [
+   "chain_of_agents",
+   "parallel_fanout_mapreduce"
+  ],
+  [
+   "chain_of_agents",
+   "sequential_pipeline"
+  ],
+  [
+   "chat_chain_chatdev",
+   "macnet_dag"
+  ],
+  [
+   "chat_chain_chatdev",
+   "role_play_camel"
+  ],
+  [
+   "chat_chain_chatdev",
+   "sequential_pipeline"
+  ],
+  [
+   "chat_chain_chatdev",
+   "sop_assembly_line_metagpt"
+  ],
+  [
+   "chateval_referee_debate",
+   "llm_judge_panel"
+  ],
+  [
+   "chateval_referee_debate",
+   "mad_judge_debate"
+  ],
+  [
+   "chateval_referee_debate",
+   "multi_agent_debate"
+  ],
+  [
+   "coalitions_congregations",
+   "federation_facilitator"
+  ],
+  [
+   "coalitions_congregations",
+   "hierarchical_teams"
+  ],
+  [
+   "coalitions_congregations",
+   "holonic"
+  ],
+  [
+   "consensus_networks",
+   "gossip_p2p"
+  ],
+  [
+   "consensus_networks",
+   "multi_agent_debate"
+  ],
+  [
+   "consensus_networks",
+   "sparse_debate_topology"
+  ],
+  [
+   "consensus_networks",
+   "swarm_robotics"
+  ],
+  [
+   "contract_net",
+   "llm_auction_marketplace"
+  ],
+  [
+   "contract_net",
+   "task_queue_babyagi"
+  ],
+  [
+   "cooperative_embodied_coela",
+   "network_all_to_all"
+  ],
+  [
+   "corex_collab_modes",
+   "evaluator_optimizer"
+  ],
+  [
+   "corex_collab_modes",
+   "multi_agent_debate"
+  ],
+  [
+   "corex_collab_modes",
+   "voting_ensemble"
+  ],
+  [
+   "crewai_flows",
+   "crewai_hierarchical"
+  ],
+  [
+   "crewai_flows",
+   "graph_state_machine"
+  ],
+  [
+   "crewai_flows",
+   "pubsub_message_pool"
+  ],
+  [
+   "crewai_hierarchical",
+   "hierarchical_teams"
+  ],
+  [
+   "crewai_hierarchical",
+   "sequential_pipeline"
+  ],
+  [
+   "crewai_hierarchical",
+   "supervisor_router"
+  ],
+  [
+   "dag_workflow",
+   "graph_state_machine"
+  ],
+  [
+   "dag_workflow",
+   "llmcompiler_dag"
+  ],
+  [
+   "dag_workflow",
+   "macnet_dag"
+  ],
+  [
+   "dag_workflow",
+   "parallel_fanout_mapreduce"
+  ],
+  [
+   "distributed_crawler_frontier",
+   "parallel_fanout_mapreduce"
+  ],
+  [
+   "distributed_crawler_frontier",
+   "pubsub_message_pool"
+  ],
+  [
+   "distributed_crawler_frontier",
+   "task_queue_babyagi"
+  ],
+  [
+   "distributed_crawler_frontier",
+   "ubicrawler_decentralized"
+  ],
+  [
+   "dylan_dynamic_network",
+   "gptswarm_optimizable_graph"
+  ],
+  [
+   "dylan_dynamic_network",
+   "mixture_of_agents"
+  ],
+  [
+   "dylan_dynamic_network",
+   "network_all_to_all"
+  ],
+  [
+   "evaluator_optimizer",
+   "llm_judge_panel"
+  ],
+  [
+   "evaluator_optimizer",
+   "loop_agent"
+  ],
+  [
+   "evaluator_optimizer",
+   "mad_judge_debate"
+  ],
+  [
+   "evaluator_optimizer",
+   "reflection_self_critique"
+  ],
+  [
+   "evaluator_optimizer",
+   "round_robin_chat"
+  ],
+  [
+   "evaluator_optimizer",
+   "talkhier"
+  ],
+  [
+   "evaluator_optimizer",
+   "tool_verified_critique"
+  ],
+  [
+   "evaluator_optimizer",
+   "webwalker_explorer_critic"
+  ],
+  [
+   "evoagent_evolutionary",
+   "island_evolution_funsearch"
+  ],
+  [
+   "evoagent_evolutionary",
+   "population_based_training"
+  ],
+  [
+   "evoagent_evolutionary",
+   "promptbreeder"
+  ],
+  [
+   "evolving_orchestration_puppeteer",
+   "gptswarm_optimizable_graph"
+  ],
+  [
+   "evolving_orchestration_puppeteer",
+   "model_routing"
+  ],
+  [
+   "evolving_orchestration_puppeteer",
+   "supervisor_router"
+  ],
+  [
+   "exchange_of_thought",
+   "multi_agent_debate"
+  ],
+  [
+   "exchange_of_thought",
+   "sequential_pipeline"
+  ],
+  [
+   "federation_facilitator",
+   "internet_of_agents"
+  ],
+  [
+   "federation_facilitator",
+   "router_dispatcher"
+  ],
+  [
+   "firefly_gwo_family",
+   "hierarchical_teams"
+  ],
+  [
+   "firefly_gwo_family",
+   "particle_swarm_optimization"
+  ],
+  [
+   "g_designer_topology",
+   "gptswarm_optimizable_graph"
+  ],
+  [
+   "generative_agents_sim",
+   "society_of_mind"
+  ],
+  [
+   "generative_agents_sim",
+   "stigmergy_llm"
+  ],
+  [
+   "gossip_p2p",
+   "network_all_to_all"
+  ],
+  [
+   "gossip_p2p",
+   "sparse_debate_topology"
+  ],
+  [
+   "gossip_p2p",
+   "ubicrawler_decentralized"
+  ],
+  [
+   "gpt_researcher",
+   "parallel_fanout_mapreduce"
+  ],
+  [
+   "gpt_researcher",
+   "perspective_conversations_storm"
+  ],
+  [
+   "gptswarm_optimizable_graph",
+   "macnet_dag"
+  ],
+  [
+   "gptswarm_optimizable_graph",
+   "mass_optimizer"
+  ],
+  [
+   "graph_of_thoughts",
+   "parallel_fanout_mapreduce"
+  ],
+  [
+   "graph_of_thoughts",
+   "tree_of_thoughts"
+  ],
+  [
+   "graph_state_machine",
+   "human_in_the_loop"
+  ],
+  [
+   "graph_state_machine",
+   "loop_agent"
+  ],
+  [
+   "graph_state_machine",
+   "parallel_fanout_mapreduce"
+  ],
+  [
+   "graph_state_machine",
+   "sequential_pipeline"
+  ],
+  [
+   "graph_state_machine",
+   "supervisor_router"
+  ],
+  [
+   "group_chat_selector",
+   "handoff_swarm"
+  ],
+  [
+   "group_chat_selector",
+   "role_play_camel"
+  ],
+  [
+   "group_chat_selector",
+   "round_robin_chat"
+  ],
+  [
+   "group_chat_selector",
+   "society_of_mind"
+  ],
+  [
+   "group_chat_selector",
+   "supervisor_router"
+  ],
+  [
+   "handoff_swarm",
+   "human_in_the_loop"
+  ],
+  [
+   "handoff_swarm",
+   "network_all_to_all"
+  ],
+  [
+   "handoff_swarm",
+   "orchestrator_worker"
+  ],
+  [
+   "handoff_swarm",
+   "router_dispatcher"
+  ],
+  [
+   "hierarchical_teams",
+   "holonic"
+  ],
+  [
+   "hierarchical_teams",
+   "orchestrator_worker"
+  ],
+  [
+   "hierarchical_teams",
+   "self_organized_agents"
+  ],
+  [
+   "hierarchical_teams",
+   "society_of_mind"
+  ],
+  [
+   "hierarchical_teams",
+   "supervisor_router"
+  ],
+  [
+   "hierarchical_teams",
+   "talkhier"
+  ],
+  [
+   "holonic",
+   "self_organized_agents"
+  ],
+  [
+   "holonic",
+   "society_of_mind"
+  ],
+  [
+   "holonic",
+   "subsumption_layered"
+  ],
+  [
+   "hugginggpt_controller",
+   "orchestrator_worker"
+  ],
+  [
+   "hugginggpt_controller",
+   "router_dispatcher"
+  ],
+  [
+   "island_evolution_funsearch",
+   "population_based_training"
+  ],
+  [
+   "lats_mcts",
+   "reflection_self_critique"
+  ],
+  [
+   "lats_mcts",
+   "tree_of_thoughts"
+  ],
+  [
+   "llm_blender_rank_fuse",
+   "llm_judge_panel"
+  ],
+  [
+   "llm_blender_rank_fuse",
+   "mixture_of_agents"
+  ],
+  [
+   "llm_blender_rank_fuse",
+   "voting_ensemble"
+  ],
+  [
+   "llm_judge_panel",
+   "multi_agent_verification"
+  ],
+  [
+   "llmcompiler_dag",
+   "parallel_fanout_mapreduce"
+  ],
+  [
+   "llmcompiler_dag",
+   "plan_and_execute"
+  ],
+  [
+   "llmcompiler_dag",
+   "rewoo"
+  ],
+  [
+   "mad_judge_debate",
+   "multi_agent_debate"
+  ],
+  [
+   "magentic_one_ledger",
+   "orchestrator_worker"
+  ],
+  [
+   "magentic_one_ledger",
+   "reflection_self_critique"
+  ],
+  [
+   "magentic_one_ledger",
+   "supervisor_router"
+  ],
+  [
+   "magentic_one_ledger",
+   "webwalker_explorer_critic"
+  ],
+  [
+   "mixture_of_agents",
+   "multi_agent_debate"
+  ],
+  [
+   "mixture_of_agents",
+   "voting_ensemble"
+  ],
+  [
+   "model_routing",
+   "router_dispatcher"
+  ],
+  [
+   "model_swarms_pso",
+   "particle_swarm_optimization"
+  ],
+  [
+   "model_swarms_pso",
+   "population_based_training"
+  ],
+  [
+   "multi_agent_debate",
+   "sparse_debate_topology"
+  ],
+  [
+   "multi_agent_debate",
+   "voting_ensemble"
+  ],
+  [
+   "multi_agent_verification",
+   "tool_verified_critique"
+  ],
+  [
+   "multi_agent_verification",
+   "voting_ensemble"
+  ],
+  [
+   "orchestrator_worker",
+   "parallel_fanout_mapreduce"
+  ],
+  [
+   "orchestrator_worker",
+   "perspective_conversations_storm"
+  ],
+  [
+   "orchestrator_worker",
+   "plan_and_execute"
+  ],
+  [
+   "orchestrator_worker",
+   "self_organized_agents"
+  ],
+  [
+   "orchestrator_worker",
+   "supervisor_router"
+  ],
+  [
+   "parallel_fanout_mapreduce",
+   "scrapegraph_pipelines"
+  ],
+  [
+   "parallel_fanout_mapreduce",
+   "voting_ensemble"
+  ],
+  [
+   "particle_swarm_optimization",
+   "sparse_debate_topology"
+  ],
+  [
+   "plan_and_execute",
+   "rewoo"
+  ],
+  [
+   "plan_and_execute",
+   "task_queue_babyagi"
+  ],
+  [
+   "population_based_training",
+   "promptbreeder"
+  ],
+  [
+   "pubsub_message_pool",
+   "sop_assembly_line_metagpt"
+  ],
+  [
+   "reflection_self_critique",
+   "skill_library_voyager"
+  ],
+  [
+   "reflection_self_critique",
+   "tool_verified_critique"
+  ],
+  [
+   "router_dispatcher",
+   "supervisor_router"
+  ],
+  [
+   "scrapegraph_pipelines",
+   "sequential_pipeline"
+  ],
+  [
+   "sequential_pipeline",
+   "sop_assembly_line_metagpt"
+  ],
+  [
+   "stigmergy_classic",
+   "stigmergy_llm"
+  ],
+  [
+   "stigmergy_classic",
+   "swarm_robotics"
+  ],
+  [
+   "stigmergy_llm",
+   "swarmsys"
+  ]
+ ],
+ "categories": [
+  {
+   "category": "Pipeline & workflow",
+   "color": "#1f77b4",
+   "count": 9,
+   "intra_edges": 9,
+   "x": 0.2249,
+   "y": 0.0688,
+   "sem_x": 0.3055,
+   "sem_y": 0.4472,
+   "mean_centralization": 0.252,
+   "mean_coordination": 0.083
+  },
+  {
+   "category": "Routing & handoff",
+   "color": "#17becf",
+   "count": 3,
+   "intra_edges": 2,
+   "x": 0.3455,
+   "y": 0.1884,
+   "sem_x": 0.1,
+   "sem_y": 0.5359,
+   "mean_centralization": 0.337,
+   "mean_coordination": 0.258
+  },
+  {
+   "category": "Parallel & ensemble",
+   "color": "#aec7e8",
+   "count": 4,
+   "intra_edges": 4,
+   "x": 0.1909,
+   "y": 0.2951,
+   "sem_x": 0.8646,
+   "sem_y": 0.5971,
+   "mean_centralization": 0.166,
+   "mean_coordination": 0.361
+  },
+  {
+   "category": "Centralized orchestration",
+   "color": "#2457c5",
+   "count": 12,
+   "intra_edges": 15,
+   "x": 0.0416,
+   "y": 0.2146,
+   "sem_x": 0.3329,
+   "sem_y": 0.373,
+   "mean_centralization": 0.103,
+   "mean_coordination": 0.247
+  },
+  {
+   "category": "Research & web-scraping reference systems",
+   "color": "#d62728",
+   "count": 10,
+   "intra_edges": 4,
+   "x": 0.3484,
+   "y": 0.3576,
+   "sem_x": 0.5134,
+   "sem_y": 0.3385,
+   "mean_centralization": 0.297,
+   "mean_coordination": 0.315
+  },
+  {
+   "category": "Search-based reasoning",
+   "color": "#8c564b",
+   "count": 3,
+   "intra_edges": 2,
+   "x": 0.2156,
+   "y": 0.4631,
+   "sem_x": 0.7306,
+   "sem_y": 0.1714,
+   "mean_centralization": 0.228,
+   "mean_coordination": 0.427
+  },
+  {
+   "category": "Critique & refinement loops",
+   "color": "#ff7f0e",
+   "count": 5,
+   "intra_edges": 6,
+   "x": 0.058,
+   "y": 0.4001,
+   "sem_x": 0.4522,
+   "sem_y": 0.1,
+   "mean_centralization": 0.16,
+   "mean_coordination": 0.374
+  },
+  {
+   "category": "Conversational teams & role-play",
+   "color": "#e377c2",
+   "count": 8,
+   "intra_edges": 5,
+   "x": 0.4432,
+   "y": 0.4987,
+   "sem_x": 0.5103,
+   "sem_y": 0.5029,
+   "mean_centralization": 0.511,
+   "mean_coordination": 0.532
+  },
+  {
+   "category": "Debate & deliberation",
+   "color": "#9467bd",
+   "count": 6,
+   "intra_edges": 6,
+   "x": 0.6109,
+   "y": 0.4752,
+   "sem_x": 0.9,
+   "sem_y": 0.3905,
+   "mean_centralization": 0.578,
+   "mean_coordination": 0.541
+  },
+  {
+   "category": "Classical MAS architectures & organizations",
+   "color": "#7f7f7f",
+   "count": 6,
+   "intra_edges": 2,
+   "x": 0.7806,
+   "y": 0.4705,
+   "sem_x": 0.4005,
+   "sem_y": 0.6304,
+   "mean_centralization": 0.705,
+   "mean_coordination": 0.585
+  },
+  {
+   "category": "Market & negotiation",
+   "color": "#bcbd22",
+   "count": 4,
+   "intra_edges": 4,
+   "x": 0.5474,
+   "y": 0.6324,
+   "sem_x": 0.2698,
+   "sem_y": 0.802,
+   "mean_centralization": 0.618,
+   "mean_coordination": 0.592
+  },
+  {
+   "category": "Shared-state & stigmergic coordination",
+   "color": "#2ca02c",
+   "count": 5,
+   "intra_edges": 6,
+   "x": 0.7164,
+   "y": 0.6269,
+   "sem_x": 0.4677,
+   "sem_y": 0.707,
+   "mean_centralization": 0.698,
+   "mean_coordination": 0.648
+  },
+  {
+   "category": "Decentralized & peer-to-peer",
+   "color": "#98df8a",
+   "count": 8,
+   "intra_edges": 5,
+   "x": 0.7914,
+   "y": 0.7783,
+   "sem_x": 0.565,
+   "sem_y": 0.6572,
+   "mean_centralization": 0.731,
+   "mean_coordination": 0.708
+  },
+  {
+   "category": "Evolutionary & self-optimizing",
+   "color": "#ff9896",
+   "count": 12,
+   "intra_edges": 17,
+   "x": 0.385,
+   "y": 0.8018,
+   "sem_x": 0.6414,
+   "sem_y": 0.4955,
+   "mean_centralization": 0.392,
+   "mean_coordination": 0.832
+  },
+  {
+   "category": "Classical swarm intelligence",
+   "color": "#6b4c11",
+   "count": 6,
+   "intra_edges": 6,
+   "x": 0.92,
+   "y": 0.92,
+   "sem_x": 0.7245,
+   "sem_y": 0.9,
+   "mean_centralization": 0.897,
+   "mean_coordination": 0.954
+  }
+ ],
+ "category_edges": [
+  {
+   "a": "Critique & refinement loops",
+   "b": "Research & web-scraping reference systems",
+   "weight": 7
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Research & web-scraping reference systems",
+   "weight": 5
+  },
+  {
+   "a": "Classical MAS architectures & organizations",
+   "b": "Decentralized & peer-to-peer",
+   "weight": 4
+  },
+  {
+   "a": "Parallel & ensemble",
+   "b": "Research & web-scraping reference systems",
+   "weight": 4
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Pipeline & workflow",
+   "weight": 4
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Routing & handoff",
+   "weight": 4
+  },
+  {
+   "a": "Decentralized & peer-to-peer",
+   "b": "Evolutionary & self-optimizing",
+   "weight": 3
+  },
+  {
+   "a": "Pipeline & workflow",
+   "b": "Research & web-scraping reference systems",
+   "weight": 3
+  },
+  {
+   "a": "Classical swarm intelligence",
+   "b": "Shared-state & stigmergic coordination",
+   "weight": 3
+  },
+  {
+   "a": "Conversational teams & role-play",
+   "b": "Shared-state & stigmergic coordination",
+   "weight": 3
+  },
+  {
+   "a": "Parallel & ensemble",
+   "b": "Pipeline & workflow",
+   "weight": 3
+  },
+  {
+   "a": "Critique & refinement loops",
+   "b": "Debate & deliberation",
+   "weight": 3
+  },
+  {
+   "a": "Debate & deliberation",
+   "b": "Parallel & ensemble",
+   "weight": 3
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Conversational teams & role-play",
+   "weight": 3
+  },
+  {
+   "a": "Classical MAS architectures & organizations",
+   "b": "Research & web-scraping reference systems",
+   "weight": 2
+  },
+  {
+   "a": "Debate & deliberation",
+   "b": "Evolutionary & self-optimizing",
+   "weight": 2
+  },
+  {
+   "a": "Conversational teams & role-play",
+   "b": "Decentralized & peer-to-peer",
+   "weight": 2
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Evolutionary & self-optimizing",
+   "weight": 2
+  },
+  {
+   "a": "Classical swarm intelligence",
+   "b": "Decentralized & peer-to-peer",
+   "weight": 2
+  },
+  {
+   "a": "Conversational teams & role-play",
+   "b": "Research & web-scraping reference systems",
+   "weight": 2
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Classical swarm intelligence",
+   "weight": 2
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Classical MAS architectures & organizations",
+   "weight": 2
+  },
+  {
+   "a": "Decentralized & peer-to-peer",
+   "b": "Pipeline & workflow",
+   "weight": 2
+  },
+  {
+   "a": "Classical MAS architectures & organizations",
+   "b": "Market & negotiation",
+   "weight": 2
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Market & negotiation",
+   "weight": 2
+  },
+  {
+   "a": "Classical MAS architectures & organizations",
+   "b": "Debate & deliberation",
+   "weight": 2
+  },
+  {
+   "a": "Pipeline & workflow",
+   "b": "Shared-state & stigmergic coordination",
+   "weight": 2
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Critique & refinement loops",
+   "weight": 2
+  },
+  {
+   "a": "Critique & refinement loops",
+   "b": "Parallel & ensemble",
+   "weight": 2
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Parallel & ensemble",
+   "weight": 2
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Decentralized & peer-to-peer",
+   "weight": 1
+  },
+  {
+   "a": "Decentralized & peer-to-peer",
+   "b": "Market & negotiation",
+   "weight": 1
+  },
+  {
+   "a": "Classical MAS architectures & organizations",
+   "b": "Shared-state & stigmergic coordination",
+   "weight": 1
+  },
+  {
+   "a": "Evolutionary & self-optimizing",
+   "b": "Pipeline & workflow",
+   "weight": 1
+  },
+  {
+   "a": "Conversational teams & role-play",
+   "b": "Evolutionary & self-optimizing",
+   "weight": 1
+  },
+  {
+   "a": "Debate & deliberation",
+   "b": "Shared-state & stigmergic coordination",
+   "weight": 1
+  },
+  {
+   "a": "Centralized orchestration",
+   "b": "Shared-state & stigmergic coordination",
+   "weight": 1
+  },
+  {
+   "a": "Conversational teams & role-play",
+   "b": "Pipeline & workflow",
+   "weight": 1
+  },
+  {
+   "a": "Classical MAS architectures & organizations",
+   "b": "Classical swarm intelligence",
+   "weight": 1
+  },
+  {
+   "a": "Research & web-scraping reference systems",
+   "b": "Shared-state & stigmergic coordination",
+   "weight": 1
+  },
+  {
+   "a": "Decentralized & peer-to-peer",
+   "b": "Parallel & ensemble",
+   "weight": 1
+  },
+  {
+   "a": "Critique & refinement loops",
+   "b": "Pipeline & workflow",
+   "weight": 1
+  },
+  {
+   "a": "Conversational teams & role-play",
+   "b": "Critique & refinement loops",
+   "weight": 1
+  },
+  {
+   "a": "Debate & deliberation",
+   "b": "Pipeline & workflow",
+   "weight": 1
+  },
+  {
+   "a": "Classical MAS architectures & organizations",
+   "b": "Routing & handoff",
+   "weight": 1
+  },
+  {
+   "a": "Debate & deliberation",
+   "b": "Decentralized & peer-to-peer",
+   "weight": 1
+  },
+  {
+   "a": "Decentralized & peer-to-peer",
+   "b": "Research & web-scraping reference systems",
+   "weight": 1
+  },
+  {
+   "a": "Parallel & ensemble",
+   "b": "Search-based reasoning",
+   "weight": 1
+  },
+  {
+   "a": "Conversational teams & role-play",
+   "b": "Routing & handoff",
+   "weight": 1
+  },
+  {
+   "a": "Pipeline & workflow",
+   "b": "Routing & handoff",
+   "weight": 1
+  },
+  {
+   "a": "Decentralized & peer-to-peer",
+   "b": "Routing & handoff",
+   "weight": 1
+  },
+  {
+   "a": "Classical MAS architectures & organizations",
+   "b": "Conversational teams & role-play",
+   "weight": 1
+  },
+  {
+   "a": "Critique & refinement loops",
+   "b": "Search-based reasoning",
+   "weight": 1
+  },
+  {
+   "a": "Classical swarm intelligence",
+   "b": "Evolutionary & self-optimizing",
+   "weight": 1
+  },
+  {
+   "a": "Classical swarm intelligence",
+   "b": "Debate & deliberation",
+   "weight": 1
+  },
+  {
+   "a": "Decentralized & peer-to-peer",
+   "b": "Shared-state & stigmergic coordination",
+   "weight": 1
+  }
+ ],
+ "observations": {
+  "top_unlinked_cross_category_pairs": [
+   {
+    "a": "gptswarm_optimizable_graph",
+    "b": "graph_state_machine",
+    "cosine": 0.744
+   },
+   {
+    "a": "swarm_robotics",
+    "b": "swarmsys",
+    "cosine": 0.738
+   },
+   {
+    "a": "swarmsys",
+    "b": "model_swarms_pso",
+    "cosine": 0.73
+   },
+   {
+    "a": "consensus_networks",
+    "b": "boids_flocking",
+    "cosine": 0.718
+   },
+   {
+    "a": "task_queue_babyagi",
+    "b": "loop_agent",
+    "cosine": 0.706
+   },
+   {
+    "a": "cooperative_embodied_coela",
+    "b": "agentnet_decentralized",
+    "cosine": 0.695
+   },
+   {
+    "a": "network_all_to_all",
+    "b": "graph_state_machine",
+    "cosine": 0.693
+   },
+   {
+    "a": "dylan_dynamic_network",
+    "b": "blackboard_llm",
+    "cosine": 0.691
+   },
+   {
+    "a": "cooperative_embodied_coela",
+    "b": "stigmergy_llm",
+    "cosine": 0.691
+   },
+   {
+    "a": "consensus_networks",
+    "b": "network_all_to_all",
+    "cosine": 0.69
+   },
+   {
+    "a": "agentnet_decentralized",
+    "b": "stigmergy_llm",
+    "cosine": 0.689
+   },
+   {
+    "a": "agentnet_decentralized",
+    "b": "gptswarm_optimizable_graph",
+    "cosine": 0.687
+   },
+   {
+    "a": "firefly_gwo_family",
+    "b": "swarmsys",
+    "cosine": 0.686
+   },
+   {
+    "a": "evolving_orchestration_puppeteer",
+    "b": "agentnet_decentralized",
+    "cosine": 0.681
+   },
+   {
+    "a": "macnet_dag",
+    "b": "g_designer_topology",
+    "cosine": 0.678
+   }
+  ],
+  "axes_grid_5x5_counts": [
+   [
+    15,
+    2,
+    2,
+    0,
+    0
+   ],
+   [
+    11,
+    4,
+    0,
+    1,
+    0
+   ],
+   [
+    10,
+    5,
+    6,
+    6,
+    5
+   ],
+   [
+    0,
+    2,
+    5,
+    1,
+    8
+   ],
+   [
+    0,
+    6,
+    2,
+    1,
+    9
+   ]
+  ],
+  "axes_grid_sparse_cells": [
+   {
+    "x_band": "mostly decentralized",
+    "y_band": "fixed workflow",
+    "count": 0
+   },
+   {
+    "x_band": "decentralized",
+    "y_band": "fixed workflow",
+    "count": 0
+   },
+   {
+    "x_band": "hybrid",
+    "y_band": "structured/adaptive",
+    "count": 0
+   },
+   {
+    "x_band": "mostly decentralized",
+    "y_band": "structured/adaptive",
+    "count": 1
+   },
+   {
+    "x_band": "decentralized",
+    "y_band": "structured/adaptive",
+    "count": 0
+   },
+   {
+    "x_band": "centralized",
+    "y_band": "adaptive/market-like",
+    "count": 0
+   },
+   {
+    "x_band": "mostly decentralized",
+    "y_band": "adaptive/market-like",
+    "count": 1
+   },
+   {
+    "x_band": "centralized",
+    "y_band": "emergent/evolutionary",
+    "count": 0
+   },
+   {
+    "x_band": "mostly decentralized",
+    "y_band": "emergent/evolutionary",
+    "count": 1
+   }
+  ],
+  "semantic_outliers": [
+   {
+    "id": "swarmsys",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Classical swarm intelligence"
+   },
+   {
+    "id": "subsumption_layered",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Parallel & ensemble"
+   },
+   {
+    "id": "sop_assembly_line_metagpt",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Search-based reasoning"
+   },
+   {
+    "id": "society_of_mind",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Classical MAS architectures & organizations"
+   },
+   {
+    "id": "self_organized_agents",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Decentralized & peer-to-peer"
+   },
+   {
+    "id": "role_play_camel",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Centralized orchestration"
+   },
+   {
+    "id": "reflection_self_critique",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Research & web-scraping reference systems"
+   },
+   {
+    "id": "pubsub_message_pool",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Critique & refinement loops"
+   },
+   {
+    "id": "perspective_conversations_storm",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Research & web-scraping reference systems"
+   },
+   {
+    "id": "parallel_fanout_mapreduce",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Centralized orchestration"
+   },
+   {
+    "id": "holonic",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Research & web-scraping reference systems"
+   },
+   {
+    "id": "handoff_swarm",
+    "foreign_neighbours_of_5": 5,
+    "sits_among": "Decentralized & peer-to-peer"
+   }
+  ]
+ },
+ "category_mermaid": "flowchart LR\n    C0[\"Pipeline and workflow<br/>9 structures\"]\n    C1[\"Routing and handoff<br/>3 structures\"]\n    C2[\"Parallel and ensemble<br/>4 structures\"]\n    C3[\"Centralized orchestration<br/>12 structures\"]\n    C4[\"Research and web-scraping reference systems<br/>10 structures\"]\n    C5[\"Search-based reasoning<br/>3 structures\"]\n    C6[\"Critique and refinement loops<br/>5 structures\"]\n    C7[\"Conversational teams and role-play<br/>8 structures\"]\n    C8[\"Debate and deliberation<br/>6 structures\"]\n    C9[\"Classical MAS architectures and organizations<br/>6 structures\"]\n    C10[\"Market and negotiation<br/>4 structures\"]\n    C11[\"Shared-state and stigmergic coordination<br/>5 structures\"]\n    C12[\"Decentralized and peer-to-peer<br/>8 structures\"]\n    C13[\"Evolutionary and self-optimizing<br/>12 structures\"]\n    C14[\"Classical swarm intelligence<br/>6 structures\"]\n    C6 ===|7| C4\n    C3 ===|5| C4\n    C9 ===|4| C12\n    C2 ===|4| C4\n    C3 ===|4| C0\n    C3 ===|4| C1\n    C12 ---|3| C13\n    C0 ---|3| C4\n    C14 ---|3| C11\n    C7 ---|3| C11\n    C2 ---|3| C0\n    C6 ---|3| C8\n    C8 ---|3| C2\n    C3 ---|3| C7\n    C9 ---|2| C4\n    C8 ---|2| C13\n    C7 ---|2| C12\n    C3 ---|2| C13\n    C14 ---|2| C12\n    C7 ---|2| C4\n    C3 ---|2| C14\n    C3 ---|2| C9\n    C12 ---|2| C0\n    C9 ---|2| C10\n    C3 ---|2| C10\n    C9 ---|2| C8\n    C0 ---|2| C11\n    C3 ---|2| C6\n    C6 ---|2| C2\n    C3 ---|2| C2\n    C3 -.-|1| C12\n    C12 -.-|1| C10\n    C9 -.-|1| C11\n    C13 -.-|1| C0\n    C7 -.-|1| C13\n    C8 -.-|1| C11\n    C3 -.-|1| C11\n    C7 -.-|1| C0\n    C9 -.-|1| C14\n    C4 -.-|1| C11\n    C12 -.-|1| C2\n    C6 -.-|1| C0\n    C7 -.-|1| C6\n    C8 -.-|1| C0\n    C9 -.-|1| C1\n    C8 -.-|1| C12\n    C12 -.-|1| C4\n    C2 -.-|1| C5\n    C7 -.-|1| C1\n    C0 -.-|1| C1\n    C12 -.-|1| C1\n    C9 -.-|1| C7\n    C6 -.-|1| C5\n    C14 -.-|1| C13\n    C14 -.-|1| C8\n    C12 -.-|1| C11\n    style C0 fill:#1f77b433,stroke:#1f77b4,stroke-width:2px\n    style C1 fill:#17becf33,stroke:#17becf,stroke-width:2px\n    style C2 fill:#aec7e833,stroke:#aec7e8,stroke-width:2px\n    style C3 fill:#2457c533,stroke:#2457c5,stroke-width:2px\n    style C4 fill:#d6272833,stroke:#d62728,stroke-width:2px\n    style C5 fill:#8c564b33,stroke:#8c564b,stroke-width:2px\n    style C6 fill:#ff7f0e33,stroke:#ff7f0e,stroke-width:2px\n    style C7 fill:#e377c233,stroke:#e377c2,stroke-width:2px\n    style C8 fill:#9467bd33,stroke:#9467bd,stroke-width:2px\n    style C9 fill:#7f7f7f33,stroke:#7f7f7f,stroke-width:2px\n    style C10 fill:#bcbd2233,stroke:#bcbd22,stroke-width:2px\n    style C11 fill:#2ca02c33,stroke:#2ca02c,stroke-width:2px\n    style C12 fill:#98df8a33,stroke:#98df8a,stroke-width:2px\n    style C13 fill:#ff989633,stroke:#ff9896,stroke-width:2px\n    style C14 fill:#6b4c1133,stroke:#6b4c11,stroke-width:2px"
+}

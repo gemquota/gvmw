@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VEPA4 — Plans, Audits &amp; Roadmap Tracker</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--panel2:#1c2330;--text:#e6edf3;--muted:#8b949e;--border:#30363d;--accent:#58a6ff;
+--done:#2ea043;--partial:#d29922;--ns:#f85149;--sup:#8b949e;--unk:#a371f7;--wnd:#6e7681;--shadow:0 1px 3px rgba(0,0,0,.4)}
+[data-theme=light]{--bg:#f6f8fa;--panel:#ffffff;--panel2:#f0f3f6;--text:#1f2328;--muted:#59636e;--border:#d0d7de;--accent:#0969da;
+--done:#1a7f37;--partial:#9a6700;--ns:#cf222e;--sup:#6e7781;--unk:#8250df;--wnd:#57606a;--shadow:0 1px 3px rgba(31,35,40,.12)}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+header{position:sticky;top:0;z-index:20;background:var(--panel);border-bottom:1px solid var(--border);box-shadow:var(--shadow)}
+.hwrap{max-width:1400px;margin:0 auto;padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+h1{font-size:17px;margin:0;font-weight:650;letter-spacing:.2px}h1 small{color:var(--muted);font-weight:400;font-size:12px;margin-left:6px}
+.spacer{flex:1}
+button,select,input{font:inherit;color:var(--text);background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:6px 10px}
+button{cursor:pointer}button:hover{border-color:var(--accent)}button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tabs{display:flex;gap:4px}.tabs button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+main{max-width:1400px;margin:0 auto;padding:16px}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:14px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
+.stat{cursor:pointer;transition:transform .1s}.stat:hover{transform:translateY(-1px)}.stat.sel{outline:2px solid var(--accent)}
+.stat .n{font-size:26px;font-weight:700;line-height:1.1}.stat .l{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.big .n{color:var(--accent)}
+.stackbar{display:flex;height:10px;border-radius:6px;overflow:hidden;background:var(--panel2);margin-top:8px}
+.stackbar span{display:block;height:100%}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.card h2{font-size:14px;margin:0 0 10px;font-weight:650}
+.prow{display:grid;grid-template-columns:minmax(120px,1.4fr) 2fr 70px;gap:8px;align-items:center;padding:4px 0;font-size:13px;cursor:pointer;border-radius:6px}
+.prow:hover{background:var(--panel2)}.prow .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.prow .pc{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.scroll{max-height:340px;overflow:auto;padding-right:4px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;align-items:center}
+.filters input[type=search]{flex:1 1 240px;min-width:180px}
+.filters select{flex:0 1 170px;max-width:220px}
+.count{color:var(--muted);font-size:12px}
+table{width:100%;border-collapse:separate;border-spacing:0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+th{position:sticky;top:0;background:var(--panel2);font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);cursor:pointer;user-select:none;white-space:nowrap}
+th .ar{opacity:.6}tbody tr.main{cursor:pointer}tbody tr.main:hover td{background:var(--panel2)}
+.tblwrap{background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow:auto;box-shadow:var(--shadow);max-height:75vh}
+.pill{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap;border:1px solid transparent}
+.p-Done{background:color-mix(in srgb,var(--done) 18%,transparent);color:var(--done);border-color:color-mix(in srgb,var(--done) 45%,transparent)}
+.p-Partial{background:color-mix(in srgb,var(--partial) 18%,transparent);color:var(--partial);border-color:color-mix(in srgb,var(--partial) 45%,transparent)}
+.p-Not-started{background:color-mix(in srgb,var(--ns) 16%,transparent);color:var(--ns);border-color:color-mix(in srgb,var(--ns) 45%,transparent)}
+.p-Superseded{background:color-mix(in srgb,var(--sup) 18%,transparent);color:var(--sup);border-color:color-mix(in srgb,var(--sup) 45%,transparent)}
+.p-Wont-do{background:color-mix(in srgb,var(--wnd) 18%,transparent);color:var(--wnd);border-color:color-mix(in srgb,var(--wnd) 45%,transparent);text-decoration:line-through}
+.p-Unknown{background:color-mix(in srgb,var(--unk) 18%,transparent);color:var(--unk);border-color:color-mix(in srgb,var(--unk) 45%,transparent)}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:6px;background:var(--panel2);border:1px solid var(--border);color:var(--muted);margin:1px 2px 1px 0;white-space:nowrap}
+.tag.cur{color:var(--done)}.tag.old{color:var(--ns)}.tag.ret{color:var(--partial)}
+.id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--accent);white-space:nowrap}
+.detail td{background:var(--panel2);font-size:13px}
+.detail .kv{display:grid;grid-template-columns:110px 1fr;gap:6px 12px}
+.detail .kv b{color:var(--muted);font-weight:600}
+.srcs{margin:0;padding-left:18px}.srcs li{margin:2px 0}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;background:var(--panel2);padding:1px 4px;border-radius:4px}
+.muted{color:var(--muted)}.hide{display:none!important}
+.docgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:12px}
+.doc h3{font-size:13.5px;margin:0 0 4px;word-break:break-all}.doc .reason{font-size:12.5px;color:var(--muted);margin:6px 0}
+.doc ul{margin:6px 0 0;padding-left:0;list-style:none;max-height:220px;overflow:auto}.doc li{display:flex;gap:6px;align-items:baseline;padding:3px 0;border-top:1px dashed var(--border);font-size:12.5px}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:8px}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+@media(max-width:700px){
+ .hide-sm{display:none}
+ #tbl thead{display:none}#tbl,#tbl tbody,#tbl tr,#tbl td{display:block;width:100%}
+ tbody tr.main{border-bottom:1px solid var(--border);padding:8px 4px}
+ tbody tr.main td{border:none;padding:2px 8px}
+ tbody tr.main td.c-title{font-weight:600}
+ .detail .kv{grid-template-columns:1fr}
+ .prow{grid-template-columns:1fr 1.2fr 56px}
+ h1 small{display:none}
+}
+
+/* ---- quick status toggle (multi-select chips) */
+.qs{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:8px;margin:0 0 14px;box-shadow:var(--shadow)}
+.seg{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.seg button,.mini button{-webkit-tap-highlight-color:transparent;border:1px solid var(--border);background:var(--panel2);border-radius:10px;color:var(--muted);cursor:pointer;transition:background .15s,color .15s,border-color .15s,box-shadow .15s}
+.seg button{padding:10px 6px;font-size:14.5px;font-weight:650;display:flex;flex-direction:column;align-items:center;gap:1px;position:relative}
+.seg button b{font-size:22px;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--text)}
+.seg button:hover,.mini button:hover{border-color:var(--accent)}
+.seg button .sub{font-size:11px;font-weight:500;opacity:.85}
+.seg button.on,.mini button.on{color:#fff;border-color:transparent;box-shadow:0 0 0 2px color-mix(in srgb,var(--c) 35%,transparent)}
+.seg button.on b,.mini button.on b{color:#fff}
+.seg button.on{background:var(--c)}
+.seg button.on::after{content:"✓";position:absolute;top:5px;right:8px;font-size:12px}
+.seg button[data-q="all"]{--c:var(--accent)}.seg button[data-s="Done"]{--c:var(--done)}.seg button[data-s="Partial"]{--c:var(--partial)}.seg button[data-s="Not started"]{--c:var(--ns)}
+.seg button[data-q="unfinished"]{--c:linear-gradient(135deg,var(--partial),var(--ns));border-style:dashed}
+.seg button[data-q="unfinished"].on{background:linear-gradient(135deg,var(--partial),var(--ns))}
+.qrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px;font-size:13px}
+.mini{display:flex;gap:6px;flex-wrap:wrap}
+.mini button{padding:4px 10px;font-size:12px;font-weight:600}.mini button b{font-variant-numeric:tabular-nums;color:var(--text);margin-left:4px}
+.mini button[data-s="Superseded"]{--c:var(--sup)}.mini button[data-s="Unknown"]{--c:var(--unk)}.mini button[data-s="Won't do"]{--c:var(--wnd)}.mini button.on{background:var(--c)}
+.qsel{flex:1;text-align:right;color:var(--muted)}.qsel strong{color:var(--text);font-variant-numeric:tabular-nums}
+@media(max-width:700px){.seg{grid-template-columns:repeat(4,1fr)}.seg button[data-q="unfinished"]{grid-column:1/-1;flex-direction:row;justify-content:center;gap:8px;padding:7px}
+ .seg button{padding:8px 2px;font-size:12.5px}.seg button b{font-size:18px}.seg .sub{display:none}.qsel{text-align:left;flex-basis:100%}}
+/* ---- collapsible sections */
+.ctools{display:flex;justify-content:flex-end;margin:-4px 0 8px}
+.ctools button{font-size:12.5px;padding:4px 10px}
+.chead{display:flex;align-items:center;gap:8px;margin:0 0 10px}
+.chead h2{margin:0;flex:1}
+.ctoggle{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:3px 9px;border-radius:999px}
+.ctoggle .chev{display:inline-block;transition:transform .28s ease}
+.coll.collapsed .ctoggle .chev{transform:rotate(-90deg)}
+.cbody{display:grid;grid-template-rows:1fr;transition:grid-template-rows .3s ease,opacity .25s ease;opacity:1}
+.cbody>.cin{min-height:0;overflow:hidden}
+.coll.collapsed .cbody{grid-template-rows:0fr;opacity:0}
+.coll.collapsed .chead{margin-bottom:0}
+.ov{margin-bottom:14px}.ov .summary{margin-bottom:0}
+.grid2{align-items:start}
+.no-anim .cbody,.no-anim .ctoggle .chev{transition:none!important}
+@media(prefers-reduced-motion:reduce){.cbody,.ctoggle .chev{transition:none}}
+/* ---- file links */
+.flink{color:var(--accent);cursor:pointer;text-decoration:none;border:none;background:none;padding:0;font:inherit;text-align:left}
+.flink:hover{text-decoration:underline}
+.fchip{display:inline-flex;gap:5px;align-items:center;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;padding:3px 8px;margin:2px 4px 2px 0;border-radius:7px;border:1px solid var(--border);background:var(--panel);color:var(--accent);cursor:pointer}
+.fchip:hover{border-color:var(--accent)}.fchip .ln{color:var(--muted)}
+.fchip.miss{color:var(--muted);cursor:default;text-decoration:line-through dotted}
+.fchip .k{font-family:inherit;font-size:10px;text-transform:uppercase;color:var(--muted)}
+.ficon{opacity:.8}
+.flist{list-style:none;margin:6px 0 0;padding:0;max-height:260px;overflow:auto;font-size:12px}
+.flist li{padding:2px 0;border-top:1px dashed var(--border);display:block!important}
+details.files summary{cursor:pointer;font-size:12.5px;color:var(--accent);margin-top:6px}
+/* ---- viewer */
+.vwrap{position:fixed;inset:0;z-index:100;background:rgba(1,4,9,.55);display:flex;align-items:center;justify-content:center;padding:2.5vh 2.5vw}
+.viewer{background:var(--panel);border:1px solid var(--border);border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.45);width:min(1200px,100%);height:100%;display:flex;flex-direction:column;overflow:hidden}
+.vhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 12px;border-bottom:1px solid var(--border);background:var(--panel2)}
+.vtitle{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;font-weight:600;word-break:break-all;flex:1 1 260px}
+.vhead .tag{font-size:11px}
+.vbtns{display:flex;gap:6px;flex-wrap:wrap}.vbtns button{padding:5px 9px;font-size:12.5px}
+.vbtns button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.vbody{flex:1;overflow:auto;position:relative}
+.vnote{padding:6px 14px;font-size:12px;color:var(--muted);border-bottom:1px solid var(--border)}
+.md{padding:18px 26px 40px;max-width:980px;line-height:1.6;font-size:14.5px;overflow-wrap:anywhere}
+.md h1,.md h2{border-bottom:1px solid var(--border);padding-bottom:.25em}
+.md h1{font-size:1.8em}.md h2{font-size:1.4em;margin-top:1.4em}.md h3{font-size:1.15em;margin-top:1.2em}
+.md table{border-collapse:collapse;margin:12px 0;display:block;overflow:auto;width:max-content;max-width:100%}
+.md th,.md td{border:1px solid var(--border);padding:5px 10px;position:static;background:none;text-transform:none;letter-spacing:0;font-size:13px;color:var(--text);cursor:auto;white-space:normal}
+.md tr:nth-child(2n) td{background:var(--panel2)}
+.md th,.md td{overflow-wrap:normal;word-break:normal;min-width:2.6em}.md td code{overflow-wrap:anywhere}
+.md pre{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;overflow:auto;font-size:12.5px;line-height:1.45}
+.md pre code{background:none;padding:0}
+.md blockquote{margin:0;padding:0 1em;color:var(--muted);border-left:4px solid var(--border)}
+.md a{color:var(--accent)}.md a.nofile{color:var(--muted);text-decoration:line-through dotted}
+.md img{max-width:100%}.md hr{border:none;border-top:1px solid var(--border)}
+.md .mmd{border:1px dashed var(--accent);border-radius:8px;margin:12px 0}.md .mmd-h{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);padding:6px 12px 0}
+.md .mmd pre{border:none;margin:0}
+.flash{animation:flash 2.4s ease-out}
+@keyframes flash{0%,40%{background:color-mix(in srgb,var(--partial) 35%,transparent)}100%{background:transparent}}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.5;padding:8px 0 30px;min-width:max-content}
+.code .l{display:flex;white-space:pre;padding-right:16px}
+.code .l .no{flex:0 0 auto;width:5.2em;text-align:right;padding-right:14px;margin-right:12px;color:var(--muted);opacity:.7;user-select:none;border-right:1px solid var(--border)}
+.code .l.hl{background:color-mix(in srgb,var(--partial) 22%,transparent)}
+.code .l.hl .no{color:var(--partial);opacity:1;font-weight:700;border-right:3px solid var(--partial)}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:200;background:var(--text);color:var(--bg);padding:9px 14px;border-radius:10px;font-size:13px;box-shadow:var(--shadow);display:flex;gap:10px;align-items:center;max-width:92vw}
+.toast button{background:transparent;color:inherit;border-color:currentColor;padding:3px 8px}
+@media(max-width:700px){.vwrap{padding:0}.viewer{border-radius:0;border:none}.md{padding:12px 14px 30px;font-size:14px}.code{font-size:11.5px}.code .l .no{width:3.8em;padding-right:8px;margin-right:8px}}
+/* ---- highlight.js theme driven by the page theme */
+.hljs{color:var(--text)}
+.hljs-comment,.hljs-quote{color:var(--hc);font-style:italic}
+.hljs-keyword,.hljs-selector-tag,.hljs-literal,.hljs-doctag,.hljs-meta .hljs-keyword{color:var(--hk)}
+.hljs-string,.hljs-regexp,.hljs-addition,.hljs-meta .hljs-string{color:var(--hs)}
+.hljs-number,.hljs-symbol,.hljs-bullet,.hljs-link{color:var(--hn)}
+.hljs-title,.hljs-title.function_,.hljs-section,.hljs-selector-id{color:var(--ht);font-weight:600}
+.hljs-attr,.hljs-attribute,.hljs-property,.hljs-variable,.hljs-template-variable,.hljs-selector-class,.hljs-name{color:var(--ha)}
+.hljs-built_in,.hljs-type,.hljs-title.class_{color:var(--hb)}
+.hljs-meta,.hljs-params{color:var(--text)}.hljs-deletion{color:var(--ns)}
+.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+:root{--hc:#8b949e;--hk:#ff7b72;--hs:#a5d6ff;--hn:#79c0ff;--ht:#d2a8ff;--ha:#79c0ff;--hb:#ffa657}
+[data-theme=light]{--hc:#6e7781;--hk:#cf222e;--hs:#0a3069;--hn:#0550ae;--ht:#8250df;--ha:#0550ae;--hb:#953800}
+</style>
+</head>
+<body>
+<header><div class="hwrap">
+ <h1>VEPA4 plan &amp; audit tracker <small id="metaLine"></small></h1>
+ <div class="spacer"></div>
+ <div class="tabs" role="tablist"><button id="tabItems" class="active">Items</button><button id="tabDocs">Documents</button></div>
+ <button id="csvBtn" title="Export the filtered items as CSV">⬇ CSV</button>
+ <button id="themeBtn" title="Toggle dark/light">◐</button>
+</div></header>
+<main>
+ <div class="ctools"><button id="collAll" title="Collapse or expand every progress section">⊟ Collapse all</button></div>
+ <section class="coll ov" data-coll="overview" id="secOverview">
+  <div class="chead"><h2>Overview</h2><button class="ctoggle" aria-expanded="true" aria-controls="ovBody"><span class="chev">▾</span><span class="lbl">Hide</span></button></div>
+  <div class="cbody" id="ovBody"><div class="cin"><div class="summary" id="summary"></div></div></div>
+ </section>
+ <section class="qs" aria-label="Quick status filter">
+  <nav class="seg" id="seg">
+   <button data-q="all" aria-pressed="true" title="Clear the status selection"><b id="segAll">–</b>All<span class="sub">every item</span></button>
+   <button data-s="Done" aria-pressed="false" title="Toggle Complete (Done)"><b id="segDone">–</b>Complete<span class="sub">Done</span></button>
+   <button data-s="Partial" aria-pressed="false" title="Toggle Partial"><b id="segPartial">–</b>Partial<span class="sub">in progress</span></button>
+   <button data-s="Not started" aria-pressed="false" title="Toggle Incomplete (Not started)"><b id="segNS">–</b>Incomplete<span class="sub">Not started</span></button>
+   <button data-q="unfinished" aria-pressed="false" title="Preset: Partial + Incomplete"><b id="segUnf">–</b>Unfinished<span class="sub">Partial + Incomplete</span></button>
+  </nav>
+  <div class="qrow"><span class="muted">Also:</span><div class="mini" id="mini">
+   <button data-s="Superseded" aria-pressed="false">Superseded<b id="segSup">–</b></button>
+   <button data-s="Won't do" aria-pressed="false" title="Decided not to do; excluded from % and bars">Won't do<b id="segWnd">–</b></button>
+   <button data-s="Unknown" aria-pressed="false">Unknown<b id="segUnk">–</b></button></div>
+   <span class="qsel" id="qsel"></span></div>
+ </section>
+ <section class="grid2">
+  <div class="card coll" data-coll="category"><div class="chead"><h2>Progress by category</h2><button class="ctoggle" aria-expanded="true"><span class="chev">▾</span><span class="lbl">Hide</span></button></div><div class="cbody"><div class="cin"><div class="scroll" id="catBars"></div></div></div></div>
+  <div class="card coll" data-coll="document"><div class="chead"><h2>Progress by source document <span class="muted" style="font-weight:400">(click to filter)</span></h2><button class="ctoggle" aria-expanded="true"><span class="chev">▾</span><span class="lbl">Hide</span></button></div><div class="cbody"><div class="cin"><div class="scroll" id="docBars"></div></div></div></div>
+ </section>
+ <section id="itemsView">
+  <div class="filters">
+   <input type="search" id="q" placeholder="Search id, title, evidence, source…" aria-label="Search">
+   <select id="fCat"></select><select id="fDoc"></select>
+   <select id="fType"></select><select id="fClass"></select><select id="fConf"></select>
+   <button id="resetBtn">Reset</button><span class="count" id="count"></span>
+  </div>
+  <div class="tblwrap"><table id="tbl"><thead><tr>
+   <th data-k="id">ID <span class="ar"></span></th><th data-k="title">Item <span class="ar"></span></th>
+   <th data-k="status">Status <span class="ar"></span></th><th data-k="category" class="hide-sm">Category <span class="ar"></span></th>
+   <th data-k="primarySource" class="hide-sm">Primary source <span class="ar"></span></th><th data-k="docDate" class="hide-sm">Doc date/ver <span class="ar"></span></th>
+   <th data-k="confidence">Conf. <span class="ar"></span></th><th data-k="nsrc" class="hide-sm">Srcs <span class="ar"></span></th>
+  </tr></thead><tbody id="tbody"></tbody></table></div>
+ </section>
+ <section id="docsView" class="hide">
+  <div class="filters"><input type="search" id="dq" placeholder="Filter documents…"><select id="dClass"></select><span class="count" id="dcount"></span></div>
+  <div class="docgrid" id="docGrid"></div>
+ </section>
+ <p class="muted" style="font-size:12px;margin-top:14px" id="foot"></p>
+</main>
+<div class="vwrap hide" id="vwrap" role="dialog" aria-modal="true" aria-labelledby="vtitle"><div class="viewer">
+ <div class="vhead"><button id="vBack" title="Back" class="hide">◀</button><div class="vtitle" id="vtitle"></div><span id="vtags"></span>
+  <div class="vbtns"><button id="vRendered" class="hide">Rendered</button><button id="vSource" class="hide">Source</button><button id="vTab" title="Open this file in a new browser tab">↗ New tab</button><button id="vCopy" title="Copy path">⧉ Path</button><button id="vClose" title="Close (Esc)">✕</button></div></div>
+ <div class="vnote hide" id="vnote"></div>
+ <div class="vbody" id="vbody"></div>
+</div></div>
+<div class="toast hide" id="toast"></div>
+<script>/*__LIB_MARKED__*/</script>
+<script>/*__LIB_PURIFY__*/</script>
+<script>/*__LIB_HLJS__*/</script>
+<script id="data" type="application/json">__DATA__</script>
+<script id="files" type="application/json">__FILES__</script>
+<script>
+(function(){
+'use strict';
+const DATA=JSON.parse(document.getElementById('data').textContent);
+const ITEMS=DATA.items, DOCS=DATA.documents, META=DATA.meta;
+const FILES=JSON.parse(document.getElementById('files').textContent);
+const STATUSES=['Done','Partial','Not started','Superseded',"Won't do",'Unknown'];
+// Statuses excluded from completion % and hidden from the stacked bars.
+const EXCLUDED=new Set(['Superseded',"Won't do",'Unknown']);
+const SCOL={'Done':'var(--done)','Partial':'var(--partial)','Not started':'var(--ns)','Superseded':'var(--sup)',"Won't do":'var(--wnd)','Unknown':'var(--unk)'};
+const CLS={'current':'Current','outdated-moved':'Outdated — moved to .old/','outdated-retained':'Outdated — retained in place'};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pill=s=>`<span class="pill p-${s.replace(/ /g,'-').replace(/'/g,'')}">${esc(s)}</span>`;
+const clsTag=c=>`<span class="tag ${c==='current'?'cur':c==='outdated-moved'?'old':'ret'}">${esc(CLS[c]||c)}</span>`;
+ITEMS.forEach(i=>{i.nsrc=i.sources.length;i._docs=new Set(i.sources.map(s=>s.file));i._types=new Set(i.sources.map(s=>s.docType));i._cls=new Set(i.sources.map(s=>s.docClass));
+ i._hay=[i.id,i.title,i.status,i.category,i.evidence,i.missing,i.confidence,i.kind,...i.sources.map(s=>s.file+' '+s.loc+' '+(s.movedTo||''))].join(' ').toLowerCase();});
+const docByPath=Object.fromEntries(DOCS.map(d=>[d.path,d]));
+// theme
+const saved=(()=>{try{return localStorage.getItem('vepa-plans-theme')}catch(e){return null}})();
+if(saved) document.documentElement.dataset.theme=saved; else if(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches) document.documentElement.dataset.theme='light';
+$('#themeBtn').onclick=()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('vepa-plans-theme',t)}catch(e){}};
+$('#metaLine').textContent=`v${META.version} @ ${META.head} · ${META.generated}`;
+$('#foot').innerHTML=`Completion % = ${esc(META.completionFormula)}. Status was judged against the code at ${esc(META.head)}, not against what the documents claim. “verified” = confirmed by reading code/tests or running a command; “inferred” = based on searching for something and not finding it, or on indirect evidence. Docs: ${META.docRecordCount} records covering ${META.docFileCount} files.`;
+function pct(list){const a=list.filter(i=>!EXCLUDED.has(i.status));if(!a.length)return null;
+ const d=a.filter(i=>i.status==='Done').length,p=a.filter(i=>i.status==='Partial').length;return Math.round(1000*(d+.5*p)/a.length)/10;}
+function stack(list){const vis=list.filter(i=>!EXCLUDED.has(i.status));const n=vis.length||1;return `<div class="stackbar">${STATUSES.filter(s=>!EXCLUDED.has(s)).map(s=>{const c=vis.filter(i=>i.status===s).length;return c?`<span title="${s}: ${c}" style="width:${100*c/n}%;background:${SCOL[s]}"></span>`:''}).join('')}</div>`;}
+// filters
+const F={q:'',st:new Set(),cat:'',doc:'',type:'',cls:'',conf:''};
+function opts(sel,label,vals,fmt){sel.innerHTML=`<option value="">${label}: all</option>`+vals.map(v=>`<option value="${esc(v)}">${esc(fmt?fmt(v):v)}</option>`).join('');}
+const uniq=a=>[...new Set(a)].sort((x,y)=>String(x).localeCompare(String(y)));
+opts($('#fCat'),'Category',uniq(ITEMS.map(i=>i.category)));
+opts($('#fDoc'),'Source doc',uniq(ITEMS.flatMap(i=>[...i._docs])));
+opts($('#fType'),'Doc type',uniq(ITEMS.flatMap(i=>[...i._types])));
+opts($('#fClass'),'Doc state',Object.keys(CLS),v=>CLS[v]);
+opts($('#fConf'),'Confidence',['verified','inferred']);
+opts($('#dClass'),'State',Object.keys(CLS),v=>CLS[v]);
+const bind=(id,k)=>$(id).addEventListener('input',e=>{F[k]=e.target.value;render()});
+bind('#q','q');bind('#fCat','cat');bind('#fDoc','doc');bind('#fType','type');bind('#fClass','cls');bind('#fConf','conf');
+$('#resetBtn').onclick=()=>{Object.keys(F).forEach(k=>F[k]=k==='st'?new Set():'');['#q','#fCat','#fDoc','#fType','#fClass','#fConf'].forEach(s=>$(s).value='');render()};
+function setF(k,sel,v){F[k]=v;$(sel).value=v;showTab('items');render();$('#itemsView').scrollIntoView({behavior:'smooth',block:'start'});}
+function filtered(){const q=F.q.trim().toLowerCase();return ITEMS.filter(i=>(!q||q.split(/\s+/).every(t=>i._hay.includes(t)))&&(!F.st.size||F.st.has(i.status))&&(!F.cat||i.category===F.cat)
+ &&(!F.doc||i._docs.has(F.doc))&&(!F.type||i._types.has(F.type))&&(!F.cls||i._cls.has(F.cls))&&(!F.conf||i.confidence===F.conf));}
+// sorting
+let sortK='status',sortDir=1;const SORD=Object.fromEntries(STATUSES.map((s,i)=>[s,i]));
+document.querySelectorAll('th[data-k]').forEach(th=>th.onclick=()=>{const k=th.dataset.k;if(sortK===k)sortDir=-sortDir;else{sortK=k;sortDir=1}render()});
+function cmp(a,b){let x=a[sortK],y=b[sortK];if(sortK==='status'){x=SORD[x];y=SORD[y]}if(typeof x==='number'&&typeof y==='number')return (x-y)*sortDir||a.id.localeCompare(b.id);
+ return String(x||'').localeCompare(String(y||''),undefined,{numeric:true})*sortDir||a.id.localeCompare(b.id);}
+const open=new Set();
+function summary(list){const all=ITEMS;const box=$('#summary');const p=pct(all);
+ box.innerHTML=`<div class="card stat big" data-s=""><div class="n">${p}%</div><div class="l">Completion (all items)</div>${stack(all)}</div>`+
+ `<div class="card stat" data-s=""><div class="n">${all.length}</div><div class="l">Items · ${DOCS.length} doc records</div><div class="count">${list.length} shown · filtered ${pct(list)??'–'}%</div></div>`+
+ STATUSES.map(s=>`<div class="card stat ${F.st.has(s)?'sel':''}" data-s="${s}" title="Toggle ${s} in the status selection"><div class="n" style="color:${SCOL[s]}">${all.filter(i=>i.status===s).length}</div><div class="l">${s}</div></div>`).join('');
+ box.querySelectorAll('.stat').forEach(el=>el.onclick=()=>{const s=el.dataset.s;if(!s)setStatus([]);else toggleStatus(s);});}
+function bars(){const cats=uniq(ITEMS.map(i=>i.category));
+ $('#catBars').innerHTML=cats.map(c=>{const l=ITEMS.filter(i=>i.category===c);const p=pct(l);return `<div class="prow" data-c="${esc(c)}"><div class="nm" title="${esc(c)}">${esc(c)} <span class="muted">(${l.length})</span></div>${stack(l)}<div class="pc">${p==null?'–':p+'%'}</div></div>`}).join('');
+ $('#catBars').querySelectorAll('.prow').forEach(r=>r.onclick=()=>setF('cat','#fCat',r.dataset.c));
+ const docs=DOCS.filter(d=>d.itemCount>0).sort((a,b)=>b.itemCount-a.itemCount);
+ $('#docBars').innerHTML=docs.map(d=>{const l=ITEMS.filter(i=>i._docs.has(d.path));const p=pct(l);return `<div class="prow" data-d="${esc(d.path)}"><div class="nm" title="${esc(d.path)} — ${esc(CLS[d.classification])}">${d.classification==='outdated-moved'?'📦 ':''}${esc(d.path)} <span class="muted">(${l.length})</span></div>${stack(l)}<div class="pc">${p==null?'–':p+'%'}</div></div>`}).join('')+
+ `<div class="legend">${STATUSES.filter(s=>!EXCLUDED.has(s)).map(s=>`<span><i style="background:${SCOL[s]}"></i>${s}</span>`).join('')}<span class="muted">Superseded, Won't do and Unknown are excluded from % and bars</span><span>📦 = moved to .old/</span></div>`;
+ $('#docBars').querySelectorAll('.prow').forEach(r=>r.onclick=()=>setF('doc','#fDoc',r.dataset.d));}
+function srcList(i){return `<ul class="srcs">${i.sources.map(s=>`<li>${fileLink(s.path,s.file,{loc:s.loc,code:true})} — ${esc(s.loc)} <span class="tag">${esc(s.docType)}</span>${s.docVersion?`<span class="tag">v${esc(s.docVersion)}</span>`:''}${s.docDate?`<span class="tag">${esc(s.docDate)}</span>`:''}${clsTag(s.docClass)}${s.movedTo?` <span class="muted">→ ${esc(s.movedTo)}</span>`:''}</li>`).join('')}</ul>`;}
+const SHORT={'Done':'complete','Partial':'partial','Not started':'incomplete','Superseded':'superseded',"Won't do":'wontdo','Unknown':'unknown'};
+const LABEL={'Done':'Complete','Partial':'Partial','Not started':'Incomplete','Superseded':'Superseded',"Won't do":"Won't do",'Unknown':'Unknown'};
+const UNF=['Partial','Not started'];
+function setStatus(list,noScroll){F.st=new Set(list);showTab('items');render();}
+function toggleStatus(s){const n=new Set(F.st);n.has(s)?n.delete(s):n.add(s);setStatus([...n]);}
+function isUnfinished(){return F.st.size===2&&UNF.every(s=>F.st.has(s));}
+function segCounts(){const save=F.st;F.st=new Set();const base=filtered();F.st=save;
+ const c=s=>base.filter(i=>i.status===s).length;
+ $('#segAll').textContent=base.length;$('#segDone').textContent=c('Done');$('#segPartial').textContent=c('Partial');$('#segNS').textContent=c('Not started');
+ $('#segUnf').textContent=c('Partial')+c('Not started');$('#segSup').textContent=c('Superseded');$('#segUnk').textContent=c('Unknown');$('#segWnd').textContent=c("Won't do");
+ const set=(b,on)=>{b.classList.toggle('on',on);b.setAttribute('aria-pressed',String(on))};
+ document.querySelectorAll('#seg button[data-s], #mini button[data-s]').forEach(b=>set(b,F.st.has(b.dataset.s)));
+ set($('#seg button[data-q="all"]'),F.st.size===0);set($('#seg button[data-q="unfinished"]'),isUnfinished());
+ const sel=STATUSES.filter(s=>F.st.has(s));
+ $('#qsel').innerHTML=sel.length?`${sel.map(s=>esc(LABEL[s])).join(' + ')} = <strong id="qselN">${sel.reduce((a,s)=>a+c(s),0)}</strong>${base.length!==ITEMS.length?' <span class="muted">(with other filters)</span>':''}`:`All statuses = <strong id="qselN">${base.length}</strong>`;
+ writeHash();}
+document.querySelectorAll('#seg button[data-s], #mini button[data-s]').forEach(b=>b.onclick=()=>toggleStatus(b.dataset.s));
+$('#seg button[data-q="all"]').onclick=()=>setStatus([]);
+$('#seg button[data-q="unfinished"]').onclick=()=>setStatus(isUnfinished()?[]:UNF);
+// shareable selection in the URL hash: #status=partial+incomplete
+function writeHash(){const sel=STATUSES.filter(s=>F.st.has(s)).map(s=>SHORT[s]);const h=sel.length?'#status='+sel.join('+'):'';
+ if((location.hash||'')===h)return;try{history.replaceState(null,'',h||(location.pathname+location.search))}catch(e){try{location.hash=h}catch(e2){}}}
+function readHash(){const m=(location.hash||'').match(/status=([\w+,%-]*)/i);if(!m)return null;const inv=Object.fromEntries(Object.entries(SHORT).map(([k,v])=>[v,k]));
+ return decodeURIComponent(m[1]).split(/[+, ]/).map(x=>inv[x.toLowerCase()]||(x.toLowerCase()==='unfinished'?UNF:null)).flat().filter(Boolean);}
+window.addEventListener('hashchange',()=>{const s=readHash();if(s){F.st=new Set(s);render();}});
+// collapsible progress sections, persisted in localStorage (guarded: file:// or private mode can throw)
+const CKEY='vepa-plans-collapsed';
+function loadColl(){try{return JSON.parse(localStorage.getItem(CKEY)||'[]')}catch(e){return []}}
+function saveColl(){const c=[...document.querySelectorAll('.coll.collapsed')].map(s=>s.dataset.coll);try{localStorage.setItem(CKEY,JSON.stringify(c))}catch(e){}}
+function setColl(sec,collapsed){sec.classList.toggle('collapsed',collapsed);const b=sec.querySelector('.ctoggle');b.setAttribute('aria-expanded',String(!collapsed));b.querySelector('.lbl').textContent=collapsed?'Show':'Hide';
+ sec.querySelector('.cbody').setAttribute('aria-hidden',String(collapsed));updCollAll();}
+function updCollAll(){const all=[...document.querySelectorAll('.coll')];const anyOpen=all.some(s=>!s.classList.contains('collapsed'));
+ $('#collAll').textContent=anyOpen?'⊟ Collapse all':'⊞ Expand all';$('#collAll').dataset.mode=anyOpen?'collapse':'expand';}
+document.querySelectorAll('.coll').forEach(sec=>{sec.querySelector('.ctoggle').onclick=()=>{setColl(sec,!sec.classList.contains('collapsed'));saveColl();};});
+$('#collAll').onclick=()=>{const c=$('#collAll').dataset.mode==='collapse';document.querySelectorAll('.coll').forEach(s=>setColl(s,c));saveColl();};
+{const saved=new Set(loadColl());document.documentElement.classList.add('no-anim');document.querySelectorAll('.coll').forEach(s=>setColl(s,saved.has(s.dataset.coll)));
+ requestAnimationFrame(()=>requestAnimationFrame(()=>document.documentElement.classList.remove('no-anim')));}
+{const s=readHash();if(s)F.st=new Set(s);}
+function render(){const list=filtered().sort(cmp);summary(list);segCounts();
+ document.querySelectorAll('th[data-k]').forEach(th=>th.querySelector('.ar').textContent=th.dataset.k===sortK?(sortDir>0?'▲':'▼'):'');
+ $('#count').textContent=`${list.length} of ${ITEMS.length} items`;
+ $('#tbody').innerHTML=list.map(i=>{const o=open.has(i.id);return `<tr class="main" data-id="${esc(i.id)}" aria-expanded="${o}"><td><span class="id">${o?'▾':'▸'} ${esc(i.id)}</span></td><td class="c-title">${esc(i.title)}${i.kind==='finding'?' <span class="tag">finding</span>':''}</td><td>${pill(i.status)}</td>
+ <td class="hide-sm">${esc(i.category)}</td><td class="hide-sm">${fileLink(i.sources[0].path,i.primarySource,{loc:i.sources[0].loc})}</td><td class="hide-sm">${esc([i.docDate,i.docVersion&&('v'+i.docVersion)].filter(Boolean).join(' · ')||'—')}</td>
+ <td><span class="tag">${esc(i.confidence)}</span></td><td class="hide-sm">${i.nsrc}</td></tr>`+
+ (o?`<tr class="detail"><td colspan="8"><div class="kv"><b>Evidence</b><div>${esc(i.evidence)}</div>${i.missing?`<b>Missing / next</b><div>${esc(i.missing)}</div>`:''}<b>Category</b><div>${esc(i.category)} · ${esc(i.kind)} · confidence ${esc(i.confidence)}</div><b>All sources (${i.nsrc})</b><div>${srcList(i)}</div>${i.files&&i.files.length?`<b>Evidence files (${i.files.length})</b><div>${i.files.map(fchip).join('')}</div>`:''}</div></td></tr>`:'');}).join('')||`<tr><td colspan="8" class="muted">No items match the filters.</td></tr>`;
+ $('#tbody').querySelectorAll('tr.main').forEach(tr=>tr.onclick=(e)=>{if(e.target.closest('[data-open]'))return;const id=tr.dataset.id;open.has(id)?open.delete(id):open.add(id);render()});}
+// documents view
+const DF={q:'',cls:''};$('#dq').addEventListener('input',e=>{DF.q=e.target.value.toLowerCase();renderDocs()});$('#dClass').addEventListener('input',e=>{DF.cls=e.target.value;renderDocs()});
+function renderDocs(){const ds=DOCS.filter(d=>(!DF.cls||d.classification===DF.cls)&&(!DF.q||(d.path+' '+d.type+' '+d.reason).toLowerCase().includes(DF.q)));
+ $('#dcount').textContent=`${ds.length} of ${DOCS.length} document records (${DOCS.reduce((a,d)=>a+d.fileCount,0)} files)`;
+ $('#docGrid').innerHTML=ds.map(d=>{const l=ITEMS.filter(i=>i._docs.has(d.path));const p=pct(l);return `<div class="card doc"><h3>${d.files&&d.files.length===1&&d.path===d.files[0].replace(/^\.old\//,'')?fileLink(d.files[0],d.path,{}):esc(d.path)}</h3>
+ <div>${clsTag(d.classification)}<span class="tag">${esc(d.type)}</span>${d.version?`<span class="tag">v${esc(d.version)}</span>`:''}${d.date?`<span class="tag">${esc(d.date)}</span>`:''}${d.fileCount>1?`<span class="tag">${d.fileCount} files</span>`:''}<span class="tag">${l.length} items${p!=null?' · '+p+'%':''}</span></div>${d.files&&(d.files.length>1||d.path!==d.files[0]?.replace(/^\.old\//,''))?`<details class="files" data-doc="${esc(d.path)}"><summary>📁 ${d.files.length} file${d.files.length>1?'s':''} · ${d.embedded} embedded${d.embedded<d.files.length?` (${d.files.length-d.embedded} not embedded)`:''}</summary><ul class="flist"></ul></details>`:''}
+ ${l.length?stack(l):''}<div class="reason">${esc(d.reason||'')}${d.movedTo?` <b>Now at</b> <code>${esc(d.movedTo)}</code>.`:''}</div>
+ ${l.length?`<ul>${l.map(i=>`<li>${pill(i.status)} <a href="#" data-id="${esc(i.id)}" class="id">${esc(i.id)}</a> <span>${esc(i.title)}</span></li>`).join('')}</ul>`:'<div class="muted" style="font-size:12px">No actionable items extracted.</div>'}</div>`}).join('');
+ $('#docGrid').querySelectorAll('details.files').forEach(det=>det.addEventListener('toggle',()=>{if(!det.open||det.dataset.filled)return;det.dataset.filled=1;const d=docByPath[det.dataset.doc];
+  det.querySelector('ul').innerHTML=d.files.map(f=>`<li>${FILES[f]?fileLink(f,f,{code:true}):`<span class="muted" title="Not embedded">${esc(f)}</span>`}</li>`).join('');}));
+ $('#docGrid').querySelectorAll('a[data-id]').forEach(a=>a.onclick=e=>{e.preventDefault();open.add(a.dataset.id);F.q=a.dataset.id;$('#q').value=a.dataset.id;showTab('items');render();});}
+function showTab(t){$('#itemsView').classList.toggle('hide',t!=='items');$('#docsView').classList.toggle('hide',t!=='docs');$('#tabItems').classList.toggle('active',t==='items');$('#tabDocs').classList.toggle('active',t==='docs');if(t==='docs')renderDocs();}
+$('#tabItems').onclick=()=>showTab('items');$('#tabDocs').onclick=()=>showTab('docs');
+// CSV
+$('#csvBtn').onclick=()=>{const cols=['id','title','status','category','kind','confidence','primarySource','docType','docDate','docVersion','docClass','evidence','missing','sources'];
+ const q=v=>'"'+String(v==null?'':v).replace(/"/g,'""')+'"';
+ const rows=filtered().sort(cmp).map(i=>cols.map(c=>q(c==='sources'?i.sources.map(s=>`${s.file} (${s.loc})${s.movedTo?' -> '+s.movedTo:''}`).join(' | '):i[c])).join(','));
+ const blob=new Blob(['\ufeff'+cols.join(',')+'\n'+rows.join('\n')],{type:'text/csv;charset=utf-8'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='vepa-plan-items.csv';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);};
+
+// ================= file viewer =================
+const EXT=p=>(p.match(/\.([a-z0-9]+)$/i)||[,''])[1].toLowerCase();
+const isHtml=p=>/^(html?|htm)$/.test(EXT(p));
+const isMd=p=>EXT(p)==='md';
+const ICON=p=>isMd(p)?'📝':isHtml(p)?'🌐':/^(json)$/.test(EXT(p))?'🧾':'📄';
+function fileLink(path,label,o){o=o||{};if(!path||!FILES[path])return o.code===false?esc(label):`<code title="Not embedded">${esc(label)}</code>`;
+ return `<a href="#" class="flink" data-open="${esc(path)}"${o.loc?` data-loc="${esc(o.loc)}"`:''}${o.l?` data-l1="${o.l[0]}" data-l2="${o.l[1]}"`:''} title="Open ${esc(path)}${isHtml(path)?' in a new tab':''}">${ICON(path)} <code>${esc(label)}</code></a>`;}
+function fchip(r){const lab=r.l?(r.l[0]===r.l[1]?':'+r.l[0]:`:${r.l[0]}–${r.l[1]}`):'';
+ if(!r.p||!FILES[r.p])return `<span class="fchip miss" title="${r.p?'Not embedded':'Not found in the repo (the evidence may say it is missing)'}">${esc(r.tok)}${lab}</span>`;
+ return `<a href="#" class="fchip" data-open="${esc(r.p)}"${r.l?` data-l1="${r.l[0]}" data-l2="${r.l[1]}"`:''} title="${esc(r.p)}${r.kind==='related'?' (related file)':''}">${ICON(r.p)} ${esc(r.p)}<span class="ln">${lab}</span>${r.kind!=='evidence'?`<span class="k">${esc(r.kind)}</span>`:''}</a>`;}
+document.addEventListener('click',e=>{const a=e.target.closest('[data-open]');if(!a)return;e.preventDefault();e.stopPropagation();
+ const l=a.dataset.l1?[+a.dataset.l1,+a.dataset.l2]:null;openFile(a.dataset.open,{lines:l,loc:a.dataset.loc});},true);
+function toast(html,ms){const t=$('#toast');t.innerHTML=html;t.classList.remove('hide');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.add('hide'),ms||4000);}
+// Embedded file contents are gzip+base64; decoded lazily per file with the browser's DecompressionStream and cached.
+const TXT=new Map();
+function getText(path){if(TXT.has(path))return TXT.get(path);const f=FILES[path];
+ const pr=(async()=>{if(typeof f.t==='string')return f.t;const bin=atob(f.z);const u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);
+  if(typeof DecompressionStream!=='function')throw new Error('This browser has no DecompressionStream (needs Chrome 80+, Firefox 113+ or Safari 16.4+).');
+  return await new Response(new Blob([u]).stream().pipeThrough(new DecompressionStream('gzip'))).text();})();
+ TXT.set(path,pr);pr.catch(()=>TXT.delete(path));return pr;}
+function blobOpen(path,type){const f=FILES[path];if(!f)return;
+ const w=window.open('','_blank');   // open synchronously inside the click so popup blockers allow it, then fill it once decoded
+ if(w){try{w.document.title='Loading '+path+'…';w.document.body.textContent='Loading '+path+'…'}catch(e){}}
+ getText(path).then(txt=>{const url=URL.createObjectURL(new Blob([txt],{type:type+';charset=utf-8'}));
+  if(w)w.location.replace(url);else toast(`<span>Popup blocked.</span><a class="flink" href="${url}" target="_blank" rel="noopener">Open ${esc(path)}</a>`,10000);
+  setTimeout(()=>URL.revokeObjectURL(url),120000);}).catch(e=>{if(w)w.close();toast(esc('Could not decode '+path+': '+e.message))});return w;}
+const V={stack:[],cur:null,mode:'rendered'};
+function openFile(path,o){o=o||{};const f=FILES[path];if(!f){toast(`<span>Not embedded: <code>${esc(path)}</code></span>`);return;}
+ if(isHtml(path)&&!o.source){blobOpen(path,'text/html');toast(`<span>🌐 Opened <code>${esc(path)}</code> in a new tab</span><button id="tSrc">View source</button>`,6000);
+  const b=document.getElementById('tSrc');if(b)b.onclick=()=>{$('#toast').classList.add('hide');openFile(path,{source:true})};return;}
+ if(V.cur&&!o.back&&!$('#vwrap').classList.contains('hide'))V.stack.push(V.cur); else if(!o.back&&$('#vwrap').classList.contains('hide'))V.stack=[];
+ V.cur={path,lines:o.lines,loc:o.loc,source:o.source};V.mode=(isMd(path)&&!o.lines&&!o.source)?'rendered':'source';
+ $('#vwrap').classList.remove('hide');document.body.style.overflow='hidden';drawViewer();}
+async function drawViewer(){const cur=V.cur;const {path,lines,loc}=cur;const f=FILES[path];
+ const body0=$('#vbody');if(!TXT.has(path))body0.innerHTML='<div class="vnote">Decoding…</div>';
+ let txt;try{txt=await getText(path)}catch(e){body0.innerHTML=`<div class="vnote">Could not decode this file: ${esc(e.message)}</div>`;return;}
+ if(V.cur!==cur)return;   // another file was opened while this one decoded
+ $('#vtitle').textContent=path;$('#vBack').classList.toggle('hide',!V.stack.length);
+ const moved=path.startsWith('.old/');
+ $('#vtags').innerHTML=`<span class="tag">${esc(f.lang)}</span><span class="tag">${(f.size/1024).toFixed(1)} KB</span>${moved?'<span class="tag old">moved to .old/</span>':''}${lines?`<span class="tag">line ${lines[0]}${lines[1]!==lines[0]?'–'+lines[1]:''}</span>`:''}${loc&&!lines?`<span class="tag">${esc(loc)}</span>`:''}`;
+ const md=isMd(path);$('#vRendered').classList.toggle('hide',!md);$('#vSource').classList.toggle('hide',!md);
+ $('#vRendered').classList.toggle('on',V.mode==='rendered');$('#vSource').classList.toggle('on',V.mode==='source');
+ const notes=[];if(f.trunc)notes.push(`Truncated: only the first ${(txt.length/1e6).toFixed(1)} MB of ${(f.size/1e6).toFixed(1)} MB is embedded.`);
+ const body=$('#vbody');body.scrollTop=0;
+ if(md&&V.mode==='rendered'){if(txt.length>1500000)notes.push('Large file: rendering can take a moment.');body.innerHTML=`<article class="md">${renderMd(txt)}</article>`;fixMd(body.firstChild,path);if(loc)gotoSection(body,loc);}
+ else{const big=txt.length>600000;if(big)notes.push('Large file: syntax highlighting is off.');body.innerHTML=codeHtml(txt,big?'plaintext':f.lang,lines);
+  if(lines){const el=body.querySelector(`.l[data-n="${lines[0]}"]`);if(el)requestAnimationFrame(()=>el.scrollIntoView({block:'center'}));else notes.push(`Line ${lines[0]} is past the end of the file (${txt.split('\n').length} lines).`);}}
+ $('#vnote').innerHTML=notes.map(esc).join(' ');$('#vnote').classList.toggle('hide',!notes.length);}
+function closeViewer(){$('#vwrap').classList.add('hide');document.body.style.overflow='';V.cur=null;V.stack=[];}
+$('#vClose').onclick=closeViewer;$('#vwrap').addEventListener('click',e=>{if(e.target.id==='vwrap')closeViewer()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#vwrap').classList.contains('hide'))closeViewer()});
+$('#vBack').onclick=()=>{const p=V.stack.pop();if(p)openFile(p.path,{lines:p.lines,loc:p.loc,source:p.source,back:true})};
+$('#vRendered').onclick=()=>{V.mode='rendered';drawViewer()};$('#vSource').onclick=()=>{V.mode='source';drawViewer()};
+$('#vTab').onclick=()=>{const p=V.cur.path;blobOpen(p,isHtml(p)?'text/html':'text/plain')};
+$('#vCopy').onclick=()=>{const p=V.cur.path;(navigator.clipboard?navigator.clipboard.writeText(p):Promise.reject()).then(()=>toast('Path copied'),()=>toast(esc(p)))};
+// code view with line numbers: highlight once, then split the HTML into lines and re-open spans that cross newlines
+function hl(text,lang){try{if(lang&&lang!=='plaintext'&&window.hljs&&hljs.getLanguage(lang))return hljs.highlight(text,{language:lang,ignoreIllegals:true}).value}catch(e){}return esc(text);}
+function splitHtmlLines(h){const out=[],open=[];let cur='';const re=/<span[^>]*>|<\/span>|\n|[^<\n]+|</g;let m;
+ while((m=re.exec(h))){const s=m[0];if(s==='\n'){out.push(cur+'</span>'.repeat(open.length));cur=open.join('');}
+  else if(s.startsWith('<span')){open.push(s);cur+=s}else if(s==='</span>'){open.pop();cur+=s}else cur+=s;}
+ out.push(cur);return out;}
+function codeHtml(text,lang,lines){const ls=splitHtmlLines(hl(text,lang));const a=lines?lines[0]:-1,b=lines?lines[1]:-1;
+ return `<div class="code hljs">${ls.map((s,i)=>{const n=i+1;return `<div class="l${n>=a&&n<=b?' hl':''}" data-n="${n}"><span class="no">${n}</span><span>${s||' '}</span></div>`}).join('')}</div>`;}
+// Markdown: marked (GFM) + highlight.js for fenced code, mermaid kept as code; output sanitised with DOMPurify
+if(window.marked){marked.use({gfm:true,breaks:false,renderer:{code(tok){const lang=String(tok.lang||'').trim().split(/\s+/)[0].toLowerCase();
+ if(lang==='mermaid')return `<div class="mmd"><div class="mmd-h">mermaid diagram (shown as source)</div><pre><code class="hljs language-mermaid">${esc(tok.text)}</code></pre></div>`;
+ return `<pre><code class="hljs${lang?' language-'+esc(lang):''}">${hl(tok.text,lang)}</code></pre>`;}}});}
+function renderMd(src){const raw=window.marked?marked.parse(src):`<pre>${esc(src)}</pre>`;
+ return window.DOMPurify?DOMPurify.sanitize(raw,{FORBID_TAGS:['style','script','iframe','object','embed','form','input','button','textarea','select','link','meta','base'],FORBID_ATTR:['style','srcset','formaction'],ALLOW_DATA_ATTR:false}):esc(raw);}
+const dirOf=p=>p.includes('/')?p.slice(0,p.lastIndexOf('/')):'';
+function normPath(p){const out=[];p.split('/').forEach(s=>{if(!s||s==='.')return;if(s==='..')out.pop();else out.push(s)});return out.join('/');}
+function resolveLink(from,href){let [p]=href.split('#');p=p.split('?')[0];try{p=decodeURIComponent(p)}catch(e){}
+ if(!p)return null;let r=p.startsWith('/')?normPath(p):normPath(dirOf(from)+'/'+p);
+ if(FILES[r])return r;if(r.startsWith('.old/')&&FILES[r.slice(5)])return r.slice(5);
+ if(!r.startsWith('.old/')&&FILES['.old/'+r])return '.old/'+r;   // link to a doc that was moved
+ if(from.startsWith('.old/')){const r2=normPath(dirOf(from.slice(5))+'/'+p);if(FILES[r2])return r2;if(FILES['.old/'+r2])return '.old/'+r2;}
+ return {missing:r};}
+function slug(s){return 'h-'+s.toLowerCase().replace(/[^\w\u00c0-\uffff -]/g,'').trim().replace(/\s+/g,'-');}
+function fixMd(root,path){const used={};root.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach(h=>{let s=slug(h.textContent);if(used[s])s+='-'+(used[s]++);else used[s]=1;h.id=s;});
+ root.querySelectorAll('img').forEach(img=>{const src=img.getAttribute('src')||'';if(!/^(data:image\/|https?:)/.test(src)){const sp=document.createElement('span');sp.className='tag';sp.textContent='[image: '+(img.alt||src)+']';img.replaceWith(sp);}});
+ root.querySelectorAll('a[href]').forEach(a=>{const h=a.getAttribute('href');
+  if(/^(https?:|mailto:)/i.test(h)){a.target='_blank';a.rel='noopener noreferrer';return;}
+  if(h.startsWith('#')){a.dataset.anchor=h.slice(1);return;}
+  if(/^[a-z][\w+.-]*:/i.test(h)){a.removeAttribute('href');return;}
+  const r=resolveLink(path,h);if(r&&typeof r==='string'){a.setAttribute('data-open',r);const frag=h.split('#')[1];if(frag)a.setAttribute('data-loc','#'+frag);a.title='Open '+r;}
+  else{a.classList.add('nofile');a.title=r?`${r.missing} is not embedded or does not exist`:'';a.addEventListener('click',e=>{e.preventDefault();toast(`Not embedded: <code>${esc(r?r.missing:h)}</code>`)});}});
+ root.addEventListener('click',e=>{const a=e.target.closest('a[data-anchor]');if(!a)return;e.preventDefault();gotoSection($('#vbody'),'#'+a.dataset.anchor);});}
+function gotoSection(body,loc){let el=null;const hs=[...body.querySelectorAll('h1,h2,h3,h4,h5,h6')];
+ if(loc.startsWith('#')){const id=loc.slice(1).toLowerCase();el=hs.find(h=>h.id==='h-'+id||h.id===slug(id.replace(/-/g,' ')));}
+ const num=(loc.match(/§\s*([\d]+(?:\.\d+)*)/)||[])[1];
+ if(!el&&num){const re=new RegExp('(^|[^\\d.])(§\\s*)?'+num.replace(/\./g,'\\.')+'(?!\\.?\\d)');el=hs.find(h=>re.test(h.textContent.trim().slice(0,24)));}
+ if(!el){const words=(loc.replace(/§\s*[\d.]+/g,' ').match(/\b[A-Z]{1,6}-?\d+[a-z]?\b|\bPhase\s+\w+|\b[A-Z][a-z]{3,}\b/g)||[]);
+  for(const w of words){const re=new RegExp('\\b'+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b');el=hs.find(h=>re.test(h.textContent));
+   if(!el)el=[...body.querySelectorAll('td,li,p,strong')].find(n=>re.test(n.textContent));if(el)break;}}
+ if(el){requestAnimationFrame(()=>{el.scrollIntoView({block:'start'});body.scrollTop-=8;el.classList.add('flash');});}}
+
+bars();render();
+window.__VEPA_PLANS__={items:ITEMS.length,docs:DOCS.length,files:Object.keys(FILES).length,libs:{marked:!!window.marked,purify:!!window.DOMPurify,hljs:!!window.hljs},renderMd:s=>renderMd(s),openFile:(p,o)=>openFile(p,o)};
+})();
+</script>
+</body>
+</html>

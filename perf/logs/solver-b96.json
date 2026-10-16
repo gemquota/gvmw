@@ -1,0 +1,54 @@
+{
+  "node": "v22.23.3",
+  "cpus": 8,
+  "laws": "tidal",
+  "runs": 3,
+  "load1Start": 0.31,
+  "sizes": {
+    "300": {
+      "medMsPerTick": 13.65,
+      "ticksPerSec": 73.27,
+      "runsMs": [
+        13.3,
+        13.6,
+        14.3
+      ],
+      "hash": "686064f58389c467/0",
+      "deterministic": true
+    },
+    "1000": {
+      "medMsPerTick": 85.5,
+      "ticksPerSec": 11.7,
+      "runsMs": [
+        85,
+        85.5,
+        87.2
+      ],
+      "hash": "dc4a93d0ec2412b7/0",
+      "deterministic": true
+    },
+    "2500": {
+      "medMsPerTick": 280.17,
+      "ticksPerSec": 3.57,
+      "runsMs": [
+        274.2,
+        280.2,
+        315.2
+      ],
+      "hash": "0e3841c2ebb2e3d3/0",
+      "deterministic": true
+    },
+    "10000": {
+      "medMsPerTick": 543.5,
+      "ticksPerSec": 1.84,
+      "runsMs": [
+        541,
+        543.5,
+        545.6
+      ],
+      "hash": "5be33d11978dd5da/0",
+      "deterministic": true
+    }
+  },
+  "load1End": 0.85
+}

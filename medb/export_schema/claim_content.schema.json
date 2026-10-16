@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:medb:export:1.0:claim-content",
+  "title": "content/claim_content.json",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "required": ["salt", "body"],
+    "properties": {
+      "salt": {"type": "string"},
+      "body": {
+        "type": "object",
+        "required": ["subject", "predicate", "object", "source", "temporal_validity"],
+        "properties": {
+          "subject": {"type": "string"},
+          "predicate": {"type": "string"},
+          "object": {},
+          "source": {"type": "string"},
+          "temporal_validity": {"type": "object", "properties": {"valid_from": {"type": ["string", "null"]}, "valid_to": {"type": ["string", "null"]}}}
+        }
+      }
+    }
+  }
+}

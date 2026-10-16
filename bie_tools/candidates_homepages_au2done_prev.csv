@@ -1,0 +1,36 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://betkingh5api.xyz,1,1,0,0,merchant,parse_failed,200,,20,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://hkbk8.com
+https://fc88play.com,1,1,0,0,merchant,parse_failed,200,,9395,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://fc88a.com
+https://91efunminigame.online,1,1,0,0,merchant,parse_failed,200,,8198,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://91efun.com
+https://fc88club.co,1,1,1,1,,,200,,735097,10375,FC88Club,https://fc88club.co/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://fc88a.com
+https://bugatti881.net,1,1,1,1,,,200,,630658,71028,Bugatti881,https://bugatti881.net/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://bugatti881.com
+https://efun91.com,1,1,1,1,,,200,,719433,877,EFUN91,https://efun91.com/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://91efun.com
+https://judiguru.link,1,1,0,0,merchant,parse_failed,200,,1382068,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://judiguru.cc
+https://gengar47a.com,1,1,1,1,,,200,,697487,60218,WinStar47,https://gengar47a.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://gengar47.com
+https://heybitch99.net,1,1,1,1,,,200,,703077,30811,HEYBITCH99,https://heybitch99.net/api/v1/index.php,Invalid Action!,1.6,,homepage-links:https://heybitch99.com
+https://i1kina.com,1,1,1,1,,,200,,668308,1681,I1KINA (PGK),https://i1kina.com/api/v1/index.php,Invalid Action!,1.9,,homepage-links:https://i1bsp.com
+https://kaya365pgk.com,1,1,0,0,merchant,parse_failed,200,,5964,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://i1wantok.com
+https://i1png.net,1,1,1,1,,,200,,659507,1751,I1PNG (PGK),https://i1png.net/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://i1png.club
+https://i1png.co,1,1,1,1,,,200,,659507,1751,I1PNG (PGK),https://i1png.co/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://i1png.club
+https://judiguru.org,1,1,1,1,,,200,,1258391,60879,JudiGuru,https://judiguru.org/api/v1/index.php,Invalid Action!,2.5,,homepage-links:https://judiguru.cc
+https://majuwin.co,1,1,1,1,,,200,,910303,30005,MAJUWIN,https://majuwin.co/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://majuwin1.com
+https://majuwin.net,1,1,1,1,,,200,,910303,30005,MAJUWIN,https://majuwin.net/api/v1/index.php,Invalid Action!,2.0,,homepage-links:https://majuwin1.com
+https://majuwin.online,1,1,1,1,,,200,,910303,30005,MAJUWIN,https://majuwin.online/api/v1/index.php,Invalid Action!,2.1,,homepage-links:https://majuwin1.com
+https://nylishpeandard.com,1,0,0,0,homepage,http_404,404,,,,,,,0.3,HTTPError: 404 Client Error:  for url: https://nylishpeandard.com/,homepage-links:https://majuwin1.com
+https://majuwin.asia,1,1,1,1,,,200,,910670,30005,MAJUWIN,https://majuwin.asia/api/v1/index.php,Invalid Action!,4.1,,homepage-links:https://majuwin1.com
+https://majuwin.me,1,1,1,1,,,200,,910670,30005,MAJUWIN,https://majuwin.me/api/v1/index.php,Invalid Action!,3.6,,homepage-links:https://majuwin1.com
+https://majuwin2.com,1,1,1,1,,,200,,910303,30005,MAJUWIN,https://majuwin2.com/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://majuwin1.com
+https://obsidian7aud.online,1,1,1,1,,,200,,1093707,1965,OBSIDIAN7,https://obsidian7aud.online/api/v1/index.php,Invalid Action!,2.2,,homepage-links:https://obsidian7aud.com
+https://majuwin.xyz,1,1,1,1,,,200,,910670,30005,MAJUWIN,https://majuwin.xyz/api/v1/index.php,Invalid Action!,3.5,,homepage-links:https://majuwin1.com
+https://speedau.co,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='speedau.co', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c",homepage-links:https://myspeedau.com
+https://majuwin.store,1,1,1,1,,,200,,910670,30005,MAJUWIN,https://majuwin.store/api/v1/index.php,Invalid Action!,4.5,,homepage-links:https://majuwin1.com
+https://pantas99.club,1,1,1,1,,,200,,731462,65,Pantas99 Online Casino,https://pantas99.club/api/v1/index.php,Invalid Action!,2.3,,homepage-links:https://pantas99.com
+https://royalaceau.net,1,1,1,1,,,200,,695512,655,ROYAL ACE,https://royalaceau.net/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://royalaceau.com
+https://obsidian7aud8.com,1,1,1,1,,,200,,1094074,1965,OBSIDIAN7,https://obsidian7aud8.com/api/v1/index.php,Invalid Action!,3.8,,homepage-links:https://obsidian7aud.com
+https://thesovereignaud8.com,1,1,1,1,,,200,,866416,50726,THE SOVEREIGN,https://thesovereignaud8.com/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://thesovereignaud.com
+https://thesovereignaud.online,1,1,1,1,,,200,,866416,50726,THE SOVEREIGN,https://thesovereignaud.online/api/v1/index.php,Invalid Action!,1.8,,homepage-links:https://thesovereignaud.com
+https://xxxxxxxxxxxxxxx.com,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='xxxxxxxxxxxxxxx.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protoco",homepage-links:https://fc88a.com
+https://winstar47.com,1,1,1,1,,,200,,697487,60218,WinStar47,https://winstar47.com/api/v1/index.php,Invalid Action!,1.7,,homepage-links:https://gengar47.com
+https://topsukan.com,1,1,0,0,merchant,parse_failed,200,,49125,,,,,2.4,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://fc88a.com
+https://promo.link,0,0,0,0,reachable,ssl,,,,,,,,5.1,"SSLError: HTTPSConnectionPool(host='promo.link', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c",homepage-links:https://thesovereignaud.com
+https://syok99.asia,1,1,0,0,merchant,parse_failed,200,,88017,,,,,6.4,ValueError: Could not find merchant identification details in HTML or JS.,homepage-links:https://bcoin888.com

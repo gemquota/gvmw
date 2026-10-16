@@ -1,0 +1,46 @@
+
+ RUN  v3.2.7 /workspace/vepa
+
+ ✓ tests/unit/lawClock.test.js (4 tests) 2486ms
+   ✓ law clock (DET-1) > the same world gives identical results whatever the wall clock reads  2480ms
+ ❯ tests/unit/nanEnergy.test.js (3 tests | 1 failed) 92625ms
+   ✓ D-035 GENOTYPE keeps somatic DNA in range > writeSomaticLocus clamps to DNA_RANGES and ignores non-finite values 1ms
+   × D-035 GENOTYPE keeps somatic DNA in range > thousands of high-rate, hot mutations never leave the declared ranges 4ms
+     → (0 , setLawClockMs) is not a function
+   ✓ D-035 seeded repro: narrow mid range, 600 ticks > no particle ends with a non-finite field  92618ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/nanEnergy.test.js > D-035 GENOTYPE keeps somatic DNA in range > thousands of high-rate, hot mutations never leave the declared ranges
+TypeError: (0 , setLawClockMs) is not a function
+ ❯ tests/unit/nanEnergy.test.js:29:51
+     27|     view[S.TEMPERATURE] = 50;
+     28|     const prng = seq(3);
+     29|     for (let t = 0; t < 4000; t++) { setLawClockMs(t * 16); applyGenot…
+       |                                                   ^
+     30|     for (let d = 0; d < 42; d++) {
+     31|       const v = view[S.DNA_CACHE_START + d], r = DNA_RANGES[d];
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯⎯ Unhandled Error ⎯⎯⎯⎯⎯⎯⎯
+Error: [vitest-worker]: Timeout calling "onTaskUpdate"
+ ❯ Object.onTimeoutError node_modules/vitest/dist/chunks/rpc.-pEldfrD.js:53:10
+ ❯ Timeout._onTimeout node_modules/vitest/dist/chunks/index.B521nVV-.js:59:62
+ ❯ listOnTimeout node:internal/timers:585:17
+ ❯ processTimers node:internal/timers:521:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 6 passed (7)
+     Errors  1 error
+   Start at  18:09:03
+   Duration  95.90s (transform 253ms, setup 0ms, collect 458ms, tests 95.11s, environment 0ms, prepare 94ms)
+

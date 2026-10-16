@@ -1,0 +1,21 @@
+
+Running 12 tests using 1 worker
+
+
+(node:65872) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/12] tests/e2e/boot-render-worker.spec.js:5:1 › renders frames: the sim canvas paints non-uniform content (AC-24)
+[2/12] tests/e2e/boot-render-worker.spec.js:13:1 › worker ticks advance while running and stop while paused (AC-24)
+[3/12] tests/e2e/civ-runtime.spec.js:7:1 › civilisation runtime adapter: off by default, live when enabled, survives save/restore
+[4/12] tests/e2e/mechanics-worker.spec.js:5:1 › toggling the CONTACT mechanics law changes worker particle state (AC-25)
+[5/12] tests/e2e/physics-worker.spec.js:4:1 › boots the simulation shell without a module error
+[6/12] tests/e2e/physics-worker.spec.js:11:1 › runs worker ticks asynchronously when SharedArrayBuffer is available
+[7/12] tests/e2e/physics-worker.spec.js:24:1 › GPU force output matches CPU for a fixed browser fixture
+[8/12] tests/e2e/physics-worker.spec.js:54:1 › GPU opt-in remains safe when WebGPU is unavailable
+[9/12] tests/e2e/runtime-acceptance.spec.js:11:3 › VEPA browser acceptance boundary › boots the real application with cross-origin isolation
+[10/12] tests/e2e/runtime-acceptance.spec.js:20:3 › VEPA browser acceptance boundary › renders all eight Mechanics law toggles and toggles CONTACT in the browser
+[11/12] tests/e2e/runtime-acceptance.spec.js:40:3 › VEPA browser acceptance boundary › reports WebGPU availability without treating fallback as GPU execution
+[12/12] tests/e2e/timeline-dashboard.spec.js:5:1 › timeline dashboard: renders, REC toggles, scrub moves the timeline (AC-91)
+  12 passed (41.3s)
+exit 0

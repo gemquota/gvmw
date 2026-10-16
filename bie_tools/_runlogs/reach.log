@@ -1,0 +1,42 @@
+25/580 done
+50/580 done
+75/580 done
+100/580 done
+125/580 done
+150/580 done
+175/580 done
+200/580 done
+225/580 done
+250/580 done
+275/580 done
+300/580 done
+325/580 done
+350/580 done
+375/580 done
+400/580 done
+425/580 done
+450/580 done
+475/580 done
+500/580 done
+525/580 done
+550/580 done
+575/580 done
+sites: 580
+  reachable    421/580 (72.6%)
+  homepage_ok  395/580 (68.1%)
+  merchant_ok  315/580 (54.3%)
+  api_ok       310/580 (53.4%)
+failures by stage/reason:
+  reachable  dns                123
+  merchant   parse_failed       80
+  reachable  ssl                33
+  homepage   cloudflare/403     16
+  homepage   http_530           6
+  api        api_not_json       4
+  reachable  connection         2
+  homepage   http_502           1
+  homepage   http_403           1
+  reachable  timeout            1
+  api        connection         1
+  homepage   http_404           1
+  homepage   http_520           1

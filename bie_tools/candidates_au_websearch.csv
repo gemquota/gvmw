@@ -1,0 +1,5 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://audplay.tech,1,0,0,0,homepage,http_403,403,,,,,,,0.2,HTTPError: 403 Client Error: Forbidden for url: https://audplay.tech/,file:/workspace/bie_tools/au/search_au.txt
+https://pokiesaus.online,1,0,0,0,homepage,http_403,403,,,,,,,0.3,HTTPError: 403 Client Error: Forbidden for url: https://pokiesaus.online/,file:/workspace/bie_tools/au/search_au.txt
+https://spin420-australia.com,1,1,0,0,merchant,parse_failed,200,,53544,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,file:/workspace/bie_tools/au/search_au.txt
+https://apublicaffairpr.com,1,1,0,0,merchant,parse_failed,200,,42105,,,,,3.8,ValueError: Could not find merchant identification details in HTML or JS.,file:/workspace/bie_tools/au/search_au.txt

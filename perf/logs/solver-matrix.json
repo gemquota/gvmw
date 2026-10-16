@@ -1,0 +1,485 @@
+{
+  "node": "v22.23.3",
+  "cpus": 8,
+  "laws": "tidal",
+  "runs": 3,
+  "load1Start": 0.85,
+  "sizes": {},
+  "speed": [
+    "none",
+    "SPEED_NEIGHBORS_48",
+    "SPEED_NARROW_MID",
+    "SPEED_PAIR_CAP",
+    "SPEED_NEAR_SYMBIOSIS",
+    "SPEED_SOCIAL_HALF",
+    "SPEED_FAST",
+    "all"
+  ],
+  "variants": {
+    "none": {
+      "300": {
+        "medMsPerTick": 14.3,
+        "ticksPerSec": 69.94,
+        "runsMs": [
+          13.3,
+          14.3,
+          14.5
+        ],
+        "hash": "686064f58389c467/0",
+        "deterministic": true,
+        "alive": 300,
+        "species": 5,
+        "born": 0
+      },
+      "1000": {
+        "medMsPerTick": 88.6,
+        "ticksPerSec": 11.29,
+        "runsMs": [
+          85.5,
+          88.6,
+          88.9
+        ],
+        "hash": "dc4a93d0ec2412b7/0",
+        "deterministic": true,
+        "alive": 1000,
+        "species": 5,
+        "born": 0
+      },
+      "2500": {
+        "medMsPerTick": 280.05,
+        "ticksPerSec": 3.57,
+        "runsMs": [
+          275.6,
+          280,
+          283.1
+        ],
+        "hash": "0e3841c2ebb2e3d3/0",
+        "deterministic": true,
+        "alive": 2500,
+        "species": 5,
+        "born": 0
+      },
+      "10000": {
+        "medMsPerTick": 543.2,
+        "ticksPerSec": 1.84,
+        "runsMs": [
+          539.5,
+          543.2,
+          559.3
+        ],
+        "hash": "5be33d11978dd5da/0",
+        "deterministic": true,
+        "alive": 10000,
+        "species": 5,
+        "born": 0
+      }
+    },
+    "SPEED_NEIGHBORS_48": {
+      "300": {
+        "medMsPerTick": 14.16,
+        "ticksPerSec": 70.61,
+        "runsMs": [
+          13.7,
+          14.2,
+          14.3
+        ],
+        "hash": "686064f58389c467/0",
+        "deterministic": true,
+        "alive": 300,
+        "species": 5,
+        "born": 0
+      },
+      "1000": {
+        "medMsPerTick": 52.5,
+        "ticksPerSec": 19.05,
+        "runsMs": [
+          52.1,
+          52.5,
+          53
+        ],
+        "hash": "671cee28bc7b5871/0",
+        "deterministic": true,
+        "alive": 1000,
+        "species": 5,
+        "born": 0
+      },
+      "2500": {
+        "medMsPerTick": 157.6,
+        "ticksPerSec": 6.35,
+        "runsMs": [
+          156.9,
+          157.6,
+          158.5
+        ],
+        "hash": "5ff0bf35b784db93/0",
+        "deterministic": true,
+        "alive": 2500,
+        "species": 5,
+        "born": 0
+      },
+      "10000": {
+        "medMsPerTick": 309.19,
+        "ticksPerSec": 3.23,
+        "runsMs": [
+          308.3,
+          309.2,
+          313.9
+        ],
+        "hash": "fb1f35178b011a5c/0",
+        "deterministic": true,
+        "alive": 10000,
+        "species": 5,
+        "born": 0
+      }
+    },
+    "SPEED_NARROW_MID": {
+      "300": {
+        "medMsPerTick": 13.53,
+        "ticksPerSec": 73.92,
+        "runsMs": [
+          13.5,
+          13.5,
+          14
+        ],
+        "hash": "5a27c9ef02caaae9/0",
+        "deterministic": true,
+        "alive": 300,
+        "species": 5,
+        "born": 0
+      },
+      "1000": {
+        "medMsPerTick": 88.15,
+        "ticksPerSec": 11.34,
+        "runsMs": [
+          86.8,
+          88.2,
+          88.2
+        ],
+        "hash": "56d59947f363686c/0",
+        "deterministic": true,
+        "alive": 1000,
+        "species": 5,
+        "born": 0
+      },
+      "2500": {
+        "medMsPerTick": 275.93,
+        "ticksPerSec": 3.62,
+        "runsMs": [
+          271.5,
+          275.9,
+          276
+        ],
+        "hash": "03631ae06740c592/0",
+        "deterministic": true,
+        "alive": 2500,
+        "species": 5,
+        "born": 0
+      },
+      "10000": {
+        "medMsPerTick": 483.69,
+        "ticksPerSec": 2.07,
+        "runsMs": [
+          469.2,
+          483.7,
+          488
+        ],
+        "hash": "2e8ddabaa1473b26/0",
+        "deterministic": true,
+        "alive": 10000,
+        "species": 5,
+        "born": 0
+      }
+    },
+    "SPEED_PAIR_CAP": {
+      "300": {
+        "medMsPerTick": 14.35,
+        "ticksPerSec": 69.69,
+        "runsMs": [
+          13.4,
+          14.3,
+          14.5
+        ],
+        "hash": "686064f58389c467/0",
+        "deterministic": true,
+        "alive": 300,
+        "species": 5,
+        "born": 0
+      },
+      "1000": {
+        "medMsPerTick": 89.02,
+        "ticksPerSec": 11.23,
+        "runsMs": [
+          85.8,
+          89,
+          93
+        ],
+        "hash": "dc4a93d0ec2412b7/0",
+        "deterministic": true,
+        "alive": 1000,
+        "species": 5,
+        "born": 0
+      },
+      "2500": {
+        "medMsPerTick": 241.84,
+        "ticksPerSec": 4.13,
+        "runsMs": [
+          240,
+          241.8,
+          245.1
+        ],
+        "hash": "9422d779d72b954f/0",
+        "deterministic": true,
+        "alive": 2500,
+        "species": 5,
+        "born": 0
+      },
+      "10000": {
+        "medMsPerTick": 264.01,
+        "ticksPerSec": 3.79,
+        "runsMs": [
+          249.8,
+          264,
+          265.5
+        ],
+        "hash": "b9bf54d954a86b02/0",
+        "deterministic": true,
+        "alive": 10000,
+        "species": 5,
+        "born": 0
+      }
+    },
+    "SPEED_NEAR_SYMBIOSIS": {
+      "300": {
+        "medMsPerTick": 14.5,
+        "ticksPerSec": 68.94,
+        "runsMs": [
+          13.3,
+          14.5,
+          14.8
+        ],
+        "hash": "718329953f96ecfa/0",
+        "deterministic": true,
+        "alive": 300,
+        "species": 5,
+        "born": 0
+      },
+      "1000": {
+        "medMsPerTick": 90.07,
+        "ticksPerSec": 11.1,
+        "runsMs": [
+          88.8,
+          90.1,
+          91.5
+        ],
+        "hash": "85b56d712ae76c68/0",
+        "deterministic": true,
+        "alive": 1000,
+        "species": 5,
+        "born": 0
+      },
+      "2500": {
+        "medMsPerTick": 291.67,
+        "ticksPerSec": 3.43,
+        "runsMs": [
+          289,
+          291.7,
+          294
+        ],
+        "hash": "24bb02e0888f75bd/0",
+        "deterministic": true,
+        "alive": 2500,
+        "species": 5,
+        "born": 0
+      },
+      "10000": {
+        "medMsPerTick": 543.22,
+        "ticksPerSec": 1.84,
+        "runsMs": [
+          536.4,
+          543.2,
+          550.6
+        ],
+        "hash": "10693ca0877c0491/0",
+        "deterministic": true,
+        "alive": 10000,
+        "species": 5,
+        "born": 0
+      }
+    },
+    "SPEED_SOCIAL_HALF": {
+      "300": {
+        "medMsPerTick": 13.17,
+        "ticksPerSec": 75.91,
+        "runsMs": [
+          13.1,
+          13.2,
+          14
+        ],
+        "hash": "41bb1df787f3b4b5/0",
+        "deterministic": true,
+        "alive": 300,
+        "species": 5,
+        "born": 0
+      },
+      "1000": {
+        "medMsPerTick": 77.11,
+        "ticksPerSec": 12.97,
+        "runsMs": [
+          75.6,
+          77.1,
+          79.3
+        ],
+        "hash": "85c6b0fdecf5e089/0",
+        "deterministic": true,
+        "alive": 1000,
+        "species": 5,
+        "born": 0
+      },
+      "2500": {
+        "medMsPerTick": 251.13,
+        "ticksPerSec": 3.98,
+        "runsMs": [
+          249.3,
+          251.1,
+          252.2
+        ],
+        "hash": "3418f869421ee100/0",
+        "deterministic": true,
+        "alive": 2500,
+        "species": 5,
+        "born": 0
+      },
+      "10000": {
+        "medMsPerTick": 491.15,
+        "ticksPerSec": 2.04,
+        "runsMs": [
+          470.9,
+          491.2,
+          496.5
+        ],
+        "hash": "870331a02d153a50/0",
+        "deterministic": true,
+        "alive": 10000,
+        "species": 5,
+        "born": 0
+      }
+    },
+    "SPEED_FAST": {
+      "300": {
+        "medMsPerTick": 13.16,
+        "ticksPerSec": 76,
+        "runsMs": [
+          12.5,
+          13.2,
+          13.3
+        ],
+        "hash": "ca62a3949edc736e/0",
+        "deterministic": true,
+        "alive": 300,
+        "species": 5,
+        "born": 0
+      },
+      "1000": {
+        "medMsPerTick": 52.33,
+        "ticksPerSec": 19.11,
+        "runsMs": [
+          50.9,
+          52.3,
+          52.7
+        ],
+        "hash": "425e5c2c4b1edd9d/0",
+        "deterministic": true,
+        "alive": 1000,
+        "species": 5,
+        "born": 0
+      },
+      "2500": {
+        "medMsPerTick": 147.9,
+        "ticksPerSec": 6.76,
+        "runsMs": [
+          146.1,
+          147.9,
+          148.3
+        ],
+        "hash": "b89712270c888137/0",
+        "deterministic": true,
+        "alive": 2500,
+        "species": 5,
+        "born": 0
+      },
+      "10000": {
+        "medMsPerTick": 177.59,
+        "ticksPerSec": 5.63,
+        "runsMs": [
+          173.4,
+          177.6,
+          184.7
+        ],
+        "hash": "21b586ee56ae0fb6/0",
+        "deterministic": true,
+        "alive": 10000,
+        "species": 5,
+        "born": 0
+      }
+    },
+    "all": {
+      "300": {
+        "medMsPerTick": 12.96,
+        "ticksPerSec": 77.15,
+        "runsMs": [
+          12.7,
+          13,
+          13.1
+        ],
+        "hash": "ca62a3949edc736e/0",
+        "deterministic": true,
+        "alive": 300,
+        "species": 5,
+        "born": 0
+      },
+      "1000": {
+        "medMsPerTick": 51.21,
+        "ticksPerSec": 19.53,
+        "runsMs": [
+          49.6,
+          51.2,
+          53.1
+        ],
+        "hash": "425e5c2c4b1edd9d/0",
+        "deterministic": true,
+        "alive": 1000,
+        "species": 5,
+        "born": 0
+      },
+      "2500": {
+        "medMsPerTick": 150.14,
+        "ticksPerSec": 6.66,
+        "runsMs": [
+          150.1,
+          150.1,
+          151.7
+        ],
+        "hash": "b89712270c888137/0",
+        "deterministic": true,
+        "alive": 2500,
+        "species": 5,
+        "born": 0
+      },
+      "10000": {
+        "medMsPerTick": 176.42,
+        "ticksPerSec": 5.67,
+        "runsMs": [
+          173.9,
+          176.4,
+          197.7
+        ],
+        "hash": "21b586ee56ae0fb6/0",
+        "deterministic": true,
+        "alive": 10000,
+        "species": 5,
+        "born": 0
+      }
+    }
+  },
+  "load1End": 1.71
+}

@@ -1,0 +1,17 @@
+{
+  "classification_id": "MC-1",
+  "version": 1,
+  "default": "critical",
+  "rules": [
+    {"pattern": "src/auth/*", "class": "critical"},
+    {"pattern": "src/security/*", "class": "critical"},
+    {"pattern": "src/billing/*", "class": "critical"},
+    {"pattern": "src/models/*", "class": "critical"},
+    {"pattern": "src/api/*", "class": "critical"},
+    {"pattern": "src/ui/*", "class": "non_critical"},
+    {"pattern": "src/reports/*", "class": "non_critical"},
+    {"pattern": "src/utils/*", "class": "non_critical"},
+    {"pattern": "docs/*", "class": "non_critical"},
+    {"pattern": "tests/*", "class": "non_critical"}
+  ]
+}

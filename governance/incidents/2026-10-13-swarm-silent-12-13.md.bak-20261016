@@ -1,0 +1,25 @@
+# INC-006: No chain, digest or governance writes since Sat 10 Oct afternoon
+
+- Opened: Tue 13 Oct 2026, about 11:05am AEST, by P1 (Ops) Mender (weekday stall check)
+- Owner: P1 (Ops) Mender (stall detection). Stalled step owners: P1 (Checks) Scorer (step 1), P1 (Work) Explorer (daily digest).
+- Why an incident: two weekdays in a row (Mon 12 and Tue 13 Oct) with no chain run, which also meets INC-004's reopen condition.
+
+## What is on disk (checked 13 Oct, 11:01am)
+- Newest file anywhere under `/workspace/governance/` is `risk/register.md`, 10 Oct 1:23pm. Nothing has been written there since.
+- No `assessments/2026-10-12.md`, `assessments/2026-10-13.md`, `reviews/2026-10-12.md` or `reviews/2026-10-13.md`. Last assessment is `assessments/2026-10-09.md`.
+- No Monday weekly scorecard for 12 Oct (`assessments/weekly-*` newest is 5 Oct).
+- Scrutineer's 11:45am backup left nothing on 12 Oct either.
+- Explorer's daily digest: `digest/sent/` holds only `2026-10-10.md` (7:52am). `digest/state.json` says compiled through 10 Oct, with 10 Oct still unread. `digest/inbox/2026-10-11/Explorer.md` was written 10 Oct, 12:01pm and never compiled.
+- Mender's own 10:50am stall routine failed on Mon 12 Oct (cause not visible to this run). Today's run is going.
+- Agent folders for all 17 current bots are present; their local transcript stores are empty, so no transcript evidence was available to this run.
+
+## Likely cause (inferred, not confirmed)
+The 8 Oct stop was an unpaid Cursor invoice (INC-004). The 10 Oct backlog triage (B6) still asks Gem whether that invoice is paid, and nothing on disk says it was. A swarm-wide silence from Saturday afternoon fits a billing stop better than one bot failing, but this run can't see routine run status for other bots.
+
+## Notified
+- P1 (Checks) Scorer, priority message, 13 Oct.
+- P1 (Work) Explorer (04dcca0d), priority message, 13 Oct.
+- Gem, via Mender's chat, 13 Oct.
+
+## Status
+Open. Closes when a weekday chain runs again (Scorer file plus Scrutineer review) and Explorer's digest resumes, or Gem gives a cause.

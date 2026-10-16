@@ -1,0 +1,1109 @@
+{
+  "version": "v1, 2 Oct 2026",
+  "maintainer": "Role Cartographer (d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4)",
+  "codex_version_basis": "v001 for all 13 bots (/workspace/governance/codex/index.md)",
+  "role_groups": {
+    "human": "Gem, the user",
+    "lead": "top-level overseer",
+    "governance": "the five governance bots",
+    "identity": "learning and representing Gem's preferences",
+    "build": "engineering/build work",
+    "general (unassigned)": "no role defined in codex; not grouped by name"
+  },
+  "nodes": [
+    {
+      "id": "gem",
+      "name": "Gem Quota",
+      "key": "GEM",
+      "role_group": "human",
+      "instruction_status": "n/a (the user)",
+      "codex": null
+    },
+    {
+      "id": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "name": "Genesis Gang God",
+      "key": "GGG",
+      "role_group": "lead",
+      "instruction_status": "partial: no Rules or Limits",
+      "codex": "/workspace/governance/codex/genesis-gang-god/v001.md"
+    },
+    {
+      "id": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "name": "Codex Keeper",
+      "key": "CK",
+      "role_group": "governance",
+      "instruction_status": "complete",
+      "codex": "/workspace/governance/codex/codex-keeper/v001.md"
+    },
+    {
+      "id": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "name": "Instruction Architect",
+      "key": "IA",
+      "role_group": "governance",
+      "instruction_status": "complete",
+      "codex": "/workspace/governance/codex/instruction-architect/v001.md"
+    },
+    {
+      "id": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "name": "Role Cartographer",
+      "key": "RC",
+      "role_group": "governance",
+      "instruction_status": "complete",
+      "codex": "/workspace/governance/codex/role-cartographer/v001.md"
+    },
+    {
+      "id": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "name": "Assessor",
+      "key": "AS",
+      "role_group": "governance",
+      "instruction_status": "complete",
+      "codex": "/workspace/governance/codex/assessor/v001.md"
+    },
+    {
+      "id": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "name": "Auditor",
+      "key": "AU",
+      "role_group": "governance",
+      "instruction_status": "complete (no separate Scope)",
+      "codex": "/workspace/governance/codex/auditor/v001.md"
+    },
+    {
+      "id": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "name": "Clone",
+      "key": "CL",
+      "role_group": "identity",
+      "instruction_status": "complete",
+      "codex": "/workspace/governance/codex/clone/v001.md"
+    },
+    {
+      "id": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "name": "Identity Inquirer",
+      "key": "IQ",
+      "role_group": "identity",
+      "instruction_status": "complete",
+      "codex": "/workspace/governance/codex/identity-inquirer/v001.md"
+    },
+    {
+      "id": "94516ca6-6355-43c5-b387-d2b605057784",
+      "name": "Identity Inferer",
+      "key": "IF",
+      "role_group": "identity",
+      "instruction_status": "complete (no separate Scope)",
+      "codex": "/workspace/governance/codex/identity-inferer/v001.md"
+    },
+    {
+      "id": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "name": "Swarm Builder",
+      "key": "SB",
+      "role_group": "build",
+      "instruction_status": "partial: no Relationships",
+      "codex": "/workspace/governance/codex/swarm-builder/v001.md"
+    },
+    {
+      "id": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "name": "Grok Bot",
+      "key": "GB",
+      "role_group": "general (unassigned)",
+      "instruction_status": "gap: one-line tagline only",
+      "codex": "/workspace/governance/codex/grok-bot/v001.md"
+    },
+    {
+      "id": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "name": "Codey",
+      "key": "CO",
+      "role_group": "general (unassigned)",
+      "instruction_status": "gap: no instructions",
+      "codex": "/workspace/governance/codex/codey/v001.md"
+    },
+    {
+      "id": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "name": "Scraper",
+      "key": "SC",
+      "role_group": "general (unassigned)",
+      "instruction_status": "gap: no instructions",
+      "codex": "/workspace/governance/codex/scraper/v001.md"
+    }
+  ],
+  "edges": [
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Instruction Architect",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "proposes instructions to",
+      "source": [
+        "/workspace/governance/codex/instruction-architect/v001.md",
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "flow": "governance-approval"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "approves for (sends approved proposals to record)",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md",
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "flow": "governance-approval"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "returns rejected proposals to (with reasons)",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md",
+        "/workspace/governance/codex/instruction-architect/v001.md"
+      ],
+      "flow": "governance-approval"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "escalates to (Architect disagreement; any governance-bot change)",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md",
+        "/workspace/governance/codex/instruction-architect/v001.md"
+      ],
+      "flow": "governance-approval"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "records direct edits from (Gem may edit directly)",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "note": "direction: Gem's edits flow to Keeper; drawn Keeper-side for layout"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "gives instruction text on request to",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ]
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "gives instruction text on request to",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ]
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "gives instruction text on request to",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ]
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "gives instruction text on request to",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ]
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "sends daily scores to",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md",
+        "/workspace/governance/codex/auditor/v001.md"
+      ]
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "flags serious problems and sends weekly scorecard to",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ]
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "sends performance reviews and urgent redesign requests to",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md",
+        "/workspace/governance/codex/instruction-architect/v001.md"
+      ]
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "sends performance reviews to",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ]
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "tells of a bot failing 3 reviews in a row",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ]
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "checks bots against instructions from",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ]
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "checks bots against role map and summaries of",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ]
+    },
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Instruction Architect",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "reviews (Auditor's own work)",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "note": "Conflicts with Architect's 'don't check bots' work yourself' (instruction-architect/v001.md)"
+    },
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Instruction Architect",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "asks preferences of",
+      "source": [
+        "/workspace/governance/codex/instruction-architect/v001.md"
+      ]
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "asks preferences of",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ]
+    },
+    {
+      "from": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "from_name": "Identity Inquirer",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "sends raw answers to",
+      "source": [
+        "/workspace/governance/codex/identity-inquirer/v001.md",
+        "/workspace/governance/codex/identity-inferer/v001.md"
+      ]
+    },
+    {
+      "from": "94516ca6-6355-43c5-b387-d2b605057784",
+      "from_name": "Identity Inferer",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "asks for follow-ups, confirmations and conflict checks from",
+      "source": [
+        "/workspace/governance/codex/identity-inferer/v001.md",
+        "/workspace/governance/codex/identity-inquirer/v001.md"
+      ]
+    },
+    {
+      "from": "94516ca6-6355-43c5-b387-d2b605057784",
+      "from_name": "Identity Inferer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "sends profile updates to",
+      "source": [
+        "/workspace/governance/codex/identity-inferer/v001.md",
+        "/workspace/governance/codex/clone/v001.md"
+      ]
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Clone",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "logs unanswerable gaps with",
+      "source": [
+        "/workspace/governance/codex/clone/v001.md",
+        "/workspace/governance/codex/identity-inferer/v001.md"
+      ]
+    },
+    {
+      "from": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "from_name": "Identity Inquirer",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "asks question series of",
+      "source": [
+        "/workspace/governance/codex/identity-inquirer/v001.md"
+      ]
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Clone",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "hands consequential decisions back to",
+      "source": [
+        "/workspace/governance/codex/clone/v001.md"
+      ]
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "ranks second only to",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ]
+    },
+    {
+      "from": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "from_name": "Swarm Builder",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "needs spend/large-job approval from; reports costs to",
+      "source": [
+        "/workspace/governance/codex/swarm-builder/v001.md"
+      ]
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "fanout": "all bots"
+    }
+  ]
+}

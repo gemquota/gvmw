@@ -1,0 +1,1783 @@
+{
+ "baseMs": 141.27,
+ "costs": [
+  {
+   "law": "BOND",
+   "index": 39,
+   "costMs": 58.67
+  },
+  {
+   "law": "CAPACITANCE",
+   "index": 57,
+   "costMs": 28.98
+  },
+  {
+   "law": "SUPERCONDUCTIVITY",
+   "index": 65,
+   "costMs": 11.67
+  },
+  {
+   "law": "COMPRESSION",
+   "index": 99,
+   "costMs": 10
+  },
+  {
+   "law": "CRYSTALLIZATION",
+   "index": 24,
+   "costMs": 9.22
+  },
+  {
+   "law": "LEARN",
+   "index": 70,
+   "costMs": 7.39
+  },
+  {
+   "law": "MAGNETISM",
+   "index": 59,
+   "costMs": 7.38
+  },
+  {
+   "law": "MELT",
+   "index": 42,
+   "costMs": 7.13
+  },
+  {
+   "law": "AUTOCATALYSIS",
+   "index": 97,
+   "costMs": 7.12
+  },
+  {
+   "law": "COLL",
+   "index": 4,
+   "costMs": 6.68
+  },
+  {
+   "law": "REPRO",
+   "index": 10,
+   "costMs": 6.22
+  },
+  {
+   "law": "TRACK",
+   "index": 11,
+   "costMs": 6.07
+  },
+  {
+   "law": "CONTACT",
+   "index": 128,
+   "costMs": 6.03
+  },
+  {
+   "law": "CONSCIOUSNESS",
+   "index": 104,
+   "costMs": 5.98
+  },
+  {
+   "law": "SENESCENCE",
+   "index": 12,
+   "costMs": 5.92
+  },
+  {
+   "law": "GLOW",
+   "index": 8,
+   "costMs": 5.54
+  },
+  {
+   "law": "DISCHARGE",
+   "index": 63,
+   "costMs": 5.09
+  },
+  {
+   "law": "CHARGE_LAW",
+   "index": 53,
+   "costMs": 4.63
+  },
+  {
+   "law": "PRECOGNITION",
+   "index": 49,
+   "costMs": 4.52
+  },
+  {
+   "law": "CULTURE",
+   "index": 78,
+   "costMs": 4.4
+  },
+  {
+   "law": "FERMIONIC",
+   "index": 122,
+   "costMs": 4.21
+  },
+  {
+   "law": "FLUX",
+   "index": 61,
+   "costMs": 4.07
+  },
+  {
+   "law": "NEUTRALIZATION",
+   "index": 95,
+   "costMs": 3.88
+  },
+  {
+   "law": "MOMENTUM",
+   "index": 129,
+   "costMs": 3.77
+  },
+  {
+   "law": "SIGNAL_BOOST",
+   "index": 69,
+   "costMs": 3.49
+  },
+  {
+   "law": "HIBERNATION",
+   "index": 90,
+   "costMs": 3.18
+  },
+  {
+   "law": "PROTOCOL",
+   "index": 75,
+   "costMs": 2.98
+  },
+  {
+   "law": "TELEPATHY",
+   "index": 47,
+   "costMs": 2.95
+  },
+  {
+   "law": "PREDICT",
+   "index": 73,
+   "costMs": 2.87
+  },
+  {
+   "law": "TOPOLOGY",
+   "index": 134,
+   "costMs": 2.79
+  },
+  {
+   "law": "DECOHERENCE",
+   "index": 114,
+   "costMs": 2.67
+  },
+  {
+   "law": "ADHESION",
+   "index": 135,
+   "costMs": 2.59
+  },
+  {
+   "law": "GENOTYPE",
+   "index": 15,
+   "costMs": 2.38
+  },
+  {
+   "law": "ENTANGLEMENT",
+   "index": 80,
+   "costMs": 1.54
+  },
+  {
+   "law": "STOICHIOMETRY",
+   "index": 96,
+   "costMs": 1.48
+  },
+  {
+   "law": "CONDENSE",
+   "index": 44,
+   "costMs": 1.23
+  },
+  {
+   "law": "FRAGMENTATION",
+   "index": 133,
+   "costMs": 1.17
+  },
+  {
+   "law": "SYNCHRONICITY",
+   "index": 106,
+   "costMs": 1.13
+  },
+  {
+   "law": "ASTRAL",
+   "index": 50,
+   "costMs": 1.09
+  },
+  {
+   "law": "CLAIRVOYANCE",
+   "index": 48,
+   "costMs": 0.98
+  },
+  {
+   "law": "PARASITE",
+   "index": 89,
+   "costMs": 0.88
+  },
+  {
+   "law": "ORDER",
+   "index": 33,
+   "costMs": 0.75
+  },
+  {
+   "law": "BOSONIC",
+   "index": 121,
+   "costMs": 0.44
+  },
+  {
+   "law": "PLANETARY",
+   "index": 6,
+   "costMs": 0.37
+  },
+  {
+   "law": "IMMUNITY",
+   "index": 91,
+   "costMs": 0.35
+  },
+  {
+   "law": "RESONANCE",
+   "index": 60,
+   "costMs": 0.24
+  },
+  {
+   "law": "REDUCTION",
+   "index": 40,
+   "costMs": -0.19
+  },
+  {
+   "law": "ENERGY",
+   "index": 13,
+   "costMs": -0.59
+  },
+  {
+   "law": "INDUCTANCE",
+   "index": 58,
+   "costMs": -0.62
+  },
+  {
+   "law": "OXIDATION",
+   "index": 20,
+   "costMs": -0.65
+  },
+  {
+   "law": "WAVE_PARTICLE",
+   "index": 115,
+   "costMs": -0.65
+  },
+  {
+   "law": "ELECTROLYSIS",
+   "index": 92,
+   "costMs": -0.66
+  },
+  {
+   "law": "ACCR",
+   "index": 5,
+   "costMs": -0.94
+  },
+  {
+   "law": "COHERENCE",
+   "index": 120,
+   "costMs": -1.15
+  },
+  {
+   "law": "LIFE",
+   "index": 7,
+   "costMs": -1.16
+  },
+  {
+   "law": "DEPOSIT",
+   "index": 45,
+   "costMs": -1.25
+  },
+  {
+   "law": "CONVECTION",
+   "index": 27,
+   "costMs": -1.54
+  },
+  {
+   "law": "WRAP",
+   "index": 130,
+   "costMs": -1.6
+  },
+  {
+   "law": "HEAT",
+   "index": 25,
+   "costMs": -1.89
+  },
+  {
+   "law": "SYMBIOSIS",
+   "index": 88,
+   "costMs": -1.94
+  },
+  {
+   "law": "RADIATION_PRESSURE",
+   "index": 85,
+   "costMs": -1.99
+  },
+  {
+   "law": "NAVIGATION",
+   "index": 110,
+   "costMs": -2.22
+  },
+  {
+   "law": "PHASE_RADIATION",
+   "index": 28,
+   "costMs": -2.46
+  },
+  {
+   "law": "SPECTRAL",
+   "index": 124,
+   "costMs": -2.65
+  },
+  {
+   "law": "PHOTOLYSIS",
+   "index": 93,
+   "costMs": -2.74
+  },
+  {
+   "law": "CHAOS",
+   "index": 32,
+   "costMs": -2.91
+  },
+  {
+   "law": "RUNAWAY",
+   "index": 103,
+   "costMs": -2.92
+  },
+  {
+   "law": "POLYMER",
+   "index": 21,
+   "costMs": -3.01
+  },
+  {
+   "law": "SOUL_LAW",
+   "index": 36,
+   "costMs": -3.25
+  },
+  {
+   "law": "ANTENNA",
+   "index": 107,
+   "costMs": -4.03
+  },
+  {
+   "law": "BUOYANCY",
+   "index": 3,
+   "costMs": -4.06
+  },
+  {
+   "law": "FEEDBACK",
+   "index": 76,
+   "costMs": -4.12
+  },
+  {
+   "law": "HORIZON",
+   "index": 84,
+   "costMs": -4.46
+  },
+  {
+   "law": "PREDATION",
+   "index": 51,
+   "costMs": -4.56
+  },
+  {
+   "law": "TELEPORT",
+   "index": 117,
+   "costMs": -4.62
+  },
+  {
+   "law": "ELECTRIC_FIELD",
+   "index": 54,
+   "costMs": -4.68
+  },
+  {
+   "law": "SOLVATION",
+   "index": 18,
+   "costMs": -4.81
+  },
+  {
+   "law": "DRAG",
+   "index": 1,
+   "costMs": -4.94
+  },
+  {
+   "law": "EQUILIBRIUM",
+   "index": 101,
+   "costMs": -5.14
+  },
+  {
+   "law": "TUNNELING",
+   "index": 113,
+   "costMs": -5.45
+  },
+  {
+   "law": "BOIL",
+   "index": 43,
+   "costMs": -5.64
+  },
+  {
+   "law": "CONSTRAINT",
+   "index": 132,
+   "costMs": -5.82
+  },
+  {
+   "law": "AFFINITY",
+   "index": 9,
+   "costMs": -5.85
+  },
+  {
+   "law": "RESISTANCE",
+   "index": 56,
+   "costMs": -6.54
+  },
+  {
+   "law": "LATENT_HEAT",
+   "index": 102,
+   "costMs": -6.87
+  },
+  {
+   "law": "CODE",
+   "index": 74,
+   "costMs": -7.06
+  },
+  {
+   "law": "PERCEPTION",
+   "index": 105,
+   "costMs": -7.36
+  },
+  {
+   "law": "PHENOTYPE",
+   "index": 16,
+   "costMs": -7.62
+  },
+  {
+   "law": "GRAV",
+   "index": 0,
+   "costMs": -7.79
+  },
+  {
+   "law": "MIND",
+   "index": 37,
+   "costMs": -7.81
+  },
+  {
+   "law": "FIELD",
+   "index": 87,
+   "costMs": -7.86
+  },
+  {
+   "law": "METRIC",
+   "index": 72,
+   "costMs": -7.93
+  },
+  {
+   "law": "SYMBOL",
+   "index": 71,
+   "costMs": -7.95
+  },
+  {
+   "law": "PLASMA",
+   "index": 64,
+   "costMs": -8.14
+  },
+  {
+   "law": "CURRENT",
+   "index": 55,
+   "costMs": -8.23
+  },
+  {
+   "law": "PATTERN",
+   "index": 67,
+   "costMs": -8.39
+  },
+  {
+   "law": "TIME_DILATION",
+   "index": 30,
+   "costMs": -8.57
+  },
+  {
+   "law": "STIGMERGY",
+   "index": 68,
+   "costMs": -9.13
+  },
+  {
+   "law": "SUPERPOSITION",
+   "index": 112,
+   "costMs": -9.13
+  },
+  {
+   "law": "ANTIMATTER",
+   "index": 127,
+   "costMs": -9.31
+  },
+  {
+   "law": "CHIRALITY",
+   "index": 23,
+   "costMs": -9.34
+  },
+  {
+   "law": "OBSERVER",
+   "index": 118,
+   "costMs": -9.35
+  },
+  {
+   "law": "POLARIZATION",
+   "index": 109,
+   "costMs": -10
+  },
+  {
+   "law": "RADIATION",
+   "index": 14,
+   "costMs": -10.57
+  },
+  {
+   "law": "FRICTION",
+   "index": 83,
+   "costMs": -10.75
+  },
+  {
+   "law": "TORQUE",
+   "index": 131,
+   "costMs": -10.77
+  },
+  {
+   "law": "ENCRYPTION",
+   "index": 111,
+   "costMs": -11.34
+  },
+  {
+   "law": "IONIZATION",
+   "index": 62,
+   "costMs": -11.38
+  },
+  {
+   "law": "COMMS",
+   "index": 52,
+   "costMs": -11.68
+  },
+  {
+   "law": "SPIN",
+   "index": 123,
+   "costMs": -11.95
+  },
+  {
+   "law": "PLANCK",
+   "index": 119,
+   "costMs": -12.25
+  },
+  {
+   "law": "DIMENSIONALITY",
+   "index": 31,
+   "costMs": -12.27
+  },
+  {
+   "law": "COLD",
+   "index": 26,
+   "costMs": -12.31
+  },
+  {
+   "law": "ADIABATIC",
+   "index": 98,
+   "costMs": -12.75
+  },
+  {
+   "law": "HYPERPLANE",
+   "index": 126,
+   "costMs": -12.84
+  },
+  {
+   "law": "ISOMERIZATION",
+   "index": 22,
+   "costMs": -12.95
+  },
+  {
+   "law": "MASS_INERTIA",
+   "index": 86,
+   "costMs": -12.99
+  },
+  {
+   "law": "SHIELDING",
+   "index": 108,
+   "costMs": -13.02
+  },
+  {
+   "law": "VOID",
+   "index": 38,
+   "costMs": -13.05
+  },
+  {
+   "law": "TIDE",
+   "index": 82,
+   "costMs": -13.05
+  },
+  {
+   "law": "UNCERTAINTY",
+   "index": 116,
+   "costMs": -13.44
+  },
+  {
+   "law": "PRECIPITATION",
+   "index": 94,
+   "costMs": -13.72
+  },
+  {
+   "law": "ALLOY",
+   "index": 41,
+   "costMs": -14.41
+  },
+  {
+   "law": "LANGUAGE",
+   "index": 77,
+   "costMs": -14.91
+  },
+  {
+   "law": "EXPANSION",
+   "index": 100,
+   "costMs": -15.41
+  },
+  {
+   "law": "SINGULARITY",
+   "index": 79,
+   "costMs": -16.61
+  },
+  {
+   "law": "MEMORY",
+   "index": 66,
+   "costMs": -16.65
+  },
+  {
+   "law": "SUBLIMATION",
+   "index": 29,
+   "costMs": -17.57
+  },
+  {
+   "law": "ACIDITY",
+   "index": 19,
+   "costMs": -18.49
+  },
+  {
+   "law": "ENTR",
+   "index": 2,
+   "costMs": -19.05
+  },
+  {
+   "law": "HISTORY",
+   "index": 81,
+   "costMs": -20.11
+  },
+  {
+   "law": "WAVEFUNCTION",
+   "index": 125,
+   "costMs": -20.65
+  },
+  {
+   "law": "WILL",
+   "index": 35,
+   "costMs": -20.86
+  },
+  {
+   "law": "CATALYSIS_LAW",
+   "index": 17,
+   "costMs": -22.25
+  },
+  {
+   "law": "EXOTHERMIC",
+   "index": 46,
+   "costMs": -22.29
+  },
+  {
+   "law": "FATE",
+   "index": 34,
+   "costMs": -25.54
+  }
+ ],
+ "rows": [
+  {
+   "drop": "none",
+   "medMs": 138.56567300000006
+  },
+  {
+   "drop": "GRAV",
+   "medMs": 138.44479200000023
+  },
+  {
+   "drop": "DRAG",
+   "medMs": 146.21283400000004
+  },
+  {
+   "drop": "ENTR",
+   "medMs": 160.3234070000001
+  },
+  {
+   "drop": "BUOYANCY",
+   "medMs": 145.32706300000018
+  },
+  {
+   "drop": "COLL",
+   "medMs": 133.78624100000002
+  },
+  {
+   "drop": "ACCR",
+   "medMs": 140.9798450000003
+  },
+  {
+   "drop": "PLANETARY",
+   "medMs": 140.90160500000002
+  },
+  {
+   "drop": "LIFE",
+   "medMs": 134.16740600000003
+  },
+  {
+   "drop": "GLOW",
+   "medMs": 135.73258699999997
+  },
+  {
+   "drop": "AFFINITY",
+   "medMs": 141.80532100000005
+  },
+  {
+   "drop": "REPRO",
+   "medMs": 130.64123900000004
+  },
+  {
+   "drop": "TRACK",
+   "medMs": 134.2474870000001
+  },
+  {
+   "drop": "SENESCENCE",
+   "medMs": 135.35605399999986
+  },
+  {
+   "drop": "ENERGY",
+   "medMs": 141.8639149999999
+  },
+  {
+   "drop": "RADIATION",
+   "medMs": 143.86318500000004
+  },
+  {
+   "drop": "GENOTYPE",
+   "medMs": 138.89681599999994
+  },
+  {
+   "drop": "PHENOTYPE",
+   "medMs": 148.89461900000015
+  },
+  {
+   "drop": "CATALYSIS_LAW",
+   "medMs": 163.51949100000002
+  },
+  {
+   "drop": "SOLVATION",
+   "medMs": 146.07889400000022
+  },
+  {
+   "drop": "ACIDITY",
+   "medMs": 159.7596010000002
+  },
+  {
+   "drop": "OXIDATION",
+   "medMs": 140.49568399999998
+  },
+  {
+   "drop": "POLYMER",
+   "medMs": 144.2846770000001
+  },
+  {
+   "drop": "ISOMERIZATION",
+   "medMs": 154.22360600000002
+  },
+  {
+   "drop": "CHIRALITY",
+   "medMs": 150.61315999999988
+  },
+  {
+   "drop": "CRYSTALLIZATION",
+   "medMs": 132.05403100000012
+  },
+  {
+   "drop": "HEAT",
+   "medMs": 130.77659999999992
+  },
+  {
+   "drop": "COLD",
+   "medMs": 151.74819100000002
+  },
+  {
+   "drop": "CONVECTION",
+   "medMs": 141.68733900000007
+  },
+  {
+   "drop": "PHASE_RADIATION",
+   "medMs": 143.73187000000007
+  },
+  {
+   "drop": "SUBLIMATION",
+   "medMs": 158.84503900000027
+  },
+  {
+   "drop": "TIME_DILATION",
+   "medMs": 146.02618600000005
+  },
+  {
+   "drop": "DIMENSIONALITY",
+   "medMs": 150.96242100000018
+  },
+  {
+   "drop": "CHAOS",
+   "medMs": 144.17786999999998
+  },
+  {
+   "drop": "ORDER",
+   "medMs": 134.2533830000002
+  },
+  {
+   "drop": "FATE",
+   "medMs": 149.06229200000007
+  },
+  {
+   "drop": "WILL",
+   "medMs": 154.70814999999993
+  },
+  {
+   "drop": "SOUL_LAW",
+   "medMs": 144.52148400000033
+  },
+  {
+   "drop": "MIND",
+   "medMs": 149.08354899999995
+  },
+  {
+   "drop": "VOID",
+   "medMs": 154.32266400000003
+  },
+  {
+   "drop": "BOND",
+   "medMs": 82.59879099999989
+  },
+  {
+   "drop": "REDUCTION",
+   "medMs": 140.4685059999997
+  },
+  {
+   "drop": "ALLOY",
+   "medMs": 155.67725199999995
+  },
+  {
+   "drop": "MELT",
+   "medMs": 129.48979700000018
+  },
+  {
+   "drop": "BOIL",
+   "medMs": 146.9132040000004
+  },
+  {
+   "drop": "CONDENSE",
+   "medMs": 140.04433700000027
+  },
+  {
+   "drop": "DEPOSIT",
+   "medMs": 142.5193330000002
+  },
+  {
+   "drop": "EXOTHERMIC",
+   "medMs": 163.56374899999992
+  },
+  {
+   "drop": "TELEPATHY",
+   "medMs": 135.86931600000025
+  },
+  {
+   "drop": "CLAIRVOYANCE",
+   "medMs": 135.23010699999986
+  },
+  {
+   "drop": "PRECOGNITION",
+   "medMs": 136.216907
+  },
+  {
+   "drop": "ASTRAL",
+   "medMs": 140.17891899999995
+  },
+  {
+   "drop": "PREDATION",
+   "medMs": 145.83157699999992
+  },
+  {
+   "drop": "COMMS",
+   "medMs": 152.95211599999993
+  },
+  {
+   "drop": "CHARGE_LAW",
+   "medMs": 136.00644499999999
+  },
+  {
+   "drop": "ELECTRIC_FIELD",
+   "medMs": 145.9564049999999
+  },
+  {
+   "drop": "CURRENT",
+   "medMs": 147.589289
+  },
+  {
+   "drop": "RESISTANCE",
+   "medMs": 135.16027200000008
+  },
+  {
+   "drop": "CAPACITANCE",
+   "medMs": 112.29370399999993
+  },
+  {
+   "drop": "INDUCTANCE",
+   "medMs": 141.8883490000003
+  },
+  {
+   "drop": "MAGNETISM",
+   "medMs": 130.932233
+  },
+  {
+   "drop": "RESONANCE",
+   "medMs": 140.89419499999985
+  },
+  {
+   "drop": "FLUX",
+   "medMs": 134.64223000000038
+  },
+  {
+   "drop": "IONIZATION",
+   "medMs": 149.88976600000024
+  },
+  {
+   "drop": "DISCHARGE",
+   "medMs": 136.17721200000005
+  },
+  {
+   "drop": "PLASMA",
+   "medMs": 149.41658100000006
+  },
+  {
+   "drop": "SUPERCONDUCTIVITY",
+   "medMs": 129.60630600000002
+  },
+  {
+   "drop": "MEMORY",
+   "medMs": 151.364775
+  },
+  {
+   "drop": "PATTERN",
+   "medMs": 134.85853599999973
+  },
+  {
+   "drop": "STIGMERGY",
+   "medMs": 145.8658230000001
+  },
+  {
+   "drop": "SIGNAL_BOOST",
+   "medMs": 137.78381200000013
+  },
+  {
+   "drop": "LEARN",
+   "medMs": 133.88103899999987
+  },
+  {
+   "drop": "SYMBOL",
+   "medMs": 137.23878999999988
+  },
+  {
+   "drop": "METRIC",
+   "medMs": 144.26762499999995
+  },
+  {
+   "drop": "PREDICT",
+   "medMs": 138.40374500000007
+  },
+  {
+   "drop": "CODE",
+   "medMs": 143.65022500000032
+  },
+  {
+   "drop": "PROTOCOL",
+   "medMs": 138.28749100000005
+  },
+  {
+   "drop": "FEEDBACK",
+   "medMs": 137.08401400000002
+  },
+  {
+   "drop": "LANGUAGE",
+   "medMs": 149.23753099999976
+  },
+  {
+   "drop": "CULTURE",
+   "medMs": 125.62742800000024
+  },
+  {
+   "drop": "SINGULARITY",
+   "medMs": 144.23885599999994
+  },
+  {
+   "drop": "ENTANGLEMENT",
+   "medMs": 137.43005600000015
+  },
+  {
+   "drop": "HISTORY",
+   "medMs": 148.0024980000003
+  },
+  {
+   "drop": "TIDE",
+   "medMs": 147.5665120000001
+  },
+  {
+   "drop": "FRICTION",
+   "medMs": 147.6750790000001
+  },
+  {
+   "drop": "HORIZON",
+   "medMs": 130.356542
+  },
+  {
+   "drop": "RADIATION_PRESSURE",
+   "medMs": 138.358694
+  },
+  {
+   "drop": "MASS_INERTIA",
+   "medMs": 151.06509000000005
+  },
+  {
+   "drop": "FIELD",
+   "medMs": 140.78857900000003
+  },
+  {
+   "drop": "SYMBIOSIS",
+   "medMs": 137.48827800000004
+  },
+  {
+   "drop": "PARASITE",
+   "medMs": 140.388375
+  },
+  {
+   "drop": "HIBERNATION",
+   "medMs": 138.08896400000003
+  },
+  {
+   "drop": "IMMUNITY",
+   "medMs": 140.92490399999997
+  },
+  {
+   "drop": "ELECTROLYSIS",
+   "medMs": 141.01273100000026
+  },
+  {
+   "drop": "PHOTOLYSIS",
+   "medMs": 144.0136359999999
+  },
+  {
+   "drop": "PRECIPITATION",
+   "medMs": 147.22919100000001
+  },
+  {
+   "drop": "NEUTRALIZATION",
+   "medMs": 137.39642099999992
+  },
+  {
+   "drop": "STOICHIOMETRY",
+   "medMs": 139.57195599999977
+  },
+  {
+   "drop": "AUTOCATALYSIS",
+   "medMs": 134.14846599999998
+  },
+  {
+   "drop": "ADIABATIC",
+   "medMs": 140.92315099999996
+  },
+  {
+   "drop": "COMPRESSION",
+   "medMs": 122.61835400000018
+  },
+  {
+   "drop": "EXPANSION",
+   "medMs": 156.67911800000002
+  },
+  {
+   "drop": "EQUILIBRIUM",
+   "medMs": 146.413364
+  },
+  {
+   "drop": "LATENT_HEAT",
+   "medMs": 148.144178
+  },
+  {
+   "drop": "RUNAWAY",
+   "medMs": 144.18990200000007
+  },
+  {
+   "drop": "CONSCIOUSNESS",
+   "medMs": 135.2870539999999
+  },
+  {
+   "drop": "PERCEPTION",
+   "medMs": 147.81373699999995
+  },
+  {
+   "drop": "SYNCHRONICITY",
+   "medMs": 140.13763400000016
+  },
+  {
+   "drop": "ANTENNA",
+   "medMs": 138.56648799999994
+  },
+  {
+   "drop": "SHIELDING",
+   "medMs": 146.74164100000007
+  },
+  {
+   "drop": "POLARIZATION",
+   "medMs": 144.17939300000035
+  },
+  {
+   "drop": "NAVIGATION",
+   "medMs": 142.86698100000012
+  },
+  {
+   "drop": "ENCRYPTION",
+   "medMs": 141.4612729999999
+  },
+  {
+   "drop": "SUPERPOSITION",
+   "medMs": 150.40424900000016
+  },
+  {
+   "drop": "TUNNELING",
+   "medMs": 141.69000700000015
+  },
+  {
+   "drop": "DECOHERENCE",
+   "medMs": 136.04822400000012
+  },
+  {
+   "drop": "WAVE_PARTICLE",
+   "medMs": 133.86460699999998
+  },
+  {
+   "drop": "UNCERTAINTY",
+   "medMs": 149.18739499999992
+  },
+  {
+   "drop": "TELEPORT",
+   "medMs": 145.89197000000013
+  },
+  {
+   "drop": "OBSERVER",
+   "medMs": 147.112482
+  },
+  {
+   "drop": "PLANCK",
+   "medMs": 151.22751599999992
+  },
+  {
+   "drop": "COHERENCE",
+   "medMs": 142.42378400000007
+  },
+  {
+   "drop": "BOSONIC",
+   "medMs": 140.82981299999983
+  },
+  {
+   "drop": "FERMIONIC",
+   "medMs": 137.06626700000004
+  },
+  {
+   "drop": "SPIN",
+   "medMs": 150.89711099999977
+  },
+  {
+   "drop": "SPECTRAL",
+   "medMs": 135.93213500000002
+  },
+  {
+   "drop": "WAVEFUNCTION",
+   "medMs": 161.91851599999995
+  },
+  {
+   "drop": "HYPERPLANE",
+   "medMs": 147.29045999999994
+  },
+  {
+   "drop": "ANTIMATTER",
+   "medMs": 137.14923199999998
+  },
+  {
+   "drop": "CONTACT",
+   "medMs": 135.23740299999997
+  },
+  {
+   "drop": "MOMENTUM",
+   "medMs": 137.50660400000015
+  },
+  {
+   "drop": "WRAP",
+   "medMs": 142.252293
+  },
+  {
+   "drop": "TORQUE",
+   "medMs": 151.99627500000042
+  },
+  {
+   "drop": "CONSTRAINT",
+   "medMs": 147.09184600000026
+  },
+  {
+   "drop": "FRAGMENTATION",
+   "medMs": 129.4945869999999
+  },
+  {
+   "drop": "TOPOLOGY",
+   "medMs": 131.8770350000001
+  },
+  {
+   "drop": "ADHESION",
+   "medMs": 138.67757699999993
+  },
+  {
+   "drop": "none",
+   "medMs": 141.27187000000004
+  },
+  {
+   "drop": "GRAV",
+   "medMs": 149.06406900000002
+  },
+  {
+   "drop": "DRAG",
+   "medMs": 141.03416800000014
+  },
+  {
+   "drop": "ENTR",
+   "medMs": 158.2569699999999
+  },
+  {
+   "drop": "BUOYANCY",
+   "medMs": 143.40070200000036
+  },
+  {
+   "drop": "COLL",
+   "medMs": 134.59438
+  },
+  {
+   "drop": "ACCR",
+   "medMs": 142.21642599999996
+  },
+  {
+   "drop": "PLANETARY",
+   "medMs": 137.1976410000001
+  },
+  {
+   "drop": "LIFE",
+   "medMs": 142.426918
+  },
+  {
+   "drop": "GLOW",
+   "medMs": 132.036207
+  },
+  {
+   "drop": "AFFINITY",
+   "medMs": 147.12507499999992
+  },
+  {
+   "drop": "REPRO",
+   "medMs": 135.0488690000002
+  },
+  {
+   "drop": "TRACK",
+   "medMs": 135.2014549999999
+  },
+  {
+   "drop": "SENESCENCE",
+   "medMs": 134.7799460000001
+  },
+  {
+   "drop": "ENERGY",
+   "medMs": 141.15204900000026
+  },
+  {
+   "drop": "RADIATION",
+   "medMs": 151.8400160000001
+  },
+  {
+   "drop": "GENOTYPE",
+   "medMs": 136.00609399999985
+  },
+  {
+   "drop": "PHENOTYPE",
+   "medMs": 137.4506940000001
+  },
+  {
+   "drop": "CATALYSIS_LAW",
+   "medMs": 160.04149199999983
+  },
+  {
+   "drop": "SOLVATION",
+   "medMs": 139.23796300000004
+  },
+  {
+   "drop": "ACIDITY",
+   "medMs": 145.05314399999997
+  },
+  {
+   "drop": "OXIDATION",
+   "medMs": 141.9181520000002
+  },
+  {
+   "drop": "POLYMER",
+   "medMs": 142.95328700000027
+  },
+  {
+   "drop": "ISOMERIZATION",
+   "medMs": 147.46085300000004
+  },
+  {
+   "drop": "CHIRALITY",
+   "medMs": 145.90214500000002
+  },
+  {
+   "drop": "CRYSTALLIZATION",
+   "medMs": 129.20469600000024
+  },
+  {
+   "drop": "HEAT",
+   "medMs": 143.16678999999976
+  },
+  {
+   "drop": "COLD",
+   "medMs": 153.58652900000004
+  },
+  {
+   "drop": "CONVECTION",
+   "medMs": 142.8166699999997
+  },
+  {
+   "drop": "PHASE_RADIATION",
+   "medMs": 140.8333719999996
+  },
+  {
+   "drop": "SUBLIMATION",
+   "medMs": 152.57160799999997
+  },
+  {
+   "drop": "TIME_DILATION",
+   "medMs": 149.84542199999987
+  },
+  {
+   "drop": "DIMENSIONALITY",
+   "medMs": 153.54369499999984
+  },
+  {
+   "drop": "CHAOS",
+   "medMs": 143.02385800000002
+  },
+  {
+   "drop": "ORDER",
+   "medMs": 140.521028
+  },
+  {
+   "drop": "FATE",
+   "medMs": 166.80893400000002
+  },
+  {
+   "drop": "WILL",
+   "medMs": 162.12722000000008
+  },
+  {
+   "drop": "SOUL_LAW",
+   "medMs": 134.0808689999999
+  },
+  {
+   "drop": "MIND",
+   "medMs": 137.04267100000004
+  },
+  {
+   "drop": "VOID",
+   "medMs": 151.81536900000037
+  },
+  {
+   "drop": "BOND",
+   "medMs": 68.5953179999999
+  },
+  {
+   "drop": "REDUCTION",
+   "medMs": 141.46055899999965
+  },
+  {
+   "drop": "ALLOY",
+   "medMs": 152.8273449999997
+  },
+  {
+   "drop": "MELT",
+   "medMs": 134.146339
+  },
+  {
+   "drop": "BOIL",
+   "medMs": 142.01573999999982
+  },
+  {
+   "drop": "CONDENSE",
+   "medMs": 137.48967300000004
+  },
+  {
+   "drop": "DEPOSIT",
+   "medMs": 134.8018430000002
+  },
+  {
+   "drop": "EXOTHERMIC",
+   "medMs": 148.31551600000012
+  },
+  {
+   "drop": "TELEPATHY",
+   "medMs": 138.32256199999983
+  },
+  {
+   "drop": "CLAIRVOYANCE",
+   "medMs": 140.29207600000018
+  },
+  {
+   "drop": "PRECOGNITION",
+   "medMs": 136.75121200000012
+  },
+  {
+   "drop": "ASTRAL",
+   "medMs": 133.228797
+  },
+  {
+   "drop": "PREDATION",
+   "medMs": 138.90221999999994
+  },
+  {
+   "drop": "COMMS",
+   "medMs": 151.7214509999999
+  },
+  {
+   "drop": "CHARGE_LAW",
+   "medMs": 136.6374639999999
+  },
+  {
+   "drop": "ELECTRIC_FIELD",
+   "medMs": 143.27811500000007
+  },
+  {
+   "drop": "CURRENT",
+   "medMs": 149.50245799999993
+  },
+  {
+   "drop": "RESISTANCE",
+   "medMs": 147.81614600000012
+  },
+  {
+   "drop": "CAPACITANCE",
+   "medMs": 111.01451900000006
+  },
+  {
+   "drop": "INDUCTANCE",
+   "medMs": 138.30833500000017
+  },
+  {
+   "drop": "MAGNETISM",
+   "medMs": 133.89670999999998
+  },
+  {
+   "drop": "RESONANCE",
+   "medMs": 141.03009500000007
+  },
+  {
+   "drop": "FLUX",
+   "medMs": 137.2029050000001
+  },
+  {
+   "drop": "IONIZATION",
+   "medMs": 152.648643
+  },
+  {
+   "drop": "DISCHARGE",
+   "medMs": 135.69973000000027
+  },
+  {
+   "drop": "PLASMA",
+   "medMs": 146.20418500000005
+  },
+  {
+   "drop": "SUPERCONDUCTIVITY",
+   "medMs": 118.12359800000002
+  },
+  {
+   "drop": "MEMORY",
+   "medMs": 157.92342099999996
+  },
+  {
+   "drop": "PATTERN",
+   "medMs": 149.66617599999995
+  },
+  {
+   "drop": "STIGMERGY",
+   "medMs": 150.39934499999993
+  },
+  {
+   "drop": "SIGNAL_BOOST",
+   "medMs": 136.032107
+  },
+  {
+   "drop": "LEARN",
+   "medMs": 133.61368200000015
+  },
+  {
+   "drop": "SYMBOL",
+   "medMs": 149.224788
+  },
+  {
+   "drop": "METRIC",
+   "medMs": 149.19866100000036
+  },
+  {
+   "drop": "PREDICT",
+   "medMs": 135.97574299999997
+  },
+  {
+   "drop": "CODE",
+   "medMs": 148.33680700000014
+  },
+  {
+   "drop": "PROTOCOL",
+   "medMs": 138.08182799999986
+  },
+  {
+   "drop": "FEEDBACK",
+   "medMs": 145.39272699999992
+  },
+  {
+   "drop": "LANGUAGE",
+   "medMs": 156.18465100000003
+  },
+  {
+   "drop": "CULTURE",
+   "medMs": 136.86783699999978
+  },
+  {
+   "drop": "SINGULARITY",
+   "medMs": 157.88447299999962
+  },
+  {
+   "drop": "ENTANGLEMENT",
+   "medMs": 139.73312299999998
+  },
+  {
+   "drop": "HISTORY",
+   "medMs": 161.37825900000007
+  },
+  {
+   "drop": "TIDE",
+   "medMs": 154.31742899999972
+  },
+  {
+   "drop": "FRICTION",
+   "medMs": 152.01993400000003
+  },
+  {
+   "drop": "HORIZON",
+   "medMs": 145.73033000000032
+  },
+  {
+   "drop": "RADIATION_PRESSURE",
+   "medMs": 143.25939700000026
+  },
+  {
+   "drop": "MASS_INERTIA",
+   "medMs": 154.26435100000003
+  },
+  {
+   "drop": "FIELD",
+   "medMs": 149.13488500000005
+  },
+  {
+   "drop": "SYMBIOSIS",
+   "medMs": 143.2168059999999
+  },
+  {
+   "drop": "PARASITE",
+   "medMs": 138.87812499999973
+  },
+  {
+   "drop": "HIBERNATION",
+   "medMs": 135.453215
+  },
+  {
+   "drop": "IMMUNITY",
+   "medMs": 133.3583779999999
+  },
+  {
+   "drop": "ELECTROLYSIS",
+   "medMs": 141.9335460000002
+  },
+  {
+   "drop": "PHOTOLYSIS",
+   "medMs": 143.8255119999999
+  },
+  {
+   "drop": "PRECIPITATION",
+   "medMs": 154.9883060000002
+  },
+  {
+   "drop": "NEUTRALIZATION",
+   "medMs": 133.31342200000006
+  },
+  {
+   "drop": "STOICHIOMETRY",
+   "medMs": 139.79650500000002
+  },
+  {
+   "drop": "AUTOCATALYSIS",
+   "medMs": 134.1124920000002
+  },
+  {
+   "drop": "ADIABATIC",
+   "medMs": 154.0254500000001
+  },
+  {
+   "drop": "COMPRESSION",
+   "medMs": 131.27247999999997
+  },
+  {
+   "drop": "EXPANSION",
+   "medMs": 152.293862
+  },
+  {
+   "drop": "EQUILIBRIUM",
+   "medMs": 144.20807300000024
+  },
+  {
+   "drop": "LATENT_HEAT",
+   "medMs": 144.61605400000008
+  },
+  {
+   "drop": "RUNAWAY",
+   "medMs": 142.24623100000008
+  },
+  {
+   "drop": "CONSCIOUSNESS",
+   "medMs": 134.0825789999999
+  },
+  {
+   "drop": "PERCEPTION",
+   "medMs": 148.6311770000001
+  },
+  {
+   "drop": "SYNCHRONICITY",
+   "medMs": 137.80236999999988
+  },
+  {
+   "drop": "ANTENNA",
+   "medMs": 145.30614800000012
+  },
+  {
+   "drop": "SHIELDING",
+   "medMs": 154.2956509999999
+  },
+  {
+   "drop": "POLARIZATION",
+   "medMs": 151.27037199999995
+  },
+  {
+   "drop": "NAVIGATION",
+   "medMs": 143.48795699999994
+  },
+  {
+   "drop": "ENCRYPTION",
+   "medMs": 152.61111200000005
+  },
+  {
+   "drop": "SUPERPOSITION",
+   "medMs": 145.5436010000003
+  },
+  {
+   "drop": "TUNNELING",
+   "medMs": 146.71715799999993
+  },
+  {
+   "drop": "DECOHERENCE",
+   "medMs": 138.6024870000001
+  },
+  {
+   "drop": "WAVE_PARTICLE",
+   "medMs": 141.92386299999998
+  },
+  {
+   "drop": "UNCERTAINTY",
+   "medMs": 154.70936800000004
+  },
+  {
+   "drop": "TELEPORT",
+   "medMs": 144.37450499999977
+  },
+  {
+   "drop": "OBSERVER",
+   "medMs": 150.61719700000003
+  },
+  {
+   "drop": "PLANCK",
+   "medMs": 153.5169719999999
+  },
+  {
+   "drop": "COHERENCE",
+   "medMs": 141.33785399999988
+  },
+  {
+   "drop": "BOSONIC",
+   "medMs": 138.48305900000014
+  },
+  {
+   "drop": "FERMIONIC",
+   "medMs": 133.17688099999998
+  },
+  {
+   "drop": "SPIN",
+   "medMs": 153.22454500000015
+  },
+  {
+   "drop": "SPECTRAL",
+   "medMs": 143.9242589999999
+  },
+  {
+   "drop": "WAVEFUNCTION",
+   "medMs": 154.3443870000001
+  },
+  {
+   "drop": "HYPERPLANE",
+   "medMs": 154.1101749999998
+  },
+  {
+   "drop": "ANTIMATTER",
+   "medMs": 150.58156099999997
+  },
+  {
+   "drop": "CONTACT",
+   "medMs": 132.7835070000001
+  },
+  {
+   "drop": "MOMENTUM",
+   "medMs": 130.65217200000006
+  },
+  {
+   "drop": "WRAP",
+   "medMs": 142.871486
+  },
+  {
+   "drop": "TORQUE",
+   "medMs": 152.04287900000008
+  },
+  {
+   "drop": "CONSTRAINT",
+   "medMs": 142.29981300000009
+  },
+  {
+   "drop": "FRAGMENTATION",
+   "medMs": 140.1033739999998
+  },
+  {
+   "drop": "TOPOLOGY",
+   "medMs": 138.48597699999982
+  },
+  {
+   "drop": "ADHESION",
+   "medMs": 131.8138630000003
+  }
+ ]
+}

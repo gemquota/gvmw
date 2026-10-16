@@ -1,0 +1,43 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://angelisconsulting.com,1,1,0,0,merchant,parse_failed,200,,71532,,,,,0.1,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://animationfixation.net,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='animationfixation.net', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of proto",page:https://audplay.tech/partnership/
+https://80gigs.com,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='80gigs.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1082)')",page:https://audplay.tech/partnership/
+https://askmeclassifieds.com,1,0,0,0,homepage,http_403,403,,,,,,,0.3,HTTPError: 403 Client Error: Forbidden for url: https://askmeclassifieds.com/,page:https://audplay.tech/partnership/
+https://blogbright.net,1,1,0,0,merchant,parse_failed,200,,74167,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://bridgedesign.space,1,1,0,0,merchant,parse_failed,200,,13474,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://downarchive.org,1,1,0,0,merchant,parse_failed,200,,35236,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://earthwiki.space,1,1,0,0,merchant,parse_failed,200,,13423,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://egamersbox.com,1,1,0,0,merchant,parse_failed,200,,1460,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://federatedjournals.com,1,1,0,0,merchant,parse_failed,200,,67887,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://gamingwiki.space,1,1,0,0,merchant,parse_failed,200,,13440,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://gmpg.org,1,1,0,0,merchant,parse_failed,200,,1698,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,page:https://toponlinepokiesaus.com/partnership/
+https://bondibeachbet.net,0,0,0,0,reachable,connection,,,,,,,,1.5,"InvalidSchema: No connection adapters were found for ""about:blank';\\n                window.location.pathname = \\""",page:https://igaustralia.live/
+https://hubstack.net,1,1,0,0,merchant,parse_failed,200,,68288,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://kitchenanswershub.com,1,1,0,0,merchant,parse_failed,200,,48692,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://gamemania55.com,1,1,0,0,merchant,parse_failed,200,,424648,,,,,1.4,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://lestor.org,1,1,0,0,merchant,parse_failed,200,,11,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://literaturewiki.site,1,1,0,0,merchant,parse_failed,200,,13498,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://mdwrite.net,1,1,0,0,merchant,parse_failed,200,,66565,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://fastspin11.net,1,1,1,1,,,200,,751629,50376,FastSpin11,https://fastspin11.net/api/v1/index.php,Invalid Action!,2.1,,page:https://igaustralia.live/
+https://moonland.com,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='moonland.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1082)')))",page:https://audplay.tech/partnership/
+https://philosophywiki.space,1,1,0,0,merchant,parse_failed,200,,13508,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://hello88au1.com,1,1,1,1,,,200,,1027164,10702,Hello88AU,https://hello88au1.com/api/v1/index.php,Invalid Action!,2.3,,page:https://igaustralia.live/
+https://luckymate88.club,0,0,0,0,reachable,connection,,,,,,,,1.6,"InvalidSchema: No connection adapters were found for ""about:blank';\\n                window.location.pathname = \\""",page:https://igaustralia.live/
+https://pikidi.com,1,1,0,0,merchant,parse_failed,200,,180242,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://nhadat24.org,1,1,0,0,merchant,parse_failed,200,,140089,,,,,1.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://oiaedu.com,1,1,0,0,merchant,parse_failed,200,,128874,,,,,1.7,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://ryu-ga-index.com,1,1,0,0,merchant,parse_failed,200,,10765,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://rubyaud.online,1,1,1,1,,,200,,703973,50051,RUBY,https://rubyaud.online/api/v1/index.php,Invalid Action!,1.8,,page:https://igaustralia.live/
+https://tgadsspy.com,1,1,0,0,merchant,parse_failed,200,,350115,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.,page:https://tgadsspy.com/channels/freeauspokies2u/advertisers
+https://speed365b.vip,1,1,1,1,,,200,,750126,50515,SPEED365,https://speed365b.vip/api/v1/index.php,Invalid Action!,1.9,,page:https://igaustralia.live/
+https://spinup77.live,1,1,1,1,,,200,,726913,50078,SPINUP77,https://spinup77.live/api/v1/index.php,Invalid Action!,1.9,,page:https://igaustralia.live/
+https://thoughtlanes.net,1,1,0,0,merchant,parse_failed,200,,56667,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://pokiesclub.space,1,1,1,1,,,200,,812323,50336,POKIESCLUB,https://pokiesclub.space/api/v1/index.php,Invalid Action!,3.2,,page:https://igaustralia.live/
+https://wptavern.com,1,0,0,0,homepage,http_403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://wptavern.com/,page:https://audplay.tech/partnership/
+https://yoast.com,1,1,0,0,merchant,parse_failed,200,,223772,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,page:https://pokiesaus.online/
+https://youralareno.com,1,1,0,0,merchant,parse_failed,200,,113358,,,,,0.1,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://windows-11.net,1,1,0,0,merchant,parse_failed,200,,50869,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://space77.me,1,1,1,1,,,200,,715478,50373,SPACE77,https://space77.me/api/v1/index.php,Invalid Action!,3.7,,page:https://igaustralia.live/
+https://tikosatis.com,1,1,0,0,merchant,parse_failed,200,,77734,,,,,2.3,ValueError: Could not find merchant identification details in HTML or JS.,page:https://audplay.tech/partnership/
+https://trackaud.vip,1,1,0,0,merchant,parse_failed,200,,50902,,,,,2.3,ValueError: Could not find merchant identification details in HTML or JS.,page:https://igaustralia.live/
+https://bestonlinepokies.com,0,0,0,0,reachable,timeout,,,,,,,,15.1,"ReadTimeout: HTTPSConnectionPool(host='bestonlinepokies.com', port=443): Read timed out. (read timeout=15)",page:https://pokiesaus.online/

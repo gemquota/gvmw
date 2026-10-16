@@ -1,0 +1,21 @@
+{
+ "counts": {
+  "EXCLUDED": 453,
+  "AU": 540,
+  "UNKNOWN": 622
+ },
+ "au_basis": {
+  "field": 540
+ },
+ "excluded_by_country": {
+  "MY": 378,
+  "PG": 30,
+  "SG": 29,
+  "BN": 1,
+  "KH": 1,
+  "HK": 10,
+  "NP": 4
+ },
+ "unknown_with_members_check_au_id": 8,
+ "built": "2026-10-10 13:10 AEST"
+}

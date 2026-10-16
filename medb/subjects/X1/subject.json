@@ -1,0 +1,6 @@
+{
+  "scenario": "emergency_heavy",
+  "seed": 1006,
+  "config_overrides": {},
+  "components": "subject_components.py"
+}

@@ -1,0 +1,42 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { exportProvenance, headerLines } from './export-header.mjs';
+
+// Define the list of documentation/specification files to concatenate
+const docFiles = [
+    'README.md',
+    'src/physics/lawgroups/SPEC.md',
+    // Add any other documentation paths here
+];
+
+const outputFile = 'exports/vepa-docs-concat.md';
+
+console.log('Generating documentation summary...');
+
+let combinedContent = `# VEPA4 Documentation Summary\n\n${headerLines(exportProvenance('npm run concat (exports/generate-docs-concat.mjs)'))}\n\n`;
+
+let foundCount = 0;
+for (const file of docFiles) {
+    if (fs.existsSync(file)) {
+        console.log(`Including: ${file}`);
+        // Rebase relative Markdown links from the source file's folder to exports/.
+        const dir = path.posix.dirname(file);
+        const content = fs.readFileSync(file, 'utf8').replace(/\]\(([^)\s]+)\)/g, (m, href) => {
+            if (/^(?:[a-z]+:|#|\/)/i.test(href)) return m;
+            return `](${path.posix.relative('exports', path.posix.join(dir, href))})`;
+        });
+        combinedContent += `\n\n---\n\n## File: ${file}\n\n${content}`;
+        foundCount++;
+    } else {
+        console.warn(`Skipping missing documentation file: ${file}`);
+    }
+}
+
+// Ensure exports directory exists
+const outDir = path.dirname(outputFile);
+if (!fs.existsSync(outDir)) {
+    fs.mkdirSync(outDir, { recursive: true });
+}
+
+fs.writeFileSync(outputFile, combinedContent, 'utf8');
+console.log(`Documentation bundle successfully written to ${outputFile} (${foundCount} files included).`);

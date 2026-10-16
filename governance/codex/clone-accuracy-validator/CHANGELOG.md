@@ -1,0 +1,19 @@
+# Clone Accuracy Validator: changelog
+
+Bot id: d3191aa8-3ad6-4763-b4e4-c7c648acc9ba
+
+| Version | Date | Author | Approved by | Reason | File |
+|---|---|---|---|---|---|
+| 1 | 2026-10-03 (AEST, UTC+10) | Gem, via the main assistant (Genesis Gang God) | Gem (via the main assistant) | Created after the bot landscape review | v001.md |
+| 2 | 2026-10-03 (AEST, UTC+10) | Instruction Architect | Role Cartographer (/workspace/governance/approvals/2026-10-03-batch1-review.md) | Fill the empty Rules section, define what counts as ground truth (after the unverified "Set 5" incident), and separate its role from the Assessor and the Identity Inferer. Review: Approve, none material. | v002.md |
+| (rename, no version change) | 2026-10-03 (AEST, UTC+10) | Gem | Gem | Renamed: Clone Accuracy Validator → (ID) Interrogator. Id and instruction text unchanged; see ../RENAMES.md | (no new file) |
+| (rename, no version change) | 2026-10-04 (AEST, UTC+10) | Gem | Gem | Renamed: (ID) Interrogator → P4 (ID) Interrogator (phase prefix). Id and instruction text unchanged; see ../RENAMES.md | (no new file) |
+| (live-profile check, no version change) | 2026-10-04 (AEST, UTC+10) | Codex Keeper (sync at Gem's request) | n/a | Live profile description still matches v001.md byte for byte; approved v002.md has NOT been applied to the profile. Codex current version stays v002 (approved); the bot is running v001. | (no new file) |
+| 3 | 2026-10-04 (AEST, UTC+10) | (Roles) Architect (id 51af1200-ca1a-45ff-8350-848091e00f96) | Gem, confirmed directly in Archivist's chat 4 Oct 2026 5:45–5:46pm AEST | Reconciled: adds 'only the Investigator promotes a detail'; names repointed; phase P4→P3. | v003.md |
+| (deployment status, no version change) | 2026-10-04 (AEST, UTC+10) | Archivist | n/a | PENDING-DEPLOY v003.md: approved, not yet deployed. Deployment to the live profile is Gem's action. | (no new file) |
+| (deployment status, no version change) | 2026-10-04 (AEST, UTC+10) | Archivist | Gem, directly in Archivist's chat 7:37pm AEST | DEPLOYED v003.md to the live profile at ~7:58–8:00pm AEST by Archivist (UpdateAgent) at Gem's direct request; byte-checked against the recorded text (sha256 f4f11b16d4b7…). Independent check requested from Scrutineer (Scorer for Scrutineer's own profile). | (no new file) |
+| 4 | 2026-10-09 (AEST, UTC+10) | Explorer (applied at Gem's 9:14am request in Explorer's chat, words "Yes, apply the four merges") | Gem, directly in Archivist's chat 9 Oct 2026 9:16am AEST ("Yes, I approved the four merges. Record all 8 changes.") | Four merges 9 Oct: Interrogator retired into Investigator (testing how accurately Imitator represents Gem). | v004.md |
+| (deployment status, no version change) | 2026-10-09 (AEST, UTC+10) | Archivist | n/a | LIVE v004.md: Explorer applied to the live profile at 09:14:51 AEST 9 Oct 2026 (profile.json mtime) at Gem's 9:14am request in Explorer's chat; Gem confirmed in Archivist's chat 9:16am. Archivist recorded after the fact; did not apply the profile edit. | (no new file) |
+| RETIRED | 2026-10-09 (AEST, UTC+10) | Explorer; confirmed by Archivist | Gem, directly in Archivist's chat 9 Oct 2026 9:16am AEST ("Yes, I approved the four merges. Record all 8 changes.") | Retired in the four merges; awaiting deletion by Gem. Folder and versions kept as history. | v004.md |
+| (rename, no version change) | 2026-10-09 (AEST, UTC+10) | Explorer (Gem's 9:14am request) | Gem, directly in Archivist's chat 9 Oct 2026 9:16am AEST ("Yes, I approved the four merges. Record all 8 changes.") | Renamed to RETIRED Interrogator; id unchanged. | (no new file) |
+| (status, no version change) | 2026-10-09 (AEST, UTC+10) | Archivist | n/a (fact notice) | DELETED from live (agent folder gone, noticed 9 Oct 2026 ~9:29am AEST); who removed it not recorded. | (no new file) |

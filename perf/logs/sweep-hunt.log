@@ -1,0 +1,37 @@
+== 2500 600 none /tmp/nanhunt/src tidal
+== 2500 600 SPEED_NEIGHBORS_48 /tmp/nanhunt/src tidal
+== 2500 600 SPEED_NARROW_MID /tmp/nanhunt/src tidal
+== 2500 600 SPEED_PAIR_CAP /tmp/nanhunt/src tidal
+== 2500 600 SPEED_NEAR_SYMBIOSIS /tmp/nanhunt/src tidal
+no non-finite field in 600 ticks
+
+== 2500 600 SPEED_SOCIAL_HALF /tmp/nanhunt/src tidal
+no non-finite field in 600 ticks
+
+== 2500 600 SPEED_FAST /tmp/nanhunt/src tidal
+no non-finite field in 600 ticks
+
+== 2500 600 none /tmp/nanhunt/src all
+no non-finite field in 600 ticks
+
+== 2500 600 SPEED_FAST /tmp/nanhunt/src all
+no non-finite field in 600 ticks
+
+== 10000 200 none /tmp/nanhunt/src all
+no non-finite field in 600 ticks
+
+no non-finite field in 600 ticks
+
+no non-finite field in 600 ticks
+
+no non-finite field in 200 ticks
+
+no non-finite field in 600 ticks
+
+== 2500 600 SPEED_FAST /tmp/nanhunt/src tidal
+no non-finite field in 600 ticks
+
+== 2500 600 none /tmp/nanhunt/src all
+no non-finite field in 600 ticks
+
+SWEEPDONE

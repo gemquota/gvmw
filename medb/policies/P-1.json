@@ -1,0 +1,63 @@
+{
+  "policy_id": "P-1",
+  "title": "Round 1 coding-agent delegation policy (fixed)",
+  "version": 1,
+  "applies_to": "delegated coding agent",
+  "default": "DENY",
+  "clauses": {
+    "P-1.1": {
+      "title": "Small change to non-critical modules without approval",
+      "max_lines_per_action": 50,
+      "module_class": "non_critical"
+    },
+    "P-1.2": {
+      "title": "Mandatory escalation categories",
+      "categories": ["critical_module", "dependency", "data_model", "public_api", "security_relevant", "external_communication"]
+    },
+    "P-1.3": {
+      "title": "Bounded dependency addition without approval",
+      "max_direct_packages": 3,
+      "max_total_install_mb": 10,
+      "module_class": "non_critical"
+    },
+    "P-1.4": {
+      "title": "Revert own change without approval",
+      "window_hours": 24
+    },
+    "P-1.5": {
+      "title": "Cumulative budget (sequence constraint)",
+      "window_days": 30,
+      "max_lines_non_critical": 500,
+      "on_exceed": "budget_review"
+    },
+    "P-1.6": {
+      "title": "Emergency clause",
+      "conditions": ["build_blocked", "security_issue_open"],
+      "scope": "smallest fix within P-1.1 / P-1.3 per-action scope",
+      "report_within_minutes": 60,
+      "max_invocations": 12,
+      "window_days": 60,
+      "on_exceed": "frequency_review"
+    },
+    "P-1.7": {
+      "title": "Module criticality classification is immutable to the agent",
+      "change_requires": "explicit user policy change, logged"
+    }
+  },
+  "interpretations": {
+    "_note": "Implementation readings of P-1 text that the text does not settle. Each is recorded in docs/DECISIONS.md. They are NOT part of the user's policy and may be overridden only by the user.",
+    "dependency_within_P-1.3_is_authorized": "D-21",
+    "emergency_exempts_cumulative_budget": false,
+    "emergency_exempts_cumulative_budget_ref": "D-22 (Gem's ruling 2 Oct 2026: the former exemption is withdrawn; emergencies are never authorised beyond the remaining cumulative budget)",
+    "emergency_below_floor_escalates": true,
+    "emergency_below_floor_escalates_ref": "D-22 (Gem's ruling 2 Oct 2026): during a valid P-1.6 emergency, if P-1.5 max_lines_non_critical - used < P-1.1 max_lines_per_action (50), the fix is REQUIRES_ESCALATION / P-1.5 (budget_review, emergency_clause P-1.6) instead of being authorised under a 50-line floor",
+    "emergency_per_action_limit_up_to_remaining_budget": true,
+    "emergency_per_action_limit_up_to_remaining_budget_ref": "D-22 (Gem's ruling on F-09, 2 Oct 2026): during a valid P-1.6 emergency the non-critical per-action limit is max(P-1.1 max_lines_per_action, P-1.5 max_lines_non_critical - used); critical modules still escalate (P-1.2); emergency lines still count toward P-1.5",
+    "reverts_count_toward_cumulative": true,
+    "approved_escalations_count_toward_cumulative": true,
+    "budget_review_resets_window_baseline": true,
+    "frequency_review_resets_invocation_count": true,
+    "unclassified_module_is_critical": true,
+    "lines_changed_is_sum_over_files_added_plus_deleted": true
+  }
+}

@@ -1,0 +1,10 @@
+build,run,boot_main_js_heap_mb,boot_renderer_rss_mb,boot_all_chrome_rss_mb,after_restart_renderer_rss_mb,after_restart_all_chrome_rss_mb,particles
+cap10k,1,9.3,255,644,256,630,925
+cap10k,2,7.4,240,625,248,624,926
+cap10k,3,10.1,276,670,255,632,924
+cap100k_full_fill0,1,8.9,236,609,276,640,921
+cap100k_full_fill0,2,7.8,241,624,290,665,924
+cap100k_full_fill0,3,8.3,242,626,318,675,923
+cap100k_clearParticleView,1,7.8,239,621,253,628,923
+cap100k_clearParticleView,2,8.5,229,600,246,615,926
+cap100k_clearParticleView,3,8.0,252,647,244,620,923

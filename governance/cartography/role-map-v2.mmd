@@ -1,0 +1,98 @@
+%% Role map v2, 3 Oct 2026 - OVERVIEW (structure). Role Cartographer. Source: role-graph.json
+%% (codex v001 for all 21 bots + directory.md). Working relationships are in role-map-detail.mmd.
+%% Thick = governance approval flow; solid = Council seats; dotted = stand-in. ★ = group lead.
+flowchart TB
+  GEM(("Gem Quota<br/>(human)"))
+  LEG["<b>Legend</b><br/>★ group lead · ⚠ gap<br/>thick = approval flow<br/>dotted = stand-in<br/>dashed red box = no real instructions<br/>Detail: role-map-detail-*.png"]
+  COUNCIL{{"Council<br/><i>one lead per group;<br/>cross-group issues</i>"}}
+
+  subgraph SG_OVS["Super-group: OVERSIGHT"]
+    direction LR
+    subgraph G_IG["Instruction Governance"]
+      direction TB
+      RC["★ Role Cartographer<br/><i>approves, maps</i>"]
+      IA["Instruction Architect<br/><i>designs instructions</i>"]
+      CK["Codex Keeper<br/><i>records instructions</i>"]
+      GCD["Governance Continuity Deputy<br/><i>backup when stalled</i>"]
+    end
+    subgraph G_AS["Assurance"]
+      direction TB
+      AU["★ Auditor<br/><i>daily reviews</i>"]
+      AS["Assessor<br/><i>daily scores</i>"]
+      CRO["Compliance & Risk Officer<br/><i>risky actions</i>"]
+      SCC["Secrets & Credentials Custodian<br/><i>secrets rules</i>"]
+    end
+  end
+
+  subgraph SG_IDN["Super-group: IDENTITY"]
+    subgraph G_ID["Identity"]
+      direction TB
+      IF["★ Identity Inferer<br/><i>builds profile</i>"]
+      IQ["Identity Inquirer<br/><i>asks Gem</i>"]
+      CL["Clone<br/><i>identity understudy</i>"]
+      CAV["Clone Accuracy Validator<br/><i>checks Clone</i>"]
+    end
+  end
+
+  subgraph SG_RUN["Super-group: RUNTIME"]
+    direction LR
+    subgraph G_OPS["Operations"]
+      direction TB
+      OC["★ Orchestration Conductor<br/><i>run order</i>"]
+      CBS["Cost & Budget Sentinel<br/><i>spend ledger</i>"]
+      CS["Connector Steward<br/><i>connector health</i>"]
+      CC["Comms Concierge<br/><i>daily digest to Gem</i>"]
+    end
+    subgraph G_DEL["Delivery"]
+      direction TB
+      GGG["★ Genesis Gang God<br/><i>main assistant; coordinator<br/>in every group</i><br/>⚠ no Rules / Limits"]
+      SB["Swarm Builder<br/>⚠ no relationships"]
+      GB["Grok Bot<br/>⚠ tagline only · draft proposed"]
+      CO["Codey<br/>⚠ empty · draft proposed"]
+      SC["Scraper<br/>⚠ empty · draft proposed"]
+    end
+  end
+
+  %% Layout hints only (~~~ is invisible): stack each group's members vertically.
+  AU ~~~ AS ~~~ CRO ~~~ SCC
+  IF ~~~ IQ ~~~ CL ~~~ CAV
+  OC ~~~ CBS ~~~ CS ~~~ CC
+  GGG ~~~ SB ~~~ GB ~~~ CO ~~~ SC
+  CK ~~~ GCD
+
+  %% Council seats (directory.md)
+  COUNCIL ---|lead| RC
+  COUNCIL ---|lead| AU
+  COUNCIL ---|lead| IF
+  COUNCIL ---|lead| OC
+  COUNCIL ---|lead| GGG
+  GEM ~~~ COUNCIL
+  GEM ~~~ LEG
+
+  %% Governance approval flow (codex v001)
+  IA ==>|proposes| RC
+  RC ==>|approves for recording| CK
+  GEM <==>|"approves governance-bot changes; hears escalations"| RC
+  GCD -. "stands in if stalled ⚠ Keeper won't accept yet" .-> RC
+
+
+  classDef legend fill:#fafafa,stroke:#999,color:#333,font-size:12px
+  classDef human fill:#fff3c4,stroke:#b38f00,color:#000
+  classDef council fill:#fde2e2,stroke:#9b2c2c,color:#000,stroke-width:2px
+  classDef lead stroke-width:3px,color:#000
+  classDef gov fill:#dceeff,stroke:#2b6cb0,color:#000
+  classDef asr fill:#e3e8ff,stroke:#434190,color:#000
+  classDef idn fill:#dcf5e3,stroke:#2f855a,color:#000
+  classDef ops fill:#fff0d9,stroke:#b7791f,color:#000
+  classDef del fill:#ffe6d5,stroke:#c05621,color:#000
+  classDef gap fill:#f2f2f2,stroke:#c53030,stroke-dasharray:5 3,color:#000
+  class GEM human
+  class LEG legend
+  class COUNCIL council
+  class RC,IA,CK,GCD gov
+  class AU,AS,CRO,SCC asr
+  class IF,IQ,CL,CAV idn
+  class OC,CBS,CS,CC ops
+  class GGG,SB del
+  class GB,CO,SC gap
+  class RC,AU,IF,OC,GGG lead

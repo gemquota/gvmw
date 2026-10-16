@@ -1,0 +1,29 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v13 (16 Oct 2026 ~11:52am; P5 live) detail A — governance / checks / ops
+flowchart TB
+  GEM(("Gem"))
+  ARX["Architect v004"] --> GEM
+  GEM ==>|chat or voice call R-018| ARC["Archivist v008 · owns directory.md"]
+  ASM["RETIRED Assembler"] -.-> ARC
+  SCO["Scorer v004"] --> SCR["Scrutineer v004"]
+  SCR --> ARX
+  SCR --> MEN["Mender"]
+  SCR --> ARB["Arbiter"]
+  ARB --> ARX
+  SFG["Safeguard v006 · owns connector limits<br/>all public/shared repo pushes first (R-020)"] --> GEM
+  IMI["Imitator v006 · LIVE since 11:30pm"] ==>|approvals, 1:1 check; deploy after Safeguard dry run| ARC
+  ARX ==>|proposes, not Imitator/Investigator| IMI
+  IMI -.->|spending · drastic/irreversible · Imitator + checkers Gem-only · not widening own role R-028| GEM
+  BOTS["Any bot pushing to a public/shared repo"] -->|first| SFG
+  SFK["Safekeeper v005"] --> SFG
+  MAR["RETIRED Marshal"] -.-> MEN
+  MEN --> GEM
+  MED["Mediator v006"] --> GEM
+  SCO -.->|checks Imitator, R-027| IMI
+  SCR -.->|checks Imitator, R-027| IMI
+  SFK -.->|checks Imitator, R-027| IMI
+  SFG -.->|checks Imitator, R-027| IMI
+  MED -->|urgent cost alerts| GEM
+  MED ==>|new integrations: Gem accepts, J4| GEM
+  ALL["Every bot and helper"] -->|connector limits, RR-028| SFG
+  ARC -->|deploy plan for dry run, case b| SFG

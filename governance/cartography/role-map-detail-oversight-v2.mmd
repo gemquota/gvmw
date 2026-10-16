@@ -1,0 +1,79 @@
+%% Role map v2, 3 Oct 2026 - DETAIL A: Oversight and Operations working relationships (codex v001).
+%% Solid = current (codex v001). Dashed red = PROPOSED, not in codex. Duties over every bot are listed in a note node, not drawn.
+%%{init: {"flowchart": {"wrappingWidth": 700}}}%%
+flowchart TB
+  GEM(("Gem Quota"))
+  ALL["<b>Duties over every bot</b> (not drawn as lines)<br/>Codex Keeper records · Assessor scores · Auditor audits<br/>Role Cartographer maps and assigns · Compliance & Risk Officer reviews risky actions, may ask to pause<br/>Secrets Custodian audits secrets access · Conductor sets run order<br/>Cost Sentinel tracks spend, may ask to pause · Comms Concierge collects updates<br/>Genesis Gang God oversees (aspirational)"]
+  CLx["Clone<br/><i>(Identity group)</i>"]
+
+  subgraph SG_OVS["Super-group: OVERSIGHT"]
+    subgraph G_IG["Instruction Governance"]
+      IA["Instruction Architect"]
+      RC["★ Role Cartographer"]
+      CK["Codex Keeper"]
+      GCD["Governance Continuity Deputy"]
+    end
+    subgraph G_AS["Assurance"]
+      AS["Assessor"]
+      AU["★ Auditor"]
+      CRO["Compliance & Risk Officer"]
+      SCC["Secrets & Credentials Custodian"]
+    end
+  end
+  subgraph SG_RUN["Super-group: RUNTIME"]
+    subgraph G_OPS["Operations"]
+      OC["★ Orchestration Conductor"]
+      CBS["Cost & Budget Sentinel"]
+      CS["Connector Steward"]
+      CC["Comms Concierge"]
+    end
+  end
+
+  %% Approval flow
+  IA ==>|1 proposes| RC
+  RC ==>|2 approves to record| CK
+  RC -->|rejects with reasons| IA
+  RC -->|escalations; governance-bot changes| GEM
+  GCD -->|stands in when stalled ⚠ not a valid approver for Keeper yet| RC
+  GCD -->|weekly spot-check of approvals| RC
+  GCD -->|stands in when stalled| IA
+
+  %% Daily chain, sequenced by the Conductor
+  OC -->|run 1st| AS
+  AS -->|daily scores| AU
+  OC -->|run 2nd| AU
+  AU -->|reviews; urgent redesign| IA
+  OC -->|run 3rd| IA
+  AU -->|reviews| RC
+  IA -->|reviews Auditor today ⚠| AU
+  GEM -. "PROPOSED Auditor v002: Gem reviews Auditor" .-> AU
+
+  %% Risk, secrets, cost
+  CRO -->|proposes rule changes via| IA
+  SCC -->|exposed secrets| CRO
+  SCC -->|watches codex access| CK
+  CBS -->|cost data| AS
+  CBS -->|cost data| AU
+
+  %% Comms
+  CS -->|reconnect needed| CC
+  CC -->|daily digest| GEM
+  AS -->|serious problems; weekly scorecard| GEM
+  CRO -->|alerts| GEM
+  CBS -->|draft budget alerts| GEM
+
+  %% Preferences
+  IA -->|asks preferences| CLx
+  AS -->|asks preferences| CLx
+
+  linkStyle 14 stroke:#c53030,stroke-dasharray:6 4,color:#c53030
+  classDef human fill:#fff3c4,stroke:#b38f00,color:#000
+  classDef gov fill:#dceeff,stroke:#2b6cb0,color:#000
+  classDef asr fill:#e3e8ff,stroke:#434190,color:#000
+  classDef ops fill:#fff0d9,stroke:#b7791f,color:#000
+  classDef ext fill:#ffffff,stroke:#2f855a,stroke-dasharray:3 3,color:#000
+  class GEM human
+  class IA,RC,CK,GCD gov
+  class AS,AU,CRO,SCC asr
+  class OC,CBS,CS,CC ops
+  class CLx,ALL ext

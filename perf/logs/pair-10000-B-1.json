@@ -1,0 +1,52 @@
+{
+ "pop": 10000,
+ "mode": "single",
+ "worker": {
+  "n": 22,
+  "workerTickMs": 644.1,
+  "particles": 10000,
+  "intervalMs": 656.2
+ },
+ "simTicksPerSec": 1.6,
+ "hudParticles": "Population indicator",
+ "fps": 3,
+ "frameMs": {
+  "p50": 333.3,
+  "p95": 366.8,
+  "max": 383.4
+ },
+ "mainThreadBusyPct": 6.7,
+ "categoriesMsPerFrame": {
+  "idle": 322.43,
+  "other:main-DcIOwriJ.js": 12.13,
+  "program/native": 5.51,
+  "other:(native)": 2.9,
+  "GC": 2.01,
+  "other:zeroCopy-D2u-Vsey.js": 0.51
+ },
+ "topSelf": [
+  "93.3% (idle) :0",
+  "2.1% Dt main-DcIOwriJ.js:2",
+  "1.6% (program) :0",
+  "0.7% fill :0",
+  "0.6% (garbage collector) :0",
+  "0.4% KE main-DcIOwriJ.js:708",
+  "0.2% Et main-DcIOwriJ.js:2",
+  "0.1% aS main-DcIOwriJ.js:352",
+  "0.1% postMessage :0",
+  "0.1% tS main-DcIOwriJ.js:352",
+  "0.1% $x main-DcIOwriJ.js:352",
+  "0.1% ZE main-DcIOwriJ.js:708",
+  "0.1% arc :0",
+  "0.0% R zeroCopy-D2u-Vsey.js:1",
+  "0.0% St main-DcIOwriJ.js:2"
+ ],
+ "layoutCount": 22,
+ "recalcStyle": 43,
+ "jsHeapMB": 6.2,
+ "workers": 1,
+ "hud": [],
+ "logs": [
+  "Failed to load resource: the server responded with a status of 404 (File not found)"
+ ]
+}

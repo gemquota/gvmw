@@ -1,0 +1,770 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://2l.com,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/gofun33_channel
+https://2pp.me,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.4,HTTPError: 403 Client Error: Forbidden for url: https://t.ly/redirect?e=403s&cfmc=true&r_url=https://2pp.me/,telegram:t.me/s/aussiegamingcentreoffical
+https://1winbet.com,0,0,0,0,reachable,ssl,,,,,,,,0.5,"SSLError: HTTPSConnectionPool(host='1winbet.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable ",telegram:t.me/s/onewinbet369
+https://365cuci.co,0,0,0,0,reachable,connection,,,,,,,,2.0,"InvalidSchema: No connection adapters were found for ""about:blank';\\n            window.location.pathname = \\""",telegram:t.me/s/mohd88officialchannel
+https://77pokies.co,1,1,1,1,,,200,,738623,1182,77POKIES,https://77pokies.co/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/official77pokies
+https://7pokies.net,1,1,1,1,,,200,,795849,30172,7POKIES,https://7pokies.net/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/f1dreams
+https://711cuci.xyz,1,1,1,1,,,200,,1049603,10172,711Cuci,https://711cuci.xyz/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/mohd88officialchannel
+https://88group1.site,1,1,0,0,merchant,parse_failed,200,,43717,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/golden88au
+https://12cuci.life,1,1,1,1,,,200,,1085835,576,12Cuci,https://12cuci.life/api/v1/index.php,Invalid Action!,3.1,,telegram:t.me/s/mohd88officialchannel
+https://365huat.live,1,1,1,1,,,200,,1011696,10905,365Huat,https://365huat.live/api/v1/index.php,Invalid Action!,3.1,,telegram:t.me/s/mohd88officialchannel
+https://88cuci.club,0,0,0,0,reachable,connection,,,,,,,,1.7,"InvalidSchema: No connection adapters were found for ""about:blank';\\n            window.location.pathname = \\""",telegram:t.me/s/mohd88officialchannel
+https://88group2.site,1,1,0,0,merchant,parse_failed,200,,43717,,,,,1.6,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/redvortex88group
+https://88premiumvip.vip,0,0,0,0,reachable,dns,,,,,,,,0.8,"ConnectionError: HTTPSConnectionPool(host='88premiumvip.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(""HTTPSConnection(host='88premiumvip.net', port=443): Failed to resolve '88premiu",telegram:t.me/s/au88premiumvip
+https://88premium.vip,1,1,1,1,,,200,,830431,700,88PremiumVIP,https://88premium.vip/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/au88premiumvip
+https://88grouppartnership.net,1,1,0,0,merchant,parse_failed,200,,43717,,,,,2.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/au88premiumvip
+https://88premiumvip.co,1,1,1,1,,,200,,830431,700,88PremiumVIP,https://88premiumvip.co/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/au88premiumvip
+https://88pm.site,1,1,1,1,,,200,,830798,700,88PremiumVIP,https://88pm.site/api/v1/index.php,Invalid Action!,3.0,,telegram:t.me/s/au88premiumvip
+https://88pm.live,1,1,1,1,,,200,,830798,700,88PremiumVIP,https://88pm.live/api/v1/index.php,Invalid Action!,3.0,,telegram:t.me/s/au88premiumvip
+https://8jk.xyz,1,1,1,1,,,200,,1642690,60,JK8,https://8jk.xyz/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/jk8officialchannel
+https://96pro.co,1,1,1,1,,,200,,754401,60813,96Pro,https://96pro.co/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/officialnews96pro
+https://aceaudtv.com,1,1,0,0,merchant,parse_failed,200,,99121,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/aceaud88
+https://96pro.io,1,1,1,1,,,200,,754401,60813,96Pro,https://96pro.io/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/officialnews96pro
+https://ap8.biz,1,1,0,0,merchant,parse_failed,200,,19964,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/ap8_malaysia
+https://96pro.cc,1,1,1,1,,,200,,754401,60813,96Pro,https://96pro.cc/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/officialnews96pro
+https://acehighwin.site,1,1,1,1,,,200,,664519,30107,ACEHIGHWIN,https://acehighwin.site/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/acehighwin
+https://acewin33.club,1,1,1,1,,,200,,755936,50636,ACEWIN33,https://acewin33.club/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/acewin33au
+https://acewin33.store,1,1,1,1,,,200,,755936,50636,ACEWIN33,https://acewin33.store/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/acewin33au
+https://996luck.com,1,1,1,1,,,200,,960002,10088,99Luck AUS,https://996luck.com/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/auss99luck
+https://astar77.info,1,1,1,1,,,200,,796196,804,AS777 MY,https://astar77.info/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/asiastar777ewallet
+https://astar77.net,1,1,1,1,,,200,,796196,804,AS777 MY,https://astar77.net/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/asiastar777ewallet
+https://astar77.org,1,1,1,1,,,200,,796196,804,AS777 MY,https://astar77.org/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/asiastar777ewallet
+https://astar77.pro,1,1,1,1,,,200,,796196,804,AS777 MY,https://astar77.pro/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/asiastar777ewallet
+https://astar77.vip,1,1,1,1,,,200,,796196,804,AS777 MY,https://astar77.vip/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/asiastar777ewallet
+https://astar77bn.net,1,1,1,1,,,200,,772961,10347,AS777 BN,https://astar77bn.net/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/asiastar777bndewallet
+https://astar77bn.pro,1,1,1,1,,,200,,772961,10347,AS777 BN,https://astar77bn.pro/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/asiastar777bndewallet
+https://au711pokieshub.com,1,1,0,0,merchant,parse_failed,200,,348534,,,,,1.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/au123betchannel
+https://audking8.club,1,1,1,1,,,200,,777977,50527,AUDKING,https://audking8.club/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/audkingau
+https://audgo.bet,1,1,1,1,,,200,,832190,30129,AUDGO,https://audgo.bet/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/audgoauwallet
+https://audgaming.org,1,1,1,1,,,200,,799207,276,AUDGAMING,https://audgaming.org/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/audgamingwin
+https://audgo.org,1,1,1,1,,,200,,832190,30129,AUDGO,https://audgo.org/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/audgoauwallet
+https://audplay.space,1,1,1,1,,,200,,837688,773,AUDPLAY168,https://audplay.space/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/audplay168
+https://audply1.com,1,1,1,1,,,200,,837688,773,AUDPLAY168,https://audply1.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/audplay168
+https://audqueen.net,1,1,1,1,,,200,,830501,50613,AUDQUEEN,https://audqueen.net/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/audqueenau
+https://audqueen.site,1,1,1,1,,,200,,830501,50613,AUDQUEEN,https://audqueen.site/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/audqueenau
+https://audqueen.xyz,1,1,1,1,,,200,,830501,50613,AUDQUEEN,https://audqueen.xyz/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/audqueenau
+https://audqueen.org,1,1,1,1,,,200,,830501,50613,AUDQUEEN,https://audqueen.org/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/audqueenau
+https://ausonlinepokies.link,0,0,0,0,reachable,ssl,,,,,,,,0.6,"SSLError: HTTPSConnectionPool(host='ausonlinepokies.link', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1082)",telegram:t.me/s/squeenaud
+https://aus789.co,1,1,1,1,,,200,,859868,10550,Aus789 PayID Casino Australia,https://aus789.co/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/aus789vip
+https://auswin.co,1,1,1,1,,,200,,869051,10935,Auswin Casino Australia,https://auswin.co/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/ausswinn
+https://auswin.vip,1,1,1,1,,,200,,869051,10935,Auswin Casino Australia,https://auswin.vip/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/ausswinn
+https://bestau.com,1,1,0,0,merchant,parse_failed,200,,7301,,,,,1.6,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/bestau77
+https://avatarr8.net,1,1,1,1,,,200,,1161991,1862,AVATARR8,https://avatarr8.net/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/avatarr8channel
+https://bigpay77aud.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://bigpay77aud.com/,telegram:t.me/s/bigpay77au
+https://aussiex6.co,1,1,1,1,,,200,,1508066,10419,AussieX6,https://aussiex6.co/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/aussiex6nt
+https://bestau.store,1,1,1,1,,,200,,722523,289,BestAU77,https://bestau.store/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/bestau77
+https://aus4k.com,0,0,0,0,reachable,ssl,,,,,,,,5.1,"SSLError: HTTPSConnectionPool(host='aus4k.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:",telegram:t.me/s/fairspinaud
+https://bigpay77aud.net,1,1,1,0,api,api_not_json,200,,1054755,577,BigPay77,https://bigpay77aud.net/api/v1/index.php,HTTP 403 non-JSON,1.9,,telegram:t.me/s/bigpay77au
+https://bigpay77au.vip,1,1,1,0,api,api_not_json,200,,1054755,577,BigPay77,https://bigpay77au.vip/api/v1/index.php,HTTP 403 non-JSON,2.1,,telegram:t.me/s/bigpay77au
+https://bk888sports.com,1,1,0,0,merchant,parse_failed,200,,3528,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/ap8_malaysia
+https://bigpay77aud.vip,1,1,1,0,api,api_not_json,200,,1054755,577,BigPay77,https://bigpay77aud.vip/api/v1/index.php,HTTP 403 non-JSON,2.1,,telegram:t.me/s/bigpay77au
+https://bk8pokies.au,1,1,0,0,merchant,parse_failed,200,,101765,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/bk_theater
+https://bluespin88h5api.store,1,1,0,0,merchant,parse_failed,200,,29,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/bluespin88
+https://bigpay77.vip,1,1,1,0,api,api_not_json,200,,1054755,577,BigPay77,https://bigpay77.vip/api/v1/index.php,HTTP 403 non-JSON,3.0,,telegram:t.me/s/bigpay77au
+https://bluzz777au.online,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/updatelinkaud
+https://bolaking8888.com,1,1,0,0,merchant,parse_failed,200,,21337,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/bolaking888my
+https://cactuscactusaud.com,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/updatelinkaud
+https://bolaav.net,1,1,0,0,merchant,parse_failed,200,,183793,,,,,1.4,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/ap8_malaysia
+https://bii89.com,1,1,1,1,,,200,,771414,10266,ii89KH,https://bii89.com/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/ii89khchannelnew
+https://bluespin88.org,1,1,1,1,,,200,,822919,870,BlueSpin88,https://bluespin88.org/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/bluespin88
+https://commentsbot.xyz,1,1,0,0,merchant,parse_failed,200,,4777,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/fight22channel
+https://call96.io,1,1,1,1,,,200,,779195,60330,Call96,https://call96.io/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/call96official
+https://call96.net,1,1,1,1,,,200,,779195,60330,Call96,https://call96.net/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/call96official
+https://bolaking888b.com,1,1,1,1,,,200,,1151448,10928,BolaKing888,https://bolaking888b.com/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/ap8_malaysia
+https://cashsinoau.co,1,1,1,1,,,200,,762279,50667,CASHSINOAU,https://cashsinoau.co/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/cashsinoau
+https://cashsinoau.net,1,1,1,1,,,200,,762279,50667,CASHSINOAU,https://cashsinoau.net/api/v1/index.php,Invalid Action!,1.6,,telegram:t.me/s/cashsinoau
+https://crn7sg.com,1,1,1,1,,,200,,839089,466,GOLD99,https://crn7sg.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/aus_crown7_channel
+https://crownplustv.com,1,1,0,0,merchant,parse_failed,200,,99138,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/aceaud88
+https://diamondaud.live,1,1,1,1,,,200,,795959,30108,DIAMONDAUD,https://diamondaud.live/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/diamondaud
+https://crownau77.info,1,1,0,0,merchant,parse_failed,200,,85122,,,,,2.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/audplay168
+https://diamondaud.vip,1,1,1,1,,,200,,795959,30108,DIAMONDAUD,https://diamondaud.vip/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/diamondaud
+https://datojudi.xyz,1,1,1,1,,,200,,784706,10285,DatoJD,https://datojudi.xyz/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/datojudi
+https://directv.com,1,0,0,0,homepage,http_403,403,,,,,,,0.6,HTTPError: 403 Client Error: Forbidden for url: https://www.directv.com/,telegram:t.me/s/oznetflixrec
+https://dingospin.site,1,1,1,1,,,200,,749060,30767,DINGOSPIN,https://dingospin.site/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/dingo_spin
+https://dv77.com,1,1,1,1,,,200,,805756,631,DV77,https://dv77.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/dvegas_official
+https://eclbetau.info,1,1,1,1,,,200,,871947,10552,EclBetAu,https://eclbetau.info/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/eclbetauchannel
+https://empire96.io,1,1,1,1,,,200,,810914,60685,Empire96,https://empire96.io/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/kingofgametip
+https://empire96.co,1,1,1,1,,,200,,810914,60685,Empire96,https://empire96.co/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/kingofgametip
+https://crownau77-au.com,1,1,0,0,merchant,parse_failed,200,,81816,,,,,5.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/audplay168
+https://empire96.org,1,1,1,1,,,200,,810914,60685,Empire96,https://empire96.org/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/kingofgametip
+https://exc55.top,1,1,1,1,,,200,,675542,10023,EXC55 Australia™,https://exc55.top/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/exc55aus
+https://ezywin88.space,1,1,1,1,,,200,,830402,50668,EZYWIN,https://ezywin88.space/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/ezywin88group
+https://ezywin88.co,1,1,1,1,,,200,,830402,50668,EZYWIN,https://ezywin88.co/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/au88premiumvip
+https://ezywin88.vip,1,1,1,1,,,200,,830402,50668,EZYWIN,https://ezywin88.vip/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/ezywin88group
+https://ezywin88.xyz,1,1,1,1,,,200,,830402,50668,EZYWIN,https://ezywin88.xyz/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/ezywin88group
+https://ethbet8.xyz,1,1,0,0,merchant,parse_failed,200,,456921,,,,,3.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/australiabestwallet
+https://fairdinkumplay9.net,1,1,1,1,,,200,,743400,729,Fairdinkumplay9,https://fairdinkumplay9.net/api/v1/index.php,Invalid Action!,1.6,,telegram:t.me/s/fairdinkumplay9
+https://ethbet8.vip,1,1,0,0,merchant,parse_failed,200,,456921,,,,,4.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/australiabestwallet
+https://freecreditpokies.com,0,0,0,0,reachable,ssl,,,,,,,,0.6,"SSLError: HTTPSConnectionPool(host='freecreditpokies.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, ""[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed",telegram:t.me/s/squeenaud
+https://fastspinau.co,1,1,1,1,,,200,,703322,50339,FASTSPINAU,https://fastspinau.co/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/fastspinauofficialchannel
+https://freecreditmbi8.com,1,1,0,0,merchant,parse_failed,200,,154406,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/datojudi
+https://fastspinau.live,1,1,1,1,,,200,,703322,50339,FASTSPINAU,https://fastspinau.live/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/fastspinauofficialchannel
+https://fastspinau.site,1,1,1,1,,,200,,703322,50339,FASTSPINAU,https://fastspinau.site/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/fastspinauofficialchannel
+https://gey99pokies.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/geylangau
+https://freemohd88.com,0,0,0,0,reachable,connection,,,,,,,,1.9,"InvalidSchema: No connection adapters were found for ""about:blank';\\n            window.location.pathname = \\""",telegram:t.me/s/mohd88officialchannel
+https://funpokies.vip,1,1,1,1,,,200,,743087,10526,FunPokies,https://funpokies.vip/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/funpokies
+https://gdaymate9.asia,1,1,1,1,,,200,,780555,60211,GdayMate9,https://gdaymate9.asia/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/gdaymate9
+https://g77au.com,1,1,1,1,,,200,,662490,30121,GOLD77,https://g77au.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/g77official
+https://g4cci9au.co,1,1,1,1,,,200,,1011787,1370,GUCCI9AU,https://g4cci9au.co/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/globalplayauthority
+https://golden88.space,1,1,1,1,,,200,,810499,50629,GOLDEN88,https://golden88.space/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/golden88au
+https://gold77casino.com,1,1,1,1,,,200,,662490,30121,GOLD77,https://gold77casino.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/g77official
+https://golden88.live,1,1,1,1,,,200,,810499,50629,GOLDEN88,https://golden88.live/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/golden88au
+https://goldkick88.online,1,1,1,1,,,200,,797836,50651,GOLDKICK88,https://goldkick88.online/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/au88premiumvip
+https://goldkick882.site,1,1,1,1,,,200,,797836,50651,GOLDKICK88,https://goldkick882.site/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/au88premiumvip
+https://goldenempire8.store,1,1,1,1,,,200,,699518,50287,GOLDENEMPIRE,https://goldenempire8.store/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/goldenempire888
+https://gx100aps.xyz,1,1,0,0,merchant,parse_failed,200,,38442,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/gwin77kh_lucky
+https://he1.me,1,1,0,0,merchant,parse_failed,200,,100760,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/freepokiesreward
+https://goldkick883.site,1,1,1,1,,,200,,797836,50651,GOLDKICK88,https://goldkick883.site/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/au88premiumvip
+https://h4winforwin.com,1,1,1,1,,,200,,773596,10772,H4WIN SG,https://h4winforwin.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/fr33spinmysterysg
+https://inskingdom.com,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/inskingdom8
+https://hype77.com,1,1,0,0,merchant,parse_failed,200,,58096,,,,,1.4,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/hype777aus
+https://igaustralia.site,1,1,1,1,,,200,,631073,10071,Introducer Gaming Australia,https://igaustralia.site/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/australiabestwallet
+https://hb88j.com,1,1,1,1,,,200,,748717,638,HB88KH កាស៊ីណូអនឡាញកម្ពុជា។,https://hb88j.com/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/hb88khlucychannel
+https://hello88au.club,1,1,1,1,,,200,,1027097,10702,Hello88AU,https://hello88au.club/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/hello88au
+https://inskingdom8.net,1,1,1,1,,,200,,756026,50162,INSKINGDOM8,https://inskingdom8.net/api/v1/index.php,Invalid Action!,1.6,,telegram:t.me/s/inskingdom8
+https://inskingdom8.vip,1,1,1,1,,,200,,756026,50162,INSKINGDOM8,https://inskingdom8.vip/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/inskingdom8
+https://ii89bet3.com,1,1,1,1,,,200,,771414,10266,ii89KH,https://ii89bet3.com/api/v1/index.php,Invalid Action!,3.2,,telegram:t.me/s/ii89khnewchannel
+https://irich88.live,1,1,1,1,,,200,,879940,676,i-RICH88,https://irich88.live/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/irich88official
+https://irich88.site,1,1,1,1,,,200,,879940,676,i-RICH88,https://irich88.site/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/ezywin88group
+https://irich88.store,1,1,1,1,,,200,,879940,676,i-RICH88,https://irich88.store/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/au88premiumvip
+https://ipay9aud.co,1,1,1,1,,,200,,1030201,640,iPAY9,https://ipay9aud.co/api/v1/index.php,Invalid Action!,3.0,,telegram:t.me/s/globalplayauthority
+https://irich88.xyz,1,1,1,1,,,200,,879940,676,i-RICH88,https://irich88.xyz/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/au88premiumvip
+https://jiliau.org,1,1,1,1,,,200,,830930,10877,Jiliau.com,https://jiliau.org/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/jiliaupokieschannel
+https://itrust88.world,1,1,1,1,,,200,,864254,50080,ITRUST88,https://itrust88.world/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/au88premiumvip
+https://jiliau.xyz,1,1,1,1,,,200,,830930,10877,Jiliau.com,https://jiliau.xyz/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/jiliaupokieschannel
+https://itrus88.store,1,1,1,1,,,200,,864254,50080,ITRUST88,https://itrus88.store/api/v1/index.php,Invalid Action!,3.4,,telegram:t.me/s/au88premiumvip
+https://jkjkjk.site,1,1,0,0,merchant,parse_failed,200,,64479,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/jk8officialchannel
+https://jiliraja99a.com,1,1,1,1,,,200,,668455,11070,JILIRAJA99,https://jiliraja99a.com/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/jiligroup99
+https://jiliraja99b.com,1,1,1,1,,,200,,668455,11070,JILIRAJA99,https://jiliraja99b.com/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/jiligroup99
+https://kakislot.club,1,1,1,1,,,200,,782182,10260,KakiSlot,https://kakislot.club/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/kakislot
+https://kangarush7.com,1,0,0,0,homepage,http_530,530,,,,,,,0.1,HTTPError: 530 Server Error: <none> for url: https://kangarush7.com/,telegram:t.me/s/kangarush7
+https://kakislot.co,1,1,1,1,,,200,,782182,10260,KakiSlot,https://kakislot.co/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/kakislot
+https://jiliroyal99b.com,1,1,1,1,,,200,,668960,11115,JILIROYAL99,https://jiliroyal99b.com/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/jiligroup99
+https://kangaroo88.xyz,1,1,0,0,merchant,parse_failed,200,,0,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/emu88official
+https://kangaroo88.fun,1,1,1,1,,,200,,714037,738,Kangaroo88,https://kangaroo88.fun/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/dolphin88channel
+https://kangaroo88.live,1,1,1,1,,,200,,714037,738,Kangaroo88,https://kangaroo88.live/api/v1/index.php,Invalid Action!,3.0,,telegram:t.me/s/dolphin88channel
+https://koala88.club,1,1,1,1,,,200,,726740,762,Koala88,https://koala88.club/api/v1/index.php,Invalid Action!,1.6,,telegram:t.me/s/emu88official
+https://kingbett9.com,1,1,1,1,,,200,,951360,496,KINGBET9,https://kingbett9.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/globalplayauthority
+https://kingpokies8.biz,1,1,1,1,,,200,,788997,50356,KINGPOKIES8,https://kingpokies8.biz/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/kingpokies8
+https://lihi1.com,1,1,0,0,merchant,parse_failed,200,,2313,,,,,0.7,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/betworld168aus
+https://le888win.com,1,1,0,0,merchant,parse_failed,200,,37604,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/fr33spinmysterysg
+https://koala88.xyz,1,1,1,1,,,200,,726740,762,Koala88,https://koala88.xyz/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/emu88official
+https://kingaud67.com,1,1,1,1,,,200,,921687,50071,KINGAUD,https://kingaud67.com/api/v1/index.php,Invalid Action!,4.0,,telegram:t.me/s/kingaudofficial
+https://live777bet.com,1,1,1,1,,,200,,861504,151,LiveBet,https://live777bet.com/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/livebetaus
+https://lv777au.com,1,1,0,0,merchant,parse_failed,200,,1462,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/auslv777channel
+https://lot9ine.co,1,1,1,1,,,200,,772136,50600,LOT9INE,https://lot9ine.co/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/lot9inechannel
+https://mamak24.biz,1,1,0,0,merchant,parse_failed,200,,22719,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/ap8_malaysia
+https://luckyaceau.co,1,1,1,1,,,200,,743458,50650,LUCKYACEAU,https://luckyaceau.co/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/luckyaceau
+https://luck777.online,1,1,1,1,,,200,,682232,50160,LUCK777AU,https://luck777.online/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/luck777auofficialchannel
+https://luck777au.online,1,1,1,1,,,200,,682232,50160,LUCK777AU,https://luck777au.online/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/luck777auofficialchannel
+https://matespin77.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/ozplay77
+https://mrwin9.com,1,1,0,0,merchant,parse_failed,200,,2466,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/mrwin9_chnnl
+https://mrbeng68.xyz,1,1,1,1,,,200,,966514,1917,MRBENG88,https://mrbeng68.xyz/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/globalplayauthority
+https://mrlucky9au.com,1,1,1,1,,,200,,698365,10503,MrLucky9,https://mrlucky9au.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/mrlucky9channel
+https://mamak24n.com,1,1,1,1,,,200,,1297605,180,MAMAK24,https://mamak24n.com/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/ap8_malaysia
+https://madwinz.com,1,1,1,1,,,200,,722013,30769,MADWINZ,https://madwinz.com/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/madwinz
+https://mrwin888a.com,1,1,1,1,,,200,,1096506,50307,MRWIN888,https://mrwin888a.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/topausbet
+https://news.com.au,1,0,0,0,homepage,http_403,403,,,,,,,0.7,HTTPError: 403 Client Error: Forbidden for url: https://www.news.com.au/,telegram:t.me/s/sportsagpu
+https://myauwin.com,1,1,1,1,,,200,,815100,256,Auwin | Creating Unlimited Possibility,https://myauwin.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/auwinofficial
+https://netflix.com,1,1,0,0,merchant,parse_failed,200,,658990,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/oznetflixrec
+https://myfunplay1.com,1,1,1,1,,,200,,691076,717,FunPlay,https://myfunplay1.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/freebiesauw
+https://neoaus96.net,1,1,1,1,,,200,,975990,11007,NeoAus96 PayID Pokies Casino Australia,https://neoaus96.net/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/austrlianeospin96
+https://one2bet.com,1,0,0,0,homepage,cloudflare/403,200,,405,,,,,0.6,ValueError: Blocked: Access Denied.,telegram:t.me/s/one2betchannel
+https://on88aus.com,1,1,1,1,,,200,,835189,10016,On88aud,https://on88aus.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/on88aud_channel
+https://on88aus.io,1,1,1,1,,,200,,835189,10016,On88aud,https://on88aus.io/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/on88aud_channel
+https://on88aus.net,1,1,1,1,,,200,,835189,10016,On88aud,https://on88aus.net/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/on88aud_channel
+https://oakfold.club,1,1,1,1,,,200,,1100215,60829,OAKFOLD,https://oakfold.club/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/oakflodpokies
+https://oakfold.vip,1,1,1,1,,,200,,1100215,60829,OAKFOLD,https://oakfold.vip/api/v1/index.php,Invalid Action!,3.1,,telegram:t.me/s/oakflodpokies
+https://ozpokie.net,1,1,1,1,,,200,,707835,10860,Ozpokie,https://ozpokie.net/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/mrwin5_channel
+https://ozwin96.io,1,1,1,1,,,200,,717707,60591,Ozwin96,https://ozwin96.io/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/ozwin96
+https://panda95au.live,1,1,1,1,,,200,,751435,10100,Panda95 AU,https://panda95au.live/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/sportsagpu
+https://penguin88.xyz,1,1,1,1,,,200,,768672,50010,PENGUIN88,https://penguin88.xyz/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/dolphin88channel
+https://peluang88.info,0,0,0,0,reachable,connection,,,,,,,,1.9,"InvalidSchema: No connection adapters were found for ""about:blank';\\n            window.location.pathname = \\""",telegram:t.me/s/mohd88officialchannel
+https://pg9asiaplay.com,1,1,1,1,,,200,,827541,30658,PG9 SG E-Wallet,https://pg9asiaplay.com/api/v1/index.php,Invalid Action!,1.6,,telegram:t.me/s/fr33spinmysterysg
+https://playnow8.games,1,1,0,0,merchant,parse_failed,200,,109810,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/corona9official
+https://play66.xyz,1,1,0,0,merchant,parse_failed,200,,187091,,,,,1.9,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/rmmofficialch
+https://playaud1.live,1,1,1,1,,,200,,702019,275,PLAYAUD,https://playaud1.live/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/playaud
+https://pokieslab9.net,1,1,1,1,,,200,,696561,10506,PokiesLab9,https://pokieslab9.net/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/aud_pokieslab9_chnnl
+https://pokiesbillion.xyz,1,1,1,1,,,200,,821391,50338,POKIESBILLION,https://pokiesbillion.xyz/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/pokiesbillionofficialchannel
+https://pokiestation.com,1,1,1,1,,,200,,735490,10754,POKIESSTATION,https://pokiestation.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/pokiesstation
+https://pg9au.net,1,1,1,1,,,200,,1210329,1317,PG9 E-Wallet Pokies,https://pg9au.net/api/v1/index.php,Invalid Action!,4.5,,telegram:t.me/s/pg9australia
+https://popeye88.biz,1,1,1,1,,,200,,887357,50590,POPOYE88,https://popeye88.biz/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/popeye88channel
+https://popeye88.com,1,1,1,1,,,200,,887357,50590,POPOYE88,https://popeye88.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/popeye88channel
+https://popeye88.live,1,1,1,1,,,200,,887357,50590,POPOYE88,https://popeye88.live/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/popeye88channel
+https://popeye88.online,1,1,1,1,,,200,,887357,50590,POPOYE88,https://popeye88.online/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/popeye88channel
+https://popeye88.site,1,1,1,1,,,200,,887357,50590,POPOYE88,https://popeye88.site/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/popeye88channel
+https://qp777au.com,1,1,0,0,merchant,parse_failed,200,,1462,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/aussietruebluechannel
+https://prelink.co,1,1,0,0,merchant,parse_failed,200,,126301,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/one2betchannel
+https://reef33.xyz,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/updatelinkaud
+https://popeye88.store,1,1,1,1,,,200,,887357,50590,POPOYE88,https://popeye88.store/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/popeye88channel
+https://popeye88.vip,1,1,1,1,,,200,,887357,50590,POPOYE88,https://popeye88.vip/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/popeye88channel
+https://redvortex8.club,1,1,1,1,,,200,,867750,326,Redvortex8,https://redvortex8.club/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/redvortex88group
+https://redvortex8.online,1,1,1,1,,,200,,867750,326,Redvortex8,https://redvortex8.online/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/redvortex88group
+https://redvortex8.site,1,1,1,1,,,200,,867750,326,Redvortex8,https://redvortex8.site/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/redvortex88group
+https://rolex66.site,1,0,0,0,homepage,http_530,530,,,,,,,0.1,HTTPError: 530 Server Error: <none> for url: https://rolex66.site/,telegram:t.me/s/rolex66channel
+https://richau5.com,1,1,1,1,,,200,,707835,10860,Ozpokie,https://richau5.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/mrwin5_channel
+https://roocrown.live,1,1,0,0,merchant,parse_failed,200,,3763,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/roocrownchannel
+https://roo96auh5api.shop,1,1,0,0,merchant,parse_failed,200,,18,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/roo96_aus
+https://richmama8.net,1,1,1,1,,,200,,948552,1069,RICHMAMA,https://richmama8.net/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/rmmofficialch
+https://rm99b.com,1,1,1,1,,,200,,671904,10866,RM99 (MYR),https://rm99b.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/rm99official
+https://richman966.com,1,1,1,1,,,200,,954123,832,Richman96 Official Site - Online Gaming Australia,https://richman966.com/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/richman96aus
+https://s99au.net,1,1,0,0,merchant,parse_failed,200,,3864,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/s99au
+https://sapphire1au.com,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/updatelinkaud
+https://rtpmethau.vip,1,1,1,1,,,200,,724715,50773,RTPMETH,https://rtpmethau.vip/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/freepokiesreward
+https://rubyaud.site,1,1,1,1,,,200,,703973,50051,RUBY,https://rubyaud.site/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/rubyaudchannel
+https://rr4winpro.com,1,1,1,1,,,200,,811579,10806,RR4WIN SG,https://rr4winpro.com/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/fr33spinmysterysg
+https://siti88.online,1,1,1,1,,,200,,1074525,10856,Siti88,https://siti88.online/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/mohd88officialchannel
+https://rr4winauplay.com,1,1,1,1,,,200,,894486,10741,RR4WIN AUS,https://rr4winauplay.com/api/v1/index.php,Invalid Action!,4.2,,telegram:t.me/s/rr4winaus
+https://skyroocasino.com,1,1,1,1,,,200,,1119762,60510,SKYROO AUS,https://skyroocasino.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/trustedwalletsociety
+https://solidluckau.com,1,1,1,1,,,200,,713640,50081,SOLIDLUCK33,https://solidluckau.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/solid_luckk
+https://sp77aud.site,1,1,1,1,,,200,,696036,10225,SP77AUD,https://sp77aud.site/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/sp77aud
+https://space9.cc,1,1,1,1,,,200,,1132142,1058,SPACE9,https://space9.cc/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/space9aus
+https://spacecraft9.net,1,1,1,1,,,200,,732292,60132,SpaceCraft9,https://spacecraft9.net/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/spacecraft9
+https://space9au.club,1,1,1,1,,,200,,1132142,1058,SPACE9,https://space9au.club/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/space9aus
+https://space9au.co,1,1,1,1,,,200,,1132142,1058,SPACE9,https://space9au.co/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/space9aus
+https://space9au.online,1,1,1,1,,,200,,1132142,1058,SPACE9,https://space9au.online/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/space9aus
+https://space9au.me,1,1,1,1,,,200,,1132142,1058,SPACE9,https://space9au.me/api/v1/index.php,Invalid Action!,2.7,,telegram:t.me/s/space9aus
+https://spaceman369.site,1,1,1,1,,,200,,1143643,786,SPACEMAN369,https://spaceman369.site/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/spaceman369official
+https://speedxau.co,1,1,0,0,merchant,parse_failed,200,,110335,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/auboss1official
+https://speedxau1.com,1,1,0,0,merchant,parse_failed,200,,110334,,,,,1.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/speedaustralia
+https://speedwin88.net,1,1,1,1,,,200,,705545,50226,SPEEDWIN88,https://speedwin88.net/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/speedwin88_australia
+https://speed2au.com,1,1,1,1,,,200,,930441,313,SpeedAU,https://speed2au.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/speedaustralia
+https://speedau.space,1,1,1,1,,,200,,930441,313,SpeedAU,https://speedau.space/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/speedaustralia
+https://spinaroo.club,1,1,1,1,,,200,,1030241,10690,Spinaroo,https://spinaroo.club/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/globalplayauthority
+https://spinpokiesau.com,1,1,0,0,merchant,parse_failed,200,,147362,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/freepokiesreward
+https://squeenaud.site,1,1,1,1,,,200,,864816,50299,SQUEENAUD,https://squeenaud.site/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/squeenaud
+https://spinix19.co,1,1,1,1,,,200,,737873,50729,SPINIX19,https://spinix19.co/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/spinix19cnl
+https://starspin996.online,1,1,1,1,,,200,,1108764,336,StarSpin996,https://starspin996.online/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/starspin996aud
+https://spinex.vip,1,1,0,0,merchant,parse_failed,200,,131549,,,,,3.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/freebiesauw
+https://success88.club,1,1,1,1,,,200,,843727,30006,SUCCESS88,https://success88.club/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/au88premiumvip
+https://success88.live,1,1,1,1,,,200,,843727,30006,SUCCESS88,https://success88.live/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/au88premiumvip
+https://success88.site,1,1,1,1,,,200,,843727,30006,SUCCESS88,https://success88.site/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/au88premiumvip
+https://sugar96.co,1,1,1,1,,,200,,860916,549,Sugar96,https://sugar96.co/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/sugar96official
+https://syarikatcuci.com,1,1,0,0,merchant,parse_failed,200,,128926,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/mohd88officialchannel
+https://sugar96.info,1,1,1,1,,,200,,860916,549,Sugar96,https://sugar96.info/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/sugar96official
+https://sugartown7.com,0,0,0,0,reachable,connection,,,,,,,,1.7,"InvalidSchema: No connection adapters were found for ""about:blank';\\n                window.location.pathname = \\""",telegram:t.me/s/topausbet
+https://sugar96.vip,1,1,1,1,,,200,,860916,549,Sugar96,https://sugar96.vip/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/sugar96official
+https://tab968.store,1,1,1,1,,,200,,655579,1251,TAB968,https://tab968.store/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/tab968official
+https://tonygame7.co,0,0,0,0,reachable,connection,,,,,,,,1.6,"InvalidSchema: No connection adapters were found for ""about:blank';\\n                window.location.pathname = \\""",telegram:t.me/s/topausbet
+https://trillionaire33.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/betgm11
+https://topplayau.cc,1,1,1,1,,,200,,698627,50350,TOPPLAYAU,https://topplayau.cc/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/topplayauofficialchannel
+https://topspin.ltd,1,1,1,1,,,200,,679966,243,TOPSPIN Official⚡️,https://topspin.ltd/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/auwinofficial
+https://taxis33happy.com,1,1,1,1,,,200,,1512814,50599,TAXIS33,https://taxis33happy.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/australiabestwallet
+https://truedinkum.com,1,1,1,1,,,200,,1600760,10560,Truedinkumbet,https://truedinkum.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/truedinkumbetaus
+https://trust88au.co,1,1,1,1,,,200,,864254,50080,ITRUST88,https://trust88au.co/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/trust88au
+https://truedinkumbet.net,1,1,1,1,,,200,,1600760,10560,Truedinkumbet,https://truedinkumbet.net/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/truedinkumbetaus
+https://u2win.asia,1,1,1,1,,,200,,919566,1220,U2WIN,https://u2win.asia/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/u2winaus1
+https://ubet96aus.com,1,1,1,1,,,200,,678460,10087,Ubet AUS,https://ubet96aus.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/ubet96
+https://trust88au.net,1,1,1,1,,,200,,864254,50080,ITRUST88,https://trust88au.net/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/trust88au
+https://venus55.net,1,1,0,0,merchant,parse_failed,200,,2609,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/venus55offical
+https://venus55.org,1,1,0,0,merchant,parse_failed,200,,156652,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/venus55offical
+https://urichbet8.net,1,1,1,1,,,200,,788083,10822,URICHBET88 (AUD),https://urichbet8.net/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/urichbet
+https://venus55.io,1,1,1,1,,,200,,814199,844,Venus55,https://venus55.io/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/venus55offical
+https://victor96.cc,1,1,1,1,,,200,,800185,135,Victor96,https://victor96.cc/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/vic96win
+https://victor96.io,1,1,1,1,,,200,,800185,135,Victor96,https://victor96.io/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/vic96win
+https://victor96.vip,1,1,1,1,,,200,,800185,135,Victor96,https://victor96.vip/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/vic96win
+https://vip711.co,1,1,1,1,,,200,,743849,30202,VIP711,https://vip711.co/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/vip711officialchannel
+https://vpower8.net,1,1,1,1,,,200,,827662,10580,VPOWER8™ Australia Pokies,https://vpower8.net/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/vpower8channel
+https://warbet88.co,1,1,1,1,,,200,,756131,50631,WARBET88,https://warbet88.co/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/warbet88
+https://webo98.org,1,1,1,1,,,200,,898241,50170,WEBO98,https://webo98.org/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/webo98best
+https://w33au.com,1,1,1,1,,,200,,1106841,426,W33 Australia Online Casino | Best Online Pokies,https://w33au.com/api/v1/index.php,Invalid Action!,3.0,,telegram:t.me/s/win33b
+https://wildgroup.vip,1,1,0,0,merchant,parse_failed,200,,80242,,,,,2.1,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/acewin33au
+https://wildngoplay9.com,1,1,1,1,,,200,,681139,50039,WILD'N GO,https://wildngoplay9.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/freebiesauw
+https://wildoz.club,1,1,1,1,,,200,,925433,10058,Wildoz,https://wildoz.club/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/wildozau
+https://weplay88.fun,1,1,1,1,,,200,,697853,358,WePlay88,https://weplay88.fun/api/v1/index.php,Invalid Action!,3.2,,telegram:t.me/s/wp88channel
+https://wildoz.site,1,1,1,1,,,200,,925433,10058,Wildoz,https://wildoz.site/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/wildozau
+https://wildspin24.net,1,1,1,1,,,200,,958609,827,Wildspin24,https://wildspin24.net/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/wildspin24tips
+https://wildpokies9.cc,1,1,1,1,,,200,,694651,229,WildPokies,https://wildpokies9.cc/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/wildpokiesofficialchannel
+https://wildvip.store,1,1,1,1,,,200,,810623,312,WildVIP,https://wildvip.store/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/wildvipp
+https://wildpokies9.co,1,1,1,1,,,200,,694651,229,WildPokies,https://wildpokies9.co/api/v1/index.php,Invalid Action!,3.1,,telegram:t.me/s/wildpokiesofficialchannel
+https://win2aud.live,1,1,1,1,,,200,,870276,10223,Win2Aud,https://win2aud.live/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/win2audofficialchannel
+https://won66sea.com,1,1,0,0,merchant,parse_failed,200,,187091,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/amplaych
+https://wildspin24.vip,1,1,1,1,,,200,,958609,827,Wildspin24,https://wildspin24.vip/api/v1/index.php,Invalid Action!,3.0,,telegram:t.me/s/wildspin24tips
+https://wowza96.co,1,1,1,1,,,200,,906975,11061,Wowza96 PayID Casino Australia,https://wowza96.co/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/wowza96_channel
+https://winner29.live,1,1,1,0,api,api_not_json,200,,852168,10558,Winner29,https://winner29.live/api/v1/index.php,HTTP 200 non-JSON,2.3,,telegram:t.me/s/winner29free
+https://x4betau.co,1,1,1,1,,,200,,698785,597,X4BET,https://x4betau.co/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/x4bet_au
+https://x.co,1,0,0,0,homepage,http_403,403,,,,,,,1.8,HTTPError: 403 Client Error: Forbidden for url: https://forsale.godaddy.com/forsale/x.co,telegram:t.me/s/officialnews96pro
+https://x4betau.vip,1,1,1,1,,,200,,698785,597,X4BET,https://x4betau.vip/api/v1/index.php,Invalid Action!,1.6,,telegram:t.me/s/x4bet_au
+https://xpay33.org,1,1,1,1,,,200,,1324185,30010,XPAY33,https://xpay33.org/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/globalplayauthority
+https://yypokies.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/aussie_fsh
+https://yeah96.io,1,1,1,1,,,200,,814556,140,YEAH96,https://yeah96.io/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/yeah96offical
+https://yeah96.net,1,1,1,1,,,200,,814556,140,YEAH96,https://yeah96.net/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/yeah96offical
+https://yeah96.org,1,1,1,1,,,200,,814556,140,YEAH96,https://yeah96.org/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/yeah96offical
+https://yuwinone.com,1,1,1,1,,,200,,1036139,10655,StakePNG,https://yuwinone.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/aceaud88
+https://100cuci.io,1,1,0,0,merchant,parse_failed,200,,386172,,,,,0.7,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/berjayasama
+https://1.top,1,1,0,0,merchant,parse_failed,200,,832,,,,,2.1,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/mamak24wallet
+https://12cuci.club,1,1,1,1,,,200,,1085835,576,12Cuci,https://12cuci.club/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/www12cucicom
+https://12cuci.bet,1,1,1,1,,,200,,1085835,576,12Cuci,https://12cuci.bet/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/www12cucicom
+https://100cuci.co,1,1,1,1,,,200,,1176388,760,100Cuci,https://100cuci.co/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/official_100cuci
+https://1playsg.club,1,1,1,1,,,200,,686188,45,ONEPLAY,https://1playsg.club/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/oneplayno1
+https://1mjudi.store,1,1,1,0,api,api_not_json,200,,846158,90088,1MJUDI,https://1mjudi.store/api/v1/index.php,HTTP 200 non-JSON,4.2,,telegram:t.me/s/onemjudi
+https://1mjudi.vip,1,1,1,1,,,200,,846158,90088,1MJUDI,https://1mjudi.vip/api/v1/index.php,Invalid Action!,3.8,,telegram:t.me/s/onemjudi
+https://21huat.cc,1,1,1,1,,,200,,799482,1867,21HUAT,https://21huat.cc/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/free21huat
+https://21huat.site,1,1,1,1,,,200,,799482,1867,21HUAT,https://21huat.site/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/free21huat
+https://22king.net,1,1,0,0,merchant,parse_failed,200,,56521,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/king22audd
+https://22king.xyz,1,1,0,0,merchant,parse_failed,200,,53034,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/king22audd
+https://21huat.space,1,1,1,1,,,200,,799482,1867,21HUAT,https://21huat.space/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/free21huat
+https://21huat.store,1,1,1,1,,,200,,799482,1867,21HUAT,https://21huat.store/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/free21huat
+https://22king.online,1,1,1,1,,,200,,925644,1808,22KING,https://22king.online/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/king22audd
+https://1rokok.net,1,1,1,1,,,200,,1243902,10699,1ROKOK,https://1rokok.net/api/v1/index.php,Invalid Action!,4.4,,telegram:t.me/s/rokok1_official
+https://22kingau.com,1,1,1,1,,,200,,925644,1808,22KING,https://22kingau.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/king22audd
+https://22kingau.net,1,1,1,1,,,200,,925644,1808,22KING,https://22kingau.net/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/king22audd
+https://22rp.net,1,1,1,1,,,200,,925644,1808,22KING,https://22rp.net/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/king22audd
+https://4dgang.com,1,1,0,0,merchant,parse_failed,200,,338934,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/angin888
+https://444cuci.xyz,1,1,1,1,,,200,,1042753,90012,444CUCI - Trusted Online Casino Malaysia,https://444cuci.xyz/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/myr444cuci
+https://447duit.store,1,1,1,1,,,200,,876680,90067,447Duit,https://447duit.store/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/duit447official
+https://666cuci.co,1,1,1,1,,,200,,906972,90017,666Cuci,https://666cuci.co/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/cuci66666
+https://711cuci.bet,1,1,1,1,,,200,,1049603,10172,711Cuci,https://711cuci.bet/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/official711cuci
+https://99laju.net,1,1,0,0,merchant,parse_failed,200,,3505,,,,,0.1,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/walletfree2u
+https://77judi.co,1,1,0,0,merchant,parse_failed,200,,10,,,,,2.1,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/judi77
+https://7starsg.co,1,1,1,1,,,200,,833657,50627,7STARSG,https://7starsg.co/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/ch7ssg
+https://711cuci.live,1,1,1,1,,,200,,1049603,10172,711Cuci,https://711cuci.live/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/official711cuci
+https://918kaya88.xyz,1,1,1,1,,,200,,751856,60607,918KAYA88,https://918kaya88.xyz/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/pgkslot365channel
+https://a1pokies.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/iclub365aud
+https://918kisser.co,1,1,1,1,,,200,,873476,97,918Kisser,https://918kisser.co/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/kisser918_channel
+https://ace88sg.net,1,1,1,1,,,200,,831294,60075,ACE88,https://ace88sg.net/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ace88sg
+https://aa88alpha.com,1,1,1,1,,,200,,993375,285,aa88 | DigiNova,https://aa88alpha.com/api/v1/index.php,Invalid Action!,3.1,,telegram:t.me/s/aa88sg
+https://aladdin888c.com,1,1,1,1,,,200,,1079877,10991,Aladdin888,https://aladdin888c.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/aladdin888my
+https://aa88beta.com,1,1,1,1,,,200,,993375,285,aa88 | DigiNova,https://aa88beta.com/api/v1/index.php,Invalid Action!,3.1,,telegram:t.me/s/aa88sg
+https://aa88charlie.com,1,1,1,1,,,200,,993375,285,aa88 | DigiNova,https://aa88charlie.com/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/aa88sg
+https://arsenal888.vip,1,1,0,0,merchant,parse_failed,200,,20647,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/arsenaal888
+https://aura.bet,1,0,0,0,homepage,cloudflare/403,200,,402,,,,,0.8,ValueError: Blocked: Access Denied.,telegram:t.me/s/auraasia_official
+https://9kelab2.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='9kelab2.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.",telegram:t.me/s/im9kelab
+https://amoi66.vip,1,1,1,1,,,200,,1343681,60880,AMOI66,https://amoi66.vip/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/amoi66_official
+https://arai33.org,1,1,1,1,,,200,,1277808,50776,ARAI33,https://arai33.org/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/arai33official
+https://arsenal888b.com,1,1,1,1,,,200,,1013660,797,ARSENAL888 阿森纳俱乐部,https://arsenal888b.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/arsenaal888
+https://babysharks22.com,1,1,0,0,merchant,parse_failed,200,,19012,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/babysharkk22
+https://barcelona-888.com,1,1,0,0,merchant,parse_failed,200,,21759,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/fcbb888
+https://b2w.online,1,1,1,1,,,200,,1587127,90113,Bila2win,https://b2w.online/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/bila2win
+https://aus78.org,1,1,1,1,,,200,,737939,10622,KHM789 Cambodia,https://aus78.org/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/khm789_luck
+https://batik8888.com,1,1,0,0,merchant,parse_failed,200,,18455,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/batik888my
+https://aurra8.com,1,1,1,1,,,200,,796167,213,AuraAsia Official Casino,https://aurra8.com/api/v1/index.php,Invalid Action!,4.0,,telegram:t.me/s/auraasia_official
+https://babyshark22j.com,1,1,1,1,,,200,,1089421,470,BABYSHARK22,https://babyshark22j.com/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/babysharkk22
+https://bearbrick888.asia,1,1,0,0,merchant,parse_failed,200,,18435,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/pm89_malaysia
+https://barcelona888a.com,1,1,1,1,,,200,,1030972,471,BARCELONA888 巴塞罗那俱乐部,https://barcelona888a.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/fcbb888
+https://befun88.com,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='befun88.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.",telegram:t.me/s/harimau333
+https://bantu88a.com,1,1,1,1,,,200,,726456,30351,BANTUAN88,https://bantu88a.com/api/v1/index.php,Invalid Action!,3.0,,telegram:t.me/s/bantuan8825
+https://barcelona888b.com,1,1,1,1,,,200,,1030972,471,BARCELONA888 巴塞罗那俱乐部,https://barcelona888b.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/fcbb888
+https://bersatugrp.com,1,1,0,0,merchant,parse_failed,200,,140916,,,,,1.4,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/channel_1mcuci
+https://berjayasama.biz,1,1,1,1,,,200,,1066440,567,Berjayasama,https://berjayasama.biz/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/berjayasama
+https://berjayasama.games,1,1,1,1,,,200,,1066440,567,Berjayasama,https://berjayasama.games/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/berjayasama
+https://berjayasama.top,1,1,1,1,,,200,,1066440,567,Berjayasama,https://berjayasama.top/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/berjayasama
+https://best66my.com,1,1,1,1,,,200,,669965,11066,Best66,https://best66my.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/b66club
+https://bcrown155kh.online,1,1,1,1,,,200,,799658,694,Crown155 KH,https://bcrown155kh.online/api/v1/index.php,Invalid Action!,3.7,,telegram:t.me/s/crown155khm
+https://betcity8.vip,1,1,1,1,,,200,,679439,60369,Betcity8 Online Casino Singapore No1,https://betcity8.vip/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/bcityv1p
+https://bigbossjudi.live,1,1,1,1,,,200,,1180929,582,BIG BOSS JUDI 大老板,https://bigbossjudi.live/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/bigbossjudi
+https://bigbossjudi.one,1,1,1,1,,,200,,1180929,582,BIG BOSS JUDI 大老板,https://bigbossjudi.one/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/bigbossjudi
+https://bika99.com,1,1,1,1,,,200,,825658,60371,Bika99,https://bika99.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/bika99channel
+https://bigbossjudi.top,1,1,1,1,,,200,,1180929,582,BIG BOSS JUDI 大老板,https://bigbossjudi.top/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/bigbossjudi
+https://bila2cuci.fun,1,1,1,1,,,200,,1263795,10162,Bila2cuci,https://bila2cuci.fun/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/bila2cuci
+https://bila2win.co,1,1,1,1,,,200,,1587127,90113,Bila2win,https://bila2win.co/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/bila2win
+https://boleh888.asia,1,1,0,0,merchant,parse_failed,200,,20765,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/boleh_888
+https://bila2win.shop,1,1,1,1,,,200,,1587127,90113,Bila2win,https://bila2win.shop/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/bila2win
+https://bonus88888.com,1,1,0,0,merchant,parse_failed,200,,17884,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/bonus888wallet
+https://boleh888b.com,1,1,1,1,,,200,,1021864,10807,BOLEH888,https://boleh888b.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/boleh_888
+https://bonus888a.com,1,1,1,0,api,connection,200,,1069737,187,BONUS888,https://bonus888a.com/api/v1/index.php,,1.8,"('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",telegram:t.me/s/bonus888wallet
+https://bintang44.fun,1,1,1,1,,,200,,1023061,90018,BINTANG44,https://bintang44.fun/api/v1/index.php,Invalid Action!,4.5,,telegram:t.me/s/bintang44official
+https://bonus888b.com,0,0,0,0,reachable,connection,,,,,,,,1.0,"ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",telegram:t.me/s/bonus888wallet
+https://bintang44.life,1,1,1,1,,,200,,1023061,90018,BINTANG44,https://bintang44.life/api/v1/index.php,Invalid Action!,4.6,,telegram:t.me/s/bintang44official
+https://bintang44.live,1,1,1,1,,,200,,1023061,90018,BINTANG44,https://bintang44.live/api/v1/index.php,Invalid Action!,4.4,,telegram:t.me/s/bintang44official
+https://bintang44.online,1,1,1,1,,,200,,1023061,90018,BINTANG44,https://bintang44.online/api/v1/index.php,Invalid Action!,4.5,,telegram:t.me/s/bintang44official
+https://bosskucuci1.co,1,1,1,1,,,200,,683736,118,BosskuCuci,https://bosskucuci1.co/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/bosskucuci
+https://bosskucuci1.me,1,1,1,1,,,200,,683736,118,BosskuCuci,https://bosskucuci1.me/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/bosskucuci
+https://bosskucuci2.online,1,1,1,1,,,200,,683736,118,BosskuCuci,https://bosskucuci2.online/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/bosskucuci
+https://btcuci.net,1,1,1,1,,,200,,688559,10395,BTcuci,https://btcuci.net/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/btcuci3131
+https://candy916.com,1,1,1,1,,,200,,1070941,30201,CANDY916,https://candy916.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/candy916channel
+https://cekap33.xyz,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/cekap33
+https://cashbet77.online,1,1,1,1,,,200,,645530,98,CB7 (CASHBET77),https://cashbet77.online/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/vip_cb7
+https://cashbet777.com,1,1,1,1,,,200,,645530,98,CB7 (CASHBET77),https://cashbet777.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/vip_cb7
+https://cekap33.club,1,1,1,1,,,200,,890811,30188,CEKAP33,https://cekap33.club/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/cekap33
+https://ceo99d.com,1,1,1,1,,,200,,1015519,10912,CEO99 (MYR),https://ceo99d.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ceo99official
+https://ceo99e.com,1,1,1,1,,,200,,1015519,10912,CEO99 (MYR),https://ceo99e.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ceo99official
+https://chelsea888.biz,1,1,0,0,merchant,parse_failed,200,,20498,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/chelseea_888
+https://ceo99f.com,1,1,1,1,,,200,,1015519,10912,CEO99 (MYR),https://ceo99f.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/ceo99official
+https://cgee.fun,1,1,1,1,,,200,,833715,10179,CHAGEE88,https://cgee.fun/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/chagee88c
+https://claimfreecredit88.com,1,1,0,0,merchant,parse_failed,200,,580580,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/mrbayar88
+https://cp68reg.biz,1,1,0,0,merchant,parse_failed,200,,109810,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/crownplusguinea
+https://cashkingbet1.com,1,1,1,1,,,200,,1152566,294,CashKingBet,https://cashkingbet1.com/api/v1/index.php,Invalid Action!,4.4,,telegram:t.me/s/cashkingbet_tg
+https://clickno29sg.com,1,1,0,0,merchant,parse_failed,200,,61176,,,,,1.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/channel_2uob
+https://cutecat.live,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/ecwin99promo
+https://club33.xyz,1,1,1,1,,,200,,1457940,50609,CLUB33,https://club33.xyz/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/betmly66official
+https://crn7sg.net,1,1,1,1,,,200,,839089,466,GOLD99,https://crn7sg.net/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/top1au_channel
+https://dior88.co,1,1,0,0,merchant,parse_failed,200,,19261,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/aladdin888my
+https://cucislot365.net,1,1,1,1,,,200,,932404,30573,CUCISLOT365,https://cucislot365.net/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/cucislot365
+https://cgee88.xyz,1,1,1,1,,,200,,834082,10179,CHAGEE88,https://cgee88.xyz/api/v1/index.php,Invalid Action!,4.1,,telegram:t.me/s/chagee88c
+https://deadpool888.live,1,1,1,1,,,200,,635755,73015,DeadPool888,https://deadpool888.live/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/guinnessworldcasino
+https://digimon888.com,1,1,1,1,,,200,,637957,72035,Digimon888,https://digimon888.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/kungfucat777_channel
+https://dragonball66.live,1,1,1,1,,,200,,633922,72005,DragonBall66,https://dragonball66.live/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/ilikebet918wallet
+https://cspeed8kh.shop,1,1,1,1,,,200,,781550,10893,SP88 KH Online Casino,https://cspeed8kh.shop/api/v1/index.php,Invalid Action!,4.0,,telegram:t.me/s/sp88khchannel
+https://ecasglobal.com,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='ecasglobal.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_s",telegram:t.me/s/sgecass
+https://eliteking.co,1,1,0,0,merchant,parse_failed,200,,19834,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/elitekingmy
+https://dior88i.com,1,1,1,1,,,200,,1257262,71,DIOR88 迪奥俱乐部,https://dior88i.com/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/dior88wallet
+https://ecwin99.com,1,1,0,0,merchant,parse_failed,200,,77922,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/ecwin99promo
+https://expressking8888.com,1,1,0,0,merchant,parse_failed,200,,21722,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/expresskingmy
+https://duitlaju.vip,1,1,1,1,,,200,,892062,90020,duitlaju44,https://duitlaju.vip/api/v1/index.php,Invalid Action!,3.3,,telegram:t.me/s/duitlaju44group
+https://esewa99np.com,1,1,1,1,,,200,,776102,50539,ESEWA99,https://esewa99np.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/esewa99
+https://emas855.com,1,1,1,1,,,200,,675795,60659,EMAS855,https://emas855.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/emas855
+https://duitlaju44.online,1,1,1,1,,,200,,892429,90020,duitlaju44,https://duitlaju44.online/api/v1/index.php,Invalid Action!,3.6,,telegram:t.me/s/duitlaju44group
+https://duitlaju.site,1,1,1,1,,,200,,892062,90020,duitlaju44,https://duitlaju.site/api/v1/index.php,Invalid Action!,4.2,,telegram:t.me/s/duitlaju44group
+https://expresskinga.com,1,1,1,1,,,200,,1032312,10992,ExpressKing,https://expresskinga.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/expresskingmy
+https://ezchat4u.com,1,1,0,0,merchant,parse_failed,200,,2641,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/walletfree2u
+https://expresskingb.com,1,1,1,1,,,200,,1032312,10992,ExpressKing,https://expresskingb.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/expresskingmy
+https://facai8sg.vip,1,1,1,1,,,200,,659127,1356,FACAI8 SINGAPORE,https://facai8sg.vip/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/facai8sg1
+https://facai8sg.online,1,1,1,1,,,200,,659127,1356,FACAI8 SINGAPORE,https://facai8sg.online/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/facai8sg1
+https://fragment.com,1,1,0,0,merchant,parse_failed,200,,833945,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/username
+https://ff96kh3.com,1,1,1,1,,,200,,871957,781,FF96KH,https://ff96kh3.com/api/v1/index.php,Invalid Action!,3.5,,telegram:t.me/s/ff96_khmchannel
+https://foodpanda44.live,1,1,1,1,,,200,,636836,72030,FoodPanda44,https://foodpanda44.live/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/ilikebet918wallet
+https://free365hari.com,1,1,0,0,merchant,parse_failed,200,,577480,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/gempakofficial
+https://fly99.site,1,1,1,1,,,200,,1038700,50608,FLY99,https://fly99.site/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/fly99channel
+https://gardenia888.asia,1,1,0,0,merchant,parse_failed,200,,18751,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/gardenia_888
+https://ff96kh7.com,1,1,1,1,,,200,,871957,781,FF96KH,https://ff96kh7.com/api/v1/index.php,Invalid Action!,3.5,,telegram:t.me/s/ff96_vip
+https://ezr88.com,1,1,0,0,merchant,parse_failed,200,,173711,,,,,4.9,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/walletfree2u
+https://freecreditking88.com,1,1,0,0,merchant,parse_failed,200,,361572,,,,,1.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/malaysiavideoviral
+https://freecredit66.com,1,1,1,1,,,200,,794738,30273,FREECREDIT66,https://freecredit66.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/freekredit66
+https://gamehub88.com,1,1,1,1,,,200,,636012,73021,GameHub,https://gamehub88.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/guinnessworldcasino
+https://gcentsg.com,1,1,1,1,,,200,,703203,550,GC Entertainment,https://gcentsg.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/gcentsg
+https://global77npl.com,1,1,1,1,,,200,,881769,50285,GLOBAL77,https://global77npl.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/global77mainchannel
+https://gold99sg.co,1,1,1,1,,,200,,839089,466,GOLD99,https://gold99sg.co/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/gold99sgchannel
+https://gold99sgvip.com,1,1,1,1,,,200,,839089,466,GOLD99,https://gold99sgvip.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/gold99sgchannel
+https://goodvibes666.com,1,1,1,1,,,200,,636089,73020,GoodVibes666,https://goodvibes666.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/guinnessworldcasino
+https://gtr99d.com,1,1,1,1,,,200,,989823,590,GTR99,https://gtr99d.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/eventclubtips
+https://gmp99.net,1,1,1,1,,,200,,874684,10353,Gempak99,https://gmp99.net/api/v1/index.php,Invalid Action!,3.1,,telegram:t.me/s/gempakofficial
+https://gtr99f.com,1,1,1,1,,,200,,989823,590,GTR99,https://gtr99f.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/eventclubtips
+https://harimau333.site,0,0,0,0,reachable,ssl,,,,,,,,0.5,"SSLError: HTTPSConnectionPool(host='harimau333.site', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_",telegram:t.me/s/harimau333
+https://guinnessworld88.com,1,1,1,1,,,200,,637109,73010,GuinnessWorld88,https://guinnessworld88.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/guinnessworldcasino
+https://happytiger11.com,1,1,1,1,,,200,,635128,72009,HappyTiger11,https://happytiger11.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/ilikebet918wallet
+https://hari2menang3.com,1,1,1,1,,,200,,830157,468,Hari2Menang,https://hari2menang3.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/hari2menangchannel
+https://i1winslot.co,1,1,0,0,merchant,parse_failed,200,,22484,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/i1winslotmy
+https://harimau333.club,1,1,1,1,,,200,,724172,1861,HARIMAU333,https://harimau333.club/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/harimau333
+https://harimau333.online,1,1,1,1,,,200,,724172,1861,HARIMAU333,https://harimau333.online/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/harimau333
+https://hongkongclub9.com,1,1,0,0,merchant,parse_failed,200,,105686,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/gangtaisaishi
+https://harrypotter88.live,1,1,1,1,,,200,,631857,72001,HarryPotter88,https://harrypotter88.live/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/kungfucat777_channel
+https://harta33a.com,1,1,1,1,,,200,,753678,725,Harta33,https://harta33a.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/fly99channel
+https://i8malaysia.xyz,1,1,1,1,,,200,,644954,30792,i8Malaysia,https://i8malaysia.xyz/api/v1/index.php,Invalid Action!,1.6,,telegram:t.me/s/freewallet4you
+https://intermiami88.com,1,1,0,0,merchant,parse_failed,200,,21613,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/intermiami888
+https://ikaya28.org,1,1,1,1,,,200,,636430,42,iKaya28,https://ikaya28.org/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/ikaya28team
+https://imaju88d.com,1,1,1,1,,,200,,868631,508,iMaju88,https://imaju88d.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/itngfree
+https://i1winslotd.com,1,1,1,1,,,200,,1097730,10884,i1WINSLOT,https://i1winslotd.com/api/v1/index.php,Invalid Action!,2.7,,telegram:t.me/s/i1winslotmy
+https://imenang.co,1,1,1,1,,,200,,694702,378,iMenang,https://imenang.co/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/itngfree
+https://ione8sg.com,1,1,1,0,api,api_not_json,200,,724438,10010,iOne8,https://ione8sg.com/api/v1/index.php,HTTP 200 non-JSON,1.9,,telegram:t.me/s/ione8sg2group
+https://ipayung44.com,1,1,1,1,,,200,,848198,10065,iPAYUNG44,https://ipayung44.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ipayung44
+https://ipayung44.org,1,1,1,1,,,200,,848198,10065,iPAYUNG44,https://ipayung44.org/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/ipayung44
+https://ipayung44.app,1,1,1,1,,,200,,848198,10065,iPAYUNG44,https://ipayung44.app/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/ipayung44
+https://iplay9sg.net,1,1,1,1,,,200,,669781,10803,iPlay9sg,https://iplay9sg.net/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/iplay9sgchannel
+https://ijaya88h5api.site,0,0,0,0,reachable,ssl,,,,,,,,5.6,"SSLError: HTTPSConnectionPool(host='ww38.ijaya88h5api.site', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of prot",telegram:t.me/s/icuci88channel
+https://jayakaya99.vip,1,1,1,1,,,200,,675430,10910,JayaKaya99,https://jayakaya99.vip/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/jayakaya99
+https://jd88.asia,1,1,1,1,,,200,,848843,1703,JD88,https://jd88.asia/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/walletfree2u
+https://jd99b.com,1,1,1,1,,,200,,962518,10488,JD99,https://jd99b.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/idongsetiaphari
+https://j8club.live,1,1,1,1,,,200,,821048,10207,J8Club,https://j8club.live/api/v1/index.php,Invalid Action!,3.0,,telegram:t.me/s/j8clubmyr
+https://jd99f.com,1,1,1,1,,,200,,962518,10488,JD99,https://jd99f.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/idongsetiaphari
+https://jdslot88.xyz,1,1,1,1,,,200,,992957,30170,JDSlot88,https://jdslot88.xyz/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/judy88channel
+https://jeslot88.xyz,1,1,1,1,,,200,,1073146,728,JESLOT88 ⚡⚡⚡ 博彩速递,https://jeslot88.xyz/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/jeslot88
+https://jqkslot.co,1,1,0,0,merchant,parse_failed,200,,100975,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/jqk28
+https://jclub99.io,1,1,1,1,,,200,,1016954,250,JClub99,https://jclub99.io/api/v1/index.php,Invalid Action!,4.1,,telegram:t.me/s/jclub99
+https://judikiss88.asia,1,1,0,0,merchant,parse_failed,200,,18755,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/judikiss88wallet
+https://jibet881.com,1,1,1,1,,,200,,1012326,1825,JIBET,https://jibet881.com/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/jibet88_au
+https://jqkslot.com,1,0,0,0,homepage,http_429,429,,,,,,,0.8,HTTPError: 429 Client Error: Too Many Requests for url: https://domains.atom.com/lpd/name/jqkslot.com,telegram:t.me/s/jqk28
+https://jewelnns.cc,1,1,1,1,,,200,,681092,1292,JEWEL996,https://jewelnns.cc/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/phoenixx168
+https://judigang88.com,1,1,1,1,,,200,,635819,73017,JudiGang88,https://judigang88.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ikaya28team
+https://judikiss88b.com,1,1,1,1,,,200,,1040561,217,JUDIKISS88,https://judikiss88b.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/judikiss88wallet
+https://jom333.net,1,1,1,1,,,200,,747304,60665,JOM33,https://jom333.net/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/jom333myr
+https://judiwin188.com,1,1,1,1,,,200,,634499,73034,JudiWin188,https://judiwin188.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ikaya28team
+https://k4club.asia,1,1,1,1,,,200,,913072,10268,K4Club,https://k4club.asia/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/k4clubb
+https://kaki21.co,1,1,1,1,,,200,,919356,1311,KAKI21,https://kaki21.co/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/kaki21judi
+https://kaki21.net,1,1,1,1,,,200,,919356,1311,KAKI21,https://kaki21.net/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/kaki21judi
+https://jutaboy.io,1,1,1,1,,,200,,818860,909,JUTABOY,https://jutaboy.io/api/v1/index.php,Invalid Action!,4.0,,telegram:t.me/s/umigroup_88
+https://kasi777.com,1,1,1,1,,,200,,750633,1566,KASICUCI,https://kasi777.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/kasicuci7
+https://k4club.net,1,1,1,1,,,200,,913072,10268,K4Club,https://k4club.net/api/v1/index.php,Invalid Action!,4.2,,telegram:t.me/s/k4clubb
+https://kash55.com,1,1,1,1,,,200,,1413235,60967,KASH55,https://kash55.com/api/v1/index.php,Invalid Action!,3.8,,telegram:t.me/s/kash55channel
+https://kasi777.org,1,1,1,1,,,200,,750633,1566,KASICUCI,https://kasi777.org/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/kasicuci7
+https://kasi777.net,1,1,1,1,,,200,,750633,1566,KASICUCI,https://kasi777.net/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/kasicuci7
+https://kasi777.online,1,1,1,1,,,200,,750633,1566,KASICUCI,https://kasi777.online/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/kasicuci7
+https://kaya4u.io,1,1,0,0,merchant,parse_failed,200,,1056,,,,,0.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/crownplusguinea
+https://kasi777.xyz,1,1,1,1,,,200,,750633,1566,KASICUCI,https://kasi777.xyz/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/kasicuci7
+https://kayagaya.co,1,1,0,0,merchant,parse_failed,200,,18813,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/kayagayamy
+https://kasicuci7.net,1,1,1,1,,,200,,750633,1566,KASICUCI,https://kasicuci7.net/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/kasicuci7
+https://kawanku.vip,1,1,1,1,,,200,,763385,10275,Kawanku33,https://kawanku.vip/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/kawanku33
+https://kasicuci7.online,1,1,1,1,,,200,,750633,1566,KASICUCI,https://kasicuci7.online/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/kasicuci7
+https://kedai888.asia,1,1,0,0,merchant,parse_failed,200,,18657,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/kedai888_my
+https://kayabet88.com,1,1,0,0,merchant,parse_failed,200,,4797,,,,,1.6,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/bstar_club
+https://kawanku.site,1,1,1,1,,,200,,763385,10275,Kawanku33,https://kawanku.site/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/auraasia_official
+https://kayagayab.com,1,1,1,1,,,200,,1018626,10979,KayaGaya,https://kayagayab.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/kayagayamy
+https://kayagayay.com,1,1,1,1,,,200,,1018626,10979,KayaGaya,https://kayagayay.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/kayagayamy
+https://kejapjudi2.com,1,1,1,1,,,200,,1028527,788,KEJAP JUDI 即时博彩,https://kejapjudi2.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/kejapjudi
+https://kejapjudi3.com,1,1,1,1,,,200,,1028527,788,KEJAP JUDI 即时博彩,https://kejapjudi3.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/kejapjudi
+https://kk99b.com,1,1,1,1,,,200,,1107705,616,KK99,https://kk99b.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/ptk99my
+https://kedai888v.com,1,1,1,1,,,200,,1079969,10978,Kedai888,https://kedai888v.com/api/v1/index.php,Invalid Action!,3.3,,telegram:t.me/s/kedai888my
+https://koi8sg.vip,1,1,1,1,,,200,,683861,52,KOI8,https://koi8sg.vip/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/koi8sgonline
+https://kedaimesin1.com,1,1,1,1,,,200,,1248261,709,KedaiMesin,https://kedaimesin1.com/api/v1/index.php,Invalid Action!,4.7,,telegram:t.me/s/walletfree2u
+https://kedaimesin999.com,1,1,1,1,,,200,,1248261,709,KedaiMesin,https://kedaimesin999.com/api/v1/index.php,Invalid Action!,5.5,,telegram:t.me/s/kedaimesin
+https://krg88.world,1,1,1,1,,,200,,1138874,886,KingGroup88,https://krg88.world/api/v1/index.php,Invalid Action!,2.7,,telegram:t.me/s/kkinggroup88
+https://kuatcuci.fun,1,1,1,1,,,200,,870262,10423,KuatCuci,https://kuatcuci.fun/api/v1/index.php,Invalid Action!,3.4,,telegram:t.me/s/kuatcuci_66
+https://krg88.site,1,1,1,1,,,200,,1138874,886,KingGroup88,https://krg88.site/api/v1/index.php,Invalid Action!,4.3,,telegram:t.me/s/kkinggroup88
+https://kuching88.online,1,1,1,1,,,200,,634804,73031,Kuching88,https://kuching88.online/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ikaya28team
+https://kuatcuci.vip,1,1,1,1,,,200,,870262,10423,KuatCuci,https://kuatcuci.vip/api/v1/index.php,Invalid Action!,4.5,,telegram:t.me/s/kuatcuci_66
+https://kuatcuci66.net,1,1,1,1,,,200,,869895,10423,KuatCuci,https://kuatcuci66.net/api/v1/index.php,Invalid Action!,4.3,,telegram:t.me/s/kuatcuci_66
+https://laju7.club,1,1,1,1,,,200,,773792,90062,LAJU8 Official Malaysia,https://laju7.club/api/v1/index.php,Invalid Action!,4.0,,telegram:t.me/s/laju8_group
+https://laju7.live,1,1,1,1,,,200,,773792,90062,LAJU8 Official Malaysia,https://laju7.live/api/v1/index.php,Invalid Action!,4.0,,telegram:t.me/s/laju8_group
+https://laju7.vip,1,1,1,1,,,200,,773792,90062,LAJU8 Official Malaysia,https://laju7.vip/api/v1/index.php,Invalid Action!,3.9,,telegram:t.me/s/laju8_group
+https://laju8.app,1,1,1,1,,,200,,773792,90062,LAJU8 Official Malaysia,https://laju8.app/api/v1/index.php,Invalid Action!,3.8,,telegram:t.me/s/laju8_group
+https://lambor68.com,1,1,1,1,,,200,,664586,10833,Lambor68 (MYR),https://lambor68.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/fachai68686868
+https://liverpool888.asia,1,1,0,0,merchant,parse_failed,200,,21628,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/liverpooll_888
+https://laju8.space,1,1,1,1,,,200,,773792,90062,LAJU8 Official Malaysia,https://laju8.space/api/v1/index.php,Invalid Action!,3.4,,telegram:t.me/s/laju8_group
+https://lembu99e.com,1,1,1,1,,,200,,672737,10541,Lembu99,https://lembu99e.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/lembu99channel
+https://lembu99d.com,1,1,1,1,,,200,,672737,10541,Lembu99,https://lembu99d.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/lembu99channel
+https://laju8.xyz,1,1,1,1,,,200,,773792,90062,LAJU8 Official Malaysia,https://laju8.xyz/api/v1/index.php,Invalid Action!,4.0,,telegram:t.me/s/laju8_group
+https://lembu99f.com,1,1,1,1,,,200,,672737,10541,Lembu99,https://lembu99f.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/lembu99channel
+https://liverpool888b.com,1,1,1,1,,,200,,975988,472,LIVERPOOL888 利物浦俱乐部,https://liverpool888b.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/liverpooll_888
+https://lucky555.cc,0,0,0,0,reachable,connection,,,,,,,,1.9,"InvalidSchema: No connection adapters were found for ""about:blank';\\n                window.location.pathname = \\""",telegram:t.me/s/walletfree2u
+https://lucky99a.com,1,1,1,1,,,200,,675216,10554,Lucky99,https://lucky99a.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/lucky99officialchannel
+https://lpkh1.store,1,1,1,0,api,api_not_json,200,,650977,1262,LEAP168,https://lpkh1.store/api/v1/index.php,HTTP 200 non-JSON,3.1,,telegram:t.me/s/leap168live24h
+https://luckybetasia1.vip,1,1,1,1,,,200,,1091550,839,LKB8 | LUCKYBET ASIA,https://luckybetasia1.vip/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/lkb8_channel
+https://main24.biz,1,1,0,0,merchant,parse_failed,200,,20524,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/main24my1
+https://lucky319.store,1,1,1,1,,,200,,1216603,10008,MrLucky88,https://lucky319.store/api/v1/index.php,Invalid Action!,3.6,,telegram:t.me/s/mrlucky88_official
+https://luffy55.com,1,1,1,1,,,200,,637798,72032,Luffy55,https://luffy55.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/kungfucat777_channel
+https://maju66.com,1,1,0,0,merchant,parse_failed,200,,81153,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/maju66official
+https://macau365au.com,1,1,1,1,,,200,,701977,201,Macau365,https://macau365au.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/macau365auewallet
+https://luckysuper7.com,1,1,1,1,,,200,,956732,50020,LUCKYSUPER,https://luckysuper7.com/api/v1/index.php,Invalid Action!,3.4,,telegram:t.me/s/chneasthom
+https://madani99a.com,1,1,1,1,,,200,,834217,30187,MADANI99,https://madani99a.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/mdn99chanel
+https://main24b.com,1,1,1,1,,,200,,1115267,10911,Main24,https://main24b.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/main24my1
+https://mancity1894.asia,1,1,0,0,merchant,parse_failed,200,,19303,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/mancity_channel1
+https://mamak24e.com,1,1,1,1,,,200,,1297605,180,MAMAK24,https://mamak24e.com/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/mamak_24
+https://mamak24f.com,1,1,1,1,,,200,,1297605,180,MAMAK24,https://mamak24f.com/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/mamak_24
+https://manu888.vip,1,1,0,0,merchant,parse_failed,200,,17709,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/manu888ewalllet
+https://mamak24s.com,1,1,1,1,,,200,,1297605,180,MAMAK24,https://mamak24s.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/mamak24wallet
+https://manu888e.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://manu888e.com/,telegram:t.me/s/manu888ewalllet
+https://mamak24z.com,1,1,0,0,merchant,parse_failed,200,,2291,,,,,2.5,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/mamak_24
+https://mancity1894b.com,1,1,1,1,,,200,,1030495,431,MANCITY1894 曼城俱乐部,https://mancity1894b.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/mancity_channel1
+https://maju66.club,1,1,1,1,,,200,,1211156,10961,MAJU66,https://maju66.club/api/v1/index.php,Invalid Action!,5.3,,telegram:t.me/s/walletfree2u
+https://mbs9.asia,1,1,1,1,,,200,,662273,627,MBS9,https://mbs9.asia/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/mbs9bigwin
+https://mari888.live,1,1,1,1,,,200,,633546,32,Mari888,https://mari888.live/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/mari888online
+https://mbs9vip.com,1,1,1,1,,,200,,662273,627,MBS9,https://mbs9vip.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/mbs9bigwin
+https://maxx66.net,1,1,1,0,api,api_not_json,200,,692865,900,MAXX66,https://maxx66.net/api/v1/index.php,HTTP 200 non-JSON,3.1,,telegram:t.me/s/maxx66livechannel
+https://mantap88a1.com,1,1,1,1,,,200,,825197,348,Mantap88,https://mantap88a1.com/api/v1/index.php,Invalid Action!,4.0,,telegram:t.me/s/auraasia_official
+https://mcd66.co,1,1,1,1,,,200,,832045,90105,McD66,https://mcd66.co/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ongmcd66
+https://mcd66.net,1,1,1,1,,,200,,832045,90105,McD66,https://mcd66.net/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/ongmcd66
+https://mdn99.fun,1,1,1,1,,,200,,672070,50863,MDN99,https://mdn99.fun/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/walletfree2u
+https://mcuci2.store,1,1,1,1,,,200,,827476,10786,M2CUCI,https://mcuci2.store/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/m2cuci2
+https://mekdi86888.com,1,1,1,1,,,200,,635347,73007,Mekdi86888,https://mekdi86888.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/guinnessworldcasino
+https://mickey88.asia,1,1,1,1,,,200,,683290,502,MICKEY88,https://mickey88.asia/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/mickey88group
+https://megakaya77.co,1,1,1,1,,,200,,933648,60373,Megakaya77,https://megakaya77.co/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/megakaya77premier
+https://megaboi.cc,1,1,1,1,,,200,,1274833,60097,MEGABOI,https://megaboi.cc/api/v1/index.php,Invalid Action!,3.3,,telegram:t.me/s/megaboi_official
+https://minion888.asia,1,1,0,0,merchant,parse_failed,200,,16256,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/minion888_wallet
+https://mickey88.vip,1,1,1,1,,,200,,683657,502,MICKEY88,https://mickey88.vip/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/mickey88group
+https://megaboi.co,1,1,1,1,,,200,,1275200,60097,MEGABOI,https://megaboi.co/api/v1/index.php,Invalid Action!,4.7,,telegram:t.me/s/megaboi_official
+https://miiibox8.com,1,1,1,1,,,200,,1037019,152,MiBox8,https://miiibox8.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/mibox08
+https://mixue8888.com,1,1,0,0,merchant,parse_failed,200,,18023,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/miixue888
+https://midasvault.casino,1,1,1,1,,,200,,676468,60020,MidasvaultCasino (AUD),https://midasvault.casino/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/midasvaultaus
+https://micky88.com,1,1,1,1,,,200,,683657,502,MICKEY88,https://micky88.com/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/mickey88group
+https://minion888b.com,1,1,1,1,,,200,,1102585,524,MINION888 小黄人俱乐部,https://minion888b.com/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/minion888_wallet
+https://minion888j.com,1,1,1,1,,,200,,1102585,524,MINION888 小黄人俱乐部,https://minion888j.com/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/minion888_wallet
+https://mkt8.org,1,1,1,1,,,200,,1150551,901,Mahkota8 皇冠博彩,https://mkt8.org/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/gk9_official
+https://mixue888a.com,1,1,1,1,,,200,,1080691,10888,Mixue888,https://mixue888a.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/miixue888
+https://monopoly88.net,1,1,1,1,,,200,,636098,73018,Monopoly88,https://monopoly88.net/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/guinnessworldcasino
+https://mrcoin88.info,1,1,1,1,,,200,,1125926,90026,Mrcoin88,https://mrcoin88.info/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/mrcoin88
+https://mrcoin88.io,1,1,1,1,,,200,,1125926,90026,Mrcoin88,https://mrcoin88.io/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/mrcoin88
+https://mrcoin88.live,1,1,1,1,,,200,,1125926,90026,Mrcoin88,https://mrcoin88.live/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/mrcoin88
+https://mrcoin88.me,1,1,1,1,,,200,,1125926,90026,Mrcoin88,https://mrcoin88.me/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/mrcoin88
+https://mrcoin88.net,1,1,1,1,,,200,,1125926,90026,Mrcoin88,https://mrcoin88.net/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/mrcoin88
+https://mratm88.one,1,1,1,1,,,200,,1081024,10307,MrATM88,https://mratm88.one/api/v1/index.php,Invalid Action!,4.4,,telegram:t.me/s/mratm88
+https://musangking8.online,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/msk8_official
+https://mrcoin88.org,1,1,1,1,,,200,,1125926,90026,Mrcoin88,https://mrcoin88.org/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/mrcoin88
+https://musangking8.vip,1,1,0,0,merchant,parse_failed,200,,709,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/msk8_official
+https://mrcoin88.vip,1,1,1,1,,,200,,1125926,90026,Mrcoin88,https://mrcoin88.vip/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/mrcoin88
+https://n2win.asia,1,1,0,0,merchant,parse_failed,200,,6992,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/n2winwalletmy
+https://mrdiy88.com,1,1,1,1,,,200,,637372,72029,MR.DIY,https://mrdiy88.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/ilikebet918wallet
+https://mulia668.online,1,1,1,1,,,200,,873845,90011,Mulia668,https://mulia668.online/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/mulia668
+https://myhome666.live,1,1,1,1,,,200,,635187,72011,MyHome666,https://myhome666.live/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/kungfucat777_channel
+https://mydi96.com,1,1,1,1,,,200,,1088635,90006,MyJudi96 | Free Credit No Deposit Casino 2025,https://mydi96.com/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/myjudi96
+https://niugini88.com,1,1,0,0,merchant,parse_failed,200,,1023,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/niuginiofficial
+https://nasib888.vip,1,1,1,1,,,200,,764608,90033,NASIB888,https://nasib888.vip/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/nasib888_official
+https://mrlky88.live,1,1,1,1,,,200,,1216603,10008,MrLucky88,https://mrlky88.live/api/v1/index.php,Invalid Action!,4.4,,telegram:t.me/s/mrlucky88_official
+https://ncell66.net,1,1,1,1,,,200,,801620,50615,NCELL66,https://ncell66.net/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/ncell66npofficial
+https://nintendo88.com,1,1,1,1,,,200,,637322,73024,Nintendo88,https://nintendo88.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/guinnessworldcasino
+https://nagaworld96kh.vip,1,1,1,1,,,200,,806028,10457,NagaWorld96,https://nagaworld96kh.vip/api/v1/index.php,Invalid Action!,3.8,,telegram:t.me/s/tosmerl_96
+https://nova9sg1.me,1,1,1,1,,,200,,871244,146,NOVA9 Singapore,https://nova9sg1.me/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/nova9sg
+https://nsw777.online,1,1,1,1,,,200,,750625,60587,NSW777,https://nsw777.online/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/nsw777channel
+https://on9au.net,1,1,1,1,,,200,,955722,10385,ON9 AUS,https://on9au.net/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/on9ausc
+https://ong24c.com,1,1,1,1,,,200,,866800,90025,ONG24,https://ong24c.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/ong24_channel
+https://okwn33.net,1,1,1,1,,,200,,751292,10548,OKWIN33,https://okwn33.net/api/v1/index.php,Invalid Action!,2.7,,telegram:t.me/s/okwin33khchannel
+https://ong24d.com,1,1,1,1,,,200,,866800,90025,ONG24,https://ong24d.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/ong24_channel
+https://panas777.com,1,1,0,0,merchant,parse_failed,200,,8930,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/panas777officialchannel
+https://panas777.fun,1,1,0,0,merchant,parse_failed,200,,207959,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/panas777officialchannel
+https://ongmari77.cc,1,1,1,1,,,200,,886495,90109,OngMari77,https://ongmari77.cc/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/ongmari77official
+https://online9aus.com,1,1,1,1,,,200,,955722,10385,ON9 AUS,https://online9aus.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/on9ausc
+https://padubet88.club,1,1,1,1,,,200,,1003536,137,Padu Bet,https://padubet88.club/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/padubet
+https://panda95.co,1,1,1,1,,,200,,808846,85,Panda95,https://panda95.co/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/pda95cnl
+https://padu33.net,1,1,1,1,,,200,,1177843,10547,PADU33,https://padu33.net/api/v1/index.php,Invalid Action!,3.8,,telegram:t.me/s/padu3333
+https://patek99a.com,1,1,1,1,,,200,,1018065,160,PTK99,https://patek99a.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/ptk99my
+https://patek99b.com,1,1,1,1,,,200,,1018065,160,PTK99,https://patek99b.com/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/ptk99my
+https://padu33.co,1,1,1,1,,,200,,1177843,10547,PADU33,https://padu33.co/api/v1/index.php,Invalid Action!,4.0,,telegram:t.me/s/padu3333
+https://pm89.biz,1,1,0,0,merchant,parse_failed,200,,20806,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/pm89_malaysia
+https://psg888.co,1,1,0,0,merchant,parse_failed,200,,18347,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/pssg888
+https://pc8.online,1,1,1,1,,,200,,914536,10277,PAKARCUCI8,https://pc8.online/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/pakarcuci8
+https://petron777c.com,1,1,1,1,,,200,,778779,30162,PETRON777,https://petron777c.com/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/petron777official
+https://phx168.cc,1,1,1,0,api,api_not_json,200,,690564,1223,PHOENIX168,https://phx168.cc/api/v1/index.php,HTTP 200 non-JSON,2.0,,telegram:t.me/s/phoenixx168
+https://psg888b.com,1,1,1,1,,,200,,1037410,622,PSG888 | 巴黎圣日耳曼俱乐部,https://psg888b.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/pssg888
+https://ramly888.asia,1,1,0,0,merchant,parse_failed,200,,17842,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/ramly_888
+https://pm89a.com,1,1,1,1,,,200,,1136774,387,POPMART89,https://pm89a.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/pm89_malaysia
+https://ptk99a.com,1,1,1,1,,,200,,1018065,160,PTK99,https://ptk99a.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/ptk99my
+https://ptk99b.com,1,1,1,1,,,200,,1018065,160,PTK99,https://ptk99b.com/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/ptk99my
+https://ptk99d.com,1,1,1,1,,,200,,1018065,160,PTK99,https://ptk99d.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/ptk99my
+https://r88games.com,1,1,0,0,merchant,parse_failed,200,,200440,,,,,2.4,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/jclub99
+https://ramly888b.com,1,1,1,1,,,200,,1079174,570,RAMLY888,https://ramly888b.com/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/ramly_888
+https://ramly888g.com,1,1,1,1,,,200,,1079174,570,RAMLY888,https://ramly888g.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/ramly_888
+https://rempit33.online,1,1,1,1,,,200,,731355,1090,REMPIT33,https://rempit33.online/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/rempit33
+https://richman888.co,1,1,0,0,merchant,parse_failed,200,,18668,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/richmann_888
+https://rempit33.shop,1,1,1,1,,,200,,731355,1090,REMPIT33,https://rempit33.shop/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/rempit33
+https://rmadrid888.asia,1,1,0,0,merchant,parse_failed,200,,19268,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/rmadrid888wallet
+https://reze88.online,1,1,1,1,,,200,,868937,90037,REZE88,https://reze88.online/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/reze88_gametip
+https://rezeki44.online,1,1,1,1,,,200,,799702,30161,REZEKI44,https://rezeki44.online/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/tng66ewallet
+https://royal24.asia,1,1,0,0,merchant,parse_failed,200,,17593,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/royal24_my
+https://rezeki777.live,1,1,1,1,,,200,,904458,50303,REZEKI777,https://rezeki777.live/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/rezeki777casino
+https://richman888a.com,1,1,1,1,,,200,,1017335,507,RICHMAN888 大富豪娱乐城,https://richman888a.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/richmann_888
+https://richman888b.com,1,1,1,1,,,200,,1017335,507,RICHMAN888 大富豪娱乐城,https://richman888b.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/richmann_888
+https://rolex918.com,1,1,1,1,,,200,,683736,118,BosskuCuci,https://rolex918.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/bosskucuci
+https://rtp2day-sg.com,1,1,0,0,merchant,parse_failed,200,,181126,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/oneplayno1
+https://rolex918.net,1,1,1,1,,,200,,683736,118,BosskuCuci,https://rolex918.net/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/bosskucuci
+https://sepak8888.com,1,1,0,0,merchant,parse_failed,200,,19577,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/sepak888my
+https://royal24a.com,1,1,1,1,,,200,,1218554,10850,ROYAL24,https://royal24a.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/royal24my
+https://sbk21.club,1,1,1,1,,,200,,783889,1180,SBK21,https://sbk21.club/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/sbk21
+https://royal711.co,1,1,1,1,,,200,,901472,78,Royal711,https://royal711.co/api/v1/index.php,Invalid Action!,3.4,,telegram:t.me/s/ry7xx
+https://sgd88.com,1,1,1,1,,,200,,740394,248,SGD88,https://sgd88.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/sgd88grp
+https://sepak888y.com,1,1,1,1,,,200,,1019677,10974,Sepak888,https://sepak888y.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/sepak888my
+https://scrplay88.com,1,1,1,1,,,200,,1060203,193,SCRplay,https://scrplay88.com/api/v1/index.php,Invalid Action!,4.1,,telegram:t.me/s/scrplay
+https://siti88.live,1,1,1,1,,,200,,1074525,10856,Siti88,https://siti88.live/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/officialsiti88
+https://singplay777.net,1,1,1,1,,,200,,678050,30675,SINGPLAY777,https://singplay777.net/api/v1/index.php,Invalid Action!,3.1,,telegram:t.me/s/singplay777channel
+https://slotwin24.co,1,1,0,0,merchant,parse_failed,200,,18533,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/slotwin24my
+https://siti88.me,1,1,1,1,,,200,,1074525,10856,Siti88,https://siti88.me/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/officialsiti88
+https://siti88.vip,1,1,1,1,,,200,,1074525,10856,Siti88,https://siti88.vip/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/officialsiti88
+https://skybet7788.com,1,1,1,1,,,200,,650738,72040,SKYBET7788,https://skybet7788.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ilikebet918wallet
+https://slotwin24b.com,1,1,1,1,,,200,,1127762,10955,SLOTWIN24,https://slotwin24b.com/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/slotwin24my
+https://slotwin24d.com,1,1,1,1,,,200,,1127762,10955,SLOTWIN24,https://slotwin24d.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/slotwin24my
+https://siti88.org,1,1,1,1,,,200,,1074525,10856,Siti88,https://siti88.org/api/v1/index.php,Invalid Action!,4.1,,telegram:t.me/s/officialsiti88
+https://spdau.net,1,1,1,1,,,200,,721820,50173,SPADEAU,https://spdau.net/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/spadeaud
+https://stitch888.co,1,1,0,0,merchant,parse_failed,200,,19726,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/stitch888b
+https://spin99d.com,1,1,1,1,,,200,,719355,603,Spin99,https://spin99d.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/freewallet4you
+https://spadeclub8sg.com,1,1,1,1,,,200,,1880,77,Spadeclub88sg,https://spadeclub8sg.com/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/sgmegawin888
+https://ss9sg2.com,1,1,1,1,,,200,,867316,438,SS9,https://ss9sg2.com/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/ss9sg_official
+https://suka2cc.info,1,1,1,1,,,200,,1143819,10627,Suka2cuci (MYR),https://suka2cc.info/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/suka2cuci
+https://stitch888a.com,1,1,1,1,,,200,,1078622,10990,Stitch888,https://stitch888a.com/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/stitch888b
+https://suka2cc.io,1,1,1,1,,,200,,1143819,10627,Suka2cuci (MYR),https://suka2cc.io/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/suka2cuci
+https://syokwin.co,1,1,0,0,merchant,parse_failed,200,,19620,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/syokwinmy
+https://syarikat4u.com,1,1,0,0,merchant,parse_failed,200,,170985,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/cili88_channel
+https://suka2cuci.fun,1,1,1,0,api,api_not_json,200,,1143819,10627,Suka2cuci (MYR),https://suka2cuci.fun/api/v1/index.php,HTTP 200 non-JSON,2.4,,telegram:t.me/s/suka2cuci
+https://tekan88b.com,0,0,0,0,reachable,ssl,,,,,,,,0.2,"SSLError: HTTPSConnectionPool(host='tekan88b.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable",telegram:t.me/s/tekan88channel
+https://squeenvip.net,1,1,1,1,,,200,,874546,90022,SqueenVIP | The Home of VIP Players,https://squeenvip.net/api/v1/index.php,Invalid Action!,4.2,,telegram:t.me/s/squeenvipofficial
+https://syokcuci66.com,1,1,1,1,,,200,,636494,73003,SyokCuci66,https://syokcuci66.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/ikaya28team
+https://tealive88.live,1,1,1,1,,,200,,730848,30530,Tealive88,https://tealive88.live/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/tng66ewallet
+https://syokwina.com,1,1,1,1,,,200,,1093654,10977,SyokWin,https://syokwina.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/syokwinmy
+https://top1au.com,1,1,1,1,,,200,,791063,10013,Top1,https://top1au.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/top1au_channel
+https://topcity99.com,1,1,0,0,merchant,parse_failed,200,,283138,,,,,1.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/topcity99
+https://tupaiking.co,1,1,1,1,,,200,,836262,10249,Tupaiking,https://tupaiking.co/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/tupaiking1
+https://tekan88.net,0,0,0,0,reachable,ssl,,,,,,,,5.1,"SSLError: HTTPSConnectionPool(host='tekan88.net', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.",telegram:t.me/s/tekan88channel
+https://tupaiking.net,1,1,1,1,,,200,,836262,10249,Tupaiking,https://tupaiking.net/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/tupaiking1
+https://uefa888.biz,1,1,0,0,merchant,parse_failed,200,,18176,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/ueffa888
+https://tupaiking.vip,1,1,1,1,,,200,,836262,10249,Tupaiking,https://tupaiking.vip/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/tupaiking1
+https://tigerslot888a.com,0,0,0,0,reachable,ssl,,,,,,,,5.5,"SSLError: HTTPSConnectionPool(host='ww38.tigerslot888a.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of prot",telegram:t.me/s/nak99channel
+https://uefa888b.com,1,1,1,1,,,200,,1031874,599,UEFA888 欧洲足联,https://uefa888b.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/ueffa888
+https://ufc9sg.net,1,1,1,1,,,200,,642487,539,UFC9,https://ufc9sg.net/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/ufc_sg99
+https://uefa888h.com,1,1,1,1,,,200,,1031874,599,UEFA888 欧洲足联,https://uefa888h.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ueffa888
+https://twcbet.com,1,1,1,0,api,api_not_json,200,,1003916,216,TWCMY,https://twcbet.com/api/v1/index.php,HTTP 200 non-JSON,2.8,,telegram:t.me/s/panas777officialchannel
+https://ufcclub44.pro,1,1,1,1,,,200,,977717,90035,UFCCLUB44,https://ufcclub44.pro/api/v1/index.php,Invalid Action!,2.5,,telegram:t.me/s/ufcclub44
+https://v6aus.store,0,0,0,0,reachable,connection,,,,,,,,1.1,"ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",telegram:t.me/s/v6betauschannel
+https://vag888.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://vag888.com/,telegram:t.me/s/vag888official
+https://uu88charlie.com,1,1,1,1,,,200,,950012,11103,UU88 | DigiNova,https://uu88charlie.com/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/uu88sg
+https://ufcsg9.com,1,1,1,1,,,200,,642854,539,UFC9,https://ufcsg9.com/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/ufc_sg99
+https://uu88beta.com,1,1,1,1,,,200,,950012,11103,UU88 | DigiNova,https://uu88beta.com/api/v1/index.php,Invalid Action!,3.2,,telegram:t.me/s/uu88sg
+https://uu88luck.com,1,1,1,1,,,200,,949645,11103,UU88 | DigiNova,https://uu88luck.com/api/v1/index.php,Invalid Action!,2.8,,telegram:t.me/s/uu88sg
+https://wau888.co,1,1,0,0,merchant,parse_failed,200,,20041,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/wau888my
+https://warcraft888.net,1,1,1,1,,,200,,636360,72018,WarCraft,https://warcraft888.net/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ilikebet918wallet
+https://vip2cuci.asia,1,1,1,0,api,api_not_json,200,,1076919,10904,VIP2CUCI - Trusted Online Casino Malaysia,https://vip2cuci.asia/api/v1/index.php,HTTP 200 non-JSON,2.5,,telegram:t.me/s/vip2cuci
+https://wau888j.com,1,1,1,1,,,200,,1082308,10975,Wau888,https://wau888j.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/wau888my
+https://wau888v.com,1,1,1,1,,,200,,1082308,10975,Wau888,https://wau888v.com/api/v1/index.php,Invalid Action!,2.4,,telegram:t.me/s/wau888my
+https://x4bet.net,1,1,0,0,merchant,parse_failed,200,,2805,,,,,0.6,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/x4bet_sg
+https://won99b.com,1,1,1,1,,,200,,762755,10691,Won99,https://won99b.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/won99channel
+https://wealthclub33.site,1,1,1,1,,,200,,779462,332,WealthClub33,https://wealthclub33.site/api/v1/index.php,Invalid Action!,3.9,,telegram:t.me/s/wealthclubvip33
+https://xturn33.online,1,1,1,1,,,200,,983271,10094,Xturn33 AUS Online Pokies,https://xturn33.online/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/xturn33wallet
+https://wealthclub33.store,1,1,1,1,,,200,,779462,332,WealthClub33,https://wealthclub33.store/api/v1/index.php,Invalid Action!,4.0,,telegram:t.me/s/auraasia_official
+https://xturn331.vip,1,1,1,1,,,200,,983271,10094,Xturn33 AUS Online Pokies,https://xturn331.vip/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/xturn33wallet
+https://xturn333.vip,1,1,1,1,,,200,,983271,10094,Xturn33 AUS Online Pokies,https://xturn333.vip/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/xturn33wallet
+https://xturn334.vip,1,1,1,1,,,200,,983271,10094,Xturn33 AUS Online Pokies,https://xturn334.vip/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/xturn33wallet
+https://xturn33aud.com,1,1,1,1,,,200,,983271,10094,Xturn33 AUS Online Pokies,https://xturn33aud.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/xturn33wallet
+https://xturn33aud.net,1,1,1,1,,,200,,983271,10094,Xturn33 AUS Online Pokies,https://xturn33aud.net/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/xturn33wallet
+https://youwin777au.com,1,1,1,1,,,200,,706267,60563,YouWin777,https://youwin777au.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/iclub365aud
+https://xturn33bet.com,1,1,1,1,,,200,,983271,10094,Xturn33 AUS Online Pokies,https://xturn33bet.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/xturn33wallet
+https://zus888z1.com,1,1,1,1,,,200,,749736,1312,ZUS888,https://zus888z1.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/cuci21official
+https://vip2cuci.me,0,0,0,0,reachable,timeout,,,,,,,,15.1,"ReadTimeout: HTTPSConnectionPool(host='vip2cuci-online.my', port=443): Read timed out. (read timeout=15)",telegram:t.me/s/vip2cuci
+https://topvip.co,0,0,0,0,reachable,other,,,,,,,,26.1,TooManyRedirects: Exceeded 30 redirects.,telegram:t.me/s/daraz33nepal
+https://dolphinreef666.com,1,1,1,1,,,200,,628710,71027,DolphinReef666,https://dolphinreef666.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/freeandtrustwallet
+https://doctorjudi.com,1,1,1,1,,,200,,873318,401,DoktorJudi,https://doctorjudi.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/doktorjudi88
+https://bonusbear88.com,1,1,1,1,,,200,,635133,72016,BonusBear88,https://bonusbear88.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/bonusbear88_trusted
+https://club33.online,1,1,1,1,,,200,,1457940,50609,CLUB33,https://club33.online/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/club33offical
+https://alibet99.net,1,1,1,0,api,api_not_json,200,,828100,772,ETIQA33,https://alibet99.net/api/v1/index.php,HTTP 404 non-JSON,2.4,,telegram:t.me/s/alibetonline
+https://freejudi.com,1,1,0,0,merchant,parse_failed,200,,182535,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/i2cuci
+https://captain918.net,1,1,1,1,,,200,,636398,72026,Captain918,https://captain918.net/api/v1/index.php,Invalid Action!,3.2,,telegram:t.me/s/bonusbear88_trusted
+https://gangcuci.net,1,1,1,1,,,200,,741027,10607,GANGCUCI,https://gangcuci.net/api/v1/index.php,Invalid Action!,1.6,,telegram:t.me/s/gangcuci
+https://fengshen668.com,1,1,1,1,,,200,,631820,71033,FengShen668,https://fengshen668.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/freeandtrustwallet
+https://ge88sg.vip,1,1,1,1,,,200,,696769,10151,GE88 | Safe And Best To Play,https://ge88sg.vip/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/ge88sgonline
+https://greatblue888.com,1,1,1,1,,,200,,634972,72021,GreatBlue,https://greatblue888.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/bonusbear88_trusted
+https://hh888hk.org,1,1,1,1,,,200,,879455,10619,港望娛樂 HH888HK,https://hh888hk.org/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/hh888hksupervip
+https://hh888hk.shop,1,1,1,1,,,200,,879455,10619,港望娛樂 HH888HK,https://hh888hk.shop/api/v1/index.php,Invalid Action!,2.3,,telegram:t.me/s/hh888hksupervip
+https://i3cuci1.com,1,1,1,1,,,200,,958022,30868,I3CUCI,https://i3cuci1.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/i2cuci
+https://i3cuci2.com,1,1,1,1,,,200,,958022,30868,I3CUCI,https://i3cuci2.com/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/i2cuci
+https://i2cuci.vip,1,1,1,1,,,200,,967774,30863,i2CUCi,https://i2cuci.vip/api/v1/index.php,Invalid Action!,4.4,,telegram:t.me/s/i2cuci
+https://i2cuci1.com,1,1,1,1,,,200,,967774,30863,i2CUCi,https://i2cuci1.com/api/v1/index.php,Invalid Action!,4.4,,telegram:t.me/s/i2cuci
+https://i2cuci3.com,1,1,1,1,,,200,,967774,30863,i2CUCi,https://i2cuci3.com/api/v1/index.php,Invalid Action!,4.3,,telegram:t.me/s/i2cuci
+https://i2cuci2.com,1,1,1,1,,,200,,967774,30863,i2CUCi,https://i2cuci2.com/api/v1/index.php,Invalid Action!,4.4,,telegram:t.me/s/i2cuci
+https://i3cuci3.com,1,1,1,1,,,200,,958022,30868,I3CUCI,https://i3cuci3.com/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/i3cuci
+https://i3cuci4.com,1,1,1,1,,,200,,958022,30868,I3CUCI,https://i3cuci4.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/i3cuci
+https://i4cuci1.com,1,1,1,1,,,200,,983792,30869,I4CUCI,https://i4cuci1.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/i4cuci
+https://iceland888.com,1,1,1,1,,,200,,634702,72020,IceLand888,https://iceland888.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/skybet7788
+https://l1nq.com,1,1,0,0,merchant,parse_failed,200,,120509,,,,,0.2,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/harbour1one
+https://i4cuci2.com,1,1,1,1,,,200,,983792,30869,I4CUCI,https://i4cuci2.com/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/i4cuci
+https://i4cuci3.com,1,1,1,1,,,200,,983792,30869,I4CUCI,https://i4cuci3.com/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/i4cuci
+https://jomcuci33.vip,1,1,1,1,,,200,,629340,71010,JomCuci,https://jomcuci33.vip/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/freeandtrustwallet
+https://i4cuci4.com,1,1,1,1,,,200,,983792,30869,I4CUCI,https://i4cuci4.com/api/v1/index.php,Invalid Action!,3.1,,telegram:t.me/s/i4cuci
+https://kawasaki88.live,1,1,1,1,,,200,,633968,72004,Kawasaki88,https://kawasaki88.live/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/skybet7788
+https://macluck9aus.site,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/macluck9aus
+https://luckyspinwin888.com,1,1,0,0,merchant,parse_failed,200,,82985,,,,,1.3,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/ek9pgk
+https://maucuci.xyz,1,1,1,1,,,200,,735907,10968,MauCuci,https://maucuci.xyz/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/maucuci18
+https://playozau.net,1,1,1,1,,,200,,786622,60172,PlayOZ,https://playozau.net/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/pozau1
+https://mmhkd.xyz,1,1,1,1,,,200,,896431,10725,MM Hong Kong,https://mmhkd.xyz/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/mmhkd88
+https://playboy44.net,1,1,1,1,,,200,,634147,72013,PlayBoy44,https://playboy44.net/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/bonusbear88_trusted
+https://mrsg8.pro,1,1,1,1,,,200,,710035,1806,MRSG8,https://mrsg8.pro/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/mrsg8_com
+https://robinhood777.com,1,1,1,1,,,200,,628997,71031,RobinHood777,https://robinhood777.com/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/freeandtrustwallet
+https://royal8sg.net,1,1,1,1,,,200,,740315,60589,Royal8sg,https://royal8sg.net/api/v1/index.php,Invalid Action!,1.9,,telegram:t.me/s/royal8sg
+https://sgdplay.cc,1,1,1,1,,,200,,795673,371,SGDPLAY168,https://sgdplay.cc/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/sgdplay1
+https://royal8sg.online,1,1,1,1,,,200,,740682,60589,Royal8sg,https://royal8sg.online/api/v1/index.php,Invalid Action!,2.7,,telegram:t.me/s/royal8sg
+https://sgd9.asia,1,1,1,1,,,200,,754861,377,SGD9,https://sgd9.asia/api/v1/index.php,Invalid Action!,2.7,,telegram:t.me/s/sgd9bigwin
+https://sgd9.net,1,1,1,1,,,200,,754861,377,SGD9,https://sgd9.net/api/v1/index.php,Invalid Action!,2.7,,telegram:t.me/s/sgd9channel
+https://sgd9.org,1,1,1,1,,,200,,754861,377,SGD9,https://sgd9.org/api/v1/index.php,Invalid Action!,2.6,,telegram:t.me/s/sgd9bigwin
+https://sgdplay.net,1,1,1,1,,,200,,795673,371,SGDPLAY168,https://sgdplay.net/api/v1/index.php,Invalid Action!,2.1,,telegram:t.me/s/sgdplay
+https://spinboomhk.com,1,1,0,0,merchant,parse_failed,200,,47871,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/hh888hksupervip
+https://sgdplay1.com,1,1,1,1,,,200,,795673,371,SGDPLAY168,https://sgdplay1.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/sgdplay1
+https://sgdplay2.com,1,1,1,1,,,200,,795673,371,SGDPLAY168,https://sgdplay2.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/sgdplay
+https://sgdplay168.com,1,1,1,1,,,200,,795673,371,SGDPLAY168,https://sgdplay168.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/sgdplay
+https://sgdplay.org,1,1,1,1,,,200,,795673,371,SGDPLAY168,https://sgdplay.org/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/sgdplay
+https://singbet8.vip,1,1,1,1,,,200,,676518,1892,SINGBET8,https://singbet8.vip/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/singbet8tryyourluck
+https://spinboomy.co,1,1,1,1,,,200,,899175,90065,轉爆娛樂 | SPINBOOMY,https://spinboomy.co/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/spinboomyvipchannel
+https://tmt1984.com,1,1,1,1,,,200,,636190,72024,TMT1984,https://tmt1984.com/api/v1/index.php,Invalid Action!,2.0,,telegram:t.me/s/skybet7788
+https://carrd.co,1,1,0,0,merchant,parse_failed,200,,25542,,,,,0.1,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/sands33channel
+https://seaworld99.com,1,1,1,1,,,200,,636007,72017,SeaWorld99,https://seaworld99.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/iceland888_wallet
+https://mamee55.live,1,1,1,1,,,200,,633510,72008,Mamee55,https://mamee55.live/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/iceland888_wallet
+https://blackpink4u.net,1,1,1,1,,,200,,630699,71026,BlackPink4u,https://blackpink4u.net/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/kofpartnership
+https://funkymonkey77.com,1,1,1,1,,,200,,634379,72007,FunkyMonkey77,https://funkymonkey77.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/iceland888_wallet
+https://fc88club.asia,1,1,1,1,,,200,,735097,10375,FC88Club,https://fc88club.asia/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/fc88club
+https://gengar47b.com,1,1,1,1,,,200,,697487,60218,WinStar47,https://gengar47b.com/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/gengar47channel
+https://pantas99.co,1,1,1,1,,,200,,731462,65,Pantas99 Online Casino,https://pantas99.co/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/pantas99c
+https://pantas99.net,1,1,1,1,,,200,,731462,65,Pantas99 Online Casino,https://pantas99.net/api/v1/index.php,Invalid Action!,2.9,,telegram:t.me/s/pantas99c
+https://otai77.co,1,1,1,1,,,200,,656505,297,OTAI77 MALAYSIA ONLINE CASINO,https://otai77.co/api/v1/index.php,Invalid Action!,3.0,,telegram:t.me/s/otai77my
+https://otai77.net,1,1,1,1,,,200,,656505,297,OTAI77 MALAYSIA ONLINE CASINO,https://otai77.net/api/v1/index.php,Invalid Action!,3.0,,telegram:t.me/s/otai77my
+https://rollsroyce66.com,1,1,1,1,,,200,,630565,71025,RollsRoyce66,https://rollsroyce66.com/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/rollsroyce66_wallet
+https://88group.club,1,1,0,0,merchant,parse_failed,200,,43717,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/auspokiesstation
+https://88group.store,1,1,0,0,merchant,parse_failed,200,,43717,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.,telegram:t.me/s/auspokiesstation
+https://88premiumvip.store,1,1,1,1,,,200,,830371,700,88PremiumVIP,https://88premiumvip.store/api/v1/index.php,Invalid Action!,1.7,,telegram:t.me/s/auspokiesstation
+https://goldkick881.site,1,1,1,1,,,200,,797830,50651,GOLDKICK88,https://goldkick881.site/api/v1/index.php,Invalid Action!,1.8,,telegram:t.me/s/freeauspokies2u
+https://popeye88.co,1,1,1,1,,,200,,887351,50590,POPOYE88,https://popeye88.co/api/v1/index.php,Invalid Action!,2.2,,telegram:t.me/s/auspokiesstation
+https://ir88.live,1,1,1,1,,,200,,885751,676,i-RICH88,https://ir88.live/api/v1/index.php,Invalid Action!,3.2,,telegram:t.me/s/freeauspokies2u
+https://redvortex8.vip,1,1,1,1,,,200,,867744,326,Redvortex8,https://redvortex8.vip/api/v1/index.php,Invalid Action!,3.0,,telegram:t.me/s/auspokiesstation

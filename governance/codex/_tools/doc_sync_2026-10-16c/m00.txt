@@ -1,0 +1,7 @@
+# Status note 2026-10-16 ~9:30am AEST — architect-v004: 2 changes await Gem (R-028); R-029
+
+Arbiter's R-028 (labelled 9:35am; rulings.md written 09:24:08): Imitator can't approve changes that widen its own role. Imitator withdrew its approval of two P1 (Roles) Architect instruction-architect/v004 changes at 9:24am: (1) the routing change, where non-checker proposals go to Imitator only instead of Gem or Imitator; (2) the A5c weekly cap of about 3 proposals. Both await Gem's confirmation. v004 stays LIVE (deployed 09:14:41) and nothing is rolled back; its other changes stand. Until Gem confirms, Architect may send any proposal to Gem, and the cap can't hold back a proposal Gem asks for or any safety fix. The verbatim text mirrored at 8:30am is unchanged.
+
+R-029: the 09:14 deployment was authorised by Gem's 9:13am words in Archivist's chat (the chat timestamp counts; Scrutineer to confirm). Archivist recorded those words after deploying, which is a record-keeping lapse. From now on, Gem's words are recorded before deploying.
+
+End of Status note 2026-10-16 ~9:30am AEST (R-028/R-029).

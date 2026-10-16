@@ -1,0 +1,86 @@
+[
+ {
+  "folder": "instruction-architect",
+  "version": "v002",
+  "source": "/workspace/governance/proposals/final-2026-10-04/architect-final.md",
+  "kind": "bot",
+  "name": "P1 (Roles) Architect"
+ },
+ {
+  "folder": "codex-keeper",
+  "version": "v002",
+  "source": "/workspace/governance/proposals/final-2026-10-04/archivist-final.md",
+  "kind": "bot",
+  "name": "P1 (Roles) Archivist"
+ },
+ {
+  "folder": "assessor",
+  "version": "v002",
+  "source": "/workspace/governance/proposals/final-2026-10-04/scorer-final.md",
+  "kind": "bot",
+  "name": "P1 (Checks) Scorer"
+ },
+ {
+  "folder": "clone-accuracy-validator",
+  "version": "v003",
+  "source": "/workspace/governance/proposals/final-2026-10-04/interrogator-final.md",
+  "kind": "bot",
+  "name": "P4 (ID) Interrogator"
+ },
+ {
+  "folder": "connector-steward",
+  "version": "v004",
+  "source": "/workspace/governance/proposals/final-2026-10-04/mediator-final.md",
+  "kind": "bot",
+  "name": "P5 (Ops) Mediator"
+ },
+ {
+  "folder": "comms-concierge",
+  "version": "v003",
+  "source": "/workspace/governance/proposals/final-2026-10-04/messenger-final.md",
+  "kind": "bot",
+  "name": "P5 (Ops) Messenger"
+ },
+ {
+  "folder": "codey",
+  "version": "v004",
+  "source": "/workspace/governance/proposals/final-2026-10-04/engineer-final.md",
+  "kind": "bot",
+  "name": "P6 (Work) Engineer"
+ },
+ {
+  "folder": "grok-bot",
+  "version": "v003",
+  "source": "/workspace/governance/proposals/final-2026-10-04/emissary-final.md",
+  "kind": "bot",
+  "name": "P6 (Work) Emissary"
+ },
+ {
+  "folder": "genesis-gang-god",
+  "version": "v002",
+  "source": "/workspace/governance/proposals/final-2026-10-04/explorer-final.md",
+  "kind": "bot",
+  "name": "P1 (Work) Explorer"
+ },
+ {
+  "folder": "compliance-risk-officer",
+  "version": "v003",
+  "source": "/workspace/governance/proposals/final-2026-10-04/safeguard-final.md",
+  "kind": "bot",
+  "name": "P1 (Checks) Safeguard"
+ },
+ {
+  "folder": "_shared/handoff-phase1",
+  "version": "v001",
+  "source": "/workspace/governance/proposals/final-2026-10-04/handoff-phase1-final.md",
+  "kind": "shared",
+  "name": "Phase-gate handoff spec"
+ },
+ {
+  "folder": "_shared/collaboration-map",
+  "version": "v001",
+  "source": "/workspace/governance/proposals/final-2026-10-04/collaboration-map-final.md",
+  "kind": "shared",
+  "name": "Collaboration map (design document)"
+ }
+]

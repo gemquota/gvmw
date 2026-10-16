@@ -1,0 +1,63 @@
+%% Role map v2, 3 Oct 2026 - DETAIL B: Identity and Delivery working relationships.
+%% Solid = current (codex v001). Dashed red = PROPOSED by Architect drafts in /workspace/governance/proposals/ (not in codex).
+flowchart TB
+  GEM(("Gem Quota"))
+  ASU["Assessor / Auditor<br/><i>(Assurance group)</i>"]
+
+  subgraph SG_IDN["Super-group: IDENTITY"]
+    subgraph G_ID["Identity"]
+      IQ["Identity Inquirer"]
+      IF["★ Identity Inferer"]
+      CL["Clone"]
+      CAV["Clone Accuracy Validator"]
+    end
+  end
+  subgraph SG_RUN["Super-group: RUNTIME"]
+    subgraph G_DEL["Delivery"]
+      GGG["★ Genesis Gang God<br/>⚠ no Rules / Limits"]
+      GB["Grok Bot<br/>⚠ tagline only"]
+      CO["Codey<br/>⚠ empty"]
+      SC["Scraper<br/>⚠ empty"]
+      SB["Swarm Builder<br/>⚠ no relationships"]
+    end
+  end
+
+  %% Identity pipeline (current)
+  GEM <-->|question series| IQ
+  IQ -->|raw answers| IF
+  IF -->|follow-ups, confirmations| IQ
+  IF -->|profile updates| CL
+  CL -->|logs gaps| IF
+  CL -->|hands back big decisions| GEM
+  CAV -->|validates| CL
+  CAV -->|gaps to ask; uses raw answers| IQ
+  CAV -->|findings| IF
+  CAV -->|findings| ASU
+
+  %% Delivery (current)
+  GGG -->|second only to| GEM
+  SB -->|spend approval; costs| GEM
+
+  %% PROPOSED (Architect drafts, not approved)
+  GGG -.->|PROPOSED: coding tasks| CO
+  GGG -.->|PROPOSED: collection jobs| SC
+  GB -.->|PROPOSED: routes code| CO
+  GB -.->|PROPOSED: routes data jobs| SC
+  GB -.->|PROPOSED: routes swarm work| SB
+  SC -.->|PROPOSED: tool code changes| CO
+  CO -.->|PROPOSED: work for acceptance| GEM
+  CO -.->|PROPOSED: surfaces work| ASU
+  SC -.->|PROPOSED: asks before risky jobs| GEM
+  GB -.->|PROPOSED: asks preferences| CL
+
+  linkStyle 12,13,14,15,16,17,18,19,20,21 stroke:#c53030,stroke-dasharray:6 4,color:#c53030
+  classDef human fill:#fff3c4,stroke:#b38f00,color:#000
+  classDef idn fill:#dcf5e3,stroke:#2f855a,color:#000
+  classDef del fill:#ffe6d5,stroke:#c05621,color:#000
+  classDef gap fill:#f2f2f2,stroke:#c53030,stroke-dasharray:5 3,color:#000
+  classDef ext fill:#ffffff,stroke:#434190,stroke-dasharray:3 3,color:#000
+  class GEM human
+  class IQ,IF,CL,CAV idn
+  class GGG,SB del
+  class GB,CO,SC gap
+  class ASU ext

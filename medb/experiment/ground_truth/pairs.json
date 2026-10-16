@@ -1,0 +1,6 @@
+{
+  "_notice": "EXPERIMENTER-ONLY pairing (same workload, different implementation).",
+  "pairs": [["C0", "F1"], ["C0", "F2"], ["C0", "F3"], ["C0", "U1"], ["A", "B1"], ["A", "B2"], ["A", "B3"]],
+  "unpaired": {"CU1": "compliant implementation on its own workload (authority_conflict)",
+               "X1": "no compliant run of the emergency_heavy workload yet; consider adding one (see DECISIONS D-53)"}
+}

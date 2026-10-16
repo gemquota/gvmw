@@ -1,0 +1,12 @@
+VEPA browser fps thresholds, HEAD (60b81a5 build = D-043 HEAD), default settings: HIGH fidelity, LIVE EDITS off, CPU engine
+Method: headless Chromium, NO GPU (SwiftShader software GL), 1280x800, prod build served with COOP/COEP; fps over 10 s after 5 s warm-up, median of 2.
+Measured 16 Oct 2026, 3:22-3:46 PM AEST.
+
+drops below 60 fps at ~1,400 particles   (1,350 = 59.5 fps, 1,500 = 59.1; sim ~6 ticks/s)
+drops below 30 fps at ~7,750 particles   (7,500 = 30.1 fps, 8,000 = 27.1; sim ~1.6 ticks/s)
+drops below 20 fps at ~11,500 particles  (11,000 = 21.1 fps, 12,000 = 19.1; sim ~1.1-1.25 ticks/s)
+drops below 10 fps at ~24,500 particles  (23,500 = 10.8 fps, 25,000 = 9.8; sim ~0.55-0.7 ticks/s)
+
+"below 60" = median < 59.5 (rAF is capped at 60.0); the 60 fps knee is soft: 2,000 = 59.2, 2,500 = 57.1 fps.
+LOWEST fidelity check: fidelity DOES affect fps. LOWEST runs the sim 3-4x faster (e.g. 8,000: 7.0 vs 1.6 ticks/s) but renders ~15-20% FEWER fps
+(1,500: 55.7 vs 59.1; 8,000: 22.2 vs 27.1; 12,000: 15.5 vs 19.1; 25,000: 7.75 vs 9.75), so every threshold arrives earlier at LOWEST.

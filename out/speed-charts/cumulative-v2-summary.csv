@@ -1,0 +1,29 @@
+stage,size,speedup_median,speedup_min,speedup_max
+defaults,2500,1.0,0.973,1.02
++ neighbour 48,2500,1.553,1.534,1.624
++ pair budget 20,2500,1.542,1.538,1.847
++ social every 2,2500,2.062,1.991,2.138
++ mid range 120,2500,1.783,1.611,2.273
++ symbiosis 30 (= FAST),2500,1.864,1.789,2.074
+"+ expensive every 2 (new, not in FAST)",2500,2.264,2.211,2.4
+aggressive: neighbour 24,2500,2.346,2.344,2.414
++ pair budget 12,2500,3.022,2.924,3.311
++ social every 4,2500,3.002,2.855,3.086
++ mid range 60,2500,3.041,2.978,3.242
++ symbiosis 10,2500,2.941,2.914,2.972
++ expensive every 4,2500,3.691,3.507,3.696
++ near range 20,2500,3.476,3.391,3.532
+defaults,10000,1.0,0.986,1.019
++ neighbour 48,10000,1.655,1.636,1.726
++ pair budget 20,10000,2.028,2.007,2.072
++ social every 2,10000,1.927,1.904,2.169
++ mid range 120,10000,2.433,2.071,2.575
++ symbiosis 30 (= FAST),10000,2.86,2.643,2.913
+"+ expensive every 2 (new, not in FAST)",10000,2.86,2.668,2.952
+aggressive: neighbour 24,10000,4.489,4.389,4.672
++ pair budget 12,10000,4.394,4.213,4.557
++ social every 4,10000,4.703,4.069,4.912
++ mid range 60,10000,5.058,4.703,5.439
++ symbiosis 10,10000,5.162,4.401,5.212
++ expensive every 4,10000,6.604,5.187,6.988
++ near range 20,10000,6.417,6.203,6.991

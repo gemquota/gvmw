@@ -1,0 +1,259 @@
+
+ RUN  v3.2.7 /workspace/vepa
+
+ ✓ tests/unit/nanEnergy.test.js (7 tests) 25422ms
+   ✓ D-035 seeded repro: 200 particles × 120 ticks > all speed sliders at defaults: no particle ends with a non-finite field  12198ms
+   ✓ D-035 seeded repro: 200 particles × 120 ticks > narrow mid range: no particle ends with a non-finite field  11126ms
+   ✓ D-035 seeded repro: 200 particles × 120 ticks > FAST: no particle ends with a non-finite field  2078ms
+ ✓ tests/unit/lawFeedbackStability.test.js (8 tests) 18663ms
+   ✓ runaway scenarios stay bounded (300 ticks; all-laws 120 ticks) > all 136 laws  3916ms
+   ✓ runaway scenarios stay bounded (300 ticks; all-laws 120 ticks) > positive-feedback chemistry (AUTOCATALYSIS, FEEDBACK, EXOTHERMIC, CATALYSIS, ENERGY, HEAT)  4376ms
+   ✓ runaway scenarios stay bounded (300 ticks; all-laws 120 ticks) > thermal-EM loop (HEAT, EXOTHERMIC, PLASMA, DISCHARGE, IONIZATION, RESISTANCE, CURRENT, COLL)  4219ms
+   ✓ runaway scenarios stay bounded (300 ticks; all-laws 120 ticks) > dense gravitational collapse (GRAV, ACCR, COLL, CONTACT, SINGULARITY)  6106ms
+ ✓ tests/unit/speedOptions.test.js (22 tests) 12872ms
+   ✓ speed sliders: shared contract (D-036) > defaults are bit-identical to a world that has never heard of them  2923ms
+   ✓ speed sliders: shared contract (D-036) > is deterministic under a seed with every slider moved (FAST)  553ms
+   ✓ NEIGHBOUR LIMIT (PAIRWISE_BUDGET) > caps how many neighbours a particle sees  417ms
+   ✓ NEIGHBOUR LIMIT (PAIRWISE_BUDGET) > changes a crowded world and leaves a sparse one alone  1857ms
+   ✓ MID RANGE > changes a world with pairs 120–200 apart  1256ms
+   ✓ MID RANGE > is identical while every pair stays inside the range (cube side 60: max distance ≈ 104)  598ms
+   ✓ NEAR / CONTACT RANGE > changes a crowded world  813ms
+   ✓ PAIR BUDGET / PARTICLE (per particle, not per world) > never exceeds the neighbour limit, and OFF is the default  1261ms
+   ✓ SYMBIOSIS & PARASITE RANGE > changes a world where SYMBIOSIS pairs are far apart  664ms
+   ✓ SOCIAL & INFO LAWS EVERY N TICKS > runs them on the first tick, then every Nth  1825ms
+ ✓ tests/unit/civRuntime.test.js (9 tests) 8478ms
+   ✓ civilisation runtime adapter (B7) > every record survives world save → JSON → restore, and the restored world keeps running  1372ms
+   ✓ civilisation runtime adapter (B7) > is deterministic and bounded  2404ms
+ ✓ tests/unit/crossCategoryScenarios.test.js (7 tests) 6760ms
+   ✓ cross-category scenarios (LRA-9) > thermal→chemistry→EM: heat drives ionisation, the cloud stays bounded and energy is conserved  869ms
+   ✓ cross-category scenarios (LRA-9) > physics+mechanics: gravity contracts the cloud while collisions keep speeds bounded  1366ms
+   ✓ cross-category scenarios (LRA-9) > quantum+metaphysics: entanglement forms, links stay reciprocal and every quantum transition is legal  837ms
+   ✓ cross-category scenarios (LRA-9) > EM+thermal: equilibrium wins over spark heating — temperature spread shrinks, energy conserved  861ms
+   ✓ cross-category scenarios (LRA-9) > biology+information: living particles accumulate memory without creating energy  849ms
+   ✓ cross-category scenarios (LRA-9) > all categories together: every law enabled stays finite and speed-capped  1973ms
+ ✓ tests/unit/specHelpCoverage.test.js (2 tests) 6484ms
+   ✓ spec generator help coverage > reports canonical LAW_HELP_DB coverage for every law  6483ms
+ ✓ tests/unit/multiplexIsolation.test.js (3 tests) 6239ms
+   ✓ multiplex sim isolation (HIDDEN-STATE, AC-97) > a sim evolves identically whether or not other sims and the main world step in between  2837ms
+   ✓ solver contexts (HIDDEN-STATE, AC-97) > two fresh runs with every law on are identical when each gets a fresh solver context  1864ms
+   ✓ multiplex worker pool (MX-20) > the pool reproduces the in-thread run bit for bit  1536ms
+ ✓ tests/unit/lawCouplingChains.test.js (8 tests) 4637ms
+   ✓ coupling chains (LRA-5) > thermal-agitation: EXOTHERMIC → HEAT changes VEL_X end-to-end  801ms
+   ✓ coupling chains (LRA-5) > thermal-phase: EXOTHERMIC → BOIL changes MASS end-to-end  731ms
+   ✓ coupling chains (LRA-5) > thermal-ionisation: EXOTHERMIC → PLASMA changes CHARGE end-to-end  797ms
+   ✓ coupling chains (LRA-5) > spark-heating: DISCHARGE → HEAT changes VEL_X end-to-end  761ms
+   ✓ coupling chains (LRA-5) > plasma-heating: PLASMA → HEAT changes VEL_X end-to-end  707ms
+   ✓ coupling chains (LRA-5) > acid-charge-force: ACIDITY → CHARGE_LAW changes VEL_X end-to-end  836ms
+ ✓ tests/unit/solverReset.test.js (3 tests) 4991ms
+   ✓ resetSolverState (world restart) > a restarted world matches a pristine one; without the reset it does not  2899ms
+   ✓ resetSolverState(tick) (world-save restore, D-023) > restoring a save clears stale solver state and resumes the saved tick  2089ms
+ ✓ tests/unit/multiplexScheduler.test.js (10 tests) 4312ms
+   ✓ decoupled tick scheduler (in-thread) > 'frame' ticks every sim once per frame  895ms
+   ✓ decoupled tick scheduler (in-thread) > 'fixed' ticks each sim at ticksPerSecond regardless of frame rate  3358ms
+ ✓ tests/unit/priorityLawSemantics.test.js (37 tests) 3347ms
+   ✓ priority law semantics (ARP-8) > SENESCENCE (lifecycle) > behaviour: old particles die over time  478ms
+   ✓ priority law semantics (ARP-8) > COLL (structural) > boundary: keeps speeds finite and bounded  435ms
+   ✓ priority law semantics (ARP-8) > BOND (structural) > behaviour: forms reciprocal bonds between near neighbours  303ms
+   ✓ priority law semantics (ARP-8) > MEMORY (information) > boundary: keeps memory finite and non-negative  794ms
+   ✓ priority law semantics (ARP-8) > SUPERPOSITION (quantum) > boundary: amplitudes stay finite and within [0, 1]  543ms
+ ✓ tests/unit/relationshipLab.test.js (4 tests) 2865ms
+   ✓ relationship laboratory (MD-REL) > consumes live relationship events from the runtime adapter  2860ms
+ ✓ tests/unit/speedExpensive.test.js (6 tests) 2929ms
+   ✓ EXPENSIVE LAWS EVERY N TICKS (D-037) > default 1 is bit-identical to a world without the setting  847ms
+   ✓ EXPENSIVE LAWS EVERY N TICKS (D-037) > runs them on the first tick, then every Nth (deterministic)  1461ms
+   ✓ EXPENSIVE LAWS EVERY N TICKS (D-037) > stacks with SOCIAL & INFO EVERY N  378ms
+ ✓ tests/unit/bhThetaEnvelope.test.js (10 tests) 2780ms
+   ✓ Barnes–Hut population-scaled θ (BH-ENV) > rmsRelative ≤ 0.1 at N = 2048  817ms
+   ✓ Barnes–Hut population-scaled θ (BH-ENV) > holds on two more seeds at the largest scale  1604ms
+ ✓ tests/unit/lawClock.test.js (4 tests) 2260ms
+   ✓ law clock (DET-1) > the same world gives identical results whatever the wall clock reads  2255ms
+ ✓ tests/unit/launchModal.test.js (42 tests) 1482ms
+ ✓ tests/unit/fmmParity.test.js (6 tests) 968ms
+   ✓ FMM backend boundaries > FMM-HUNT regressions: far field attracts, no cell is dropped, error well below the old 1.15-2.02  860ms
+ ✓ tests/unit/multiplex.test.js (54 tests) 866ms
+   ✓ Multiplex fitness + iteration (v4.6.24) > config seed > 0 makes the shard lineage deterministic  467ms
+ ✓ tests/unit/informationTrace.test.js (6 tests) 762ms
+ ✓ tests/unit/lazyPairCompat.test.js (4 tests) 666ms
+   ✓ lazy pair compatibility (PERF-7) > matches compatibilityForViewsInto bit-for-bit, in any order  343ms
+   ✓ lazy pair compatibility (PERF-7) > matches compatibilityForViewsInto bit-for-bit on edge values, in any order  320ms
+ ✓ tests/unit/lawGrid.test.js (14 tests) 550ms
+ ✓ tests/unit/gravEngineAlias.test.js (4 tests) 498ms
+   ✓ gravEngine naming (AUD-EXACT) > 'exact' and 'reference' produce bit-identical solver output  351ms
+ ✓ tests/unit/compatibilityFastPath.test.js (2 tests) 479ms
+ ✓ tests/unit/octree.test.js (5 tests) 382ms
+ ✓ tests/unit/worldSaveRng.test.js (3 tests) 317ms
+   ✓ world save PRNG persistence (E9) > two restores of one save produce identical PRNG draws and simulation hashes  313ms
+ ✓ tests/unit/lawImplementedBy.test.js (4 tests) 255ms
+ ✓ tests/unit/multiplexRefill.test.js (8 tests) 202ms
+ ✓ tests/unit/lawGating.test.js (6 tests) 136ms
+ ✓ tests/unit/multiplexScale.test.js (6 tests) 94ms
+ ✓ tests/unit/fields.test.js (17 tests) 102ms
+ ✓ tests/unit/workerCopyMode.test.js (2 tests) 91ms
+ ✓ tests/unit/octreeQuadrupole.test.js (3 tests) 75ms
+ ✓ tests/unit/prng.test.js (5 tests) 81ms
+ ✓ tests/unit/fieldAdvanceOnce.test.js (2 tests) 82ms
+ ✓ tests/unit/exportHeaders.test.js (3 tests) 79ms
+ ✓ tests/unit/patchLawcatGuard.test.js (2 tests) 68ms
+ ✓ tests/unit/lawCategories.test.js (16 tests) 66ms
+ ✓ tests/unit/settingsPrecedence.test.js (7 tests) 56ms
+ ✓ tests/unit/computeEngines.test.js (3 tests) 47ms
+ ✓ tests/unit/a3Reconciliation.test.js (2 tests) 43ms
+ ✓ tests/audit/batch_05.test.js (23 tests) 54ms
+ ✓ tests/unit/lawInspectorPanel.test.js (5 tests) 39ms
+ ✓ tests/audit/batch_03.test.js (13 tests) 40ms
+ ✓ tests/unit/logPanel.test.js (15 tests) 41ms
+ ✓ tests/unit/structureFormation.test.js (5 tests) 42ms
+ ✓ tests/audit/batch_21.test.js (11 tests) 38ms
+ ✓ tests/audit/batch_14.test.js (9 tests) 36ms
+ ✓ tests/unit/worldSave.test.js (14 tests) 36ms
+ ✓ tests/unit/multiplexPenta.test.js (6 tests) 33ms
+ ✓ tests/audit/batch_04.test.js (15 tests) 34ms
+ ✓ tests/audit/params_batch_01.test.js (8 tests) 21ms
+ ✓ tests/audit/batch_02.test.js (16 tests) 38ms
+ ✓ tests/unit/synergyCache.test.js (4 tests) 31ms
+ ✓ tests/audit/batch_15.test.js (10 tests) 30ms
+ ✓ tests/audit/params_batch_02.test.js (8 tests) 28ms
+ ✓ tests/unit/codex.test.js (45 tests) 26ms
+ ✓ tests/unit/batch4Reports.test.js (3 tests) 27ms
+ ✓ tests/unit/panelMounts.test.js (15 tests) 26ms
+ ✓ tests/unit/pairScalarParity.test.js (4 tests) 26ms
+ ✓ tests/audit/batch_01.test.js (12 tests) 25ms
+ ✓ tests/audit/params_batch_04.test.js (4 tests) 25ms
+ ✓ tests/audit/batch_16.test.js (9 tests) 23ms
+ ✓ tests/unit/analyticsDrawPaths.test.js (6 tests) 23ms
+ ✓ tests/unit/touchSupport.test.js (12 tests) 27ms
+ ✓ tests/unit/lawAuditMatrices.test.js (3 tests) 23ms
+ ✓ tests/audit/params_batch_03.test.js (7 tests) 17ms
+ ✓ tests/audit/batch_22.test.js (9 tests) 22ms
+ ✓ tests/audit/params_batch_15.test.js (4 tests) 21ms
+ ✓ tests/audit/params_batch_12.test.js (4 tests) 17ms
+ ✓ tests/audit/params_batch_05.test.js (4 tests) 22ms
+ ✓ tests/audit/params_batch_13.test.js (4 tests) 19ms
+ ✓ tests/unit/deadLawToggles.test.js (4 tests) 20ms
+ ✓ tests/unit/hud.test.js (9 tests) 31ms
+ ✓ tests/audit/params_batch_09.test.js (4 tests) 20ms
+ ✓ tests/unit/systemVariants.test.js (3 tests) 21ms
+ ✓ tests/unit/tidalBloom.test.js (25 tests) 13ms
+ ✓ tests/audit/batch_23.test.js (8 tests) 19ms
+ ✓ tests/audit/batch_06.test.js (21 tests) 18ms
+ ✓ tests/unit/provenanceHeaders.test.js (6 tests) 18ms
+ ✓ tests/audit/params_batch_06.test.js (4 tests) 19ms
+ ✓ tests/unit/uiModuleReport.test.js (8 tests) 27ms
+ ✓ tests/audit/params_batch_16.test.js (4 tests) 18ms
+ ✓ tests/unit/helpRegistry.test.js (33 tests) 19ms
+ ✓ tests/audit/batch_11.test.js (10 tests) 16ms
+ ✓ tests/audit/batch_12.test.js (8 tests) 13ms
+ ✓ tests/audit/batch_13.test.js (6 tests) 18ms
+ ✓ tests/unit/settingsTabs.test.js (7 tests) 18ms
+ ✓ tests/audit/batch_18.test.js (19 tests) 16ms
+ ✓ tests/unit/helpTierContract.test.js (138 tests) 17ms
+ ✓ tests/audit/batch_08.test.js (22 tests) 14ms
+ ✓ tests/audit/params_batch_14.test.js (4 tests) 15ms
+ ✓ tests/audit/params_batch_11.test.js (4 tests) 16ms
+ ✓ tests/audit/batch_17.test.js (18 tests) 16ms
+ ✓ tests/unit/culturalSelection.test.js (4 tests) 16ms
+ ✓ tests/audit/batch_31.test.js (4 tests) 15ms
+ ✓ tests/audit/batch_10.test.js (14 tests) 17ms
+ ✓ tests/audit/params_batch_08.test.js (4 tests) 14ms
+ ✓ tests/audit/batch_09.test.js (8 tests) 13ms
+ ✓ tests/unit/structures.test.js (49 tests) 15ms
+ ✓ tests/audit/params_batch_10.test.js (4 tests) 15ms
+ ✓ tests/audit/params_batch_18.test.js (4 tests) 14ms
+ ✓ tests/unit/selectionContext.test.js (13 tests) 13ms
+ ✓ tests/audit/batch_20.test.js (18 tests) 15ms
+ ✓ tests/audit/params_batch_17.test.js (4 tests) 14ms
+ ✓ tests/audit/batch_07.test.js (25 tests) 15ms
+ ✓ tests/audit/batch_28.test.js (8 tests) 13ms
+ ✓ tests/audit/batch_29.test.js (4 tests) 15ms
+ ✓ tests/audit/batch_19.test.js (14 tests) 14ms
+ ✓ tests/unit/civilizationSequelWiring.test.js (31 tests) 15ms
+ ✓ tests/audit/batch_27.test.js (9 tests) 14ms
+ ✓ tests/audit/batch_32.test.js (4 tests) 13ms
+ ✓ tests/unit/drawer.test.js (11 tests) 11ms
+ ✓ tests/unit/electricFieldSplit.test.js (7 tests) 13ms
+ ✓ tests/audit/batch_26.test.js (8 tests) 13ms
+ ✓ tests/audit/batch_24.test.js (8 tests) 15ms
+ ✓ tests/unit/dataPanels.test.js (30 tests) 13ms
+ ✓ tests/audit/batch_30.test.js (4 tests) 13ms
+ ✓ tests/audit/batch_25.test.js (8 tests) 14ms
+ ✓ tests/unit/civilizationPanel.test.js (16 tests) 12ms
+ ✓ tests/unit/stateBudgets.test.js (5 tests) 8ms
+ ✓ tests/audit/params_batch_07.test.js (4 tests) 11ms
+ ✓ tests/unit/infrastructure.test.js (11 tests) 10ms
+ ✓ tests/unit/helpNavigation.test.js (40 tests) 11ms
+ ✓ tests/unit/exoticMatter.test.js (18 tests) 9ms
+ ✓ tests/unit/livingWorld.test.js (8 tests) 12ms
+ ✓ tests/unit/provenance.test.js (5 tests) 10ms
+ ✓ tests/unit/civilization.test.js (20 tests) 10ms
+ ✓ tests/unit/tooltipDismiss.test.js (19 tests) 12ms
+ ✓ tests/unit/dnaCacheCodec.test.js (3 tests) 7ms
+ ✓ tests/unit/cultureTransmission.test.js (22 tests) 10ms
+ ✓ tests/unit/quantumMacro.test.js (17 tests) 9ms
+ ✓ tests/unit/artifacts.test.js (11 tests) 9ms
+ ✓ tests/unit/continuity.test.js (31 tests) 11ms
+ ✓ tests/unit/auditSignoff.test.js (10 tests) 6ms
+ ✓ tests/unit/lawGraph.test.js (5 tests) 12ms
+ ✓ tests/unit/relativity.test.js (11 tests) 7ms
+ ✓ tests/unit/multiplexNaN.test.js (7 tests) 8ms
+ ✓ tests/unit/lawHelpFold.test.js (3 tests) 7ms
+ ✓ tests/unit/stellar.test.js (13 tests) 9ms
+ ✓ tests/unit/synthetic.test.js (21 tests) 9ms
+ ✓ tests/unit/lawsets.test.js (3 tests) 8ms
+ ✓ tests/unit/relationshipExplorer.test.js (4 tests) 9ms
+ ✓ tests/unit/governance.test.js (11 tests) 8ms
+ ✓ tests/unit/groupRegistry.test.js (8 tests) 7ms
+ ✓ tests/unit/speedLawCount.test.js (6 tests) 7ms
+ ✓ tests/unit/mechanics.test.js (7 tests) 6ms
+ ✓ tests/unit/quantumStateMachine.test.js (5 tests) 7ms
+ ✓ tests/unit/lawgroupsQuantum.test.js (24 tests) 8ms
+ ✓ tests/unit/constructionEconomy.test.js (7 tests) 6ms
+ ✓ tests/unit/civilizationWiring.test.js (8 tests) 7ms
+ ✓ tests/unit/tabHelpSwitcher.test.js (24 tests) 7ms
+ ✓ tests/unit/mechanicsArchitecture.test.js (5 tests) 6ms
+ ✓ tests/unit/typeScale.test.js (10 tests) 6ms
+ ✓ tests/unit/worldSaveCompat.test.js (7 tests) 6ms
+ ✓ tests/unit/sliderControl.test.js (21 tests) 6ms
+ ✓ tests/unit/helpOverlay.test.js (15 tests) 6ms
+ ✓ tests/unit/engines.test.js (5 tests) 5ms
+ ✓ tests/unit/dna.test.js (9 tests) 5ms
+ ✓ tests/unit/relationshipGraph.test.js (5 tests) 5ms
+ ✓ tests/unit/analyticsPanels.test.js (3 tests) 6ms
+ ✓ tests/unit/wrapLaw.test.js (5 tests) 4ms
+ ✓ tests/unit/webgpuContract.test.js (7 tests) 5ms
+ ✓ tests/unit/lawgroupsPhysicsThermo.test.js (12 tests) 6ms
+ ✓ tests/unit/deepTime.test.js (6 tests) 5ms
+ ✓ tests/unit/singleImplementations.test.js (2 tests) 5ms
+ ✓ tests/unit/lawgroupsEmInfoMeta.test.js (9 tests) 5ms
+ ✓ tests/unit/htmlEscaping.test.js (9 tests) 5ms
+ ✓ tests/unit/interactionSpace.test.js (4 tests) 4ms
+ ✓ tests/unit/relationshipCompatibility.test.js (4 tests) 5ms
+ ✓ tests/unit/helpLawNames.test.js (8 tests) 5ms
+ ✓ tests/unit/agencyNarrative.test.js (9 tests) 5ms
+ ✓ tests/unit/lawgroupsBiologyChemistry.test.js (11 tests) 5ms
+ ✓ tests/unit/mechanicsDiagnosticsFields.test.js (2 tests) 4ms
+ ✓ tests/unit/systemLifecycle.test.js (4 tests) 4ms
+ ✓ tests/unit/experimentalBackends.test.js (3 tests) 5ms
+ ✓ tests/unit/laws.test.js (8 tests) 4ms
+ ✓ tests/unit/physics.test.js (6 tests) 4ms
+ ✓ tests/unit/lawsSingleton.test.js (6 tests) 4ms
+ ✓ tests/unit/systemFoundation.test.js (4 tests) 4ms
+ ✓ tests/unit/perfKnobs.test.js (8 tests) 5ms
+ ✓ tests/unit/batch5Reports.test.js (3 tests) 4ms
+ ✓ tests/unit/lawOntologyCoverage.test.js (2 tests) 4ms
+ ✓ tests/unit/memoryCulture.test.js (6 tests) 4ms
+ ✓ tests/unit/spawnDistribution.test.js (2 tests) 3ms
+ ✓ tests/unit/strideWriteContract.test.js (3 tests) 4ms
+ ✓ tests/unit/createEngine.test.js (3 tests) 3ms
+ ✓ tests/unit/signal.test.js (3 tests) 3ms
+ ✓ tests/unit/lawImplementationManifest.test.js (2 tests) 3ms
+ ✓ tests/unit/buffer.test.js (7 tests) 3ms
+ ✓ tests/unit/chaosMenu.test.js (3 tests) 3ms
+ ✓ tests/unit/workerRequeue.test.js (3 tests) 3ms
+ ✓ tests/unit/renderer.test.js (3 tests) 3ms
+ ✓ tests/unit/backendArchitecture.test.js (2 tests) 3ms
+
+ Test Files  193 passed (193)
+      Tests  1991 passed (1991)
+   Start at  23:18:50
+   Duration  162.68s (transform 1.30s, setup 0ms, collect 11.19s, tests 123.62s, environment 26ms, prepare 8.58s)
+

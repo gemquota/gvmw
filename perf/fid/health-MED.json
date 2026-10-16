@@ -1,0 +1,41 @@
+{
+  "node": "v22.23.3",
+  "cpus": 8,
+  "laws": "tidal",
+  "runs": 1,
+  "load1Start": 0.32,
+  "sizes": {
+    "2500": {
+      "medMsPerTick": 74.88,
+      "ticksPerSec": 13.36,
+      "runsMs": [
+        74.9
+      ],
+      "hash": "7c5f99d528edf419/0",
+      "deterministic": true,
+      "alive": 2500,
+      "species": 5,
+      "born": 0,
+      "bonded": 2419,
+      "meanEnergy": 71.26,
+      "nanEnergy": 0
+    },
+    "10000": {
+      "medMsPerTick": 253.59,
+      "ticksPerSec": 3.94,
+      "runsMs": [
+        253.6
+      ],
+      "hash": "044513028e85a2f7/0",
+      "deterministic": true,
+      "alive": 10000,
+      "species": 5,
+      "born": 0,
+      "bonded": 9654,
+      "meanEnergy": 71.99,
+      "nanEnergy": 0
+    }
+  },
+  "speed": "fast",
+  "load1End": 1.91
+}

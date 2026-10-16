@@ -1,0 +1,11 @@
+head 60c80c1 node v22.23.3
+test rc=0
+tests 1985 / 1985 failed 0 files 192
+spec:check rc=0
+check-repository rc=0
+report:ui:check rc=0
+repository:check rc=0
+build rc=0
+tree-dirty-after-build: 0
+golden rc=0
+links: BROKEN 0 generated 0 hand 0

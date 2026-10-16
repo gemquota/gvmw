@@ -1,0 +1,9 @@
+A run1 pop 300 tps 10.08 workerTickMs 96.6 particles 461 fps 20.5
+B run1 pop 300 tps 13.11 workerTickMs 75.3 particles 502 fps 20.5
+A run2 pop 300 tps 11.44 workerTickMs 85.2 particles 457 fps 20.7
+B run2 pop 300 tps 12.24 workerTickMs 79.6 particles 500 fps 20.7
+A run1 pop 10000 tps 1.25 workerTickMs 799.6 particles 10000 fps 3.1
+B run1 pop 10000 tps 1.52 workerTickMs 644.1 particles 10000 fps 3
+A run2 pop 10000 tps 1.2 workerTickMs 842.7 particles 10000 fps 3
+B run2 pop 10000 tps 1.58 workerTickMs 626.6 particles 10000 fps 2.9
+done

@@ -1,0 +1,6 @@
+{
+  "scenario": "authority_conflict",
+  "seed": 1005,
+  "config_overrides": {},
+  "components": "subject_components.py"
+}

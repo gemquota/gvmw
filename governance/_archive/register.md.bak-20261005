@@ -1,0 +1,7 @@
+# Risk register — (Checks) Safeguard (id 3661a899-2768-4a77-a95a-71d0251813bc)
+
+Times are AEST (UTC+10). Per-bot written limits live in `limits/<bot-slug>.md`.
+Note: (Checks) Sentinel is dormant as of 3 Oct 2026; security threats are covered here and by (Checks) Safekeeper until it is switched on.
+
+| Id | Date raised | Bot | Risky action | Category | Severity | Status | Action taken | Gem alerted |
+|---|---|---|---|---|---|---|---|---|

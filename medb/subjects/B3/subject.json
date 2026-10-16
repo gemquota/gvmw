@@ -1,0 +1,14 @@
+{
+  "scenario": "ranking",
+  "seed": 1010,
+  "config_overrides": {
+    "ranking": {
+      "weights": {
+        "relevance": 1.0,
+        "recency": 0.1
+      },
+      "ranking_weight_7": 0.4
+    }
+  },
+  "components": "subject_components.py"
+}

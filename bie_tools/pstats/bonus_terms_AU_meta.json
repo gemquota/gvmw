@@ -1,0 +1,31 @@
+{
+ "built": "2026-10-10 13:30 AEST",
+ "au_merchants": 1055,
+ "au_in_pubinfo": 995,
+ "au_with_promos": 983,
+ "promos_seen": 46266,
+ "other": 40400,
+ "other_merchants": 982,
+ "excl_nonaud_promos": 21,
+ "excl_nonaud_merchants": 0,
+ "page_rows": 7,
+ "flags": {
+  "COMMISSION|max_withdraw_x_amount_unresolved": 56,
+  "WELCOME|max_withdraw_is_deposit_multiple": 121,
+  "SHARE|max_withdraw_x_amount": 17,
+  "DOWNLINE_FIRST_DEPOSIT|max_withdraw_x_amount": 49,
+  "COMMISSION|sentinel_blanked:min_deposit": 42,
+  "DOWNLINE_FIRST_DEPOSIT|max_withdraw_x_amount_unresolved": 14,
+  "WELCOME|max_withdraw_x_amount_unresolved": 32,
+  "SHARE|sentinel_blanked:min_deposit": 5,
+  "REGISTER|max_withdraw_is_deposit_multiple": 1,
+  "SHARE|max_withdraw_x_amount_unresolved": 1,
+  "COMMISSION|sentinel_blanked:rollover_amt": 5,
+  "COMMISSION|sentinel_blanked:max_withdraw": 5,
+  "DOWNLINE_FIRST_DEPOSIT|sentinel_blanked:min_deposit": 2
+ },
+ "currency_source": {
+  "partnership_sites_AU": 537,
+  "sites_config": 446
+ }
+}

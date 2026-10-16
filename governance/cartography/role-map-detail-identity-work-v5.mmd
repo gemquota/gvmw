@@ -1,0 +1,17 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v5 detail B — identity + explorers + work
+flowchart TB
+  GEM(("Gem"))
+  INQ0["e613112b former"] -.->|v003 re-key| INQ["Inquirer 0314faa4 ACTIVE"]
+  INQ --> INF["Inferer v003"]
+  INF --> INV["Investigator"]
+  INV --> IMI["Imitator"]
+  INT["RETIRED Interrogator"] -.-> INV
+  EXP0["82a2c15a former"] -.-> EXP["Explorer 04dcca0d ACTIVE"]
+  MSG["RETIRED Messenger"] -.-> EXP
+  EXP --> EMI["Emissary"]
+  EXP --> ENG["Engineer"]
+  EXP --> EXT["Extractor"]
+  EXP --> GEM
+  MED["Mediator"] -->|cost alerts| EXP
+  ENS["RETIRED Ensembler"] -.-> ENG

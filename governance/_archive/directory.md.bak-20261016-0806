@@ -1,0 +1,105 @@
+# Gem's bot directory (ids)
+
+Scope: Gem Quota's bot swarm, Brisbane (AEST, UTC+10). Profile files are at
+`/home/box/agent-data/agents/<id>/profile.json` and are read-only here.
+Last updated: 9 Oct 2026, 9:09am AEST. Previous version: `directory.md.bak-0909`.
+
+## Active bots (18)
+
+### P1: live (8)
+- P1 (Ops) Mender: `c8401a53-136d-45f3-9e2d-e423ccdd08ac` (took Marshal's run order, pacing, load and routing, applied 9 Oct)
+- P1 (Checks) Scorer: `050a12c9-e300-48b4-b318-425627cbc34b`
+- P1 (Checks) Safeguard: `3661a899-2768-4a77-a95a-71d0251813bc`
+- P1 (Checks) Safekeeper: `52772b1d-4a85-4ea3-ae15-f3912c901a3b`
+- P1 (Roles) Archivist: `61ef3abd-87b8-49f1-b8d6-b52969afa315` (took the role map from Assembler, applied 9 Oct)
+- P1 (Roles) Architect: `51af1200-ca1a-45ff-8350-848091e00f96`
+- P1 (Work) Explorer: `82a2c15a-2694-4ac2-b2f4-f7f463f85fce` (absorbing Messenger's digest, 9 Oct)
+- P1 (Work) Explorer (fresh copy): `04dcca0d-1479-4e01-bf29-a13b4fc3c3a7`. Created 9 Oct at Gem's request to save tokens. Takes over as Explorer once `82a2c15a` finishes the retire and merge batch.
+
+### P2: live (5)
+- P2 (Checks) Scrutineer: `affe0344-6b5f-4251-8ecb-3e23dfa5db3c`
+- P2 (Roles) Arbiter: `2133048d-5ab9-4809-806c-218decdff8e6`
+- P2 (ID) Inquirer: `0314faa4-edcb-4aa4-91cc-876dc44f3a6e`. A fresh-context copy Gem created "to save tokens" (first seen 2:49am, 6 Oct). Active Inquirer since Gem's word at 9:06am, 9 Oct.
+- P2 (ID) Inferer: `94516ca6-6355-43c5-b387-d2b605057784`
+- P2 (Ops) Mediator: `90f9eb20-ff8f-456b-b94f-cc11bb33fc29`. Moved from P4 and live, 9 Oct; Gem started it early to track spend. The live profile still says "P4 (Ops) Mediator" until apply.json is applied.
+
+### P3: dormant (1)
+- P3 (ID) Investigator: `f2016e9b-ca8b-4783-8f53-f5765b0afe7b` (took Interrogator's testing of Imitator, applied 9 Oct)
+
+### P4: dormant (1)
+- P4 (ID) Imitator: `6ae584b8-eaac-429b-9eae-d5e3e6f6a32b`
+
+### P5: dormant (3)
+- P5 (Work) Emissary: `28cf987d-ee94-4839-a6d3-33c04a11b9d6`
+- P5 (Work) Engineer: `f8e3fdc6-ee60-410e-bdb7-d437fc1500d1`
+- P5 (Work) Extractor: `febac500-d854-4dc7-a6a7-23b3feb07f80`
+
+## Superseded, awaiting Gem's decision to retire
+- Old Inquirer: `e613112b-b653-4567-bc4f-17261ce9302e`. Superseded by `0314faa4` to save tokens; awaiting Gem's decision to retire.
+  **Name clash:** its live name is still "P2 (ID) Inquirer", the same as `0314faa4`, so use ids, not names, until it's renamed. The draft rename "RETIRED Inquirer (old)" is in apply.json.
+
+The phase source of truth is `/workspace/governance/phases.md`. P1 and P2 are
+live; P3 to P5 are dormant. Gem approves instruction changes directly until P4
+goes live.
+
+## Authority and routing
+
+- Gem is the human authority. Precedence: Gem, environment reality,
+deterministic analysis, then agent interpretation.
+- Approving instruction changes, and applying approved changes, is Gem's job
+until P4 goes live, then Imitator's. Changes to Imitator, or to a bot that
+checks Imitator (Investigator), are always Gem's.
+- P1 (Roles) Archivist records instructions and, from 9 Oct, keeps the role map
+under `/workspace/governance/cartography/`. It approves nothing.
+- P2 (Roles) Arbiter issues precedence rulings only, including which
+instruction wins in a conflict and who may lift a pause. It doesn't approve,
+apply changes or keep the role map.
+- P1 (Ops) Mender owns run order and timing (`schedule.md`), pacing, load and
+routing between bots, the state record and stall detection.
+- P1 (Work) Explorer is Gem's front door and sends Gem the daily digest.
+- No bot grades or verifies its own work.
+
+## Retired bots
+
+### Retired 9 Oct 2026 (live renames applied; awaiting deletion by Gem)
+- Sourcer: `2fe3e92f-4f39-4e9f-a56b-811438928f5b` (retired outright; renamed RETIRED Sourcer at 9:11am, awaiting deletion by Gem)
+- Editor: `2888c17a-98ac-42b6-8241-fc63721cfcaf` (retired outright; renamed RETIRED Editor at 9:11am, awaiting deletion by Gem)
+- Marshal: `f3810109-17a5-427f-9148-d58f645658e3` (merged into Mender; renamed RETIRED Marshal, awaiting deletion by Gem)
+- Messenger: `5e47d344-1369-423a-b072-2e5277934022` (merged into Explorer; renamed RETIRED Messenger, awaiting deletion by Gem)
+- Interrogator: `d3191aa8-3ad6-4763-b4e4-c7c648acc9ba` (merged into Investigator; renamed RETIRED Interrogator, awaiting deletion by Gem)
+- Assembler: `d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4` (role map to Archivist; approvals to Gem until P4, then Imitator; renamed RETIRED Assembler, awaiting deletion by Gem)
+
+### Retired 4 Oct 2026 (13)
+Checked 9 Oct at 9:09am: only Ensembler still has a folder on the box. The other 12 folders are gone. **[Inferred]** Gem deleted them.
+- Sanitizer: `243f1c1f-8f6f-4d97-a5c7-46c859dec36f` (folder gone)
+- Simulator: `38bd0474-00e3-4448-ae3d-f26ec02e5336` (folder gone)
+- Surveyor: `1283e02b-94c2-4faf-bc78-3bbb049f8e16` (folder gone)
+- Advocate: `ad0a645b-13cb-4106-addd-650ec1d8b7f8` (folder gone)
+- Adjudicator: `b3f6515c-d3fe-4beb-9b86-45016711c65d` (folder gone)
+- Moderator: `823349f7-9811-410e-b1c7-efb0bdf536a3` (folder gone)
+- Expediter: `75534bfe-d27d-4668-923d-fe229973fae9` (folder gone)
+- Maintainer: `b96f7469-ad10-47c7-8052-36872b51c5fa` (folder gone)
+- Indexer: `16ee5875-21d2-4b26-9862-b34c7e1314d7` (folder gone)
+- Sentinel: `dddf57af-91f7-43c3-992d-a0c409669adb` (folder gone)
+- Minder: `e59d56b6-7321-4169-852e-c26a417b0316` (folder gone)
+- Ensembler: `de808331-3c00-41f5-a3a4-4ae1f8f6f0ba` (still on the box as "RETIRED Ensembler", awaiting deletion)
+- Meter: `f8b83b15-0ea1-4f99-9550-c3b8607ba999` (folder gone)
+
+## Merge history
+
+### 9 Oct 2026
+- **9:04am:** Gem approved the retire/merge list (relayed by Explorer). Drafts are in
+  `proposals/2026-10-09-retire-merge/` and are not yet applied.
+- **9:06am:** Gem confirmed creating `0314faa4` to replace Inquirer "to save tokens".
+  Source: `approvals/2026-10-09-gem-direct-words.md`.
+
+### 4 Oct 2026
+- **3:01pm:** Merge F was wrongly skipped when Gem's instruction was first
+read; the separate approved changes were recorded.
+- **After Gem clarified:** the veto applied to Merge G, not Merge F.
+- **3:06pm:** Merge F was applied: P4 (Ops) Mediator absorbed Meter's spend
+tracking, and Meter was retired. Merge G (Inquirer + Inferer) remained
+vetoed and was never applied. Assembler was restored as P2 (Roles) Assembler.
+
+Source for Gem's direct words and times:
+`/workspace/governance/approvals/2026-10-04-gem-direct-words.md`.

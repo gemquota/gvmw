@@ -1,0 +1,91 @@
+%%{init: {"flowchart": {"wrappingWidth": 240}}}%%
+%% Role map v7, 15 Oct 2026 ~10:47pm AEST — OVERVIEW. Archivist.
+%% 15 Oct deploys: voice approvals count (R-018); Imitator decides from P4 within limits (R-019); repo pushes → Safeguard first (R-020); both Inquirers verified.
+flowchart TB
+  GEM(("Gem Quota<br/>approves (chat or voice call)<br/>keeps: spending, irreversible,<br/>Imitator/Investigator changes"))
+  LEG["<b>Legend v7</b><br/>thick = approval · solid = hand-off<br/>orange dashed = retirement / former<br/>red = repo pushes to Safeguard first<br/>Detail PNGs: governance, identity-work"]
+
+  subgraph P1["P1 · LIVE"]
+    ARX["Architect"]
+    ARC["Archivist<br/>codex + role map"]
+    SCO["Scorer"]
+    SFG["Safeguard v005<br/>repo pushes reviewed first"]
+    SFK["Safekeeper"]
+    MEN["Mender"]
+    EXP["Explorer 04dcca0d<br/>ACTIVE"]
+  end
+
+  subgraph P2["P2 · LIVE"]
+    SCR["Scrutineer"]
+    ARB["Arbiter"]
+    INF["Inferer v004"]
+    MED["Mediator"]
+    INQ["Inquirer 0314faa4<br/>ACTIVE v003 · verified"]
+  end
+
+  subgraph P3["P3 · Dormant"]
+    INV["Investigator v003"]
+  end
+  subgraph P4["P4 · Dormant"]
+    IMI["Imitator v005<br/>from P4 decides for Gem<br/>no spending · no irreversible<br/>nothing on Imitator/Investigator"]
+  end
+  subgraph P5["P5 · Dormant"]
+    EMI["Emissary"]
+    ENG["Engineer"]
+    EXT["Extractor"]
+  end
+
+  subgraph FORMER["DELETED · agent folders gone ~9:29am"]
+    INQ0["e613112b former Inquirer<br/>verified if it reappears"]
+    EXP0["82a2c15a former Explorer"]
+    MAR["RETIRED Marshal"]
+    MSG["RETIRED Messenger"]
+    INT["RETIRED Interrogator"]
+    ASM["RETIRED Assembler"]
+    SRC["RETIRED Sourcer"]
+    EDI["RETIRED Editor"]
+    ENS["RETIRED Ensembler"]
+  end
+
+  GEM ~~~ ARX
+  LEG ~~~ ARX
+  ARX ~~~ SCR
+  SCR ~~~ INV
+  INV ~~~ IMI
+  IMI ~~~ EMI
+  EMI ~~~ INQ0
+
+  ARX ==>|proposes| GEM
+  GEM ==>|chat or voice call · Archivist records| ARC
+  IMI ==>|from P4: approves, no checker gate| ARC
+  IMI -.->|limits stay with| GEM
+
+  SCO -->|scores| SCR
+  SCR -->|reviews| ARX
+  SCR -->|stalls| MEN
+  INQ -->|answers| INF
+  INF -->|hypotheses| INV
+  INV -->|reviews after the fact, P4| IMI
+  INQ0 -.->|series accepted| INF
+
+  EXP -->|routes| EMI
+  EXP -->|routes| ENG
+  EXP -->|routes| EXT
+  MED -->|cost alerts| EXP
+
+  INQ0 -.->|re-key v003| INQ
+  EXP0 -.->|active brief| EXP
+  MAR -.->|merged| MEN
+  MSG -.->|merged| EXP
+  INT -.->|merged| INV
+  ASM -.->|role map| ARC
+  ENS -.->|merged| ENG
+  SRC -.->|outright| GEM
+  EDI -.->|outright| GEM
+
+  EXP -->|repo push first| SFG
+  ENG -->|repo push first| SFG
+  EXT -->|repo push first| SFG
+  EMI -->|repo push first| SFG
+  IMI -->|repo push first| SFG
+  linkStyle 31,32,33,34,35 stroke:#c62828,stroke-width:2px

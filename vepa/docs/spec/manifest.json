@@ -1,0 +1,49 @@
+{
+  "schema": "vepa-technical-spec/v1",
+  "generator": "scripts/generate-spec.mjs",
+  "project": "vepa-v4",
+  "version": "9.3.5",
+  "inputRoots": [
+    "src",
+    "tests",
+    "bench",
+    "public"
+  ],
+  "sourceFileCount": 413,
+  "sourceAreas": {
+    "benchmark": 10,
+    "repository": 7,
+    "application": 53,
+    "state": 48,
+    "simulation": 34,
+    "ui": 30,
+    "testing": 231
+  },
+  "laws": {
+    "declared": 136,
+    "mapped": 136,
+    "categories": {
+      "physics": 16,
+      "mechanics": 8,
+      "biology": 16,
+      "chemistry": 16,
+      "thermodynamics": 16,
+      "metaphysics": 16,
+      "electromagnetism": 16,
+      "information": 16,
+      "quantum": 16
+    },
+    "duplicateIndexes": [],
+    "missingIndexes": [],
+    "canonicalHelpCount": 136,
+    "mergedHelpCount": 136,
+    "missingHelp": []
+  },
+  "findings": {
+    "packageJsonVersion": "9.3.5",
+    "packageLockRootVersion": null,
+    "packageLockVersionMismatch": false,
+    "supplementalHelpCount": 0
+  },
+  "generatedArtifactCount": 185
+}

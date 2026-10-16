@@ -1,0 +1,72 @@
+# Schedule map: P1 + P2 live
+
+Owner: P1 (Ops) Marshal (f3810109-17a5-427f-9148-d58f645658e3). All times are Brisbane (AEST, UTC+10).
+Phase status comes from /workspace/governance/phases.md, which is the source of truth. Updated 4 Oct 2026, 3:11pm.
+Live: P1 (Marshal, Mender, Scorer, Safeguard, Safekeeper, Archivist, Architect, Explorer) and P2 since 4 Oct, 3:12pm (Scrutineer, Arbiter, Assembler, Inquirer, Inferer).
+Dormant, with no scheduled work: P3 (Sourcer, Investigator, Interrogator), P4 (Mediator, Messenger, Imitator) and P5 (Emissary, Engineer, Extractor, Editor).
+Retired 4 Oct: Moderator and Expediter (merged into Marshal), Meter (into Mediator), Minder and Maintainer (into Mender), Sentinel (into Safekeeper and Safeguard), Sanitizer, Surveyor, Ensembler and others.
+
+## Daily chain (weekdays)
+
+| Step | Bot | Starts on | Input | Output | Hands off to |
+|---|---|---|---|---|---|
+| 1 | P1 (Checks) Scorer | Own routine, weekdays 7:45am | Recent work from live bots | `/workspace/governance/assessments/YYYY-MM-DD.md` | P2 (Checks) Scrutineer, by priority message with the file path (from Mon 5 Oct) |
+| 2 | P2 (Checks) Scrutineer | Scorer's handoff. Backup routine weekdays 11:45am skips if today's reviews exist, and tells the Marshal if the Scorer's file is missing | Today's dated assessment file | `/workspace/governance/reviews/YYYY-MM-DD.md` | P1 (Roles) Architect, by priority message with the file path |
+| 3 | P1 (Roles) Architect | Scrutineer's handoff, not a clock time | Today's dated reviews file | Proposals, if any | Gem for approval (until P4 goes live, per R-004/R-005) |
+| 4 | Gem | Architect's proposal | Proposal | Approval or rejection | P1 (Roles) Archivist |
+| 5 | P1 (Roles) Archivist | Gem's approval or direct edit | Approved text | `/workspace/governance/codex/<bot>/vNNN.md` | None |
+
+After P4 goes live, step 4 becomes P2 (Roles) Assembler for non-governance proposals. Governance-bot changes always go to Gem. P2 (Roles) Arbiter rules only on precedence conflicts and is not an approval step.
+If a step's input file is missing, that step defers and doesn't run without it. The Marshal logs the deferral here and reports the stall to P1 (Ops) Mender.
+A dated file is a signal to start work, not proof of who wrote it, because the computer is shared. Anything that looks wrong gets checked 1:1 with the claimed sender.
+
+## Checks around the chain (weekdays)
+
+| When | Bot | What |
+|---|---|---|
+| 10:20am | P1 (Ops) Marshal | Chain check: the Scorer's file and the Scrutineer's pickup. Logs deferrals and sends stalls to Mender |
+| 10:50am | P1 (Ops) Mender | Stall and broken-handoff check, plus incident log |
+| 11:45am | P2 (Checks) Scrutineer | Backup run (see step 2) |
+| 1:15pm | P1 (Checks) Safeguard | Daily risk review and dry runs |
+
+Note: the Marshal's 10:20am check comes before the Scrutineer's 11:45am backup, so it only flags a missing Scorer file or a handoff that hasn't been picked up yet. It doesn't treat unfinished reviews as a stall before 11:45am.
+
+## Weekly
+
+| When | Bot | What |
+|---|---|---|
+| Mon 8:45am | P1 (Checks) Scorer | Weekly scorecard to Gem |
+
+## On demand (no recurring slot)
+
+| Bot | Runs when |
+|---|---|
+| P1 (Ops) Mender | Reported stalls, failures and broken chains. Single owner of stall detection, and now also state, indexes and cleanup |
+| P1 (Checks) Safeguard | Risky actions and dry runs, plus its 1:15pm slot |
+| P1 (Checks) Safekeeper | Secrets, permissions, threats and input cleaning. A 7:15am weekday sweep slot is on offer |
+| P1 (Roles) Archivist | Approved change or direct edit from Gem |
+| P1 (Work) Explorer | Ad-hoc work for Gem |
+| P2 (Roles) Arbiter | Precedence conflicts (rulings in `/workspace/governance/rulings.md`) |
+| P2 (Roles) Assembler | Delegation and role map now. Approvals after P4 |
+| P2 (ID) Inquirer, P2 (ID) Inferer | Identity question series and profile updates. Recurring slots on request |
+
+Free weekday slots: 6:50am, 7:15am (offered to Safekeeper), 2:30pm and 4:50pm. Keep 7:45 to 11:45am clear for the chain.
+
+## Instruction-pipeline items pending
+
+| Item | Handed over | Due | With |
+|---|---|---|---|
+| Handoff spec v001 (Scorer, then Scrutineer, then Architect; Assembler approves after P4) | 3 Oct, 2:42am | Was due 3 Oct, about 1:15pm. Redraft per R-005 | P1 (Roles) Architect, then Gem |
+| Agent-to-agent message verification rule (owner Safekeeper) | 3 Oct, about 2:50am | Was due 3 Oct, about 1:15pm | P1 (Roles) Architect, then Gem |
+
+## Parked (dormant phases, not live)
+
+- P4 (Ops) Mediator: connector and spend check, daily 6:50am (spend took over from the retired Meter's 1:15pm slot)
+- P4 (Ops) Messenger: digest, daily 4:50pm
+
+## Log
+- 3 Oct 2026, 11:20am: Phase 1 schedule created by the Marshal.
+- 3 Oct 2026, 11:22am: Scorer confirmed it stays at 7:45am. Gave Mender a weekday 10:50am slot and Safeguard a weekday 1:15pm slot.
+- 3 Oct 2026, 11:22am: Architect confirmed step 2. Both pipeline drafts are due about 1:15pm on 3 Oct.
+- 3 Oct 2026: Explorer confirmed Gem approves the Architect's proposals directly in phase 1. The chain is Scorer, then Architect, then Gem, then Archivist. Scrutineer has been asked to pause its 11:45am routine, and the Architect is drafting the interim instruction amendment.
+- 4 Oct 2026, 3:11pm: Rewritten for P1 + P2. Scrutineer is restored as step 2 (live 3:12pm; Scorer hands off to it from Mon 5 Oct). Approvals go to Gem until P4. Retired bots removed, and Meter's slot is parked under Mediator.

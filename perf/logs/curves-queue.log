@@ -1,0 +1,84 @@
+phase2 solver 30k-50k runs=2 Sat Oct 10 13:15:28 AEST 2026
+HIGH 30000 0.75 82 s
+MEDIUM 30000 1.7 40 s
+LOW 30000 4.03 20 s
+LOWEST 30000 4.38 18 s
+HIGH 35000 0.75 87 s
+MEDIUM 35000 1.53 42 s
+LOW 35000 2.81 26 s
+LOWEST 35000 3.38 24 s
+HIGH 40000 0.55 116 s
+MEDIUM 40000 1.28 53 s
+LOW 40000 2.24 32 s
+LOWEST 40000 2.98 27 s
+HIGH 45000 0.53 118 s
+MEDIUM 45000 1.27 51 s
+LOW 45000 2.51 31 s
+LOWEST 45000 2.76 27 s
+HIGH 50000 0.55 112 s
+MEDIUM 50000 1.37 49 s
+LOW 50000 2.05 37 s
+LOWEST 50000 2.53 31 s
+timeline Sat Oct 10 13:32:30 AEST 2026
+tl done lowest 10000 13:36:07
+tl done low 10000 13:38:11
+tl done high 1500 13:42:37
+tl done lowest 7500 13:43:00
+tl done lowest 5000 13:44:47
+tl done medium 7500 13:44:48
+tl done lowest 2500 13:45:37
+tl done high 1000 13:45:59
+tl done lowest 2000 13:46:26
+tl done high 2500 13:46:42
+tl done low 7500 13:46:49
+tl done lowest 1500 13:47:07
+tl done lowest 1000 13:47:31
+tl done lowest 500 13:47:45
+tl done low 5000 13:49:51
+tl done medium 5000 13:50:16
+tl done low 2500 13:51:10
+tl done low 2000 13:52:25
+tl done medium 2500 13:52:29
+tl done low 1500 13:53:22
+tl done low 1000 14:11:51
+tl done high 5000 14:11:52
+tl done low 500 14:12:09
+tl done medium 2000 14:12:32
+tl done high 500 14:12:37
+tl done medium 500 14:13:05
+tl done medium 10000 14:13:29
+tl done high 2000 14:13:39
+tl done medium 1000 14:14:04
+tl done medium 1500 14:15:04
+tl done high 7500 14:29:29
+tl done high 10000 14:31:25
+browser Sat Oct 10 14:31:25 AEST 2026
+HIGH,2500,2529,452,351,60.1,16.7,16.7,2.66,11.7,n/a,3256,2529,5,21.6,headless Chrome, NO GPU (SwiftShader), 1280x800
+MEDIUM,2500,2633,147,163,58.4,16.7,16.7,13.14,10.2,n/a,3280,2633,5,16.0,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOW,2500,2687,156,116,59.3,16.7,16.7,18.15,9.9,n/a,3291,2681,5,24.2,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOWEST,2500,2772,137,96,59.4,16.7,16.7,26.12,16.1,n/a,3298,2772,5,7.4,headless Chrome, NO GPU (SwiftShader), 1280x800
+HIGH,5000,5021,144,427,48.8,16.7,33.3,1.99,8.5,n/a,3275,5021,5,16.7,headless Chrome, NO GPU (SwiftShader), 1280x800
+MEDIUM,5000,5072,156,197,43.2,16.7,33.3,6.65,11.1,n/a,3369,5071,5,16.0,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOW,5000,5100,143,144,41.0,16.7,33.3,9.64,16.7,n/a,3308,5098,5,11.7,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOWEST,5000,5145,143,115,40.2,16.7,33.3,13.96,13.3,n/a,3310,5135,5,8.9,headless Chrome, NO GPU (SwiftShader), 1280x800
+HIGH,10000,10000,140,666,25.4,33.3,50.0,1.32,11.1,n/a,3307,10000,5,16.6,headless Chrome, NO GPU (SwiftShader), 1280x800
+MEDIUM,10000,10000,157,295,23.7,33.3,50.0,3.48,13.1,n/a,3308,10000,5,13.8,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOW,10000,10000,133,238,23.8,33.3,50.0,5.62,13.9,n/a,3390,9995,5,7.5,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOWEST,10000,10000,148,202,22.7,50.0,66.7,7.35,20.2,n/a,3380,9999,5,3.8,headless Chrome, NO GPU (SwiftShader), 1280x800
+HIGH,15000,15000,139,774,18.5,50.0,66.7,1.24,11.2,n/a,3303,15000,5,14.6,headless Chrome, NO GPU (SwiftShader), 1280x800
+MEDIUM,15000,15000,137,405,15.4,66.7,83.3,2.12,17.1,n/a,3322,15000,5,14.2,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOW,15000,15000,155,287,16.1,66.7,66.7,4.08,27.9,n/a,3341,14992,5,11.7,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOWEST,15000,15000,137,286,15.0,66.7,66.7,4.96,19.2,n/a,3385,14987,5,5.1,headless Chrome, NO GPU (SwiftShader), 1280x800
+HIGH,20000,20000,145,924,13.8,66.7,83.3,0.98,13.0,n/a,3316,20000,5,14.5,headless Chrome, NO GPU (SwiftShader), 1280x800
+MEDIUM,20000,20000,149,488,12.9,83.3,83.3,1.85,12.0,n/a,3367,20000,5,14.1,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOW,20000,20000,140,331,12.2,83.3,100.0,3.57,16.4,n/a,3442,19995,5,7.2,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOWEST,20000,20000,149,399,13.2,66.7,83.3,4.32,24.3,n/a,3430,19996,5,3.8,headless Chrome, NO GPU (SwiftShader), 1280x800
+HIGH,25000,25000,141,984,11.2,83.3,100.0,0.86,11.3,n/a,3341,25000,5,12.5,headless Chrome, NO GPU (SwiftShader), 1280x800
+MEDIUM,25000,25000,136,528,11.2,83.3,100.0,1.96,10.2,n/a,3386,24999,5,13.6,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOW,25000,25000,134,419,10.0,100.0,100.0,2.96,22.5,n/a,3431,24988,5,8.3,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOWEST,25000,25000,155,441,10.4,100.0,100.0,3.31,17.4,n/a,3435,24984,5,3.7,headless Chrome, NO GPU (SwiftShader), 1280x800
+HIGH,50000,50000,133,1507,6.1,166.7,183.3,0.48,11.6,n/a,3349,50000,5,12.6,headless Chrome, NO GPU (SwiftShader), 1280x800
+MEDIUM,50000,50000,149,886,5.8,166.7,200.0,1.20,14.4,n/a,3373,50000,5,10.4,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOW,50000,50000,144,754,5.5,183.3,216.7,1.46,15.4,n/a,3398,50000,5,4.6,headless Chrome, NO GPU (SwiftShader), 1280x800
+LOWEST,50000,50000,173,675,5.5,183.3,200.0,1.68,15.9,n/a,3404,49992,5,1.6,headless Chrome, NO GPU (SwiftShader), 1280x800
+phase1 done Sat Oct 10 14:38:52 AEST 2026

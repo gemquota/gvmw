@@ -1,0 +1,17 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v5 detail A — governance / checks / ops
+flowchart TB
+  GEM(("Gem"))
+  ARX["Architect"] --> GEM
+  GEM --> ARC["Archivist"]
+  ASM["RETIRED Assembler"] -.-> ARC
+  SCO["Scorer"] --> SCR["Scrutineer"]
+  SCR --> ARX
+  SCR --> MEN["Mender"]
+  SCR --> ARB["Arbiter"]
+  ARB --> ARX
+  SFG["Safeguard"] --> GEM
+  SFK["Safekeeper"] --> SFG
+  MAR["RETIRED Marshal"] -.-> MEN
+  MEN --> GEM
+  MED["Mediator"] --> GEM

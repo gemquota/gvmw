@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:medb:export:1.0:suspension-record",
+  "title": "Immutable suspension record (body of suspension-stream RECORD events)",
+  "type": "object",
+  "required": ["record_id", "capability", "trigger", "detected_at", "evidence_available", "evidence_missing",
+               "classification", "dependency_footprint", "interfaces", "status", "resolution_condition"],
+  "properties": {
+    "record_id": {"type": "string"},
+    "capability": {"type": "string", "description": "primitive id, optionally ':'-scoped to a matter"},
+    "trigger": {"type": "string"},
+    "detected_at": {"type": "string"},
+    "evidence_available": {"type": "array", "items": {"type": "string"}},
+    "evidence_missing": {"type": "array", "items": {"type": "string"}},
+    "classification": {"enum": ["PASS", "FAIL", "UNDETERMINED", "CONSTITUTIONAL_UNDERDETERMINATION", "AUDIT_INDETERMINACY"]},
+    "dependency_footprint": {"type": "object", "properties": {"direct": {"type": "array"}, "indirect": {"type": "array"}}},
+    "interfaces": {"type": "array", "items": {"type": "string"}},
+    "status": {"const": "SUSPENDED", "description": "status at creation; current status = last TRANSITION.to"},
+    "resolution_condition": {"type": "string"},
+    "section_iii_ref": {"type": ["string", "null"]},
+    "propagated_from": {"type": ["string", "null"]}
+  }
+}

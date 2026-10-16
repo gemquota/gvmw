@@ -1,0 +1,23 @@
+# Open stalls and waits (owner: P1 (Ops) Mender)
+
+Last updated: 16 Oct 2026, 8:10am AEST (manual Mender run, from Scrutineer's 16 Oct review). Previous version: `open.md.bak-20261016`.
+
+## Stalls and incidents
+
+| Id | Began | Summary | Next step | Status |
+|---|---|---|---|---|
+| INC-004 | Wed 7 Oct 2026 | No chain files for Wed 7 and Thu 8 Oct. Reopened into INC-006 on 13 Oct. | Scrutineer or Gem to close. The chain and digest resumed 16 Oct (Scrutineer S4). | Open. Closing condition met; awaiting Scrutineer or Gem to close. Mender doesn't close its own stall. |
+| INC-006 | Sat 10 Oct 2026, after 1:23pm | No chain Mon 12 to Thu 15 Oct (no assessments, reviews or chain files), no 12 Oct weekly scorecard, no Safeguard 1:15pm runs, no digest 11–15 Oct, and no missing-Scorer report to Mender (R-011). Billing is inferred, not confirmed. | Scrutineer or Gem to close. Gem to say whether the Cursor invoice is paid (triage B6). | Open. Closing condition met at about 8:05am 16 Oct (`assessments/2026-10-16.md` 7:50:43am, `reviews/2026-10-16.md` 8:04:29am, `digest/sent/2026-10-16.md` 7:49:08am); awaiting Scrutineer or Gem to close. |
+| INC-007 | Mon 12 Oct 2026, 10:50am | Mender's own watchdog missed 12 Oct (failed), 14 Oct (no artefact) and 15 Oct (failed 10:52:50am, unpaid Cursor invoice). | Today's 10:50am routine run will show whether it works again. Gem to settle the invoice question (B6). | Open. Own-duty stall: Gem or Scrutineer closes it, not Mender. |
+| INC-005 | Fri 9 Oct 2026, between 9:20 and 9:26am | Nine agent folders present at 9:20am were gone by about 9:26am. No deletion quote in `approvals/`. Cause not stated. | Gem (Scrutineer already asked). | Open, waiting on Gem. |
+
+## Waits (not stalls)
+
+| Item | Began | Waiting on | Notes |
+|---|---|---|---|
+| Architect's four 9 Oct drafts (Arbiter v005, Architect v004, Engineer v006, Scrutineer v004 in `proposals/2026-10-09/`) | 9 Oct 2026 | Approver: Imitator since P4 went live 11:30pm 15 Oct, or Gem if Gem prefers (Scrutineer S9) | None of the four changes Imitator or Investigator, so Imitator can approve them under R-015 |
+| Keep or delete the `backup/codey-complete-plans-2026-10-10` branch on public DayneK/vepa | 10 Oct 2026 | Gem (deleting is irreversible, R-020) | In today's digest |
+| Is the Cursor invoice paid? (triage B6) | 10 Oct 2026 | Gem | Linked to INC-004, INC-006 and INC-007 |
+
+## Closed since last update
+- Verification rule row (opened 5 Oct 2026, 11:33am). Closed 16 Oct 2026 by Mender, as Scrutineer's review S5 and Explorer's triage A4 asked. Gem approved it directly in Archivist's chat at 9:04am on 9 Oct: "Yes, I approve all 6 (Inquirer, Inferer, Marshal, Arbiter, Scorer and the message-checking rule). Record and deploy them." (`approvals/2026-10-09-gem-direct-words.md`). Recorded as `codex/_shared/message-verification-rule/v001.md` (approved by Gem in Archivist's chat 9 Oct 9:04am, per CHANGELOG). v002 was recorded 15 Oct (file 10:40pm) on Gem's direct approval in Archivist's chat at 10:38pm (`approvals/2026-10-15-gem-direct-words.md`). The earlier 5 Oct 11:33am approval in Mender's chat was a relay and no longer matters.

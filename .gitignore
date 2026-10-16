@@ -1,0 +1,102 @@
+# Mirrors the rsync exclude list used to build this snapshot (16 Oct 2026)
+# --- top-level: never ship ---
+/backups/
+/tools/
+/agent-tools/
+/.playwright-mcp/
+# --- dependencies / envs / caches ---
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.cache/
+# --- nested repos' git metadata (obsidian-vault, medb, vepa) ---
+.git/
+.git
+# --- binaries / archives ---
+*.AppImage
+*.zip
+*.tar
+*.tar.*
+*.tgz
+*.gz
+*.7z
+*.rar
+# --- credentials / secret-looking names ---
+.env
+.env*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*token*
+*secret*
+*credential*
+*cookie*
+cookies*
+hosts.yml
+.netrc
+.npmrc
+.ssh/
+.gnupg/
+*storage_state*
+*storageState*
+user-data*/
+*Chrome*/
+*chromium*/
+*firefox*/
+# --- oversized data (>50MB) ---
+/bie_tools/pstats/pubinfo.jsonl
+/bie_tools/pstats/pages_content.jsonl
+# --- Safeguard: zip with exposed logins (also covered by *.zip) ---
+/bie_scraper_and_lists.zip
+# --- gitleaks findings (run 1), excluded by path ---
+/bie_tools/app.js
+/bie_tools/nologin_check.py
+/bie_tools/page_pokiesmate.bet.html
+/bie_tools/page_truebluepokies.win.html
+/bie_tools/partner_dirs.json
+/bie_tools/partner_dirs_r1.json
+/governance/_archive/directory.md.bak-1525
+/governance/codex/_tools/build_v001_batch2.py
+/governance/directory.md.bak-1504
+/medb/data/sync_clients.json
+/medb/experiment/envelopes/E1-117413/manifest.json
+/medb/experiment/envelopes/E1-49898d/manifest.json
+/medb/experiment/envelopes/E1-847ba0/manifest.json
+/medb/experiment/envelopes/E1-a294e6/manifest.json
+/medb/experiment/envelopes/E1-a5db21/manifest.json
+/medb/experiment/envelopes/E1-a77c61/manifest.json
+/medb/experiment/envelopes/E1-da7b19/manifest.json
+/medb/experiment/envelopes/E1-dae900/manifest.json
+/medb/experiment/envelopes/E1-e87b82/manifest.json
+/medb/experiment/envelopes/E1-ed324d/manifest.json
+/medb/experiment/envelopes/E1-f8060d/manifest.json
+/medb/tests/sync_fakes.py
+/swarm-db/swarm_structures.html
+/swarm-db/swarm_structures.json
+/vepa/src/ui/narrativePanel.js
+# --- login literal (account username found in DB) ---
+/bie/test_scrape_site.py
+/bie_deliverables/scraper/test_scrape_site.py
+# --- sharing hold (Gem/Safeguard): every copy ---
+bonus_scores_AU.xlsx
+*bonus_scores*
+# --- editor lock files ---
+.~lock.*#
+# --- Safekeeper T-017: credential configs (ui_user/ui_pass + U1-U5 u/p) ---
+/bie/in/config/config.ini
+/bie_deliverables/scraper/in/config/config.ini
+/bie_tools/_history/orig_v2/config.ini
+config.ini
+# --- Safekeeper T-017: identity incident + security folder ---
+/governance/incidents/2026-10-03-identity-set5-unverified.md
+/governance/security/
+/_repo-staging/
+*.sqlite-journal
+# blank templates are allowed
+!config.example.ini

@@ -1,0 +1,17 @@
+HIGH,1000,1,1150,60.1,16.7,16.7,8.10,cpu,193,headless Chrome NO GPU (SwiftShader) 1280x800
+HIGH,1000,2,1160,60.0,16.7,16.7,9.09,cpu,334,headless Chrome NO GPU (SwiftShader) 1280x800
+HIGH,2500,1,2567,57.5,16.7,16.7,3.79,cpu,509,headless Chrome NO GPU (SwiftShader) 1280x800
+HIGH,2500,2,2562,56.7,16.7,33.3,3.59,cpu,370,headless Chrome NO GPU (SwiftShader) 1280x800
+HIGH,5000,1,5040,39.5,16.7,33.3,2.19,cpu,573,headless Chrome NO GPU (SwiftShader) 1280x800
+HIGH,5000,2,5040,41.2,16.7,33.3,2.09,cpu,628,headless Chrome NO GPU (SwiftShader) 1280x800
+HIGH,7500,1,6000,34.5,33.3,33.3,2.19,cpu,-1,headless Chrome NO GPU (SwiftShader) 1280x800
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.evaluate: Target page, context or browser has been closed
+    at /workspace/perf/fps/fps.mjs:19:27 {
+  log: []
+}
+
+Node.js v22.23.3

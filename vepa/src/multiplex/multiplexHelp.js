@@ -1,0 +1,579 @@
+// ============================================================================
+// VEPA4 — Chaos Multiplex Help & Tooltips
+// Long-press any multiplex control (setup screen, drawer, metrics) for a
+// quick description, or open the full-screen guide from the ? button in the
+// controls drawer.
+// ============================================================================
+
+const TOOLTIP_ID = 'mpx-tooltip';
+const HELP_OVERLAY_ID = 'mpx-help-overlay';
+const LONG_PRESS_MS = 500;
+const MOVE_TOLERANCE = 10; // px — cancels the long-press while dragging
+
+/**
+ * Descriptive help entries for every multiplex control. Each entry carries
+ * the four-tier spirit of LAW_HELP_DB: title, hint (one line) and a longer
+ * explanation. `section` groups entries in the full-screen guide.
+ */
+export const MULTIPLEX_HELP_DB = {
+  // ── Setup screen ──
+  grid: {
+    section: 'setup',
+    title: 'GRID',
+    hint: 'How many concurrent simulations to run.',
+    explanation: 'Columns × Rows (1×1 up to 5×5, max 25 shards). Each shard is an independent simulation derived from the selected one. More shards shrink the per-shard population cap on an inverse-square-root curve so the combined physics budget stays bounded.',
+  },
+  randomize: {
+    section: 'setup',
+    title: 'RANDOMIZE ASPECTS',
+    hint: 'Which aspects get varied between shards.',
+    explanation: 'Laws, DNA, Population and World Parameters can be randomized independently. Unchecking an aspect keeps it identical to the source across every shard — e.g. vary DNA only to explore behaviour with fixed laws, or disable Params to keep every shard in the same physics regime.',
+  },
+  variation: {
+    section: 'setup',
+    title: 'VARIATION',
+    hint: 'Master divergence knob between shards.',
+    explanation: 'How far each shard drifts from the source simulation. 0% produces identical clones; 100% produces wildly divergent futures. LAW VAR / DNA VAR / POP VAR / PARAM VAR scale this master knob per aspect.',
+  },
+  lawVar: {
+    section: 'setup',
+    title: 'LAW VAR',
+    hint: 'Per-aspect multiplier on VARIATION for laws.',
+    explanation: 'Controls how aggressively law toggles are randomized when shards are built. 0 blocks law randomization entirely; 1 applies the full master VARIATION strength.',
+  },
+  dnaVar: {
+    section: 'setup',
+    title: 'DNA VAR',
+    hint: 'Per-aspect multiplier on VARIATION for DNA.',
+    explanation: 'Controls how much each shard\u2019s species genomes mutate during derivation. 0 keeps genomes identical to the source; 1 applies the full master VARIATION strength.',
+  },
+  popVar: {
+    section: 'setup',
+    title: 'POP VAR',
+    hint: 'Per-aspect multiplier on VARIATION for population.',
+    explanation: 'Controls how much positions and velocities are jittered when a shard is derived. 0 keeps the population layout identical; 1 applies the full master VARIATION strength.',
+  },
+  paramVar: {
+    section: 'setup',
+    title: 'PARAM VAR',
+    hint: 'Per-aspect multiplier on VARIATION for world parameters.',
+    explanation: 'Controls how aggressively each shard\u2019s law-tuning knobs (the WORLD panel sliders: GLOBAL_G, TIDAL_SCALE, ACIDITY_PH, COULOMB_CONSTANT, …) are perturbed when the shard is derived. Each shard solves under its own parameter regime — a different gravity well, a different acid bath, a different quantum world. 0 keeps every knob identical to the source; 1 applies the full master VARIATION strength. The COMPARE tab\u2019s PARAMS row shows how many knobs each shard has drifted from the world you configured.',
+  },
+  derive: {
+    section: 'setup',
+    title: 'DERIVE',
+    hint: 'How each shard gets its starting population.',
+    explanation: 'CLONE copies positions, DNA and laws from the selected simulation, then applies variation. SPAWN builds a fresh, evenly distributed population grid while keeping the source DNA and laws. With REFILL TO CAP on (the default), CLONE then tops every new shard back up to full population; with it off, only the survivors are carried over.',
+  },
+  popScale: {
+    section: 'setup',
+    title: 'POP SCALE',
+    hint: 'Scales the dynamic per-shard population cap.',
+    explanation: 'A 0.25–1 multiplier on the per-shard population cap. Lower values make shards lighter and faster to simulate; the cap never drops below 250 particles per shard.',
+  },
+  popPercent: {
+    section: 'setup',
+    title: 'POP % / SIM',
+    hint: 'Fixed per-sim population as a percentage of the default cap.',
+    explanation: 'When above 0, every shard is capped at this percentage of a 10,000-particle basis (the multiplex basis is kept at 10,000 although the engine cap is 100,000 again, so saved values keep their meaning), whatever the grid size: 25 gives 2,500 particles per sim. 0 keeps the automatic curve, where the cap shrinks with the square root of the shard count and POP SCALE applies. CLONE mode still copies at most the source population.',
+  },
+  perfPreset: {
+    section: 'setup',
+    title: 'PERFORMANCE PRESET',
+    hint: 'Smooth 20, Balanced or Full fidelity — or Custom.',
+    explanation: 'Presets set the grid, particles per sim, preview laws and sim tick scheduling together. Smooth 20: 20 sims × 125 particles, light laws, a tick every frame. Balanced: 20 × 500, light laws, adaptive ticks. Full fidelity: 20 × 2,500 (25%), full laws, adaptive ticks — the sims tick slower than the screen draws, but the UI stays at 60 fps. Changing any performance control switches to Custom. Settings are remembered between sessions.',
+  },
+  particlesPerSim: {
+    section: 'setup',
+    title: 'PARTICLES / SIM',
+    hint: 'Fixed population per sim (125–2,500). 0 uses POP %.',
+    explanation: 'Caps every sim at this many particles, whatever the grid size. It is kept in step with POP % / SIM (2,500 = 25% of the 10,000-particle multiplex basis). Smaller previews tick much faster: 20 × 125 runs at 60 fps; 20 × 2,500 needs throttled ticks.',
+  },
+  lawTier: {
+    section: 'setup',
+    title: 'PREVIEW LAWS',
+    hint: 'Full: each sim\'s own laws. Light: only the light set.',
+    explanation: 'Light solves each sim with its own laws intersected with the light set below (laws the sim has off stay off). The sim\'s real law set is unchanged, so fitness, export and copy-to-world still see every law. RESET restores the default light set.',
+  },
+  lightLaws: {
+    section: 'setup',
+    title: 'LIGHT LAW SET',
+    hint: 'Law names, separated by spaces or commas.',
+    explanation: 'Edit which laws previews keep in Light mode. Unknown names are ignored. The default keeps motion, heat, life, energy and reproduction and drops the expensive pairwise social, information and chemistry laws (documented in docs/MULTIPLEX-PERF.md).',
+  },
+  tickMode: {
+    section: 'setup',
+    title: 'SIM TICKS',
+    hint: 'How sim ticks relate to screen frames.',
+    explanation: 'Every frame: each sim ticks once per drawn frame; with the worker pool a sim that is still busy skips that frame instead of stalling the UI. Fixed rate: each sim ticks at TICKS / SEC. Adaptive: sims tick as fast as the pool (or the in-thread BUDGET MS) allows, and the screen keeps drawing at 60 fps.',
+  },
+  ticksPerSecond: {
+    section: 'setup',
+    title: 'TICKS / SEC',
+    hint: 'Per-sim tick rate in Fixed mode.',
+    explanation: 'Target simulation ticks per second for each sim when SIM TICKS is Fixed rate. The rate is a ceiling: a sim that cannot keep up ticks as fast as it can.',
+  },
+  frameBudget: {
+    section: 'setup',
+    title: 'BUDGET MS',
+    hint: 'Main-thread sim time per frame without workers.',
+    explanation: 'When the worker pool is off (or unavailable), Fixed and Adaptive modes tick sims round-robin on the UI thread until this many milliseconds are spent in a frame. Keep it under about 10 ms to hold 60 fps.',
+  },
+  useWorkers: {
+    section: 'setup',
+    title: 'WORKER POOL',
+    hint: 'Run sims on background threads.',
+    explanation: 'Sims are spread over a pool of Web Workers (one per spare core) so the UI thread only draws. Each sim keeps its own isolated solver state, and a pooled run gives the same results as an in-thread run.',
+  },
+  seed: {
+    section: 'setup',
+    title: 'SEED',
+    hint: 'Deterministic shard lineage.',
+    explanation: '0 uses a random source seed every start. A value above 0 makes the shard lineage deterministic — the same seed reproduces the same derived shard set.',
+  },
+  substeps: {
+    section: 'setup',
+    title: 'SUBSTEPS',
+    hint: 'Solver sub-steps per shard tick (1–8).',
+    explanation: 'Each shard tick runs the solver this many times with a smaller time step. Higher substeps integrate physics more finely (stable fast worlds) but multiply the per-tick cost across every shard.',
+  },
+  fidelity: {
+    section: 'setup',
+    title: 'FIDELITY',
+    hint: 'HIGH (default) / MEDIUM / LOW / LOWEST speed preset. All but HIGH CHANGE RESULTS.',
+    explanation: 'One switch for the speed settings. It moves the world speed sliders (shared with SETUP \u203a WORLD \u203a PERFORMANCE \u203a SPEED, so the main world changes too) and LAW COUNT. HIGH = every speed slider at its default and LAW COUNT 136: exactly the normal results. MEDIUM = the old FAST values, LAW COUNT 136. LOW = a milder cut (neighbour limit 24, pair budget 12) plus LAW COUNT 48 (the light set and the 32 cheapest laws after it), which keeps most bonding. LOWEST = the fastest settings that still keep a working sim, plus LAW COUNT 16 (the light set): far faster, but neighbours, ranges and the costly and social laws are cut hard, so structures form much more slowly and look different. Moving any of those sliders yourself shows Custom. See docs/SPEED-OPTIONS.md.',
+  },
+  lawCount: {
+    section: 'setup',
+    title: 'LAW COUNT',
+    hint: 'Speed slider, 1–136 (default 136 = every law). Below 136 it changes results.',
+    explanation: 'How many laws the previews solve with when PREVIEW LAWS is Full (the Full fidelity preset). At 136 every sim uses its own full law set, exactly as before. Lower values keep only the top-N laws of a fixed priority ranking (each sim still only runs laws it has on): first the 16-law light set, ordered so life, energy and reproduction come first, then the remaining 120 laws from cheapest to most expensive, as measured by removing each law from a 1,000-particle all-laws world. So 16 = the light set, and each step above it adds the next-cheapest law. Anything below 136 CHANGES RESULTS: the dropped laws do not act in the previews. Below about 3 the sims have no LIFE/ENERGY/REPRO and only drift. The sims\u2019 real law sets are unchanged, so fitness, export and copy-to-world still see every law. Deterministic for a given seed. Saved with your multiplex settings. The full ranking is in src/multiplex/lawRanking.js and docs/SPEED-OPTIONS.md.',
+  },
+  refillToCap: {
+    section: 'setup',
+    title: 'REFILL TO CAP',
+    hint: 'Clone iterate tops every new shard back up to full population (default on).',
+    explanation: 'CLONE copies the selected shard\u2019s particle slots, dead ones included. With this on, each new shard\u2019s empty slots are filled with copies of random survivors (bonds, age and partners reset, nudged slightly apart) before the per-sim variation is applied, so every generation starts at full population. If nothing survived, the shard is respawned from the selected shard\u2019s DNA. Full population is the PARTICLES / SIM (or POP % / SIM) cap when one is set — every preset sets one — otherwise the population each shard started with. Off = the old behaviour: survivors only, so a dying world keeps shrinking across iterates. SPAWN mode is unaffected. Saved with your multiplex settings.',
+  },
+  spawnSpecies: {
+    section: 'setup',
+    title: 'SPAWN SPECIES',
+    hint: 'Species count for freshly SPAWNED shard populations (1–5).',
+    explanation: 'Used by the SPAWN derive mode when building a fresh, evenly distributed population. The species genomes come from the source DNA, but the grid starts with this many balanced species instead of copying the source layout. CLONE mode ignores it.',
+  },
+  // ── Iteration ──
+  autoIterate: {
+    section: 'iteration',
+    title: 'AUTO-ITERATE',
+    hint: 'Regenerate all shards on a fixed cadence.',
+    explanation: 'Guided evolution on autopilot: every interval ticks, all shards are rebuilt from the selected shard with fresh seeds and variation. Combined with AFTER ITERATE, the multiplex keeps following the best future.',
+  },
+  interval: {
+    section: 'iteration',
+    title: 'EVERY',
+    hint: 'Ticks between auto-iterations (50–2000).',
+    explanation: 'The auto-iterate cadence. Smaller intervals churn generations quickly; larger intervals let each generation play out longer before being replaced.',
+  },
+  selectAfter: {
+    section: 'iteration',
+    title: 'AFTER ITERATE',
+    hint: 'What selection happens after each iteration.',
+    explanation: 'NONE keeps the current selection. FITTEST jumps to the shard with the highest weighted fitness. FOLLOW jumps to the shard whose metric profile is closest to the previous selection — the world that was on screen.',
+  },
+  keepSelected: {
+    section: 'iteration',
+    title: 'KEEP SELECTED',
+    hint: 'Anchor the selected shard through regeneration.',
+    explanation: 'When iterating, the selected shard is left untouched: its full view, DNA, laws and PRNG state are snapshotted before the rebuild and restored into the new grid, so your current world survives as a stable anchor.',
+  },
+  maxIters: {
+    section: 'iteration',
+    title: 'MAX ITERS',
+    hint: 'Hard cap on auto-iterations (0 = unlimited).',
+    explanation: 'Stops auto-iteration after this many generations. The grid keeps running; only the regeneration stops.',
+  },
+  drift: {
+    section: 'iteration',
+    title: 'DRIFT',
+    hint: 'Evolutionary pressure per generation.',
+    explanation: 'Each generation raises VARIATION by this amount (0–0.05, capped at 1), so later generations explore more broadly while early generations stay close to the source.',
+  },
+  cooling: {
+    section: 'iteration',
+    title: 'COOLING',
+    hint: 'Shrink VARIATION each generation (annealing).',
+    explanation: 'Each generation multiplies VARIATION by (1 − cooling), down to a 5% floor, so evolution explores broadly early and refines late. When DRIFT and COOLING are both set, cooling wins at the floor.',
+  },
+  adaptInt: {
+    section: 'iteration',
+    title: 'ADAPTIVE INTERVAL',
+    hint: 'Slow auto-iterate down while fitness plateaus.',
+    explanation: 'When a generation does not beat the best fitness, the auto-iterate interval stretches ×1.5 (up to 4000 ticks); it snaps back to ITERATE EVERY as soon as the best improves.',
+  },
+  stagLimit: {
+    section: 'iteration',
+    title: 'STAGNATION LIMIT',
+    hint: 'Pause auto-iterate after N generations without improvement (0 = off).',
+    explanation: 'Counts generations whose best fitness does not improve (the STAG readout). At the limit auto-iterate pauses and the stats show ⏸ CONVERGED. A manual ⚡ iterate re-arms it.',
+  },
+  elites: {
+    section: 'iteration',
+    title: 'ELITES KEPT',
+    hint: 'Top-N fittest shards survive each iteration untouched (0–4).',
+    explanation: 'Before the rebuild the N fittest shards (by the stable fitness score) are snapshotted and restored into the new grid, so the best lineages are never lost to a bad generation.',
+  },
+  histDepth: {
+    section: 'iteration',
+    title: 'HISTORY DEPTH',
+    hint: 'Generations kept for COMPARE / HIST → REVERT (1–12).',
+    explanation: 'How many past generations the history keeps. Older generations drop off; REVERT can rebuild any generation still in the list.',
+  },
+  // ── Runtime ──
+  simSpeed: {
+    section: 'runtime',
+    title: 'SIM SPEED',
+    hint: 'Timescale multiplier for the shard grid.',
+    explanation: '0.25–3× effective simulation speed. The main sim is paused while the multiplex runs, so this only affects the shard grid.',
+  },
+  paused: {
+    section: 'runtime',
+    title: 'PAUSE GRID',
+    hint: 'Freeze shard stepping.',
+    explanation: 'Stops the physics loop for all shards while keeping the grid, camera and metrics interactive.',
+  },
+  eco: {
+    section: 'runtime',
+    title: 'ECO PREVIEWS',
+    hint: 'Cheap preview rendering for the shard grid (was GPU ECO).',
+    explanation: 'Skips the reference grid and soft-glow halos and renders at 1.25× device-pixel-ratio. Default on — the full-quality render is only worth the cost on the main sim, not 16 previews.',
+  },
+  importOnExit: {
+    section: 'runtime',
+    title: 'IMPORT ON EXIT',
+    hint: 'Import the selected shard when leaving.',
+    explanation: 'On exit, the selected shard\u2019s particles, species DNA and law state are copied into the main simulation, and the world resets its offspring/intelligence systems around them.',
+  },
+  // ── Fitness ──
+  fitnessWeights: {
+    section: 'fitness',
+    title: 'FITNESS WEIGHTS',
+    hint: '14 weighted metrics ranking the shards.',
+    explanation: 'The weighted composite score drives FITTEST selection and the per-shard chips. When every weight is 0 the ranking falls back to population. MAX/MIN flips whether high or low values count as good for each metric.',
+  },
+  'metric-population': {
+    section: 'fitness',
+    title: 'POPULATION',
+    hint: 'Living particle count.',
+    explanation: 'The number of alive particles in the shard. The default tie-breaker when all weights are 0.',
+  },
+  'metric-growth': {
+    section: 'fitness',
+    title: 'GROWTH',
+    hint: 'Alive-count change vs the previous tick.',
+    explanation: 'Positive growth means the shard population is expanding; negative means it is shrinking.',
+  },
+  'metric-longevity': {
+    section: 'fitness',
+    title: 'LONGEVITY',
+    hint: 'Mean age of living particles.',
+    explanation: 'Older populations imply stable, long-lived organisms rather than constant turnover.',
+  },
+  'metric-stability': {
+    section: 'fitness',
+    title: 'STABILITY',
+    hint: '1 − coefficient-of-variation² of the alive window.',
+    explanation: 'A 0–1 score measuring how steady the population is over the rolling window — steady populations score 1, oscillating ones score low.',
+  },
+  'metric-energy': {
+    section: 'fitness',
+    title: 'ENERGY',
+    hint: 'Mean metabolic energy of living particles.',
+    explanation: 'Higher average energy suggests a thriving economy of life, not a starving dish.',
+  },
+  'metric-reserves': {
+    section: 'fitness',
+    title: 'RESERVES',
+    hint: 'Mean stored energy (capacitance / fusion).',
+    explanation: 'Averaged STORED_ENERGY across living particles — how much buffer the population carries for lean times.',
+  },
+  'metric-armor': {
+    section: 'fitness',
+    title: 'ARMOR',
+    hint: 'Mean defense rating.',
+    explanation: 'Average armor of living particles; armored populations survive predation and collisions better.',
+  },
+  'metric-mobility': {
+    section: 'fitness',
+    title: 'MOBILITY',
+    hint: 'Mean speed (velocity magnitude).',
+    explanation: 'How mobile the average particle is — fast populations explore more, slow ones settle.',
+  },
+  'metric-signal': {
+    section: 'fitness',
+    title: 'SIGNAL',
+    hint: 'Mean pulse / signal strength.',
+    explanation: 'Average SIGNAL across living particles; strong signals imply an active communication network.',
+  },
+  'metric-bonds': {
+    section: 'fitness',
+    title: 'BONDS',
+    hint: 'Mean active bond count.',
+    explanation: 'Average valence bonds per particle — bonded populations form structures and chains.',
+  },
+  'metric-diversity': {
+    section: 'fitness',
+    title: 'DIVERSITY',
+    hint: 'Shannon evenness over the species present.',
+    explanation: 'J = H / ln(S): 1 when species are perfectly balanced, 0 when a single species dominates.',
+  },
+  'metric-exploration': {
+    section: 'fitness',
+    title: 'EXPLORATION',
+    hint: 'Spatial entropy over a 4×4×4 occupancy grid.',
+    explanation: 'How spread out the population is across the world, normalized by the grid\u2019s bin count — colonizing species explore more cells.',
+  },
+  'metric-novelty': {
+    section: 'fitness',
+    title: 'NOVELTY',
+    hint: 'Mean normalized genome distance vs the source DNA.',
+    explanation: 'How far the shard\u2019s species genomes have drifted from the DNA it was derived from — 0 is identical, 1 is maximally divergent.',
+  },
+  'metric-delta': {
+    section: 'fitness',
+    title: 'DELTA',
+    hint: 'Mean deviation from the other shards\u2019 scores.',
+    explanation: 'A derived metric: how much this shard\u2019s profile differs from the rest. High delta = an outlier future worth watching.',
+  },
+  // ── Drawer & metrics ──
+  drawer: {
+    section: 'drawer',
+    title: 'CONTROLS BAR',
+    hint: 'Bottom bar with grid stats and the iterate/exit actions.',
+    explanation: 'Collapse it with the ▼ button (a slim ⚡ strip remains). All live settings now live in the initial setup screen; this bar is for actions and state only.',
+  },
+  iterate: {
+    section: 'drawer',
+    title: '⚡ ITERATE',
+    hint: 'Regenerate all shards from the selected shard now.',
+    explanation: 'Rebuilds every shard from the selected one with fresh seeds and variation — one manual generation. KEEP SELECTED and AFTER ITERATE apply to it just like auto-iteration.',
+  },
+  exit: {
+    section: 'drawer',
+    title: '✕ EXIT',
+    hint: 'Leave the multiplex.',
+    explanation: 'Tears down the shard grid and returns to the main sim. With IMPORT ON EXIT on, the selected shard is imported into the main world first.',
+  },
+  undo: {
+    section: 'drawer',
+    title: '↶ UNDO / ↷ REDO',
+    hint: 'Step back to the previous generation exactly (or forward again).',
+    explanation: 'Every ITERATE, REVERT, SEED, RESTORE and COMPARE first saves the whole on-screen generation (all shard particles, DNA, laws, RNG state, generation number and history). UNDO puts it back exactly; REDO re-applies the undone step. Up to 20 steps, bounded at 256 MB (about 20 MB per step at 20 sims × 2,500). Each sim\'s solver warm-up context restarts on restore.',
+  },
+  snapshots: {
+    section: 'drawer',
+    title: '▤ SNAPSHOTS',
+    hint: 'Save a shard or the whole generation; restart, seed, restore or compare later.',
+    explanation: 'SAVE SHARD keeps the selected sim, SAVE GENERATION keeps every sim, under a name and timestamp (stored in this browser via IndexedDB, with the seed and the LIVE-EDITED flag). Per row: ▶ SIM loads it into the single main sim, ⚡ SEED breeds a new generation from it, ⟲ RESTORE puts a saved generation back, 🗑 DELETE removes that one snapshot. Tick two or more and press ⇆ COMPARE to run them side by side with a live stats table.',
+  },
+  anneal: {
+    section: 'drawer',
+    title: 'RANDOMISATION + DECAY / GEN',
+    hint: 'How different each new generation is, and how fast that shrinks.',
+    explanation: 'RANDOMISATION is the variation used by the next ITERATE. DECAY / GEN multiplies it by (1 − decay) at every iterate (0.15 = ×0.85 per generation) down to a 5% floor, so early generations explore and later ones refine. The readout shows the factor and the next value.',
+  },
+  help: {
+    section: 'drawer',
+    title: '? HELP',
+    hint: 'Open the full-screen multiplex guide.',
+    explanation: 'Shows every control with its description. You can also long-press any multiplex control for a quick tooltip.',
+  },
+  metrics: {
+    section: 'drawer',
+    title: 'METRICS',
+    hint: 'Per-shard fitness chips + live stats bar.',
+    explanation: 'Each chip shows a shard\u2019s weighted fitness (S01 0.74) — tap one to select it. The stats line shows ALIVE, CAP, ΔSEL (selected shard\u2019s normalized divergence from the others), ΔAVG (mean raw divergence across shards), ITER, BEST (best fitness so far), STAG (generations without improvement / limit) and MS (EMA-smoothed shard tick time). A value that does not exist yet, or cannot be computed, shows as —. The selected shard has a red border.',
+  },
+};
+
+/** Section order + labels for the full-screen guide. */
+export const MULTIPLEX_HELP_SECTIONS = [
+  { id: 'setup', label: 'SETUP' },
+  { id: 'iteration', label: 'ITERATION' },
+  { id: 'runtime', label: 'RUNTIME' },
+  { id: 'fitness', label: 'FITNESS' },
+  { id: 'drawer', label: 'DRAWER & METRICS' },
+];
+
+// ── Long-press tooltip ──────────────────────────────────────────────────────
+
+let tooltipEl = null;
+let timer = null;
+let activeTarget = null;
+let pressX = 0;
+let pressY = 0;
+
+function ensureTooltip() {
+  if (tooltipEl) return tooltipEl;
+  tooltipEl = document.createElement('div');
+  tooltipEl.id = TOOLTIP_ID;
+  tooltipEl.className = 'hidden';
+  document.body.appendChild(tooltipEl);
+  // The tooltip body is rebuilt per show; keep it out of pointer events so
+  // long-press interactions underneath still register.
+  tooltipEl.addEventListener('pointerdown', (e) => e.stopPropagation());
+  return tooltipEl;
+}
+
+/** Find the help entry for an event target (delegated). */
+function helpEntryFor(el) {
+  const node = el && el.closest ? el.closest('[data-mpx-help]') : null;
+  if (!node) return null;
+  const key = node.dataset.mpxHelp;
+  return { key, node, entry: MULTIPLEX_HELP_DB[key] };
+}
+
+function showTooltip(el, key, entry) {
+  const tip = ensureTooltip();
+  tip.innerHTML = `
+    <div class="mpx-tip-head">
+      <span class="mpx-tip-title">${entry.title}</span>
+      <span class="mpx-tip-actions">
+        <button id="mpx-tooltip-guide" class="mpx-tip-guide" type="button" title="Full guide">GUIDE</button>
+        <button id="mpx-tooltip-close" class="mpx-tip-close" type="button" title="Close">✕</button>
+      </span>
+    </div>
+    <div class="mpx-tip-hint">${entry.hint}</div>
+    <div class="mpx-tip-expl">${entry.explanation}</div>`;
+  const closeBtn = tip.querySelector('#mpx-tooltip-close');
+  const guideBtn = tip.querySelector('#mpx-tooltip-guide');
+  closeBtn.addEventListener('click', hideTooltip);
+  guideBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hideTooltip();
+    openMultiplexHelp();
+  });
+  tip.classList.remove('hidden');
+
+  // Position: centered above the control, flipped below when near the top.
+  const rect = el.getBoundingClientRect();
+  const tipW = tip.offsetWidth || 260;
+  const tipH = tip.offsetHeight || 120;
+  let left = rect.left + rect.width / 2 - tipW / 2;
+  left = Math.max(8, Math.min(left, window.innerWidth - tipW - 8));
+  let top = rect.top - tipH - 10;
+  if (top < 8) top = rect.bottom + 10;
+  tip.style.left = `${Math.round(left)}px`;
+  tip.style.top = `${Math.round(top)}px`;
+  activeTarget = el;
+}
+
+export function hideTooltip() {
+  if (timer) {
+    clearTimeout(timer);
+    timer = null;
+  }
+  if (tooltipEl) tooltipEl.classList.add('hidden');
+  activeTarget = null;
+}
+
+/**
+ * Wire long-press tooltips for every `[data-mpx-help]` element inside root.
+ * Delegated, so dynamically built controls (e.g. fitness rows) work too.
+ */
+export function initMultiplexHelp(root = document.body) {
+  root.addEventListener('pointerdown', (e) => {
+    const hit = helpEntryFor(e.target);
+    hideTooltip();
+    if (!hit || !hit.entry) return;
+    pressX = e.clientX;
+    pressY = e.clientY;
+    timer = setTimeout(() => {
+      timer = null;
+      showTooltip(hit.node, hit.key, hit.entry);
+    }, LONG_PRESS_MS);
+  });
+  root.addEventListener('pointermove', (e) => {
+    if (!timer) return;
+    const dx = e.clientX - pressX;
+    const dy = e.clientY - pressY;
+    if (dx * dx + dy * dy > MOVE_TOLERANCE * MOVE_TOLERANCE) {
+      clearTimeout(timer);
+      timer = null;
+    }
+  });
+  // Release after a long-press keeps the tooltip open; it closes on a new
+  // press elsewhere, scroll, the ✕ button, or the GUIDE action.
+  root.addEventListener('pointerup', () => {
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+  });
+  root.addEventListener('pointercancel', () => {
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+  });
+  document.addEventListener('scroll', hideTooltip, true);
+}
+
+// ── Full-screen guide ───────────────────────────────────────────────────────
+
+let helpOverlay = null;
+
+function ensureHelpOverlay() {
+  if (helpOverlay) return helpOverlay;
+  helpOverlay = document.createElement('div');
+  helpOverlay.id = HELP_OVERLAY_ID;
+  helpOverlay.className = 'hidden';
+  helpOverlay.innerHTML = `
+    <div class="mpx-help-panel">
+      <div class="mpx-help-head">
+        <span class="mpx-help-title">CHAOS MULTIPLEX GUIDE</span>
+        <button id="mpx-help-close" class="mpx-btn mpx-icon" type="button" title="Close guide">✕</button>
+      </div>
+      <p class="mpx-help-sub">Long-press any multiplex control for a quick description, or browse every setting below.</p>
+      <div class="mpx-help-sections" id="mpx-help-sections"></div>
+    </div>`;
+  document.body.appendChild(helpOverlay);
+  helpOverlay.querySelector('#mpx-help-close').addEventListener('click', closeMultiplexHelp);
+  helpOverlay.addEventListener('pointerdown', (e) => {
+    if (e.target === helpOverlay) closeMultiplexHelp();
+  });
+  // Render sections once.
+  const host = helpOverlay.querySelector('#mpx-help-sections');
+  for (const section of MULTIPLEX_HELP_SECTIONS) {
+    const entries = Object.entries(MULTIPLEX_HELP_DB).filter(([, e]) => e.section === section.id);
+    if (!entries.length) continue;
+    const block = document.createElement('div');
+    block.className = 'mpx-help-section';
+    block.innerHTML = `<div class="mpx-help-section-label">${section.label}</div>`;
+    for (const [key, entry] of entries) {
+      const item = document.createElement('div');
+      item.className = 'mpx-help-item';
+      item.dataset.mpxHelp = key;
+      item.innerHTML = `
+        <div class="mpx-help-item-title">${entry.title}</div>
+        <div class="mpx-help-item-hint">${entry.hint}</div>
+        <div class="mpx-help-item-expl">${entry.explanation}</div>`;
+      block.appendChild(item);
+    }
+    host.appendChild(block);
+  }
+  return helpOverlay;
+}
+
+export function openMultiplexHelp() {
+  const overlay = ensureHelpOverlay();
+  overlay.classList.remove('hidden');
+}
+
+export function closeMultiplexHelp() {
+  if (helpOverlay) helpOverlay.classList.add('hidden');
+}
+
+/** True when the full-screen guide is currently open. */
+export function isMultiplexHelpOpen() {
+  return !!(helpOverlay && !helpOverlay.classList.contains('hidden'));
+}

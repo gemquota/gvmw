@@ -1,0 +1,14 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://argesizm.com,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://argesizm.com/,file:/workspace/bie_tools/search_v3.txt
+https://ace96au.org,1,0,0,0,homepage,http_403,403,,,,,,,0.3,HTTPError: 403 Client Error: Forbidden for url: https://ace96au.org/,file:/workspace/bie_tools/search_v3.txt
+https://bistrorozmaryn.pl,1,1,0,0,merchant,parse_failed,200,,26671,,,,,0.3,ValueError: Could not find merchant identification details in HTML or JS.,file:/workspace/bie_tools/search_v3.txt
+https://cheesepizza.pl,1,1,0,0,merchant,parse_failed,200,,38445,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,file:/workspace/bie_tools/search_v3.txt
+https://kornasiewicz.com.pl,1,1,0,0,merchant,parse_failed,200,,60115,,,,,0.4,ValueError: Could not find merchant identification details in HTML or JS.,file:/workspace/bie_tools/search_v3.txt
+https://auwin.com,1,1,0,0,merchant,parse_failed,200,,30715,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.,file:/workspace/bie_tools/search_v3.txt
+https://ozowin.com,1,1,0,0,merchant,parse_failed,200,,1709,,,,,0.7,ValueError: Could not find merchant identification details in HTML or JS.,file:/workspace/bie_tools/search_v3.txt
+https://pl.trustpilot.com,1,0,0,0,homepage,http_403,403,,,,,,,0.2,HTTPError: 403 Client Error: Forbidden for url: https://pl.trustpilot.com/,file:/workspace/bie_tools/search_v3.txt
+https://setus.com.pl,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://setus.com.pl/,file:/workspace/bie_tools/search_v3.txt
+https://k3o58k.com,1,1,0,0,merchant,parse_failed,200,,179521,,,,,1.4,ValueError: Could not find merchant identification details in HTML or JS.,file:/workspace/bie_tools/search_v3.txt
+https://okwanwin.vip,1,1,1,1,,,200,,770640,90023,100PGK,https://okwanwin.vip/api/v1/index.php,Invalid Action!,2.1,,file:/workspace/bie_tools/search_v3.txt
+https://efa99au.com,1,1,1,1,,,200,,714941,906,EFA99AUS,https://efa99au.com/api/v1/index.php,Invalid Action!,2.9,,file:/workspace/bie_tools/search_v3.txt
+https://auboss.me,1,1,0,0,merchant,parse_failed,200,,61730,,,,,4.2,ValueError: Could not find merchant identification details in HTML or JS.,file:/workspace/bie_tools/search_v3.txt

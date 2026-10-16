@@ -1,0 +1,102 @@
+url,reachable,homepage_ok,merchant_ok,api_ok,failure_stage,failure_reason,http_status,final_url,html_len,merchant_id,merchant_name,api_endpoint,api_reply,elapsed_s,error,source
+https://66aus.com,1,1,1,1,,,200,,635685,1105,66AUD,https://66aus.com/api/v1/index.php,Invalid Action!,1.8,,rapiddns-sameip:47.245.106.6
+https://12spin.net,1,1,0,0,merchant,parse_failed,200,,620905,,,,,2.4,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.245.106.6
+https://2ugo.com,1,1,1,1,,,200,,706128,1398,2UGO,https://2ugo.com/api/v1/index.php,Invalid Action!,2.7,,rapiddns-sameip:47.245.106.6
+https://au33.vip,1,1,1,1,,,200,,719095,1201,AU33,https://au33.vip/api/v1/index.php,Invalid Action!,1.6,,rapiddns-sameip:47.245.106.6
+https://ant88play.com,1,1,1,1,,,200,,848790,184,ANTBET 蚁博,https://ant88play.com/api/v1/index.php,Invalid Action!,4.0,,rapiddns-sameip:47.237.119.71
+https://bagus777.net,1,1,1,1,,,200,,653913,58,Bagus777,https://bagus777.net/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.237.119.71
+https://ant88bet.online,1,1,1,1,,,200,,848790,184,ANTBET 蚁博,https://ant88bet.online/api/v1/index.php,Invalid Action!,4.8,,rapiddns-sameip:47.237.119.71
+https://alibaba66.org,1,1,1,1,,,200,,1008015,220,A66,https://alibaba66.org/api/v1/index.php,Invalid Action!,4.9,,rapiddns-sameip:47.237.119.71
+https://bbwin33.club,1,1,1,1,,,200,,749219,37,BBWIN33,https://bbwin33.club/api/v1/index.php,Invalid Action!,2.0,,rapiddns-sameip:47.237.119.71
+https://berjayawin.com,1,1,1,1,,,200,,631066,60091,konichiwin,https://berjayawin.com/api/v1/index.php,Invalid Action!,1.9,,rapiddns-sameip:47.237.119.71
+https://bcb88asia.com,1,1,1,1,,,200,,1006013,9,BCB88,https://bcb88asia.com/api/v1/index.php,Invalid Action!,2.4,,rapiddns-sameip:47.237.119.71
+https://bbclubs.net,1,1,1,1,,,200,,994116,66,BBCLUBS,https://bbclubs.net/api/v1/index.php,Invalid Action!,4.0,,rapiddns-sameip:47.237.119.71
+https://aus66.com,1,1,0,0,merchant,parse_failed,200,,4730,,,,,5.3,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.245.106.6
+https://best66club.com,1,1,1,1,,,200,,669937,11066,Best66,https://best66club.com/api/v1/index.php,Invalid Action!,1.9,,rapiddns-sameip:47.237.119.71
+https://bkcuci.me,1,1,1,1,,,200,,683736,118,BosskuCuci,https://bkcuci.me/api/v1/index.php,Invalid Action!,1.6,,rapiddns-sameip:47.237.119.71
+https://bila2.com,1,1,1,1,,,200,,1263795,10162,Bila2cuci,https://bila2.com/api/v1/index.php,Invalid Action!,2.5,,rapiddns-sameip:47.237.119.71
+https://bmw2u.com,1,1,1,1,,,200,,634940,191,BMW2U,https://bmw2u.com/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.237.119.71
+https://bdlbet.com,0,0,0,0,reachable,ssl,,,,,,,,5.0,"SSLError: HTTPSConnectionPool(host='bdlbet.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c",rapiddns-sameip:47.237.119.71
+https://ck8.club,1,1,0,0,merchant,parse_failed,200,,0,,,,,1.2,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.237.119.71
+https://crown2u8.com,1,1,1,1,,,200,,780429,1306,CROWN2U,https://crown2u8.com/api/v1/index.php,Invalid Action!,2.2,,rapiddns-sameip:47.245.106.6
+https://crown2u.com,1,1,1,1,,,200,,780429,1306,CROWN2U,https://crown2u.com/api/v1/index.php,Invalid Action!,2.3,,rapiddns-sameip:47.245.106.6
+https://doublewin88.com,1,1,1,1,,,200,,681994,50227,DOUbLEWIN88,https://doublewin88.com/api/v1/index.php,Invalid Action!,1.8,,rapiddns-sameip:47.237.119.71
+https://edna-and-harvey.com,1,1,0,0,merchant,parse_failed,200,,35987,,,,,0.1,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.236.249.175
+https://bestwin8.net,0,0,0,0,reachable,ssl,,,,,,,,5.1,"SSLError: HTTPSConnectionPool(host='bestwin8.net', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl",rapiddns-sameip:47.237.119.71
+https://easywin77.net,1,1,1,1,,,200,,774268,365,EasyWin77,https://easywin77.net/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.237.119.71
+https://cashkingbet.org,1,1,1,1,,,200,,1152566,294,CashKingBet,https://cashkingbet.org/api/v1/index.php,Invalid Action!,5.2,,rapiddns-sameip:47.237.119.71
+https://ff96.me,1,1,1,1,,,200,,825116,10209,FF96,https://ff96.me/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.245.84.203
+https://ff96.vip,1,1,1,1,,,200,,825116,10209,FF96,https://ff96.vip/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.237.119.71
+https://goldensky88.net,1,1,1,1,,,200,,677233,292,GoldenSky88,https://goldensky88.net/api/v1/index.php,Invalid Action!,2.0,,rapiddns-sameip:47.237.119.71
+https://goldensky99.net,1,1,1,1,,,200,,677233,292,GoldenSky88,https://goldensky99.net/api/v1/index.php,Invalid Action!,2.0,,rapiddns-sameip:47.237.119.71
+https://expressking.com,1,1,1,1,,,200,,1032312,10992,ExpressKing,https://expressking.com/api/v1/index.php,Invalid Action!,2.6,,rapiddns-sameip:47.237.119.71
+https://gsc88.live,1,1,1,1,,,200,,693588,179,GSC88,https://gsc88.live/api/v1/index.php,Invalid Action!,2.0,,rapiddns-sameip:47.237.119.71
+https://happy88plus.com,1,0,0,0,homepage,cloudflare/403,200,,1093117,,,,,2.0,ValueError: Blocked: Access Denied.,rapiddns-sameip:47.237.119.71
+https://happyhappy88.com,1,0,0,0,homepage,cloudflare/403,200,,1093117,,,,,2.0,ValueError: Blocked: Access Denied.,rapiddns-sameip:47.237.119.71
+https://hokibossq.com,1,1,1,1,,,200,,643628,162,HOKIBOSSQ,https://hokibossq.com/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.237.119.71
+https://happyhappy88max.com,1,0,0,0,homepage,cloudflare/403,200,,1093117,,,,,2.0,ValueError: Blocked: Access Denied.,rapiddns-sameip:47.237.119.71
+https://i1kfc4u.club,0,0,0,0,reachable,connection,,,,,,,,1.9,"InvalidSchema: No connection adapters were found for ""about:blank';\\n            window.location.pathname = \\""",rapiddns-sameip:47.237.119.71
+https://j8best.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,1.0,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.237.119.71
+https://iplay9sg.com,1,1,1,1,,,200,,670148,10803,iPlay9sg,https://iplay9sg.com/api/v1/index.php,Invalid Action!,1.9,,rapiddns-sameip:47.237.119.71
+https://iwin711.net,1,1,1,1,,,200,,901435,10886,MrBayar,https://iwin711.net/api/v1/index.php,Invalid Action!,2.1,,rapiddns-sameip:47.237.119.71
+https://juta88.net,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.245.106.6
+https://iwin711.online,1,1,1,1,,,200,,901435,10886,MrBayar,https://iwin711.online/api/v1/index.php,Invalid Action!,2.6,,rapiddns-sameip:47.237.119.71
+https://kissy888.com,1,0,0,0,homepage,http_500,500,,,,,,,0.1,HTTPError: 500 Server Error: Internal Server Error for url: https://kissy888.com/,rapiddns-sameip:47.237.119.71
+https://jomcuci918.vip,1,1,1,1,,,200,,644145,29,JOMCUCI918,https://jomcuci918.vip/api/v1/index.php,Invalid Action!,2.9,,rapiddns-sameip:47.237.119.71
+https://jstar888.co,1,1,1,1,,,200,,861228,265,Jstar,https://jstar888.co/api/v1/index.php,Invalid Action!,2.5,,rapiddns-sameip:47.237.119.71
+https://kbz88.com,1,1,1,1,,,200,,631257,60166,KBZ88,https://kbz88.com/api/v1/index.php,Invalid Action!,1.8,,rapiddns-sameip:47.237.119.71
+https://kisser918.net,1,1,1,1,,,200,,873476,97,918Kisser,https://kisser918.net/api/v1/index.php,Invalid Action!,1.8,,rapiddns-sameip:47.237.119.71
+https://kldigi7777.online,1,1,1,1,,,200,,763729,131,KLBET1.0,https://kldigi7777.online/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.237.119.71
+https://jilifafa.com,1,1,1,1,,,200,,973152,619,JILI33,https://jilifafa.com/api/v1/index.php,Invalid Action!,4.4,,rapiddns-sameip:47.237.119.71
+https://kungfucat999.com,1,1,1,1,,,200,,634277,63,KungFuCat777,https://kungfucat999.com/api/v1/index.php,Invalid Action!,1.8,,rapiddns-sameip:47.237.119.71
+https://koi8.club,1,1,1,1,,,200,,683861,52,KOI8,https://koi8.club/api/v1/index.php,Invalid Action!,1.9,,rapiddns-sameip:47.237.119.71
+https://lionking.vip,1,1,1,1,,,200,,972785,619,JILI33,https://lionking.vip/api/v1/index.php,Invalid Action!,2.4,,rapiddns-sameip:47.237.119.71
+https://live47.net,1,1,1,1,,,200,,635495,10880,LIVE47,https://live47.net/api/v1/index.php,Invalid Action!,1.8,,rapiddns-sameip:47.237.119.71
+https://live22.site,1,1,1,1,,,200,,1177641,1109,LIVE22MY,https://live22.site/api/v1/index.php,Invalid Action!,2.2,,rapiddns-sameip:47.245.106.6
+https://luckyd88.com,1,1,1,1,,,200,,916619,1127,LUCKYD88,https://luckyd88.com/api/v1/index.php,Invalid Action!,1.9,,rapiddns-sameip:47.245.106.6
+https://malaysia33.vip,1,1,1,1,,,200,,638665,30796,MALAYSIA33,https://malaysia33.vip/api/v1/index.php,Invalid Action!,1.6,,rapiddns-sameip:47.237.119.71
+https://maggie8.com,1,1,1,1,,,200,,699611,1159,MAGGIE8,https://maggie8.com/api/v1/index.php,Invalid Action!,2.5,,rapiddns-sameip:47.245.106.6
+https://matbet88.xyz,1,1,1,1,,,200,,666848,43,MATBET88,https://matbet88.xyz/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.237.119.71
+https://mari888.com,1,1,1,1,,,200,,633546,32,Mari888,https://mari888.com/api/v1/index.php,Invalid Action!,2.0,,rapiddns-sameip:47.237.119.71
+https://mega888.life,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.245.106.6
+https://mcd76.club,1,1,1,1,,,200,,678370,153,MCD76,https://mcd76.club/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.237.119.71
+https://matbet88.live,1,1,1,1,,,200,,666848,43,MATBET88,https://matbet88.live/api/v1/index.php,Invalid Action!,2.8,,rapiddns-sameip:47.237.119.71
+https://mbb88.site,1,1,1,1,,,200,,975348,168,Million88,https://mbb88.site/api/v1/index.php,Invalid Action!,2.5,,rapiddns-sameip:47.237.119.71
+https://modcloth.site,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.84.198.177
+https://minecraftau.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,1.1,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.237.119.71
+https://megawin88my.com,1,1,1,1,,,200,,683648,254,Megawin,https://megawin88my.com/api/v1/index.php,Invalid Action!,2.0,,rapiddns-sameip:47.237.119.71
+https://menang711.com,1,1,1,1,,,200,,901435,10886,MrBayar,https://menang711.com/api/v1/index.php,Invalid Action!,2.4,,rapiddns-sameip:47.237.119.71
+https://mmking777.net,1,1,1,1,,,200,,624478,238,MMKing777,https://mmking777.net/api/v1/index.php,Invalid Action!,1.8,,rapiddns-sameip:47.237.119.71
+https://ong2you.com,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.9,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.237.119.71
+https://ong777.live,1,0,0,0,homepage,cloudflare/403,403,,,,,,,0.1,HTTPError: 403 Client Error: Forbidden for url: https://ong777.live/,rapiddns-sameip:47.237.119.71
+https://okwin333.club,1,1,1,1,,,200,,740710,38,OKWIN333,https://okwin333.club/api/v1/index.php,Invalid Action!,2.2,,rapiddns-sameip:47.237.119.71
+https://my11.world,1,1,1,1,,,200,,693574,166,MY11,https://my11.world/api/v1/index.php,Invalid Action!,2.9,,rapiddns-sameip:47.237.119.71
+https://mybbv.com,1,1,1,1,,,200,,1111660,1331,BVBX,https://mybbv.com/api/v1/index.php,Invalid Action!,2.4,,rapiddns-sameip:47.245.106.6
+https://okwin333.net,1,1,1,1,,,200,,740710,38,OKWIN333,https://okwin333.net/api/v1/index.php,Invalid Action!,2.3,,rapiddns-sameip:47.237.119.71
+https://ong777.club,1,1,1,1,,,200,,789913,21,ONG777,https://ong777.club/api/v1/index.php,Invalid Action!,2.5,,rapiddns-sameip:47.237.119.71
+https://pacman256.com,1,1,1,1,,,200,,635925,73019,PacMan256,https://pacman256.com/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.237.119.71
+https://ring88.com,1,0,0,0,homepage,cloudflare/403,200,,402,,,,,0.8,ValueError: Blocked: Access Denied.,rapiddns-sameip:47.245.106.6
+https://ong777.vip,1,1,1,1,,,200,,789913,21,ONG777,https://ong777.vip/api/v1/index.php,Invalid Action!,3.4,,rapiddns-sameip:47.237.119.71
+https://padubet.vip,1,1,1,1,,,200,,1003536,137,Padu Bet,https://padubet.vip/api/v1/index.php,Invalid Action!,2.8,,rapiddns-sameip:47.237.119.71
+https://regal33.com,1,1,1,1,,,200,,677127,1596,REGAL33,https://regal33.com/api/v1/index.php,Invalid Action!,2.9,,rapiddns-sameip:47.245.106.6
+https://padubet8.club,1,1,1,1,,,200,,1003536,137,Padu Bet,https://padubet8.club/api/v1/index.php,Invalid Action!,2.9,,rapiddns-sameip:47.237.119.71
+https://regal33.net,1,1,1,1,,,200,,677127,1596,REGAL33,https://regal33.net/api/v1/index.php,Invalid Action!,3.0,,rapiddns-sameip:47.245.106.6
+https://ritz99.net,1,1,1,1,,,200,,729577,1659,RITZ99,https://ritz99.net/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.245.106.6
+https://royal47.com,1,1,1,1,,,200,,790636,1236,ROYAL47MY,https://royal47.com/api/v1/index.php,Invalid Action!,1.6,,rapiddns-sameip:47.245.106.6
+https://sbk21.online,1,1,1,1,,,200,,783889,1180,SBK21,https://sbk21.online/api/v1/index.php,Invalid Action!,2.2,,rapiddns-sameip:47.245.106.6
+https://sv96.com,1,1,1,1,,,200,,684987,11004,HILLBETTEST,https://sv96.com/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.237.119.71
+https://tcr99.com,1,1,1,1,,,200,,697570,60667,TCR99,https://tcr99.com/api/v1/index.php,Invalid Action!,1.6,,rapiddns-sameip:47.237.213.6
+https://spadeclub88sg.app,1,1,1,1,,,200,,1880,77,Spadeclub88sg,https://spadeclub88sg.app/api/v1/index.php,Invalid Action!,2.8,,rapiddns-sameip:47.237.119.71
+https://topup22.com,1,1,1,1,,,200,,632291,60016,Topup22,https://topup22.com/api/v1/index.php,Invalid Action!,2.0,,rapiddns-sameip:47.237.119.71
+https://suncitymobi3.com,1,0,0,0,homepage,cloudflare/403,200,,1049203,,,,,4.1,ValueError: Blocked: Access Denied.,rapiddns-sameip:47.237.119.71
+https://tiptopbet88.vip,1,1,1,1,,,200,,819393,40,TTB88,https://tiptopbet88.vip/api/v1/index.php,Invalid Action!,2.8,,rapiddns-sameip:47.237.119.71
+https://ttbet77.com,1,1,1,1,,,200,,738623,1182,77POKIES,https://ttbet77.com/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.245.106.6
+https://toto88.co,1,1,1,1,,,200,,848858,448,ToTo88,https://toto88.co/api/v1/index.php,Invalid Action!,2.0,,rapiddns-sameip:47.237.119.71
+https://ttbet12.com,1,1,0,0,merchant,parse_failed,200,,170,,,,,2.0,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.237.119.71
+https://walletbcb88.asia,1,1,0,0,merchant,parse_failed,200,,0,,,,,0.8,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.237.119.71
+https://yes8my.net,1,1,0,0,merchant,parse_failed,200,,41048,,,,,0.1,ValueError: Could not find merchant identification details in HTML or JS.,rapiddns-sameip:47.237.119.71
+https://win365bet.net,1,1,1,1,,,200,,713653,60385,60385,https://win365bet.net/api/v1/index.php,Invalid Action!,1.6,,rapiddns-sameip:47.237.119.71
+https://wangmari88.xyz,1,1,1,1,,,200,,633105,73001,WangMari88,https://wangmari88.xyz/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.237.119.71
+https://winn88.com,1,1,1,1,,,200,,637880,1913,WINN88,https://winn88.com/api/v1/index.php,Invalid Action!,1.7,,rapiddns-sameip:47.245.106.6
+https://u2wallet4u.com,1,1,1,1,,,200,,1001731,48,U2Wallet,https://u2wallet4u.com/api/v1/index.php,Invalid Action!,3.0,,rapiddns-sameip:47.237.119.71
+https://ultra9.net,1,1,1,1,,,200,,670617,60683,Ultra9,https://ultra9.net/api/v1/index.php,Invalid Action!,3.8,,rapiddns-sameip:47.237.119.71

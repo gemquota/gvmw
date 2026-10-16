@@ -1,0 +1,4362 @@
+{
+  "version": "v2, 3 Oct 2026",
+  "previous_version": "role-graph-v1.json (v1, 2 Oct 2026)",
+  "maintainer": "Role Cartographer (d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4)",
+  "basis": {
+    "codex": "v001 for all 21 bots (8 new bots recorded 3 Oct 2026 at 02:43 AEST)",
+    "directory": "/workspace/governance/directory.md",
+    "pending_proposals": [
+      "/workspace/governance/proposals/auditor-v002.md",
+      "/workspace/governance/proposals/codey.md",
+      "/workspace/governance/proposals/grok-bot.md",
+      "/workspace/governance/proposals/scraper.md",
+      "/workspace/governance/proposals/collaboration-map.md"
+    ]
+  },
+  "super_groups": [
+    {
+      "key": "OVERSIGHT",
+      "name": "Oversight",
+      "groups": [
+        "Instruction Governance",
+        "Assurance"
+      ]
+    },
+    {
+      "key": "IDENTITY",
+      "name": "Identity",
+      "groups": [
+        "Identity"
+      ]
+    },
+    {
+      "key": "RUNTIME",
+      "name": "Runtime",
+      "groups": [
+        "Operations",
+        "Delivery"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "key": "IG",
+      "name": "Instruction Governance",
+      "channel_id": "e417910e-5e1e-41b8-94ec-ed80f2f1e498",
+      "super_group": "Oversight",
+      "lead": "Role Cartographer",
+      "lead_id": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "members": [
+        "Codex Keeper",
+        "Instruction Architect",
+        "Role Cartographer",
+        "Governance Continuity Deputy"
+      ],
+      "coordinator": "Genesis Gang God (sits in every group, per directory)"
+    },
+    {
+      "key": "ASR",
+      "name": "Assurance",
+      "channel_id": "b10e394f-5e67-48dd-97a9-e1df58f41d13",
+      "super_group": "Oversight",
+      "lead": "Auditor",
+      "lead_id": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "members": [
+        "Assessor",
+        "Auditor",
+        "Compliance & Risk Officer",
+        "Secrets & Credentials Custodian"
+      ],
+      "coordinator": "Genesis Gang God (sits in every group, per directory)"
+    },
+    {
+      "key": "IDG",
+      "name": "Identity",
+      "channel_id": "0ecaea40-3f1a-47d7-9976-b66821b5491f",
+      "super_group": "Identity",
+      "lead": "Identity Inferer",
+      "lead_id": "94516ca6-6355-43c5-b387-d2b605057784",
+      "members": [
+        "Clone",
+        "Identity Inquirer",
+        "Identity Inferer",
+        "Clone Accuracy Validator"
+      ],
+      "coordinator": "Genesis Gang God (sits in every group, per directory)"
+    },
+    {
+      "key": "OPS",
+      "name": "Operations",
+      "channel_id": "638e3cab-354d-4496-8a01-17f3179d2150",
+      "super_group": "Runtime",
+      "lead": "Orchestration Conductor",
+      "lead_id": "f3810109-17a5-427f-9148-d58f645658e3",
+      "members": [
+        "Orchestration Conductor",
+        "Cost & Budget Sentinel",
+        "Connector Steward",
+        "Comms Concierge"
+      ],
+      "coordinator": "Genesis Gang God (sits in every group, per directory)"
+    },
+    {
+      "key": "DEL",
+      "name": "Delivery",
+      "channel_id": "3e9d6a26-a614-45da-8fce-e4811c0d2f7c",
+      "super_group": "Runtime",
+      "lead": "Genesis Gang God",
+      "lead_id": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "members": [
+        "Genesis Gang God",
+        "Grok Bot",
+        "Codey",
+        "Scraper",
+        "Swarm Builder"
+      ],
+      "coordinator": "Genesis Gang God (sits in every group, per directory)"
+    }
+  ],
+  "council": {
+    "id": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+    "members": [
+      "Role Cartographer (Instruction Governance)",
+      "Auditor (Assurance)",
+      "Identity Inferer (Identity)",
+      "Orchestration Conductor (Operations)",
+      "Genesis Gang God (Delivery)"
+    ],
+    "source": "/workspace/governance/directory.md"
+  },
+  "nodes": [
+    {
+      "id": "gem",
+      "name": "Gem Quota",
+      "key": "GEM",
+      "type": "human"
+    },
+    {
+      "id": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+      "name": "Council",
+      "key": "COUNCIL",
+      "type": "council",
+      "members": [
+        "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+        "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+        "94516ca6-6355-43c5-b387-d2b605057784",
+        "f3810109-17a5-427f-9148-d58f645658e3",
+        "82a2c15a-2694-4ac2-b2f4-f7f463f85fce"
+      ],
+      "purpose_per_directory": "Cross-group issues; leads relay decisions back to their group.",
+      "source": [
+        "/workspace/governance/directory.md"
+      ]
+    },
+    {
+      "id": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "name": "Genesis Gang God",
+      "key": "GGG",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Delivery",
+      "group_id": "3e9d6a26-a614-45da-8fce-e4811c0d2f7c",
+      "super_group": "Runtime",
+      "group_lead": true,
+      "council_member": true,
+      "coordinator_of_all_groups": true,
+      "codex": "/workspace/governance/codex/genesis-gang-god/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "partial: no Rules or Limits",
+      "pending_proposals": []
+    },
+    {
+      "id": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "name": "Codex Keeper",
+      "key": "CK",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Instruction Governance",
+      "group_id": "e417910e-5e1e-41b8-94ec-ed80f2f1e498",
+      "super_group": "Oversight",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/codex-keeper/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete",
+      "pending_proposals": []
+    },
+    {
+      "id": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "name": "Instruction Architect",
+      "key": "IA",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Instruction Governance",
+      "group_id": "e417910e-5e1e-41b8-94ec-ed80f2f1e498",
+      "super_group": "Oversight",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/instruction-architect/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete",
+      "pending_proposals": []
+    },
+    {
+      "id": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "name": "Role Cartographer",
+      "key": "RC",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Instruction Governance",
+      "group_id": "e417910e-5e1e-41b8-94ec-ed80f2f1e498",
+      "super_group": "Oversight",
+      "group_lead": true,
+      "council_member": true,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/role-cartographer/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete",
+      "pending_proposals": []
+    },
+    {
+      "id": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "name": "Governance Continuity Deputy",
+      "key": "GCD",
+      "type": "bot",
+      "new_in_v2": true,
+      "group": "Instruction Governance",
+      "group_id": "e417910e-5e1e-41b8-94ec-ed80f2f1e498",
+      "super_group": "Oversight",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/governance-continuity-deputy/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete",
+      "pending_proposals": []
+    },
+    {
+      "id": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "name": "Assessor",
+      "key": "AS",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Assurance",
+      "group_id": "b10e394f-5e67-48dd-97a9-e1df58f41d13",
+      "super_group": "Oversight",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/assessor/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete",
+      "pending_proposals": []
+    },
+    {
+      "id": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "name": "Auditor",
+      "key": "AU",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Assurance",
+      "group_id": "b10e394f-5e67-48dd-97a9-e1df58f41d13",
+      "super_group": "Oversight",
+      "group_lead": true,
+      "council_member": true,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/auditor/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete (no separate Scope); v002 proposed, awaiting Gem",
+      "pending_proposals": [
+        "/workspace/governance/proposals/auditor-v002.md"
+      ]
+    },
+    {
+      "id": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "name": "Compliance & Risk Officer",
+      "key": "CRO",
+      "type": "bot",
+      "new_in_v2": true,
+      "group": "Assurance",
+      "group_id": "b10e394f-5e67-48dd-97a9-e1df58f41d13",
+      "super_group": "Oversight",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/compliance-risk-officer/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete",
+      "pending_proposals": []
+    },
+    {
+      "id": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "name": "Secrets & Credentials Custodian",
+      "key": "SCC",
+      "type": "bot",
+      "new_in_v2": true,
+      "group": "Assurance",
+      "group_id": "b10e394f-5e67-48dd-97a9-e1df58f41d13",
+      "super_group": "Oversight",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/secrets-credentials-custodian/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "partial: no Rules section",
+      "pending_proposals": []
+    },
+    {
+      "id": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "name": "Clone",
+      "key": "CL",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Identity",
+      "group_id": "0ecaea40-3f1a-47d7-9976-b66821b5491f",
+      "super_group": "Identity",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/clone/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete",
+      "pending_proposals": []
+    },
+    {
+      "id": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "name": "Identity Inquirer",
+      "key": "IQ",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Identity",
+      "group_id": "0ecaea40-3f1a-47d7-9976-b66821b5491f",
+      "super_group": "Identity",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/identity-inquirer/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete",
+      "pending_proposals": []
+    },
+    {
+      "id": "94516ca6-6355-43c5-b387-d2b605057784",
+      "name": "Identity Inferer",
+      "key": "IF",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Identity",
+      "group_id": "0ecaea40-3f1a-47d7-9976-b66821b5491f",
+      "super_group": "Identity",
+      "group_lead": true,
+      "council_member": true,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/identity-inferer/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete (no separate Scope)",
+      "pending_proposals": []
+    },
+    {
+      "id": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "name": "Clone Accuracy Validator",
+      "key": "CAV",
+      "type": "bot",
+      "new_in_v2": true,
+      "group": "Identity",
+      "group_id": "0ecaea40-3f1a-47d7-9976-b66821b5491f",
+      "super_group": "Identity",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/clone-accuracy-validator/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "partial: no Rules section",
+      "pending_proposals": []
+    },
+    {
+      "id": "f3810109-17a5-427f-9148-d58f645658e3",
+      "name": "Orchestration Conductor",
+      "key": "OC",
+      "type": "bot",
+      "new_in_v2": true,
+      "group": "Operations",
+      "group_id": "638e3cab-354d-4496-8a01-17f3179d2150",
+      "super_group": "Runtime",
+      "group_lead": true,
+      "council_member": true,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/orchestration-conductor/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete (limits only on contacting Gem)",
+      "pending_proposals": []
+    },
+    {
+      "id": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "name": "Cost & Budget Sentinel",
+      "key": "CBS",
+      "type": "bot",
+      "new_in_v2": true,
+      "group": "Operations",
+      "group_id": "638e3cab-354d-4496-8a01-17f3179d2150",
+      "super_group": "Runtime",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/cost-budget-sentinel/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete (no budget set yet)",
+      "pending_proposals": []
+    },
+    {
+      "id": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "name": "Connector Steward",
+      "key": "CS",
+      "type": "bot",
+      "new_in_v2": true,
+      "group": "Operations",
+      "group_id": "638e3cab-354d-4496-8a01-17f3179d2150",
+      "super_group": "Runtime",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/connector-steward/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "partial: no Rules section",
+      "pending_proposals": []
+    },
+    {
+      "id": "5e47d344-1369-423a-b072-2e5277934022",
+      "name": "Comms Concierge",
+      "key": "CC",
+      "type": "bot",
+      "new_in_v2": true,
+      "group": "Operations",
+      "group_id": "638e3cab-354d-4496-8a01-17f3179d2150",
+      "super_group": "Runtime",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/comms-concierge/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "complete",
+      "pending_proposals": []
+    },
+    {
+      "id": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "name": "Grok Bot",
+      "key": "GB",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Delivery",
+      "group_id": "3e9d6a26-a614-45da-8fce-e4811c0d2f7c",
+      "super_group": "Runtime",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/grok-bot/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "gap: one-line tagline only",
+      "pending_proposals": [
+        "/workspace/governance/proposals/grok-bot.md"
+      ]
+    },
+    {
+      "id": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "name": "Codey",
+      "key": "CO",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Delivery",
+      "group_id": "3e9d6a26-a614-45da-8fce-e4811c0d2f7c",
+      "super_group": "Runtime",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/codey/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "gap: no instructions",
+      "pending_proposals": [
+        "/workspace/governance/proposals/codey.md"
+      ]
+    },
+    {
+      "id": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "name": "Scraper",
+      "key": "SC",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Delivery",
+      "group_id": "3e9d6a26-a614-45da-8fce-e4811c0d2f7c",
+      "super_group": "Runtime",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/scraper/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "gap: no instructions",
+      "pending_proposals": [
+        "/workspace/governance/proposals/scraper.md"
+      ]
+    },
+    {
+      "id": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "name": "Swarm Builder",
+      "key": "SB",
+      "type": "bot",
+      "new_in_v2": false,
+      "group": "Delivery",
+      "group_id": "3e9d6a26-a614-45da-8fce-e4811c0d2f7c",
+      "super_group": "Runtime",
+      "group_lead": false,
+      "council_member": false,
+      "coordinator_of_all_groups": false,
+      "codex": "/workspace/governance/codex/swarm-builder/v001.md",
+      "codex_status": "v001",
+      "instruction_status": "partial: no Relationships",
+      "pending_proposals": []
+    }
+  ],
+  "edges": [
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+      "to_name": "Council",
+      "relation": "sits on Council as lead of Instruction Governance",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "council"
+    },
+    {
+      "from": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+      "from_name": "Council",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "relays Council decisions via (to Instruction Governance)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "council"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "leads (group: Instruction Governance)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "leads (group: Instruction Governance)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "leads (group: Instruction Governance)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+      "to_name": "Council",
+      "relation": "sits on Council as lead of Assurance",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "council"
+    },
+    {
+      "from": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+      "from_name": "Council",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "relays Council decisions via (to Assurance)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "council"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "leads (group: Assurance)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "leads (group: Assurance)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Secrets & Credentials Custodian",
+      "relation": "leads (group: Assurance)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "94516ca6-6355-43c5-b387-d2b605057784",
+      "from_name": "Identity Inferer",
+      "to": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+      "to_name": "Council",
+      "relation": "sits on Council as lead of Identity",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "council"
+    },
+    {
+      "from": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+      "from_name": "Council",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "relays Council decisions via (to Identity)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "council"
+    },
+    {
+      "from": "94516ca6-6355-43c5-b387-d2b605057784",
+      "from_name": "Identity Inferer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "leads (group: Identity)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "94516ca6-6355-43c5-b387-d2b605057784",
+      "from_name": "Identity Inferer",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "leads (group: Identity)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "94516ca6-6355-43c5-b387-d2b605057784",
+      "from_name": "Identity Inferer",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "leads (group: Identity)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+      "to_name": "Council",
+      "relation": "sits on Council as lead of Operations",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "council"
+    },
+    {
+      "from": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+      "from_name": "Council",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Orchestration Conductor",
+      "relation": "relays Council decisions via (to Operations)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "council"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "to_name": "Cost & Budget Sentinel",
+      "relation": "leads (group: Operations)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Connector Steward",
+      "relation": "leads (group: Operations)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "leads (group: Operations)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+      "to_name": "Council",
+      "relation": "sits on Council as lead of Delivery",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "council"
+    },
+    {
+      "from": "4dd4fd18-d34c-4fc2-baa6-222acb567058",
+      "from_name": "Council",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "relays Council decisions via (to Delivery)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "council"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "leads (group: Delivery)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "leads (group: Delivery)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "leads (group: Delivery)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "leads (group: Delivery)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "group-lead"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "e417910e-5e1e-41b8-94ec-ed80f2f1e498",
+      "to_name": "Instruction Governance (group)",
+      "relation": "coordinates (sits in every group)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "coordination"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "b10e394f-5e67-48dd-97a9-e1df58f41d13",
+      "to_name": "Assurance (group)",
+      "relation": "coordinates (sits in every group)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "coordination"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "0ecaea40-3f1a-47d7-9976-b66821b5491f",
+      "to_name": "Identity (group)",
+      "relation": "coordinates (sits in every group)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "coordination"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "638e3cab-354d-4496-8a01-17f3179d2150",
+      "to_name": "Operations (group)",
+      "relation": "coordinates (sits in every group)",
+      "source": [
+        "/workspace/governance/directory.md"
+      ],
+      "status": "current",
+      "kind": "coordination"
+    },
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Instruction Architect",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "proposes instructions to",
+      "source": [
+        "/workspace/governance/codex/instruction-architect/v001.md",
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "flow": "governance-approval"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "approves for (sends approved proposals to record)",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md",
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "flow": "governance-approval"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "returns rejected proposals to (with reasons)",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md",
+        "/workspace/governance/codex/instruction-architect/v001.md"
+      ],
+      "status": "current",
+      "flow": "governance-approval"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "escalates to (Architect disagreement; any governance-bot change)",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md",
+        "/workspace/governance/codex/instruction-architect/v001.md"
+      ],
+      "status": "current",
+      "flow": "governance-approval"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "records direct edits from (Gem may edit directly)",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "gives instruction text on request to",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "gives instruction text on request to",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "gives instruction text on request to",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "gives instruction text on request to",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "sends daily scores to",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md",
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "flags serious problems and sends weekly scorecard to",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "sends performance reviews and urgent redesign requests to",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md",
+        "/workspace/governance/codex/instruction-architect/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "sends performance reviews to",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "tells of a bot failing 3 reviews in a row",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "checks bots against instructions from",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "checks bots against role map and summaries of",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Instruction Architect",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "reviews (Auditor's own work)",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current; would be removed by pending Auditor v002",
+      "note": "Conflicts with Architect's 'don't check bots' work yourself' (instruction-architect/v001.md)"
+    },
+    {
+      "from": "gem",
+      "from_name": "Gem Quota",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "reviews (Auditor's own work) personally",
+      "source": [
+        "/workspace/governance/proposals/auditor-v002.md"
+      ],
+      "status": "PROPOSED: Auditor v002, awaiting Gem's approval; not in codex"
+    },
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Instruction Architect",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "asks preferences of",
+      "source": [
+        "/workspace/governance/codex/instruction-architect/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "asks preferences of",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "from_name": "Identity Inquirer",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "sends raw answers to",
+      "source": [
+        "/workspace/governance/codex/identity-inquirer/v001.md",
+        "/workspace/governance/codex/identity-inferer/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "94516ca6-6355-43c5-b387-d2b605057784",
+      "from_name": "Identity Inferer",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "asks for follow-ups, confirmations and conflict checks from",
+      "source": [
+        "/workspace/governance/codex/identity-inferer/v001.md",
+        "/workspace/governance/codex/identity-inquirer/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "94516ca6-6355-43c5-b387-d2b605057784",
+      "from_name": "Identity Inferer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "sends profile updates to",
+      "source": [
+        "/workspace/governance/codex/identity-inferer/v001.md",
+        "/workspace/governance/codex/clone/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Clone",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "logs unanswerable gaps with",
+      "source": [
+        "/workspace/governance/codex/clone/v001.md",
+        "/workspace/governance/codex/identity-inferer/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "from_name": "Identity Inquirer",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "asks question series of",
+      "source": [
+        "/workspace/governance/codex/identity-inquirer/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Clone",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "hands consequential decisions back to",
+      "source": [
+        "/workspace/governance/codex/clone/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "ranks second only to",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "from_name": "Swarm Builder",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "needs spend/large-job approval from; reports costs to",
+      "source": [
+        "/workspace/governance/codex/swarm-builder/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "from_name": "Governance Continuity Deputy",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "stands in for, when stalled (drafts proposals)",
+      "source": [
+        "/workspace/governance/codex/governance-continuity-deputy/v001.md"
+      ],
+      "status": "current",
+      "note": "after 24 h, or 4 h for urgent items"
+    },
+    {
+      "from": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "from_name": "Governance Continuity Deputy",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "stands in for, when stalled (reviews and approves)",
+      "source": [
+        "/workspace/governance/codex/governance-continuity-deputy/v001.md"
+      ],
+      "status": "current",
+      "note": "Codex Keeper's instructions don't yet accept the Deputy as an approval source (codex index note)"
+    },
+    {
+      "from": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "from_name": "Governance Continuity Deputy",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "spot-checks weekly sample of approvals of",
+      "source": [
+        "/workspace/governance/codex/governance-continuity-deputy/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "from_name": "Governance Continuity Deputy",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "sends governance-bot changes to",
+      "source": [
+        "/workspace/governance/codex/governance-continuity-deputy/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "proposes rule changes through",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "alerts about unsafe or non-compliant work",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "flags exposed secrets or loose permissions to",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "flags exposed secrets or loose permissions to",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "watches access rules for the codex held by",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "from_name": "Clone Accuracy Validator",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "validates accuracy and confidence calibration of",
+      "source": [
+        "/workspace/governance/codex/clone-accuracy-validator/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "from_name": "Clone Accuracy Validator",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "compares Clone against raw answers of; gives gaps to",
+      "source": [
+        "/workspace/governance/codex/clone-accuracy-validator/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "from_name": "Clone Accuracy Validator",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "sends findings to",
+      "source": [
+        "/workspace/governance/codex/clone-accuracy-validator/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "from_name": "Clone Accuracy Validator",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "sends findings to",
+      "source": [
+        "/workspace/governance/codex/clone-accuracy-validator/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "sequences (1st: daily run)",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "flow": "daily-chain"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "sequences (2nd: after Assessor)",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "flow": "daily-chain"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "sequences (3rd: after Auditor)",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "flow": "daily-chain"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "contacts only when a chain is broken and unfixable",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "drafts over-budget/runaway alerts for (never sends unapproved); asks for a budget",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "shares cost data with",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "shares cost data with",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "watches integrations built by",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "tells (for Gem) when a connector needs reconnecting",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md",
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "sends one daily prioritised digest to",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Grok Bot",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "would route repo code work to",
+      "source": [
+        "/workspace/governance/proposals/grok-bot.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Grok Bot",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "would route web data collection to",
+      "source": [
+        "/workspace/governance/proposals/grok-bot.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Grok Bot",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "would route swarm work to",
+      "source": [
+        "/workspace/governance/proposals/grok-bot.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Grok Bot",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "would ask preferences of",
+      "source": [
+        "/workspace/governance/proposals/grok-bot.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "would give coding tasks to (on Gem's behalf)",
+      "source": [
+        "/workspace/governance/proposals/codey.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "from_name": "Codey",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "would hand finished work to for acceptance",
+      "source": [
+        "/workspace/governance/proposals/codey.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "from_name": "Codey",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "would surface work for review to",
+      "source": [
+        "/workspace/governance/proposals/codey.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "from_name": "Codey",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "would surface work for review to",
+      "source": [
+        "/workspace/governance/proposals/codey.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "would give collection jobs to",
+      "source": [
+        "/workspace/governance/proposals/scraper.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Grok Bot",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "would give collection jobs to",
+      "source": [
+        "/workspace/governance/proposals/scraper.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "from_name": "Scraper",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "would hand scraping-tool code changes to",
+      "source": [
+        "/workspace/governance/proposals/scraper.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "from_name": "Scraper",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "would stop and ask before large, logged-in or legally doubtful jobs",
+      "source": [
+        "/workspace/governance/proposals/scraper.md"
+      ],
+      "status": "PROPOSED: Architect draft, not yet approved or recorded"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "to_name": "Genesis Gang God",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Codex Keeper",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Instruction Architect",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "to_name": "Role Cartographer",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "b3f6515c-d3fe-4beb-9b86-45016711c65d",
+      "to_name": "Governance Continuity Deputy",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Assessor",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Auditor",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Compliance & Risk Officer",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Secrets & Credentials Custodian",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Secrets & Credentials Custodian",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Secrets & Credentials Custodian",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Secrets & Credentials Custodian",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Secrets & Credentials Custodian",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Secrets & Credentials Custodian",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Secrets & Credentials Custodian",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Secrets & Credentials Custodian",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Secrets & Credentials Custodian",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "to_name": "Secrets & Credentials Custodian",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Clone",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "to_name": "Identity Inquirer",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Identity Inferer",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "to_name": "Clone Accuracy Validator",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Orchestration Conductor",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Orchestration Conductor",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Orchestration Conductor",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Orchestration Conductor",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Orchestration Conductor",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Orchestration Conductor",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Orchestration Conductor",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Orchestration Conductor",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Orchestration Conductor",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "f3810109-17a5-427f-9148-d58f645658e3",
+      "to_name": "Orchestration Conductor",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "to_name": "Cost & Budget Sentinel",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "to_name": "Cost & Budget Sentinel",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "to_name": "Cost & Budget Sentinel",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "to_name": "Cost & Budget Sentinel",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "to_name": "Cost & Budget Sentinel",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "to_name": "Cost & Budget Sentinel",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "to_name": "Cost & Budget Sentinel",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "to_name": "Cost & Budget Sentinel",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "to_name": "Cost & Budget Sentinel",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "to_name": "Cost & Budget Sentinel",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Connector Steward",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Connector Steward",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Connector Steward",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Connector Steward",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Connector Steward",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Connector Steward",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Connector Steward",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Connector Steward",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Connector Steward",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Connector Steward",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "5e47d344-1369-423a-b072-2e5277934022",
+      "to_name": "Comms Concierge",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots",
+      "applies_to_new_bot": true
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Grok Bot",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Codey",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Scraper",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Codex Keeper",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "records instructions for",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Assessor",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "reviews",
+      "source": [
+        "/workspace/governance/codex/assessor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (governance included)"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Auditor",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "audits",
+      "source": [
+        "/workspace/governance/codex/auditor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "Role Cartographer",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "assigns instruction sets to / maps",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Genesis Gang God",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "runs / oversees (aspirational)",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots",
+      "note": "Stated as 'tasked with running bots or bot groups'; no mechanism defined"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Compliance & Risk Officer",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "reviews risky actions of; may ask to pause",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots (GGG included)"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Secrets & Credentials Custodian",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "audits secrets storage and access of",
+      "source": [
+        "/workspace/governance/codex/secrets-credentials-custodian/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "Orchestration Conductor",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "controls run order and timing of; nudges when late",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots' routines"
+    },
+    {
+      "from": "f8b83b15-0ea1-4f99-9550-c3b8607ba999",
+      "from_name": "Cost & Budget Sentinel",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "tracks spend of; may ask to pause costly work",
+      "source": [
+        "/workspace/governance/codex/cost-budget-sentinel/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Connector Steward",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "tells of connector problems (when affected)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v001.md"
+      ],
+      "status": "current",
+      "fanout": "affected bots"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "Comms Concierge",
+      "to": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "to_name": "Swarm Builder",
+      "relation": "collects non-urgent updates from",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v001.md"
+      ],
+      "status": "current",
+      "fanout": "all bots"
+    }
+  ]
+}

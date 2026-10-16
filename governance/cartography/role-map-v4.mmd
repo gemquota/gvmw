@@ -1,0 +1,98 @@
+%%{init: {"flowchart": {"wrappingWidth": 240}}}%%
+%% Role map v4, 9 Oct 2026 ~9:20 AEST - OVERVIEW. Archivist (took cartography from retired Assembler).
+%% Sources: codex latest per folder, index.md, phases.md. Descriptive only.
+%% Thick = approval · solid = hand-off · dashed orange = retirement/merge · grey dashed = unrecorded/no role · ~~~ = layout only.
+flowchart TB
+  GEM(("Gem Quota<br/>approves until P4<br/>then Imitator"))
+  LEG["<b>Legend v4</b><br/>thick = approval · solid = key hand-off<br/>orange dashed = retirement / merge<br/>grey dashed box = unrecorded / no role<br/>⚠ = unsettled or prior id<br/>Detail: role-map-detail-governance.png, role-map-detail-identity-work.png"]
+
+  subgraph P1["P1 · LIVE since 3 Oct"]
+    ARX["Architect<br/><i>designs instructions</i>"]
+    ARC["Archivist<br/><i>codex + role map</i>"]
+    SCO["Scorer<br/><i>daily scores</i>"]
+    SFG["Safeguard<br/><i>risk + dry runs</i>"]
+    SFK["Safekeeper<br/><i>secrets, threats</i>"]
+    MEN["Mender<br/><i>incidents, state, schedule</i>"]
+    EXP["Explorer 04dcca0d<br/><i>active 2IC + digest</i>"]
+    EXP0["Explorer 82a2c15a<br/><i>prior id ⚠</i>"]
+  end
+
+  subgraph P2["P2 · LIVE since 4 Oct 3:12pm"]
+    SCR["Scrutineer<br/><i>audits + reality</i>"]
+    ARB["Arbiter<br/><i>precedence; never approves</i>"]
+    INF["Inferer<br/><i>structures identity</i>"]
+    MED["Mediator<br/><i>health + spend</i><br/>live name still P4 ⚠"]
+    INQ["Inquirer e613112b<br/><i>recorded; not live ~9:14 ⚠</i>"]
+  end
+
+  subgraph P3["P3 · Dormant"]
+    INV["Investigator<br/><i>evidence + Imitator tests</i>"]
+  end
+
+  subgraph P4["P4 · Dormant"]
+    IMI["Imitator<br/><i>understudy; approver when live</i>"]
+  end
+
+  subgraph P5["P5 · Dormant"]
+    EMI["Emissary<br/><i>general work</i>"]
+    ENG["Engineer<br/><i>code + swarm</i>"]
+    EXT["Extractor<br/><i>research / scrape</i>"]
+  end
+
+  subgraph RET["Retired live · awaiting Gem delete"]
+    MAR["RETIRED Marshal"]
+    MSG["RETIRED Messenger"]
+    INT["RETIRED Interrogator"]
+    ASM["RETIRED Assembler"]
+    SRC["RETIRED Sourcer"]
+    EDI["RETIRED Editor"]
+    ENS["RETIRED Ensembler"]
+  end
+
+  subgraph UNREC["Unrecorded live · no role"]
+    U031["0314faa4<br/>live name P2 Inquirer<br/><i>awaiting Gem · no role</i>"]
+  end
+
+  GEM ~~~ ARX
+  LEG ~~~ ARX
+  ARX ~~~ SCR
+  SCR ~~~ INV
+  INV ~~~ IMI
+  IMI ~~~ EMI
+  EMI ~~~ MAR
+  MAR ~~~ U031
+
+  %% Approval
+  ARX ==>|proposes| GEM
+  GEM ==>|approved · Archivist records| ARC
+  IMI -.->|"once P4: may approve<br/>(not self / Investigator)"| ARC
+
+  %% Chain
+  SCO -->|scores| SCR
+  SCR -->|reviews| ARX
+  SCR -->|stalls / reality| MEN
+  MEN -->|schedule / stalls| GEM
+
+  %% Work
+  EXP -->|routes| EMI
+  EXP -->|routes| ENG
+  EXP -->|routes| EXT
+  EXP -->|risky plans| SFG
+  MED -->|cost alerts| EXP
+  EXP0 -.->|same display name;<br/>active brief is 04dcca0d| EXP
+
+  %% Identity
+  INQ -.->|answers when live| INF
+  INF -->|hypotheses| INV
+  INV -->|tests when P4| IMI
+
+  %% Retirements / merges 9 Oct (+ Ensembler 4 Oct)
+  MAR -.->|merged 9 Oct| MEN
+  MSG -.->|merged 9 Oct| EXP
+  INT -.->|merged 9 Oct| INV
+  ASM -.->|role map 9 Oct| ARC
+  ASM -.->|approvals until P4| GEM
+  ASM -.->|approvals after P4| IMI
+  ENS -.->|merged 4 Oct| ENG
+  SRC -.->|outright 9 Oct| GEM
+  EDI -.->|outright 9 Oct| GEM

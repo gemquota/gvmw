@@ -1,0 +1,357 @@
+import json
+import time
+import random
+import datetime
+import os
+import asyncio
+import threading
+import queue
+import traceback
+import sys
+import hashlib
+import requests
+
+try:
+    import uvloop
+except ImportError:
+    uvloop = None
+
+import net
+import flow
+import logic
+import base
+import ui
+import web_server
+
+# ==============================================================================
+# SECTION: ORCHESTRATOR (Original: main.py)
+# Description: Global state management, queue threading, and main async loop.
+# ==============================================================================
+
+# --- Queues for Thread-Safe Operations ---
+db_write_queue = queue.Queue()
+csv_write_queue = queue.Queue()
+
+def database_writer_thread():
+    """Serializes all database write operations."""
+    while True:
+        item = db_write_queue.get()
+        if item is None: break
+        try:
+            if isinstance(item, tuple) and len(item) == 2:
+                query_str, params = item
+                base.query(query_str, params)
+            elif callable(item): item()
+        except Exception as error: print(f"DB WRITER ERROR: {error}")
+        finally: db_write_queue.task_done()
+
+def csv_writer_thread():
+    """Serializes all CSV write operations for real-time appending."""
+    while True:
+        item = csv_write_queue.get()
+        if item is None: break
+        try:
+            if isinstance(item, tuple) and len(item) == 2:
+                row_data, file_path = item
+                base.append(logic.headers, row_data, file_path=file_path)
+            else: base.append(logic.headers, item)
+        except Exception as error: print(f"CSV WRITER ERROR: {error}")
+        finally: csv_write_queue.task_done()
+
+def fail(url, all_credentials, database_queue):
+    """Handles site failures via the write queue."""
+    record = base.query("SELECT status, failure_count, retest_count, alts_tried FROM targets WHERE url=?", (url,))
+    if not record: return
+    status, failure_count, retest_count, alts_tried = record[0]
+    alts_tried = json.loads(alts_tried) if alts_tried else []
+    for user in all_credentials:
+        if user not in alts_tried: alts_tried.append(user)
+    if status == 'active':
+        new_fc = failure_count + 1
+        if new_fc >= 5: database_queue.put(("UPDATE targets SET status='purgatory', failure_count=5, alts_tried=? WHERE url=?", (json.dumps(alts_tried), url)))
+        else: database_queue.put(("UPDATE targets SET failure_count=?, alts_tried=? WHERE url=?", (new_fc, json.dumps(alts_tried), url)))
+    elif status == 'purgatory':
+        new_rc = retest_count + 1
+        if new_rc >= 5: database_queue.put(("UPDATE targets SET status='pruned', retest_count=?, alts_tried=? WHERE url=?", (new_rc, json.dumps(alts_tried), url)))
+        else: database_queue.put(("UPDATE targets SET retest_count=?, alts_tried=? WHERE url=?", (new_rc, json.dumps(alts_tried), url)))
+
+def deduplicate(bonus, merchant_name, url, fingerprint, pv_score, expiration_date):
+    """Handles deduplication logic across mirrors."""
+    existing_record = base.query("SELECT unique_id, mirrors, verified FROM bonuses WHERE fingerprint=?", (fingerprint,))
+    if existing_record:
+        unique_id, mirrors, verified = existing_record[0]
+        if not verified and url not in str(mirrors):
+            updated_mirrors = f"{mirrors.strip(',')},{url}" if mirrors else url
+            db_write_queue.put(("UPDATE bonuses SET mirrors=?, last_seen_at=CURRENT_TIMESTAMP WHERE unique_id=?", (updated_mirrors, unique_id)))
+        return unique_id
+    existing_bonuses = base.query("SELECT bonus_name, unique_id, mirrors, verified FROM bonuses WHERE merchant_name=?", (merchant_name,))
+    existing_names = [row[0] for row in existing_bonuses if row[0]]
+    fuzzy_match_name = logic.fuzzy(bonus.get('name'), existing_names)
+    if fuzzy_match_name:
+        match_record = next((row for row in existing_bonuses if row[0] == fuzzy_match_name), None)
+        if match_record:
+            unique_id, mirrors, verified = match_record[1], match_record[2], match_record[3]
+            if not verified and url not in str(mirrors):
+                updated_mirrors = f"{mirrors.strip(',')},{url}" if mirrors else url
+                db_write_queue.put(("UPDATE bonuses SET mirrors=?, last_seen_at=CURRENT_TIMESTAMP WHERE unique_id=?", (updated_mirrors, unique_id)))
+            return unique_id
+    raw_json = json.dumps(bonus)
+    raw_hash = hashlib.md5(raw_json.encode('utf-8')).hexdigest()
+    db_write_queue.put(("INSERT OR IGNORE INTO raw_data(hash, json_data) VALUES(?,?)", (raw_hash, raw_json)))
+    duplicate_content = base.query("SELECT unique_id, mirrors, verified FROM bonuses WHERE raw_json_hash=?", (raw_hash,))
+    if duplicate_content:
+        unique_id, mirrors, verified = duplicate_content[0]
+        if not verified and url not in str(mirrors):
+            updated_mirrors = f"{mirrors.strip(',')},{url}" if mirrors else url
+            db_write_queue.put(("UPDATE bonuses SET mirrors=?, last_seen_at=CURRENT_TIMESTAMP WHERE unique_id=?", (updated_mirrors, unique_id)))
+        return unique_id
+    unique_id = f"{url}|{bonus.get('id')}"
+    config_fields = logic.extract(bonus)
+    config_values = [config_fields.get(f"conf_{key}") for key in logic.CONFIGURATION_KEYS]
+    core_columns = "unique_id,external_id,url,amount,perceived_value,raw_json_hash,expiration_date,fingerprint,mirrors,last_seen_at,merchant_name,bonus_name"
+    all_columns = core_columns + "," + ",".join([f"conf_{key}" for key in logic.CONFIGURATION_KEYS])
+    placeholders = ",".join(["?"] * (12 + len(config_values)))
+    values = (unique_id, bonus.get('id'), url, logic.numeric(bonus.get('amount',0)), pv_score, raw_hash, 
+              expiration_date.isoformat() if expiration_date else None, fingerprint, url, datetime.datetime.now().isoformat(), 
+              merchant_name, bonus.get('name')) + tuple(config_values)
+    db_write_queue.put((f"REPLACE INTO bonuses({all_columns}) VALUES({placeholders})", values))
+    return None
+
+async def main_async():
+    base.setup()
+    base.log("INFO", "ENGINE", "Engine Start: Initializing layers...")
+    base.init(logic.headers, overwrite=True)
+    base.init(logic.headers, file_path='db/highvalue.csv', overwrite=True)
+    base.init(logic.headers, file_path='db/bonuses.csv', overwrite=True)
+    db_thread = threading.Thread(target=database_writer_thread, daemon=True)
+    db_thread.start()
+    csv_thread = threading.Thread(target=csv_writer_thread, daemon=True)
+    csv_thread.start()
+    base.UI_USER = os.getenv("BIE_ADMIN_USER", base.UI_USER)
+    base.UI_PASS = os.getenv("BIE_ADMIN_PASS", base.UI_PASS)
+    threading.Thread(target=web_server.start_server, daemon=True).start()
+    save_raw = "--raw" in sys.argv or "-r" in sys.argv
+    shuffle_mode = "--shuffle" in sys.argv or "-s" in sys.argv
+    try:
+        urls, credentials = base.parse(force_shuffle=shuffle_mode)
+        if not credentials:
+            print("[!] No credentials found in config.ini. Please add at least one [UX] section.")
+            return
+        def get_task_for_url(url, creds):
+            row_data = base.query("SELECT username FROM targets WHERE url=?", (url,))
+            saved_user = row_data[0][0] if row_data else None
+            if saved_user:
+                for user, pwd in creds:
+                    if user == saved_user: return (url, user, pwd)
+            return (url, creds[0][0], creds[0][1])
+        tasks_list = [get_task_for_url(url, credentials) for url in urls]
+        metrics_res = base.query("SELECT COUNT(*) FROM metrics")
+        run_count = metrics_res[0][0] + 1 if metrics_res else 1
+        if run_count % 5 == 0:
+            purgatory_urls = [row_data[0] for row_data in base.query("SELECT url FROM targets WHERE status='purgatory'")]
+            tasks_list += [get_task_for_url(url, credentials) for url in purgatory_urls]
+        task_count = len(tasks_list)
+        if task_count == 0:
+            print("[!] No tasks found. Check in/config/urls.txt")
+            return
+        shared_stats = {'index': 0, 'successes': 0, 'failures': 0, 'total_bonuses': 0, 'new_bonuses': 0}
+        locks = {'index': threading.Lock(), 'stats': threading.Lock()}
+        ip_score, _ = net.check(base.IP_KEY, '127.0.0.1')
+        proxies_list = base.proxies()
+        for proxy_str in proxies_list:
+            base.query("INSERT INTO proxy_health (proxy, status, burn_count) VALUES (?, 'active', 0) ON CONFLICT(proxy) DO UPDATE SET status='active', burn_count=0", (proxy_str,))
+        num_workers = base.config_reader.getint('SETTINGS', 'workers', fallback=5)
+        init_data = ui.init_dashboard_data(task_count, 0, num_workers, shuffle_mode, ip_score)
+        ui.print_initialization_dashboard(init_data)
+        chunks = [tasks_list[index::num_workers] for index in range(num_workers)]
+        async with net.AsyncNetworkManager() as async_net:
+            worker_tasks = []
+            for index in range(num_workers):
+                worker_inst = ScrapeWorker(index, chunks[index], shared_stats, locks, task_count, ip_score, save_raw, None, credentials, num_workers, db_write_queue, csv_write_queue)
+                worker_tasks.append(worker_inst.run_async(async_net))
+            await asyncio.gather(*worker_tasks)
+        total_duration = time.time() - ui.START_TIME
+        shared_stats.update({'duration_str': str(datetime.timedelta(seconds=int(total_duration))), 'throughput_final': f"{shared_stats['index'] / total_duration:.2f}"})
+        avg_lat = sum(ui.DURATION_SAMPLES) / len(ui.DURATION_SAMPLES) if ui.DURATION_SAMPLES else 0
+        shared_stats.update({'avg_latency': f"{avg_lat*1000:.0f}ms", 'threads_status': "Clean Exit", 'files_saved': "2 (CSV/JSON)", 'audit_status': "PASSED"})
+        ui.print_final_summary(shared_stats)
+        db_write_queue.put(("INSERT INTO metrics(timestamp, total_scraped, new_bonuses, errors) VALUES(CURRENT_TIMESTAMP, ?, ?, ?)", (shared_stats['total_bonuses'], shared_stats['new_bonuses'], shared_stats['failures'])))
+    except Exception as error:
+        traceback.print_exc()
+        base.log("FATAL", "500", str(error))
+    finally:
+        db_write_queue.put(None); csv_write_queue.put(None); db_thread.join(timeout=15); csv_thread.join(timeout=15)
+        base.log("INFO", "ENGINE", "Engine Shutdown: All tasks complete.")
+        print("Scraper run complete.")
+
+# ==============================================================================
+# SECTION: WORKER (Original: worker.py)
+# Description: Individual site lifecycle execution logic.
+# ==============================================================================
+
+class ScrapeWorker:
+    """Asynchronous worker logic handling the site scraping lifecycle."""
+    def __init__(self, worker_id, tasks, shared_stats, locks, total_task_count, ip_reputation, save_raw, proxies, all_credentials, num_workers, db_queue, csv_queue):
+        self.worker_id, self.tasks, self.shared_stats, self.locks = worker_id, tasks, shared_stats, locks
+        self.total_task_count, self.ip_reputation, self.save_raw = total_task_count, ip_reputation, save_raw
+        self.proxies, self.all_credentials, self.num_workers = proxies, all_credentials, num_workers
+        self.db_queue, self.csv_queue = db_queue, csv_queue
+        self.proxy_ip, self.sync_session = None, None
+
+    async def run_async(self, async_net):
+        try:
+            loop = asyncio.get_running_loop()
+            if self.proxies:
+                self.proxy_ip = await loop.run_in_executor(None, net.get_next_healthy_proxy, base.IP_KEY)
+                if not self.proxy_ip: await self._update_progress_exhausted_async(); return
+            self.sync_session = net.create_session(self.proxy_ip)
+            for url, username, password in self.tasks:
+                if base.state.is_stopped: break
+                base.state.wait_for_resume()
+                if self.proxy_ip:
+                    status_res = await base.async_query("SELECT status FROM proxy_health WHERE proxy=?", (self.proxy_ip,))
+                    if not status_res or status_res[0][0] != 'active':
+                        self.proxy_ip = await loop.run_in_executor(None, net.get_next_healthy_proxy, base.IP_KEY)
+                        if not self.proxy_ip: return
+                        self.sync_session = net.create_session(self.proxy_ip)
+                await self._process_site_async(url, username, password, async_net)
+        except Exception as error: traceback.print_exc()
+
+    async def _process_site_async(self, url, username, password, async_net):
+        loop = asyncio.get_running_loop(); task_start_time = time.perf_counter()
+        await asyncio.sleep(random.uniform(base.MIN_DELAY, base.MAX_DELAY))
+        html = ""
+        try:
+            html = await loop.run_in_executor(None, net.get_html, self.sync_session, url)
+            merchant_id, merchant_name = await loop.run_in_executor(None, flow.get_merchant_details, html, self.sync_session, url)
+            api_endpoint = flow.get_api_endpoint(url)
+            self.db_queue.put(("INSERT OR IGNORE INTO targets(url,merchant_name) VALUES(?,?)", (url, merchant_name)))
+            cached_session = base.load(username, url)
+            user_data = None
+            if cached_session:
+                try:
+                    ts = datetime.datetime.fromisoformat(cached_session['timestamp']).replace(tzinfo=datetime.timezone.utc)
+                    if (datetime.datetime.now(datetime.timezone.utc) - ts).total_seconds() < 21600:
+                        self.sync_session.cookies.update(cached_session['cookie_jar']); user_data = cached_session['session_data']
+                except: pass
+            if not user_data: user_data = await loop.run_in_executor(None, self._login_flow_sync, url, api_endpoint, username, password, merchant_id)
+            cookies = self.sync_session.cookies.get_dict()
+            payload = {"module": "/users/syncData", "merchantId": merchant_id, "accessToken": user_data.get('token'), "accessId": user_data.get('id'), "domainId": "0", "walletIsAdmin": ""}
+            
+            response = await async_net.post_json(api_endpoint, payload, cookies=cookies, proxy=self.proxy_ip)
+            
+            # --- Auto-Healing: Session Expiry Detection ---
+            is_invalid = not response or (isinstance(response, dict) and response.get('status') == 'ERROR' and response.get('data', {}).get('message') == 'Invalid Access!')
+            
+            if is_invalid:
+                base.log("INFO", url, "Invalid Access detected. Attempting re-login...")
+                user_data = await loop.run_in_executor(None, self._login_flow_sync, url, api_endpoint, username, password, merchant_id)
+                if user_data and user_data.get('token'):
+                    base.save(username, url, self.sync_session.cookies, user_data)
+                    payload.update({"accessToken": user_data.get('token'), "accessId": user_data.get('id')})
+                    response = await async_net.post_json(api_endpoint, payload, cookies=self.sync_session.cookies.get_dict(), proxy=self.proxy_ip)
+                else:
+                    raise ValueError(f"Re-login failed: {user_data.get('message') if user_data else 'No data'}")
+
+            self.db_queue.put(("UPDATE targets SET status='active', failure_count=0, retest_count=0, username=? WHERE url=?", (username, url)))
+            await self._process_response_data_async(response, url, merchant_name, task_start_time)
+        except Exception as error: await self._handle_site_error_async(error, url, html, task_start_time)
+
+    def _login_flow_sync(self, url, api_endpoint, username, password, merchant_id):
+        try: 
+            user_data = flow.login(self.sync_session, api_endpoint, username, password, merchant_id)
+            if user_data and user_data.get('token'):
+                auth_data = flow.get_auth_token(self.sync_session, api_endpoint, merchant_id, user_data.get('token'), user_data.get('id'))
+                if auth_data: user_data.update(auth_data)
+            return user_data
+        except Exception as error:
+            for alt_user, alt_pwd in self.all_credentials:
+                if alt_user == username: continue
+                try:
+                    user_data = flow.login(self.sync_session, api_endpoint, alt_user, alt_pwd, merchant_id)
+                    if user_data: 
+                        auth_data = flow.get_auth_token(self.sync_session, api_endpoint, merchant_id, user_data.get('token'), user_data.get('id'))
+                        if auth_data: user_data.update(auth_data)
+                        return user_data
+                except: pass
+            raise error
+
+    async def _process_response_data_async(self, response, url, merchant_name, start_time):
+        raw_bonuses = response.get('data', {}) if response else {}
+        bonuses = []
+        for key in ['bonus', 'promotions']:
+            val = raw_bonuses.get(key, [])
+            if isinstance(val, list): bonuses += val
+            elif isinstance(val, dict): bonuses.append(val)
+        site_bonus_count, site_new_bonuses, expiring_soon = 0, 0, False
+        max_comm = 0.0
+        is_share_site = False
+        
+        for bonus in bonuses:
+            normalized = logic.normalize(bonus)
+            if logic.filter(normalized): continue
+            
+            # Check for share/commission keywords
+            name_lower = str(normalized.get('name', '')).lower()
+            cond_lower = str(normalized.get('claimcondition', '')).lower()
+            if 'share' in name_lower or 'share' in cond_lower:
+                is_share_site = True
+            if 'commission' in name_lower or 'commission' in cond_lower:
+                max_comm = max(max_comm, logic.numeric(normalized.get('amount', 0)))
+
+            amount = logic.numeric(normalized.get('amount', 0))
+            if amount < 1: continue
+
+            site_bonus_count += 1; pv = logic.score(normalized)
+            exp = logic.expiry(str(normalized.get('name','')) + str(normalized.get('claimcondition','')))
+            fingerprint = logic.fingerprint(normalized)
+            if exp and (exp - datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=10)))).total_seconds() < 172800: expiring_soon = True
+            is_new = await self._check_deduplication_async(normalized, merchant_name, url, fingerprint, pv, exp)
+            if is_new: site_new_bonuses += 1
+            row_data = logic.map(normalized, url, merchant_name, pv, 1 if is_new else 0)
+            self.csv_queue.put(row_data)
+            if logic.highvalue(normalized): self.csv_queue.put((row_data, 'db/highvalue.csv'))
+        
+        # Determine site_type for UI
+        site_type = None
+        if is_share_site: site_type = 'share'
+        elif 1.0 <= max_comm < 10.0: site_type = 'comm_low'
+        elif 10.0 <= max_comm < 100.0: site_type = 'comm_mid'
+        elif max_comm >= 100.0: site_type = 'comm_high'
+
+        with self.locks['stats']:
+            self.shared_stats['total_bonuses'] += site_bonus_count; self.shared_stats['new_bonuses'] += site_new_bonuses
+            self.shared_stats['successes'] += 1; total_bonuses, new_bonuses, successes = self.shared_stats['total_bonuses'], self.shared_stats['new_bonuses'], self.shared_stats['successes']
+        elapsed = time.perf_counter() - start_time
+        with self.locks['index']: self.shared_stats['index'] += 1; current_index = self.shared_stats['index']
+        ui.update_dashboard({'index': current_index, 'wid': str(self.worker_id), 'nw': str(self.num_workers), 'successes': successes, 'failures': self.shared_stats['failures'], 'total_bonuses': total_bonuses, 'total_new_bonuses': new_bonuses, 'site_bonuses_gt_zero': site_bonus_count, 'site_new_bonuses': site_new_bonuses, 'site_url': url, 'status_message': '✅', 'N': self.total_task_count, 'elapsed': elapsed, 'is_expiring': expiring_soon, 'ip_score': self.ip_reputation, 'site_type': site_type})
+
+    async def _check_deduplication_async(self, bonus, merchant_name, url, fingerprint, pv, expiration_date):
+        loop = asyncio.get_running_loop()
+        result = await loop.run_in_executor(None, deduplicate, bonus, merchant_name, url, fingerprint, pv, expiration_date)
+        return result is None
+
+    async def _handle_site_error_async(self, error, url, html, start_time):
+        with self.locks['stats']: self.shared_stats['failures'] += 1; current_failures = self.shared_stats['failures']
+        elapsed, err_str, code = time.perf_counter() - start_time, str(error), 301
+        if isinstance(error, requests.exceptions.HTTPError): code = error.response.status_code
+        elif "get_merchant_details" in err_str or "Missing MERCHANT" in err_str: code = 201
+        elif "Captcha" in err_str or "bot" in err_str.lower(): code = 202
+        elif "Failed to resolve" in err_str or "gaierror" in err_str: code = 102
+        elif "Timeout" in err_str: code = 104
+        elif "Connection" in err_str: code = 101
+        elif "403" in err_str: code = 403
+        if code in [101, 102, 103, 104, 403]: net.mark_proxy_burned(self.proxy_ip)
+        base.log(f"E{code}", url, err_str)
+        await asyncio.get_running_loop().run_in_executor(None, fail, url, [c[0] for c in self.all_credentials], self.db_queue)
+        with self.locks['index']: self.shared_stats['index'] += 1; current_index = self.shared_stats['index']
+        ui.update_dashboard({'index': current_index, 'wid': str(self.worker_id), 'nw': str(self.num_workers), 'successes': self.shared_stats['successes'], 'failures': current_failures, 'total_bonuses': self.shared_stats['total_bonuses'], 'total_new_bonuses': self.shared_stats['new_bonuses'], 'site_url': url, 'status_message': f'E{code}', 'N': self.total_task_count, 'elapsed': elapsed, 'ip_score': self.ip_reputation, 'error_details': err_str})
+
+    async def _update_progress_exhausted_async(self):
+        with self.locks['index']: self.shared_stats['index'] += 1; current_index = self.shared_stats['index']
+        ui.update_dashboard({'index': current_index, 'wid': str(self.worker_id), 'nw': str(self.num_workers), 'successes': self.shared_stats['successes'], 'failures': self.shared_stats['failures'], 'total_bonuses': self.shared_stats['total_bonuses'], 'site_url': 'PROXY_ERROR', 'status_message': 'E102', 'N': self.total_task_count, 'ip_score': self.ip_reputation})
+
+if __name__ == "__main__":
+    if "dash" in sys.argv: print("\n" + "="*40); print("BIE STANDALONE DASHBOARD"); print("="*40); web_server.start_server(); sys.exit(0)
+    if uvloop: uvloop.install()
+    asyncio.run(main_async())

@@ -1,0 +1,59 @@
+
+Running 12 tests using 4 workers
+
+(node:645995) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:645994) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:646001) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:646002) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 tests/e2e/boot-render-worker.spec.js:5:1 › renders frames: the sim canvas paints non-uniform content (AC-24) (6.9s)
+  ✓   5 tests/e2e/physics-worker.spec.js:4:1 › boots the simulation shell without a module error (3.5s)
+  ✘   1 tests/e2e/boot-render-worker.spec.js:13:1 › worker ticks advance while running and stop while paused (AC-24) (9.8s)
+(node:646559) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 tests/e2e/civ-runtime.spec.js:7:1 › civilisation runtime adapter: off by default, live when enabled, survives save/restore (12.4s)
+  ✓   7 tests/e2e/physics-worker.spec.js:24:1 › GPU force output matches CPU for a fixed browser fixture (1.8s)
+  ✓   8 tests/e2e/physics-worker.spec.js:54:1 › GPU opt-in remains safe when WebGPU is unavailable (1.6s)
+  ✓   6 tests/e2e/physics-worker.spec.js:11:1 › runs worker ticks asynchronously when SharedArrayBuffer is available (5.1s)
+  ✓   4 tests/e2e/mechanics-worker.spec.js:5:1 › toggling the CONTACT mechanics law changes worker particle state (AC-25) (16.8s)
+  ✓   9 tests/e2e/runtime-acceptance.spec.js:11:3 › VEPA browser acceptance boundary › boots the real application with cross-origin isolation (4.2s)
+  ✓  10 tests/e2e/runtime-acceptance.spec.js:20:3 › VEPA browser acceptance boundary › renders all eight Mechanics law toggles and toggles CONTACT in the browser (4.7s)
+  ✓  11 tests/e2e/runtime-acceptance.spec.js:40:3 › VEPA browser acceptance boundary › reports WebGPU availability without treating fallback as GPU execution (3.7s)
+  ✓  12 tests/e2e/timeline-dashboard.spec.js:5:1 › timeline dashboard: renders, REC toggles, scrub moves the timeline (AC-91) (6.8s)
+
+
+  1) tests/e2e/boot-render-worker.spec.js:13:1 › worker ticks advance while running and stop while paused (AC-24) 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 9
+    Received: 10
+
+      21 |   const t0 = await page.evaluate(() => window.__VEPA_TEST__.state().tick);
+      22 |   await page.waitForTimeout(800);
+    > 23 |   expect(await page.evaluate(() => window.__VEPA_TEST__.state().tick)).toBe(t0);
+         |                                                                        ^
+      24 | });
+      25 |
+        at /workspace/vepa/tests/e2e/boot-render-worker.spec.js:23:72
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/boot-render-worker-worker--97943-nd-stop-while-paused-AC-24-/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/boot-render-worker-worker--97943-nd-stop-while-paused-AC-24-/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/boot-render-worker-worker--97943-nd-stop-while-paused-AC-24-/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/boot-render-worker-worker--97943-nd-stop-while-paused-AC-24-/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/boot-render-worker.spec.js:13:1 › worker ticks advance while running and stop while paused (AC-24) 
+  11 passed (25.2s)

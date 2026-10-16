@@ -1,0 +1,36 @@
+=== SHARED _shared/collaboration-map/ v001 | Approved by: Gem, confirmed directly in Archivist's chat 4 Oct 2026 5:45–5:46pm AEST
+# Collaboration map — final (reconciled to current names and Merge F)
+
+| Field | Value |
+|---|---|
+| Approver | Approved in principle by Gem, 3:01pm 4 Oct 2026 (relayed by P1 (Work) Explorer; relay unverified per R-008) (collaboration-map) |
+| Status | **Reconciled design document NEEDS GEM'S DIRECT APPROVAL** (reconciled beyond name repoint; the live role map is the (Roles) Assembler's under `cartography/`) |
+| Sources merged | `proposals/collaboration-map.md`, the two 4 Oct merges, current names |
+
+## Reconciliation from the approved draft
+- Rewritten to current names and the current 23-bot structure; the governance flow uses the restored **Assembler** (approves/delegates/role map) with the **Arbiter** on precedence rulings only; "during phase 1" → "until P4 goes live".
+- Retired bodies removed and repointed to successors (Meter→Mediator; Minder→Mender; Sentinel→Safekeeper threat/input + Safeguard dry runs; Ensembler→Engineer; Surveyor→Scrutineer; Advocate→Imitator; Sanitizer/Simulator→(dry runs) Safeguard/(input) Safekeeper).
+- Explorer marked as Gem's 2IC / first point of contact / never-merged.
+
+## 1. Layers (current)
+| Layer | Bots | Job |
+|---|---|---|
+| Human | Gem | Sets goals, accepts work, makes every consequential/outward decision. |
+| Lead / 2IC | (Work) Explorer | Gem's 2IC and first point of contact; routes ad-hoc work and follows through. Never merged. |
+| Working bots | (Work) Emissary (generalist), (Work) Engineer (repo code + swarm), (Work) Extractor (research/web data), (Work) Editor (final polish) | Do the work. |
+| Identity | (ID) Inquirer → (ID) Inferer → (ID) Imitator, with (ID) Investigator (promotes details) and (ID) Interrogator (tests the Imitator) | Learn and represent Gem's preferences. |
+| Governance (Roles/Checks) | (Roles) Architect, Assembler, Arbiter, Archivist; (Checks) Scorer, Scrutineer, Safeguard, Safekeeper | Write, approve, store, rule on and check instructions and work. |
+| Ops | (Ops) Marshal (run order), Mediator (connector health + spend), Messenger (digest), Mender (incidents/recovery/state/indexes) | Keep the system running. |
+
+## 2. Flows
+- **Work:** Gem → Explorer (or direct) → Emissary / Engineer / Extractor; specialists hand results back; only Gem accepts.
+- **Preferences:** any bot → Imitator (taste only; never consequential); gaps → Inferer → Inquirer → Gem; only the Investigator promotes a detail to confirmed.
+- **Governance (instructions):** Architect drafts → approver (Gem until P4 goes live, then the Assembler; governance-bot changes always to Gem) → Archivist records → Assembler updates the role map. Precedence conflicts → Arbiter (rulings only).
+- **Quality:** Scorer scores all bots daily → Scrutineer audits against instructions and reality → reviews to the Architect, Assembler and reviewed bot. No bot grades or verifies its own work (the Scrutineer is reviewed by Gem; see its flag).
+- **Safety/cost:** Safeguard reviews and dry-runs risky actions; Safekeeper owns secrets, input-safety and the message-verification rule; Mediator tracks spend and sends draft cost alerts via the Messenger.
+
+## 3. Open design questions for Gem (carried from the draft)
+- Extractor/BIE legality (Interactive Gambling Act 2001) — Gem only.
+- Whether all work routes through the Explorer by default or Gem may go direct (draft allows both).
+- Whether Codey's "nothing is done until Gem accepts" gate applies to Emissary/Extractor deliverables too.
+- Reporting style (short/plain vs more detail).

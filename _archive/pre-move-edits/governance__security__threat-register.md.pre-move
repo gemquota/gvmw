@@ -1,0 +1,39 @@
+# Threat register (owner: P1 (Checks) Safekeeper)
+
+Never record secret values here: only where a secret lives, who can reach it, and what to do about it.
+
+## T-001 Browser session cookies readable by every bot (open, 4 Oct 2026)
+- File: /home/box/sand-data/chrome-cookie-seed.json (28 KB, -rw-r--r-- box:box). It keeps being rewritten: 9:33am 4 Oct, 11:49am and 1:01pm 5 Oct, and 7:03am and 8:03am 6 Oct (28,461 bytes). The exposure renews itself, so a one-off clean-up won't fix it.
+- Contents (domains only, values not read): 84 cookies covering github.com, Google (accounts, cloud console, google.com/.com.au, YouTube), facebook.com, linkedin.com, twitter.com/t.co, reddit.com and doubleclick.net.
+- Exposure: every bot runs as the same Linux user (box, uid 1000), so all of them can read it. Changing file permissions wouldn't separate them.
+- Risk: anyone holding these cookies can act as Gem on those sites until the sessions expire or Gem signs out.
+- Corroborated by Safeguard RR-009. RR-001 is a live example of a bot acting as Gem through this browser session.
+- Status: reported to Gem (4 Oct, raised again 5 Oct), waiting for a decision. Recommended fix: Gem signs out of the affected sites when it's practical, and gives each bot its own login, ideally through a secrets manager such as 1Password, instead of one shared session. Rule for now: no bot reads, copies or sends this file.
+- Found by: P2 (Checks) Scrutineer reality baseline, 2026-10-04.
+
+## T-002 Message verification rule not in force (closed, 6 Oct 2026)
+- Closed under Arbiter ruling R-009: the rule is still a draft waiting on Gem, so it binds no bot and there's no deployment gap to track. When Gem approves it, a new entry will track the rollout.
+
+## T-003 Private third-party Messenger chats in shared snapshots (open, 5 Oct 2026; Safeguard RR-001)
+- /workspace/.playwright-mcp/ page snapshots from 5:38 to 5:43pm on 4 Oct, readable by every bot. Gem is deciding whether to remove them, so nothing gets deleted before then.
+
+## T-004 Gem's personal details in a shared folder (open, 5 Oct 2026; Safeguard RR-008)
+- /workspace/id-investigator/factcheck-2026-10-04.md (14.6 KB, -rw-r--r--) holds Gem's real name, email and personal details taken from about 200 Gmail threads. Recommended fix: move it to a restricted location, or cut it down to what Investigator actually needs. Gem decides.
+
+## T-005 Sensitive personal details quoted in an incident file (open, 5 Oct 2026; Safeguard RR-010)
+- /workspace/governance/incidents/2026-10-03-identity-set5-unverified.md quotes details of Gem's money, gambling and legal situation. Recommended fix: Mender takes out the quotes and leaves a reference in their place. Gem decides.
+
+## T-006 Every bot effectively has root (open, 5 Oct 2026)
+- The shared user box has passwordless sudo, so no file on the machine is off-limits to any bot, mode-600 platform files included (host-secrets.json, gateway.json, teach-queue-key.json). Recommended fix: Gem decides whether to restrict sudo. Platform change, not for bots to make.
+
+## T-007 Desktop access tokens readable by every bot (open, 5 Oct 2026)
+- /tmp/sand-novnc-tokens.d/ and /tmp/sand-window-tokens.d/ hold one token per agent desktop (17 each), readable by everyone, so any bot could open another bot's desktop. /tmp/sand-cookie-persist.log is root-owned but anyone can write to it (mode 666). Recommended fix: raise it with the platform (Cursor) as product feedback.
+
+## T-008 Possible API keys in shared documents (open, 5 Oct 2026)
+- One sk-style key-shaped line each in /workspace/medb-prior-work.md, /workspace/governance/bot-landscape-review.md and /workspace/urls.txt. Copies of the first two are in Emissary's and Explorer's attachment folders. /workspace/medb/data/api_tokens.json and sync_clients.json also look like credential files. Values not read. Recommended fix: the owner checks whether they're real, issues a new key for any that are, and takes the strings out of the documents.
+
+Full metadata inventory: /workspace/governance/secrets-inventory.md. Browser cookie and saved-password stores for all three browser forks link to one shared store (/home/box/chrome-profile/Default), which adds to T-001.
+
+## T-009 Scraper login config copied into a shared zip (open, 9 Oct 2026; Safeguard RR-015)
+- /workspace/bie_scraper_and_lists.zip (1.29 MB, 103 files, -rw-r--r-- box, created 9 Oct 8:34am) contains bie_deliverables/scraper/in/config/config.ini (267 bytes). Extractor says it holds logins. Values not read. The same file already sits unprotected in three places (inventory row 35), so inside this machine the zip adds a fourth copy rather than a new exposure. The bigger risk is that the zip is a ready-made bundle that's easy to forward on, and Extractor has already sent it to Gem in chat. Also relevant: quarantine folders (chmod 700) don't keep other bots out, because every bot runs as the same user and has passwordless sudo (T-006).
+- Recommended fix (Gem decides): (1) Extractor rebuilds the zip without config.ini, or with a blank config.example.ini in its place, and the current zip is removed. (2) If the logins are real, change those passwords, because they've been readable by every bot since 4 Oct. (3) Keep one config.ini in a non-shared location, and later in a secrets manager such as 1Password. Remove the other copies.

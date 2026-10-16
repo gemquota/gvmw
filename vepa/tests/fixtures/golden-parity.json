@@ -1,0 +1,61 @@
+{
+  "schema": "golden-parity/v1",
+  "seed": 20261003,
+  "count": 400,
+  "ticks": 30,
+  "worldSize": 200,
+  "scenarios": {
+    "none": {
+      "sha256": "890b7a5cf245b729d98934e95f862366fafb1219268bd61122501285c2024b4a",
+      "offspring": 0
+    },
+    "default-tidal-bloom": {
+      "sha256": "08e8d279295fcb1535d4ba618d66612e46ebdbb35428f3e3c6e897bcdefc7810",
+      "offspring": 0
+    },
+    "all-laws": {
+      "sha256": "3633c54053cb70be54bc46d009d30969440297bbd9ee4b4ffb1a7d5329526681",
+      "offspring": 0
+    },
+    "category-physics": {
+      "sha256": "8b3409938987b80504ba6cb340ed143db8cf15f764efb0045e8b2c10b3e020ca",
+      "offspring": 0
+    },
+    "category-mechanics": {
+      "sha256": "fc2c2fa361f47936e74590a29b6b956780ba65a62ef83f41d90cb3074b93d991",
+      "offspring": 0
+    },
+    "category-biology": {
+      "sha256": "e0cac94d83918d910f2c9158cdb3cce3b50ebef8af71c5bbcdfcc352a261f333",
+      "offspring": 0
+    },
+    "category-chemistry": {
+      "sha256": "ecddb3dd4bb9a66a7a408167a309b74421d3a0cad8cee3cd5c27255a7c78ffc8",
+      "offspring": 0
+    },
+    "category-thermodynamics": {
+      "sha256": "aa52eb26083c51b208865035018804d038c0e40261415815355ae19274999583",
+      "offspring": 0
+    },
+    "category-metaphysics": {
+      "sha256": "fa7fe9241910a4f2223207d8063632462b7ee0b2a9cd9f82fe2c30eb932757e5",
+      "offspring": 0
+    },
+    "category-electromagnetism": {
+      "sha256": "a3e5ffdc74f58ff78e8fbcee35df24e5625ad3ad285b81302cf4b643e37e8e46",
+      "offspring": 0
+    },
+    "category-information": {
+      "sha256": "bfd0e39a5d27858adaf7476cf1e3be9f058dec7f7c5f97a9733f82e506427525",
+      "offspring": 0
+    },
+    "category-quantum": {
+      "sha256": "08861b63cd237259d0fd913b548d15cf39402b479923873852804b8ee2cda4f3",
+      "offspring": 0
+    },
+    "default-tidal-bloom-params": {
+      "sha256": "17b794fa287083d27d95cb9d47b60c84305bec50d1a8176321b62003ab93f72b",
+      "offspring": 0
+    }
+  }
+}
