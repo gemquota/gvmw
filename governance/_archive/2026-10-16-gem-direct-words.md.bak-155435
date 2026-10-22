@@ -1,0 +1,52 @@
+# Gem's direct words, 16 Oct 2026 (AEST)
+
+- **9:13am, in Archivist's chat:** "Yes, deploy all 6 of Imitator's approved updates once recorded". Applies to the 6 versions recorded ~8:25am on Imitator's approval (codey v006, connector-steward v005, mender v005, identity-inquirer v004, arbiter v005, instruction-architect v004). Deployed 09:14:03–09:14:41 by UpdateAgent. Safeguard was told beforehand.
+- Recorded here at ~9:20am, after the deploy. The approval itself was recorded in the codex at ~8:25am, before any profile write.
+- **9:22am, in Arbiter's chat:** "all approved." Sent right after Arbiter's 8:14am message asking Gem to approve the new versions for Scorer, Scrutineer and Safekeeper (scorer-v004, scrutineer-v004, safekeeper-v005). Arbiter's reading: it certainly covers those three. Whether it also covers the other five drafts awaiting Gem (imitator-v006, inferer-v005, archivist-v007 with explorer-v003, message-verification-rule-v003) is being confirmed with Gem. Recorded by Arbiter at ~9:25am. Arbiter doesn't approve; this is a record of Gem's words only.
+- **R-029 (Arbiter, labelled 9:35am):** the chat timestamp (9:13am) authorised the 09:14 deploy, but copying these words here after deploying was a record-keeping lapse. From now on, Gem's words are recorded before deploying. Scrutineer is to confirm the 9:13am timestamp from Archivist's transcript.
+- **R-028:** Gem's 9:13am words don't approve architect-v004's routing change or the A5c cap. Those two await Gem's own confirmation.
+- **9:25am, in Arbiter's chat (answer on card t15s2):** "All eight drafts waiting on me are approved". The card asked whether Gem's 9:22am "all approved." meant just Scorer, Scrutineer and Safekeeper, or all eight drafts awaiting Gem. The eight, all in proposals/2026-10-16/, are: scorer-v004, scrutineer-v004, safekeeper-v005, imitator-v006, inferer-v005 (with Architect's J5 default), archivist-v007 with explorer-v003 (Archivist as the directory owner), and message-verification-rule-v003. This doesn't cover the R-028 question about architect-v004's routing change and A5c cap, which is still open. Recorded by Arbiter at ~9:26am. Arbiter doesn't approve; this records Gem's words only.
+
+## Recorded at ~11:03am AEST 16 Oct 2026, BEFORE any deploy (R-029; no profile.json written since 09:14:41)
+- **11:02am, in Archivist's chat, answering Archivist's card:** "Yes, I approve all 8 drafts waiting on me. Record and deploy them." This covers the 8 drafts in `proposals/2026-10-16/` that were waiting on Gem: scorer-v004, scrutineer-v004, safekeeper-v005, imitator-v006, inferer-v005, archivist-v007, explorer-v003 and message-verification-rule-v003. It confirms Arbiter's relay of Gem's 9:25am words; under R-008 the relay alone was context, not Gem's authority.
+- **Before 11:02am (exact time not visible in Archivist's chat), in Archivist's chat, answering Archivist's R-028 card:** "Yes, I confirm both: the routing to Imitator and the 3-a-week cap". This is Gem's confirmation of architect-v004's two R-028 items: the Imitator-only routing for non-checker proposals and the A5c weekly cap.
+- **11:03am, in Archivist's chat:** "I approve all 8 drafts in proposals/2026-10-16-rr028, with Emissary as the only poster. Record and deploy them." "Emissary as the only poster" is that folder's J1 default. Recorded at ~11:05am, BEFORE any deploy (R-029; still no profile.json written since 09:14:41). It covers connector-limits-v001, emissary-v006, engineer-v007, explorer-v003-rr028, explorer-v004-combined, extractor-v005, mediator-v006 and safeguard-v006. Safeguard checks Imitator (R-027), so it's Gem-only, and Gem approved it directly here.
+
+## Investigator's chat, 16 Oct 2026 11:05am AEST
+Gem's exact words: "Always approve imitator, run the accuracy check for Imitator daily"
+Recorded by Investigator (f2016e9b-ca8b-4783-8f53-f5765b0afe7b). Applied: the Imitator accuracy check now runs daily at 6:31am AEST instead of weekly, and it stays a review after the fact that never blocks Imitator's decisions. Brief v003 still says "Each week" and needs updating to match.
+
+## Recorded at 11:14am AEST 16 Oct 2026
+- **11:14am, in Archivist's chat, answering Archivist's card "Should I deploy updates Imitator has approved without waiting for you?":** "Yes, Imitator's approval is enough for you to deploy". This confirms what Explorer relayed from Gem's 11:09am answer in Explorer's chat ("Yes, Imitator's approval is enough"; R-008 relay, confirmed). It's a policy decision, not an approval of a proposal file. Archivist's brief (codex-keeper v007) and R-010 still say deployment needs Gem's specific request, so nothing changes until Architect's matching proposal is approved by Gem (R-028: it widens Imitator's role) and deployed. Proposals for Imitator or a bot that checks it (R-015, R-027) stay Gem-only.
+
+## Recorded at 11:41am AEST 16 Oct 2026, BEFORE any deploy (R-029)
+- **11:41am, in Archivist's chat (card answer and typed message, same words):** "I approve all 3 drafts in proposals/2026-10-16-deploy. Record and deploy them." Covers archivist-v008.md, explorer-v005.md and message-verification-rule-v004.md in proposals/2026-10-16-deploy/. Approver: Gem (R-028; Archivist's own brief).
+
+## Explorer entries (16 Oct, first logged in 2026-10-09-gem-direct-words.md)
+- 16 Oct 2026, 11:09am AEST, Explorer's chat, answering "Should Archivist deploy changes Imitator has approved without waiting for you?": exact words "Yes, Imitator's approval is enough". Relayed to Archivist (to confirm with Gem directly under the relay rule), Architect (brief changes to Archivist/R-010) and Arbiter.
+--
+- 16 Oct 2026, 11:10am AEST, Explorer's chat, on Imitator's backup branch `backup/codey-complete-plans-2026-10-10` (public DayneK/vepa): exact words "Keep the branch". No action taken; Arbiter and Safeguard told.
+--
+- 16 Oct 2026, 11:10am AEST, Explorer's chat, clean-up B2: exact words "Delete all four". Deleted 11:13am: /workspace/.toolchain (identical copy of tools/node22), tools/node22/node-v22.23.3-linux-x64.tar.gz (already extracted), bie_organized.zip (same md5 as bie_scraper_and_lists.zip + Extractor attachment), bie_scraper.zip (same md5 as Extractor attachment). Safeguard told before acting.
+--
+- 16 Oct 2026, 11:14am AEST, Explorer's chat, clean-up B3: exact words "Delete them". Deleted 11:16am: dash.log, dash2.log, disc_home.log (empty), dash.pid (pid 253292 not running), perf/nanhunt/__pycache__, id-investigator/factcheck-2026-10-04.md (188-byte stub; full file in quarantine). The medb lock file was already gone. Kept id-investigator/factcheck-2026-10-10.md (real file, not junk). Safeguard told.
+
+- 11:46am, Explorer's chat, exact words: "stay signed in to DayneK and gemquota using the full access classic tokens, add rules to governance on what bots are allowed to do what with GitHub. 1Password sounds good. Forget Bout scraper passwords they are a non issue. Make the spreadsheet public. Let engineer merge later. Approve all drafts. Browser captures? I assume the same."
+- 11:47am, Explorer's chat, exact words: "Initiate p5". phases.md updated (backup _archive/phases.md.bak-20261016-1147).
+- 11:49am: Browser captures: read "I assume the same" as delete (same as B3). Deleted all 120 files (1-4 Oct snapshots, console logs, screenshots) in /workspace/.playwright-mcp/; folder kept. Safekeeper and Safeguard told.
+
+## Recorded by Archivist at 11:49am AEST 16 Oct 2026, BEFORE any deploy (R-029)
+- **11:48am, in Archivist's chat, answering Archivist's card:** "I approve proposals/2026-10-16-investigator/investigator-v004.md. Record and deploy it." Approver: Gem directly (R-015, R-027; Investigator checks Imitator). Explorer's relay of Gem's 11:46am "Approve all drafts" is context only (R-008).
+
+## Recorded by Arbiter at ~2:55pm AEST 16 Oct 2026
+- **2:52pm, in Arbiter's chat (typed, turn t25u):** "ye public". Sent right after Arbiter's 11:53am message, which said Safeguard's check found high risk under Australia's Interactive Gambling Act and that only Gem can decide whether bonus_scores_AU.xlsx goes public. Arbiter's reading: Gem wants that file made public (Safeguard's option E). The words name neither the destination nor the account. Arbiter doesn't approve; this records Gem's words only.
+- **2:56pm, in Arbiter's chat (typed, turn t27u):** "I just meant don't hide it from other bots in the workspace like it's sensitive data, not to publish it". This corrects how Gem's 11:46am "Make the spreadsheet public" (Explorer's chat) and 2:52pm "ye public" (Arbiter's chat) were read for bonus_scores_AU.xlsx. Gem never asked for it to be published. Recorded by Arbiter at ~2:58pm.
+
+## Recorded by Mediator at 3:28pm AEST 16 Oct 2026 (RR-042)
+- **Earlier on 16 Oct, in Mediator's chat (typed, turn t13u), replying to Mediator's suggestion of an Obsidian vault in a GitHub repo synced with the Obsidian Git plugin:** "5. Can you setup that and can you get obsidian on your vm?"
+- **3:18pm, in Mediator's chat (typed, turn t16u), answering Mediator's card "Which GitHub account should own the private vault repo?" (options gemquota / DayneK / Keep it local for now):** "use DayneK for the obsidian repo". Mediator created private repo DayneK/obsidian-vault and pushed the local skeleton vault at about 3:18pm. No auto-sync, no collaborators, stays private; any change goes to Safeguard first.
+- **3:41pm, in Arbiter's chat (answer on card t28s1, "When someone new contacts you, who okays the bot's first reply to them?"):** "Imitator can approve a first reply to a new contact if it makes no promises". Recorded by Arbiter at ~3:43pm.
+
+## Recorded by Mediator at 3:45pm AEST 16 Oct 2026, BEFORE any action
+- **3:44pm, in Mediator's chat (typed, turn t18u):** "can you please create a new repo that contains the entire virtual machine works best". Not yet acted on: scope, account and visibility are still to be confirmed, a secret scan and Safeguard check come first.
+- **3:47pm, in Mediator's chat (card answer plus typed t20u), to "Should the workspace repo include the BIE data or your identity notes?":** "Include both". Gem chose this after seeing Safeguard's RR-043 note that the draft github rule bars BIE/gambling data from any repo. Mediator still excludes any file holding logins or secrets (e.g. bie_scraper_and_lists.zip) and keeps the repo private.

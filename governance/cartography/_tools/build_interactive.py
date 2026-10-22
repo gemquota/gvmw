@@ -45,7 +45,7 @@ for row in index.splitlines():
     deployed[cells[3]] = {'deployed': m.group(1) if m else None, 'flag': flag, 'updated': updated}
 
 GROUPS = ['Roles', 'Checks', 'Ops', 'ID', 'Work']
-STATUS = {'active': 'Live', 'dormant': 'Dormant', 'retired_gone': 'Retired (deleted)', 'former_gone': 'Former (deleted)'}
+STATUS = {'active': 'Live', 'dormant': 'Dormant', 'retired_gone': 'Retired (deleted)', 'former_gone': 'Former (deleted)', 'unrecorded': 'Unrecorded, awaiting Gem'}
 nodes = []
 for n in g['nodes']:
     if n['type'] == 'human':
@@ -65,7 +65,7 @@ for n in g['nodes']:
     ms = n.get('map_status')
     nodes.append({'key': n['key'], 'name': name, 'shortId': sid, 'group': n.get('category'),
                   'phase': n.get('phase') or '-', 'phaseStatus': n.get('phase_status', ''),
-                  'status': STATUS.get(ms, ms), 'tier': n.get('phase') or 'former',
+                  'status': STATUS.get(ms, ms), 'tier': 'unrecorded' if ms == 'unrecorded' else (n.get('phase') or 'former'),
                   'live': ms == 'active', 'formerName': n.get('former_name'),
                   'absorbed': n.get('absorbed', []), 'codexVersion': ver,
                   'deployed': d.get('deployed'), 'indexFlag': d.get('flag'), 'lastUpdated': d.get('updated'),

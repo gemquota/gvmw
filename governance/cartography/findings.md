@@ -1,5 +1,16 @@
 # Role map v6 findings (9 Oct 2026 ~9:29)
 
+## v15 findings (22 Oct 2026 6:34:10pm AEST)
+- New Bot (`6b01a4ef`) is a live agent folder with a blank profile, created 19 Oct 01:30:54am, three days before Explorer reported it. It has no codex folder, so nothing is recorded and it gets no role; Gem to decide what it is.
+- verify.py lists it as GROUP (INFO), because its rule treats any agent with an empty description as a group channel. Nothing on disk shows New Bot is a group, so this map lists it as an unrecorded live agent, as Archivist's brief says for a live agent with no codex folder.
+
+## v14 findings (16 Oct 2026 3:58:15pm AEST)
+- Connector limits v002 is recorded on Gem's 3:54pm words (default text, not variant B). Nothing to deploy; verified by Scrutineer (PASS, reviews/2026-10-16-connector-limits-v002-check.md, written 3:58:26pm).
+- 11 live briefs have no pointer to connector limits (Inquirer, Scorer, Arbiter, Architect, Safekeeper, Archivist, Imitator, Inferer, Scrutineer, Mender, Investigator). The rule still binds every bot by its SCOPE, but the briefs don't say so.
+- Rule 14 points to a shared GitHub rule at `codex/_shared/github/` that isn't recorded yet, so its interim line applies (any GitHub write needs Gem's words and a dry run).
+- Emissary's pointer lists only Vercel, Drive, Sheets and Calendar, though v002 makes it a main Gmail, Docs and Notion user.
+- Mediator's connectors.md line 40 and Safeguard's input paraphrase rule 5 differently from the recorded text.
+
 ## v13 findings (16 Oct 2026 ~11:52am AEST)
 - P5 is live per phases.md (Gem's "Initiate p5" in Explorer's chat, 11:47am). The three P5 briefs were last changed for P5 at 11:03am (RR-028), so no codex change was needed for the switch-on.
 - phases.md still lists the old Inquirer `e613112b` as "awaiting Gem's decision to retire" and the 9 Oct retirees as "awaiting deletion"; those folders are gone. Its "Last updated" says 11:48am, but the file was written at 11:47:37. Explorer owns phases.md, so Archivist hasn't edited it.

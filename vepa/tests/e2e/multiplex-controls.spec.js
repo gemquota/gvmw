@@ -17,7 +17,7 @@ async function startMultiplex(page) {
 }
 async function expandDrawer(page) {
   const drawer = page.locator('#multiplex-drawer');
-  if (!(await drawer.evaluate((d) => d.classList.contains('expanded')))) await page.locator('#multiplex-drawer .mpx-strip').click({ position: { x: 200, y: 10 } });
+  if (!(await drawer.evaluate((d) => d.classList.contains('expanded')))) await page.locator('#multiplex-drawer .mpx-chevron').click();
   await expect(drawer).toHaveClass(/expanded/);
 }
 const pauseSettled = async (page) => {

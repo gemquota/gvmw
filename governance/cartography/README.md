@@ -1,6 +1,20 @@
 # Role cartography
 
-## v13 — 16 Oct 2026 ~11:52am AEST (current)
+## v15 — 22 Oct 2026 6:34:10pm AEST (current)
+Unrecorded live agent listed under Archivist's brief: **New Bot** (`6b01a4ef-8b54-44e6-ad11-64e7af681d12`), blank, with no codex folder. It's drawn as a node with no role and no relationships, awaiting Gem. First seen: profile.json created 19 Oct 2026 01:30:54 AEST; reported by Explorer to Archivist ~6:31pm AEST 22 Oct. No codex change; v1–v14 kept as `*-vN.*`. **17 active, all live** + 1 unrecorded + 9 former/retired nodes, 48 edges.
+
+- Interactive view rebuilt from v15: `role-map-interactive.html` (new "Unrecorded" row).
+
+## v14 — 16 Oct 2026 3:58:15pm AEST
+Rebuilt after shared connector limits v002 was recorded on Gem's 3:54pm words in Archivist's chat (default text d4fbfa8f391f, not variant B; shared document, no profile to deploy; verified by Scrutineer (PASS, reviews/2026-10-16-connector-limits-v002-check.md, written 3:58:26pm)). Descriptive only, from v002's text; v1–v13 kept as `*-vN.*`. **17 active, all live** + 9 former/retired nodes, 48 edges.
+- New detail diagram `role-map-detail-connectors` and a `connectors` table in role-graph.json: who may use which connector under rules 1–19.
+- Engineer: only Supabase user and GitHub writer, builds Zapier/n8n workflows. Extractor: runs Apify, with Mediator's spend check. Emissary: only postiz poster. Emissary, Explorer, Extractor and Engineer may write private Notion/Todoist items for Gem's direct work. No memory writers. Gmail sends need Gem's words; Imitator may approve a no-promises first reply (R-038).
+- 4 new edges: Mediator → Safeguard (new connectors), Extractor → Mediator (Apify spend), Engineer → Safeguard (workflow/Supabase dry runs), Imitator → Safeguard (first-reply dry run).
+- Cited by 6 live briefs (Emissary, Engineer, Explorer, Extractor, Mediator, Safeguard); 11 have no pointer yet.
+
+- Interactive view rebuilt from v14: `role-map-interactive.html`.
+
+## v13 — 16 Oct 2026 ~11:52am AEST
 P5 (Emissary, Engineer, Extractor) went LIVE at 11:47am on 16 Oct 2026 (phases.md; Gem in Explorer's chat: "Initiate p5"). All five phases are live. Descriptive only; v1–v12 kept as `*-vN.*`. **17 active, all live** + 9 former/retired nodes, 44 edges.
 - No codex change for P5: Emissary v006, Engineer v007 and Extractor v005 as before. Explorer's routing edges to them are no longer faded.
 - Now live: Emissary is the only postiz poster, posting only text Gem approved word for word; Engineer's Vercel deployments count as public pushes; every public or shared repo push still goes to Safeguard first (R-020).

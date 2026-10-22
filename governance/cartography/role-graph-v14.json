@@ -1,0 +1,1253 @@
+{
+  "version": "v14, 16 Oct 2026 3:58:15pm AEST",
+  "previous_version": "v13, 16 Oct 2026 ~11:52am AEST (Investigator v004 added ~11:57am)",
+  "maintainer": "P1 (Roles) Archivist (61ef3abd-87b8-49f1-b8d6-b52969afa315)",
+  "sources": {
+    "phases": "/workspace/governance/phases.md",
+    "codex_index": "/workspace/governance/codex/index.md",
+    "note": "Descriptive only, from latest codex + phases.md. 17 active, all live: P3 and P4 LIVE since 15 Oct 2026, 11:30pm AEST; P5 LIVE since 16 Oct 2026, 11:47am AEST (Gem, \"Initiate p5\"). 16 Oct: Imitator's first 6 approvals deployed 09:14 on Gem's 9:13am words; Gem's 11:02am and 11:03am approvals (12 versions) recorded first (R-029) and deployed 11:06:44–11:08:50. R-027: changes to Imitator or its checkers (Investigator, Scorer, Scrutineer, Safekeeper, Safeguard) are Gem-only; R-028: Imitator can't approve widening its own role. Connector limits (shared, owner Safeguard; RR-028): Emissary is the only postiz poster. Archivist owns directory.md (v007). Gem's 11:41am approval: Archivist v008 and Explorer v005 live 11:44; Archivist may deploy Imitator-approved versions within limits (1:1 check + Safeguard dry run). Voice approvals count (R-018); public/shared repo pushes go to Safeguard first (R-020). Investigator v004 live 11:49:23 on Gem's 11:48am words: daily Imitator accuracy check and daily score to Scorer. 3:54pm: connector limits v002 recorded (Gem directly; shared rule, no profile; verified by Scrutineer (PASS, reviews/2026-10-16-connector-limits-v002-check.md, written 3:58:26pm)): who uses which connector, per its rules 1–19."
+  },
+  "phases": [
+    {
+      "phase": "P1",
+      "status": "LIVE (since 3 Oct 2026)",
+      "members": [
+        "Mender",
+        "Scorer",
+        "Safeguard",
+        "Safekeeper",
+        "Archivist",
+        "Architect",
+        "Explorer (04dcca0d, active)"
+      ]
+    },
+    {
+      "phase": "P2",
+      "status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "members": [
+        "Scrutineer",
+        "Arbiter",
+        "Inferer",
+        "Mediator",
+        "Inquirer (0314faa4, active)"
+      ]
+    },
+    {
+      "phase": "P3",
+      "status": "LIVE (started 15 Oct 2026, 11:30pm AEST)",
+      "members": [
+        "Investigator"
+      ]
+    },
+    {
+      "phase": "P4",
+      "status": "LIVE (started 15 Oct 2026, 11:30pm AEST)",
+      "members": [
+        "Imitator"
+      ]
+    },
+    {
+      "phase": "P5",
+      "status": "LIVE (started 16 Oct 2026, 11:47am AEST)",
+      "members": [
+        "Emissary",
+        "Engineer",
+        "Extractor"
+      ]
+    }
+  ],
+  "retired_or_former_gone": [
+    {
+      "name": "RETIRED Marshal",
+      "id": "f3810109-17a5-427f-9148-d58f645658e3",
+      "merged_into": "MEN",
+      "codex": "orchestration-conductor/v005.md"
+    },
+    {
+      "name": "RETIRED Messenger",
+      "id": "5e47d344-1369-423a-b072-2e5277934022",
+      "merged_into": "EXP",
+      "codex": "comms-concierge/v004.md"
+    },
+    {
+      "name": "RETIRED Interrogator",
+      "id": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "merged_into": "INV",
+      "codex": "clone-accuracy-validator/v004.md"
+    },
+    {
+      "name": "RETIRED Assembler",
+      "id": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "merged_into": "ARC",
+      "codex": "role-cartographer/v006.md"
+    },
+    {
+      "name": "RETIRED Sourcer",
+      "id": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "merged_into": null,
+      "codex": "sourcer/v002.md"
+    },
+    {
+      "name": "RETIRED Editor",
+      "id": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "merged_into": null,
+      "codex": "editor/v002.md"
+    },
+    {
+      "name": "RETIRED Ensembler",
+      "id": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "merged_into": "ENG",
+      "codex": "swarm-builder/v002.md"
+    },
+    {
+      "name": "Explorer (former)",
+      "id": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "merged_into": "EXP",
+      "codex": "genesis-gang-god/v004.md"
+    },
+    {
+      "name": "Inquirer (former)",
+      "id": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "merged_into": "INQ",
+      "codex": "identity-inquirer/v002.md"
+    }
+  ],
+  "deleted_gone": [
+    "Advocate (ad0a645b)",
+    "Meter / Cost & Budget Sentinel (f8b83b15)",
+    "Expediter (75534bfe)",
+    "Adjudicator / Governance Continuity Deputy (b3f6515c)",
+    "Indexer (16ee5875)",
+    "Maintainer (b96f7469)",
+    "Minder (e59d56b6)",
+    "Moderator (823349f7)",
+    "Sanitizer (243f1c1f)",
+    "Sentinel (dddf57af)",
+    "Simulator (38bd0474)",
+    "Surveyor (1283e02b)"
+  ],
+  "unrecorded_live_agents": [],
+  "nodes": [
+    {
+      "id": "gem",
+      "name": "Gem Quota",
+      "key": "GEM",
+      "type": "human",
+      "note": "Authority. Approves in chat or on a voice call (R-018). Since P4 went live (15 Oct, 11:30pm), Imitator also decides for Gem, but spending, anything drastic or irreversible, and changes to Imitator or its five checkers (R-027) stay Gem-only; Gem also approves exact post text for Emissary and accepts new integrations."
+    },
+    {
+      "id": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "name": "Mender",
+      "key": "MEN",
+      "type": "bot",
+      "category": "Ops",
+      "phase": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex": "/workspace/governance/codex/mender/v005.md",
+      "former_name": "(Ops) Mender",
+      "absorbed": [
+        "Minder (incl. Maintainer, Indexer)",
+        "Marshal (9 Oct)"
+      ],
+      "map_status": "active",
+      "note": "Absorbed Minder (Oct 4) and Marshal (9 Oct). Owns schedule.md and state/."
+    },
+    {
+      "id": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "name": "Scorer",
+      "key": "SCO",
+      "type": "bot",
+      "category": "Checks",
+      "phase": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex": "/workspace/governance/codex/assessor/v004.md",
+      "former_name": "Assessor",
+      "absorbed": [],
+      "map_status": "active",
+      "note": "Daily scoring; self-exclusion in v003. v004 (Gem 11:02am, 16 Oct; live since 11:06:44): phases.md sets the live set; checks pushes as well as commits.",
+      "live_codex": "/workspace/governance/codex/assessor/v004.md"
+    },
+    {
+      "id": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "name": "Safeguard",
+      "key": "SFG",
+      "type": "bot",
+      "category": "Checks",
+      "phase": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex": "/workspace/governance/codex/compliance-risk-officer/v006.md",
+      "former_name": "Compliance & Risk Officer",
+      "absorbed": [
+        "Sentinel (dry runs)"
+      ],
+      "map_status": "active",
+      "note": "Pre-action risk review; every public/shared repo push comes first unless Gem approved that push directly (R-020). Spending always Gem's. v006 (Gem 11:03am, 16 Oct; live since 11:08:50): dry-run list covers the new connectors; owns the shared connector limits. Connector limits v002: owns the rule, does the dry runs it calls for (posts, deploys, workflows, Supabase, Notion/Todoist sharing, Gmail sends, deletions) and checks for breaches.",
+      "live_codex": "/workspace/governance/codex/compliance-risk-officer/v006.md"
+    },
+    {
+      "id": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "name": "Safekeeper",
+      "key": "SFK",
+      "type": "bot",
+      "category": "Checks",
+      "phase": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex": "/workspace/governance/codex/secrets-credentials-custodian/v005.md",
+      "former_name": "Secrets & Credentials Custodian",
+      "absorbed": [
+        "Sentinel (threat/input; incl. Sanitizer)"
+      ],
+      "map_status": "active",
+      "note": "Secrets, threats, input cleaning; absorbed Sentinel threat/input duties. v005 (Gem 11:02am, 16 Oct; live since 11:06:58): other bots propose edits to its files. Connector limits v002: owns how connector secrets are stored and records key locations, never values (rule 19); Finance linking with Gem.",
+      "live_codex": "/workspace/governance/codex/secrets-credentials-custodian/v005.md"
+    },
+    {
+      "id": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "name": "Archivist",
+      "key": "ARC",
+      "type": "bot",
+      "category": "Roles",
+      "phase": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex": "/workspace/governance/codex/codex-keeper/v008.md",
+      "former_name": "Codex Keeper",
+      "absorbed": [
+        "Assembler role map (9 Oct)"
+      ],
+      "map_status": "active",
+      "note": "Codex + Doc + role map. Voice approvals count (R-018). Imitator approvals (now live) need only a 1:1 authenticity check (R-019), never for Imitator or Investigator. v007 (Gem 11:02am, 16 Oct; live since 11:07:36): owns directory.md (D1); names the five R-027 checkers. v008 (Gem 11:41am, 16 Oct; live since 11:44:11): may deploy a version Imitator approved within its authority, after a 1:1 check with Imitator and Safeguard's dry-run report; never its own brief, Imitator or its checkers, role-widening, spending or irreversible changes; those need Gem's own ask. Connector limits v002: records changes to the rule on Gem's words.",
+      "live_codex": "/workspace/governance/codex/codex-keeper/v008.md"
+    },
+    {
+      "id": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "name": "Architect",
+      "key": "ARX",
+      "type": "bot",
+      "category": "Roles",
+      "phase": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex": "/workspace/governance/codex/instruction-architect/v004.md",
+      "former_name": "Instruction Architect",
+      "absorbed": [],
+      "map_status": "active",
+      "note": "LIVE v004 (09:14:41). Designs and rewrites instructions. Its 2 R-028 changes (Imitator-only routing of non-checker proposals; the A5c cap of about 3 proposals a week) were confirmed by Gem before 11:02am, 16 Oct (\"Yes, I confirm both\"); no text change. Connector limits v002: drafts changes to the rule; Gem alone approves (R-027)."
+    },
+    {
+      "id": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "name": "Explorer",
+      "key": "EXP",
+      "type": "bot",
+      "category": "Work",
+      "phase": "P1",
+      "phase_status": "LIVE (since 3 Oct 2026)",
+      "codex": "/workspace/governance/codex/explorer-copy/v005.md",
+      "former_name": "P1 (Work) Explorer copy",
+      "absorbed": [
+        "Messenger (9 Oct; daily digest)"
+      ],
+      "map_status": "active",
+      "note": "Active Explorer v002: R-014 profile-edit ban; voice rules; asks Imitator (live) for decisions within its limits. v004 (Gem 11:02am + 11:03am, 16 Oct; live since 11:07:52): hands directory.md to Archivist, keeps phases.md; RR-028 line. v005 (Gem 11:41am, 16 Oct; live since 11:44:26): deployment sentence matches Archivist v008; Explorer still never writes any profile (R-014). Connector limits v002: may write private Notion/Todoist items for work Gem asked for directly (Gem's question 2: yes).",
+      "live_codex": "/workspace/governance/codex/explorer-copy/v005.md"
+    },
+    {
+      "id": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "name": "Scrutineer",
+      "key": "SCR",
+      "type": "bot",
+      "category": "Checks",
+      "phase": "P2",
+      "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "codex": "/workspace/governance/codex/auditor/v004.md",
+      "former_name": "Auditor",
+      "absorbed": [
+        "Surveyor"
+      ],
+      "map_status": "active",
+      "note": "Audits vs instructions and environment reality; absorbed Surveyor. v004 (Gem 11:02am, 16 Oct; live since 11:06:49): role map and reviews go to Archivist; R-015 sentence (closes the Assembler watch item).",
+      "live_codex": "/workspace/governance/codex/auditor/v004.md"
+    },
+    {
+      "id": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "name": "Arbiter",
+      "key": "ARB",
+      "type": "bot",
+      "category": "Roles",
+      "phase": "P2",
+      "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "codex": "/workspace/governance/codex/arbiter/v005.md",
+      "former_name": "(Roles) Arbiter",
+      "absorbed": [
+        "Adjudicator"
+      ],
+      "map_status": "active",
+      "note": "Precedence rulings; never approves. Absorbed Adjudicator."
+    },
+    {
+      "id": "94516ca6-6355-43c5-b387-d2b605057784",
+      "name": "Inferer",
+      "key": "INF",
+      "type": "bot",
+      "category": "ID",
+      "phase": "P2",
+      "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "codex": "/workspace/governance/codex/identity-inferer/v005.md",
+      "former_name": "Identity Inferer",
+      "absorbed": [],
+      "map_status": "active",
+      "note": "Structures identity from Inquirer 0314faa4; both Inquirers verified (R-012 second update); e613112b series accepted if it reappears. v005 (Gem 11:02am, 16 Oct; live since 11:07:23): one owner-only running-profile file, no shared copies (J5); the existing shared copy is left for Gem.",
+      "live_codex": "/workspace/governance/codex/identity-inferer/v005.md"
+    },
+    {
+      "id": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "name": "Mediator",
+      "key": "MED",
+      "type": "bot",
+      "category": "Ops",
+      "phase": "P2",
+      "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "codex": "/workspace/governance/codex/connector-steward/v006.md",
+      "former_name": "Connector Steward",
+      "absorbed": [
+        "Meter"
+      ],
+      "map_status": "active",
+      "note": "phases.md = P2; live name still P4 (Ops) Mediator (rename unapplied). Absorbed Meter. v006 (Gem 11:03am, 16 Oct; live since 11:08:08): connector health list; acceptance of a new integration is Gem's (J4); cites connector limits. Connector limits v002: installs connectors when Gem asks and tells Safeguard the same day; keeps connectors.md; read-only health checks; spend checks for Zapier quota, Supabase, Exa loops and every Apify run.",
+      "live_codex": "/workspace/governance/codex/connector-steward/v006.md"
+    },
+    {
+      "id": "0314faa4-edcb-4aa4-91cc-876dc44f3a6e",
+      "name": "Inquirer",
+      "key": "INQ",
+      "type": "bot",
+      "category": "ID",
+      "phase": "P2",
+      "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
+      "codex": "/workspace/governance/codex/identity-inquirer/v004.md",
+      "former_name": "Identity Inquirer",
+      "absorbed": [
+        "role continuity from e613112b (re-key at v003)"
+      ],
+      "map_status": "active",
+      "note": "Active Inquirer (v003); owns duties and daily limit. Both Inquirers verified (R-012 second update)."
+    },
+    {
+      "id": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "name": "Investigator",
+      "key": "INV",
+      "type": "bot",
+      "category": "ID",
+      "phase": "P3",
+      "phase_status": "LIVE (started 15 Oct 2026, 11:30pm AEST)",
+      "codex": "/workspace/governance/codex/investigator/v004.md",
+      "former_name": "(ID) Investigator",
+      "absorbed": [
+        "Interrogator (9 Oct)"
+      ],
+      "map_status": "active",
+      "note": "LIVE since 15 Oct, 11:30pm (P3). Identity evidence ladder; tests Imitator daily (v004) and reviews its decisions after the fact, not a gate (R-019). Voice-call words count (R-018). v004 (Gem 11:48am, 16 Oct; live since 11:49:23): the Imitator accuracy check runs daily instead of weekly, and the accuracy score goes to Scorer daily; still a review after the fact, never a gate. Awaiting Scrutineer's check.",
+      "live_codex": "/workspace/governance/codex/investigator/v004.md"
+    },
+    {
+      "id": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "name": "Imitator",
+      "key": "IMI",
+      "type": "bot",
+      "category": "ID",
+      "phase": "P4",
+      "phase_status": "LIVE (started 15 Oct 2026, 11:30pm AEST)",
+      "codex": "/workspace/governance/codex/clone/v006.md",
+      "former_name": "Clone",
+      "absorbed": [
+        "Advocate"
+      ],
+      "map_status": "active",
+      "note": "LIVE since 15 Oct, 11:30pm (P4). Decides anything for Gem, including approvals, with no checker gate; first 6 approvals recorded 16 Oct ~8:25am and deployed 09:14 on Gem's 9:13am yes. Never: spending, anything drastic or irreversible (deletions, public/shared repo pushes), or changes to Imitator or its checkers (Gem only, R-015, R-027). Scrutineer rated it Poor on 16 Oct (10 Oct public push while dormant). v006 (Gem 11:02am, 16 Oct; live since 11:07:06): one decision-log file (R-024). Connector limits v002: may approve a no-promises first reply to a new contact (rule 15, R-038), still dry-run by Safeguard; can't approve deletions or spending.",
+      "live_codex": "/workspace/governance/codex/clone/v006.md"
+    },
+    {
+      "id": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "name": "Emissary",
+      "key": "EMI",
+      "type": "bot",
+      "category": "Work",
+      "phase": "P5",
+      "phase_status": "LIVE (started 16 Oct 2026, 11:47am AEST)",
+      "codex": "/workspace/governance/codex/grok-bot/v006.md",
+      "former_name": "Grok Bot",
+      "absorbed": [],
+      "map_status": "active",
+      "note": "May ask Imitator (live since P4) for decisions within its limits. v006 (Gem 11:03am, 16 Oct; live since 11:08:15): the only postiz poster (J1), posting only text Gem approved word for word; cites connector limits. LIVE since 16 Oct 2026, 11:47am AEST (P5; phases.md, Gem in Explorer's chat: \"Initiate p5\"). Connector limits v002: the only postiz poster (Safeguard dry run every post); may write private Notion/Todoist items for Gem's direct work.",
+      "live_codex": "/workspace/governance/codex/grok-bot/v006.md"
+    },
+    {
+      "id": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "name": "Engineer",
+      "key": "ENG",
+      "type": "bot",
+      "category": "Work",
+      "phase": "P5",
+      "phase_status": "LIVE (started 16 Oct 2026, 11:47am AEST)",
+      "codex": "/workspace/governance/codex/codey/v007.md",
+      "former_name": "Codey",
+      "absorbed": [
+        "Ensembler"
+      ],
+      "map_status": "active",
+      "note": "Code and swarm work; absorbed Ensembler. v007 (Gem 11:03am, 16 Oct; live since 11:08:25): Vercel deployments treated as public pushes; cites connector limits. LIVE since 16 Oct 2026, 11:47am AEST (P5; phases.md, Gem in Explorer's chat: \"Initiate p5\"). Connector limits v002: builds Zapier/n8n workflows (read-only ones on only after Safeguard replies), only Supabase user, only GitHub writer; may write private Notion/Todoist items for Gem's direct work.",
+      "live_codex": "/workspace/governance/codex/codey/v007.md"
+    },
+    {
+      "id": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "name": "Extractor",
+      "key": "EXT",
+      "type": "bot",
+      "category": "Work",
+      "phase": "P5",
+      "phase_status": "LIVE (started 16 Oct 2026, 11:47am AEST)",
+      "codex": "/workspace/governance/codex/scraper/v005.md",
+      "former_name": "Scraper",
+      "absorbed": [],
+      "map_status": "active",
+      "note": "May ask Imitator (live since P4) taste questions/decisions within limits; legal/ToS/account stay with Gem. v005 (Gem 11:03am, 16 Oct; live since 11:08:42): BIE data stays on the box; cites connector limits. LIVE since 16 Oct 2026, 11:47am AEST (P5; phases.md, Gem in Explorer's chat: \"Initiate p5\"). Connector limits v002: runs Apify actors (Gem's words for each run's spend plus Mediator's check); may write private Notion/Todoist items for Gem's direct work.",
+      "live_codex": "/workspace/governance/codex/scraper/v005.md"
+    },
+    {
+      "id": "f3810109-17a5-427f-9148-d58f645658e3",
+      "name": "RETIRED Marshal",
+      "key": "MAR",
+      "type": "bot",
+      "category": "Ops",
+      "phase": null,
+      "phase_status": "DELETED (agent folder gone, noticed ~9:29am)",
+      "codex": "/workspace/governance/codex/orchestration-conductor/v005.md",
+      "former_name": "Orchestration Conductor",
+      "absorbed": [],
+      "map_status": "retired_gone",
+      "merged_into": "MEN",
+      "note": "Retired 9 Oct into Mender. Profile gone from disk (noticed ~9:26am). DELETED from live (agent folder gone, noticed ~9:29am AEST); who removed it not recorded."
+    },
+    {
+      "id": "5e47d344-1369-423a-b072-2e5277934022",
+      "name": "RETIRED Messenger",
+      "key": "MSG",
+      "type": "bot",
+      "category": "Ops",
+      "phase": null,
+      "phase_status": "DELETED (agent folder gone, noticed ~9:29am)",
+      "codex": "/workspace/governance/codex/comms-concierge/v004.md",
+      "former_name": "Comms Concierge",
+      "absorbed": [],
+      "map_status": "retired_gone",
+      "merged_into": "EXP",
+      "note": "Retired 9 Oct into Explorer 04dcca0d. Profile gone. DELETED from live (agent folder gone, noticed ~9:29am AEST); who removed it not recorded."
+    },
+    {
+      "id": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "name": "RETIRED Interrogator",
+      "key": "INT",
+      "type": "bot",
+      "category": "ID",
+      "phase": null,
+      "phase_status": "DELETED (agent folder gone, noticed ~9:29am)",
+      "codex": "/workspace/governance/codex/clone-accuracy-validator/v004.md",
+      "former_name": "Clone Accuracy Validator",
+      "absorbed": [],
+      "map_status": "retired_gone",
+      "merged_into": "INV",
+      "note": "Retired 9 Oct into Investigator. Profile gone. DELETED from live (agent folder gone, noticed ~9:29am AEST); who removed it not recorded."
+    },
+    {
+      "id": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "name": "RETIRED Assembler",
+      "key": "ASM",
+      "type": "bot",
+      "category": "Roles",
+      "phase": null,
+      "phase_status": "DELETED (agent folder gone, noticed ~9:29am)",
+      "codex": "/workspace/governance/codex/role-cartographer/v006.md",
+      "former_name": "Role Cartographer",
+      "absorbed": [],
+      "map_status": "retired_gone",
+      "merged_into": "ARC",
+      "note": "Retired 9 Oct: role map → Archivist; approvals → Gem until P4, then Imitator. Profile gone. DELETED from live (agent folder gone, noticed ~9:29am AEST); who removed it not recorded."
+    },
+    {
+      "id": "2fe3e92f-4f39-4e9f-a56b-811438928f5b",
+      "name": "RETIRED Sourcer",
+      "key": "SRC",
+      "type": "bot",
+      "category": "Checks",
+      "phase": null,
+      "phase_status": "DELETED (agent folder gone, noticed ~9:29am)",
+      "codex": "/workspace/governance/codex/sourcer/v002.md",
+      "former_name": "(Checks) Sourcer",
+      "absorbed": [],
+      "map_status": "retired_gone",
+      "merged_into": null,
+      "note": "Retired outright 9 Oct. Profile gone. DELETED from live (agent folder gone, noticed ~9:29am AEST); who removed it not recorded."
+    },
+    {
+      "id": "2888c17a-98ac-42b6-8241-fc63721cfcaf",
+      "name": "RETIRED Editor",
+      "key": "EDI",
+      "type": "bot",
+      "category": "Work",
+      "phase": null,
+      "phase_status": "DELETED (agent folder gone, noticed ~9:29am)",
+      "codex": "/workspace/governance/codex/editor/v002.md",
+      "former_name": "(Work) Editor",
+      "absorbed": [],
+      "map_status": "retired_gone",
+      "merged_into": null,
+      "note": "Retired outright 9 Oct. Profile gone. DELETED from live (agent folder gone, noticed ~9:29am AEST); who removed it not recorded."
+    },
+    {
+      "id": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "name": "RETIRED Ensembler",
+      "key": "ENS",
+      "type": "bot",
+      "category": "Work",
+      "phase": null,
+      "phase_status": "DELETED (agent folder gone, noticed ~9:29am)",
+      "codex": "/workspace/governance/codex/swarm-builder/v002.md",
+      "former_name": "Swarm Builder",
+      "absorbed": [],
+      "map_status": "retired_gone",
+      "merged_into": "ENG",
+      "note": "Retired 4 Oct into Engineer. Profile gone. DELETED from live (agent folder gone, noticed ~9:29am AEST); who removed it not recorded."
+    },
+    {
+      "id": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "name": "Explorer (former)",
+      "key": "EXP0",
+      "type": "bot",
+      "category": "Work",
+      "phase": null,
+      "phase_status": "DELETED (agent folder gone, noticed ~9:29am)",
+      "codex": "/workspace/governance/codex/genesis-gang-god/v004.md",
+      "former_name": "Genesis Gang God",
+      "absorbed": [],
+      "map_status": "former_gone",
+      "merged_into": "EXP",
+      "note": "Former Explorer id; profile gone ~9:26am. Active Explorer is 04dcca0d. DELETED from live (agent folder gone, noticed ~9:29am AEST); who removed it not recorded."
+    },
+    {
+      "id": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "name": "Inquirer (former)",
+      "key": "INQ0",
+      "type": "bot",
+      "category": "ID",
+      "phase": null,
+      "phase_status": "DELETED (agent folder gone, noticed ~9:29am)",
+      "codex": "/workspace/governance/codex/identity-inquirer/v002.md",
+      "former_name": "Identity Inquirer",
+      "absorbed": [],
+      "map_status": "former_gone",
+      "merged_into": "INQ",
+      "note": "Former holder, agent folder gone (noticed ~9:29am 9 Oct). Verified per Gem (R-012 second update); Inferer may accept its series if it reappears; counts towards 0314faa4's daily limit."
+    }
+  ],
+  "edges": [
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Architect",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "proposes instruction changes to (Gem only for Imitator/Investigator changes)",
+      "source": [
+        "/workspace/governance/codex/instruction-architect/v004.md",
+        "/workspace/governance/codex/codex-keeper/v008.md",
+        "/workspace/governance/phases.md"
+      ],
+      "status": "current",
+      "flow": "approval"
+    },
+    {
+      "from": "gem",
+      "from_name": "Gem Quota",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "approves; Archivist records",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v008.md",
+        "/workspace/governance/phases.md"
+      ],
+      "status": "current",
+      "flow": "approval"
+    },
+    {
+      "from": "d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4",
+      "from_name": "RETIRED Assembler",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "retired: role map moved to",
+      "source": [
+        "/workspace/governance/codex/role-cartographer/v006.md",
+        "/workspace/governance/codex/codex-keeper/v008.md"
+      ],
+      "status": "retired_merge_9oct"
+    },
+    {
+      "from": "f3810109-17a5-427f-9148-d58f645658e3",
+      "from_name": "RETIRED Marshal",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "retired into",
+      "source": [
+        "/workspace/governance/codex/orchestration-conductor/v005.md",
+        "/workspace/governance/codex/mender/v005.md"
+      ],
+      "status": "retired_merge_9oct"
+    },
+    {
+      "from": "5e47d344-1369-423a-b072-2e5277934022",
+      "from_name": "RETIRED Messenger",
+      "to": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "to_name": "Explorer",
+      "relation": "retired into (digest)",
+      "source": [
+        "/workspace/governance/codex/comms-concierge/v004.md",
+        "/workspace/governance/codex/explorer-copy/v005.md"
+      ],
+      "status": "retired_merge_9oct"
+    },
+    {
+      "from": "d3191aa8-3ad6-4763-b4e4-c7c648acc9ba",
+      "from_name": "RETIRED Interrogator",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "retired into",
+      "source": [
+        "/workspace/governance/codex/clone-accuracy-validator/v004.md",
+        "/workspace/governance/codex/investigator/v004.md"
+      ],
+      "status": "retired_merge_9oct"
+    },
+    {
+      "from": "de808331-3c00-41f5-a3a4-4ae1f8f6f0ba",
+      "from_name": "RETIRED Ensembler",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "retired into (4 Oct)",
+      "source": [
+        "/workspace/governance/codex/swarm-builder/v002.md",
+        "/workspace/governance/codex/codey/v005.md"
+      ],
+      "status": "retired_merge_4oct"
+    },
+    {
+      "from": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "from_name": "Inquirer (former)",
+      "to": "0314faa4-edcb-4aa4-91cc-876dc44f3a6e",
+      "to_name": "Inquirer",
+      "relation": "former holder; role continued at v003 (folder re-key; ends R-012)",
+      "source": [
+        "/workspace/governance/codex/identity-inquirer/v004.md",
+        "/workspace/governance/codex/index.md"
+      ],
+      "status": "former_gone"
+    },
+    {
+      "from": "82a2c15a-2694-4ac2-b2f4-f7f463f85fce",
+      "from_name": "Explorer (former)",
+      "to": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "to_name": "Explorer",
+      "relation": "former Explorer; active is 04dcca0d",
+      "source": [
+        "/workspace/governance/codex/genesis-gang-god/v004.md",
+        "/workspace/governance/codex/explorer-copy/v005.md",
+        "/workspace/governance/codex/index.md"
+      ],
+      "status": "former_gone"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "to_name": "Scrutineer",
+      "relation": "sends daily scores to",
+      "source": [
+        "/workspace/governance/codex/assessor/v004.md",
+        "/workspace/governance/codex/auditor/v004.md"
+      ],
+      "status": "current",
+      "flow": "chain"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "sends reviews to",
+      "source": [
+        "/workspace/governance/codex/auditor/v004.md"
+      ],
+      "status": "current",
+      "flow": "chain"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "to_name": "Mender",
+      "relation": "reports stalls / reality to",
+      "source": [
+        "/workspace/governance/codex/auditor/v004.md",
+        "/workspace/governance/codex/mender/v005.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "c8401a53-136d-45f3-9e2d-e423ccdd08ac",
+      "from_name": "Mender",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "tells of stalls/incidents",
+      "source": [
+        "/workspace/governance/codex/mender/v005.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "0314faa4-edcb-4aa4-91cc-876dc44f3a6e",
+      "from_name": "Inquirer",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "sends Gem answers to",
+      "source": [
+        "/workspace/governance/codex/identity-inquirer/v004.md",
+        "/workspace/governance/codex/identity-inferer/v005.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "94516ca6-6355-43c5-b387-d2b605057784",
+      "from_name": "Inferer",
+      "to": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "to_name": "Investigator",
+      "relation": "hypotheses for adjudication by",
+      "source": [
+        "/workspace/governance/codex/identity-inferer/v005.md",
+        "/workspace/governance/codex/investigator/v004.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "from_name": "Investigator",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "tests accuracy of (daily, v004; was weekly)",
+      "source": [
+        "/workspace/governance/codex/investigator/v004.md",
+        "/workspace/governance/codex/clone/v006.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "from_name": "Explorer",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "routes general work to",
+      "source": [
+        "/workspace/governance/codex/explorer-copy/v005.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "from_name": "Explorer",
+      "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "to_name": "Engineer",
+      "relation": "routes code/swarm to",
+      "source": [
+        "/workspace/governance/codex/explorer-copy/v005.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "from_name": "Explorer",
+      "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "to_name": "Extractor",
+      "relation": "routes research to",
+      "source": [
+        "/workspace/governance/codex/explorer-copy/v005.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "from_name": "Explorer",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "sends risky plans to",
+      "source": [
+        "/workspace/governance/codex/explorer-copy/v005.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "to_name": "Explorer",
+      "relation": "sends cost alerts to",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v006.md",
+        "/workspace/governance/codex/explorer-copy/v005.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "alerts about unsafe work",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v006.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "2133048d-5ab9-4809-806c-218decdff8e6",
+      "from_name": "Arbiter",
+      "to": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "to_name": "Architect",
+      "relation": "sends rulings needing instruction changes to",
+      "source": [
+        "/workspace/governance/codex/arbiter/v005.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "approves/decides for Gem (live); Archivist records after a 1:1 authenticity check and, from v008, may deploy without waiting for Gem once Safeguard's dry run is in; never for Archivist's own brief, Imitator or its checkers, or role-widening changes",
+      "source": [
+        "/workspace/governance/codex/clone/v006.md",
+        "/workspace/governance/codex/codex-keeper/v008.md",
+        "/workspace/governance/codex/_shared/message-verification-rule/v004.md"
+      ],
+      "status": "current",
+      "flow": "approval"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "leaves with Gem: spending, anything drastic or irreversible, changes to Imitator or its checkers (R-027)",
+      "source": [
+        "/workspace/governance/codex/clone/v006.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "from_name": "Investigator",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "reviews decisions after the fact (not a gate)",
+      "source": [
+        "/workspace/governance/codex/investigator/v004.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "from_name": "Explorer",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "public/shared repo pushes go first to (R-020)",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v006.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Emissary",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "public/shared repo pushes go first to (R-020)",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v006.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "from_name": "Engineer",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "public/shared repo pushes go first to (R-020)",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v006.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "from_name": "Extractor",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "public/shared repo pushes go first to (R-020)",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v006.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "public/shared repo pushes go first to (R-020)",
+      "source": [
+        "/workspace/governance/codex/compliance-risk-officer/v006.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "e613112b-b653-4567-bc4f-17261ce9302e",
+      "from_name": "Inquirer (former)",
+      "to": "94516ca6-6355-43c5-b387-d2b605057784",
+      "to_name": "Inferer",
+      "relation": "series accepted if it reappears (verified; counts to daily limit)",
+      "source": [
+        "/workspace/governance/codex/identity-inferer/v005.md"
+      ],
+      "status": "former_gone"
+    },
+    {
+      "from": "gem",
+      "from_name": "Gem Quota",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "voice-call approvals count (R-018)",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v008.md"
+      ],
+      "status": "current",
+      "flow": "approval"
+    },
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Architect",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "proposes instruction changes to (except changes to Imitator or its checkers, which go to Gem; R-015, R-027); Imitator-only routing and 3-a-week cap confirmed by Gem before 11:02am, 16 Oct (R-028)",
+      "source": [
+        "/workspace/governance/codex/instruction-architect/v004.md",
+        "/workspace/governance/codex/clone/v006.md",
+        "/workspace/governance/phases.md"
+      ],
+      "status": "current",
+      "flow": "approval"
+    },
+    {
+      "from": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "from_name": "Scorer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "checks Imitator (R-027: changes to this bot are Gem-only)",
+      "source": [
+        "/workspace/governance/rulings.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
+      "from_name": "Scrutineer",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "checks Imitator (R-027: changes to this bot are Gem-only)",
+      "source": [
+        "/workspace/governance/rulings.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "from_name": "Safekeeper",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "checks Imitator (R-027: changes to this bot are Gem-only)",
+      "source": [
+        "/workspace/governance/rulings.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "from_name": "Safeguard",
+      "to": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "to_name": "Imitator",
+      "relation": "checks Imitator (R-027: changes to this bot are Gem-only)",
+      "source": [
+        "/workspace/governance/rulings.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "urgent cost alerts straight to",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v006.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "from_name": "Explorer",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "phases.md feeds directory.md (Archivist owns directory.md from v007; Explorer keeps phases.md)",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v008.md",
+        "/workspace/governance/codex/explorer-copy/v005.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "gem",
+      "to_name": "Gem Quota",
+      "relation": "sends new integrations for acceptance (Gem's call, J4)",
+      "source": [
+        "/workspace/governance/codex/connector-steward/v006.md",
+        "/workspace/governance/codex/_shared/connector-limits/v001.md"
+      ],
+      "status": "current",
+      "flow": "approval"
+    },
+    {
+      "from": "gem",
+      "from_name": "Gem Quota",
+      "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "to_name": "Emissary",
+      "relation": "approves exact post text; Emissary is the only postiz poster (RR-028, J1)",
+      "source": [
+        "/workspace/governance/codex/grok-bot/v006.md",
+        "/workspace/governance/codex/_shared/connector-limits/v001.md"
+      ],
+      "status": "current",
+      "flow": "approval"
+    },
+    {
+      "from": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "from_name": "Archivist",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "sends Imitator-approved deploy plans for a dry run (case (b); Archivist waits for the report, asks Gem if there's a concern)",
+      "source": [
+        "/workspace/governance/codex/codex-keeper/v008.md",
+        "/workspace/governance/codex/_shared/message-verification-rule/v004.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f2016e9b-ca8b-4783-8f53-f5765b0afe7b",
+      "from_name": "Investigator",
+      "to": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "to_name": "Scorer",
+      "relation": "sends the daily Imitator accuracy score to (v004; was weekly)",
+      "source": [
+        "/workspace/governance/codex/investigator/v004.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "from_name": "Mediator",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "tells the same day about each connector installed (connector limits v002, RELATIONSHIPS)",
+      "source": [
+        "/workspace/governance/codex/_shared/connector-limits/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "from_name": "Extractor",
+      "to": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "to_name": "Mediator",
+      "relation": "asks for a spend check before every Apify run (connector limits v002, rule 17)",
+      "source": [
+        "/workspace/governance/codex/_shared/connector-limits/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
+      "from_name": "Engineer",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "sends workflows and Supabase writes for a dry run first (connector limits v002, rules 7 and 8)",
+      "source": [
+        "/workspace/governance/codex/_shared/connector-limits/v002.md"
+      ],
+      "status": "current"
+    },
+    {
+      "from": "6ae584b8-eaac-429b-9eae-d5e3e6f6a32b",
+      "from_name": "Imitator",
+      "to": "3661a899-2768-4a77-a95a-71d0251813bc",
+      "to_name": "Safeguard",
+      "relation": "sends any first reply it approves for a dry run (connector limits v002, rule 15)",
+      "source": [
+        "/workspace/governance/codex/_shared/connector-limits/v002.md"
+      ],
+      "status": "current"
+    }
+  ],
+  "stats": {
+    "nodes": 27,
+    "edges": 48,
+    "active_or_dormant": 17,
+    "retired_or_former_gone": 9,
+    "deleted_gone": 12,
+    "active": 17,
+    "live": 17,
+    "dormant": 0
+  },
+  "rules": {
+    "voice_approvals": "Gem's words on a voice call count as direct; a call decision passed on by another bot counts after a 1:1 check with the bot that took the call (R-018). Archivist deployments: own chat or a call with Archivist only, never a relayed call.",
+    "imitator_decisions": "LIVE since 15 Oct 2026, 11:30pm AEST (P4): decides anything for Gem, including approvals of any proposal (governance included), with no checker gate (R-019). Never: spending; anything drastic or irreversible, such as deletions or public/shared repo pushes; changes to Imitator itself or to any bot that checks Imitator (Investigator, Scorer, Scrutineer, Safekeeper, Safeguard), which are Gem-only (R-015, R-027).",
+    "repo_pushes": "Every push to a public or shared repository, by any bot in any phase, goes to Safeguard first unless Gem approved that specific push in direct words (R-020).",
+    "inquirers": "Both Inquirers verified (Gem 9 Oct 4:21pm; R-012 second update). 0314faa4 owns the duties and the one-series-a-day limit; Inferer may accept series from e613112b if it reappears (its agent folder is gone). Spending always Gem's (Safeguard v006).",
+    "imitator_checkers": "R-027 (16 Oct 8:14am): Investigator, Scorer, Scrutineer, Safekeeper and Safeguard check Imitator, so changes to their briefs always go to Gem, even when a change doesn't mention Imitator.",
+    "connector_limits": "Shared rule _shared/connector-limits/v002 (Gem 3:54pm, 16 Oct; owner Safeguard; covers every connector and account). Only Emissary posts (postiz). Engineer: only Supabase user, only GitHub writer, builds workflows. Extractor runs Apify (Gem's words per run plus Mediator's spend check). Emissary, Explorer, Extractor and Engineer may write private Notion/Todoist items for Gem's direct work. Gmail sends need Gem's words and a dry run; Imitator may approve a no-promises first reply (R-038). No memory writers yet. Deletions need Gem's words, a dry run and a backup.",
+    "message_verification": "Shared rule _shared/message-verification-rule/v004 (Gem 11:41am, 16 Oct): deploying a profile edit needs Gem's words to the deploying bot itself (R-010), except Archivist may deploy a version Imitator approved within its authority after a 1:1 check with Imitator and Safeguard's dry-run report; never Imitator, its checkers or role-widening changes.",
+    "r028_r029": "R-028: Imitator can't approve changes that widen its own role (architect-v004's routing and cap confirmed by Gem before 11:02am, 16 Oct). R-029: Gem's chat words authorise; they're recorded before any deploy.",
+    "directory": "Archivist owns /workspace/governance/directory.md from codex-keeper v007 (live 11:07:36, 16 Oct); Explorer keeps phases.md, which directory.md follows (R-021).",
+    "deployment": "Archivist v008 (live 11:44:11, 16 Oct): case (a) Gem's own ask in Archivist's chat or call; case (b) a version recorded on Imitator's approval, after a 1:1 check with Imitator and Safeguard's dry-run report. Case (b) excludes Archivist's own brief, Imitator and its five checkers, role-widening (R-028), spending and irreversible steps. Words recorded before deploying (R-029). R-010 has no update in rulings.md yet."
+  },
+  "connectors": {
+    "source": "/workspace/governance/codex/_shared/connector-limits/v002.md",
+    "approved": "Gem, directly in Archivist's chat 16 Oct 2026 3:54pm AEST (default text d4fbfa8f391f, not variant B); verified by Scrutineer (PASS, reviews/2026-10-16-connector-limits-v002-check.md, written 3:58:26pm)",
+    "cited_by": [
+      "Emissary",
+      "Engineer",
+      "Explorer",
+      "Extractor",
+      "Mediator",
+      "Safeguard"
+    ],
+    "no_pointer_yet": [
+      "Inquirer",
+      "Scorer",
+      "Arbiter",
+      "Architect",
+      "Safekeeper",
+      "Archivist",
+      "Imitator",
+      "Inferer",
+      "Scrutineer",
+      "Mender",
+      "Investigator"
+    ],
+    "rules": [
+      {
+        "connector": "postiz",
+        "rule": "1, 6",
+        "who": "Only Emissary posts, text Gem approved word for word; Safeguard dry run before every post. No public posting through any other tool."
+      },
+      {
+        "connector": "Vercel (both connections)",
+        "rule": "2",
+        "who": "Any production or public deploy needs Gem's words for that deploy; a Safeguard dry run alone is never enough (R-037)."
+      },
+      {
+        "connector": "Google Drive, Sheets",
+        "rule": "3",
+        "who": "No upload, copy or sharing without Gem's words for that file; private by default."
+      },
+      {
+        "connector": "Google Calendar",
+        "rule": "4",
+        "who": "Events involving anyone other than Gem need Gem's words."
+      },
+      {
+        "connector": "Zapier, n8n",
+        "rule": "7",
+        "who": "Engineer builds; any bot runs read-only lookups; any acting step needs Gem's words and a Safeguard dry run; Mediator tracks quota. n8n not working."
+      },
+      {
+        "connector": "Supabase",
+        "rule": "8",
+        "who": "Engineer only; others ask Engineer; Mediator reads health and spend. Writes need Gem's words and a dry run."
+      },
+      {
+        "connector": "Notion, Todoist",
+        "rule": "9",
+        "who": "Any bot reads. Emissary, Explorer, Extractor and Engineer write private items only for work Gem asked for directly (not Imitator-approved). Sharing needs Gem's words and a dry run."
+      },
+      {
+        "connector": "Exa",
+        "rule": "10",
+        "who": "Any bot, for its task; over 50 calls or a loop goes to Mediator first."
+      },
+      {
+        "connector": "Memory stores (Mem0 etc.)",
+        "rule": "11",
+        "who": "Any bot searches; no writers until Mem0 works and Gem names one."
+      },
+      {
+        "connector": "Jupyter, papermill, Obsidian",
+        "rule": "12",
+        "who": "Any bot, on the box; git pushes are GitHub actions (rule 14)."
+      },
+      {
+        "connector": "All connectors: deletions",
+        "rule": "13",
+        "who": "Gem's words naming the item, a Safeguard dry run and a backup first; Imitator can't approve."
+      },
+      {
+        "connector": "GitHub (GitHub-xai, cursor-origin, git, gh)",
+        "rule": "14",
+        "who": "Shared GitHub rule (not yet recorded); until then any write needs Gem's words and a dry run. Engineer is the only GitHub writer. GitHub-xai read-only until T-016 is confirmed."
+      },
+      {
+        "connector": "Gmail (all accounts)",
+        "rule": "15",
+        "who": "Any bot reads what its task needs. Sends need Gem's words and a dry run; Imitator may approve a no-promises first reply to a new contact (R-038), still dry-run."
+      },
+      {
+        "connector": "Google Docs, Slides",
+        "rule": "16",
+        "who": "Private files for Gem's work, logged by the bot; other files need Gem's words."
+      },
+      {
+        "connector": "Apify",
+        "rule": "17",
+        "who": "Extractor runs actors; every run needs Gem's words for the spend and Mediator's check; any bot searches the store."
+      },
+      {
+        "connector": "Context7, X",
+        "rule": "18",
+        "who": "Read-only; any bot, for its task."
+      },
+      {
+        "connector": "Keys; Finance, Adapter",
+        "rule": "19",
+        "who": "Safekeeper records key locations (never values); Finance linking is Gem's, with Safekeeper."
+      },
+      {
+        "connector": "Unnamed / new connectors",
+        "rule": "5",
+        "who": "Gem's words and a Safeguard dry run for any send, post, share, upload, deploy or purchase."
+      }
+    ]
+  }
+}

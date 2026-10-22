@@ -45,3 +45,7 @@ Acceptance is Gem's call; Safeguard sets out the risks and proposes limits throu
 - 16 Oct 2026, 3:14pm: Supabase connected (account not yet verified). Still to go: n8n (needs MCP URL) and Mem0 (needs API key). RR-041 interim rule applies.
 
 - 16 Oct 2026, 3:18pm: At Gem's request (DayneK chosen), created private repo DayneK/obsidian-vault and pushed the local vault from /workspace/obsidian-vault.
+
+- 16 Oct 2026, 3:57pm: CORRECTION to the 3:11pm line. The interim rule summary there was broader than the text. Rule now in force: connector-limits v002 (Gem approved 3:54pm). Rule 5 wording: "Until this rule or a bot's brief covers a newly installed connector, every send, post, share, upload, deployment or purchase through it needs Gem's direct words and a Safeguard dry run first." v002 also gives specific rules: 7 for Zapier/n8n, 8 for Supabase (Engineer only), 9 for Notion/Todoist, 11 for Mem0 (no writers yet) and 19 for keys (Gem enters them in the connector's own settings). Engineer is the only bot that writes to GitHub and Supabase.
+
+- 16 Oct 2026, 3:59pm: Engineer created private repo gemquota/gvmw and pushed the checked workspace snapshot (commit e21adc3), on Gem's 3:57pm words. Only collaborator is gemquota.

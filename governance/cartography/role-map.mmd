@@ -1,9 +1,9 @@
 %%{init: {"flowchart": {"wrappingWidth": 240}}}%%
-%% Role map v13, 16 Oct 2026 ~11:52am AEST — OVERVIEW. Archivist.
-%% v13: P5 LIVE 16 Oct 11:47am (Gem, "Initiate p5"); all five phases live. Investigator v004 live 11:49: daily Imitator check, daily score to Scorer. v12: Gem 11:41am: Archivist v008 + Explorer v005 live 11:44; Archivist may deploy Imitator-approved versions within limits. v11: Gem's 11:02am + 11:03am batches deployed 11:06–11:08 (12 versions); connector limits (owner Safeguard), Emissary only poster, Archivist owns directory.md. v10: Imitator's 6 approved updates deployed 16 Oct 09:14; R-027 checkers. P3+P4 LIVE 15 Oct 11:30pm (Imitator approvals active). 15 Oct deploys: voice approvals count (R-018); Imitator decides from P4 within limits (R-019); repo pushes → Safeguard first (R-020); both Inquirers verified.
+%% Role map v15, 22 Oct 2026 6:34:10pm AEST — OVERVIEW. Archivist.
+%% v15: unrecorded live agent New Bot 6b01a4ef listed, no role, no relationships, awaiting Gem. v14: connector limits v002 recorded (Gem 3:54pm); who uses which connector in detail C (role-map-detail-connectors). v13: P5 LIVE 16 Oct 11:47am (Gem, "Initiate p5"); all five phases live. Investigator v004 live 11:49: daily Imitator check, daily score to Scorer. v12: Gem 11:41am: Archivist v008 + Explorer v005 live 11:44; Archivist may deploy Imitator-approved versions within limits. v11: Gem's 11:02am + 11:03am batches deployed 11:06–11:08 (12 versions); connector limits (owner Safeguard), Emissary only poster, Archivist owns directory.md. v10: Imitator's 6 approved updates deployed 16 Oct 09:14; R-027 checkers. P3+P4 LIVE 15 Oct 11:30pm (Imitator approvals active). 15 Oct deploys: voice approvals count (R-018); Imitator decides from P4 within limits (R-019); repo pushes → Safeguard first (R-020); both Inquirers verified.
 flowchart TB
   GEM(("Gem Quota<br/>approves (chat or voice call)<br/>Gem-only: spending, drastic/irreversible,<br/>changes to Imitator or its checkers"))
-  LEG["<b>Legend v13</b><br/>thick = approval · solid = hand-off<br/>orange dashed = retirement / former<br/>red = repo pushes to Safeguard first<br/>blue dashed = checks Imitator, R-027<br/>green = added in v11/v12<br/>Detail PNGs: governance, identity-work"]
+  LEG["<b>Legend v15</b><br/>thick = approval · solid = hand-off<br/>orange dashed = retirement / former<br/>red = repo pushes to Safeguard first<br/>blue dashed = checks Imitator, R-027<br/>green = added in v11–v14<br/>Detail PNGs: governance, identity-work, connectors"]
 
   subgraph P1["P1 · LIVE"]
     ARX["Architect v004"]
@@ -46,6 +46,11 @@ flowchart TB
     EDI["RETIRED Editor"]
     ENS["RETIRED Ensembler"]
   end
+
+  subgraph UNREC["UNRECORDED live agent · awaiting Gem"]
+    NEW["New Bot 6b01a4ef<br/>blank · no codex folder<br/>no role · no relationships<br/>created 19 Oct 01:30:54am"]
+  end
+  style NEW stroke-dasharray: 5 3
 
   GEM ~~~ ARX
   LEG ~~~ ARX
@@ -103,3 +108,6 @@ flowchart TB
   linkStyle 44 stroke:#2e7d32,stroke-width:2px
   INV -->|daily accuracy score| SCO
   linkStyle 45 stroke:#2e7d32,stroke-width:2px
+  EXT -->|Apify spend check| MED
+  MED -->|new connector, same day| SFG
+  linkStyle 46,47 stroke:#2e7d32,stroke-width:2px

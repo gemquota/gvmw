@@ -7,9 +7,9 @@
 | URL | https://docs.google.com/document/d/1FgxqvRThNVcmHFxBIPrAxKiKXyoj-ne-6IFJBw9Np_0/edit |
 | Owner | Gem's Google account (created via the Google Docs connector) |
 | Sharing | Not shared with anyone |
-| Last sync | 2026-10-16 ~11:56am AEST (UTC+10) (investigator v004 LIVE 11:49:23 on Gem's 11:48am approval; daily Imitator accuracy check) |
+| Last sync | 2026-10-16 3:56:27–3:57:02pm AEST (UTC+10), from file times (shared connector-limits v002, approved by Gem 3:54pm; default text, not variant B; no profile; verified by Scrutineer (PASS, reviews/2026-10-16-connector-limits-v002-check.md, written 3:58:26pm)) |
 | Synced content | 2 Oct: README essentials, index, v001 for the original 13 bots. 4 Oct 17:55: appended section 'Sync 2026-10-04 (current state, supersedes the sections above)' with the current index (36 bots, 23 active, 13 retired, plus 2 shared entries), every rename and retirement from RENAMES.md, each bot's current recorded version verbatim (with author, approver, reason, status), the live text where an approved version is not yet deployed (10 bots), the Imitator approval confirmation, and both _shared/ entries verbatim. 9 Oct morning deploy: 9 live bot versions + R-009 + tools delta appended. |
-| Sync check | 16 Oct ~11:56am: one append, 3552 UTF-16, equal to local (file reference). End marker present at 371264. Prior: 16 Oct ~11:48am 18834. |
+| Sync check | 16 Oct 3:56:27–3:57:02pm: 2 chained appends, 10246+9049 = 19295 UTF-16, each equal to local (file reference). End marker present at 390556. Prior: 16 Oct ~11:56am 3552. |
 
 The files in this folder are the master copy. The Doc is a mirror only; on each new version, append/update the Doc and bump "Last sync".
 
@@ -57,3 +57,7 @@ The files in this folder are the master copy. The Doc is a mirror only; on each 
 **Sync (2026-10-16 ~11:48am AEST):** appended 'Sync 2026-10-16 ~11:48am AEST — Gem's 11:41am approval': full verbatim text, LIVE times and sha256 for codex-keeper/v008 (11:44:11) and explorer-copy/v005 (11:44:26), plus shared _shared/message-verification-rule/v004. Batches in codex/_tools/doc_sync_2026-10-16e/ (m00–m01). Earlier end markers kept; new end marker at 367707. The Doc is not shared.
 
 **Sync (2026-10-16 ~11:56am AEST):** appended 'Sync 2026-10-16 ~11:56am AEST — Investigator v004': full verbatim text, sha256 and LIVE time (11:49:23) for investigator/v004, Gem's 11:48am words, awaiting Scrutineer's check. Batch codex/_tools/doc_sync_2026-10-16f/m00.txt. Earlier end markers kept; new end marker at 371264. The Doc is not shared.
+
+**Sync (2026-10-16, 3:56:27–3:57:02pm AEST from file times; this note first said ~4:00pm, corrected 4:00pm):** appended 'Sync 2026-10-16 ~4:00pm AEST — Shared: Connector limits v002' (the Doc heading's "~4:00pm" was an estimate; the real append was 3:56:27–3:57:02pm): Gem's 3:54pm words (message t55u), full verbatim text (17947 chars, sha256 d4fbfa8f391f…), default text not variant B, shared document with nothing to deploy, since verified by Scrutineer (PASS, reviews/2026-10-16-connector-limits-v002-check.md, written 3:58:26pm). Batches in codex/_tools/doc_sync_2026-10-16g/ (m00–m01). Earlier end markers kept; new end marker at 390556. The Doc is not shared.
+
+**Status note (2026-10-16 4:00:56pm AEST, from `date`):** appended 'Status note 2026-10-16 4:00:36pm AEST — Connector limits v002 VERIFIED' (438 UTF-16, equal to local; batch codex/_tools/doc_sync_2026-10-16h/m00.txt): Scrutineer passed v002 (review written 3:58:26pm), and the ~4:00pm sync heading is corrected to 3:56:27–3:57:02pm. The Doc is not shared.

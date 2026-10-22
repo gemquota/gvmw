@@ -1,0 +1,108 @@
+%%{init: {"flowchart": {"wrappingWidth": 240}}}%%
+%% Role map v14, 16 Oct 2026 ~4:05pm AEST — OVERVIEW. Archivist.
+%% v14: connector limits v002 recorded (Gem 3:54pm); who uses which connector in detail C (role-map-detail-connectors). v13: P5 LIVE 16 Oct 11:47am (Gem, "Initiate p5"); all five phases live. Investigator v004 live 11:49: daily Imitator check, daily score to Scorer. v12: Gem 11:41am: Archivist v008 + Explorer v005 live 11:44; Archivist may deploy Imitator-approved versions within limits. v11: Gem's 11:02am + 11:03am batches deployed 11:06–11:08 (12 versions); connector limits (owner Safeguard), Emissary only poster, Archivist owns directory.md. v10: Imitator's 6 approved updates deployed 16 Oct 09:14; R-027 checkers. P3+P4 LIVE 15 Oct 11:30pm (Imitator approvals active). 15 Oct deploys: voice approvals count (R-018); Imitator decides from P4 within limits (R-019); repo pushes → Safeguard first (R-020); both Inquirers verified.
+flowchart TB
+  GEM(("Gem Quota<br/>approves (chat or voice call)<br/>Gem-only: spending, drastic/irreversible,<br/>changes to Imitator or its checkers"))
+  LEG["<b>Legend v14</b><br/>thick = approval · solid = hand-off<br/>orange dashed = retirement / former<br/>red = repo pushes to Safeguard first<br/>blue dashed = checks Imitator, R-027<br/>green = added in v11–v14<br/>Detail PNGs: governance, identity-work, connectors"]
+
+  subgraph P1["P1 · LIVE"]
+    ARX["Architect v004"]
+    ARC["Archivist v008<br/>codex + role map + directory.md<br/>deploys Imitator-approved, within limits"]
+    SCO["Scorer v004"]
+    SFG["Safeguard v006<br/>repo pushes reviewed first<br/>owns connector limits"]
+    SFK["Safekeeper v005"]
+    MEN["Mender v005"]
+    EXP["Explorer v005 04dcca0d<br/>ACTIVE · keeps phases.md"]
+  end
+
+  subgraph P2["P2 · LIVE"]
+    SCR["Scrutineer v004"]
+    ARB["Arbiter v005"]
+    INF["Inferer v005"]
+    MED["Mediator v006<br/>live name still P4"]
+    INQ["Inquirer 0314faa4<br/>ACTIVE v004 · verified"]
+  end
+
+  subgraph P3["P3 · LIVE since 15 Oct 11:30pm"]
+    INV["Investigator v004<br/>LIVE · daily Imitator check"]
+  end
+  subgraph P4["P4 · LIVE since 15 Oct 11:30pm"]
+    IMI["Imitator v006 · LIVE<br/>approves / decides for Gem<br/>no spending · nothing drastic or irreversible<br/>no changes to Imitator or its checkers"]
+  end
+  subgraph P5["P5 · LIVE since 16 Oct 11:47am"]
+    EMI["Emissary v006<br/>only postiz poster"]
+    ENG["Engineer v007"]
+    EXT["Extractor v005"]
+  end
+
+  subgraph FORMER["DELETED · agent folders gone ~9:29am"]
+    INQ0["e613112b former Inquirer<br/>verified if it reappears"]
+    EXP0["82a2c15a former Explorer"]
+    MAR["RETIRED Marshal"]
+    MSG["RETIRED Messenger"]
+    INT["RETIRED Interrogator"]
+    ASM["RETIRED Assembler"]
+    SRC["RETIRED Sourcer"]
+    EDI["RETIRED Editor"]
+    ENS["RETIRED Ensembler"]
+  end
+
+  GEM ~~~ ARX
+  LEG ~~~ ARX
+  ARX ~~~ SCR
+  SCR ~~~ INV
+  INV ~~~ IMI
+  IMI ~~~ EMI
+  EMI ~~~ INQ0
+
+  ARX ==>|proposes| GEM
+  ARX ==>|proposes, not Imitator/Investigator| IMI
+  GEM ==>|chat or voice call · Archivist records| ARC
+  IMI ==>|approves within limits · Archivist may deploy after 1:1 check + dry run| ARC
+  IMI -.->|limits stay with| GEM
+
+  SCO -->|scores| SCR
+  SCR -->|reviews| ARX
+  SCR -->|stalls| MEN
+  INQ -->|answers| INF
+  INF -->|hypotheses| INV
+  INV -->|tests + reviews after the fact| IMI
+  INQ0 -.->|series accepted| INF
+
+  EXP -->|routes| EMI
+  EXP -->|routes| ENG
+  EXP -->|routes| EXT
+  MED -->|cost alerts| EXP
+
+  INQ0 -.->|re-key v003| INQ
+  EXP0 -.->|active brief| EXP
+  MAR -.->|merged| MEN
+  MSG -.->|merged| EXP
+  INT -.->|merged| INV
+  ASM -.->|role map| ARC
+  ENS -.->|merged| ENG
+  SRC -.->|outright| GEM
+  EDI -.->|outright| GEM
+
+  EXP -->|repo push first| SFG
+  ENG -->|repo push first| SFG
+  EXT -->|repo push first| SFG
+  EMI -->|repo push first| SFG
+  IMI -->|repo push first| SFG
+  SCO -.->|checks Imitator| IMI
+  SCR -.->|checks Imitator| IMI
+  SFK -.->|checks Imitator| IMI
+  SFG -.->|checks Imitator| IMI
+  linkStyle 32,33,34,35,36 stroke:#c62828,stroke-width:2px
+  linkStyle 37,38,39,40 stroke:#1565c0,stroke-dasharray:4 3
+  EXP -->|phases.md feeds directory.md| ARC
+  MED ==>|new integrations: Gem accepts| GEM
+  GEM ==>|exact post text| EMI
+  linkStyle 41,42,43 stroke:#2e7d32,stroke-width:2px
+  ARC -->|Imitator-approved deploy: dry run first| SFG
+  linkStyle 44 stroke:#2e7d32,stroke-width:2px
+  INV -->|daily accuracy score| SCO
+  linkStyle 45 stroke:#2e7d32,stroke-width:2px
+  EXT -->|Apify spend check| MED
+  MED -->|new connector, same day| SFG
+  linkStyle 46,47 stroke:#2e7d32,stroke-width:2px

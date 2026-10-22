@@ -1,0 +1,44 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v14 (16 Oct 2026 3:58:15pm) detail C — connectors, from shared connector limits v002 only (Gem 3:54pm)
+flowchart LR
+  SFG["Safeguard v006<br/>owns connector limits v002<br/>dry runs + breach checks"]
+  SFK["Safekeeper<br/>key locations, rule 19"]
+  MED["Mediator<br/>installs, connectors.md, spend"]
+  ENG["Engineer"]
+  EXT["Extractor"]
+  EMI["Emissary"]
+  EXP["Explorer"]
+  IMI["Imitator"]
+  ANY["Any bot"]
+  GEM(("Gem"))
+  C1[/"postiz"/]
+  C2[/"Supabase"/]
+  C3[/"Zapier · n8n"/]
+  C4[/"GitHub"/]
+  C5[/"Apify"/]
+  C6[/"Notion · Todoist"/]
+  C7[/"Gmail"/]
+  C8[/"Exa · Context7 · X · Jupyter · Obsidian"/]
+  C9[/"Memory stores"/]
+  C10[/"Vercel · Drive · Sheets · Calendar · Docs · Slides"/]
+  EMI -->|only poster, rule 1| C1
+  ENG -->|only user, rule 8| C2
+  ENG -->|builds workflows, rule 7| C3
+  ANY -.->|read-only lookups| C3
+  ENG -->|only writer, rule 14| C4
+  EXT -->|runs actors, rule 17| C5
+  EXT -->|spend check first| MED
+  EMI -->|private writes, rule 9| C6
+  EXP -->|private writes, rule 9| C6
+  EXT -->|private writes, rule 9| C6
+  ENG -->|private writes, rule 9| C6
+  ANY -.->|read| C6
+  ANY -.->|read for task; drafts| C7
+  IMI -->|no-promises first reply, R-038| C7
+  ANY -.->|own task| C8
+  ANY -.->|search only; no writers| C9
+  ANY -.->|per Gem's words, rules 2-4, 16| C10
+  GEM ==>|sends, shares, deploys, spend, deletions| ANY
+  ANY -->|dry run first| SFG
+  MED -->|new connector, same day| SFG
+  SFK -.->|key locations| SFG

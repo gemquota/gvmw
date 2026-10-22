@@ -23,3 +23,10 @@ D. Don't push, and keep the workspace on the box only.
 
 ## CORRECTION (2026-10-16 15:52:47, after Safekeeper T-017)
 My "no live secrets" finding was wrong. Safekeeper found things my pattern check missed: three committed config.ini files with logins set, three sk-shaped strings (urls.txt:33, governance/bot-landscape-review.md:84, medb-research/medb-prior-work.md:60), and two files with personal details (the T-005 incident file and id-investigator/factcheck-2026-10-10.md). My sk- pattern was too narrow, and I didn't scan config.ini files. Safekeeper has sent Mediator exclusions and asked for the commit to be rebuilt. This dry run applies to ed9e875 only. A rebuilt commit needs Safekeeper's re-check and a fresh Safeguard dry run before Gem's final words.
+
+## FRESH DRY RUN: e21adc3 (2026-10-16 15:56:52)
+3,805 files, no remote, ed9e875 gone. Safekeeper passed it on credentials (T-017). My own token-pattern scan shows only prose and URL matches, with no live keys found. Still open, both for Gem to decide:
+1. **R-031 source data is still included.** bonus_terms_AU.csv/.xlsx (in bie_deliverables/reports and bie_tools), bie_tools/pstats/bonus_terms_AU_*.json and k_bonus_terms_au.py. From these, anyone could rebuild the held bonus_scores_AU.xlsx.
+2. **Other people's contact details are still included.** bie_tools/pstats/sites_config.csv (with a private person's gmail and about 41 phone-like numbers), bie_tools/leads_homepages.txt, harvest_homepages.json, page_audplay.online.html and two CDN JSON files. The phone-like hits in the governance SVGs are probably false positives.
+3. **Personal-detail file Safekeeper flagged.** id-investigator/factcheck-2026-10-10.md is still in. The identity notes fall under Gem's "Include both", but Safekeeper named this file. Mediator should confirm whether it was meant to stay.
+Predicted effects are otherwise unchanged from points 3 to 6 above. The options for Gem are still A to D. This is not a go-ahead. The push needs Gem's final words for this push.

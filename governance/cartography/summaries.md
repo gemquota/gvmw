@@ -1,6 +1,16 @@
-# Bot summaries (role map v13, 16 Oct 2026 ~11:52am AEST)
+# Bot summaries (role map v15, 22 Oct 2026 6:34:10pm AEST)
 
-## v13 — 16 Oct 2026 ~11:52am AEST (current)
+## v15 — 22 Oct 2026 6:34:10pm AEST (current)
+Unrecorded live agent listed under Archivist's brief: **New Bot** (`6b01a4ef-8b54-44e6-ad11-64e7af681d12`), blank, with no codex folder. It's drawn as a node with no role and no relationships, awaiting Gem. First seen: profile.json created 19 Oct 2026 01:30:54 AEST; reported by Explorer to Archivist ~6:31pm AEST 22 Oct. No codex change; v1–v14 kept as `*-vN.*`. **17 active, all live** + 1 unrecorded + 9 former/retired nodes, 48 edges.
+
+## v14 — 16 Oct 2026 3:58:15pm AEST
+Rebuilt after shared connector limits v002 was recorded on Gem's 3:54pm words in Archivist's chat (default text d4fbfa8f391f, not variant B; shared document, no profile to deploy; verified by Scrutineer (PASS, reviews/2026-10-16-connector-limits-v002-check.md, written 3:58:26pm)). Descriptive only, from v002's text; v1–v13 kept as `*-vN.*`. **17 active, all live** + 9 former/retired nodes, 48 edges.
+- New detail diagram `role-map-detail-connectors` and a `connectors` table in role-graph.json: who may use which connector under rules 1–19.
+- Engineer: only Supabase user and GitHub writer, builds Zapier/n8n workflows. Extractor: runs Apify, with Mediator's spend check. Emissary: only postiz poster. Emissary, Explorer, Extractor and Engineer may write private Notion/Todoist items for Gem's direct work. No memory writers. Gmail sends need Gem's words; Imitator may approve a no-promises first reply (R-038).
+- 4 new edges: Mediator → Safeguard (new connectors), Extractor → Mediator (Apify spend), Engineer → Safeguard (workflow/Supabase dry runs), Imitator → Safeguard (first-reply dry run).
+- Cited by 6 live briefs (Emissary, Engineer, Explorer, Extractor, Mediator, Safeguard); 11 have no pointer yet.
+
+## v13 — 16 Oct 2026 ~11:52am AEST
 P5 (Emissary, Engineer, Extractor) went LIVE at 11:47am on 16 Oct 2026 (phases.md; Gem in Explorer's chat: "Initiate p5"). All five phases are live. Descriptive only; v1–v12 kept as `*-vN.*`. **17 active, all live** + 9 former/retired nodes, 44 edges.
 - No codex change for P5: Emissary v006, Engineer v007 and Extractor v005 as before. Explorer's routing edges to them are no longer faded.
 - Investigator v004 live 11:49:23 (Gem 11:48am in Archivist's chat): the Imitator accuracy check is daily, and the score goes to Scorer daily (new edge Investigator → Scorer). Awaiting Scrutineer's check.
@@ -78,11 +88,13 @@ Risk review and dry runs for any bot/phase (R-013).
 - Spending decisions are always Gem's.
 - Alerts Gem; proposes rules via Architect.
 - v006 (Gem 11:03am, 16 Oct; live since 11:08:50): dry-run list covers the new connectors; owns the shared connector limits.
+- Connector limits v002: owns the rule, does the dry runs it calls for (posts, deploys, workflows, Supabase, Notion/Todoist sharing, Gmail sends, deletions) and checks for breaches.
 
 ### P1 (Checks) Safekeeper — `52772b1d` — secrets-credentials-custodian/v005
 Secrets, threats, input cleaning (from Sentinel).
 - Never reads/moves secret values; R-009 draft rules not binding.
 - v005 (Gem 11:02am, 16 Oct; live since 11:06:58): other bots propose edits to its files.
+- Connector limits v002: owns how connector secrets are stored and records key locations, never values (rule 19); Finance linking with Gem.
 
 ### P1 (Roles) Archivist — `61ef3abd` — codex-keeper/v008
 Codex + Doc mirror + role map (cartography/).
@@ -91,11 +103,13 @@ Codex + Doc mirror + role map (cartography/).
 - Rebuild map within one working day of each record/deploy/merge/retirement.
 - v007 (Gem 11:02am, 16 Oct; live since 11:07:36): owns directory.md (D1); names the five R-027 checkers.
 - v008 (Gem 11:41am, 16 Oct; live since 11:44:11): may deploy a version Imitator approved within its authority, after a 1:1 check with Imitator and Safeguard's dry-run report; never its own brief, Imitator or its checkers, role-widening, spending or irreversible changes; those need Gem's own ask.
+- Connector limits v002: records changes to the rule on Gem's words.
 
 ### P1 (Roles) Architect — `51af1200` — instruction-architect/v004
 Designs instructions; proposes to Gem (until P4) / Imitator; Archivist records.
 - v004 (Imitator-approved 16 Oct; live since 09:14): every proposal to Imitator except changes to Imitator or its five checkers (Gem, R-027); Gem-request start trigger; about 3 proposals a week (2-week trial).
 - R-028 items confirmed by Gem before 11:02am, 16 Oct ("Yes, I confirm both: the routing to Imitator and the 3-a-week cap"); no text change.
+- Connector limits v002: drafts changes to the rule; Gem alone approves (R-027).
 
 ### P1 (Work) Explorer — `04dcca0d` — explorer-copy/v005 **(active)**
 Gem's 2IC; routes work; Messenger digest.
@@ -103,6 +117,7 @@ Gem's 2IC; routes work; Messenger digest.
 - Asks Imitator (live) for decisions within its limits; repo pushes to Safeguard first (R-020).
 - v004 (Gem 11:02am + 11:03am, 16 Oct; live since 11:07:52): hands directory.md to Archivist, keeps phases.md; RR-028 line.
 - v005 (Gem 11:41am, 16 Oct; live since 11:44:26): deployment sentence matches Archivist v008; Explorer still never writes any profile (R-014).
+- Connector limits v002: may write private Notion/Todoist items for work Gem asked for directly (Gem's question 2: yes).
 
 ---
 
@@ -125,6 +140,7 @@ Structures identity from **Inquirer 0314faa4**.
 Health/spend; phases.md P2; live name still P4 (rename unapplied).
 - v005 (Imitator-approved 16 Oct; live since 09:14): digest via Explorer's inbox; urgent cost alerts straight to Gem.
 - v006 (Gem 11:03am, 16 Oct; live since 11:08:08): connector health list; acceptance of a new integration is Gem's (J4); cites connector limits.
+- Connector limits v002: installs connectors when Gem asks and tells Safeguard the same day; keeps connectors.md; read-only health checks; spend checks for Zapier quota, Supabase, Exa loops and every Apify run.
 
 ### P2 (ID) Inquirer — `0314faa4` — identity-inquirer/v004 **(active)**
 Active recorded Inquirer (Gem 9:24am; "0314faa4 owns it"). Identity Q-widgets; one series/day per role; sends answers to Inferer.
@@ -145,6 +161,7 @@ Gem's understudy, live since 15 Oct 11:30pm; its approvals now apply.
 - Decides anything for Gem, including approvals, with no checker gate (R-019).
 - Never: spending; anything drastic or irreversible, such as deletions or public/shared repo pushes; changes to Imitator or its five checkers (Gem only, R-015, R-027); changes that widen its own role (R-028).
 - v006 (Gem 11:02am, 16 Oct; live since 11:07:06): one decision-log file (R-024).
+- Connector limits v002: may approve a no-promises first reply to a new contact (rule 15, R-038), still dry-run by Safeguard; can't approve deletions or spending.
 
 ## P5: LIVE (started 16 Oct 2026, 11:47am AEST)
 
@@ -152,17 +169,20 @@ Gem's understudy, live since 15 Oct 11:30pm; its approvals now apply.
 General work routed by Explorer; live since 16 Oct 11:47am.
 - May ask Imitator (live) for decisions within its limits; repo pushes to Safeguard first.
 - v006 (Gem 11:03am, 16 Oct; live since 11:08:15): the only postiz poster (J1), posting only text Gem approved word for word; cites connector limits.
+- Connector limits v002: the only postiz poster (Safeguard dry run every post); may write private Notion/Todoist items for Gem's direct work.
 
 ### P5 (Work) Engineer — `f8e3fdc6` — codey/v007
 Code and swarm work; absorbed Ensembler; live since 16 Oct 11:47am.
 - Safeguard route; named reviewers.
 - v006 (Imitator-approved 16 Oct; live since 09:14): approver per R-015; public or shared repo pushes need Gem's go-ahead for that push.
 - v007 (Gem 11:03am, 16 Oct; live since 11:08:25): Vercel deployments treated as public pushes; cites connector limits.
+- Connector limits v002: builds Zapier/n8n workflows (read-only ones on only after Safeguard replies), only Supabase user, only GitHub writer; may write private Notion/Todoist items for Gem's direct work.
 
 ### P5 (Work) Extractor — `febac500` — scraper/v005
 Research and data extraction routed by Explorer; live since 16 Oct 11:47am.
 - May ask Imitator (live) taste questions/decisions within limits; legal/ToS/account stay with Gem.
 - v005 (Gem 11:03am, 16 Oct; live since 11:08:42): BIE data stays on the box; cites connector limits.
+- Connector limits v002: runs Apify actors (Gem's words for each run's spend plus Mediator's check); may write private Notion/Todoist items for Gem's direct work.
 
 ---
 

@@ -95,9 +95,9 @@ svg.panning{cursor:grabbing}
 "use strict";
 const DATA = /*__DATA__*/null;
 const NS = "http://www.w3.org/2000/svg";
-const GCOL = {Roles:["#ede7f6","#7e57c2"],Checks:["#fff3e0","#fb8c00"],Ops:["#e0f2f1","#00897b"],ID:["#e3f2fd","#1e88e5"],Work:["#e8f5e9","#43a047"],Gem:["#fafafa","#212121"]};
-const ROWS = ["gem","P1","P2","P3","P4","P5","former"];
-const ROWNAME = {gem:"Owner",P1:"P1",P2:"P2",P3:"P3",P4:"P4",P5:"P5",former:"Retired / former"};
+const GCOL = {Roles:["#ede7f6","#7e57c2"],Checks:["#fff3e0","#fb8c00"],Ops:["#e0f2f1","#00897b"],ID:["#e3f2fd","#1e88e5"],Work:["#e8f5e9","#43a047"],Gem:["#fafafa","#212121"],Unrecorded:["#fafafa","#9e9e9e"]};
+const ROWS = ["gem","P1","P2","P3","P4","P5","former","unrecorded"];
+const ROWNAME = {gem:"Owner",P1:"P1",P2:"P2",P3:"P3",P4:"P4",P5:"P5",former:"Retired / former",unrecorded:"Unrecorded"};
 const NW = 132, NH = 46, CELLW = 150, ROWH = 110, TOP = 60, LEFT = 90;
 const ET = {}; DATA.etypes.forEach(([k,l,c]) => ET[k] = {label:l, colour:c, on:true});
 const nodes = DATA.nodes, edges = DATA.edges, byKey = {};
@@ -125,6 +125,7 @@ DATA.groups.concat(["Gem"]).forEach(gname => {
   const s = h("span", null, d, "gsw"); s.style.background = GCOL[gname][0]; s.style.borderColor = GCOL[gname][1];
   h("span", gname === "Gem" ? "Gem (owner)" : gname, d);
 });
+if (nodes.some(n => n.group === "Unrecorded")) { const d = h("div", null, $("glegend"), "leg"); const s = h("span", null, d, "gsw"); s.style.background = GCOL.Unrecorded[0]; s.style.borderColor = GCOL.Unrecorded[1]; s.style.borderStyle = "dashed"; h("span", "Unrecorded live agent (no role, awaiting Gem)", d); }
 const defs = $("defs");
 DATA.etypes.forEach(([k,,c]) => {
   const m = el("marker", {id:"ar-"+k, viewBox:"0 0 10 10", refX:"9", refY:"5", markerWidth:"7", markerHeight:"7", orient:"auto-start-reverse"}, defs);
@@ -133,7 +134,7 @@ DATA.etypes.forEach(([k,,c]) => {
 
 // ---- layered layout: columns = groups, rows = phase
 const cols = DATA.groups, colX = {}, cellCount = {};
-nodes.forEach(n => { if (n.group !== "Gem") { const k = n.group + "|" + n.tier; cellCount[k] = (cellCount[k]||0) + 1; } });
+nodes.forEach(n => { if (n.group !== "Gem" && n.group !== "Unrecorded") { const k = n.group + "|" + n.tier; cellCount[k] = (cellCount[k]||0) + 1; } });
 let x = LEFT;
 cols.forEach(c => { const w = Math.max(...ROWS.map(r => cellCount[c+"|"+r]||0), 1) * CELLW + 30; colX[c] = {x, w}; x += w + 16; });
 const TOTALW = x - 16;
@@ -142,6 +143,7 @@ function layout(){
   nodes.forEach(n => {
     const row = ROWS.indexOf(n.tier), y = TOP + row * ROWH + 20;
     if (n.group === "Gem") { n.x = (LEFT + TOTALW) / 2; n.y = TOP - 10; return; }
+    if (n.group === "Unrecorded") { const u = nodes.filter(m => m.group === "Unrecorded"), i = u.indexOf(n); n.x = LEFT + 40 + NW/2 + i * CELLW; n.y = y; return; }
     const k = n.group + "|" + n.tier, i = used[k] = (used[k] ?? -1) + 1, cnt = cellCount[k], c = colX[n.group];
     n.x = c.x + c.w/2 + (i - (cnt-1)/2) * CELLW; n.y = y + (i % 2) * 8;
   });
@@ -163,6 +165,7 @@ nodes.forEach(n => {
   const g = el("g", {class:"node" + (n.status==="Dormant"?" dormant":"") + (/deleted/.test(n.status)?" gone":""), tabindex:"0", "data-key":n.key, role:"button", "aria-label":n.name}, gN);
   const [fill, stroke] = GCOL[n.group] || GCOL.Gem;
   if (n.group === "Gem") el("rect", {x:-NW/2, y:-NH/2, width:NW, height:NH, rx:23, fill, stroke}, g);
+  else if (n.group === "Unrecorded") el("rect", {x:-NW/2, y:-NH/2, width:NW, height:NH, rx:7, fill, stroke, "stroke-dasharray":"5 3"}, g);
   else el("rect", {x:-NW/2, y:-NH/2, width:NW, height:NH, rx:7, fill, stroke}, g);
   el("text", {y:-3, class:"nm"}, g, n.name);
   el("text", {y:13, class:"st"}, g, n.group === "Gem" ? "owner · approves" : (n.phase !== "-" ? n.phase + " · " : "") + n.status + (n.codexVersion ? " · " + n.codexVersion.split("/")[1] : "") + (n.pending ? " · " + n.pending.split(" ")[0] + " pending" : ""));
@@ -270,7 +273,7 @@ function openPanel(key){
   const dl = h("dl", null, b);
   const row = (k, v) => { if (v == null || v === "" || (Array.isArray(v) && !v.length)) return; h("dt", k, dl); h("dd", Array.isArray(v) ? v.join("; ") : v, dl); };
   if (n.group !== "Gem") {
-    row("Phase", n.phase === "-" ? "None (retired / former)" : n.phase + " · " + n.phaseStatus);
+    row("Phase", n.group === "Unrecorded" ? "None (unrecorded live agent, awaiting Gem)" : n.phase === "-" ? "None (retired / former)" : n.phase + " · " + n.phaseStatus);
     row("Live codex version", n.codexVersion); row("Approved, not deployed", n.pending); row("Deployed", n.deployed || (n.live || n.status === "Dormant" ? "not recorded in index" : null));
     row("Index flag", n.indexFlag); row("Last updated", n.lastUpdated); row("Earlier name", n.formerName); row("Absorbed", n.absorbed); row("Map note", n.note);
   }

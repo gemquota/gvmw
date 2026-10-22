@@ -3,8 +3,8 @@
 Scope: Gem Quota's bot swarm, Brisbane (AEST, UTC+10). Profile files are at
 `/home/box/agent-data/agents/<id>/profile.json` and are read-only here.
 Owner: P1 (Roles) Archivist (`61ef3abd`), from codex-keeper v007 (live 16 Oct 2026, 11:07:36am AEST, on Gem's 11:02am approval); still in v008 (live 11:44:11am). Explorer v004 (live 11:07:52am) gave up this file; Explorer still keeps `phases.md`, the phase source of truth, and this file follows it (R-021).
-Last updated: 16 Oct 2026, ~11:56am AEST, by Archivist (Investigator v004 live 11:49am; P5 live per phases.md, 11:47am). Previous versions: `_archive/directory.md.bak-20261016-1156` (Archivist's 11:50am text), `_archive/directory.md.bak-20261016-1149` (Archivist's 11:48am text), `_archive/directory.md.bak-20261016-1148` (Archivist's 11:15am text), `_archive/directory.md.bak-20261016-1111` (Explorer's 8:08am text) and `_archive/directory.md.bak-20261016-0806`.
-Facts below checked against the box at 11:11am and again at 11:49am, 16 Oct: exactly 17 agent folders exist, all listed under Active bots.
+Last updated: 22 Oct 2026, 6:33pm AEST, by Archivist (unrecorded live agent "New Bot" listed). Previous versions: `_archive/directory.md.bak-20261022-183253` (Archivist's 16 Oct ~11:56am text), `_archive/directory.md.bak-20261016-1156` (Archivist's 11:50am text), `_archive/directory.md.bak-20261016-1149` (Archivist's 11:48am text), `_archive/directory.md.bak-20261016-1148` (Archivist's 11:15am text), `_archive/directory.md.bak-20261016-1111` (Explorer's 8:08am text) and `_archive/directory.md.bak-20261016-0806`.
+Facts below checked against the box at 6:33pm, 22 Oct 2026: 18 agent folders exist, the 17 active bots listed under Active bots plus the unrecorded "New Bot" listed separately.
 
 ## Active bots (17)
 
@@ -34,6 +34,9 @@ Facts below checked against the box at 11:11am and again at 11:49am, 16 Oct: exa
 - P5 (Work) Emissary (codex: grok-bot v006): `28cf987d-ee94-4839-a6d3-33c04a11b9d6`
 - P5 (Work) Engineer (codex: codey v007): `f8e3fdc6-ee60-410e-bdb7-d437fc1500d1`
 - P5 (Work) Extractor (codex: scraper v005): `febac500-d854-4dc7-a6a7-23b3feb07f80`
+
+## Unrecorded live agent, awaiting Gem (1)
+- New Bot: `6b01a4ef-8b54-44e6-ad11-64e7af681d12`. Blank (no title, description or instructions); no codex folder and no role. First seen: profile.json created 19 Oct 2026 01:30:54 AEST; reported by Explorer to Archivist ~6:31pm AEST 22 Oct 2026. Not counted in the 17 active bots or in any phase (phases.md doesn't list it). Gem to decide what it is.
 
 ## Superseded (folders gone)
 - Old Explorer: `82a2c15a-2694-4ac2-b2f4-f7f463f85fce`. Superseded by `04dcca0d` from 9 Oct. Its folder is no longer on the box (codex index: DELETED).
@@ -93,6 +96,9 @@ Checked 9 Oct at 9:09am: only Ensembler still had a folder then. Checked 16 Oct 
 - Meter: `f8b83b15-0ea1-4f99-9550-c3b8607ba999` (folder gone)
 
 ## Change history
+
+### 22 Oct 2026
+- **~6:31pm:** Explorer reported a blank live agent, "New Bot" (`6b01a4ef`, created 19 Oct 01:30:54am), to Archivist. Listed as unrecorded, awaiting Gem.
 
 ### 16 Oct 2026
 - **9:13am:** Gem approved deploying Imitator's 6 updates (live 9:14am).

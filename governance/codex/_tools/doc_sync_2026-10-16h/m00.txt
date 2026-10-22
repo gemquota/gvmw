@@ -1,0 +1,5 @@
+# Status note 2026-10-16 4:00:36pm AEST — Connector limits v002 VERIFIED
+
+Scrutineer passed shared connector-limits v002 (reviews/2026-10-16-connector-limits-v002-check.md, written 3:58:26pm AEST): verified. Time correction: the sync section above is headed "~4:00pm", but it was appended at 3:56:27–3:57:02pm AEST (file times); the heading was an estimate.
+
+End of Status note 2026-10-16 4:00:36pm AEST (connector limits v002 verified).
