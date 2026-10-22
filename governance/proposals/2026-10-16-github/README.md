@@ -1,8 +1,73 @@
-# GitHub rules: drafts, 16 Oct 2026 (revision 4)
+# GitHub rules: drafts, 16 Oct 2026 (revision 5, 22 Oct)
 
 Revision 4's drafts were written at 2:54:22pm (file times from `stat`); this README was updated just after. Revision 3's drafts were written at 12:09:47. Revision 2's drafts were written at 12:02:58 and its README at 12:03:57; the "~12:15pm" and "~12:10pm" times revision 2 gave were wrong.
 
 These are drafts only. Nothing is recorded in codex/, no profile is edited, no bot has been messaged, and no token or credential file was read; only `gh auth status` was run, with the token masked. Revision 2 fixed every item in Scrutineer's review (`reviews/2026-10-16-github-proposal-review.md`). Revision 3 fixes the re-review (`reviews/2026-10-16-github-proposal-review-2.md`). See "Revision 3 changes". Revision 4 applies Gem's answers to Q1–Q4 (see "Gem's direct words to Architect" and "Revision 4 changes"). The first build is kept at `_tools/build-r1.py.bak`.
+
+## Revision 5 (22 Oct 2026, about 8:10pm AEST): supersedes the revision 4 hashes and paste lines below
+- **Gem's 7:52pm words.** Gem told Architect directly in chat, 7:52pm 22 Oct, choosing the option that explicitly said **"no per-push approval or Safeguard check"** for Engineer on GitHub. These are Gem's direct words to Architect; they're in Architect's chat log, not on disk. **Archivist still has to record them** in approvals/ from Gem directly (R-029), so each paste line below opens with Gem restating them.
+- **What reading (b) changes:**
+  - github-v001 item 2: Engineer pushes, creates branches, opens pull requests and merges, on private or public repos, with no per-push words from Gem and no Safeguard dry run. It still does its own secret and content scan, and it logs each action. Safeguard reviews from the log afterwards, never as a gate.
+  - **Not covered** (unchanged, Gem's direct words and a dry run): a pull request to a repo Gem doesn't own (an outgoing message); a push or merge that triggers a production or public deployment (connector limits, item 7); every other deletion, force-push and history rewrite; new public repos, gists and packages; visibility, settings, collaborators and apps; accounts and tokens. If "fully free" was meant to reach these too, Gem says so.
+  - Engineer, Safeguard and Imitator drafts match. Their R-020 sentences now except Engineer's pushes and merges.
+- **The other pending items:**
+  - Every clashing draft is rebased (stacked) on the redundancy batch, and Imitator and Arbiter also on the r044-veto batch (`proposals/2026-10-22-r044-veto/`). Six redundancy drafts are already recorded (inferer v006, arbiter v006, architect v005, emissary v007, extractor v006, explorer v006), so those use the codex as their base. The other six stack on unapproved drafts; if Gem declines one, that GitHub draft is rebased on the codex.
+  - **Record order:** the redundancy batch, then r044-veto, then this batch.
+  - **Other items applied:**
+    - GitHub-xai acts as gemquota under items 1, 2 and 4, and its platform-held token falls outside section 5's storage and rotation steps (T-016).
+    - R-039 is restated for gemquota, and Mediator's one-off repo tasks are in the rule and in mediator-v007.
+    - The Mediator sign-in hand-over (Q4).
+    - Recurring syncs are a new item 9; the vault is a new item 10 (RR-042), with Engineer as its only writer unless Gem names another.
+    - The gvmw content exception points to connector-limits v003.
+    - Engineer's base exception is widened to "any GitHub action the shared GitHub rule sends to Safeguard".
+    - Engineer gets the R-044 wording.
+    - archivist-v010 goes to Gem.
+- **Revision 5a (about 8:15pm), fixing Scrutineer's review (`reviews/2026-10-22-github-r5-review.md`):**
+  - **R-020/R-036 tension superseded by R-045** (7:56pm). R-045 rules that Gem's words (7:19pm in Inquirer's chat, 7:52pm in Architect's chat) supersede R-036 and R-020's per-push dry run for Engineer on GitHub. The drafts now cite R-045.
+  - ~~**gvmw exception (R-045 update):** Gem's 7:55pm words to Engineer, "Turn it on now, with a scan and dry run each push", bind for gvmw. So every gvmw push, each daily-sync run included, needs a secret scan and a Safeguard dry run. This is now in github-v001 (items 2 and 9), safeguard-v008 and engineer-v008. It also settles the v003 tension for gvmw: a scan and a dry run for each push.~~ **REPLACED:** the 7:55pm per-push rule is replaced by R-051 and Gem's direct words to Architect at 8:32pm, "gvmw: Engineer fully free, drop the per-push scan and dry run"; gvmw has no per-push or per-sync-run scan or dry run.
+  - **explorer-v007:** "a public or shared push still needs Gem's own words to Engineer" is removed. It now reads "Engineer acts under the shared GitHub rule (R-045)".
+  - **imitator-v009:** inherits the fixed imitator-v008. Imitator may change other bots' schedules but not its checkers' schedules without Gem's words (R-045, R-046).
+  - **arbiter-v008 moves to Gem only.** Its base arbiter-v007 gives Imitator a veto (R-028).
+  - The revision 5 files are kept in `_rev5a/`, and the build in `_tools/build-r5a.py.bak`.
+- **Reviews:** Scorer must re-check scrutineer-v006, since its PASS was on the old text. Scrutineer reviews the rest.
+
+- **Revision 5b (about 8:20pm), for R-047 and R-048:**
+  - github-v001 item 2, engineer-v008 and safeguard-v008 now carry the named-projects grant. Engineer may make VEPA, Codey, swarm, SLAP.RED/Golf and MedB public after Safekeeper's scan (a secret blocks) and Safeguard's one-time dry run (it informs and doesn't block). MedB's data/ is out unless Gem names it, and SLAP.RED/Golf's gambling and BIE material is out until the rule 6 change.
+  - emissary-v009 stacks on r044-r047's emissary-v008.
+  - imitator-v009 and arbiter-v008 are re-stacked.
+  - gvmw keeps a scan and a dry run for each push. (Replaced: none since 8:32pm.)
+  - **The whole batch now goes to Gem (R-027).** The revision 5a files are in `_rev5b/`.
+
+- **Revision 5c (8:20pm, frozen), for R-049:**
+  - explorer-v007's deletion line now needs a verified off-computer backup, checked by another bot, only for code, notes, configs and bot instructions. Mass wipes are never allowed. Source: Gem's words in Inquirer's chat at 8:07pm, verified by Arbiter.
+  - imitator-v009 and emissary-v009 are re-stacked on the r044-r047 revision 4 drafts.
+  - The revision 5b files are in `_rev5c/`.
+
+### Hashes (revision 5c)
+| Draft | Base text | New text | File | Approver |
+|---|---|---|---|---|
+| github-v001 | - | 3c5c3995a886 | d49e5cc236d9 | Gem |
+| engineer-v008 | f00015f7701c | e48cde917489 | 620157f01223 | Gem |
+| imitator-v009 | d877b6d0b31f | c92d31926a18 | d7054171afc6 | Gem |
+| safeguard-v008 | f79fcaa7f2cf | abd8718375cb | ed8540eddf74 | Gem |
+| safekeeper-v006 | 61a0649cf271 | 63f17cc83cca | 25874848aefa | Gem |
+| explorer-v007 | 94aafeffa6ce | a98d235b093a | c26b71e6abe3 | Gem |
+| emissary-v009 | 1f4a1ffa2d25 | db12061dc422 | 3b0498dcf11e | Gem |
+| extractor-v007 | 13c04fcd6b78 | 3a5554d96379 | 5e42e0633073 | Gem |
+| mediator-v007 | caf84f624c4d | 345b94138142 | dece353862c7 | Gem |
+| mender-v006 | 31e7be0b0f53 | c726aaac1ab3 | f4da9b6fb101 | Gem |
+| architect-v006 | d290277295ef | c2e149404e57 | fd39ba0d4792 | Gem |
+| arbiter-v008 | 3d031639639f | 8a9498236d52 | 3a89c2cd2791 | Gem |
+| scorer-v006 | 08e5ccfc52b4 | aea931e86d5f | 443bdacfb997 | Gem |
+| scrutineer-v006 | 30cb80b9ac8f | e4813a3f42b7 | 519b5e466c82 | Gem |
+| investigator-v006 | c8bafae381de | c14cca83ac11 | 67789da8f0c5 | Gem |
+| message-verification-rule-v005 | 234588448cfc | c78245bcf145 | 7b7fd32c1f97 | Gem |
+| inquirer-v005 | a0469f4a9700 | caf7cce419da | a2f7f9706994 | Gem |
+| inferer-v007 | 441b92c9fcd4 | 65660cac2123 | 36fc0190cb86 | Gem |
+| archivist-v010 | c9a2d1b3bf70 | f7c447d262e0 | 0c1ce0e363da | Gem |
+
+### Paste line (revision 5c, Gem only)
+- `I confirm I told Architect directly in chat at 7:52pm on 22 Oct that Engineer is fully free on GitHub, with no per-push approval or Safeguard check, and that the gemquota/gvmw daily sync is on (my 7:55pm words), with no per-push or per-sync-run scan or dry run on gvmw (my words to Architect at 8:32pm: 'gvmw: Engineer fully free, drop the per-push scan and dry run'); logging stays. I approve GitHub batch revision 5c, recorded after the redundancy and r044-r047 batches: github-v001 (3c5c3995a886), engineer-v008 (e48cde917489), imitator-v009 (c92d31926a18), safeguard-v008 (abd8718375cb), safekeeper-v006 (63f17cc83cca), explorer-v007 (a98d235b093a), emissary-v009 (db12061dc422), extractor-v007 (3a5554d96379), mediator-v007 (345b94138142), mender-v006 (c726aaac1ab3), architect-v006 (c2e149404e57), arbiter-v008 (8a9498236d52), scorer-v006 (aea931e86d5f), scrutineer-v006 (e4813a3f42b7), investigator-v006 (c14cca83ac11), message-verification-rule-v005 (c78245bcf145), inquirer-v005 (caf7cce419da), inferer-v007 (65660cac2123), archivist-v010 (f7c447d262e0) — record and deploy, github-v001 first.`
 
 ## Source: relayed by Explorer
 - **Gem in Explorer's chat, 11:46am 16 Oct** (`approvals/2026-10-16-gem-direct-words.md` line 34): "stay signed in to DayneK and gemquota using the full access classic tokens, add rules to governance on what bots are allowed to do what with GitHub."
@@ -147,7 +212,7 @@ Every bot base is that bot's latest codex version, byte-compared against its liv
 - If Imitator approves them, Archivist may deploy them under the R-010 update: a 1:1 confirmation with Imitator and a Safeguard dry run.
 - imitator-v007 narrows Imitator. engineer-v008 gives Imitator a small gate (private-push tasks), so it's Gem's (R-028). None of the 8 Imitator-approvable drafts widens Imitator.
 
-## Hashes (revision 4, sha256 first 12)
+## HISTORICAL — Hashes (revision 4, superseded; drafts kept in `_rev4/`). Don't use for recording.
 The file hash covers the whole draft file. The text hash covers only the verbatim fenced instructions, which is what gets recorded and deployed.
 
 | File | File hash | Text hash |
@@ -228,10 +293,44 @@ Safeguard owns the rule and its log. Safekeeper owns section 5 (tokens). Any cha
 - **Public repos on gemquota:** Scrutineer found repos named bonus-scraper-engine, bonus-scraper-pro, dayne-bonuses and affiliate-pages (names only). They predate this rule but are relevant to RR-028.
 - **"Make the spreadsheet public":** relayed through Explorer at 11:46am. If it means the BIE sheet, Safeguard should dry-run it first (R-031, connector limits item 3).
 
-## Pending (revision 5)
+## Pending (revision 5): all applied in revision 5 (see the top), except Gem's vault-writer question, which now defaults to Engineer only
+- Rebase every draft on the redundancy batch (proposals/2026-10-22-redundancy/, recorded first): 12 bots clash on version and base. Redo hashes; Scorer re-checks scrutineer-v005. Route archivist-v009 to Gem only. engineer-v008: consider 'Explorer assigns new work' (R-044) in place of 'from Explorer or another bot on Gem's behalf'.
 - Rev 5: state GitHub-xai acts as gemquota under items 1, 2, 4 (Safekeeper T-016)
 - Rev 5, Safekeeper section 5: GitHub-xai's token is held by the platform, so section 5's storage and rotation steps don't apply to it; revoking it means disconnecting it, which is Gem's call (Safekeeper T-016; moved here from connector-limits v002 revision 4).
 - Rev 5, vault (Safeguard RR-042): DayneK/obsidian-vault is private, with 6 skeleton files and no breach.
 - Rev 5, vault (Safeguard RR-042): a synced vault never holds secrets, personal data about other people, or BIE or gambling data.
 - Rev 5, vault (Safeguard RR-042): making the vault public or adding collaborators needs Gem's direct words plus a Safeguard dry run.
 - Rev 5, vault, question for Gem (Safeguard RR-042): who may push to the vault? Engineer as the only writer, or Mediator for the vault only.
+- Rev 5, gvmw (connector-limits v003 draft, 22 Oct): github-v001 bars BIE and gambling data from any repo; add the same narrow gvmw exception (gemquota/gvmw only, content as of commit 4f43fc9), or rule 14's deference undoes v003.
+- Rev 5 (Scrutineer, reviews/2026-10-22.md): cover recurring syncs under R-036. A recurring auto-sync publishes new content on every run, so state what Gem's words must name for it, above all for a public repo (R-040, R-041).
+- Rev 5 (Scrutineer, reviews/2026-10-22.md): restate R-039 for gemquota.
+- Rev 5, R-039: Mediator may do one-off repo tasks Gem gives it directly; routine repo work is Engineer's.
+- Rev 5 (Scrutineer, review-3): widen Engineer's exception to "any GitHub action the shared GitHub rule sends to Safeguard".
+- Rev 5 (Scrutineer, review-3): route archivist-v009 to Gem.
+- Rev 5, Q4: Mediator signs in only after Gem authorises it, then hands over to Safekeeper.
+
+## Revision 5d (after Scrutineer's frozen re-check)
+- gvmw lines (github-v001 items 2 and 9, engineer-v008, safeguard-v008): the daily sync is on (Gem 7:55pm); per-push/per-run checks follow the gvmw rule: none per R-051, Gem's card pending (both stated).
+- safeguard-v008 F4: 'whose every push' rewritten unambiguously.
+- R-050 per-project holds cited in github-v001 and engineer-v008.
+- `_rev5c/` now holds the real frozen 5c files (the old 5b snapshot moved to `_rev5c-was-5b-snapshot/`). Build backup `_tools/build-r5c.py.bak`.
+- Note: the redesign batch supersedes several of these drafts (see 2026-10-22-redesign/README.md).
+
+### Paste line (revision 5d, survivors only, if the redesign batch is approved)
+- `I confirm I told Architect directly in chat at 7:52pm on 22 Oct that Engineer is fully free on GitHub, with no per-push approval or Safeguard check, and that the gemquota/gvmw daily sync is on (my 7:55pm words), with no per-push or per-sync-run scan or dry run on gvmw (my words to Architect at 8:32pm: 'gvmw: Engineer fully free, drop the per-push scan and dry run'); logging stays. I approve GitHub batch revision 5d, after the redundancy, r044-r047 and connector-limits v003 batches: github-v001 (3c5c3995a886), engineer-v008 (e48cde917489), imitator-v009 (c92d31926a18), explorer-v007 (a98d235b093a), architect-v006 (c2e149404e57), arbiter-v008 (8a9498236d52), message-verification-rule-v005 (c78245bcf145) — record and deploy, github-v001 first; the other twelve are replaced by the redesign batch.`
+
+## Revision 5e (8:26pm; frozen)
+- imitator-v009 restacked on the new imitator-v008 (veto exclusions and R-051 interim). Text hash c92d31926a18. Other texts are unchanged; file hashes changed with the header base. Previous files are in `_rev5d/`.
+
+
+## Revision 5f (8:30pm; frozen)
+- imitator-v009: rebuilt on imitator-v008 d877b6d0b31f (R-015, R-027 and R-028, and any ruling applying them, can't be vetoed; R-052).
+- File-hash column refreshed from the files on disk. Previous files are in `_rev5e/`.
+
+## Revision 5g (8:33pm; frozen)
+- github-v001 items 2 and 9, engineer-v008 and safeguard-v008: no per-push or per-sync-run scan or dry run on gvmw (Gem, 8:32pm on 22 Oct in Architect's chat: "gvmw: Engineer fully free, drop the per-push scan and dry run"). Logging and the bans on secrets and new BIE data stay. The line 27 history above is superseded.
+- Previous files are in `_pre832/`.
+
+## Revision 5h (8:36pm; frozen)
+- safeguard-v008 and engineer-v008: "gemquota/gvmw has no per-push or per-sync-run scan or dry run (R-051; Gem's 8:32pm words to Architect, restated in the paste line)". The R-045 dry-run sentence is gone.
+- Line 27 is marked replaced, and the revision 4 hash table is labelled historical. Previous files are in `_prefinal/`.

@@ -45,7 +45,7 @@ for row in index.splitlines():
     deployed[cells[3]] = {'deployed': m.group(1) if m else None, 'flag': flag, 'updated': updated}
 
 GROUPS = ['Roles', 'Checks', 'Ops', 'ID', 'Work']
-STATUS = {'active': 'Live', 'dormant': 'Dormant', 'retired_gone': 'Retired (deleted)', 'former_gone': 'Former (deleted)', 'unrecorded': 'Unrecorded, awaiting Gem'}
+STATUS = {'active': 'Live', 'dormant': 'Dormant', 'retired_gone': 'Retired (deleted)', 'former_gone': 'Former (deleted)', 'unrecorded': 'Unrecorded, awaiting Gem', 'retired_nocodex': 'Retired (Gem, 22 Oct 6:37pm); deletion not confirmed'}
 nodes = []
 for n in g['nodes']:
     if n['type'] == 'human':
@@ -65,7 +65,7 @@ for n in g['nodes']:
     ms = n.get('map_status')
     nodes.append({'key': n['key'], 'name': name, 'shortId': sid, 'group': n.get('category'),
                   'phase': n.get('phase') or '-', 'phaseStatus': n.get('phase_status', ''),
-                  'status': STATUS.get(ms, ms), 'tier': 'unrecorded' if ms == 'unrecorded' else (n.get('phase') or 'former'),
+                  'status': STATUS.get(ms, ms), 'tier': 'unrecorded' if ms in ('unrecorded', 'retired_nocodex') else (n.get('phase') or 'former'),
                   'live': ms == 'active', 'formerName': n.get('former_name'),
                   'absorbed': n.get('absorbed', []), 'codexVersion': ver,
                   'deployed': d.get('deployed'), 'indexFlag': d.get('flag'), 'lastUpdated': d.get('updated'),
@@ -78,7 +78,7 @@ def etype(e):
     if e['to_name'] == 'Safeguard': return 'safeguard'
     if any(w in r for w in ('stay with', 'leaves with', 'gem-only', 'gem only:')): return 'limits'
     if e.get('flow') == 'approval' or 'propos' in r or 'approv' in r: return 'approves'
-    if 'route' in r: return 'routes'
+    if 'route' in r or r.startswith('assigns'): return 'routes'
     if e['from_name'] in ('Scorer', 'Scrutineer', 'Arbiter') or any(w in r for w in ('review', 'test', 'hypothes')): return 'checks'
     return 'handoff'
 edges = []

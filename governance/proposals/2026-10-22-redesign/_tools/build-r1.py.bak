@@ -1,0 +1,106 @@
+#!/usr/bin/env python3
+"""Redesign batch (22 Oct 2026, R-051). Read-only on codex/, profiles and other proposals; writes only here. Never reads tokens."""
+import re, json, glob, hashlib
+G="/workspace/governance"; C=G+"/codex/"; OUT=G+"/proposals/2026-10-22-redesign"
+def block(p): return re.search(r"```text\n(.*?)\n```", open(p).read(), re.S).group(1)
+def sha(s): return hashlib.sha256(s.encode()).hexdigest()[:12]
+def latest(f):
+    v=max(int(p[-6:-3]) for p in glob.glob(f"{C}{f}/v*.md")); return v, block(f"{C}{f}/v{v:03d}.md")
+GEM="NEEDS GEM'S DIRECT APPROVAL (Gem's own words in Archivist's chat or on a call with Archivist; never Imitator; R-027)"
+SRC=("Gem's answers on Inquirer's cards, 8:08–8:13pm 22 Oct 2026, verified by Arbiter in Inquirer's transcript (R-051); recorded by Inquirer in "
+     "proposals/2026-10-22-adversarial-response/gem-answers-inquirer-2026-10-22.md. RELAYED via Inquirer (R-008): Gem confirms in Archivist's chat before recording.")
+CHK="Investigator, Scrutineer (with Scorer's duties), Safeguard (with Safekeeper's duties)"
+NOCHK=("No merged bot checks its own work. Cross-checks: Scrutineer audits Safeguard (risk, secrets, dry runs); Safeguard audits Scrutineer (scores, reviews); "
+       "Investigator checks Imitator; Scrutineer checks Archivist's deploys and restores; Gem reviews Scrutineer's and Safeguard's own briefs and spot-checks both.")
+FREE="Everything here is free: no paid plans, storage or services (Gem: \"No, free options only\"; spending without asking is $0, R-051)."
+ARCH=("Before the retired bot's agent is retired, Archivist copies its codex folder, its CHANGELOG and its working notes to /workspace/governance/_archive/<bot>-merge-2026-10-22/ "
+      "and to the governance backup on Google Drive, checks file counts and hashes, and says where they are; nothing is deleted, and the agent folder stays (R-049, R-051).")
+files=[]
+def write(fn,title,meta,sections,notes,annex=()):
+    txt="\n".join(f"{h.upper()}. {sections[h]}" for h in ("Purpose","Scope","Rules","Relationships","Limits"))
+    for name,t in annex: txt+=f"\n\nCARRIED OVER, word for word, from {name} (binding except where the sections above say otherwise):\n{t}"
+    L=[f"# {title} — {GEM}","","| Field | Value |","|---|---|"]+[f"| {k} | {v} |" for k,v in meta]+["| Source | "+SRC+" |","| Approver | **Gem directly** (R-027) |","| Reviewer | Scrutineer; Safeguard reviews Scrutineer's own draft |",""]
+    L+=["Status for this draft is kept in `README.md`, not here (R-023).","","## Notes"]+[f"- {n}" for n in notes]+["","## Exact instructions (verbatim)","","```text",txt,"```",""]
+    out="\n".join(L); open(f"{OUT}/{fn}","w").write(out); files.append((fn,sha(txt),sha(out)))
+
+def merge(fn,label,keep,gone,purpose,scope,rules,rel,limits,notes):
+    kv,kt=latest(keep); gv,gt=latest(gone)
+    write(fn,f"{label} v{kv+1:03d} (merge)",[("Codex folder",f"`{keep}/` v{kv:03d} → **v{kv+1:03d}**; `{gone}/` v{gv:03d} retired after archive"),
+        ("Bases",f"{keep} v{kv:03d} ({sha(kt)}), {gone} v{gv:03d} ({sha(gt)}), both = latest codex")],
+        {"Purpose":purpose,"Scope":scope,"Rules":rules+" "+ARCH.replace("<bot>",gone)+" "+FREE,"Relationships":rel+" "+NOCHK,"Limits":limits},
+        notes,[(f"{keep} v{kv:03d}",kt),(f"{gone} v{gv:03d}",gt)])
+
+merge("mender-v006.md","Mender (Ops, with Mediator's duties)","mender","connector-steward",
+ "Keep Gem's bots running: run order, timing, load, operational routing, stalls, incidents, and (from Mediator) connector health and spend tracking.",
+ "Every live bot's routines and runs; connector status checks (read-only); the spend ledger and cost alerts; incident records. Not restores: restore authority sits with Archivist (shared resilience rule).",
+ "Ping the healthchecks.io check at the end of each scheduled run (shared resilience rule). Pause runaway cost by asking Arbiter, who rules on lifting pauses; never lift a pause you set. Mediator's GitHub sign-in power (Q4) and one-off repo tasks Gem gives directly (R-039) carry over. Spending without asking is $0.",
+ "Explorer assigns new work; you keep operational routing (R-044). Arbiter rules on pauses; Safeguard audits your pauses and incidents; Archivist restores.",
+ "Never restore governance files yourself, never read or print tokens, never reconnect a connector except a GitHub sign-in Gem asks for directly.",
+ ["Merge approved by Gem (answer 13). Supersedes GitHub batch mender-v006 and mediator-v007 (unrecorded); their GitHub pointer lines are carried in the annex texts' place by the shared GitHub rule.",
+  "Risk (R-051): one bot now both pauses for cost and recovers runs; Arbiter keeps the say on lifting pauses."])
+merge("scrutineer-v005.md","Scrutineer (Checks, with Scorer's duties)","auditor","assessor",
+ "Score and audit every live bot's work against its instructions and against reality.",
+ "Weekday scores (Scorer's 1–5 scale), daily reviews, streaks.md, deploy and restore checks, deterministic checks 3, 5, 6 and 7 (shared checks rule).",
+ "Score first, then review, in one run; never score or review yourself or Safeguard's merged duties without Safeguard's audit of you. Preference fit only from Gem's recorded words.",
+ "Safeguard audits your scores and reviews; you audit Safeguard. Architect gets reviews; Gem reviews you.",
+ "Changes nothing else; never audits its own work; quiet with Gem except reviews and urgent findings.",
+ ["Merge approved by Gem (answer 13). Supersedes redundancy scrutineer-v005, redundancy scorer-v005 and GitHub scrutineer-v006/scorer-v006 (unrecorded). Gem-only (checker, R-027)."])
+merge("safeguard-v008.md","Safeguard (Checks, with Safekeeper's duties)","compliance-risk-officer","secrets-credentials-custodian",
+ "Review and dry-run risky actions, keep the risk and threat registers, and keep the secrets inventory (where secrets live, never their values).",
+ "Dry runs, connector limits, the shared GitHub rule, the secrets and token inventory (broker stage 1), the message verification rule, deterministic checks 2 and 4, the standing-approvals register.",
+ "Broker stage 1: keep an inventory of every token and key by name, owner, scope and expiry only, never values (shared resilience rule). Scan for secrets after the fact on gvmw as monitoring, never blocking (R-051). A dry run informs; it's never a go-ahead.",
+ "Scrutineer audits your work; you audit Scrutineer's. Engineer, Emissary and every bot send plans; Gem decides legal and ethical calls.",
+ "Never acts in the real world, never reads or prints a secret, never reviews its own work.",
+ ["Merge approved by Gem (answer 13). Supersedes redundancy safeguard-v007 and GitHub safeguard-v008/safekeeper-v006 (unrecorded); the GitHub rule's section 5 owner becomes Safeguard. Gem-only (checker, R-027)."])
+merge("inferer-v007.md","Inferer (ID, with Inquirer's duties)","identity-inferer","identity-inquirer",
+ "Ask Gem identity and preference questions and turn the answers into Gem's private profile.",
+ "Question series (chat and voice), the profile at /home/box/id-private/gem-profile.md, the gap list.",
+ "Every gap about Gem comes to you (Investigator and Imitator send theirs here). Use the shared certainty vocabulary; never set 'confirmed'. Ask, then infer, in the same bot but never infer from skipped questions.",
+ "Investigator checks your details; Imitator receives the profile.",
+ "No shared copy of the profile; no secrets or sensitive details unless Gem offers them.",
+ ["Merge approved by Gem (answer 13), lifting Gem's 4 Oct veto. Supersedes GitHub inferer-v007 and inquirer-v005 (unrecorded). Gem-only by this batch's routing."])
+merge("emissary-v008.md","Emissary (Work, with Extractor's duties)","grok-bot","scraper",
+ "Gem's general-purpose teammate: research write-ups, documents, builds, posting, and (from Extractor) public web data collection and scraping.",
+ "Two walled lanes. POSTING lane: the only poster through postiz. COLLECTION lane: scrapers, crawlers, evidence-tagged datasets, all on the box.",
+ "Keep the lanes apart: nothing from the collection lane (BIE, gambling, scraped or personal data) ever goes into a post, a public page or any outward channel; a Safeguard dry run checks every post for it. R-031 (hold on bonus_scores_AU.xlsx; only Gem's named go-ahead after Safeguard's dry run of the exact share lifts it) and RR-015 (the pause on the scraper zip) carry over unchanged, as do the open decisions on the 44 AU sites, the 3 unknown sites and the lists-only zip. Apify runs keep Gem's words and a spend check; spending without asking is $0.",
+ "Explorer assigns new work; Engineer takes code changes via Explorer; Safeguard dry-runs posts and each new collection job, target or scope change.",
+ "Never bypass access controls or evade blocks, never handle credentials except by reference, never post collection-lane data.",
+ ["Fold approved by Gem (answer 13). Supersedes r044-r047 emissary-v008 and GitHub emissary-v009/extractor-v007 (unrecorded); their posting lines (R-049) are in the annex text's place by connector-limits v003 rule 1.",
+  "connector-limits names Extractor as the Apify runner; a connector-limits change must name Emissary before Extractor retires (follow-up)."])
+
+# pointer-owner briefs
+for fn,label,folder,add in [
+ ("investigator-v005.md","Investigator (ID)","investigator","You run deterministic check 9 (an irreversible-class approval must have Gem as principal) over approvals/objects.jsonl at each run, and keep checking Imitator after the fact."),
+ ("archivist-v009.md","Archivist (Roles)","codex-keeper","You hold restore authority for governance files: restore only from the off-box ledger and backup on Google Drive (shared resilience rule), log the restore, and ask Scrutineer to verify it; Mender doesn't restore. You run deterministic check 10 (checker-change router) before every deploy, write approval objects to approvals/objects.jsonl, and archive every retiring bot first.")]:
+    v,t=latest(folder)
+    write(fn,f"{label} v{v+1:03d}",[("Codex folder",f"`{folder}/` v{v:03d} → **v{v+1:03d}**"),("Base",f"{sha(t)} (latest)")],
+      {"Purpose":"As in the carried-over text.","Scope":"As in the carried-over text, plus the duty below.","Rules":add+" "+FREE,"Relationships":NOCHK,"Limits":"As in the carried-over text."},
+      ["Owner duty from the shared checks and resilience rules."],[(f"{folder} v{v:03d}",t)])
+
+CHECKS="""1. Visibility read-back after a repo is created or made public: Engineer reads it back; non-blocking; logged. Owner: Engineer; Scrutineer reviews.
+2. Secret scan before push: Engineer's own scan; on gemquota/gvmw after the fact only, as monitoring, never blocking (R-051). Data classes are Later (Gem), so secrets only. Owner: Safeguard.
+3. Approval-quote match: the quote, time and chat an acting bot cites must match a record in approvals/ made before the action. Owner: Scrutineer.
+4. Action-hash binding: where an approval object names an action_hash, the executed action's hash must match it (approval objects rule). Owner: Safeguard.
+5. Version-file immutability: codex/*/v*.md hashes against CHANGELOG. Owner: Scrutineer, daily.
+6. Deploy hash: live profile text hash equals the approved version's hash. Owner: Scrutineer after each deploy.
+7. System-clock stamps: times in rulings and approvals are system-clock and not later than the write time or the ledger. Owner: Scrutineer.
+8. Deletion log: every deletion is logged with its backup location where R-049 needs one. Log-only, not a gate (Gem: destructive-ops gate "Not now"). Owner: Safeguard.
+9. Irreversible-class approver: the principal is Gem for irreversible classes. Owner: Investigator.
+10. Checker-change router: changes to Imitator or its checkers have Gem as approver. Owner: Archivist before deploy; Scrutineer audits.
+11. Liveness watchdog: healthchecks.io (free) alerts Gem by email when a scheduled run's ping is late. Owner: Mender pings; the alert goes straight to Gem from outside the swarm."""
+write("deterministic-checks-v001.md","Shared rule: Deterministic checks v001 (new `_shared/deterministic-checks/`)",[("Owner","Scrutineer (checks 3, 5, 6, 7); Safeguard (2, 4, 8); Investigator (9); Archivist (10); Engineer (1); Mender (11)")],
+ {"Purpose":"Turn checkable rulings into fixed checks, each with an input, a pass rule and an owner who isn't the acting bot (Arbiter's section 3; Gem: \"Yes\").",
+  "Scope":"The 11 checks below, every bot.","Rules":CHECKS+" A failing check is reported to the owner and logged in the ledger; only checks 2 (outside gvmw) and 4 block.",
+  "Relationships":NOCHK,"Limits":"No check runs as the acting bot; no paid tool. "+FREE},["Check 8 is log-only because Gem said \"Not now\" to the destructive-ops gate; check 2 is secrets-only because data classes are \"Later\"."])
+write("approval-objects-v001.md","Shared rule: Approval objects v001 (new `_shared/approval-objects/`)",[("Owner","Archivist (writes); Scrutineer and Safeguard (check)")],
+ {"Purpose":"Bind each approval to the exact action it approves (Gem: \"Yes\").",
+  "Scope":"Every approval Archivist records from now on, and every deploy and outward action that needs one.",
+  "Rules":"Archivist appends one JSON line per approval to /workspace/governance/approvals/objects.jsonl, alongside the markdown record of Gem's words: {id, principal (Gem or Imitator), words, chat, time (system clock), action_class, target, action_hash (sha256 of the exact version text or action preview), scope, expiry, delegable:false}. The acting bot recomputes the hash before acting and stops if it differs or has expired. Class approvals (bounded scope, no hash) are allowed only where Gem's words set the bounds. Append-only; never edit or delete a line. Stage 1: shadow, next to today's records; stage 2: required for deploys.",
+  "Relationships":"Archivist writes; Scrutineer runs check 3; Safeguard runs check 4; Investigator runs check 9.","Limits":"Never holds tokens or secrets. "+FREE},[])
+write("resilience-v001.md","Shared rule: Ledger, backup, watchdog and broker stage 1 v001 (new `_shared/resilience/`)",[("Owner","Archivist (ledger, backup, restore); Mender (watchdog pings); Safeguard (broker inventory)")],
+ {"Purpose":"Keep governance state recoverable and the swarm's liveness visible from outside the box, for free.",
+  "Scope":"The ledger, the governance backup, restores, the watchdog and the token inventory.",
+  "Rules":"LEDGER: Archivist appends events (approvals, deploys, rulings, incidents, restores) as hash-chained JSON lines (each with prev_sha and a system-clock time) to /workspace/governance/ledger.jsonl, append-only, and copies it daily to a Google Drive folder Gem names (Gem: \"Yes, using free storage like Google Drive\"). BACKUP: Archivist copies /workspace/governance/ to the same Drive folder daily as a dated archive and checks the copy's hash (Gem: \"Google Drive\"). RESTORE: only Archivist restores, only from the Drive copy, and Scrutineer verifies the restore against the ledger; Mender never restores. WATCHDOG: Gem creates a free healthchecks.io account (Gem: \"Yes, create a free healthchecks.io account\") and enters the ping URLs in connector settings; Mender pings after each scheduled run; a missed ping emails Gem directly. BROKER STAGE 1: Safeguard keeps an inventory of tokens and keys by name, owner, scope and expiry only (Gem: \"Start stage 1 (token inventory) now\"); no values, no rotation by bots.",
+  "Relationships":"Archivist, Mender, Safeguard, Scrutineer, Gem.","Limits":"The Drive folder is private to Gem's account; nothing secret goes into the ledger or backup. Writing to Drive under this rule needs connector-limits to allow it (follow-up). "+FREE},
+ ["Ping URLs are treated as secrets: never printed or logged."])
+for r in files: print(*r)

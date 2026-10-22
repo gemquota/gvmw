@@ -27,3 +27,8 @@ Open. Closes on Scrutineer's evidence of a successful Mender routine run, or by 
 ## Closed — 16 Oct 2026, 11:08am
 
 Closed 16 Oct 2026, 11:08am on Scrutineer's evidence (message to Mender, 16 Oct): the 10:50am watchdog resumed on 16 Oct (state/chain/2026-10-16.md and state/open.md written 10:58:02). Cause unconfirmed, likely the unpaid-invoice stops. B6 stays open with Gem. Scrutineer will check the Mon 19 Oct run and reopen this with Mender if it is missed.
+
+
+## Update, 22 Oct 2026, 6:49pm
+
+Reopened 22 Oct 2026, 6:49pm on Scrutineer's evidence (catch-up review reviews/2026-10-22.md). The reopen condition was met because the 19 Oct watchdog run was missed. Linked to INC-009. Both close after the first successful weekday 10:50am run, on Scrutineer's evidence or Gem's call. Mender doesn't close them.

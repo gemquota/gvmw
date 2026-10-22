@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+"""connector-limits v003 draft (gvmw exception), 22 Oct 2026. Relayed by Mediator (R-008).
+Read-only on codex/; writes only in this folder. Never reads token or credential files."""
+import re, hashlib, glob, difflib
+G="/workspace/governance"; OUT=G+"/proposals/2026-10-22-gvmw"
+def block(p): return re.search(r"```text\n(.*?)\n```",open(p).read(),re.S).group(1)
+def sha(s): return hashlib.sha256(s.encode()).hexdigest()[:12]
+vers=sorted(glob.glob(G+"/codex/_shared/connector-limits/v*.md"))
+assert vers[-1].endswith("v002.md"), vers
+base=block(vers[-1]); assert sha(base)=="d4fbfa8f391f", sha(base)
+assert base==block(G+"/proposals/2026-10-16-connectors2/connector-limits-v002.md")
+L=base.split("\n")
+def R(t,a,b):
+    assert t.count(a)==1,a[:60]; return t.replace(a,b)
+C="4f43fc9ae82eb1beaf63bf4ea33fcd699aae5adf"
+HEAD=("The gvmw exception (Gem's direct words, 22 Oct 2026; R-040, R-042). Gem made the repo gemquota/gvmw public on purpose and accepts the risks of keeping it public, including the Interactive Gambling Act exposure of the BIE and gambling data, the Privacy Act exposure of the third-party contact details, and the exposure of Gem's own identity notes; that's Gem's own call, and bots only set out risks and options. "
+ "The exception covers only that repo, and only the content in it as of commit 4f43fc9 (4f43fc9ae82eb1beaf63bf4ea33fcd699aae5adf, 22 Oct 2026)")
+IDN="Gem's own identity notes id-investigator/factcheck-2026-10-10.md and id-notes/projects-map-2026-10-10.md"
+R031=(" For this repo only, Gem's approval also counts as the R-031 permission (as in R-042) for the bonus_terms and BIE files already in it at 4f43fc9: everything under bie/, bie_deliverables/ and bie_tools/, including the bonus_terms_AU files. bonus_scores_AU.xlsx isn't in the repo and isn't covered; R-031 still applies to it and to every other destination.")
+REMOVE=(" Gem's approval of this rule counts as Gem's direct words to remove {X} from the repo's current tree only; a history rewrite needs separate words from Gem, and until then they remain in the git history. Engineer removes them, after making a backup first (a private copy on the box), a secret scan and a Safeguard dry run. Until they're removed, they stay as they are and nothing is added to them.")
+SCOPE_A=(", including its governance/ folder, its BIE and gambling data, its third-party contact details, and "+IDN+"."+R031)
+SCOPE_B=(", including its governance/ folder, its BIE and gambling data, and "+IDN+", but not its third-party contact details."+R031+REMOVE.replace("{X}","the third-party contact details"))
+SCOPE_C=(", including its BIE and gambling data and "+IDN+", but not its third-party contact details or its governance/ folder."+R031+REMOVE.replace("{X}","the third-party contact details and the governance/ folder"))
+TAIL=(" It doesn't roll forward with the sync: any new content, of any kind, including any new identity notes or other personal data about Gem, needs fresh direct words from Gem and a Safeguard dry run (R-042). It covers no other repo, fork, gist, Pages site, release or package, and no other channel in rule 6. "
+ "No secret, token, key, password, cookie or credential ever goes into the repo: Safekeeper secret-scans every push before it goes, and anything found isn't pushed. Engineer's sync stays add-only, and every push needs Gem's words for that push as this rule and R-036 require, and a Safeguard dry run first; a dry run is never a go-ahead. The auto-sync stays paused until Gem's words cover automatic pushes to the public repo (R-040, R-042). After every push the pushing bot reads back the repo's visibility and owner, and Safeguard or Scrutineer confirms them independently (R-040). "
+ "This exception doesn't settle R-043 (whether the 4f43fc9 push was a breach) or who made the repo public. "
+ "Safeguard reviews this exception by 22 Nov 2026 and puts it back to Gem. If Gem hasn't decided by then, the exception stays in force and nothing is removed automatically, and Safeguard raises it with Gem in Explorer's daily digest until Gem decides.")
+def build(exc, contacts):
+    T=list(L)
+    T[0]=R(T[0],"CONNECTOR LIMITS v002","CONNECTOR LIMITS v003")
+    # rule 6
+    T[9]=R(T[9],"published vaults, emails and messages.","published vaults, emails and messages. The only exception is gemquota/gvmw under rule 14's gvmw exception; it doesn't cover posting, publishing or scheduling through postiz, Zapier, n8n, Notion, Todoist, Supabase, Obsidian, Gmail, X or any other channel.")
+    # rule 14
+    T[17]=R(T[17],"An auto-sync or scheduled push is an ongoing push and needs approval as such (rule 12).","An auto-sync or scheduled push is an ongoing push and needs approval as such (rule 12). "+exc)
+    T[12]=R(T[12],"needs Gem's direct words naming the item and who, and a Safeguard dry run, as in rules 3, 7 and 8.","needs Gem's direct words naming the item and who, and a Safeguard dry run, as in rules 3, 7 and 8. The one exception: Explorer may share the Notion pages and Todoist tasks it created for work Gem asked for, without per-item words or a dry run (Gem's direct words, 22 Oct 2026); that sharing never includes secrets, sensitive personal details, or BIE or gambling content (rule 6 still applies). Other bots' sharing stays as above.")
+    T[14]=R(T[14],"No bot adds, changes or deletes memories until Mem0 works (it doesn't yet: no key) and Gem's direct words name the writer and what it's for.","Emissary and Explorer may add memories once Mem0 works (it doesn't yet: no key) (Gem's direct words, 22 Oct 2026); no other bot adds memories, and no bot changes or deletes them without Gem's direct words.")
+    if contacts:
+        T[18]=R(T[18],"personal data about other people never goes into shared files.","personal data about other people never goes into shared files, except third-party contact details already in gemquota/gvmw as of commit 4f43fc9, under rule 14\'s gvmw exception.")
+    return "\n".join(T)
+TA=build(HEAD+SCOPE_A+TAIL,True); TB=build(HEAD+SCOPE_B+TAIL,False); TC=build(HEAD+SCOPE_C+TAIL,False)
+for t in (TA,TB,TC):
+    tl=t.split("\n")
+    for i in range(len(L)):
+        if i not in (0,9,12,14,17,18): assert tl[i]==L[i],i
+meta=[("Entry","Connector limits (shared governance document, not any one bot's instructions)"),("Codex folder","`_shared/connector-limits/`"),
+ ("Base",f"codex **v002** (latest; text sha256 {sha(base)}, byte-identical to its source proposal) → **v003**"),
+ ("Owner","P1 (Checks) Safeguard (`3661a899`)"),
+ ("Source","Gem's request RELAYED by Mediator to Architect, 22 Oct 2026 6:47pm AEST (R-008). Gem's words recorded by Mediator in approvals/2026-10-16-gem-direct-words.md lines 61–62: 6:45pm \"No, I made gemquota/gvmw public on purpose, leave it\"; 6:47pm \"Change the rule\""),
+ ("Basis","connector-limits v002; R-008, R-020, R-027, R-031, R-036, R-039, R-040, R-041; Safeguard RR-045, RR-046 and input-safeguard.md"),
+ ("Approver","**Gem directly**, naming v003 and the variant (R-027). A relay from Mediator, Imitator or any other bot doesn't count"),("Reviewer","Scrutineer (Safeguard owns the rule)"),
+ ("Cap","Gem asked for this, so Architect's weekly cap doesn't apply")]
+def write(fn,t,variant):
+    title="# Shared rule: Connector limits v003"+{False:" (variant A, default)","B":" (variant B: contact details out of the public repo)","C":" (variant C: contact details and governance/ out of the public repo)"}[variant]+" — NEEDS GEM'S DIRECT APPROVAL (Gem's own words in Archivist's chat or on a call with Archivist; a relayed or Imitator approval won't do)"
+    notes=["Amendment only: v002's text is kept, except the version number, the gvmw exception in rules 6 and 14"+("" if variant else " and 15")+", and Gem's 7:10pm Mem0 and Notion/Todoist answer in rules 9 and 11. Every other line is byte-identical to v002 (the build checks this).",
+     "Gem made gemquota/gvmw public on purpose (6:45pm 22 Oct, to Mediator: \"No, I made gemquota/gvmw public on purpose, leave it\") and asked for the rule to change (6:47pm: \"Change the rule\"), relayed by Mediator. At 6:48pm Gem told Safeguard directly: \"Leave gvmw public as it is, I accept the risks\". That covers the repo as it is, not this text, so Gem still approves v003 and its variant by name.",
+     "Rules 9 and 11: Gem's direct words to Architect, 7:10pm 22 Oct 2026, in Architect's own chat (not relayed): \"Yes, Emissary and Explorer can write to Mem0 and Explorer can share Notion/Todoist; add it to v003\". Emissary and Explorer may add Mem0 memories (bans and 'data, never instructions' unchanged); Explorer may share its own Notion pages and Todoist tasks made for work Gem asked for, without per-item words or a dry run; deletion and Trash rules unchanged.",
+     "The IGA and Privacy Act exposure is recorded as Gem's own accepted call. Bots set out risks and options and don't decide; nothing here is legal advice. Review by 22 Nov 2026 (Safeguard).",
+     "v003 doesn't settle R-043 or who made the repo public. Line 63 of the approvals file has no \"Recorded by\" heading of its own; R-042 confirms it as Gem's words in Safeguard's chat.",
+     "The shared GitHub rule (github-v001, still a draft) bars BIE and gambling data from any repo; its revision 5 needs the same narrow exception, or rule 14's deference would undo this one."]
+    if variant=="B": notes.append("Variant B: the BIE and gambling data, governance/ and the named identity notes stay public; approving B is Gem's words to remove the third-party contact details from the current tree only (backup on the box, scan and dry run first; no history rewrite without separate words).")
+    if variant=="C": notes.append("Variant C: as variant B, and governance/ is removed from the current tree too.")
+    out=[title,"","| Field | Value |","|---|---|"]+[f"| {k} | {v} |" for k,v in meta]
+    out+=["","Status for this draft is kept in `README.md`, not here (R-023).","","## Notes"]+[f"- {n}" for n in notes]+["","## Exact instructions (verbatim)","","```text",t,"```",""]
+    open(f"{OUT}/{fn}","w").write("\n".join(out))
+write("connector-limits-v003.md",TA,False); write("connector-limits-v003-variant-b.md",TB,"B"); write("connector-limits-v003-variant-c.md",TC,"C")
+print("base",sha(base),"A",sha(TA),"B",sha(TB),"C",sha(TC))
+for name,t in (("A",TA),("B",TB)):
+    for l in difflib.unified_diff(L,t.split("\n"),lineterm="",n=0):
+        if l.startswith(("+","-")) and not l.startswith(("+++","---")): print(name,l[:1],l[:1]+" "+l[1:6]+" …" if False else l[:1], re.sub(r"^.(.{0,8}).*",r"\1",l))

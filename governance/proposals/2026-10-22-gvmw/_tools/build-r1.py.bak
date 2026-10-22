@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+"""connector-limits v003 draft (gvmw exception), 22 Oct 2026. Relayed by Mediator (R-008).
+Read-only on codex/; writes only in this folder. Never reads token or credential files."""
+import re, hashlib, glob, difflib
+G="/workspace/governance"; OUT=G+"/proposals/2026-10-22-gvmw"
+def block(p): return re.search(r"```text\n(.*?)\n```",open(p).read(),re.S).group(1)
+def sha(s): return hashlib.sha256(s.encode()).hexdigest()[:12]
+vers=sorted(glob.glob(G+"/codex/_shared/connector-limits/v*.md"))
+assert vers[-1].endswith("v002.md"), vers
+base=block(vers[-1]); assert sha(base)=="d4fbfa8f391f", sha(base)
+assert base==block(G+"/proposals/2026-10-16-connectors2/connector-limits-v002.md")
+L=base.split("\n")
+def R(t,a,b):
+    assert t.count(a)==1,a[:60]; return t.replace(a,b)
+EXC_A=("The gvmw exception (Gem's direct words, 22 Oct 2026): the public repo gemquota/gvmw, and only that repo, may hold the BIE and gambling data and the third-party contact details it held on 22 Oct 2026, "
+ "and Engineer's add-only syncs of the same files and folders from the box. It covers no other repo, fork, gist, Pages site, release or package, no new kind of data, and no other channel in rule 6.")
+EXC_B=("The gvmw exception (Gem's direct words, 22 Oct 2026): the public repo gemquota/gvmw, and only that repo, may hold the BIE and gambling data it held on 22 Oct 2026, "
+ "and Engineer's add-only syncs of the same files and folders from the box. It doesn't cover third-party contact details: those are removed from the public copy or moved to a private repo, on Gem's direct words and a Safeguard dry run (rules 13 and 14), and until Gem decides on a history rewrite they remain in the repo's git history. It covers no other repo, fork, gist, Pages site, release or package, no new kind of data, and no other channel in rule 6.")
+KEEP=(" No secret, token, key, password, cookie or credential ever goes into gemquota/gvmw: the secret scan runs before every push, and anything it finds goes to Safekeeper and isn't pushed. Engineer's sync stays add-only, and its auto-sync is an ongoing push that still needs a Safeguard dry run (rule 12) and the rest of this rule.")
+def build(exc, contacts):
+    T=list(L)
+    T[0]=R(T[0],"CONNECTOR LIMITS v002","CONNECTOR LIMITS v003")
+    # rule 6
+    T[9]=R(T[9],"published vaults, emails and messages.","published vaults, emails and messages. The only exception is gemquota/gvmw under rule 14's gvmw exception; it doesn't cover posting, publishing or scheduling through postiz, Zapier, n8n, Notion, Todoist, Supabase, Obsidian, Gmail, X or any other channel.")
+    # rule 14
+    T[17]=R(T[17],"An auto-sync or scheduled push is an ongoing push and needs approval as such (rule 12).","An auto-sync or scheduled push is an ongoing push and needs approval as such (rule 12). "+exc+KEEP)
+    if contacts:
+        T[18]=R(T[18],"personal data about other people never goes into shared files.","personal data about other people never goes into shared files, except third-party contact details already in gemquota/gvmw under rule 14's gvmw exception.")
+        T[21]=R(T[21],"Personal details of other people from X never go into shared files.","Personal details of other people from X never go into shared files (rule 14's gvmw exception covers only contact details already in gemquota/gvmw).")
+    return "\n".join(T)
+TA,TB=build(EXC_A,True),build(EXC_B,False)
+for t in (TA,TB):
+    tl=t.split("\n")
+    for i in range(len(L)):
+        if i not in (0,9,17,18,21): assert tl[i]==L[i],i
+meta=[("Entry","Connector limits (shared governance document, not any one bot's instructions)"),("Codex folder","`_shared/connector-limits/`"),
+ ("Base",f"codex **v002** (latest; text sha256 {sha(base)}, byte-identical to its source proposal) → **v003**"),
+ ("Owner","P1 (Checks) Safeguard (`3661a899`)"),
+ ("Source","Gem's request RELAYED by Mediator to Architect, 22 Oct 2026 6:47pm AEST (R-008). Gem's words recorded by Mediator in approvals/2026-10-16-gem-direct-words.md lines 61–62: 6:45pm \"No, I made gemquota/gvmw public on purpose, leave it\"; 6:47pm \"Change the rule\""),
+ ("Basis","connector-limits v002; R-008, R-020, R-027, R-036, R-039; Safeguard RR-045"),
+ ("Approver","**Gem directly** (R-027). Not Imitator"),("Reviewer","Scrutineer (Safeguard owns the rule)"),
+ ("Cap","Gem asked for this, so Architect's weekly cap doesn't apply")]
+def write(fn,t,variant):
+    title="# Shared rule: Connector limits v003"+(" (variant B: contact details out of the public repo)" if variant else "")+" — NEEDS GEM'S DIRECT APPROVAL (Gem's own words in Archivist's chat or on a call with Archivist; a relayed or Imitator approval won't do)"
+    notes=["Amendment only: v002's text is kept, except the version number and the gvmw exception in rules 6 and 14"+("" if variant else ", 15 and 18")+". Every other line is byte-identical to v002 (the build checks this).",
+     "Gem made gemquota/gvmw public on purpose (6:45pm 22 Oct) and asked for the rule to change (6:47pm). Both were relayed by Mediator.",
+     "The shared GitHub rule (github-v001, still a draft) bars BIE and gambling data from any repo; its revision 5 needs the same narrow exception, or rule 14's deference would undo this one."]
+    if variant: notes.append("Variant B: the BIE and gambling data may stay public, but third-party contact details are removed from the public copy or moved to a private repo.")
+    out=[title,"","| Field | Value |","|---|---|"]+[f"| {k} | {v} |" for k,v in meta]
+    out+=["","Status for this draft is kept in `README.md`, not here (R-023).","","## Notes"]+[f"- {n}" for n in notes]+["","## Exact instructions (verbatim)","","```text",t,"```",""]
+    open(f"{OUT}/{fn}","w").write("\n".join(out))
+write("connector-limits-v003.md",TA,False); write("connector-limits-v003-variant-b.md",TB,True)
+print("base",sha(base),"A",sha(TA),"B",sha(TB))
+for name,t in (("A",TA),("B",TB)):
+    for l in difflib.unified_diff(L,t.split("\n"),lineterm="",n=0):
+        if l.startswith(("+","-")) and not l.startswith(("+++","---")): print(name,l[:1],l[:1]+" "+l[1:6]+" …" if False else l[:1], re.sub(r"^.(.{0,8}).*",r"\1",l))

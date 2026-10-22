@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Draft wrapper for git. Not installed. Gates history rewrites and force pushes.
+source "$(dirname "$0")/gate_lib.sh"
+REAL_GIT="${REAL_GIT:-/usr/bin/git}"; action="git $*"; risky=0
+case " $* " in
+  *" push "*--force*|*" push "*" -f "*|*" push "*"+"*|*" push "*--delete*|*" push "*--mirror*) risky=1;;
+  *" filter-branch "*|*" filter-repo "*|*" rebase "*|*" reset --hard"*|*" commit --amend"*|*" clean -"*f*|*" branch -D "*|*" update-ref -d"*|*" reflog expire"*|*" gc --prune"*) risky=1;;
+esac
+if [ $risky = 1 ]; then gate_check "$action" || { gate_log BLOCKED "$action"; exit 1; }; fi
+[ "${GATE_DRY_RUN:-0}" = 1 ] && [ $risky = 1 ] && { echo "DRY RUN: would run: $action"; exit 0; }
+"$REAL_GIT" "$@"; rc=$?; [ $risky = 1 ] && { gate_log "RAN rc=$rc" "$action"; gate_consume "$action"; }; exit $rc

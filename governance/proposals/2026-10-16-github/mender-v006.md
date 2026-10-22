@@ -1,13 +1,13 @@
-# Mender v006 — GitHub read-only pointer — FOR IMITATOR'S APPROVAL (Gem may approve instead); approve with or after `github-v001.md`
+# Mender v006 — GitHub read-only pointer — NEEDS GEM'S DIRECT APPROVAL (Gem's own words in Archivist's chat or on a voice call with Archivist; not a relay, not Imitator)
 
 | Field | Value |
 |---|---|
 | Bot | P1 (Ops) Mender (live), `c8401a53` |
 | Codex folder | `mender/` |
-| Base | codex **v005** (latest; byte-checked = live profile 16 Oct 2:54pm) → **v006** |
+| Base | codex **v005** (latest; byte-checked = live profile 22 Oct 8:36pm) → **v006** |
 | Source | Gem in Explorer's chat, 16 Oct 11:46am (relayed to Architect by Explorer; R-008, R-018): "stay signed in to DayneK and gemquota using the full access classic tokens, add rules to governance on what bots are allowed to do what with GitHub." (`approvals/2026-10-16-gem-direct-words.md` line 34). Inputs: `input-safeguard.md`, `input-safekeeper.md`; revised per Scrutineer's review (`reviews/2026-10-16-github-proposal-review.md`) |
 | Basis | R-020, R-019, R-015, R-027, R-034; RR-017, RR-020, RR-021, RR-033 |
-| Approver | **Imitator** (Gem may) |
+| Approver | **Gem directly** (whole batch routed to Gem, R-027) |
 | Deploy order | Deploy only with or after recording `github-v001.md` (codex/_shared/github/ doesn't exist yet; Scorer's condition, reviews/2026-10-16-scrutineer-v005-review.md) |
 | Cap | Gem asked for this, so Architect's weekly cap doesn't apply (R-028) |
 

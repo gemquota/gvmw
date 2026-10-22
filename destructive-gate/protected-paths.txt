@@ -1,0 +1,8 @@
+# One glob per line. Deletes/moves touching these need an approval token.
+/workspace/governance
+/workspace/governance/**
+/workspace/_repo-sync/**
+/workspace/destructive-gate/**
+/workspace/watchdog/**
+/cursor/stores/**
+/home/box/agent-data/**

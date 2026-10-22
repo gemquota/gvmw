@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Draft wrapper for rm. Not installed. Use by putting this dir first on PATH as `rm`.
+# - any recursive or protected-path delete needs a token
+# - everything deleted is first copied to a dated backup (never deleted by this script)
+source "$(dirname "$0")/gate_lib.sh"
+REAL_RM="${REAL_RM:-/bin/rm}"; BACKUP_ROOT="${BACKUP_ROOT:-/workspace/_deleted-backups}"
+action="rm $*"; needs=0
+for a in "$@"; do case "$a" in -*r*|-*R*|--recursive) needs=1;; esac; done
+for a in "$@"; do
+  [[ "$a" == -* ]] && continue
+  p=$(realpath -m -- "$a")
+  [[ "$p" == "/" || "$p" == "/workspace" || "$p" == "$HOME" ]] && { echo "GATE: refusing $p outright" >&2; exit 1; }
+  while IFS= read -r g; do [[ -z "$g" || "$g" == \#* ]] && continue
+    [[ "$p" == $g ]] && needs=1; done < "$GATE_DIR/protected-paths.txt"
+done
+if [ $needs = 1 ]; then gate_check "$action" || { gate_log BLOCKED "$action"; exit 1; }; fi
+stamp="$BACKUP_ROOT/$(date +%Y%m%d-%H%M%S)-$$"; mkdir -p "$stamp"
+for a in "$@"; do [[ "$a" == -* ]] && continue; [ -e "$a" ] && cp -a --parents -- "$(realpath -- "$a")" "$stamp/"; done
+[ "${GATE_DRY_RUN:-0}" = 1 ] && { echo "DRY RUN: would run: $REAL_RM $*  (backup at $stamp)"; exit 0; }
+"$REAL_RM" "$@"; rc=$?; gate_log "RAN rc=$rc backup=$stamp" "$action"; [ $needs = 1 ] && gate_consume "$action"; exit $rc

@@ -1,0 +1,22 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v16 (22 Oct 2026 6:45:04pm; unchanged from v14 detail; P5 live) detail B — identity + explorers + work
+flowchart TB
+  GEM(("Gem"))
+  INQ0["e613112b former · verified"] -.->|v003 re-key| INQ["Inquirer 0314faa4 ACTIVE v004 · verified"]
+  INQ --> INF["Inferer v005 · one owner-only profile file"]
+  INF --> INV["Investigator v004 · LIVE · daily Imitator check"]
+  INV -->|daily check, reviews after the fact| IMI["Imitator v006 · LIVE · decides within limits"]
+  INT["RETIRED Interrogator"] -.-> INV
+  EXP0["82a2c15a former"] -.-> EXP["Explorer v005 04dcca0d ACTIVE · never writes profiles"]
+  MSG["RETIRED Messenger"] -.-> EXP
+  EXP --> EMI["Emissary v006 · LIVE · only postiz poster"]
+  EXP --> ENG["Engineer v007 · LIVE · Vercel = public push"]
+  EXP --> EXT["Extractor v005 · LIVE · BIE data stays on box"]
+  EXP --> GEM
+  MED["Mediator"] -->|cost alerts| EXP
+  ENS["RETIRED Ensembler"] -.-> ENG
+  INQ0 -.->|series accepted if it reappears| INF
+  EMI -.->|decisions within limits| IMI
+  EXT -.->|decisions within limits| IMI
+  IMI -.->|limits stay with| GEM
+  GEM ==>|exact post text| EMI

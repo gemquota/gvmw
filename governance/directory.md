@@ -3,8 +3,8 @@
 Scope: Gem Quota's bot swarm, Brisbane (AEST, UTC+10). Profile files are at
 `/home/box/agent-data/agents/<id>/profile.json` and are read-only here.
 Owner: P1 (Roles) Archivist (`61ef3abd`), from codex-keeper v007 (live 16 Oct 2026, 11:07:36am AEST, on Gem's 11:02am approval); still in v008 (live 11:44:11am). Explorer v004 (live 11:07:52am) gave up this file; Explorer still keeps `phases.md`, the phase source of truth, and this file follows it (R-021).
-Last updated: 22 Oct 2026, 6:33pm AEST, by Archivist (unrecorded live agent "New Bot" listed). Previous versions: `_archive/directory.md.bak-20261022-183253` (Archivist's 16 Oct ~11:56am text), `_archive/directory.md.bak-20261016-1156` (Archivist's 11:50am text), `_archive/directory.md.bak-20261016-1149` (Archivist's 11:48am text), `_archive/directory.md.bak-20261016-1148` (Archivist's 11:15am text), `_archive/directory.md.bak-20261016-1111` (Explorer's 8:08am text) and `_archive/directory.md.bak-20261016-0806`.
-Facts below checked against the box at 6:33pm, 22 Oct 2026: 18 agent folders exist, the 17 active bots listed under Active bots plus the unrecorded "New Bot" listed separately.
+Last updated: 22 Oct 2026, 6:43:49pm AEST, by Archivist (New Bot recorded as retired). Previous versions: `_archive/directory.md.bak-20261022-184349` (Archivist's 6:33pm text), `_archive/directory.md.bak-20261022-183253` (Archivist's 16 Oct ~11:56am text), `_archive/directory.md.bak-20261016-1156` (Archivist's 11:50am text), `_archive/directory.md.bak-20261016-1149` (Archivist's 11:48am text), `_archive/directory.md.bak-20261016-1148` (Archivist's 11:15am text), `_archive/directory.md.bak-20261016-1111` (Explorer's 8:08am text) and `_archive/directory.md.bak-20261016-0806`.
+Facts below checked against the box at 6:43:49pm, 22 Oct 2026: 18 agent folders exist, the 17 active bots listed under Active bots plus the retired "New Bot", whose folder remains (empty subfolders only, no profile.json) though it is gone from the live teammate list.
 
 ## Active bots (17)
 
@@ -34,9 +34,6 @@ Facts below checked against the box at 6:33pm, 22 Oct 2026: 18 agent folders exi
 - P5 (Work) Emissary (codex: grok-bot v006): `28cf987d-ee94-4839-a6d3-33c04a11b9d6`
 - P5 (Work) Engineer (codex: codey v007): `f8e3fdc6-ee60-410e-bdb7-d437fc1500d1`
 - P5 (Work) Extractor (codex: scraper v005): `febac500-d854-4dc7-a6a7-23b3feb07f80`
-
-## Unrecorded live agent, awaiting Gem (1)
-- New Bot: `6b01a4ef-8b54-44e6-ad11-64e7af681d12`. Blank (no title, description or instructions); no codex folder and no role. First seen: profile.json created 19 Oct 2026 01:30:54 AEST; reported by Explorer to Archivist ~6:31pm AEST 22 Oct 2026. Not counted in the 17 active bots or in any phase (phases.md doesn't list it). Gem to decide what it is.
 
 ## Superseded (folders gone)
 - Old Explorer: `82a2c15a-2694-4ac2-b2f4-f7f463f85fce`. Superseded by `04dcca0d` from 9 Oct. Its folder is no longer on the box (codex index: DELETED).
@@ -70,6 +67,9 @@ routing between bots, the state record and stall detection.
 
 ## Retired bots
 
+### Retired 22 Oct 2026 (1; folder remains)
+- New Bot: `6b01a4ef-8b54-44e6-ad11-64e7af681d12` (retired (Gem, 22 Oct 6:37pm, confirmed in Archivist's chat); gone from the live teammate list by about 6:40pm (Explorer's and Archivist's lists), so probably deleted by Gem; deletion not confirmed, and its folder remains (`/home/box/agent-data/agents/6b01a4ef-…` checked 6:43:49pm 22 Oct); awaiting Gem's confirmation of the delete from the sidebar). Blank; never had instructions or a codex folder; no role. Created 19 Oct 2026 01:30:54 AEST; reported by Explorer ~6:31pm 22 Oct. Not counted in the 17 active bots or in any phase. Checked 6:46:08pm: profile.json, settings.json and store.db are gone (folder modified 6:40pm); only empty `assets/` and `attachments/` folders remain, in both `agent-data/agents/` and `sand-data/agents/`. This fits a deletion by Gem but isn't confirmation. verify.py no longer lists it.
+
 ### Retired 9 Oct 2026 (6; folders gone)
 Checked 16 Oct at 11:11am: none of these folders is on the box (codex index: DELETED). The "awaiting deletion" notes below are history.
 - Sourcer: `2fe3e92f-4f39-4e9f-a56b-811438928f5b` (retired outright; renamed RETIRED Sourcer at 9:11am, awaiting deletion by Gem)
@@ -98,6 +98,8 @@ Checked 9 Oct at 9:09am: only Ensembler still had a folder then. Checked 16 Oct 
 ## Change history
 
 ### 22 Oct 2026
+- **6:46:08pm:** Noted that New Bot's profile.json, settings.json and store.db are gone; only empty subfolders remain (backup `_archive/directory.md.bak-20261022-184608`). Deletion still not confirmed by Gem.
+- **6:43:49pm:** Archivist recorded New Bot as retired, on Gem's 6:37pm words in Archivist's chat ("Yes, record New Bot as retired"), confirming Explorer's relay of "Retire it". It was gone from the live teammate list by about 6:40pm, so probably deleted by Gem; deletion not confirmed, and its folder remains.
 - **~6:31pm:** Explorer reported a blank live agent, "New Bot" (`6b01a4ef`, created 19 Oct 01:30:54am), to Archivist. Listed as unrecorded, awaiting Gem.
 
 ### 16 Oct 2026

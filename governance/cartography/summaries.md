@@ -1,6 +1,15 @@
-# Bot summaries (role map v15, 22 Oct 2026 6:34:10pm AEST)
+# Bot summaries (role map v18, 22 Oct 2026 8:07:32pm AEST)
 
-## v15 — 22 Oct 2026 6:34:10pm AEST (current)
+## v18 — 22 Oct 2026 8:07:32pm AEST (current)
+Gem approved Arbiter v006, Emissary v007 and Extractor v006 directly in Archivist's chat at 8:06pm 22 Oct ("Yes, I approve all three"), which clears Scrutineer's approval-route flag (R-044). Notes updated; no structural change (51 edges). v1–v17 kept as `*-vN.*`.
+
+## v17 — 22 Oct 2026 8:01:02pm AEST
+Redundancy batch 2026-10-22 rev 2 is LIVE (deployed 7:57:01–7:57:52pm; Scrutineer verified, reviews/2026-10-22-redundancy-deploy-check.md): Inferer v006, Arbiter v006, Architect v005, Emissary v007, Extractor v006 and Explorer v006. Explorer assigns new work (R-044) and Mender keeps operational routing. New edges: Emissary → Explorer and Extractor → Explorer (hand back), and Architect → Archivist (drafts renames when Gem asks). Arbiter's stall clause is gone. No other change; v1–v16 kept as `*-vN.*`. 17 active, all live + 1 retired with no codex folder + 9 former/retired nodes, 51 edges.
+
+## v16 — 22 Oct 2026 6:45:04pm AEST
+**New Bot** (`6b01a4ef`) recorded as **retired** (Gem, 22 Oct 6:37pm, confirmed in Archivist's chat). It was gone from the live teammate list by about 6:40pm, so it was probably deleted by Gem, but deletion isn't confirmed and its folder remains. Drawn dotted grey in the "No codex folder" row, with no role and no edges. No codex change; v1–v15 kept as `*-vN.*`. 17 active, all live + 1 retired with no codex folder + 9 former/retired nodes, 48 edges.
+
+## v15 — 22 Oct 2026 6:34:10pm AEST
 Unrecorded live agent listed under Archivist's brief: **New Bot** (`6b01a4ef-8b54-44e6-ad11-64e7af681d12`), blank, with no codex folder. It's drawn as a node with no role and no relationships, awaiting Gem. First seen: profile.json created 19 Oct 2026 01:30:54 AEST; reported by Explorer to Archivist ~6:31pm AEST 22 Oct. No codex change; v1–v14 kept as `*-vN.*`. **17 active, all live** + 1 unrecorded + 9 former/retired nodes, 48 edges.
 
 ## v14 — 16 Oct 2026 3:58:15pm AEST

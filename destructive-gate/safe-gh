@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Draft wrapper for the GitHub CLI. Gates visibility changes, deletes, archive, transfer, secret/key edits.
+source "$(dirname "$0")/gate_lib.sh"
+REAL_GH="${REAL_GH:-$(command -v gh)}"; action="gh $*"; risky=0
+case " $* " in
+  *" repo delete "*|*" repo archive "*|*" repo rename "*|*"--visibility"*|*" repo edit "*public*|*" api "*-X\ DELETE*|*" api "*--method\ DELETE*|*" secret "*|*" ssh-key "*|*" auth token"*|*" release delete"*|*" workflow run "*) risky=1;;
+esac
+if [ $risky = 1 ]; then gate_check "$action" || { gate_log BLOCKED "$action"; exit 1; }; fi
+[ "${GATE_DRY_RUN:-0}" = 1 ] && [ $risky = 1 ] && { echo "DRY RUN: would run: $action"; exit 0; }
+"$REAL_GH" "$@"; rc=$?; [ $risky = 1 ] && { gate_log "RAN rc=$rc" "$action"; gate_consume "$action"; }; exit $rc

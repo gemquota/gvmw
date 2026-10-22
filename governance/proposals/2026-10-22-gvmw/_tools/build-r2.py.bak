@@ -1,0 +1,65 @@
+#!/usr/bin/env python3
+"""connector-limits v003 draft (gvmw exception), 22 Oct 2026. Relayed by Mediator (R-008).
+Read-only on codex/; writes only in this folder. Never reads token or credential files."""
+import re, hashlib, glob, difflib
+G="/workspace/governance"; OUT=G+"/proposals/2026-10-22-gvmw"
+def block(p): return re.search(r"```text\n(.*?)\n```",open(p).read(),re.S).group(1)
+def sha(s): return hashlib.sha256(s.encode()).hexdigest()[:12]
+vers=sorted(glob.glob(G+"/codex/_shared/connector-limits/v*.md"))
+assert vers[-1].endswith("v002.md"), vers
+base=block(vers[-1]); assert sha(base)=="d4fbfa8f391f", sha(base)
+assert base==block(G+"/proposals/2026-10-16-connectors2/connector-limits-v002.md")
+L=base.split("\n")
+def R(t,a,b):
+    assert t.count(a)==1,a[:60]; return t.replace(a,b)
+C="4f43fc9ae82eb1beaf63bf4ea33fcd699aae5adf"
+HEAD=("The gvmw exception (Gem's direct words, 22 Oct 2026; R-040). Gem made the repo gemquota/gvmw public on purpose and accepts the risks of keeping it public, including the Interactive Gambling Act exposure of the BIE and gambling data and the Privacy Act exposure of the third-party contact details; that's Gem's own call, and bots only set out risks and options. "
+ "The exception covers only that repo, and only the content public in it as of commit 4f43fc9 (4f43fc9ae82eb1beaf63bf4ea33fcd699aae5adf, 22 Oct 2026)")
+SCOPE_A=(", including its governance/ folder, its BIE and gambling data, and its third-party contact details. "
+ "For this repo, Gem's approval also counts as the R-031 permission for the bonus_terms source files, which let anyone rebuild bonus_scores_AU.xlsx.")
+SCOPE_B=(", including its governance/ folder and its BIE and gambling data, but not third-party contact details: those are removed from the public copy or moved to a private repo, on Gem's direct words and a Safeguard dry run (rules 13 and 14), and they stay in the git history until Gem decides on a history rewrite. "
+ "For this repo, Gem's approval also counts as the R-031 permission for the bonus_terms source files, which let anyone rebuild bonus_scores_AU.xlsx.")
+SCOPE_C=(", including its BIE and gambling data, but not third-party contact details or the governance/ folder: those are removed from the public copy or moved to a private repo, on Gem's direct words and a Safeguard dry run (rules 13 and 14), and they stay in the git history until Gem decides on a history rewrite. "
+ "For this repo, Gem's approval also counts as the R-031 permission for the bonus_terms source files, which let anyone rebuild bonus_scores_AU.xlsx.")
+TAIL=(" It doesn't roll forward with the sync: any new BIE, gambling or third-party contact content needs fresh direct words from Gem and a Safeguard dry run. It covers no other repo, fork, gist, Pages site, release or package, no new kind of data, and no other channel in rule 6. "
+ "No secret, token, key, password, cookie or credential ever goes into the repo: Safekeeper secret-scans every push before it goes, and anything found isn't pushed. Engineer's sync stays add-only, every sync push gets a Safeguard dry run first, and the auto-sync stays paused until Gem's words cover a recurring sync to the public repo (R-040, R-041). After every push the pushing bot reads back the repo's visibility and owner, and Safeguard or Scrutineer confirms them independently (R-040). "
+ "Safeguard reviews this exception by 22 Nov 2026 and puts it back to Gem.")
+def build(exc, contacts):
+    T=list(L)
+    T[0]=R(T[0],"CONNECTOR LIMITS v002","CONNECTOR LIMITS v003")
+    # rule 6
+    T[9]=R(T[9],"published vaults, emails and messages.","published vaults, emails and messages. The only exception is gemquota/gvmw under rule 14's gvmw exception; it doesn't cover posting, publishing or scheduling through postiz, Zapier, n8n, Notion, Todoist, Supabase, Obsidian, Gmail, X or any other channel.")
+    # rule 14
+    T[17]=R(T[17],"An auto-sync or scheduled push is an ongoing push and needs approval as such (rule 12).","An auto-sync or scheduled push is an ongoing push and needs approval as such (rule 12). "+exc)
+    if contacts:
+        T[18]=R(T[18],"personal data about other people never goes into shared files.","personal data about other people never goes into shared files, except third-party contact details already in gemquota/gvmw under rule 14's gvmw exception.")
+        T[21]=R(T[21],"Personal details of other people from X never go into shared files.","Personal details of other people from X never go into shared files (rule 14's gvmw exception covers only contact details already in gemquota/gvmw).")
+    return "\n".join(T)
+TA=build(HEAD+SCOPE_A+TAIL,True); TB=build(HEAD+SCOPE_B+TAIL,False); TC=build(HEAD+SCOPE_C+TAIL,False)
+for t in (TA,TB,TC):
+    tl=t.split("\n")
+    for i in range(len(L)):
+        if i not in (0,9,17,18,21): assert tl[i]==L[i],i
+meta=[("Entry","Connector limits (shared governance document, not any one bot's instructions)"),("Codex folder","`_shared/connector-limits/`"),
+ ("Base",f"codex **v002** (latest; text sha256 {sha(base)}, byte-identical to its source proposal) → **v003**"),
+ ("Owner","P1 (Checks) Safeguard (`3661a899`)"),
+ ("Source","Gem's request RELAYED by Mediator to Architect, 22 Oct 2026 6:47pm AEST (R-008). Gem's words recorded by Mediator in approvals/2026-10-16-gem-direct-words.md lines 61–62: 6:45pm \"No, I made gemquota/gvmw public on purpose, leave it\"; 6:47pm \"Change the rule\""),
+ ("Basis","connector-limits v002; R-008, R-020, R-027, R-031, R-036, R-039, R-040, R-041; Safeguard RR-045, RR-046 and input-safeguard.md"),
+ ("Approver","**Gem directly**, naming v003 and the variant (R-027). A relay from Mediator, Imitator or any other bot doesn't count"),("Reviewer","Scrutineer (Safeguard owns the rule)"),
+ ("Cap","Gem asked for this, so Architect's weekly cap doesn't apply")]
+def write(fn,t,variant):
+    title="# Shared rule: Connector limits v003"+{False:" (variant A, default)","B":" (variant B: contact details out of the public repo)","C":" (variant C: contact details and governance/ out of the public repo)"}[variant]+" — NEEDS GEM'S DIRECT APPROVAL (Gem's own words in Archivist's chat or on a call with Archivist; a relayed or Imitator approval won't do)"
+    notes=["Amendment only: v002's text is kept, except the version number and the gvmw exception in rules 6 and 14"+("" if variant else ", 15 and 18")+". Every other line is byte-identical to v002 (the build checks this).",
+     "Gem made gemquota/gvmw public on purpose (6:45pm 22 Oct, to Mediator: \"No, I made gemquota/gvmw public on purpose, leave it\") and asked for the rule to change (6:47pm: \"Change the rule\"), relayed by Mediator. At 6:48pm Gem told Safeguard directly: \"Leave gvmw public as it is, I accept the risks\". That covers the repo as it is, not this text, so Gem still approves v003 and its variant by name.",
+     "The IGA and Privacy Act exposure is recorded as Gem's own accepted call. Bots set out risks and options and don't decide; nothing here is legal advice. Review by 22 Nov 2026 (Safeguard).",
+     "The shared GitHub rule (github-v001, still a draft) bars BIE and gambling data from any repo; its revision 5 needs the same narrow exception, or rule 14's deference would undo this one."]
+    if variant=="B": notes.append("Variant B: the BIE and gambling data and governance/ may stay public, but third-party contact details are removed from the public copy or moved to a private repo.")
+    if variant=="C": notes.append("Variant C: variant B, plus governance/ is removed from the public copy or moved to a private repo.")
+    out=[title,"","| Field | Value |","|---|---|"]+[f"| {k} | {v} |" for k,v in meta]
+    out+=["","Status for this draft is kept in `README.md`, not here (R-023).","","## Notes"]+[f"- {n}" for n in notes]+["","## Exact instructions (verbatim)","","```text",t,"```",""]
+    open(f"{OUT}/{fn}","w").write("\n".join(out))
+write("connector-limits-v003.md",TA,False); write("connector-limits-v003-variant-b.md",TB,"B"); write("connector-limits-v003-variant-c.md",TC,"C")
+print("base",sha(base),"A",sha(TA),"B",sha(TB),"C",sha(TC))
+for name,t in (("A",TA),("B",TB)):
+    for l in difflib.unified_diff(L,t.split("\n"),lineterm="",n=0):
+        if l.startswith(("+","-")) and not l.startswith(("+++","---")): print(name,l[:1],l[:1]+" "+l[1:6]+" …" if False else l[:1], re.sub(r"^.(.{0,8}).*",r"\1",l))

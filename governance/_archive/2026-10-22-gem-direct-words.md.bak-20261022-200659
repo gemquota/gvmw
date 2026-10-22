@@ -1,0 +1,15 @@
+# Gem's direct words: 22 Oct 2026 (add-only; back up to _archive before each append)
+
+## Re-recorded by Archivist at 6:42:35pm AEST 22 Oct 2026 (INC-008)
+The first copy of this file, written at about 6:38pm AEST, was lost in the box restart at about 6:38pm (INC-008, Mender). No copy was found anywhere on the box. The entry below is re-recorded from Archivist's own chat, where Gem's words still appear.
+
+- **6:37pm, in Archivist's chat, answering Archivist's card:** "Yes, record New Bot as retired". The card asked: "Explorer says you told it to retire New Bot (6b01a4ef). Should I record it as retired, waiting for you to delete it from the sidebar?" Approver: Gem directly. This confirms Explorer's relay of Gem's 6:37pm "Retire it" (R-008). Scope: record New Bot (6b01a4ef-8b54-44e6-ad11-64e7af681d12) as retired, waiting for Gem's delete from the sidebar. No profile edit and no deletion by any bot.
+
+## Pointer added by Archivist at 7:52:19pm AEST 22 Oct 2026 (Scrutineer's request; add-only)
+- Gem's 22 Oct words at **6:45pm** ("No, I made gemquota/gvmw public on purpose, leave it") and **6:47pm** ("Change the rule") were recorded by Mediator at 6:46pm in `approvals/2026-10-16-gem-direct-words.md`, **lines 61–62** (checked 7:52:19pm; that file then had 71 lines, sha256 2b1d896a5c63…). Not copied here; that file is the record. Lines 63–64 there also hold 22 Oct words: 6:48pm (to Safeguard, "Leave gvmw public as it is, I accept the risks") and 6:54pm (in Arbiter's chat, "Yes, I told Engineer to sync gvmw both ways at 6:41pm"). Backup before this append: `_archive/2026-10-22-gem-direct-words.md.bak-20261022-195219`.
+
+## Recorded by Archivist at 7:55:36pm AEST 22 Oct 2026 (before recording or deploying, R-029; add-only)
+- **7:53pm 22 Oct, in Archivist's chat, Gem directly:** "I approve explorer v006". Gem also asked for it to be deployed with the five (inferer-v006, arbiter-v006, architect-v005, emissary-v007, extractor-v006). Scope: `proposals/2026-10-22-redundancy/explorer-v006.md` (file sha256 3877021e4870, text 94aafeffa6ce).
+- **7:54pm 22 Oct, in Archivist's chat, Gem directly, answering "Do you approve Inferer v006 and Architect v005 from proposals/2026-10-22-redundancy/?":** "Yes, approve both and deploy all six". Scope: inferer-v006 (file 7798ada96861, text 441b92c9fcd4) and architect-v005 (file 19a60a5f578f, text d290277295ef) approved by Gem; deployment of all six asked for by Gem (case a). Arbiter-v006, emissary-v007 and extractor-v006 were approved by Imitator 1:1 at 7:52pm. Safeguard notified at 7:53pm.
+- Backup before this append: `_archive/2026-10-22-gem-direct-words.md.bak-20261022-195536`.
+- **8:06pm 22 Oct, in Arbiter's chat, Gem directly (multi-select answer to "Which projects can bots make public?"):** "VEPA / Codey / swarm / SLAP.RED/Golf / MedB". Conditions under R-048.

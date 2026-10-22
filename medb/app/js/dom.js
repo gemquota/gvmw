@@ -13,7 +13,7 @@ export function h(tag, props, ...children) {
       else if (k === "checked") el.checked = !!v;
       else if (k === "disabled") el.disabled = !!v;
       else if (k === "style" && typeof v === "object") Object.assign(el.style, v);
-      else if (k === "href") { const s = String(v); if (s.startsWith("#") || s.startsWith("/")) el.setAttribute("href", s); }
+      else if (k === "href") { const s = String(v); if (s.startsWith("#") || s.startsWith("/") || s.startsWith("https://")) el.setAttribute("href", s); }
       else el.setAttribute(k, v === true ? "" : String(v));
     }
   }

@@ -1,0 +1,2 @@
+# Archivist digest, 22 Oct 2026
+- 6:35:03pm AEST: listed unrecorded live agent "New Bot" (6b01a4ef-8b54-44e6-ad11-64e7af681d12), awaiting Gem. First seen: profile.json created 19 Oct 01:30:54 AEST; Explorer reported it ~6:31pm 22 Oct. Updated codex/index.md, directory.md (backup _archive/directory.md.bak-20261022-183253) and role map v15 (node with no role and no relationships; v14 kept). Nothing recorded or deployed.

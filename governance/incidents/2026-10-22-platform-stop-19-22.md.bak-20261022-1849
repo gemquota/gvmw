@@ -1,0 +1,18 @@
+# INC-009: Platform stop 19–22 Oct (unpaid invoice), missed chain and watchdog runs
+
+Opened: Thu 22 Oct 2026, about 6:45pm AEST, by P1 (Ops) Mender.
+Status: **Open.** Mender does not close this; Scrutineer or Gem does.
+Linked: INC-008 (box restart and restore, 22 Oct 6:38pm). Related history: INC-004, INC-006, INC-007 (earlier unpaid-invoice stops).
+
+## What happened (facts only)
+- No chain artefacts exist for Mon 19, Tue 20, Wed 21 or Thu 22 Oct: no assessments/, reviews/, proposals/, chain approvals, codex/ entries or digest/sent/ files.
+- Mender's weekday 10:50am routine failed with "unpaid Cursor invoice" on recent runs, including 22 Oct at 10:52:33am. Last success: 16 Oct 10:56am.
+- Scorer's 22 Oct inbox note also lists 19–22 Oct (and the 19 Oct weekly scorecard) as missed while billing was down.
+- R-011: no missing-Scorer report to Mender is on file for any of these days.
+- Lookback files written in hindsight at about 6:45pm 22 Oct: state/chain/2026-10-19.md to 2026-10-22.md.
+
+## Cause
+No cause is recorded beyond the recorded invoice failures. Whether the invoice is paid (triage B6) is with Gem.
+
+## Note on the INC-007 record
+The restored log.md shows INC-007 as Closed 16 Oct 2026, 11:08am, so the 16 Oct closure record survived the restore. INC-007's note said Scrutineer would check the Mon 19 Oct run and reopen with Mender if missed; 19 Oct was missed, but Mender has not rewritten INC-007 and leaves any reopening to Scrutineer.

@@ -1,11 +1,11 @@
 {
-  "version": "v15, 22 Oct 2026 6:34:10pm AEST",
-  "previous_version": "v14, 16 Oct 2026 3:58:15pm AEST",
+  "version": "v18, 22 Oct 2026 8:07:32pm AEST",
+  "previous_version": "v17, 22 Oct 2026 8:01:02pm AEST",
   "maintainer": "P1 (Roles) Archivist (61ef3abd-87b8-49f1-b8d6-b52969afa315)",
   "sources": {
     "phases": "/workspace/governance/phases.md",
     "codex_index": "/workspace/governance/codex/index.md",
-    "note": "Descriptive only, from latest codex + phases.md. 17 active, all live: P3 and P4 LIVE since 15 Oct 2026, 11:30pm AEST; P5 LIVE since 16 Oct 2026, 11:47am AEST (Gem, \"Initiate p5\"). 16 Oct: Imitator's first 6 approvals deployed 09:14 on Gem's 9:13am words; Gem's 11:02am and 11:03am approvals (12 versions) recorded first (R-029) and deployed 11:06:44–11:08:50. R-027: changes to Imitator or its checkers (Investigator, Scorer, Scrutineer, Safekeeper, Safeguard) are Gem-only; R-028: Imitator can't approve widening its own role. Connector limits (shared, owner Safeguard; RR-028): Emissary is the only postiz poster. Archivist owns directory.md (v007). Gem's 11:41am approval: Archivist v008 and Explorer v005 live 11:44; Archivist may deploy Imitator-approved versions within limits (1:1 check + Safeguard dry run). Voice approvals count (R-018); public/shared repo pushes go to Safeguard first (R-020). Investigator v004 live 11:49:23 on Gem's 11:48am words: daily Imitator accuracy check and daily score to Scorer. 3:54pm: connector limits v002 recorded (Gem directly; shared rule, no profile; verified by Scrutineer (PASS, reviews/2026-10-16-connector-limits-v002-check.md, written 3:58:26pm)): who uses which connector, per its rules 1–19. 22 Oct: unrecorded live agent \"New Bot\" (6b01a4ef, created 19 Oct 01:30:54) listed, awaiting Gem; no role."
+    "note": "Descriptive only, from latest codex + phases.md. 17 active, all live: P3 and P4 LIVE since 15 Oct 2026, 11:30pm AEST; P5 LIVE since 16 Oct 2026, 11:47am AEST (Gem, \"Initiate p5\"). 16 Oct: Imitator's first 6 approvals deployed 09:14 on Gem's 9:13am words; Gem's 11:02am and 11:03am approvals (12 versions) recorded first (R-029) and deployed 11:06:44–11:08:50. R-027: changes to Imitator or its checkers (Investigator, Scorer, Scrutineer, Safekeeper, Safeguard) are Gem-only; R-028: Imitator can't approve widening its own role. Connector limits (shared, owner Safeguard; RR-028): Emissary is the only postiz poster. Archivist owns directory.md (v007). Gem's 11:41am approval: Archivist v008 and Explorer v005 live 11:44; Archivist may deploy Imitator-approved versions within limits (1:1 check + Safeguard dry run). Voice approvals count (R-018); public/shared repo pushes go to Safeguard first (R-020). Investigator v004 live 11:49:23 on Gem's 11:48am words: daily Imitator accuracy check and daily score to Scorer. 3:54pm: connector limits v002 recorded (Gem directly; shared rule, no profile; verified by Scrutineer (PASS, reviews/2026-10-16-connector-limits-v002-check.md, written 3:58:26pm)): who uses which connector, per its rules 1–19. 22 Oct: unrecorded live agent \"New Bot\" (6b01a4ef, created 19 Oct 01:30:54) listed, awaiting Gem; no role. 22 Oct 6:45:04pm: New Bot recorded as retired (Gem 6:37pm); deletion not confirmed. 22 Oct 8:01:02pm: redundancy batch rev 2 deployed 7:57pm (Inferer v006, Arbiter v006, Architect v005, Emissary v007, Extractor v006, Explorer v006); Scrutineer verified. 22 Oct 8:07:32pm: Gem approved Arbiter v006, Emissary v007, Extractor v006 directly at 8:06pm; Scrutineer's approval-route flag cleared."
   },
   "phases": [
     {
@@ -126,15 +126,7 @@
     "Simulator (38bd0474)",
     "Surveyor (1283e02b)"
   ],
-  "unrecorded_live_agents": [
-    {
-      "id": "6b01a4ef-8b54-44e6-ad11-64e7af681d12",
-      "name": "New Bot",
-      "first_seen": "profile.json created 19 Oct 2026 01:30:54 AEST; reported by Explorer ~6:31pm AEST 22 Oct 2026",
-      "status": "unrecorded live agent, awaiting Gem",
-      "role": null
-    }
-  ],
+  "unrecorded_live_agents": [],
   "nodes": [
     {
       "id": "gem",
@@ -234,11 +226,11 @@
       "category": "Roles",
       "phase": "P1",
       "phase_status": "LIVE (since 3 Oct 2026)",
-      "codex": "/workspace/governance/codex/instruction-architect/v004.md",
+      "codex": "/workspace/governance/codex/instruction-architect/v005.md",
       "former_name": "Instruction Architect",
       "absorbed": [],
       "map_status": "active",
-      "note": "LIVE v004 (09:14:41). Designs and rewrites instructions. Its 2 R-028 changes (Imitator-only routing of non-checker proposals; the A5c cap of about 3 proposals a week) were confirmed by Gem before 11:02am, 16 Oct (\"Yes, I confirm both\"); no text change. Connector limits v002: drafts changes to the rule; Gem alone approves (R-027)."
+      "note": "LIVE v005 (deployed 22 Oct 19:57:12): stall line now cites R-006 only; drafts a live profile rename when Gem asks, and Archivist records and applies it. Earlier: LIVE v004 (09:14:41). Designs and rewrites instructions. Its 2 R-028 changes (Imitator-only routing of non-checker proposals; the A5c cap of about 3 proposals a week) were confirmed by Gem before 11:02am, 16 Oct (\"Yes, I confirm both\"); no text change. Connector limits v002: drafts changes to the rule; Gem alone approves (R-027)."
     },
     {
       "id": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
@@ -248,14 +240,14 @@
       "category": "Work",
       "phase": "P1",
       "phase_status": "LIVE (since 3 Oct 2026)",
-      "codex": "/workspace/governance/codex/explorer-copy/v005.md",
+      "codex": "/workspace/governance/codex/explorer-copy/v006.md",
       "former_name": "P1 (Work) Explorer copy",
       "absorbed": [
         "Messenger (9 Oct; daily digest)"
       ],
       "map_status": "active",
-      "note": "Active Explorer v002: R-014 profile-edit ban; voice rules; asks Imitator (live) for decisions within its limits. v004 (Gem 11:02am + 11:03am, 16 Oct; live since 11:07:52): hands directory.md to Archivist, keeps phases.md; RR-028 line. v005 (Gem 11:41am, 16 Oct; live since 11:44:26): deployment sentence matches Archivist v008; Explorer still never writes any profile (R-014). Connector limits v002: may write private Notion/Todoist items for work Gem asked for directly (Gem's question 2: yes).",
-      "live_codex": "/workspace/governance/codex/explorer-copy/v005.md"
+      "note": "LIVE v006 (deployed 22 Oct 19:57:52): Explorer assigns new work; Mender keeps operational routing (run order, recovery, rerouting stalled or failed work, stall detection; R-006, R-044). Earlier: Active Explorer v002: R-014 profile-edit ban; voice rules; asks Imitator (live) for decisions within its limits. v004 (Gem 11:02am + 11:03am, 16 Oct; live since 11:07:52): hands directory.md to Archivist, keeps phases.md; RR-028 line. v005 (Gem 11:41am, 16 Oct; live since 11:44:26): deployment sentence matches Archivist v008; Explorer still never writes any profile (R-014). Connector limits v002: may write private Notion/Todoist items for work Gem asked for directly (Gem's question 2: yes).",
+      "live_codex": "/workspace/governance/codex/explorer-copy/v006.md"
     },
     {
       "id": "affe0344-6b5f-4251-8ecb-3e23dfa5db3c",
@@ -282,13 +274,13 @@
       "category": "Roles",
       "phase": "P2",
       "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
-      "codex": "/workspace/governance/codex/arbiter/v005.md",
+      "codex": "/workspace/governance/codex/arbiter/v006.md",
       "former_name": "(Roles) Arbiter",
       "absorbed": [
         "Adjudicator"
       ],
       "map_status": "active",
-      "note": "Precedence rulings; never approves. Absorbed Adjudicator."
+      "note": "LIVE v006 (deployed 22 Oct 19:57:05): stall clause dropped (Mender owns stalls, R-006). Approval-route flag cleared: Gem approved directly 8:06pm 22 Oct (\"Yes, I approve all three\"). Earlier: Precedence rulings; never approves. Absorbed Adjudicator."
     },
     {
       "id": "94516ca6-6355-43c5-b387-d2b605057784",
@@ -298,12 +290,12 @@
       "category": "ID",
       "phase": "P2",
       "phase_status": "LIVE (started 4 Oct 2026, 3:12pm AEST)",
-      "codex": "/workspace/governance/codex/identity-inferer/v005.md",
+      "codex": "/workspace/governance/codex/identity-inferer/v006.md",
       "former_name": "Identity Inferer",
       "absorbed": [],
       "map_status": "active",
-      "note": "Structures identity from Inquirer 0314faa4; both Inquirers verified (R-012 second update); e613112b series accepted if it reappears. v005 (Gem 11:02am, 16 Oct; live since 11:07:23): one owner-only running-profile file, no shared copies (J5); the existing shared copy is left for Gem.",
-      "live_codex": "/workspace/governance/codex/identity-inferer/v005.md"
+      "note": "LIVE v006 (deployed 22 Oct 19:57:01): one certainty vocabulary shared word for word with Investigator and Imitator (their matching drafts, investigator-v005 and imitator-v007, are not deployed yet); Inferer says it is the only route for gaps about Gem. Earlier: Structures identity from Inquirer 0314faa4; both Inquirers verified (R-012 second update); e613112b series accepted if it reappears. v005 (Gem 11:02am, 16 Oct; live since 11:07:23): one owner-only running-profile file, no shared copies (J5); the existing shared copy is left for Gem.",
+      "live_codex": "/workspace/governance/codex/identity-inferer/v006.md"
     },
     {
       "id": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
@@ -380,12 +372,12 @@
       "category": "Work",
       "phase": "P5",
       "phase_status": "LIVE (started 16 Oct 2026, 11:47am AEST)",
-      "codex": "/workspace/governance/codex/grok-bot/v006.md",
+      "codex": "/workspace/governance/codex/grok-bot/v007.md",
       "former_name": "Grok Bot",
       "absorbed": [],
       "map_status": "active",
-      "note": "May ask Imitator (live since P4) for decisions within its limits. v006 (Gem 11:03am, 16 Oct; live since 11:08:15): the only postiz poster (J1), posting only text Gem approved word for word; cites connector limits. LIVE since 16 Oct 2026, 11:47am AEST (P5; phases.md, Gem in Explorer's chat: \"Initiate p5\"). Connector limits v002: the only postiz poster (Safeguard dry run every post); may write private Notion/Todoist items for Gem's direct work.",
-      "live_codex": "/workspace/governance/codex/grok-bot/v006.md"
+      "note": "LIVE v007 (deployed 22 Oct 19:57:23): owns research write-ups; assigns no work; hands specialist work back to Explorer (R-044). Approval-route flag cleared: Gem approved directly 8:06pm 22 Oct (\"Yes, I approve all three\"). Earlier: May ask Imitator (live since P4) for decisions within its limits. v006 (Gem 11:03am, 16 Oct; live since 11:08:15): the only postiz poster (J1), posting only text Gem approved word for word; cites connector limits. LIVE since 16 Oct 2026, 11:47am AEST (P5; phases.md, Gem in Explorer's chat: \"Initiate p5\"). Connector limits v002: the only postiz poster (Safeguard dry run every post); may write private Notion/Todoist items for Gem's direct work.",
+      "live_codex": "/workspace/governance/codex/grok-bot/v007.md"
     },
     {
       "id": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
@@ -412,12 +404,12 @@
       "category": "Work",
       "phase": "P5",
       "phase_status": "LIVE (started 16 Oct 2026, 11:47am AEST)",
-      "codex": "/workspace/governance/codex/scraper/v005.md",
+      "codex": "/workspace/governance/codex/scraper/v006.md",
       "former_name": "Scraper",
       "absorbed": [],
       "map_status": "active",
-      "note": "May ask Imitator (live since P4) taste questions/decisions within limits; legal/ToS/account stay with Gem. v005 (Gem 11:03am, 16 Oct; live since 11:08:42): BIE data stays on the box; cites connector limits. LIVE since 16 Oct 2026, 11:47am AEST (P5; phases.md, Gem in Explorer's chat: \"Initiate p5\"). Connector limits v002: runs Apify actors (Gem's words for each run's spend plus Mediator's check); may write private Notion/Todoist items for Gem's direct work.",
-      "live_codex": "/workspace/governance/codex/scraper/v005.md"
+      "note": "LIVE v006 (deployed 22 Oct 19:57:37): collection and scraping only; jobs from Gem or Explorer; code changes back to Explorer for Engineer (R-044). Approval-route flag cleared: Gem approved directly 8:06pm 22 Oct (\"Yes, I approve all three\"). Earlier: May ask Imitator (live since P4) taste questions/decisions within limits; legal/ToS/account stay with Gem. v005 (Gem 11:03am, 16 Oct; live since 11:08:42): BIE data stays on the box; cites connector limits. LIVE since 16 Oct 2026, 11:47am AEST (P5; phases.md, Gem in Explorer's chat: \"Initiate p5\"). Connector limits v002: runs Apify actors (Gem's words for each run's spend plus Mediator's check); may write private Notion/Todoist items for Gem's direct work.",
+      "live_codex": "/workspace/governance/codex/scraper/v006.md"
     },
     {
       "id": "f3810109-17a5-427f-9148-d58f645658e3",
@@ -556,17 +548,17 @@
     },
     {
       "id": "6b01a4ef-8b54-44e6-ad11-64e7af681d12",
-      "name": "New Bot",
+      "name": "RETIRED New Bot",
       "key": "NEW",
       "type": "bot",
       "category": "Unrecorded",
       "phase": null,
-      "phase_status": "None (not in phases.md)",
+      "phase_status": "Retired 22 Oct 6:37pm (Gem); deletion not confirmed, folder remains",
       "codex": null,
-      "former_name": null,
+      "former_name": "New Bot",
       "absorbed": [],
-      "map_status": "unrecorded",
-      "note": "Unrecorded live agent, awaiting Gem. Name \"New Bot\"; blank (no title, description or instructions); no codex folder, so no role and no relationships on this map. First seen: profile.json created 19 Oct 2026 01:30:54 AEST; reported by Explorer to Archivist ~6:31pm AEST 22 Oct 2026. Not in phases.md. verify.py labels it GROUP (INFO) only because its description is empty."
+      "map_status": "retired_nocodex",
+      "note": "Retired (Gem, 22 Oct 6:37pm, confirmed in Archivist's chat: \"Yes, record New Bot as retired\"; confirms Explorer's relay of \"Retire it\"). Gone from the live teammate list by about 6:40pm, so probably deleted by Gem; deletion not confirmed, and its folder remains. Awaiting Gem's confirmation of the delete from the sidebar. Blank; never had instructions, so no codex folder, no role and no relationships. Created 19 Oct 2026 01:30:54 AEST; reported by Explorer ~6:31pm 22 Oct."
     }
   ],
   "edges": [
@@ -771,9 +763,9 @@
       "from_name": "Explorer",
       "to": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
       "to_name": "Emissary",
-      "relation": "routes general work to",
+      "relation": "assigns new work (general work and research write-ups) to (R-044)",
       "source": [
-        "/workspace/governance/codex/explorer-copy/v005.md"
+        "/workspace/governance/codex/explorer-copy/v006.md"
       ],
       "status": "current"
     },
@@ -782,9 +774,9 @@
       "from_name": "Explorer",
       "to": "f8e3fdc6-ee60-410e-bdb7-d437fc1500d1",
       "to_name": "Engineer",
-      "relation": "routes code/swarm to",
+      "relation": "assigns code in a repo and swarm work to (R-044)",
       "source": [
-        "/workspace/governance/codex/explorer-copy/v005.md"
+        "/workspace/governance/codex/explorer-copy/v006.md"
       ],
       "status": "current"
     },
@@ -793,9 +785,9 @@
       "from_name": "Explorer",
       "to": "febac500-d854-4dc7-a6a7-23b3feb07f80",
       "to_name": "Extractor",
-      "relation": "routes research to",
+      "relation": "assigns web data collection and scraping (only) to (R-044)",
       "source": [
-        "/workspace/governance/codex/explorer-copy/v005.md"
+        "/workspace/governance/codex/explorer-copy/v006.md"
       ],
       "status": "current"
     },
@@ -1131,18 +1123,55 @@
         "/workspace/governance/codex/_shared/connector-limits/v002.md"
       ],
       "status": "current"
+    },
+    {
+      "from": "28cf987d-ee94-4839-a6d3-33c04a11b9d6",
+      "from_name": "Emissary",
+      "to": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "to_name": "Explorer",
+      "relation": "hands specialist work back to (R-044)",
+      "source": [
+        "/workspace/governance/codex/grok-bot/v007.md"
+      ],
+      "status": "current",
+      "flow": "handoff"
+    },
+    {
+      "from": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "from_name": "Extractor",
+      "to": "04dcca0d-1479-4e01-bf29-a13b4fc3c3a7",
+      "to_name": "Explorer",
+      "relation": "hands code changes and new jobs back to (R-044)",
+      "source": [
+        "/workspace/governance/codex/scraper/v006.md"
+      ],
+      "status": "current",
+      "flow": "handoff"
+    },
+    {
+      "from": "51af1200-ca1a-45ff-8350-848091e00f96",
+      "from_name": "Architect",
+      "to": "61ef3abd-87b8-49f1-b8d6-b52969afa315",
+      "to_name": "Archivist",
+      "relation": "drafts live profile renames (when Gem asks) for Archivist to record and apply",
+      "source": [
+        "/workspace/governance/codex/instruction-architect/v005.md"
+      ],
+      "status": "current",
+      "flow": "handoff"
     }
   ],
   "stats": {
     "nodes": 28,
-    "edges": 48,
+    "edges": 51,
     "active_or_dormant": 17,
     "retired_or_former_gone": 9,
     "deleted_gone": 12,
     "active": 17,
     "live": 17,
     "dormant": 0,
-    "unrecorded": 1
+    "unrecorded": 0,
+    "retired_no_codex": 1
   },
   "rules": {
     "voice_approvals": "Gem's words on a voice call count as direct; a call decision passed on by another bot counts after a 1:1 check with the bot that took the call (R-018). Archivist deployments: own chat or a call with Archivist only, never a relayed call.",
@@ -1272,5 +1301,13 @@
         "who": "Gem's words and a Safeguard dry run for any send, post, share, upload, deploy or purchase."
       }
     ]
-  }
+  },
+  "retired_no_codex": [
+    {
+      "id": "6b01a4ef-8b54-44e6-ad11-64e7af681d12",
+      "name": "New Bot",
+      "status": "retired (Gem, 22 Oct 6:37pm, confirmed in Archivist's chat); gone from live teammate list ~6:40pm; deletion not confirmed; folder remains",
+      "role": null
+    }
+  ]
 }

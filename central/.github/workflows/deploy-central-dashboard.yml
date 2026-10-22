@@ -1,0 +1,56 @@
+name: Deploy Central Dashboard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "dashboard/**"
+      - ".github/workflows/deploy-central-dashboard.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "central-dashboard-pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Validate dashboard files and JavaScript syntax
+        run: |
+          set -e
+          test -s dashboard/index.html
+          grep -qi 'Knowledge workspace' dashboard/index.html
+          grep -q 'api.github.com/repos/' dashboard/index.html
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          html = Path("dashboard/index.html").read_text(encoding="utf-8")
+          scripts = re.findall(r"<script>(.*?)</script>", html, re.S)
+          assert scripts, "No inline application script found"
+          Path("/tmp/central-dashboard.js").write_text(scripts[-1], encoding="utf-8")
+          PY
+          node --check /tmp/central-dashboard.js
+
+      - name: Upload dashboard artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

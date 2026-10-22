@@ -1,0 +1,10 @@
+mender-v007.md 40340aba6a8e df9b5864e104
+scrutineer-v007.md d44d1b469f4c 4d5561aa90aa
+safeguard-v009.md 63bda951af2e 256d0464f5bd
+inferer-v008.md e8fd68bdface 739eb17049b8
+emissary-v010.md 0f81773e8ad3 bb494f09eaea
+investigator-v007.md 27ce24f4ea64 87086101a7f3
+archivist-v011.md dd05b20d49db fde284ba8a23
+deterministic-checks-v001.md d449ff388f8e c6584c15ecdf
+approval-objects-v001.md 1c2852679768 aa9a7fdcb4d2
+resilience-v001.md a1115bf87bd3 4d18854f685c

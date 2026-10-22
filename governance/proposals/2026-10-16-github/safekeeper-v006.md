@@ -1,10 +1,10 @@
-# Safekeeper v006 — owns the GitHub tokens section; GitHub sweep checks; Mediator sign-ins (rev 4) — NEEDS GEM'S DIRECT APPROVAL (Gem's own words in Archivist's chat or on a voice call with Archivist; not a relay, not Imitator)
+# Safekeeper v006 — owns the GitHub tokens section; GitHub sweep checks; Mediator sign-ins (rev 5) — NEEDS GEM'S DIRECT APPROVAL (Gem's own words in Archivist's chat or on a voice call with Archivist; not a relay, not Imitator)
 
 | Field | Value |
 |---|---|
 | Bot | P1 (Checks) Safekeeper (live), `52772b1d` |
 | Codex folder | `secrets-credentials-custodian/` |
-| Base | codex **v005** (latest; byte-checked = live profile 16 Oct 2:54pm) → **v006** |
+| Base | codex **v005** (latest; byte-checked = live profile 22 Oct 8:36pm) → **v006** |
 | Source | Gem in Explorer's chat, 16 Oct 11:46am (relayed to Architect by Explorer; R-008, R-018): "stay signed in to DayneK and gemquota using the full access classic tokens, add rules to governance on what bots are allowed to do what with GitHub." (`approvals/2026-10-16-gem-direct-words.md` line 34). Inputs: `input-safeguard.md`, `input-safekeeper.md`; revised per Scrutineer's review (`reviews/2026-10-16-github-proposal-review.md`). Policy: Gem's direct words to Architect in Architect's chat, 16 Oct 2:51pm, answering README Q1-Q4: "1. Sure. 2. Meh just let him cook. 3. Let him cook. 4. Yes." These approve the policy, not this text, which still needs Gem's own words to Archivist |
 | Basis | R-020, R-019, R-015, R-027, R-034; RR-017, RR-020, RR-021, RR-033 |
 | Approver | **Gem directly** (R-027) |

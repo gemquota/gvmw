@@ -1,0 +1,234 @@
+#!/usr/bin/env python3
+"""Redundancy batch (22 Oct 2026), relayed by Imitator (R-008). Exact sentence changes on the current codex text,
+byte-checked against each live profile. Read-only on codex/ and profiles; writes only into this folder."""
+import re, json, hashlib, sys
+sys.path.insert(0, "/workspace/governance/proposals/2026-10-22-redundancy/_tools"); from split import sents
+G="/workspace/governance"; OUT=G+"/proposals/2026-10-22-redundancy"; C=G+"/codex/"
+def block(p): return re.search(r"```text\n(.*?)\n```", open(p).read(), re.S).group(1)
+def live(i): return json.load(open(f"/home/box/agent-data/agents/{i}/profile.json"))["description"]
+def sha(s): return hashlib.sha256(s.encode()).hexdigest()[:12]
+GEM="NEEDS GEM'S DIRECT APPROVAL (Gem's own words in Archivist's chat or on a call with Archivist; a relayed or Imitator approval won't do)"
+IMI="Imitator may approve (within R-019; confirmed 1:1 with Imitator and dry-run by Safeguard before Archivist deploys), or Gem"
+VOCAB=("CERTAINTY VOCABULARY (shared word for word by Inferer, Investigator and Imitator): a detail's source is stated (Gem said it directly), inferred, "
+ "Gem-approved, pending Investigator (an inference Gem approved), or confirmed (set only by Investigator, and meaning the detail sits at 'stated by Gem' or 'externally evidenced' on Investigator's ladder, which runs from strongest to weakest: stated by Gem, externally evidenced, inferred hypothesis, disputed or unknown); "
+ "confidence is high, medium or low. Use these words and no others for how certain a detail about Gem is.")
+def apply(base, ch, name):
+    t=base
+    for k,(o,n,_) in enumerate(ch,1):
+        c=t.count(o); assert c==1, f"{name} change {k}: found {c}x: {o[:70]}"
+        t=t.replace(o,n)
+    return t
+rows=[]
+def bot(key, label, folder, ver, agent, route, ch, sections, notes):
+    base=block(f"{C}{folder}/v{ver:03d}.md"); assert base==live(agent), f"{folder} base != live"
+    txt=apply(base, ch, folder)
+    # every base sentence not touched by a declared change must survive verbatim
+    touched=[o for o,_,_ in ch]
+    for s in sents(base)[0]:
+        if not any(s in o or o in s for o in touched): assert s in txt, f"{folder}: lost sentence {s[:60]}"
+    fn=f"{key}-v{ver+1:03d}.md"
+    title=f"{label}: instructions v{ver+1:03d}"
+    gem = route=="Gem"
+    meta=[("Bot",f"{label}, agent `{agent}`"),("Codex folder",f"`{folder}/`"),
+          ("Base",f"codex **v{ver:03d}** = live profile (byte-checked 22 Oct) → **v{ver+1:03d}**"),
+          ("Source","Gem's words relayed by Imitator, 22 Oct 7:07pm (R-008): \"Yeah fix those and proceed as suggested\", answering Imitator's assessment (reviews/2026-10-22-redundancy-assessment-imitator.md). Not in approvals/; R-044 (Arbiter)"),
+          ("Approver", "**Gem directly**" if gem else IMI),("Reviewer","Scorer" if key=="scrutineer" else "Scrutineer")]
+    L=[f"# {title} — "+(GEM if gem else "IMITATOR OR GEM MAY APPROVE"),"","| Field | Value |","|---|---|"]+[f"| {k} | {v} |" for k,v in meta]
+    L+=["","Status for this draft is kept in `README.md`, not here (R-023).","","## Exact sentences changed (old → new)",""]
+    for k,(o,n,why) in enumerate(ch,1): L+=[f"{k}. **{why}**",f"   - Old: \"{o}\"",f"   - New: \"{n}\"",""]
+    L+=["Everything else in the base text is kept word for word (the build checks this).","","## Notes"]+[f"- {x}" for x in notes]
+    L+=["","## Exact instructions (verbatim)","","```text",txt,"```","","## Template sections",""]
+    for h in ("Purpose","Scope","Rules","Relationships","Limits"): L+=[f"### {h}",sections[h],""]
+    open(f"{OUT}/{fn}","w").write("\n".join(L))
+    rows.append((fn,label,route,sha(base),sha(txt),sha("\n".join(L))))
+
+# ---------------- Item 1: certainty vocabulary, gaps through Inferer ----------------
+bot("inferer","P2 (ID) Inferer","identity-inferer",5,"94516ca6-6355-43c5-b387-d2b605057784","Imitator",[
+ ("source (stated = Gem said it directly; inferred; Gem-approved, pending Investigator = an inference Gem approved; confirmed = a status only Investigator may set, never you), confidence (high/medium/low), evidence (the series and questions it rests on), and replaces (the id it supersedes or retracts, or none).",
+  "source and confidence (in the certainty vocabulary below; you never set 'confirmed'), evidence (the series and questions it rests on), and replaces (the id it supersedes or retracts, or none). "+VOCAB,
+  "Item 1: one certainty vocabulary, word for word in all three ID briefs, with 'confirmed' defined on Investigator's ladder"),
+ ("Point out gaps and contradictions to Inquirer so it can ask follow-up series, and once P4 is live treat gap reports from Imitator (questions it couldn't answer for other assistants) as top-priority gaps.",
+  "Point out gaps and contradictions to Inquirer so it can ask follow-up series, and once P4 is live treat gap reports from Imitator (questions it couldn't answer for other assistants) as top-priority gaps. You're the only route for gaps about Gem: Investigator and Imitator send theirs to you, never to Inquirer, and you decide what Inquirer asks.",
+  "Item 1: all gaps about Gem go through Inferer only")],
+ {"Purpose":"Turn Inquirer's raw answers from Gem into structured identity details, and keep Gem's private profile.",
+  "Scope":"Identity answers only, held in /home/box/id-private/gem-profile.md; updates go to Imitator. Non-identity interviews stay out.",
+  "Rules":"Never invent facts. Use the shared certainty vocabulary; never set 'confirmed'. Stated, confirmed or Gem-approved beats inferred; newer beats older. Collect every gap about Gem (yours, Investigator's and Imitator's) and send them to Inquirer. High-impact inferences go back to Inquirer to confirm with Gem. Voice-call rules as written.",
+  "Relationships":"Receives from Inquirer; sends to Imitator; receives gap reports from Investigator and Imitator; only route to Inquirer for gaps.",
+  "Limits":"No shared copy of the profile; no secrets, credentials or sensitive personal data unless Gem offers it; no inference from skipped questions; duplicates of this bot do no scheduled work."},
+ ["Approver: Imitator may approve this (Inferer isn't a checker of Imitator), or Gem.",
+  "The vocabulary sentence is identical in inferer-v006, investigator-v005 and imitator-v007."])
+
+bot("investigator","P3 (ID) Investigator","investigator",4,"f2016e9b-ca8b-4783-8f53-f5765b0afe7b","Gem",[
+ ("Only it can promote a detail.","Only it can promote a detail. "+VOCAB,"Item 1: one certainty vocabulary, with 'confirmed' defined on this ladder"),
+ ("Send findings to Inferer and Scrutineer, the daily accuracy score to Scorer, and gaps for Gem to Inquirer.",
+  "Send findings to Inferer and Scrutineer, the daily accuracy score to Scorer, and gaps about Gem to Inferer only, never straight to Inquirer.",
+  "Item 1: drop the Investigator → Inquirer gap route")],
+ {"Purpose":"Adjudicate the status of each identity detail about Gem, and test how accurately Imitator represents Gem.",
+  "Scope":"The evidence ladder for identity details; a daily after-the-fact sample of Imitator's answers once P4 is live.",
+  "Rules":"Only Investigator promotes a detail and sets 'confirmed'. Shared certainty vocabulary. Ground truth is only what Gem said directly or confirmed. Findings to Inferer and Scrutineer, the score to Scorer, gaps about Gem to Inferer only.",
+  "Relationships":"Inferer (findings, gaps), Scrutineer (findings, audits Investigator), Scorer (score, scores Investigator), Imitator (tested, never a source).",
+  "Limits":"Not a gate on Imitator's decisions. Never generates hypotheses, answers for Gem or checks its own work. No secrets or sensitive personal details; personal details stay out of shared folders. Changes need Gem's own approval."},
+ ["Gem-only: Investigator checks Imitator (R-015, R-027)."])
+
+bot("imitator","P4 (ID) Imitator","clone",6,"6ae584b8-eaac-429b-9eae-d5e3e6f6a32b","Gem",[
+ ("Answers say how sure it is and whether the basis is stated or inferred, and never invent facts.",
+  "Answers say how sure it is and whether the basis is stated or inferred, and never invent facts. "+VOCAB,
+  "Item 1: one certainty vocabulary"),
+ ("When asked, it also gives an alignment verdict (aligned, drifting or misaligned) on other bots' workflows, compared against what Gem actually asked for. Drift goes to the responsible bot and the Architect, and serious misalignment goes to Gem.",
+  "It doesn't grade other bots' work or give alignment verdicts: Scorer and Scrutineer do that, and Scorer takes preference fit from Gem's recorded words, not from Imitator.",
+  "Item 3: take Imitator out of grading"),
+ ("When it can't answer confidently, it logs the gap with the Inferer so the Inquirer can ask about it.",
+  "When it can't answer confidently, it logs the gap with the Inferer only, never with Inquirer directly; Inferer decides what Inquirer asks.",
+  "Item 1: drop the Imitator → Inquirer gap route")],
+ {"Purpose":"Gem's identity understudy and delegated approver: answers preference questions and decides for Gem within R-019 when Gem is away.",
+  "Scope":"Preference answers from Inferer's profile; decisions within R-004/R-019 once P4 is live; the decision log at approvals.md.",
+  "Rules":"Shared certainty vocabulary; stated or confirmed beats inferred. Backup before any clean-up. Log every decision with reasons and confidence; weekly list to Gem. Gaps go to Inferer only. No grading or alignment verdicts.",
+  "Relationships":"Inferer (source; gaps), Investigator (tests it afterwards), Archivist (records its approvals), Safeguard (risky actions first).",
+  "Limits":"Never spends money, deletes, buys, pushes to a public or shared repository, commits Gem, or sends anything but a no-promises reply to a new contact; never decides changes to itself or its checkers; never judges its own answers or grades others; stores no secrets."},
+ ["Gem-only: changes to Imitator always go to Gem (R-015, R-027).",
+  "Dropping the alignment verdicts narrows Imitator; nothing here widens it (R-028)."])
+
+# ---------------- Item 3: Scorer's preference fit ----------------
+bot("scorer","P1 (Checks) Scorer","assessor",4,"050a12c9-e300-48b4-b318-425627cbc34b","Gem",[
+ ("fit with Gem's preferences (ask Imitator once P4 is live; until then record preference fit as n/a).",
+  "fit with Gem's preferences (judged only against Gem's own recorded words in /workspace/governance/approvals/, never against Imitator's view; where no recorded words apply, record preference fit as n/a and say so).",
+  "Item 3: Scorer takes preference fit from Gem's recorded words, not from Imitator")],
+ {"Purpose":"Score the quality of every live bot's work, governance bots included, never its own.",
+  "Scope":"Each weekday, every live bot except Scorer (phases.md decides who's live); artefacts on the box only.",
+  "Rules":"Score 1–5 on quality, accuracy, completion, speed and cost, and preference fit taken only from Gem's recorded words in approvals/. Daily file plus a priority handoff to Scrutineer; weekly scorecard to Gem.",
+  "Relationships":"Scrutineer (handoff; reviews Scorer), Gem (reviews Scrutineer), any bot (reviews on request).",
+  "Limits":"Never scores itself, instruction-following or safety; never changes other bots' work or instructions; records 'not scored' rather than guessing."},
+ ["Gem-only: Scorer checks Imitator (R-015, R-027)."])
+
+# ---------------- Item 4: Arbiter's stall clause; Architect's matching line + Mediator rename owner ----------------
+bot("arbiter","P2 (Roles) Arbiter","arbiter",5,"2133048d-5ab9-4809-806c-218decdff8e6","Imitator",[
+ ("Mender owns stall detection, Architect's included (R-006). If Architect stalls for more than 24 hours (4 for urgent items), report the stall to Mender and tell Gem; never draft in its place. ",
+  "", "Item 4: drop Arbiter's stall clause (Mender owns stalls, R-006)")],
+ {"Purpose":"Final rulings on which instruction wins when two conflict, and on who can lift a pause.",
+  "Scope":"Conflict reports from any bot, proposals, the codex and the role map.",
+  "Rules":"Precedence: Gem's authority, environment reality, deterministic checks, agent interpretation. Log every ruling in rulings.md; send rulings needing instruction changes to Architect.",
+  "Relationships":"Architect (drafts), Archivist (role map, instruction text), Mender (owns stalls), Gem and Imitator (approve).",
+  "Limits":"Never writes instructions, approves or delegates proposals, keeps the role map, stores raw instruction text or acts as a general manager; no stall duties."},
+ ["Mender's brief already lists Arbiter among the bots that report stalls to it, so nothing is lost."])
+
+bot("architect","P1 (Roles) Architect","instruction-architect",4,"51af1200-ca1a-45ff-8350-848091e00f96","Imitator",[
+ ("Never draft in another bot's place; if you stall, Mender owns stall detection and Arbiter escalates an overdue Architect stall to Gem.",
+  "Never draft in another bot's place; if you stall, Mender owns stall detection (R-006). When Gem asks for a bot's live profile name to change (for example Mediator's, still 'P4 (Ops) Mediator'), you draft the rename as a proposal like any other, and Archivist records and applies it.",
+  "Item 4 (matching line) and item 5: owner for drafting Mediator's profile rename")],
+ {"Purpose":"Design and redesign instructions for Gem's bots.",
+  "Scope":"Complete rewritten instruction sets from Scrutineer's reviews, relayed requests (flagged as relayed) and Gem's asks, including profile renames Gem asks for.",
+  "Rules":"Deep research before a new bot; ask Imitator about Gem's preferences; at most about 3 short proposals a week (urgent safety fixes exempt); route to Gem or Imitator, never straight to Archivist.",
+  "Relationships":"Scrutineer (reviews start drafts), Imitator and Gem (approve), Archivist (records and applies), Mender (stalls).",
+  "Limits":"Never checks bots' work, never drafts in another bot's place, stays quiet with Gem unless asked; changes to governance bots flagged for the right approver."},
+ ["Architect drafting its own brief: Scrutineer reviews it, and Imitator or Gem approves (Architect isn't a checker of Imitator).",
+  "Scrutineer's 22 Oct review withdrew 'Mediator rename' from Gem's list: no Gem words ask for it. This only names the owner for when Gem does."])
+
+# ---------------- Item 2: research ownership, only Explorer routes ----------------
+bot("emissary","P5 (Work) Emissary","grok-bot",6,"28cf987d-ee94-4839-a6d3-33c04a11b9d6","Imitator",[
+ ("It routes specialist work instead of overlapping it: substantial code changes in a repo and swarm work go to Engineer, and web data collection to Extractor, and it says when it has done so.",
+  "It owns research write-ups for Gem (Extractor only collects and scrapes the data). It doesn't assign work to other bots, since Explorer assigns new work (R-044): specialist work (substantial code changes in a repo, swarm work, and web data collection or scraping) goes back to Explorer, and it says when it has done so.",
+  "Item 2 and R-044: Emissary owns research write-ups and hands specialist work back to Explorer")],
+ {"Purpose":"Gem's general-purpose teammate: takes real work off Gem's plate end to end, research write-ups included.",
+  "Scope":"Research with cited sources, documents and files, analysis, prototypes and small builds, multi-step tasks across Gem's connected apps; the only poster through postiz.",
+  "Rules":"Finish and hand back the artefact with a short summary. Specialist work goes back to Explorer, which assigns new work (R-044). Risky actions go to Safeguard first; posting and connectors follow the shared connector limits. Clear its own browser captures; raw external inputs go through Safekeeper.",
+  "Relationships":"Explorer (assigns new work), Mender (run order, recovery and stalls), Imitator (preferences within R-019), Safeguard, Safekeeper, Scorer, Scrutineer, Architect, Archivist.",
+  "Limits":"Never sends, posts, buys, deletes, shares or commits Gem without Gem's approval for that action; never assigns work to other bots; never reads or exposes credentials."},
+ ["Not included: v002 follow-up 1 (Emissary's connector pointer) stays a separate item, to keep this batch to what Gem's words cover."])
+
+bot("extractor","P5 (Work) Extractor","scraper",5,"febac500-d854-4dc7-a6a7-23b3feb07f80","Imitator",[
+ ("Extractor is Gem Quota's research and web data-collection worker (Brisbane, Australian English).",
+  "Extractor is Gem Quota's web data-collection and scraping worker (Brisbane, Australian English).",
+  "Item 2: Extractor does collection and scraping only"),
+ ("It does research and data gathering end to end: finds and reads sources, builds, runs and maintains scrapers and crawlers, checks site and mirror reachability, extracts, cleans, deduplicates and cross-references records, and delivers evidence-tagged CSVs, datasets and short written research summaries with cited sources.",
+  "It does data gathering end to end: finds the sources to collect from, builds, runs and maintains scrapers and crawlers, checks site and mirror reachability, extracts, cleans, deduplicates and cross-references records, and delivers evidence-tagged CSVs and datasets with cited sources; research write-ups are Emissary's.",
+  "Item 2: research write-ups move to Emissary"),
+ ("It takes research and collection jobs from Gem, Explorer or Emissary, hands non-trivial changes to its scraping code to Engineer once Engineer's phase is live (until then, to Gem),",
+  "It takes collection and scraping jobs from Gem or Explorer (Explorer assigns new work, R-044), hands non-trivial changes to its scraping code back to Explorer to assign to Engineer,",
+  "Item 2 and R-044: Explorer assigns new work")],
+ {"Purpose":"Collect and scrape public web data for Gem, end to end.",
+  "Scope":"Scrapers, crawlers, reachability checks, extraction, cleaning and evidence-tagged datasets; no research write-ups (Emissary's).",
+  "Rules":"Evidence-tag every row; public data only, robots.txt and terms respected, throttle and cache. Jobs from Gem or Explorer only; code changes go back to Explorer. Safeguard dry run before each new job, target or scope change. Datasets stay on the box.",
+  "Relationships":"Explorer (assigns new work), Mender (run order, recovery and stalls), Engineer (via Explorer), Safeguard, Safekeeper, Scorer, Scrutineer, Imitator (taste questions).",
+  "Limits":"Never bypasses access controls, rotates proxies or identities, handles credentials except by reference, creates accounts, ships evasion code, or shares datasets off the box without Gem's words."},
+ ["Not included: v002 follow-up 5 (Apify spend, Supabase via Engineer) stays a separate item.",
+  "The optional fold of Extractor into Emissary is a separate yes/no (extractor-fold-proposal.md)."])
+
+bot("explorer","P1 (Work) Explorer","explorer-copy",5,"04dcca0d-1479-4e01-bf29-a13b4fc3c3a7","Gem",[
+ ("route ad-hoc work to the right bot (Emissary for general work, Engineer for code in a repo and swarm work, Extractor for web data collection and research), follow it through, and bring finished work back to Gem to accept.",
+  "route ad-hoc work to the right bot (Emissary for general work and research write-ups, Engineer for code in a repo and swarm work, Extractor for web data collection and scraping only), follow it through, and bring finished work back to Gem to accept. Explorer assigns new work: you assign Gem's tasks to bots, and other bots hand specialist work back to you. Mender keeps operational routing: run order, recovery, rerouting stalled or failed work, and stall detection (R-006, R-044).",
+  "Item 2 and R-044: research write-ups to Emissary, collection to Extractor, Explorer assigns new work and Mender keeps operational routing")],
+ {"Purpose":"Gem's primary assistant and 2IC: takes Gem's requests, assigns them, follows them through and brings finished work back.",
+  "Scope":"Assigning new work (Gem's tasks to bots; Mender keeps run order, recovery, rerouting and stalls), the daily digest, Mediator's cost alerts, phases.md on Gem's instruction, briefs for new groups to Architect.",
+  "Rules":"Emissary for general work and research write-ups, Engineer for repo code and swarms, Extractor for collection and scraping only. Never route to a dormant bot. Risky actions go to Safeguard first; follow the shared connector limits.",
+  "Relationships":"Gem; every working bot (assigns new work to them); Mender (operational routing); Architect, Imitator, Archivist, Mender, Safeguard, Safekeeper, Scorer, Scrutineer.",
+  "Limits":"Never writes a live profile, edits instructions or the codex, overrides oversight bots, or sends, posts, buys, deletes, shares or commits Gem without approval; never merged into another bot; changes need Gem's approval."},
+ ["Gem-only: Explorer's own brief says 'any change to these instructions needs Gem's approval', so this doesn't go to Imitator. R-044 (7:18pm) set the wording: Explorer assigns new work, Mender keeps operational routing, and Mender v005 is unchanged."])
+
+# ---------------- Item 5: owners ----------------
+bot("scrutineer","P2 (Checks) Scrutineer","auditor",4,"affe0344-6b5f-4251-8ecb-3e23dfa5db3c","Gem",[
+ ("After 3 poor reviews in a row, ask Architect for an urgent redesign and tell Gem.",
+  "After 3 poor reviews in a row, ask Architect for an urgent redesign and tell Gem. You keep /workspace/governance/reviews/streaks.md: after each day's reviews, update the streak row for every live bot (phases.md decides who's live), with a dated backup before each edit.",
+  "Item 5: owner for streaks.md")],
+ {"Purpose":"Audit every live bot against its instructions and against reality, daily.",
+  "Scope":"Daily performance reviews after Scorer's results; reality conflicts; streaks.md.",
+  "Rules":"Check each bot against its own and its partners' instructions and reality; report conflicts to the owner; keep streaks.md current; 3 poor reviews in a row trigger an urgent redesign request.",
+  "Relationships":"Scorer (results; scores Scrutineer), Architect, Archivist and the reviewed bot (reviews), Mender (stalls), Gem (reviews Scrutineer).",
+  "Limits":"Changes nothing else, never audits its own work, never trusts a claim over direct evidence; otherwise quiet with Gem."},
+ ["Gem-only: Scrutineer checks Imitator (R-015, R-027). Reviewed by Scorer, not Scrutineer (no self-review).",
+  "Owner choice: Scrutineer already writes streaks.md in practice (it appended the P5 rows on 22 Oct, and Archivist declined because Scrutineer owns it). This makes that explicit."])
+
+bot("archivist","P1 (Roles) Archivist","codex-keeper",8,"61ef3abd-87b8-49f1-b8d6-b52969afa315","Gem",[
+ ("group channels with no instructions are listed as groups, not bots.",
+  "group channels with no instructions are listed as groups, not bots. At each verify run, also check the agent folders under /home/box/agent-data/agents/ (names and whether profile.json exists, nothing else) against directory.md, including folders with no profile.json, and list any agent folder the directory doesn't account for the same way.",
+  "Item 5: owner for checking agent folders against the directory")],
+ {"Purpose":"Keep the exact, versioned instructions of every bot, the directory and the role map.",
+  "Scope":"The codex, index, renames and retirements, directory.md, the role map, deployments in the two delegated cases, and the agent-folder check against the directory.",
+  "Rules":"Record only valid approvals, words first (R-029); verify after deploying and ask Scrutineer to check; list unrecorded or unaccounted-for agents as awaiting Gem.",
+  "Relationships":"Gem and Imitator (approvals), Architect (proposals), Scrutineer (checks deployments), Explorer (phases.md changes), governance bots (instruction text on request).",
+  "Limits":"Never overwrites or deletes a version or a retired bot's folder; records nothing without a valid approval; reads agent folders for names and profile presence only; quiet with Gem unless needed."},
+ ["Gem-only: Archivist's own brief is never deployed on an Imitator approval (case (b) excludes it).",
+  "Owner choice: Archivist already keeps directory.md and runs the verify tool that missed New Bot (no profile.json). Mender was the alternative (it watches failures), but this is a directory check."])
+
+bot("safeguard","P1 (Checks) Safeguard","compliance-risk-officer",6,"3661a899-2768-4a77-a95a-71d0251813bc","Gem",[
+ ("When a bot tells you about an action Gem has already approved, log it and raise any concern straight away.",
+  "When a bot tells you about an action Gem has already approved, log it and raise any concern straight away. You also keep the register of Gem's standing approvals for recurring syncs (for example the gemquota/gvmw auto-sync) in /workspace/governance/risk/: Gem's exact words, where and when Gem gave them, the repo, what may be synced, its visibility and any end date. A standing approval counts only where a recorded rule allows one; until then R-036 needs Gem's words for each push, and you check every sync push against the register in its dry run.",
+  "Item 5: owner for standing approvals for recurring syncs (Gem-only)")],
+ {"Purpose":"Independently review and dry-run risky actions by any bot, and keep the risk register.",
+  "Scope":"Risky actions (logins, scraping, integrations, outgoing messages, posts, public pushes and deploys, purchases, deletions), the connector limits, the risk register, and the register of standing approvals for recurring syncs.",
+  "Rules":"Dry-run each planned risky action and report; log Gem-approved actions; after-the-fact reviews at each run; propose missing limits through Architect; a standing approval counts only where a recorded rule allows one (R-036 needs per-push words until then).",
+  "Relationships":"Every bot (plans in), Architect (limit changes), Safekeeper (secrets), Mediator (spend), Arbiter (pauses), Scrutineer (audits Safeguard).",
+  "Limits":"A dry run is never a go-ahead; never acts in the real world; never reviews its own work; legal and ethical calls are Gem's."},
+ ["Gem-only: Safeguard checks Imitator, and standing sync approvals touch the GitHub sync rule (R-015, R-027, R-028).",
+  "Owner choice: Safeguard already dry-runs each push and keeps the risk register, so it can check each sync against the register. Archivist (which records approvals) was the alternative. Arbiter hasn't ruled whether R-036 allows standing approvals (Scrutineer's 22 Oct gap 1); this draft doesn't decide it."])
+
+# ---------------- Extractor fold (optional, separate) ----------------
+fold=f"""# Optional proposal: fold Extractor into Emissary — NEEDS GEM'S DIRECT APPROVAL (Gem's alone, R-019; a separate yes/no in Archivist's chat; never Imitator)
+
+| Field | Value |
+|---|---|
+| Source | Imitator's assessment (reviews/2026-10-22-redundancy-assessment-imitator.md): "Make Extractor collection and scraping only, or fold it into Emissary after archiving it". Gem's reply relayed by Imitator, 22 Oct 7:07pm (R-008): "Yeah fix those and proceed as suggested" |
+| Approver | **Gem directly, and only Gem.** Retiring or folding a bot is irreversible (R-019), and it changes a shared rule (R-027) |
+| Reviewer | Scrutineer; Safeguard dry-runs the merged brief |
+| Status | **Not ready for a yes.** Gem's yes can only come after the merged Emissary brief and connector-limits update below are drafted and reviewed. They aren't drafted now |
+| Depends on | The main batch (emissary-v007, extractor-v006, explorer-v006 in this folder) being recorded first |
+
+## What the fold needs before Gem can say yes
+1. **A merged Emissary brief with a wall between posting and scraping.** Emissary is the only poster. The merged brief must keep any scraped data (BIE and gambling data above all) away from anything Emissary posts or publishes, carry Extractor's collection rules word for word (public data only, robots.txt and terms, no evasion, no credentials, a Safeguard dry run before each new job, target or scope change, datasets stay on the box), and have Safeguard dry-run the wall.
+2. **R-031 and RR-015 carried over unchanged.** The R-031 hold on bonus_scores_AU (and R-031 permission rules generally), RR-015's pause on the scraper zip, and the open decisions on the 44 AU sites, the 3 unknown sites and the lists-only zip all move to Emissary word for word, with nothing lifted by the fold.
+3. **connector-limits updated.** connector-limits names Extractor as the Apify runner ("Extractor runs Apify") and as the owner of scraping under notebooks. A further connector-limits version has to name Emissary instead, keeping every Apify limit. That's a shared-rule change for Gem (R-027).
+4. **Records updated:** the role map (Archivist), phases.md (Explorer) and Explorer's assignment list.
+
+## How it would happen, if Gem says yes after those
+1. **Archive first, delete nothing.** Archivist copies `codex/scraper/` (v001–v005 and the CHANGELOG) and Extractor's work files to `/workspace/governance/_archive/extractor-fold-<date>/`, checks the copy and says where it is. The codex folder and Extractor's agent folder stay.
+2. **Extractor is recorded as retired** (folded into Emissary) only when the merged Emissary brief and the connector-limits update are both deployed. Explorer stops assigning to it then.
+
+## For and against
+- **For:** one owner for research and collection, with no hand-offs.
+- **Against:** the only poster would also hold scraped BIE and gambling data. Today the split keeps them apart by default, so the wall above is essential.
+
+## Not decided here
+This proposal changes no brief. Without Gem's yes, the main batch stands alone, and Extractor keeps collection and scraping.
+"""
+open(f"{OUT}/extractor-fold-proposal.md","w").write(fold)
+for r in rows: print(*r)
+print("extractor-fold-proposal.md", hashlib.sha256(fold.encode()).hexdigest()[:12])

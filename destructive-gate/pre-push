@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Draft git pre-push hook. Install per repo only with Gem's OK: cp pre-push <repo>/.git/hooks/
+# Blocks: any push without a token for "push <remote> <local_sha> <remote_ref>",
+#         force pushes (non-fast-forward), branch deletes, pushes to public remotes, frozen repos.
+source /workspace/destructive-gate/gate_lib.sh
+remote="$1"; url="$2"; z=0000000000000000000000000000000000000000
+FROZEN="${GATE_FROZEN_REPOS:-gemquota/gvmw}"
+for f in $FROZEN; do [[ "$url" == *"$f"* ]] && { echo "GATE: $f is FROZEN. No pushes." >&2; gate_log BLOCKED "push $url (frozen)"; exit 1; }; done
+rc=0
+while read -r lref lsha rref rsha; do
+  if [ "$lsha" = "$z" ]; then echo "GATE: branch delete $rref" >&2; kind=delete
+  elif [ "$rsha" != "$z" ] && ! git merge-base --is-ancestor "$rsha" "$lsha" 2>/dev/null; then echo "GATE: non-fast-forward (force) push to $rref" >&2; kind=force
+  else kind=normal; fi
+  # secret scan of outgoing commits, if gitleaks is present
+  if command -v gitleaks >/dev/null && [ "$lsha" != "$z" ]; then
+    range=$([ "$rsha" = "$z" ] && echo "$lsha" || echo "$rsha..$lsha")
+    gitleaks git --redact --log-opts="$range" . >/dev/null 2>&1 || { echo "GATE: gitleaks found possible secrets in $range" >&2; rc=1; }
+  fi
+  act="push $url $lsha $rref $kind"
+  gate_check "$act" || rc=1
+  [ $rc = 0 ] && gate_consume "$act"
+  gate_log "$([ $rc = 0 ] && echo ALLOWED || echo BLOCKED)" "$act"
+done
+exit $rc

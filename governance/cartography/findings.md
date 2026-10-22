@@ -1,5 +1,17 @@
 # Role map v6 findings (9 Oct 2026 ~9:29)
 
+## v18 findings (22 Oct 2026 8:07:32pm AEST)
+- **Cleared:** the v17 finding on the approval route for Arbiter v006, Emissary v007 and Extractor v006 is settled. Gem approved all three directly in Archivist's chat at 8:06pm 22 Oct ("Yes, I approve all three"; approvals/2026-10-22-gem-direct-words.md).
+- Still open from v17: Investigator/Imitator → Inferer gap routing waits for investigator-v005 and imitator-v007.
+
+## v17 findings (22 Oct 2026 8:01:02pm AEST)
+- Inferer v006 says Investigator and Imitator send their gaps about Gem only to Inferer and use the shared certainty vocabulary, but their own briefs (investigator-v005, imitator-v007) aren't deployed yet. Until they are, the live briefs disagree, so no Investigator/Imitator → Inferer edge is drawn.
+- Scrutineer flagged the approval route for Arbiter v006, Emissary v007 and Extractor v006 (an Imitator approval plus Gem's "deploy all six") as departing from R-044. Arbiter is to rule, or Gem can confirm in one line. The text and deployment passed.
+
+## v16 findings (22 Oct 2026 6:45:04pm AEST)
+- New Bot was retired by Gem at 6:37pm 22 Oct, after being listed at 6:33pm. It dropped off the live teammate list by about 6:40pm, but `/home/box/agent-data/agents/6b01a4ef-…` is still on the box, so verify.py still lists it as GROUP (INFO). Don't record it as deleted until Gem confirms.
+- phases.md (Explorer's file) never listed New Bot, so it needs no phase change; Explorer may add a retirement note.
+
 ## v15 findings (22 Oct 2026 6:34:10pm AEST)
 - New Bot (`6b01a4ef`) is a live agent folder with a blank profile, created 19 Oct 01:30:54am, three days before Explorer reported it. It has no codex folder, so nothing is recorded and it gets no role; Gem to decide what it is.
 - verify.py lists it as GROUP (INFO), because its rule treats any agent with an empty description as a group channel. Nothing on disk shows New Bot is a group, so this map lists it as an unrecorded live agent, as Archivist's brief says for a live agent with no codex folder.

@@ -1,0 +1,21 @@
+# TEMPLATE ONLY. Not deployed. For a PRIVATE repo Gem owns, e.g. gemquota/swarm-watchdog.
+# Checks that the box's heartbeat (pushed to the governance snapshot repo) is fresh.
+name: swarm-watchdog
+on:
+  schedule: [{cron: "0 23 * * *"}, {cron: "30 2 * * 1-5"}]   # 9:00am and 12:30pm AEST
+  workflow_dispatch: {}
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {repository: gemquota/governance-snapshot, token: "${{ secrets.SNAPSHOT_READ_TOKEN }}"}
+      - name: Heartbeat fresh?
+        run: |
+          last=$(git log -1 --format=%ct)
+          age=$(( ( $(date +%s) - last ) / 3600 ))
+          echo "snapshot age ${age}h"
+          if [ "$age" -gt 26 ]; then
+            curl -s -H "Title: Bot swarm silent" -H "Priority: high" \
+              -d "No governance snapshot for ${age}h. Check Cursor billing and bots." \
+              "https://ntfy.sh/${{ secrets.NTFY_TOPIC }}"; exit 1; fi
