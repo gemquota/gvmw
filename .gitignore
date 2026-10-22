@@ -104,3 +104,7 @@ config.ini
 # MedB live data (Gem mail/calendar/contacts) must never publish (R-048)
 /medb/data/
 *.sqlite
+
+# Python bytecode
+__pycache__/
+*.pyc
