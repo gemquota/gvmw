@@ -100,3 +100,7 @@ config.ini
 *.sqlite-journal
 # blank templates are allowed
 !config.example.ini
+
+# MedB live data (Gem mail/calendar/contacts) must never publish (R-048)
+/medb/data/
+*.sqlite
