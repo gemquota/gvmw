@@ -108,3 +108,6 @@ config.ini
 # Python bytecode
 __pycache__/
 *.pyc
+
+# leak-scan reports hold raw secret values
+/_audit/
