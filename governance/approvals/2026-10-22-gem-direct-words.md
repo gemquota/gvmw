@@ -16,3 +16,98 @@ The first copy of this file, written at about 6:38pm AEST, was lost in the box r
 
 ## Recorded by Archivist at 8:06:59pm AEST 22 Oct 2026 (add-only)
 - **8:06pm 22 Oct, in Archivist's chat, Gem directly, answering "Do you approve Arbiter v006 (848371ff1d49), Emissary v007 (9b2b7acf6119) and Extractor v006 (f1849e752e35) from proposals/2026-10-22-redundancy/?":** "Yes, I approve all three". Scope: arbiter/v006, grok-bot/v007 and scraper/v006, already live since 7:57pm. This settles Scrutineer's approval-route flag (R-044) in reviews/2026-10-22-redundancy-deploy-check.md. Backup before this append: `_archive/2026-10-22-gem-direct-words.md.bak-20261022-200659`.
+
+## 2026-10-22 9:22PM AEST — Gem, in Archivist's chat (widget t71s392)
+Question: "Do you approve Engineer's 8:30pm Drive backup and the 8:27pm \"No checks, just push\", with only Engineer's backup routine writing to the Governance backups folder?"
+Gem's words: "Yes, I approve both"
+Context: confirms the terse "approve and yes" that Scrutineer relayed (Gem in Scrutineer's chat, 9:22pm). That relay was not recorded as Gem's own approval (R-008).
+
+## Recorded by Archivist at 9:28:44pm AEST 22 Oct 2026 (add-only)
+Gem, in Archivist's chat (t72u), 9:27pm 22 Oct 2026, pasted five approval lines meant to be applied one at a time in order. Gem's five items, verbatim:
+
+1.
+I approve imitator-v007 from the redundancy batch (proposals/2026-10-22-redundancy/imitator-v007.md, text hash db56debaa35f) — record and deploy.
+
+2.
+I confirm I told Inquirer at 7:00pm on 22 Oct: "C and Imitator can veto if desired" and "Yes, but flag it in the digest"; at 8:02pm "Yes, freely" and at 8:07pm "Anything, including replies and promises" and "Code / Notes / Configs and bot instructions"; chose on Imitator's card at 7:06pm: "Yes, you can veto Arbiter in disputes and change bots' schedules (flagged in the digest)"; picked on Imitator's card t56s1 at 8:04pm that its veto covers every Arbiter ruling, that it can approve bots creating or retiring bots, that bots can make the five active projects public, and that bots can post on social media as me; and named VEPA, Codey, swarm, SLAP.RED/Golf and MedB in Arbiter's chat at 8:06pm. I confirm I told Investigator at 8:25pm that R-015, R-027 and R-028, and any ruling applying them, can't be vetoed ('I guess', R-052), and I accept that, until I answer on scope, the 8:04pm grants are advisory only for big or irreversible decisions (my 'Advisory only for big or irreversible decisions', R-051). I approve r044-r047: imitator-v008 (d877b6d0b31f) and arbiter-v007 (3d031639639f), after the redundancy batch — record and deploy with connector-limits v003.
+
+3. Variant A, which keeps gvmw as it is:
+I confirm I told Architect directly at 8:32pm on 22 Oct: 'gvmw: Engineer fully free, drop the per-push scan and dry run', and that I told Architect at 7:10pm on 22 Oct: 'Yes, Emissary and Explorer can write to Mem0 and Explorer can share Notion/Todoist; add it to v003', and I confirm I answered on Inquirer's cards at 8:02pm: 'Yes, freely' to bots posting to social channels as me, and at 8:07pm: 'Anything, including replies and promises' and 'Code / Notes / Configs and bot instructions'. I approve connector-limits v003 variant A (proposals/2026-10-22-gvmw/connector-limits-v003.md, text hash 806a6fa315cb): gemquota/gvmw only stays public as of commit 4f43fc9, with its BIE/gambling data, bonus_terms and BIE files at 4f43fc9 (my R-031 permission; not bonus_scores_AU.xlsx), third-party contacts, governance/ and my identity notes id-investigator/factcheck-2026-10-10.md and id-notes/projects-map-2026-10-10.md; I accept the risks; nothing new without my words; the daily sync on, with no per-push or per-sync-run scan or dry run, logging kept; Mem0 writers Emissary and Explorer (Mem0 only); Emissary may post as me, replies and promises included, no money commitments, a dry run each post; backups before deleting code, notes, configs and bot instructions only; Explorer may share its own logged Notion/Todoist items with people I already share with, a dry run each, no publishing or new people; Emissary runs Apify (Extractor folded in, R-051); Archivist may write the governance ledger and backup to the one private Drive folder I name; review by 22 Nov 2026 — record and deploy.
+
+The B and C versions of line 3 are in the attached file. B also takes the third-party contacts out of gvmw, and C takes out the contacts and governance/ too.
+
+4.
+I confirm I told Architect directly in chat at 7:52pm on 22 Oct that Engineer is fully free on GitHub, with no per-push approval or Safeguard check, and that the gemquota/gvmw daily sync is on (my 7:55pm words), with no per-push or per-sync-run scan or dry run on gvmw (my words to Architect at 8:32pm: 'gvmw: Engineer fully free, drop the per-push scan and dry run'); logging stays. I approve GitHub batch revision 5h, after the redundancy, r044-r047 and connector-limits v003 batches: github-v001 (3c5c3995a886), engineer-v008 (e48cde917489), imitator-v009 (c92d31926a18), explorer-v007 (a98d235b093a), architect-v006 (c2e149404e57), arbiter-v008 (8a9498236d52), message-verification-rule-v005 (c78245bcf145) — record and deploy, github-v001 first; the other twelve are replaced by the redesign batch.
+
+5.
+I confirm my 14 answers in Inquirer's chat tonight (R-051), that I scrapped healthchecks.io in Explorer's chat at 8:28pm, so the watchdog is local only, and that I told Architect directly at 8:32pm: 'gvmw: Engineer fully free, drop the per-push scan and dry run'. I approve the redesign batch, recorded after GitHub revision 5h: Mender v007 (40340aba6a8e), Scrutineer v007 (d44d1b469f4c), Safeguard v009 (63bda951af2e), Inferer v008 (e8fd68bdface), Emissary v010 (0f81773e8ad3), Investigator v007 (27ce24f4ea64), Archivist v011 (dd05b20d49db), deterministic-checks v001 (d449ff388f8e), approval-objects v001 (1c2852679768), resilience v001 (a1115bf87bd3), with the archive-first migration order and retiring Mediator, Scorer, Safekeeper, Inquirer and Extractor after verification.
+
+Also in the same message: Gem said Engineer reports the GitHub dead-man check is live and its test run passed (Engineer's claim, relayed by Gem; not verified by Archivist).
+Backup before this append: `_archive/2026-10-22-gem-direct-words.md.bak-20261022-212844`.
+- **Added at 9:29:07pm AEST, continuing the t72u section above:** Gem picked connector-limits v003 **Variant A** at 9:28pm 22 Oct in Archivist's chat (widget t72s401): "Variant A (keep gvmw as it is)". Variants B and C are **not approved**. Backup before this addition: `_archive/2026-10-22-gem-direct-words.md.bak-20261022-212907`.
+
+## Recorded by Archivist at 10:07:45pm AEST 22 Oct 2026 (add-only)
+### 2026-10-22 9:47PM AEST — Gem, in Archivist's chat (widget t75s422)
+Context: which Drive folder the redesign archive (migration step 1) should go to.
+Gem's words: "The 'Governance backups' folder"
+### 2026-10-22 10:07PM AEST — Gem, in Archivist's chat (widget t75s425)
+Question: "How should the archive get into 'Governance backups'?" (asked after the note that, under Gem's 9:22pm approval (t71s392), only Engineer's backup routine writes there)
+Gem's words: "Let Archivist write there too"
+Note: this widens Gem's 9:22pm 'only Engineer's backup routine writing to the Governance backups folder' approval so that Archivist may also write there. Engineer's routine is unchanged.
+Backup before this append: `_archive/approvals_2026-10-22.md.bak-20261022-220736`.
+
+## Recorded by Archivist at 10:09:02pm AEST 22 Oct 2026 (add-only)
+### 2026-10-22 10:08PM AEST — Gem, in Archivist's chat (widget t75s429)
+Question: "Should the five bots' memories be archived too?"
+Gem's words: "Yes, but Safekeeper scans them for secrets first"
+Note: no memory has been copied yet; it waits for Safekeeper's scan, done in place.
+Backup before this append: `_archive/approvals_2026-10-22.md.bak-20261022-220902`.
+
+## Recorded by Archivist at 10:16:14pm AEST 22 Oct 2026 (add-only)
+### 2026-10-22 10:15PM AEST — Gem, in Archivist's chat (widget t80s452)
+Question: "Deploy the redesign batch now, with the Drive copy following once the folder exists?"
+Gem's words: "Yes, deploy now, Drive later"
+Context: Safeguard notified (case a). Gem skipped the memory-key card, so nothing is uploaded.
+Notes: the merge archives were moved to /workspace/backups/governance-merge-2026-10-22/ at 10:12pm because of the gvmw publish risk. The copied store.db files contain a blobEncryptionKey (Safeguard RR-059), so they stay locked on the box (mode 700) and are not uploaded.
+Backup before this append: `_archive/approvals_2026-10-22.md.bak-20261022-221614`.
+
+## Recorded by Archivist at 10:16:51pm AEST 22 Oct 2026 (add-only)
+### 2026-10-22 10:15PM AEST — Gem, in Archivist's chat (widget t79s449)
+Question: "What should happen to the memory copies that contain encryption keys?"
+Gem's words: "Strip the key from the copies, then archive"
+Done (reported to Archivist): blobEncryptionKey stripped from all five archived store.db copies at 10:16pm, Safekeeper's included (now copied); blobs tables 0, integrity ok, no key bytes left. Archivist recomputed the hashes at 10:16:51pm.
+Backup before this append: `_archive/approvals_2026-10-22.md.bak-20261022-221651`.
+
+## 2026-10-22 10:18:06PM AEST — Gem, in Archivist's chat (widget t81s468)
+Question: "What should I do about Mediator's name and the public site?" (context: Mediator's live name says P4, it's a P2 bot and retires under the redesign; the codex policy lets only Gem and the governance bots read full instructions)
+Gem's words: "Rename Mediator; full text can be public"
+Effect: Archivist deploys a rename of Mediator (90f9eb20) from 'P4 (Ops) Mediator' to 'P2 (Ops) Mediator' (case a). Gem permits the full instruction text on the public governance site, overriding the read-access policy for that site.
+
+- 22:20 AEST, typed by Gem in Explorer's own chat (t77u), answering Explorer's t76s424 questions "Can Imitator approve retiring bots and making projects public on its own?" and "Arbiter has taken BIE to mean the bie_tools gambling data. Is that right?": "yes and yes". Arbiter (22:21) and Investigator (22:21) each read this in Explorer's transcript. It counts as direct words in the asking bot's chat, not a relay.
+
+## 2026-10-22 10:40:37PM AEST — Gem, in Archivist chat (widget t88s497)
+Question: "Should I retire Mediator, Scorer, Safekeeper, Inquirer and Extractor now? I'd mark them retired and nothing gets deleted."
+Gem's words: "Yes, retire all five now"
+Effect: case (a) deployment of a retirement notice to each of the 5 live profiles; agent folders and archives kept.
+
+## Recorded by Archivist at 10:43:42pm AEST 22 Oct 2026 (add-only)
+### 2026-10-22 10:42PM AEST — Gem, in Archivist's chat (message t90u)
+Gem's words: "all the retired butts should be renamed with retired at the start of their name"
+Effect (reported to Archivist): the five retired bots were renamed at about 10:43pm (name field only) to RETIRED P2 (Ops) Mediator, RETIRED P1 (Checks) Scorer, RETIRED P1 (Checks) Safekeeper, RETIRED P2 (ID) Inquirer and RETIRED P5 (Work) Extractor.
+Backup before this append: `_archive/approvals_2026-10-22.md.bak-20261022-224342`.
+
+## Recorded by Archivist at 10:46:54pm AEST 22 Oct 2026 (add-only)
+### 2026-10-22 10:41PM AEST — Gem, in Archivist's chat (message t89u)
+Context: Gem pasted the paste line from proposals/2026-10-22-clarity/README.md, with 'revision 2' changed to 'revision 3'; otherwise word for word, per Archivist's own reading of the chat. These are Gem's own words for the R-054 update (10:20pm "yes and yes" in Explorer's chat), which satisfies the clarity README's condition for recording clone-v010 and confirms the 10:13pm and 10:16pm relays (R-008, R-054 row 10).
+Gem's words: "I confirm I asked Explorer at 10:13pm on 22 Oct to "address all of the redundant or confusing things that you just mentioned and push and commit and deploy", that I asked Engineer at 10:16pm for the same shared-rules move, and that I answered "yes and yes" in Explorer's chat at 10:20pm (R-054 update: Imitator may approve retiring bots, after an archive, and making the five named projects public, after a Safekeeper scan, on its own; BIE means the bie_tools gambling data). I approve the clarity batch revision 3 (proposals/2026-10-22-clarity/), recorded after the redesign batch, in this order: free-only-v001 (f11a42d8346d), retired-names-v001 (8aad8615be09), github-read-only-v001 (5ddb2564e09c), precedence-v001 (2a22f16a924f), deterministic-checks-v002 (36495ce6a0fb), approval-objects-v002 (f5bf4b185a68), resilience-v002 (597edf5bd4b6), connector-limits-v004 (3b296846506d), mender-v008 (327298bb668d), auditor-v008 (47dbd292d839), compliance-risk-officer-v010 (1804e27f84af), identity-inferer-v009 (666398d857f9), grok-bot-v011 (ae7a7675a3cc), investigator-v008 (438c5019655e), codex-keeper-v012 (4fde5d8066bf), arbiter-v009 (2b0d2cc783ce), instruction-architect-v007 (15d53c5ce39d), explorer-copy-v008 (2fef6d180654), clone-v010 (fbf614da2d3e). The redesign's deterministic-checks, approval-objects and resilience texts (d449ff388f8e, 1c2852679768, a1115bf87bd3) stay v001. Archivist applies codes-and-cleanup.md to index.md, the CHANGELOGs and the version template. Record, then deploy in the same order as the redesign."
+Approval objects: approvals/objects.jsonl (approval-objects v001, stage 1 shadow).
+Backup before this append: `_archive/approvals_2026-10-22.md.bak-20261022-224654`.
+
+- 22 Oct 2026, 11:00pm AEST, in Archivist chat (answer to t95s525 "Did you approve that 10:53pm clean-up?"): "Yes, I approved it". This confirms the 10:53pm "archive the 19 safe items (moved, not deleted)" approval (relayed, R-008), which covers moving codex/_shared/handoff-phase1 to _archive/cleanup-2026-10-22/.
+
+## Recorded by Archivist at 11:02:44pm AEST 22 Oct 2026 (add-only)
+### 2026-10-22 11:01PM AEST — Gem, in Archivist's chat (message t96u)
+Context: the phase-cleanup batch revision 3. The deployer (Archivist) received this directly in Archivist's chat and passed it on verbatim. It confirms Gem's 10:47pm words to Explorer (relayed until now; R-008).
+Gem's words: "I confirm I told Explorer at 10:47pm on 22 Oct: "phases.md and the documentation relating to the phase to deployment is redundant now and can be removed" (Arbiter's R-055). I approve the phase-cleanup batch revision 3 (proposals/2026-10-22-phase-cleanup/), recorded after the clarity batch, in this order: github-v002 (55a582bc5940), connector-limits-v005 (73574e5639cb), message-verification-rule-v006 (ba59c9eda067), arbiter-v010 (bfa7475bffa3), auditor-v009 (0f1e5a199631), clone-v011 (b2015336ba07), codex-keeper-v013 (0f8fc93db82b), codey-v009 (74c4980efdd5), compliance-risk-officer-v011 (39137e16f1cb), explorer-copy-v009 (749119fe184e), grok-bot-v012 (6c84e168d9f3), identity-inferer-v010 (35c50eb35a9b), instruction-architect-v008 (9ba54bba13d9), investigator-v009 (42419cb504ec), mender-v009 (11e6a570ee79). Archivist then: retires _shared/handoff-phase1 (archive first, nothing deleted); marks _shared/collaboration-map as historical; removes the remaining phases.md citations in directory.md:20 and codex/index.md:7, plus any in RENAMES.md, and the history-only mentions at directory.md:11 and :125 and index.md:13 and :35. Arbiter has retired R-021 and amended R-013 and R-025 (R-055). Record, then deploy."
+Approval objects: approvals/objects.jsonl (AO-2026-10-22-t96u-01 to -16).
+Backup before this append: `_archive/approvals_2026-10-22.md.bak-20261022-230244`.

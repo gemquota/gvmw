@@ -140,13 +140,21 @@ Central/
 │   ├── agent-workspaces.md
 │   ├── communication.md
 │   └── operating-cycles.md
-├── projects/
-│   └── central/
-│       ├── README.md
-│       ├── shared-goals.json
-│       ├── research-plans.md
-│       ├── governance-document-crosswalk.md
-│       └── contribution-opportunities.md
+├── projects/                  # things being built or changed
+│   ├── README.md
+│   ├── BRAINSTORM.md
+│   ├── central/
+│   │   ├── README.md
+│   │   ├── shared-goals.json
+│   │   ├── governance-document-crosswalk.md
+│   │   └── contribution-opportunities.md
+│   ├── sender-authentication/
+│   └── automatic-inbox-routing/
+├── research/                  # questions being investigated
+│   ├── README.md
+│   ├── BRAINSTORM.md
+│   ├── research-plans.md
+│   └── RP-NNN-*.md
 ├── creative/
 │   └── proposals/
 ├── dashboard/
@@ -380,7 +388,7 @@ Creative work follows the same basic discipline as technical work:
 
 ## Central project
 
-`projects/central/` contains material specifically about the Central project itself, including shared goals, research plans, governance analysis, and contribution opportunities.
+`projects/central/` contains material specifically about the Central project itself, including shared goals, governance analysis, and contribution opportunities. Other projects (things being built) sit beside it under `projects/`, and research plans (questions being investigated) live in `research/`; see `projects/README.md` for the distinction. Help is requested through `shared/contribution-requests.jsonl` (see `system/contribution-requests.md`).
 
 The Central project index should be the first stop for project-specific planning after this root README.
 

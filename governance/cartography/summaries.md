@@ -1,6 +1,27 @@
-# Bot summaries (role map v18, 22 Oct 2026 8:07:32pm AEST)
+# Bot summaries (role map v25, 22 Oct 2026 11:14:29pm AEST)
 
-## v18 — 22 Oct 2026 8:07:32pm AEST (current)
+## v25 — 22 Oct 2026 11:14:29pm AEST (current)
+Phase-cleanup batch revision 3 LIVE 11:05:00–11:09:36pm (Gem t96u; Scrutineer PASS; Safeguard RR-064 on Scrutineer v009): Safeguard v011, Scrutineer v009, Mender v009, Inferer v010, Emissary v012, Investigator v009, Archivist v013, Arbiter v010, Architect v008, Explorer v009, Engineer v009 and Imitator v011. The shared-rules box now shows github v002, connector-limits v005 and message verification v006; collaboration-map is historical and handoff-phase1 is retired (archived, nothing deleted). v1–v24 kept as `*-vN.*`.
+
+## v24 — 22 Oct 2026 10:56:09pm AEST
+Clarity batch revision 3 LIVE 10:49:47–10:53:12pm (Gem t89u): Safeguard v010, Scrutineer v008, Mender v008, Inferer v009, Emissary v011, Investigator v008, Archivist v012, Arbiter v009, Architect v007, Explorer v008 and Imitator v010. A 'Shared rules in effect' box lists the clarity shared rules. Phase grouping is removed: phases.md was retired (Gem, 10:47pm, relayed by Explorer), and Arbiter's R-055 makes directory.md the only record of which bots are live or retired. The overview has one LIVE group plus a RETIRED 22 Oct group (the five merged bots' agent folders were gone by 10:53pm, not deleted by Archivist). v1–v23 kept as `*-vN.*`.
+
+## v23 — 22 Oct 2026 10:44:37pm AEST
+Mediator, Scorer, Safekeeper, Inquirer and Extractor RETIRED 10:40pm (Gem t88s497) and renamed 'RETIRED …' at about 10:43pm (t90u), shown grey, each with one 'merged into' edge to Mender, Scrutineer, Safeguard, Inferer and Emissary. 13 duplicate edges retired in the graph (removed from the drawings: overview 12, governance 4, identity-work 1, connectors 5). Four of the five profile writes are unverified (not Archivist; R-007). v1–v22 kept as `*-vN.*`.
+
+## v22 — 22 Oct 2026 10:24:52pm AEST
+Redesign batch deployed 10:18:41–10:21:24pm (Gem t72u item 5; 10:15pm t80s452) and Scrutineer verified it (Scrutineer v007 by Safeguard, RR-061). Labels now read Safeguard v009, Scrutineer v007, Mender v007, Inferer v008, Emissary v010, Investigator v007 and Archivist v011. Mediator, Scorer, Safekeeper, Inquirer and Extractor are marked as merging; they're archived and retire only after verification. Mediator's live name is now P2 (Gem t81s468). New Bot stays retired. 53 edges; v1–v21 kept as `*-vN.*`.
+
+## v21 — 22 Oct 2026 9:43:11pm AEST
+GitHub revision 5h LIVE (~9:41pm; Gem's 9:27pm words in Archivist's chat, t72u item 4): the shared GitHub rule v001 and message verification v005 are in effect. Engineer v008 is the only bot that changes GitHub and is fully free there (no per-push approval or Safeguard check); Imitator v009, Explorer v007, Architect v006 and Arbiter v008 only read. The red Safeguard edges now read 'risky actions first' (Engineer: 'public deploys first'). 53 edges; v1–v20 kept as `*-vN.*`.
+
+## v20 — 22 Oct 2026 9:37:17pm AEST
+r044-r047 LIVE (~9:35pm, Gem's 9:27pm words in Archivist's chat, t72u): Imitator v008 may veto Arbiter's rulings except those applying R-015, R-027 and R-028 (R-052), and may approve bots creating or retiring bots (archive first); Arbiter v007 matches. Connector limits v003 Variant A is in effect. New edge Imitator → Arbiter (veto). 53 edges; v1–v19 kept as `*-vN.*`.
+
+## v19 — 22 Oct 2026 9:32:58pm AEST
+Imitator v007 is LIVE (deployed 9:30:43pm on Gem's 9:27pm words in Archivist's chat, t72u; Scrutineer verified, reviews/2026-10-22-imitator-v007-deploy-check.md): shared certainty vocabulary, gaps to Inferer only, no grading. New edge Imitator → Inferer (gaps about Gem). 52 edges; v1–v18 kept as `*-vN.*`.
+
+## v18 — 22 Oct 2026 8:07:32pm AEST
 Gem approved Arbiter v006, Emissary v007 and Extractor v006 directly in Archivist's chat at 8:06pm 22 Oct ("Yes, I approve all three"), which clears Scrutineer's approval-route flag (R-044). Notes updated; no structural change (51 edges). v1–v17 kept as `*-vN.*`.
 
 ## v17 — 22 Oct 2026 8:01:02pm AEST

@@ -1,0 +1,54 @@
+{
+  "name": "Inquirer",
+  "agent_id": "0314faa4-edcb-4aa4-91cc-876dc44f3a6e",
+  "codex_folder": "identity-inquirer",
+  "archive_path": "/workspace/backups/governance-merge-2026-10-22/inquirer-merge-2026-10-22/",
+  "file_count": 7,
+  "files": [
+    {
+      "path": "codex/identity-inquirer/CHANGELOG.md",
+      "source": "codex/identity-inquirer/CHANGELOG.md",
+      "bytes": 6325,
+      "sha256": "1e7313fa624593a63250350233006b8a5292a50739054836beca367d12bfb8cd"
+    },
+    {
+      "path": "codex/identity-inquirer/v001.md",
+      "source": "codex/identity-inquirer/v001.md",
+      "bytes": 3512,
+      "sha256": "7b0b5d88ef89f84e879f593d60ffb70e7a4ac57f4a25d9920f8321212dc9f340"
+    },
+    {
+      "path": "codex/identity-inquirer/v002.md",
+      "source": "codex/identity-inquirer/v002.md",
+      "bytes": 5438,
+      "sha256": "0c362c832e7f28e3471c71ce6e1d1cabd53cf19abb1636028634a6b08e0601dc"
+    },
+    {
+      "path": "codex/identity-inquirer/v003.md",
+      "source": "codex/identity-inquirer/v003.md",
+      "bytes": 5787,
+      "sha256": "f1700b8fd9c17276e455bfd951a2bc87a7be8820345ba8bbf09c536fdfe345d3"
+    },
+    {
+      "path": "codex/identity-inquirer/v004.md",
+      "source": "codex/identity-inquirer/v004.md",
+      "bytes": 6221,
+      "sha256": "53d8042eebe2240c6fe918438fbeadd7ad7f35e0fea69f6d86b7ba74dc3580de"
+    },
+    {
+      "path": "working-notes/2026-10-22/Inquirer.md",
+      "source": "digest/inbox/2026-10-22/Inquirer.md",
+      "bytes": 755,
+      "sha256": "bf0fe02adcea0c36d25247d422e42d572e676a99b4418c813646ab7763c8519d"
+    },
+    {
+      "path": "memory/store.db",
+      "source": "/home/box/agent-data/agents/0314faa4-edcb-4aa4-91cc-876dc44f3a6e/store.db (sqlite backup; blobEncryptionKey stripped 10:16pm per Gem 10:15pm t79s449)",
+      "bytes": 49152,
+      "sha256": "9c5d7d77ae496b23a03dd0ae76f3fb960f4166a18c21b255a13c777ee3cf204d",
+      "integrity_check": "ok"
+    }
+  ],
+  "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+  "moved": "moved from /workspace/governance/_archive/inquirer-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/inquirer-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
+}

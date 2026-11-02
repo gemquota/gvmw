@@ -96,8 +96,8 @@ svg.panning{cursor:grabbing}
 const DATA = /*__DATA__*/null;
 const NS = "http://www.w3.org/2000/svg";
 const GCOL = {Roles:["#ede7f6","#7e57c2"],Checks:["#fff3e0","#fb8c00"],Ops:["#e0f2f1","#00897b"],ID:["#e3f2fd","#1e88e5"],Work:["#e8f5e9","#43a047"],Gem:["#fafafa","#212121"],Unrecorded:["#fafafa","#9e9e9e"]};
-const ROWS = ["gem","P1","P2","P3","P4","P5","former","unrecorded"];
-const ROWNAME = {gem:"Owner",P1:"P1",P2:"P2",P3:"P3",P4:"P4",P5:"P5",former:"Retired / former",unrecorded:"No codex folder"};
+const ROWS = ["gem","live","former","unrecorded"];  // v24: phase rows removed (phases.md retired, R-055)
+const ROWNAME = {gem:"Owner",live:"Live",former:"Retired / former",unrecorded:"No codex folder"};
 const NW = 132, NH = 46, CELLW = 150, ROWH = 110, TOP = 60, LEFT = 90;
 const ET = {}; DATA.etypes.forEach(([k,l,c]) => ET[k] = {label:l, colour:c, on:true});
 const nodes = DATA.nodes, edges = DATA.edges, byKey = {};
@@ -132,7 +132,7 @@ DATA.etypes.forEach(([k,,c]) => {
   el("path", {d:"M0,0 L10,5 L0,10 z", fill:c}, m);
 });
 
-// ---- layered layout: columns = groups, rows = phase
+// ---- layered layout: columns = groups, rows = live / retired (v24)
 const cols = DATA.groups, colX = {}, cellCount = {};
 nodes.forEach(n => { if (n.group !== "Gem" && n.group !== "Unrecorded") { const k = n.group + "|" + n.tier; cellCount[k] = (cellCount[k]||0) + 1; } });
 let x = LEFT;
@@ -273,7 +273,6 @@ function openPanel(key){
   const dl = h("dl", null, b);
   const row = (k, v) => { if (v == null || v === "" || (Array.isArray(v) && !v.length)) return; h("dt", k, dl); h("dd", Array.isArray(v) ? v.join("; ") : v, dl); };
   if (n.group !== "Gem") {
-    row("Phase", n.group === "Unrecorded" ? (/^Retired/.test(n.status) ? "None (retired; never had a codex folder)" : "None (unrecorded live agent, awaiting Gem)") : n.phase === "-" ? "None (retired / former)" : n.phase + " · " + n.phaseStatus);
     row("Live codex version", n.codexVersion); row("Approved, not deployed", n.pending); row("Deployed", n.deployed || (n.live || n.status === "Dormant" ? "not recorded in index" : null));
     row("Index flag", n.indexFlag); row("Last updated", n.lastUpdated); row("Earlier name", n.formerName); row("Absorbed", n.absorbed); row("Map note", n.note);
   }

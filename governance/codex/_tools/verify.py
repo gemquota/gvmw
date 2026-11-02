@@ -72,6 +72,7 @@ rows=[l for l in open(f"{ROOT}/index.md").read().splitlines() if l.startswith("|
 r=len(rows)==37 and len(folders)==37; ok&=r
 print(("PASS" if r else "FAIL"),f"index rows={len(rows)} folders={len(folders)} (expect 37)")
 print("--- every v002+ file: template bullets verbatim and every sentence placed once ---")
+template_fails=[]
 for vf in sorted(glob.glob(f"{ROOT}/*/v*.md")):
     if vf.endswith("v001.md"): continue
     t=open(vf,encoding="utf-8").read(); d=verb(t) or ""
@@ -83,12 +84,22 @@ for vf in sorted(glob.glob(f"{ROOT}/*/v*.md")):
         if ss and ss[-1].endswith("e.g."): ss[-1]+=" "+x
         else: ss.append(x)
     r=sorted(b)==sorted(ss) and all(x in d for x in b); ok&=r
+    if not r: template_fails.append(f"{vf.split('/')[-2]}/{os.path.basename(vf)}")
     print(("PASS" if r else "FAIL"),f"{vf.split('/')[-2]}/{os.path.basename(vf)}",f"bullets={len(b)}")
 print("--- Architect finals 2026-10-04: recorded verbatim == proposal source (byte check) ---")
 for _fj in (f"{ROOT}/_tools/finals_2026-10-04.json", f"{ROOT}/_tools/seven_2026-10-04.json"):
   if not os.path.exists(_fj): continue
   for r in json.load(open(_fj)):
-        rf=open(f"{ROOT}/{r['folder']}/{r['version']}.md",encoding="utf-8").read(); src=open(r["source"],encoding="utf-8").read()
+        # 22 Oct 2026: entries moved (never deleted) to governance/_archive/cleanup-2026-10-22/ are still checked from there.
+        def _resolve(path):
+            if os.path.exists(path): return path, False
+            gov="/workspace/governance/"; alt=gov+"_archive/cleanup-2026-10-22/"+path[len(gov):] if path.startswith(gov) else None
+            return (alt, True) if alt and os.path.exists(alt) else (None, False)
+        _rp,_ra=_resolve(f"{ROOT}/{r['folder']}/{r['version']}.md"); _sp,_sa=_resolve(r["source"])
+        if _rp is None or _sp is None:
+            ok=False; print(f"FAIL {r['folder']}/{r['version']}.md finals check: {'version file' if _rp is None else 'source'} missing (not in place or in _archive/cleanup-2026-10-22/)"); continue
+        if _ra or _sa: print(f"ARCHIVED {r['folder']}/{r['version']}.md: checked from _archive/cleanup-2026-10-22/ ({'version' if _ra else ''}{' and ' if _ra and _sa else ''}{'source' if _sa else ''} moved)")
+        rf=open(_rp,encoding="utf-8").read(); src=open(_sp,encoding="utf-8").read()
         if r["kind"]=="bot":
             a=verb(rf); b=re.search(r"## Exact instructions \(verbatim\)\n(`{3,})text\n(.*?)\n\1\n",src,re.S).group(2)
         else:
@@ -144,4 +155,16 @@ for d in sorted(glob.glob(f"{AG}/*/")):
     kind="UNRECORDED AGENT" if (p.get("description") or "").strip() else "GROUP (INFO)"
     print(f"{kind:17} {bid} name={p.get('name')!r} namedBy={p.get('namedBy')}")
 
+# Live-profile result is separate from template-section findings (30 Oct 2026: Scrutineer Fair finding).
+# The five retirement-notice versions (assessor/v005, connector-steward/v007, identity-inquirer/v005,
+# scraper/v007, secrets-credentials-custodian/v006) paraphrase their template sections; R-035 forbids
+# editing them. They do not mean live profiles are undeployed or mismatched.
+# 12 live bots after 22 Oct retirements: each must MATCH latest or be CHANGELOG-logged PENDING-DEPLOY.
+live_profile_ok = (strict_ok + len(pending) == 12)
+print(f"LIVE-PROFILES: {'PASS' if live_profile_ok else 'FAIL'} — {strict_ok} MATCH latest + {len(pending)} pending-deploy (expect 12 covered)")
+if template_fails:
+    print(f"TEMPLATE-SECTIONS: FAIL — {len(template_fails)} retirement-notice file(s) (pre-existing; R-035): {', '.join(template_fails)}")
+    print("NOTE: OVERALL FAIL below is from those retirement template sections only when LIVE-PROFILES is PASS; it is not a live-profile mismatch.")
+else:
+    print("TEMPLATE-SECTIONS: PASS")
 print("OVERALL:", "PASS" if ok else "FAIL"); sys.exit(0 if ok else 1)

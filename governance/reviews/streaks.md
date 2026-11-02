@@ -54,3 +54,45 @@ Source: `reviews/2026-10-22.md` (catch-up review, with the correction section fo
 | P5 (Work) Extractor (`febac500`) | — | gap | gap | gap | Not rated | 0 |
 
 Imitator is at 2 Poor in a row. One more Poor triggers an urgent redesign request to Architect and a note to Gem.
+
+
+## Update (30 Oct 2026, about 11:10am AEST, Scrutineer): 23 to 30 Oct
+
+Source: `reviews/2026-10-30.md`. Fri 23 and Mon 26–Thu 29 Oct are **gaps** (no review written; INC-010 platform stop / missed chain). A gap is not a rating: it does not extend or break a streak. Scorer, Safekeeper, Inquirer, Mediator and Extractor were RETIRED 22 Oct evening and are not on the live review list for 30 Oct (last ratings kept in the 22 Oct block above). Live list from `directory.md` (R-055); Scrutineer does not rate itself.
+
+| Bot | 2026-10-22 | 2026-10-23 | 2026-10-26 | 2026-10-27 | 2026-10-28 | 2026-10-29 | 2026-10-30 | Current Poor streak |
+|---|---|---|---|---|---|---|---|---|
+| P1 (Ops) Mender | Fair | gap | gap | gap | gap | gap | Good | 0 |
+| P1 (Checks) Safeguard | Good | gap | gap | gap | gap | gap | Good | 0 |
+| P1 (Roles) Archivist | Good | gap | gap | gap | gap | gap | Fair | 0 |
+| P1 (Roles) Architect | Good | gap | gap | gap | gap | gap | Good | 0 |
+| P1 (Work) Explorer (`04dcca0d`) | Fair | gap | gap | gap | gap | gap | Good | 0 |
+| P2 (Roles) Arbiter | Fair | gap | gap | gap | gap | gap | Fair | 0 |
+| P2 (ID) Inferer | Good | gap | gap | gap | gap | gap | Fair | 0 |
+| P3 (ID) Investigator (`f2016e9b`) | Good | gap | gap | gap | gap | gap | Good | 0 |
+| P4 (ID) Imitator (`6ae584b8`) | Poor | gap | gap | gap | gap | gap | Fair | 0 |
+| P5 (Work) Emissary (`28cf987d`) | Good | gap | gap | gap | gap | gap | Fair | 0 |
+| P5 (Work) Engineer (`f8e3fdc6`) | Fair | gap | gap | gap | gap | gap | Good | 0 |
+
+Imitator’s Poor streak was 2 after 22 Oct; today’s Fair resets it to 0. **No bot has 3 Poor reviews in a row.** No urgent redesign request to Architect for streak reasons.
+
+
+## Update (2 Nov 2026, about 11:15am AEST, Scrutineer): 30 Oct to 2 Nov
+
+Source: `reviews/2026-11-02.md`. Sat 31 Oct and Sun 1 Nov are weekend days and have **no column** (per the header rule). Live list from `directory.md` (R-055); Scrutineer does not rate itself. RETIRED bots stay off this block.
+
+| Bot | 2026-10-30 | 2026-11-02 | Current Poor streak |
+|---|---|---|---|
+| P1 (Ops) Mender | Good | Good | 0 |
+| P1 (Checks) Safeguard | Good | Good | 0 |
+| P1 (Roles) Archivist | Fair | Poor | 1 |
+| P1 (Roles) Architect | Good | Good | 0 |
+| P1 (Work) Explorer (`04dcca0d`) | Good | Good | 0 |
+| P2 (Roles) Arbiter | Fair | Fair | 0 |
+| P2 (ID) Inferer | Fair | Good | 0 |
+| P3 (ID) Investigator (`f2016e9b`) | Good | Good | 0 |
+| P4 (ID) Imitator (`6ae584b8`) | Fair | Fair | 0 |
+| P5 (Work) Emissary (`28cf987d`) | Fair | Not rated | 0 |
+| P5 (Work) Engineer (`f8e3fdc6`) | Good | Good | 0 |
+
+Archivist moves Fair → **Poor** (out-of-scope Arbiter v011 deploy); Poor streak = 1. Emissary’s Not rated does not break or extend a streak. **No bot has 3 Poor reviews in a row.** No urgent redesign request to Architect for streak reasons.

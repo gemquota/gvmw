@@ -22,7 +22,11 @@ for vf in sorted(C.glob('_shared/*/v[0-9][0-9][0-9].md')):
     m = re.search(r'^\| Source \| (\S+\.md)(.*)\|\s*$', t, re.M)
     if not m: print(f'NO-SOURCE  {rel}'); bad += 1; continue
     src = Path(m.group(1)); extra = m.group(2)
-    if not src.exists(): print(f'MISSING    {rel}: source {src} not on disk'); bad += 1; continue
+    if not src.exists():
+        # 22 Oct 2026: sources moved (never deleted) to governance/_archive/cleanup-2026-10-22/ are checked from there, still byte for byte.
+        _g = '/workspace/governance/'; _alt = Path(_g + '_archive/cleanup-2026-10-22/' + str(src)[len(_g):]) if str(src).startswith(_g) else None
+        if _alt is not None and _alt.exists(): print(f'ARCHIVED   {rel}: source moved to {_alt}; checking it there'); src = _alt
+        else: print(f'MISSING    {rel}: source {src} not on disk (nor in _archive/cleanup-2026-10-22/)'); bad += 1; continue
     a, ea = fence(t); raw = src.read_bytes(); b, eb = fence(raw.decode())
     if a is None: print(f'AMBIGUOUS  {rel}: version {ea}'); bad += 1; continue
     if b is None:  # older proposals (4-6 Oct) have no single fenced block: accept only if the exact text appears in the source

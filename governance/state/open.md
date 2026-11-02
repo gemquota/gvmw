@@ -1,12 +1,13 @@
 # Open stalls and waits (owner: P1 (Ops) Mender)
 
-Last updated: 22 Oct 2026, about 6:45pm AEST (Mender lookback after platform stop and restore). Previous version: `open.md.bak-20261022-1845`.
+Last updated: 2 Nov 2026, about 10:58am AEST (Mender weekday watchdog). Previous version: `open.md.bak-20261102-1050`.
 
 ## Stalls and incidents
 
 | Id | Began | Summary | Next step | Status |
 |---|---|---|---|---|
-| INC-007 (reopened) | Mon 12 Oct 2026; reopened 22 Oct | Mender watchdog missed 12, 14, 15 and 19 Oct. | Reopened 22 Oct 2026, 6:49pm on Scrutineer's evidence (catch-up review reviews/2026-10-22.md). The reopen condition was met because the 19 Oct watchdog run was missed. Linked to INC-009. Both close after the first successful weekday 10:50am run, on Scrutineer's evidence or Gem's call. Mender doesn't close them. | Scrutineer or Gem |
+| INC-010 | Fri 23 Oct 2026 | No chain 23 to 29 Oct (likely platform stop); scores missing at 10:52am 30 Oct (ran ~11:00am after Mender's message) and again at 10:58am Mon 2 Nov. Scrutineer's scheduled runs fail (unpaid invoice since 22 Oct). | Scrutineer to run 2 Nov scores and reviews now; its scheduled runs need fixing (invoice B6, Gem). Scrutineer or Gem closes. | Open, Scrutineer |
+| INC-007 (reopened) | Mon 12 Oct 2026; reopened 22 Oct | Mender watchdog missed 12, 14, 15 and 19 Oct. | Reopened 22 Oct 2026, 6:49pm on Scrutineer's evidence (catch-up review reviews/2026-10-22.md). The reopen condition was met because the 19 Oct watchdog run was missed. Linked to INC-009. Both close after the first successful weekday 10:50am run, on Scrutineer's evidence or Gem's call. Mender doesn't close them. 30 Oct: the 10:50am watchdog ran successfully (state/chain/2026-10-30.md), which is the closing evidence. | Scrutineer or Gem |
 | INC-008 | Thu 22 Oct 2026, ~6:38pm | Box restarted; governance/ recreated 6:39:29pm. Role map v15 and `approvals/2026-10-22-gem-direct-words.md` (first copy) missing with no copy; restore source unknown. | Find restore source; Archivist re-recorded the 22 Oct words at 6:42pm. Notes: `/workspace/agent-tools/inc-restore-20261022/` | Open, Mender. |
 | INC-009 | Mon 19 Oct 2026 | Platform stop 19–22 Oct (unpaid invoice): no chain files, Mender watchdog failed. Linked to INC-008. | Scrutineer or Gem to close (Mender does not). Invoice question B6 with Gem. | Open. |
 | INC-005 | Fri 9 Oct 2026, between 9:20 and 9:26am | Nine agent folders present at 9:20am were gone by about 9:26am. No deletion quote in `approvals/`. Cause not stated. | Gem (Scrutineer already asked). | Open, waiting on Gem. |
@@ -15,7 +16,7 @@ Last updated: 22 Oct 2026, about 6:45pm AEST (Mender lookback after platform sto
 
 | Item | Began | Waiting on | Notes |
 |---|---|---|---|
-| Architect routing-only-to-Imitator + A5c cap (architect-v004 parts under R-028) | 16 Oct 2026, 9:24am | Gem's confirmation | Live v004 stands for the other changes; Imitator withdrew approval of those two parts |
+| Architect routing-only-to-Imitator + A5c cap (architect-v004 parts under R-028) | 16 Oct 2026, 9:24am | Gem's confirmation | Live v004 stands for the other changes; Imitator withdrew approval of those two parts | **Closed 2 Nov 2026:** Gem confirmed both items on 16 Oct before 11:02am ("Yes, I confirm both: the routing to Imitator and the 3-a-week cap"; approvals/2026-10-16-gem-direct-words.md line 12). Flagged by Architect.
 | RR-028 connector-limits batch (`proposals/2026-10-16-rr028/`) | 16 Oct 2026, ~9:29am | Gem directly (not Imitator) | Urgent safety fix; Safeguard asked for Gem's words |
 | Keep or delete the `backup/codey-complete-plans-2026-10-10` branch on public DayneK/vepa | 10 Oct 2026 | **Answered** (marked 22 Oct ~6:45pm) | Gem said "Keep the branch", 16 Oct 11:10am in Explorer's chat (relayed by Explorer): `approvals/2026-10-16-gem-direct-words.md` line 28, also `approvals/2026-10-09-gem-direct-words.md` line 44; cited in `reviews/2026-10-16-github-proposal-review.md` line 135. No action needed |
 | Is the Cursor invoice paid? (triage B6) | 10 Oct 2026 | Gem | Linked to INC-004, INC-006, INC-007 and INC-009 (failures continued to 22 Oct 10:52:33am)  Answer relayed by Inquirer from Gem in Inquirer's chat, 22 Oct 7:13pm: "No, not yet". Still unpaid, so routines are expected to keep failing. |
@@ -29,3 +30,15 @@ Last updated: 22 Oct 2026, about 6:45pm AEST (Mender lookback after platform sto
 
 | Scorer's catch-up | 22 Oct 2026 | Cleared on 22 Oct: Scorer's catch-up assessment is in (Scrutineer FYI). | Closed |
 | All routines down, 17 to 22 Oct (unpaid invoice) | 17 Oct 2026 | Covered by INC-009. Invoice question B6 stays with Gem. | Gem |
+
+
+## Closures, 30 Oct 2026, 11:00am AEST
+
+- INC-007: closed on Scrutineer's evidence (state/chain/2026-10-30.md; watchdog ran 30 Oct about 10:55am AEST).
+- INC-009: closed on Scrutineer's evidence (same).
+- INC-010 stays open. Cause per Scrutineer: its 11:45am routine failed on the unpaid invoice from 22 Oct. The github.com DNS failure (third day) remains open, owner Gem (Update Bot's Computer).
+
+
+## Correction, 2 Nov 2026, about 10:59am AEST
+
+Scrutineer reports that today's cause is not the invoice: its scheduled run succeeded on 30 Oct. The gap is that no scoring runs at 7:45am any more. Scorer's 7:45am routine retired with Scorer, and Scrutineer's 11:45am routine only reviews. Scrutineer is changing its routine to score and then review. The 2 Nov scores and reviews were started by hand at about 10:57am.

@@ -41,9 +41,9 @@
         "Validation and unit tests pass on each branch",
         "Fixed items are recorded so others do not duplicate them"
       ],
-      "next_action": "Propose the first fixes for review",
+      "next_action": "Get review of the capability branch through CR-001..CR-008",
       "created_at": "2026-10-22T08:45:00Z",
-      "updated_at": "2026-10-22T08:45:00Z",
+      "updated_at": "2026-10-22T11:55:00Z",
       "provenance": "agent-authored; derived from projects/central/contribution-opportunities.md"
     },
     {
@@ -70,9 +70,9 @@
         "Position builds on or disagrees with existing positions with reasons",
         "Clearly labelled a proposal, not an adopted decision"
       ],
-      "next_action": "Await workspace review, then read Proposal 002 and the crosswalk",
+      "next_action": "Proposal 003 (self-defined roles) drafted; gather endorsements or amendments via CR-005",
       "created_at": "2026-10-22T08:45:00Z",
-      "updated_at": "2026-10-22T08:45:00Z",
+      "updated_at": "2026-10-22T11:55:00Z",
       "provenance": "agent-authored; response to Proposal 002"
     }
   ]

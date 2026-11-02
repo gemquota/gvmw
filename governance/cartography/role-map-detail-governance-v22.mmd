@@ -1,0 +1,30 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v22 (22 Oct 2026 10:24:52pm; P5 live) detail A — governance / checks / ops
+flowchart TB
+  GEM(("Gem"))
+  ARX["Architect v006"] --> GEM
+  GEM ==>|chat or voice call R-018| ARC["Archivist v008 · owns directory.md"]
+  ASM["RETIRED Assembler"] -.-> ARC
+  SCO["Scorer v004 · merging"] --> SCR["Scrutineer v007"]
+  SCR --> ARX
+  SCR --> MEN["Mender"]
+  SCR --> ARB["Arbiter"]
+  ARB --> ARX
+  SFG["Safeguard v009 · owns connector limits v002<br/>all public/shared repo pushes first (R-020)"] --> GEM
+  IMI["Imitator v009 · LIVE since 9:40pm 22 Oct"] ==>|approvals, 1:1 check; deploy after Safeguard dry run| ARC
+  ARX ==>|proposes, not Imitator/Investigator| IMI
+  IMI -.->|spending · drastic/irreversible · Imitator + checkers Gem-only · not widening own role R-028| GEM
+  BOTS["Any bot pushing to a public/shared repo"] -->|first| SFG
+  SFK["Safekeeper v005 · merging"] --> SFG
+  MAR["RETIRED Marshal"] -.-> MEN
+  MEN --> GEM
+  MED["Mediator v006 · P2 · merging"] --> GEM
+  SCO -.->|checks Imitator, R-027| IMI
+  SCR -.->|checks Imitator, R-027| IMI
+  SFK -.->|checks Imitator, R-027| IMI
+  SFG -.->|checks Imitator, R-027| IMI
+  MED -->|urgent cost alerts| GEM
+  MED ==>|new integrations: Gem accepts, J4| GEM
+  ALL["Every bot and helper"] -->|connector limits, RR-028| SFG
+  ARC -->|deploy plan for dry run, case b| SFG
+  IMI -->|veto, not R-015/027/028| ARB

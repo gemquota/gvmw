@@ -1,0 +1,60 @@
+{
+  "name": "Scorer",
+  "agent_id": "050a12c9-e300-48b4-b318-425627cbc34b",
+  "codex_folder": "assessor",
+  "archive_path": "/workspace/backups/governance-merge-2026-10-22/scorer-merge-2026-10-22/",
+  "file_count": 8,
+  "files": [
+    {
+      "path": "codex/assessor/CHANGELOG.md",
+      "source": "codex/assessor/CHANGELOG.md",
+      "bytes": 4204,
+      "sha256": "1ee2f8b799797124b5bd79234a85dc530cd41f5f2710572e4fcf8bb456796f4e"
+    },
+    {
+      "path": "codex/assessor/v001.md",
+      "source": "codex/assessor/v001.md",
+      "bytes": 2016,
+      "sha256": "77b7df74fcf68d475baac93435466aeb83d67950db50980fdaf86e7359de0aeb"
+    },
+    {
+      "path": "codex/assessor/v002.md",
+      "source": "codex/assessor/v002.md",
+      "bytes": 2755,
+      "sha256": "945a378597a73fe2e4d3553ec455c0c8af87fbc4ea18cae83067499c6bc11f19"
+    },
+    {
+      "path": "codex/assessor/v003.md",
+      "source": "codex/assessor/v003.md",
+      "bytes": 3118,
+      "sha256": "ee154ac0da971a9490eabad48dc6dacec515aad1d06e9c2b3f62f541421398e0"
+    },
+    {
+      "path": "codex/assessor/v004.md",
+      "source": "codex/assessor/v004.md",
+      "bytes": 3677,
+      "sha256": "0115e932ddb242ed8a0bcb533b6511d618f6017eadd8361a109ee429705cbbe6"
+    },
+    {
+      "path": "working-notes/2026-10-16/Scorer.md",
+      "source": "digest/inbox/2026-10-16/Scorer.md",
+      "bytes": 739,
+      "sha256": "085bdf10957b120af64cd1c2096bc42808fa86d7df3bcfdbd76e6381facc51dd"
+    },
+    {
+      "path": "working-notes/2026-10-22/Scorer.md",
+      "source": "digest/inbox/2026-10-22/Scorer.md",
+      "bytes": 760,
+      "sha256": "b04c234603b0a56f753f3ce727e62ee00414d55dcda7561bcf086e43af674a2e"
+    },
+    {
+      "path": "memory/store.db",
+      "source": "/home/box/agent-data/agents/050a12c9-e300-48b4-b318-425627cbc34b/store.db (sqlite backup; blobEncryptionKey stripped 10:16pm per Gem 10:15pm t79s449)",
+      "bytes": 49152,
+      "sha256": "26ab5766ad2a911515673ea0e1194a5f4d1337f5373334ef3fa6470877e4d279",
+      "integrity_check": "ok"
+    }
+  ],
+  "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+  "moved": "moved from /workspace/governance/_archive/scorer-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/scorer-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
+}

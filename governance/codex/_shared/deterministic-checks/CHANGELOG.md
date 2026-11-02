@@ -1,0 +1,8 @@
+# Shared: Deterministic checks: changelog
+
+> **Codes used below** (added 10:48:32pm AEST 22 Oct 2026; history rows unchanged): t72u: Gem's pasted message in Archivist's chat, 9:27pm 22 Oct 2026 (the five approval lines) · t89u: Gem's pasted message in Archivist's chat, 10:41pm 22 Oct 2026 (clarity batch revision 3). Source: proposals/2026-10-22-clarity/codes-and-cleanup.md.
+
+| Version | Date | Author | Approved by | Reason | File |
+|---|---|---|---|---|---|
+| 1 | 2026-10-22 (AEST, UTC+10) | Architect (id 51af1200-ca1a-45ff-8350-848091e00f96) | Gem, directly in Archivist's chat (t72u) 22 Oct 2026 9:27pm AEST, item 5 (deterministic-checks v001 d449ff388f8e); deploy ordered 10:15pm (t80s452) | Redesign R-051; recorded 10:23:38pm, in effect from recording. | v001.md |
+| 2 | 2026-10-22 (AEST, UTC+10) | Architect (id 51af1200-ca1a-45ff-8350-848091e00f96) | Gem, directly in Archivist's chat (message t89u), 22 Oct 2026 10:41pm AEST: "… I approve the clarity batch revision 3 (proposals/2026-10-22-clarity/), recorded after the redesign batch, in this order: … deterministic-checks-v002 (36495ce6a0fb) … Record, then deploy in the same order as the redesign." (full words in approvals/2026-10-22-gem-direct-words.md; approval object in approvals/objects.jsonl) | Clarity batch revision 3, item 5; R-029: the approver's words are recorded before anything takes effect. Recorded 10:47:57pm; in effect from recording. | v002.md |

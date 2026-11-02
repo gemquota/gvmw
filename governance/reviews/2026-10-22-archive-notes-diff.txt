@@ -1,0 +1,227 @@
+Archive manifest notes edit, 22 Oct 2026 10:25:29pm AEST (Archivist), produced 10:45:43pm AEST
+Before: _archive/merge-manifest-baks/redesign-merge-2026-10-22-MANIFEST.json.bak-20261022-222529 (sha256 f9d1434482e1f16c5f748b0eef0d580fe7d8e7e5c6ae8f8dddbd69b066a149c9)
+After:  /workspace/backups/governance-merge-2026-10-22/redesign-merge-2026-10-22-MANIFEST.json (sha256 e925f877480673b97890bf08b004edb732d1c9d3827c09baa4b85ae514be2d80)
+The edit corrected the notes (key stripped, RR-060 CLEAR, memory copied, 59 files) and added upload_exclusions (wal/shm) and file_totals. No file hash entry changed.
+
+--- before
++++ after
+@@ -2,7 +2,7 @@
+     "created": "22 Oct 2026 10:08:44pm AEST",
+     "by": "Archivist",
+     "rule": "archivist-v011 archive step; migration step 2 (redesign R-051)",
+-    "excluded": "agent memory (store.db*), attachments, voice calls, profile/settings, secrets: not copied (Gem has not decided on memory)",
++    "excluded": "attachments, voice calls, profile.json and settings.json, and secrets are not copied. Memory (store.db) IS copied for all five bots, key stripped. store.db-wal and store.db-shm are on disk but excluded from upload (see upload_exclusions).",
+     "working_notes_definition": "the bot's own digest notes, digest/inbox/<date>/<Bot>.md",
+     "bots": {
+         "mediator": {
+@@ -74,8 +74,22 @@
+                     "integrity_check": "ok"
+                 }
+             ],
+-            "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+-            "moved": "moved from /workspace/governance/_archive/mediator-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/mediator-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
++            "notes": "Memory: Safekeeper's in-place scan (10:10pm 22 Oct) cleared Mediator, Scorer, Inquirer and Extractor; Safekeeper's own memory was copied at about 10:16pm, after Gem's 10:15pm 'Strip the key from the copies, then archive' (t79s449). blobEncryptionKey was stripped from all five store.db copies at 10:16pm, and Safeguard's RR-060 re-scan found them CLEAR. No attachments are copied: Extractor's attachments/cce63877\u2026.zip holds session tokens and must never be copied, and a01de55c\u2026.xlsx stays out. Each memory/ folder also holds store.db-wal (empty) and store.db-shm, created by Safeguard's read-only scan. They are kept (not deleted), excluded from upload, and hold no key data per Safeguard. Notes corrected 10:25:29pm AEST.",
++            "moved": "moved from /workspace/governance/_archive/mediator-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/mediator-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked",
++            "upload_exclusions": [
++                {
++                    "path": "memory/store.db-wal",
++                    "bytes": 0,
++                    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++                    "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++                },
++                {
++                    "path": "memory/store.db-shm",
++                    "bytes": 32768,
++                    "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
++                    "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++                }
++            ]
+         },
+         "scorer": {
+             "name": "Scorer",
+@@ -134,8 +148,22 @@
+                     "integrity_check": "ok"
+                 }
+             ],
+-            "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+-            "moved": "moved from /workspace/governance/_archive/scorer-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/scorer-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
++            "notes": "Memory: Safekeeper's in-place scan (10:10pm 22 Oct) cleared Mediator, Scorer, Inquirer and Extractor; Safekeeper's own memory was copied at about 10:16pm, after Gem's 10:15pm 'Strip the key from the copies, then archive' (t79s449). blobEncryptionKey was stripped from all five store.db copies at 10:16pm, and Safeguard's RR-060 re-scan found them CLEAR. No attachments are copied: Extractor's attachments/cce63877\u2026.zip holds session tokens and must never be copied, and a01de55c\u2026.xlsx stays out. Each memory/ folder also holds store.db-wal (empty) and store.db-shm, created by Safeguard's read-only scan. They are kept (not deleted), excluded from upload, and hold no key data per Safeguard. Notes corrected 10:25:29pm AEST.",
++            "moved": "moved from /workspace/governance/_archive/scorer-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/scorer-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked",
++            "upload_exclusions": [
++                {
++                    "path": "memory/store.db-wal",
++                    "bytes": 0,
++                    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++                    "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++                },
++                {
++                    "path": "memory/store.db-shm",
++                    "bytes": 32768,
++                    "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
++                    "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++                }
++            ]
+         },
+         "safekeeper": {
+             "name": "Safekeeper",
+@@ -200,8 +228,22 @@
+                     "integrity_check": "ok"
+                 }
+             ],
+-            "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+-            "moved": "moved from /workspace/governance/_archive/safekeeper-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/safekeeper-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
++            "notes": "Memory: Safekeeper's in-place scan (10:10pm 22 Oct) cleared Mediator, Scorer, Inquirer and Extractor; Safekeeper's own memory was copied at about 10:16pm, after Gem's 10:15pm 'Strip the key from the copies, then archive' (t79s449). blobEncryptionKey was stripped from all five store.db copies at 10:16pm, and Safeguard's RR-060 re-scan found them CLEAR. No attachments are copied: Extractor's attachments/cce63877\u2026.zip holds session tokens and must never be copied, and a01de55c\u2026.xlsx stays out. Each memory/ folder also holds store.db-wal (empty) and store.db-shm, created by Safeguard's read-only scan. They are kept (not deleted), excluded from upload, and hold no key data per Safeguard. Notes corrected 10:25:29pm AEST.",
++            "moved": "moved from /workspace/governance/_archive/safekeeper-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/safekeeper-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked",
++            "upload_exclusions": [
++                {
++                    "path": "memory/store.db-wal",
++                    "bytes": 0,
++                    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++                    "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++                },
++                {
++                    "path": "memory/store.db-shm",
++                    "bytes": 32768,
++                    "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
++                    "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++                }
++            ]
+         },
+         "inquirer": {
+             "name": "Inquirer",
+@@ -254,8 +296,22 @@
+                     "integrity_check": "ok"
+                 }
+             ],
+-            "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+-            "moved": "moved from /workspace/governance/_archive/inquirer-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/inquirer-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
++            "notes": "Memory: Safekeeper's in-place scan (10:10pm 22 Oct) cleared Mediator, Scorer, Inquirer and Extractor; Safekeeper's own memory was copied at about 10:16pm, after Gem's 10:15pm 'Strip the key from the copies, then archive' (t79s449). blobEncryptionKey was stripped from all five store.db copies at 10:16pm, and Safeguard's RR-060 re-scan found them CLEAR. No attachments are copied: Extractor's attachments/cce63877\u2026.zip holds session tokens and must never be copied, and a01de55c\u2026.xlsx stays out. Each memory/ folder also holds store.db-wal (empty) and store.db-shm, created by Safeguard's read-only scan. They are kept (not deleted), excluded from upload, and hold no key data per Safeguard. Notes corrected 10:25:29pm AEST.",
++            "moved": "moved from /workspace/governance/_archive/inquirer-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/inquirer-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked",
++            "upload_exclusions": [
++                {
++                    "path": "memory/store.db-wal",
++                    "bytes": 0,
++                    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++                    "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++                },
++                {
++                    "path": "memory/store.db-shm",
++                    "bytes": 32768,
++                    "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
++                    "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++                }
++            ]
+         },
+         "extractor": {
+             "name": "Extractor",
+@@ -320,11 +376,105 @@
+                     "integrity_check": "ok"
+                 }
+             ],
+-            "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+-            "moved": "moved from /workspace/governance/_archive/extractor-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/extractor-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
++            "notes": "Memory: Safekeeper's in-place scan (10:10pm 22 Oct) cleared Mediator, Scorer, Inquirer and Extractor; Safekeeper's own memory was copied at about 10:16pm, after Gem's 10:15pm 'Strip the key from the copies, then archive' (t79s449). blobEncryptionKey was stripped from all five store.db copies at 10:16pm, and Safeguard's RR-060 re-scan found them CLEAR. No attachments are copied: Extractor's attachments/cce63877\u2026.zip holds session tokens and must never be copied, and a01de55c\u2026.xlsx stays out. Each memory/ folder also holds store.db-wal (empty) and store.db-shm, created by Safeguard's read-only scan. They are kept (not deleted), excluded from upload, and hold no key data per Safeguard. Notes corrected 10:25:29pm AEST.",
++            "moved": "moved from /workspace/governance/_archive/extractor-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/extractor-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked",
++            "upload_exclusions": [
++                {
++                    "path": "memory/store.db-wal",
++                    "bytes": 0,
++                    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++                    "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++                },
++                {
++                    "path": "memory/store.db-shm",
++                    "bytes": 32768,
++                    "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
++                    "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++                }
++            ]
+         }
+     },
+-    "safekeeper_scan_notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder).",
+-    "location": "/workspace/backups/governance-merge-2026-10-22/ (mode 700, locked on box; store.db copies contain a blobEncryptionKey, Safeguard RR-059; no upload)",
+-    "drive_upload": "eligible once the Governance backups folder exists (no folder found yet); nothing uploaded"
++    "safekeeper_scan_notes": "Memory: Safekeeper's in-place scan (10:10pm 22 Oct) cleared Mediator, Scorer, Inquirer and Extractor; Safekeeper's own memory was copied at about 10:16pm, after Gem's 10:15pm 'Strip the key from the copies, then archive' (t79s449). blobEncryptionKey was stripped from all five store.db copies at 10:16pm, and Safeguard's RR-060 re-scan found them CLEAR. No attachments are copied: Extractor's attachments/cce63877\u2026.zip holds session tokens and must never be copied, and a01de55c\u2026.xlsx stays out. Each memory/ folder also holds store.db-wal (empty) and store.db-shm, created by Safeguard's read-only scan. They are kept (not deleted), excluded from upload, and hold no key data per Safeguard. Notes corrected 10:25:29pm AEST.",
++    "location": "/workspace/backups/governance-merge-2026-10-22/ (mode 700, locked on box). The store.db copies had blobEncryptionKey stripped at 10:16pm (Gem t79s449); Safeguard's RR-060 re-scan: CLEAR. Nothing uploaded yet.",
++    "drive_upload": "eligible once the Governance backups folder exists (no folder found yet); nothing uploaded",
++    "upload_exclusions": [
++        {
++            "bot": "mediator",
++            "path": "memory/store.db-wal",
++            "bytes": 0,
++            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++            "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++        },
++        {
++            "bot": "mediator",
++            "path": "memory/store.db-shm",
++            "bytes": 32768,
++            "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
++            "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++        },
++        {
++            "bot": "scorer",
++            "path": "memory/store.db-wal",
++            "bytes": 0,
++            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++            "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++        },
++        {
++            "bot": "scorer",
++            "path": "memory/store.db-shm",
++            "bytes": 32768,
++            "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
++            "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++        },
++        {
++            "bot": "safekeeper",
++            "path": "memory/store.db-wal",
++            "bytes": 0,
++            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++            "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++        },
++        {
++            "bot": "safekeeper",
++            "path": "memory/store.db-shm",
++            "bytes": 32768,
++            "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
++            "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++        },
++        {
++            "bot": "inquirer",
++            "path": "memory/store.db-wal",
++            "bytes": 0,
++            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++            "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++        },
++        {
++            "bot": "inquirer",
++            "path": "memory/store.db-shm",
++            "bytes": 32768,
++            "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
++            "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++        },
++        {
++            "bot": "extractor",
++            "path": "memory/store.db-wal",
++            "bytes": 0,
++            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++            "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++        },
++        {
++            "bot": "extractor",
++            "path": "memory/store.db-shm",
++            "bytes": 32768,
++            "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
++            "reason": "created by Safeguard's read-only scan; no key data per Safeguard; kept, not uploaded"
++        }
++    ],
++    "file_totals": {
++        "archived_files_listed": 43,
++        "of_which_memory_store_db": 5,
++        "upload_excluded_wal_shm": 10,
++        "manifests": 6,
++        "total_on_disk": 59,
++        "explanation": "38 codex/notes files + 15 memory-folder files (5 store.db + 10 wal/shm) + 6 manifests = 59"
++    }
+ }

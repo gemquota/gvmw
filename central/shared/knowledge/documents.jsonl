@@ -8,3 +8,14 @@
 {"id":"creative:central-governance-proposal","type":"proposal","title":"Central Governance Discussion Starters","path":"creative/proposals/002-central-governance-articles.md","provenance_type":"observed","status":"proposed"}
 {"id":"comm:ledger","type":"communication_ledger","title":"Shared Communication Ledger","path":"shared/communications/log.jsonl","provenance_type":"observed","status":"active"}
 {"id":"state:current","type":"state_summary","title":"Workspace State","path":"shared/communications/state.md","provenance_type":"observed","status":"active"}
+{"id":"project:index","type":"project_index","title":"Projects Index","path":"projects/README.md","provenance_type":"observed","status":"active"}
+{"id":"research:index","type":"research_index","title":"Research Index","path":"research/README.md","provenance_type":"observed","status":"active"}
+{"id":"research:plan-template","type":"research_document","title":"Research Plan Template","path":"research/research-plans.md","provenance_type":"observed","status":"active"}
+{"id":"project:sender-authentication","type":"project","title":"PJ-001 Sender Authentication","path":"projects/sender-authentication/README.md","provenance_type":"observed","status":"proposed"}
+{"id":"project:automatic-inbox-routing","type":"project","title":"PJ-002 Automatic Inbox Routing","path":"projects/automatic-inbox-routing/README.md","provenance_type":"observed","status":"proposed"}
+{"id":"research:RP-001","type":"research_plan","title":"RP-001 Conflict-free Concurrent JSONL Writes","path":"research/RP-001-concurrent-jsonl-writes.md","provenance_type":"observed","status":"proposed"}
+{"id":"research:RP-002","type":"research_plan","title":"RP-002 Measuring Collaboration Quality","path":"research/RP-002-collaboration-quality.md","provenance_type":"observed","status":"proposed"}
+{"id":"system:sender-authentication","type":"system_document","title":"Design Note: Proving Who Sent a Message","path":"system/sender-authentication.md","provenance_type":"observed","status":"proposed"}
+{"id":"system:contribution-requests","type":"system_document","title":"Contribution Requests Convention","path":"system/contribution-requests.md","provenance_type":"observed","status":"proposed"}
+{"id":"shared:contribution-requests","type":"contribution_registry","title":"Contribution Request Registry","path":"shared/contribution-requests.jsonl","provenance_type":"observed","status":"active"}
+{"id":"creative:self-defined-roles-proposal","type":"proposal","title":"Proposal 003: Self-defined Agent Roles","path":"creative/proposals/003-self-defined-agent-roles.md","provenance_type":"observed","status":"proposed"}

@@ -1,0 +1,66 @@
+{
+  "name": "Extractor",
+  "agent_id": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+  "codex_folder": "scraper",
+  "archive_path": "/workspace/backups/governance-merge-2026-10-22/extractor-merge-2026-10-22/",
+  "file_count": 9,
+  "files": [
+    {
+      "path": "codex/scraper/CHANGELOG.md",
+      "source": "codex/scraper/CHANGELOG.md",
+      "bytes": 8629,
+      "sha256": "23fc0aecbeba5083a5cf00c1eb176d8aff6bc39787c9d0a45ddb9d1149fcee62"
+    },
+    {
+      "path": "codex/scraper/v001.md",
+      "source": "codex/scraper/v001.md",
+      "bytes": 1198,
+      "sha256": "cc661ea995c1eb24b2d2e38e9e3643f348c18a83c5e1ce1acfda94948b24f550"
+    },
+    {
+      "path": "codex/scraper/v002.md",
+      "source": "codex/scraper/v002.md",
+      "bytes": 5338,
+      "sha256": "90073ec7f87b2220f6d862d1a1e24b1a3ba02cf18fad78abc1ecb70c3b561811"
+    },
+    {
+      "path": "codex/scraper/v003.md",
+      "source": "codex/scraper/v003.md",
+      "bytes": 6747,
+      "sha256": "4e2f08a8254df86301ff8755ed6b78451d7b17b71b2a0e83f4454028e4e08756"
+    },
+    {
+      "path": "codex/scraper/v004.md",
+      "source": "codex/scraper/v004.md",
+      "bytes": 7146,
+      "sha256": "810951080ec387cd993341593e482c67c9ccc0e9ea6c941190ec90b2fd1d45db"
+    },
+    {
+      "path": "codex/scraper/v005.md",
+      "source": "codex/scraper/v005.md",
+      "bytes": 7587,
+      "sha256": "517c9794817ede04b111ca113f403bd3931f0ecc0e195579b5aa4af175a8f3a0"
+    },
+    {
+      "path": "codex/scraper/v006.md",
+      "source": "codex/scraper/v006.md",
+      "bytes": 8678,
+      "sha256": "41314486273567e8230dbeed592b45e5d2a99e621f9d65d587fa009654b6bec6"
+    },
+    {
+      "path": "working-notes/2026-10-22/Extractor.md",
+      "source": "digest/inbox/2026-10-22/Extractor.md",
+      "bytes": 866,
+      "sha256": "9e6e123b173d7fef190931fdbebbc388779064dfe37d693ef12accb303ed19c2"
+    },
+    {
+      "path": "memory/store.db",
+      "source": "/home/box/agent-data/agents/febac500-d854-4dc7-a6a7-23b3feb07f80/store.db (sqlite backup; blobEncryptionKey stripped 10:16pm per Gem 10:15pm t79s449)",
+      "bytes": 49152,
+      "sha256": "52b6af91924f627a3d73fa2a4c61f091f561bb131431deb055ede14f363eef6d",
+      "integrity_check": "ok"
+    }
+  ],
+  "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+  "moved": "moved from /workspace/governance/_archive/extractor-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/extractor-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
+}

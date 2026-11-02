@@ -1,0 +1,112 @@
+[
+  {
+    "kind": "profile",
+    "agentId": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+    "name": "P2 (Ops) Mediator",
+    "folder": "connector-steward",
+    "version": "v007",
+    "field": "description",
+    "chars": 776,
+    "sha256": "cb68fd0821b6f08a35b4c7ff1931a900c6f8e2de54c20b7de7714c71ded22aa9",
+    "source": "/tmp/r_90f9eb20.txt",
+    "profile_mtime": "10:41:04pm",
+    "writer": "not Archivist (unverified, R-007)",
+    "text": "RETIRED on 22 Oct 2026 (Gem, in Archivist's chat: \"Yes, retire all five now\"; R-049, R-051). Mediator's duties merged into Mender (id c8401a53-136d-45f3-9e2d-e423ccdd08ac), whose brief now carries them (mender v007). Do no scheduled or new work, start nothing, and send nothing to other bots. Pause your own routines at your next turn. If Gem or a bot messages you, reply once that you're retired and that Mender handles this now, and do nothing else unless Gem asks you directly in your own chat. Nothing has been deleted: your codex folder, notes and memory copy are archived (/workspace/backups/governance-merge-2026-10-22/), and your agent folder stays. Your earlier instructions are in /workspace/governance/codex/connector-steward/ (previous version) for reference only.",
+    "rename": {
+      "field": "name",
+      "from": "P2 (Ops) Mediator",
+      "to": "RETIRED P2 (Ops) Mediator",
+      "profile_mtime": "10:43:06pm",
+      "approval": "Gem, directly in Archivist's chat (t90u) 10:42pm 22 Oct: \"all the retired butts should be renamed with retired at the start of their name\"",
+      "writer": "reported by the parent as done at about 10:43pm (name only); description unchanged (still byte-matches the retirement text)"
+    }
+  },
+  {
+    "kind": "profile",
+    "agentId": "050a12c9-e300-48b4-b318-425627cbc34b",
+    "name": "P1 (Checks) Scorer",
+    "folder": "assessor",
+    "version": "v005",
+    "field": "description",
+    "chars": 774,
+    "sha256": "92fdc5b9654a6992d52137c6d0ddaacd8b64c29264789511c9b1194f66076181",
+    "source": "/tmp/r_050a12c9.txt",
+    "profile_mtime": "10:41:07pm",
+    "writer": "not Archivist (unverified, R-007)",
+    "text": "RETIRED on 22 Oct 2026 (Gem, in Archivist's chat: \"Yes, retire all five now\"; R-049, R-051). Scorer's duties merged into Scrutineer (id affe0344-6b5f-4251-8ecb-3e23dfa5db3c), whose brief now carries them (auditor v007). Do no scheduled or new work, start nothing, and send nothing to other bots. Pause your own routines at your next turn. If Gem or a bot messages you, reply once that you're retired and that Scrutineer handles this now, and do nothing else unless Gem asks you directly in your own chat. Nothing has been deleted: your codex folder, notes and memory copy are archived (/workspace/backups/governance-merge-2026-10-22/), and your agent folder stays. Your earlier instructions are in /workspace/governance/codex/assessor/ (previous version) for reference only.",
+    "rename": {
+      "field": "name",
+      "from": "P1 (Checks) Scorer",
+      "to": "RETIRED P1 (Checks) Scorer",
+      "profile_mtime": "10:43:08pm",
+      "approval": "Gem, directly in Archivist's chat (t90u) 10:42pm 22 Oct: \"all the retired butts should be renamed with retired at the start of their name\"",
+      "writer": "reported by the parent as done at about 10:43pm (name only); description unchanged (still byte-matches the retirement text)"
+    }
+  },
+  {
+    "kind": "profile",
+    "agentId": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+    "name": "P1 (Checks) Safekeeper",
+    "folder": "secrets-credentials-custodian",
+    "version": "v006",
+    "field": "description",
+    "chars": 799,
+    "sha256": "9a1140a06a9ad9828c0013e613cf3a47f136cf2422f7f071191862c1e071a6b9",
+    "source": "/tmp/r_52772b1d.txt",
+    "profile_mtime": "10:41:10pm",
+    "writer": "not Archivist (unverified, R-007)",
+    "text": "RETIRED on 22 Oct 2026 (Gem, in Archivist's chat: \"Yes, retire all five now\"; R-049, R-051). Safekeeper's duties merged into Safeguard (id 3661a899-2768-4a77-a95a-71d0251813bc), whose brief now carries them (safeguard v009). Do no scheduled or new work, start nothing, and send nothing to other bots. Pause your own routines at your next turn. If Gem or a bot messages you, reply once that you're retired and that Safeguard handles this now, and do nothing else unless Gem asks you directly in your own chat. Nothing has been deleted: your codex folder, notes and memory copy are archived (/workspace/backups/governance-merge-2026-10-22/), and your agent folder stays. Your earlier instructions are in /workspace/governance/codex/secrets-credentials-custodian/ (previous version) for reference only.",
+    "rename": {
+      "field": "name",
+      "from": "P1 (Checks) Safekeeper",
+      "to": "RETIRED P1 (Checks) Safekeeper",
+      "profile_mtime": "10:43:09pm",
+      "approval": "Gem, directly in Archivist's chat (t90u) 10:42pm 22 Oct: \"all the retired butts should be renamed with retired at the start of their name\"",
+      "writer": "reported by the parent as done at about 10:43pm (name only); description unchanged (still byte-matches the retirement text)"
+    }
+  },
+  {
+    "kind": "profile",
+    "agentId": "0314faa4-edcb-4aa4-91cc-876dc44f3a6e",
+    "name": "P2 (ID) Inquirer",
+    "folder": "identity-inquirer",
+    "version": "v005",
+    "field": "description",
+    "chars": 779,
+    "sha256": "7c6a3d9f2ab0b75a958c51009424e9dff49b45344ff5119ab438f26d5ce1660b",
+    "source": "/tmp/r_0314faa4.txt",
+    "profile_mtime": "10:41:14pm",
+    "writer": "not Archivist (unverified, R-007)",
+    "text": "RETIRED on 22 Oct 2026 (Gem, in Archivist's chat: \"Yes, retire all five now\"; R-049, R-051). Inquirer's duties merged into Inferer (id 94516ca6-6355-43c5-b387-d2b605057784), whose brief now carries them (inferer v008). Do no scheduled or new work, start nothing, and send nothing to other bots. Pause your own routines at your next turn. If Gem or a bot messages you, reply once that you're retired and that Inferer handles this now, and do nothing else unless Gem asks you directly in your own chat. Nothing has been deleted: your codex folder, notes and memory copy are archived (/workspace/backups/governance-merge-2026-10-22/), and your agent folder stays. Your earlier instructions are in /workspace/governance/codex/identity-inquirer/ (previous version) for reference only.",
+    "rename": {
+      "field": "name",
+      "from": "P2 (ID) Inquirer",
+      "to": "RETIRED P2 (ID) Inquirer",
+      "profile_mtime": "10:43:10pm",
+      "approval": "Gem, directly in Archivist's chat (t90u) 10:42pm 22 Oct: \"all the retired butts should be renamed with retired at the start of their name\"",
+      "writer": "reported by the parent as done at about 10:43pm (name only); description unchanged (still byte-matches the retirement text)"
+    }
+  },
+  {
+    "kind": "profile",
+    "agentId": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+    "name": "P5 (Work) Extractor",
+    "folder": "scraper",
+    "version": "v007",
+    "field": "description",
+    "chars": 773,
+    "sha256": "5ec1d1c01cf10daf4602963595dcd84302d6422dfb8e3560f90f0f31f40d9344",
+    "source": "/tmp/r_febac500.txt",
+    "profile_mtime": "10:41:30pm",
+    "writer": "Archivist",
+    "text": "RETIRED on 22 Oct 2026 (Gem, in Archivist's chat: \"Yes, retire all five now\"; R-049, R-051). Extractor's duties merged into Emissary (id 28cf987d-ee94-4839-a6d3-33c04a11b9d6), whose brief now carries them (emissary v010). Do no scheduled or new work, start nothing, and send nothing to other bots. Pause your own routines at your next turn. If Gem or a bot messages you, reply once that you're retired and that Emissary handles this now, and do nothing else unless Gem asks you directly in your own chat. Nothing has been deleted: your codex folder, notes and memory copy are archived (/workspace/backups/governance-merge-2026-10-22/), and your agent folder stays. Your earlier instructions are in /workspace/governance/codex/scraper/ (previous version) for reference only.",
+    "rename": {
+      "field": "name",
+      "from": "P5 (Work) Extractor",
+      "to": "RETIRED P5 (Work) Extractor",
+      "profile_mtime": "10:43:11pm",
+      "approval": "Gem, directly in Archivist's chat (t90u) 10:42pm 22 Oct: \"all the retired butts should be renamed with retired at the start of their name\"",
+      "writer": "reported by the parent as done at about 10:43pm (name only); description unchanged (still byte-matches the retirement text)"
+    }
+  }
+]

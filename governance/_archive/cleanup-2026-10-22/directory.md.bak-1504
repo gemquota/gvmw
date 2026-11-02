@@ -1,0 +1,98 @@
+# Gem's bot directory (ids)
+- Genesis Gang God (main assistant): 82a2c15a-2694-4ac2-b2f4-f7f463f85fce
+- Grok Bot: 28cf987d-ee94-4839-a6d3-33c04a11b9d6
+- Codey: f8e3fdc6-ee60-410e-bdb7-d437fc1500d1
+- Scraper: febac500-d854-4dc7-a6a7-23b3feb07f80
+- Swarm Builder: de808331-3c00-41f5-a3a4-4ae1f8f6f0ba
+- Clone: 6ae584b8-eaac-429b-9eae-d5e3e6f6a32b
+- Identity Inquirer: e613112b-b653-4567-bc4f-17261ce9302e
+- Identity Inferer: 94516ca6-6355-43c5-b387-d2b605057784
+## Governance
+- Codex Keeper: 61ef3abd-87b8-49f1-b8d6-b52969afa315
+- Instruction Architect: 51af1200-ca1a-45ff-8350-848091e00f96
+- Role Cartographer: d1daab5f-0536-4d3d-9d8e-d3977cd7cfc4
+- Assessor: 050a12c9-e300-48b4-b318-425627cbc34b
+- Auditor: affe0344-6b5f-4251-8ecb-3e23dfa5db3c
+Agent profiles: /home/box/agent-data/agents/<id>/profile.json
+## Oversight & operations (added 3 Oct 2026)
+- Cost & Budget Sentinel: f8b83b15-0ea1-4f99-9550-c3b8607ba999
+- Orchestration Conductor: f3810109-17a5-427f-9148-d58f645658e3
+- Governance Continuity Deputy: b3f6515c-d3fe-4beb-9b86-45016711c65d
+- Compliance & Risk Officer: 3661a899-2768-4a77-a95a-71d0251813bc
+- Secrets & Credentials Custodian: 52772b1d-4a85-4ea3-ae15-f3912c901a3b
+- Clone Accuracy Validator: d3191aa8-3ad6-4763-b4e4-c7c648acc9ba
+- Connector Steward: 90f9eb20-ff8f-456b-b94f-cc11bb33fc29
+- Comms Concierge: 5e47d344-1369-423a-b072-2e5277934022
+## Oversight & operations (added 3 Oct 2026)
+- Cost & Budget Sentinel: f8b83b15-0ea1-4f99-9550-c3b8607ba999
+- Orchestration Conductor: f3810109-17a5-427f-9148-d58f645658e3
+- Governance Continuity Deputy: b3f6515c-d3fe-4beb-9b86-45016711c65d
+- Compliance & Risk Officer: 3661a899-2768-4a77-a95a-71d0251813bc
+- Secrets & Credentials Custodian: 52772b1d-4a85-4ea3-ae15-f3912c901a3b
+- Clone Accuracy Validator: d3191aa8-3ad6-4763-b4e4-c7c648acc9ba
+- Connector Steward: 90f9eb20-ff8f-456b-b94f-cc11bb33fc29
+- Comms Concierge: 5e47d344-1369-423a-b072-2e5277934022
+
+## Groups (channels) and super-groups
+Super-group OVERSIGHT
+- Instruction Governance (e417910e-5e1e-41b8-94ec-ed80f2f1e498): Codex Keeper, Instruction Architect, Role Cartographer (lead), Governance Continuity Deputy
+- Assurance (b10e394f-5e67-48dd-97a9-e1df58f41d13): Assessor, Auditor (lead), Compliance & Risk Officer, Secrets & Credentials Custodian
+Super-group IDENTITY
+- Identity (0ecaea40-3f1a-47d7-9976-b66821b5491f): Clone, Identity Inquirer, Identity Inferer (lead), Clone Accuracy Validator
+Super-group RUNTIME
+- Operations (638e3cab-354d-4496-8a01-17f3179d2150): Orchestration Conductor (lead), Cost & Budget Sentinel, Connector Steward, Comms Concierge
+- Delivery (3e9d6a26-a614-45da-8fce-e4811c0d2f7c): Genesis Gang God (lead), Grok Bot, Codey, Scraper, Swarm Builder
+Top level
+- Council (4dd4fd18-d34c-4fc2-baa6-222acb567058): one lead per group (Role Cartographer, Auditor, Identity Inferer, Orchestration Conductor, Genesis Gang God). Cross-group issues go here; leads relay decisions back to their group.
+Genesis Gang God sits in every group as the coordinator.
+
+## Renamed 3 Oct 2026 (pattern: "(Category) Word", one letter per category)
+(Roles) A: Archivist = Codex Keeper; Architect = Instruction Architect; Assembler = Role Cartographer; Adjudicator = Governance Continuity Deputy; [proposed] Arbiter = Policy/Precedence Arbiter
+(Checks) S: Scorer = Assessor; Scrutineer = Auditor; Safeguard = Compliance & Risk Officer; Safekeeper = Secrets & Credentials Custodian; [proposed] Sentinel = Security/Threat Assessor, Sourcer = Evidence & Provenance Officer, Surveyor = Reality/State Reconciler
+(ID) I: Inquirer = Identity Inquirer; Inferer = Identity Inferer; Imitator = Clone; Interrogator = Clone Accuracy Validator; [proposed] Investigator = Identity Evidence Adjudicator
+(Ops) M: Marshal = Orchestration Conductor; Meter = Cost & Budget Sentinel; Mediator = Connector Steward; Messenger = Comms Concierge; [proposed] Minder = State & Context Steward, Mender = Incident/Recovery Coordinator
+(Work) E: Explorer = Genesis Gang God; Emissary = Grok Bot; Engineer = Codey; Extractor = Scraper; Ensembler = Swarm Builder
+Ids are unchanged.
+
+## Created 3 Oct 2026 (second wave)
+- (Roles) Arbiter: 2133048d-5ab9-4809-806c-218decdff8e6
+- (Roles) Advocate: ad0a645b-13cb-4106-addd-650ec1d8b7f8
+- (Checks) Sentinel: dddf57af-91f7-43c3-992d-a0c409669adb
+- (Checks) Sourcer: 2fe3e92f-4f39-4e9f-a56b-811438928f5b
+- (Checks) Surveyor: 1283e02b-94c2-4faf-bc78-3bbb049f8e16
+- (Checks) Sanitizer: 243f1c1f-8f6f-4d97-a5c7-46c859dec36f
+- (Checks) Simulator: 38bd0474-00e3-4448-ae3d-f26ec02e5336
+- (ID) Investigator: f2016e9b-ca8b-4783-8f53-f5765b0afe7b
+- (ID) Indexer: 16ee5875-21d2-4b26-9862-b34c7e1314d7
+- (Ops) Minder: e59d56b6-7321-4169-852e-c26a417b0316
+- (Ops) Mender: c8401a53-136d-45f3-9e2d-e423ccdd08ac
+- (Ops) Maintainer: b96f7469-ad10-47c7-8052-36872b51c5fa
+- (Ops) Moderator: 823349f7-9811-410e-b1c7-efb0bdf536a3
+- (Work) Expediter: 75534bfe-d27d-4668-923d-fe229973fae9
+- (Work) Editor: 2888c17a-98ac-42b6-8241-fc63721cfcaf
+Authority: Gem (human, not a bot). Precedence: Gem > environment reality > deterministic analysis > agent interpretation.
+
+## Phase prefixes (4 Oct 2026)
+Names now start with their rollout phase: "P# (Category) Word".
+- P1 (live): Marshal, Mender, Scorer, Safeguard, Safekeeper, Archivist, Architect, Explorer
+- P2: Scrutineer, Assembler
+- P3: Surveyor, Sourcer, Sentinel, Sanitizer, Simulator
+- P4 (identity): Inquirer, Inferer, Investigator, Imitator, Interrogator, Advocate
+- P5 (runtime ops): Minder, Meter, Mediator, Messenger, Moderator
+- P6 (work): Emissary, Engineer, Extractor, Ensembler, Expediter, Editor
+- P7 (scale-up): Arbiter, Adjudicator, Indexer, Maintainer
+
+## Merge (4 Oct 2026, approved by Gem in chat)
+Survivors absorb duties: Sentinel (+Sanitizer, Simulator), Scrutineer (+Surveyor), Imitator (+Advocate), Arbiter (+Assembler, Adjudicator; moved to P2 as approver), Marshal (+Moderator, Expediter), Minder (+Maintainer, Indexer).
+Retired (renamed "RETIRED X", awaiting deletion by Gem): Sanitizer, Simulator, Surveyor, Advocate, Assembler, Adjudicator, Moderator, Expediter, Maintainer, Indexer.
+Active bots: 26. Rule: no bot grades its own work.
+
+## Second merge (4 Oct 2026, 3:01pm, approved by Gem in chat)
+- Safekeeper (P1) absorbs Sentinel's threat register and input sanitising.
+- Safeguard (P1) absorbs Sentinel's dry runs.
+- Mender (P1) absorbs Minder (state, indexes, cleanup).
+- Engineer (P6) absorbs Ensembler (swarm build).
+- Retired: Sentinel, Minder, Ensembler. Merge F (Mediator + Meter) vetoed by Gem.
+- Explorer is Gem's 2IC and is never to be merged.
+Active bots: 23 (including Explorer).
+Gem also approved all 14 pending queue items at 3:01pm on 4 Oct (see /workspace/governance/proposals/).

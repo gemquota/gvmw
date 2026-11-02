@@ -18,3 +18,16 @@ Updated 16 Oct 2026, about 10:56am by Mender (weekday 10:50am watchdog): INC-007
 | INC-009 | 22 Oct 2026, ~6:45 PM | Platform stop 19–22 Oct (unpaid invoice), missed chain and watchdog runs. No chain files for Mon 19–Thu 22 Oct; Mender's 10:50am routine failed with 'unpaid Cursor invoice' (incl. 22 Oct 10:52:33am; last success 16 Oct 10:56am). No cause recorded beyond the invoice failures. No R-011 missing-Scorer report on file. Linked to INC-008. INC-007's 16 Oct 11:08am closure is present in the restored log. | 2026-10-22-platform-stop-19-22.md | **Open.** Mender does not close it; Scrutineer or Gem does. |
 
 Updated 22 Oct 2026, about 6:45pm by Mender: INC-009 opened (lookback after platform stop). Backup: `log.md.bak-20261022-1845`.
+
+| INC-010 | 30 Oct 2026, ~10:55 AM | No chain for Fri 23, Mon 26, Tue 27, Wed 28 or Thu 29 Oct (five weekdays): no assessments, reviews or chain files, no digest sent 23 to 29 Oct. Mender's 10:50am routine failed 29 Oct and has no record for the other days. Likely a platform stop (Explorer's 28 Oct run and Investigator's 29 Oct run also failed); cause not confirmed, invoice question B6 still open. Platform back by 29 Oct 9:07pm. **Today (30 Oct) the scores file was still missing at 10:52am** while Explorer, Investigator and Imitator ran, so today's gap is a stall in the scores step, not a platform stop. Also seen: box DNS can't resolve github.com (Engineer, 28 and 29 Oct; Explorer 30 Oct 7:50am). | 2026-10-30-missed-chain-23-29.md | **Open.** Scrutineer notified 30 Oct; Gem told. Mender doesn't close it; Scrutineer or Gem does. Linked to INC-007 and INC-009. |
+
+Updated 30 Oct 2026, about 10:55am by Mender: INC-010 opened (lookback 23 to 29 Oct plus today's missing scores). INC-007 and INC-009 stay open: 10:50am watchdog ran successfully today, which is their closing evidence for Scrutineer or Gem. Backup: `log.md.bak-20261030-1050`.
+
+
+## Closures, 30 Oct 2026, 11:00am AEST
+
+- INC-007: closed on Scrutineer's evidence (state/chain/2026-10-30.md; watchdog ran 30 Oct about 10:55am AEST).
+- INC-009: closed on Scrutineer's evidence (same).
+- INC-010 stays open. Cause per Scrutineer: its 11:45am routine failed on the unpaid invoice from 22 Oct. The github.com DNS failure (third day) remains open, owner Gem (Update Bot's Computer).
+
+Updated 2 Nov 2026, about 10:58am by Mender: INC-010 extended. Mon 2 Nov scores and reviews missing at 10:58am while other bots ran (platform up); same scores-step stall as 30 Oct (Scrutineer's scheduled runs failing, recorded cause unpaid invoice). Scrutineer notified, Gem told. Still open; Scrutineer or Gem closes. Backup: `log.md.bak-20261102-1050`.

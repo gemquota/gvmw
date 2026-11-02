@@ -45,6 +45,8 @@ jobs:
           Path("/tmp/central-dashboard.js").write_text(scripts[-1], encoding="utf-8")
           PY
           node --check /tmp/central-dashboard.js
+          node --check dashboard/api-cache.js
+          grep -q 'api-cache.js' dashboard/index.html
 
       - name: Upload dashboard artifact
         uses: actions/upload-pages-artifact@v3

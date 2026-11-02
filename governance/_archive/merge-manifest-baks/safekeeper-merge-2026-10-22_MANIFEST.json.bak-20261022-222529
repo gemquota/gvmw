@@ -1,0 +1,66 @@
+{
+  "name": "Safekeeper",
+  "agent_id": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+  "codex_folder": "secrets-credentials-custodian",
+  "archive_path": "/workspace/backups/governance-merge-2026-10-22/safekeeper-merge-2026-10-22/",
+  "file_count": 9,
+  "files": [
+    {
+      "path": "codex/secrets-credentials-custodian/CHANGELOG.md",
+      "source": "codex/secrets-credentials-custodian/CHANGELOG.md",
+      "bytes": 4924,
+      "sha256": "0b6f6701b8761f0fa19cbdd8dac46861c2edee9b3110de9c4f18043a0b846439"
+    },
+    {
+      "path": "codex/secrets-credentials-custodian/v001.md",
+      "source": "codex/secrets-credentials-custodian/v001.md",
+      "bytes": 2141,
+      "sha256": "49404befe847571e833e7fb73516f1e6b68962386e8018680c45c3f942a5d8c9"
+    },
+    {
+      "path": "codex/secrets-credentials-custodian/v002.md",
+      "source": "codex/secrets-credentials-custodian/v002.md",
+      "bytes": 3460,
+      "sha256": "34f7e7db21e77a79ad824cc73f2a12c854c2a526dd7247ada1bb0f3aeb153d24"
+    },
+    {
+      "path": "codex/secrets-credentials-custodian/v003.md",
+      "source": "codex/secrets-credentials-custodian/v003.md",
+      "bytes": 4342,
+      "sha256": "40a4c74d645c5cfddc77a5b051ef88a2251144ef128f91c7ada36a4d67417ed3"
+    },
+    {
+      "path": "codex/secrets-credentials-custodian/v004.md",
+      "source": "codex/secrets-credentials-custodian/v004.md",
+      "bytes": 5161,
+      "sha256": "56ad70ad7badadd04ce5eb27d764626a6a407930630b37bac21392c82e8adf53"
+    },
+    {
+      "path": "codex/secrets-credentials-custodian/v005.md",
+      "source": "codex/secrets-credentials-custodian/v005.md",
+      "bytes": 5855,
+      "sha256": "6e19116af13bb2aa0bc7688418df8516ca1995afda5e613e2e74e22cb40e3fd3"
+    },
+    {
+      "path": "working-notes/2026-10-16/Safekeeper.md",
+      "source": "digest/inbox/2026-10-16/Safekeeper.md",
+      "bytes": 2235,
+      "sha256": "1c34dcf6bb9e88fe2f1ab600eb532e66d05c8d3536d4970280f3b2bcef1ab485"
+    },
+    {
+      "path": "working-notes/2026-10-22/Safekeeper.md",
+      "source": "digest/inbox/2026-10-22/Safekeeper.md",
+      "bytes": 1053,
+      "sha256": "a543ce4b87ed253d264c9bf007d62f6d778c9aba05ba9dbe60ebbe5bcb74cfad"
+    },
+    {
+      "path": "memory/store.db",
+      "source": "/home/box/agent-data/agents/52772b1d-4a85-4ea3-ae15-f3912c901a3b/store.db (sqlite backup; blobEncryptionKey stripped 10:16pm per Gem 10:15pm t79s449)",
+      "bytes": 49152,
+      "sha256": "d94516d4afdd17b3b850867baf4b3d4b8bea2fb3d147903cf7c2cfebd4b01d53",
+      "integrity_check": "ok"
+    }
+  ],
+  "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+  "moved": "moved from /workspace/governance/_archive/safekeeper-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/safekeeper-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
+}

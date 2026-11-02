@@ -1,0 +1,330 @@
+{
+  "created": "22 Oct 2026 10:08:44pm AEST",
+  "by": "Archivist",
+  "rule": "archivist-v011 archive step; migration step 2 (redesign R-051)",
+  "excluded": "agent memory (store.db*), attachments, voice calls, profile/settings, secrets: not copied (Gem has not decided on memory)",
+  "working_notes_definition": "the bot's own digest notes, digest/inbox/<date>/<Bot>.md",
+  "bots": {
+    "mediator": {
+      "name": "Mediator",
+      "agent_id": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+      "codex_folder": "connector-steward",
+      "archive_path": "/workspace/backups/governance-merge-2026-10-22/mediator-merge-2026-10-22/",
+      "file_count": 10,
+      "files": [
+        {
+          "path": "codex/connector-steward/CHANGELOG.md",
+          "source": "codex/connector-steward/CHANGELOG.md",
+          "bytes": 6493,
+          "sha256": "2ab8135763185545f38c73d3b7ed6aeaf71a9338cf664e62755dcc4ef247436f"
+        },
+        {
+          "path": "codex/connector-steward/v001.md",
+          "source": "codex/connector-steward/v001.md",
+          "bytes": 2073,
+          "sha256": "f5d41fe7461d9db98fe826928acc4841d2036816987539a42acbf7cd0d932d91"
+        },
+        {
+          "path": "codex/connector-steward/v002.md",
+          "source": "codex/connector-steward/v002.md",
+          "bytes": 3083,
+          "sha256": "1949d6b4e9128db2b746cb13bbdf8f7ddec1a29918559d7785cbaaec4aeea2f7"
+        },
+        {
+          "path": "codex/connector-steward/v003.md",
+          "source": "codex/connector-steward/v003.md",
+          "bytes": 3629,
+          "sha256": "1c0fc10af7967b9096a71340cdb2a8b8772fa1aaff79e7e306a9868104d31405"
+        },
+        {
+          "path": "codex/connector-steward/v004.md",
+          "source": "codex/connector-steward/v004.md",
+          "bytes": 4301,
+          "sha256": "22a7823b1be58e7abc73603042c634b65700171c9e5f1c7905e2d6745129ad69"
+        },
+        {
+          "path": "codex/connector-steward/v005.md",
+          "source": "codex/connector-steward/v005.md",
+          "bytes": 4206,
+          "sha256": "3313c543d9e83e591cbdb240703a2d234bf2c7d8bdcec158702c6e4a3f2b0280"
+        },
+        {
+          "path": "codex/connector-steward/v006.md",
+          "source": "codex/connector-steward/v006.md",
+          "bytes": 4811,
+          "sha256": "138c1c046c664750254b97872653857419d22b031c8ede11d6095a25c3e3210d"
+        },
+        {
+          "path": "working-notes/2026-10-16/Mediator.md",
+          "source": "digest/inbox/2026-10-16/Mediator.md",
+          "bytes": 565,
+          "sha256": "b88687f88e98b778b2323b8e78eb17e60fdf926473a00a271f733a836167d785"
+        },
+        {
+          "path": "working-notes/2026-10-22/Mediator.md",
+          "source": "digest/inbox/2026-10-22/Mediator.md",
+          "bytes": 3764,
+          "sha256": "8cfd8a6d5e9041a37cfc2b1a6727dd9933e38b3c2c640f0aa06796026e38e68f"
+        },
+        {
+          "path": "memory/store.db",
+          "source": "/home/box/agent-data/agents/90f9eb20-ff8f-456b-b94f-cc11bb33fc29/store.db (sqlite backup; blobEncryptionKey stripped 10:16pm per Gem 10:15pm t79s449)",
+          "bytes": 49152,
+          "sha256": "0422552eae3e8628f64d0d06c689ddc8502829b6929c758c0efc91172dcc78be",
+          "integrity_check": "ok"
+        }
+      ],
+      "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+      "moved": "moved from /workspace/governance/_archive/mediator-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/mediator-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
+    },
+    "scorer": {
+      "name": "Scorer",
+      "agent_id": "050a12c9-e300-48b4-b318-425627cbc34b",
+      "codex_folder": "assessor",
+      "archive_path": "/workspace/backups/governance-merge-2026-10-22/scorer-merge-2026-10-22/",
+      "file_count": 8,
+      "files": [
+        {
+          "path": "codex/assessor/CHANGELOG.md",
+          "source": "codex/assessor/CHANGELOG.md",
+          "bytes": 4204,
+          "sha256": "1ee2f8b799797124b5bd79234a85dc530cd41f5f2710572e4fcf8bb456796f4e"
+        },
+        {
+          "path": "codex/assessor/v001.md",
+          "source": "codex/assessor/v001.md",
+          "bytes": 2016,
+          "sha256": "77b7df74fcf68d475baac93435466aeb83d67950db50980fdaf86e7359de0aeb"
+        },
+        {
+          "path": "codex/assessor/v002.md",
+          "source": "codex/assessor/v002.md",
+          "bytes": 2755,
+          "sha256": "945a378597a73fe2e4d3553ec455c0c8af87fbc4ea18cae83067499c6bc11f19"
+        },
+        {
+          "path": "codex/assessor/v003.md",
+          "source": "codex/assessor/v003.md",
+          "bytes": 3118,
+          "sha256": "ee154ac0da971a9490eabad48dc6dacec515aad1d06e9c2b3f62f541421398e0"
+        },
+        {
+          "path": "codex/assessor/v004.md",
+          "source": "codex/assessor/v004.md",
+          "bytes": 3677,
+          "sha256": "0115e932ddb242ed8a0bcb533b6511d618f6017eadd8361a109ee429705cbbe6"
+        },
+        {
+          "path": "working-notes/2026-10-16/Scorer.md",
+          "source": "digest/inbox/2026-10-16/Scorer.md",
+          "bytes": 739,
+          "sha256": "085bdf10957b120af64cd1c2096bc42808fa86d7df3bcfdbd76e6381facc51dd"
+        },
+        {
+          "path": "working-notes/2026-10-22/Scorer.md",
+          "source": "digest/inbox/2026-10-22/Scorer.md",
+          "bytes": 760,
+          "sha256": "b04c234603b0a56f753f3ce727e62ee00414d55dcda7561bcf086e43af674a2e"
+        },
+        {
+          "path": "memory/store.db",
+          "source": "/home/box/agent-data/agents/050a12c9-e300-48b4-b318-425627cbc34b/store.db (sqlite backup; blobEncryptionKey stripped 10:16pm per Gem 10:15pm t79s449)",
+          "bytes": 49152,
+          "sha256": "26ab5766ad2a911515673ea0e1194a5f4d1337f5373334ef3fa6470877e4d279",
+          "integrity_check": "ok"
+        }
+      ],
+      "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+      "moved": "moved from /workspace/governance/_archive/scorer-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/scorer-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
+    },
+    "safekeeper": {
+      "name": "Safekeeper",
+      "agent_id": "52772b1d-4a85-4ea3-ae15-f3912c901a3b",
+      "codex_folder": "secrets-credentials-custodian",
+      "archive_path": "/workspace/backups/governance-merge-2026-10-22/safekeeper-merge-2026-10-22/",
+      "file_count": 9,
+      "files": [
+        {
+          "path": "codex/secrets-credentials-custodian/CHANGELOG.md",
+          "source": "codex/secrets-credentials-custodian/CHANGELOG.md",
+          "bytes": 4924,
+          "sha256": "0b6f6701b8761f0fa19cbdd8dac46861c2edee9b3110de9c4f18043a0b846439"
+        },
+        {
+          "path": "codex/secrets-credentials-custodian/v001.md",
+          "source": "codex/secrets-credentials-custodian/v001.md",
+          "bytes": 2141,
+          "sha256": "49404befe847571e833e7fb73516f1e6b68962386e8018680c45c3f942a5d8c9"
+        },
+        {
+          "path": "codex/secrets-credentials-custodian/v002.md",
+          "source": "codex/secrets-credentials-custodian/v002.md",
+          "bytes": 3460,
+          "sha256": "34f7e7db21e77a79ad824cc73f2a12c854c2a526dd7247ada1bb0f3aeb153d24"
+        },
+        {
+          "path": "codex/secrets-credentials-custodian/v003.md",
+          "source": "codex/secrets-credentials-custodian/v003.md",
+          "bytes": 4342,
+          "sha256": "40a4c74d645c5cfddc77a5b051ef88a2251144ef128f91c7ada36a4d67417ed3"
+        },
+        {
+          "path": "codex/secrets-credentials-custodian/v004.md",
+          "source": "codex/secrets-credentials-custodian/v004.md",
+          "bytes": 5161,
+          "sha256": "56ad70ad7badadd04ce5eb27d764626a6a407930630b37bac21392c82e8adf53"
+        },
+        {
+          "path": "codex/secrets-credentials-custodian/v005.md",
+          "source": "codex/secrets-credentials-custodian/v005.md",
+          "bytes": 5855,
+          "sha256": "6e19116af13bb2aa0bc7688418df8516ca1995afda5e613e2e74e22cb40e3fd3"
+        },
+        {
+          "path": "working-notes/2026-10-16/Safekeeper.md",
+          "source": "digest/inbox/2026-10-16/Safekeeper.md",
+          "bytes": 2235,
+          "sha256": "1c34dcf6bb9e88fe2f1ab600eb532e66d05c8d3536d4970280f3b2bcef1ab485"
+        },
+        {
+          "path": "working-notes/2026-10-22/Safekeeper.md",
+          "source": "digest/inbox/2026-10-22/Safekeeper.md",
+          "bytes": 1053,
+          "sha256": "a543ce4b87ed253d264c9bf007d62f6d778c9aba05ba9dbe60ebbe5bcb74cfad"
+        },
+        {
+          "path": "memory/store.db",
+          "source": "/home/box/agent-data/agents/52772b1d-4a85-4ea3-ae15-f3912c901a3b/store.db (sqlite backup; blobEncryptionKey stripped 10:16pm per Gem 10:15pm t79s449)",
+          "bytes": 49152,
+          "sha256": "d94516d4afdd17b3b850867baf4b3d4b8bea2fb3d147903cf7c2cfebd4b01d53",
+          "integrity_check": "ok"
+        }
+      ],
+      "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+      "moved": "moved from /workspace/governance/_archive/safekeeper-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/safekeeper-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
+    },
+    "inquirer": {
+      "name": "Inquirer",
+      "agent_id": "0314faa4-edcb-4aa4-91cc-876dc44f3a6e",
+      "codex_folder": "identity-inquirer",
+      "archive_path": "/workspace/backups/governance-merge-2026-10-22/inquirer-merge-2026-10-22/",
+      "file_count": 7,
+      "files": [
+        {
+          "path": "codex/identity-inquirer/CHANGELOG.md",
+          "source": "codex/identity-inquirer/CHANGELOG.md",
+          "bytes": 6325,
+          "sha256": "1e7313fa624593a63250350233006b8a5292a50739054836beca367d12bfb8cd"
+        },
+        {
+          "path": "codex/identity-inquirer/v001.md",
+          "source": "codex/identity-inquirer/v001.md",
+          "bytes": 3512,
+          "sha256": "7b0b5d88ef89f84e879f593d60ffb70e7a4ac57f4a25d9920f8321212dc9f340"
+        },
+        {
+          "path": "codex/identity-inquirer/v002.md",
+          "source": "codex/identity-inquirer/v002.md",
+          "bytes": 5438,
+          "sha256": "0c362c832e7f28e3471c71ce6e1d1cabd53cf19abb1636028634a6b08e0601dc"
+        },
+        {
+          "path": "codex/identity-inquirer/v003.md",
+          "source": "codex/identity-inquirer/v003.md",
+          "bytes": 5787,
+          "sha256": "f1700b8fd9c17276e455bfd951a2bc87a7be8820345ba8bbf09c536fdfe345d3"
+        },
+        {
+          "path": "codex/identity-inquirer/v004.md",
+          "source": "codex/identity-inquirer/v004.md",
+          "bytes": 6221,
+          "sha256": "53d8042eebe2240c6fe918438fbeadd7ad7f35e0fea69f6d86b7ba74dc3580de"
+        },
+        {
+          "path": "working-notes/2026-10-22/Inquirer.md",
+          "source": "digest/inbox/2026-10-22/Inquirer.md",
+          "bytes": 755,
+          "sha256": "bf0fe02adcea0c36d25247d422e42d572e676a99b4418c813646ab7763c8519d"
+        },
+        {
+          "path": "memory/store.db",
+          "source": "/home/box/agent-data/agents/0314faa4-edcb-4aa4-91cc-876dc44f3a6e/store.db (sqlite backup; blobEncryptionKey stripped 10:16pm per Gem 10:15pm t79s449)",
+          "bytes": 49152,
+          "sha256": "9c5d7d77ae496b23a03dd0ae76f3fb960f4166a18c21b255a13c777ee3cf204d",
+          "integrity_check": "ok"
+        }
+      ],
+      "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+      "moved": "moved from /workspace/governance/_archive/inquirer-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/inquirer-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
+    },
+    "extractor": {
+      "name": "Extractor",
+      "agent_id": "febac500-d854-4dc7-a6a7-23b3feb07f80",
+      "codex_folder": "scraper",
+      "archive_path": "/workspace/backups/governance-merge-2026-10-22/extractor-merge-2026-10-22/",
+      "file_count": 9,
+      "files": [
+        {
+          "path": "codex/scraper/CHANGELOG.md",
+          "source": "codex/scraper/CHANGELOG.md",
+          "bytes": 8629,
+          "sha256": "23fc0aecbeba5083a5cf00c1eb176d8aff6bc39787c9d0a45ddb9d1149fcee62"
+        },
+        {
+          "path": "codex/scraper/v001.md",
+          "source": "codex/scraper/v001.md",
+          "bytes": 1198,
+          "sha256": "cc661ea995c1eb24b2d2e38e9e3643f348c18a83c5e1ce1acfda94948b24f550"
+        },
+        {
+          "path": "codex/scraper/v002.md",
+          "source": "codex/scraper/v002.md",
+          "bytes": 5338,
+          "sha256": "90073ec7f87b2220f6d862d1a1e24b1a3ba02cf18fad78abc1ecb70c3b561811"
+        },
+        {
+          "path": "codex/scraper/v003.md",
+          "source": "codex/scraper/v003.md",
+          "bytes": 6747,
+          "sha256": "4e2f08a8254df86301ff8755ed6b78451d7b17b71b2a0e83f4454028e4e08756"
+        },
+        {
+          "path": "codex/scraper/v004.md",
+          "source": "codex/scraper/v004.md",
+          "bytes": 7146,
+          "sha256": "810951080ec387cd993341593e482c67c9ccc0e9ea6c941190ec90b2fd1d45db"
+        },
+        {
+          "path": "codex/scraper/v005.md",
+          "source": "codex/scraper/v005.md",
+          "bytes": 7587,
+          "sha256": "517c9794817ede04b111ca113f403bd3931f0ecc0e195579b5aa4af175a8f3a0"
+        },
+        {
+          "path": "codex/scraper/v006.md",
+          "source": "codex/scraper/v006.md",
+          "bytes": 8678,
+          "sha256": "41314486273567e8230dbeed592b45e5d2a99e621f9d65d587fa009654b6bec6"
+        },
+        {
+          "path": "working-notes/2026-10-22/Extractor.md",
+          "source": "digest/inbox/2026-10-22/Extractor.md",
+          "bytes": 866,
+          "sha256": "9e6e123b173d7fef190931fdbebbc388779064dfe37d693ef12accb303ed19c2"
+        },
+        {
+          "path": "memory/store.db",
+          "source": "/home/box/agent-data/agents/febac500-d854-4dc7-a6a7-23b3feb07f80/store.db (sqlite backup; blobEncryptionKey stripped 10:16pm per Gem 10:15pm t79s449)",
+          "bytes": 49152,
+          "sha256": "52b6af91924f627a3d73fa2a4c61f091f561bb131431deb055ede14f363eef6d",
+          "integrity_check": "ok"
+        }
+      ],
+      "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+      "moved": "moved from /workspace/governance/_archive/extractor-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/extractor-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
+    }
+  },
+  "safekeeper_scan_notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder).",
+  "location": "/workspace/backups/governance-merge-2026-10-22/ (mode 700, locked on box; store.db copies contain a blobEncryptionKey, Safeguard RR-059; no upload)",
+  "drive_upload": "eligible once the Governance backups folder exists (no folder found yet); nothing uploaded"
+}

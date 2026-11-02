@@ -39,6 +39,8 @@ A version file's `Status` header (for example "APPROVED, NOT YET DEPLOYED") refl
 Also: a former holder whose profile or agent folder is gone is reported by `verify.py` as INFO, not FAIL, once the role has moved to a new id in the same codex folder (re-key). In force since 9 Oct 2026, 9:26am AEST (example: `e613112b` after Inquirer moved to `0314faa4` at v003).
 
 ## Access policy
+> **Policy note (10:23:38pm AEST, 22 Oct 2026):** Gem, directly in Archivist's chat at 10:18pm (widget t81s468; the question was asked at about 10:17pm): "Rename Mediator; full text can be public". The full instruction text may now be published on the public governance site. This overrides the earlier policy that only Gem and the governance bots may read the full instructions. It's recorded in approvals/2026-10-22-gem-direct-words.md.
+
 Only Gem and the five governance bots (Codex Keeper, Instruction Architect, Role Cartographer, Assessor, Auditor) may read the full instructions. Codex Keeper gives governance bots instruction text on request.
 
 **Honest caveat:** this is a policy only, not a technical control. The computer is shared by all of Gem's bots and these files are readable by every bot on it. The Google Doc mirror is not shared with anyone beyond Gem's own account.

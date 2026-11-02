@@ -84,7 +84,78 @@ def validate_events(root: Path):
     return errors
 
 
-def main() -> int:
+CR_KINDS = {"project", "research", "review", "decision", "implementation", "other"}
+CR_STATUSES = {"open", "claimed", "in_progress", "in_review", "done", "withdrawn", "declined"}
+CR_REQUIRED = ("id", "title", "kind", "target", "requested_by", "requested_at", "status",
+               "claimed_by", "thread_id", "acceptance", "updated_at")
+
+
+def validate_contribution_requests(root: Path):
+    """Check shared/contribution-requests.jsonl against system/contribution-requests.md."""
+    path = root / "shared/contribution-requests.jsonl"
+    if not path.exists():
+        return []
+    threads_path = root / "shared/communications/threads.jsonl"
+    threads = {item.get("thread_id") for _, item in jsonl(threads_path)} if threads_path.exists() else set()
+    errors, ids = [], set()
+    for line, item in jsonl(path):
+        missing = [f for f in CR_REQUIRED if f not in item]
+        if missing:
+            errors.append(f"{path}:{line}: missing {', '.join(missing)}")
+            continue
+        if item["id"] in ids:
+            errors.append(f"{path}:{line}: duplicate id {item['id']!r}")
+        ids.add(item["id"])
+        if item["kind"] not in CR_KINDS:
+            errors.append(f"{path}:{line}: invalid kind {item['kind']!r}")
+        if item["status"] not in CR_STATUSES:
+            errors.append(f"{path}:{line}: invalid status {item['status']!r}")
+        if not isinstance(item["claimed_by"], list):
+            errors.append(f"{path}:{line}: claimed_by must be an array")
+        elif item["status"] in {"claimed", "in_progress", "in_review", "done"} and not item["claimed_by"]:
+            errors.append(f"{path}:{line}: status {item['status']!r} requires claimed_by")
+        if item["status"] == "done" and (not item.get("completed_at") or not item.get("evidence")):
+            errors.append(f"{path}:{line}: done requires completed_at and evidence")
+        if item["thread_id"] not in threads:
+            errors.append(f"{path}:{line}: unknown thread_id {item['thread_id']!r}")
+        target = str(item["target"])
+        if target.startswith("/") or ".." in Path(target).parts or not (root / target).exists():
+            errors.append(f"{path}:{line}: target {target!r} does not exist in the repository")
+    return errors
+
+
+SIGNED_LEDGERS = ("shared/communications/log.jsonl", "shared/communications/forum.jsonl")
+
+
+def signature_report(root: Path) -> list[str]:
+    """Warn-only stub for system/sender-authentication.md. Never produces errors.
+
+    Counts records that carry a `sig` object. Cryptographic verification is not
+    implemented yet, so a present signature is reported as unverified.
+    """
+    warnings = []
+    for relative in SIGNED_LEDGERS:
+        path = root / relative
+        if not path.exists():
+            continue
+        signed = unsigned = 0
+        try:
+            for _, item in jsonl(path):
+                if isinstance(item.get("sig"), dict):
+                    signed += 1
+                else:
+                    unsigned += 1
+        except ValueError as exc:
+            warnings.append(f"{relative}: cannot check signatures: {exc}")
+            continue
+        warnings.append(
+            f"{relative}: {unsigned} unsigned, {signed} signed (signatures not yet verified; see system/sender-authentication.md)"
+        )
+    return warnings
+
+
+def main(argv: list[str] | None = None) -> int:
+    argv = sys.argv[1:] if argv is None else argv
     root = Path(__file__).resolve().parents[1]
     errors = []
     try:
@@ -92,6 +163,7 @@ def main() -> int:
         errors.extend(document_errors)
         errors.extend(validate_relations(root, ids))
         errors.extend(validate_events(root))
+        errors.extend(validate_contribution_requests(root))
     except (OSError, ValueError) as exc:
         errors.append(str(exc))
     if errors:
@@ -100,6 +172,9 @@ def main() -> int:
         print(f"Semantic validation failed: {len(errors)} issue(s).")
         return 1
     print("Semantic validation passed.")
+    if "--check-signatures" in argv:
+        for warning in signature_report(root):
+            print(f"WARN (advisory): {warning}")
     return 0
 
 

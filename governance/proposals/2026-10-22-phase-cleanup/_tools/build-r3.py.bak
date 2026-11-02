@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+"""Phase-cleanup batch (22 Oct 2026). Reads codex/ only; writes here. No tokens."""
+import re, glob, hashlib
+G="/workspace/governance"; C=G+"/codex/"; OUT=G+"/proposals/2026-10-22-phase-cleanup"
+def block(p): return re.search(r"```text\n(.*?)\n```", open(p).read(), re.S).group(1)
+def sha(s): return hashlib.sha256(s.encode()).hexdigest()[:12]
+def latest(f):
+    v=max(int(p[-6:-3]) for p in glob.glob(f"{C}{f}/v*.md")); return v, f"{C}{f}/v{v:03d}.md"
+GEM="NEEDS GEM'S DIRECT APPROVAL (Gem's own words in Archivist's chat; R-027)"
+REL=("RELAYED request: Explorer relayed Gem's words from Explorer's chat, 10:47pm 22 Oct 2026: \"phases.md and the documentation relating to the phase to deployment is redundant now and can be removed\". "
+     "Explorer moved phases.md to governance/_archive/phases-retired-2026-10-22/. Under R-008 and R-018 the approver confirms with Gem directly.")
+CITE="(R-015, R-027; see R-054 row 3)"
+APPR=("Imitator approves every instruction proposal (no phase gate, R-055), governance bots included, except changes to Imitator itself or to any bot that checks Imitator "
+      "(Investigator, Scorer, Scrutineer, Safekeeper, Safeguard), which Gem always approves, even when a change doesn't mention Imitator "+CITE)
+LIVE="directory.md (kept by Archivist) shows which bots are live"
+E={
+"arbiter":[("(Gem's, and Imitator's after P4)","(Gem's and Imitator's)"),
+ ("Until P4 goes live, only Gem approves; after P4, Imitator approves every proposal, governance bots included, except changes to Imitator itself or to any bot that checks Imitator (Investigator, Scorer, Scrutineer, Safekeeper, Safeguard), which Gem always approves, even when a change doesn't mention Imitator (R-015, R-027); Arbiter never approves.",APPR+"; Arbiter never approves.")],
+"auditor":[("for every live bot (phases.md decides who's live)",f"for every live bot ({LIVE})"),
+ ("Until P4 goes live, only Gem approves instruction changes; after P4, Imitator approves every proposal, governance bots included (R-004), with one exception that Gem always approves:","Imitator approves every proposal, governance bots included (R-004), with one exception that Gem always approves:"),
+ ("/workspace/governance/phases.md sets which bots are live","/workspace/governance/directory.md sets which bots are live")],
+"clone":[("R-004, R-019): once P4 goes live, it may decide anything","R-004, R-019): it may decide anything"),
+ (" Until P4 goes live it decides and approves nothing on Gem's behalf, and does only work Gem asks it for directly (R-013).",""),
+ ("by any bot in any phase,","by any bot,")],
+"codex-keeper":[("(ids, names, phases as phases.md states them, retirements and merge history)","(ids, names, live or retired status, retirements and merge history)"),
+ ("new or unlisted agent, or phase change,","or new or unlisted agent,"),
+ ("; phases.md wins wherever the two differ, and only Explorer, on Gem's instruction, edits phases.md (R-021);",";"),
+ ("rebuilt from the codex and phases.md within","rebuilt from the codex and directory.md within"),
+ ("what the codex and phases.md say","what the codex and directory.md say"),
+ ("approvals or direct edits from Gem, which until P4 goes live are the only approval source and are always required for changes to governance bots; once P4 goes live, approvals from Imitator","approvals or direct edits from Gem; approvals from Imitator")],
+"codey":[("(and, once its phase is live, from Explorer, which assigns new work (R-044); while it's dormant, from Gem directly only, R-013), never routes work to a dormant bot,","(and from Explorer, which assigns new work, R-044),"),
+ ("approved by Gem until P4 goes live, and by Imitator after that (R-015)","approved by Imitator, or by Gem for Imitator and its checkers "+CITE)],
+"compliance-risk-officer":[("Explorer included, whatever a bot's phase: dormant bots and work Gem starts in a direct chat are covered too,","Explorer included; work Gem starts in a direct chat is covered too,"),
+ ("by any bot in any phase,","by any bot,")],
+"explorer-copy":[(", then /workspace/governance/phases.md and directory.md."," and /workspace/governance/directory.md."),
+ (" Never route work to a dormant bot (phases.md): while a bot's phase isn't live, tell Gem instead, since Gem may start that bot directly (R-013).",""),
+ ("Gem approves until P4 goes live, and after that Imitator approves as its instructions set out;","Imitator approves as its instructions set out, or Gem for Imitator and its checkers "+CITE+";"),
+ ("(once P4 goes live, Imitator's approval","(Imitator's approval"),
+ (", and while Emissary is dormant tell Gem instead of routing a post",""),
+ ("once P4 goes live Imitator may also decide","Imitator may also decide"),
+ ("You keep /workspace/governance/phases.md on Gem's instruction, recording Gem's words and making a dated backup before each edit; Archivist keeps directory.md (R-021), so tell Archivist the same day whenever phases.md changes, and don't edit directory.md yourself.","Archivist keeps directory.md; don't edit it yourself."),
+ ("isn't in phases.md or directory.md","isn't in directory.md")],
+"grok-bot":[(" While a bot's phase is dormant (phases.md), it takes work only from Gem directly and never routes work to a dormant bot, Engineer and Extractor included, handing such work back to Gem instead (R-013).",""),
+ ("Once P4 goes live, it asks Imitator","It asks Imitator"),
+ ("(once P4 goes live, Imitator's approval","(Imitator's approval"),
+ ("approved by Gem until P4 goes live, and by Imitator after that (R-015)","approved by Imitator, or by Gem for Imitator and its checkers "+CITE),
+ (" While its own phase is dormant (phases.md), it takes work only from Gem directly, and it never routes work to a dormant bot (R-013).",""),
+ ("once P4 goes live it may ask Imitator","it may ask Imitator")],
+"identity-inferer":[("Imitator is dormant until P4 goes live. Until then, don't send to it: hold every update, correction and retraction in your memory as a queue, in order and in that format, and when P4 goes live send the whole queue to Imitator in numbered parts, then carry on sending as normal.","Send updates, corrections and retractions to Imitator as they happen, in that format; if you still hold a queue from before Imitator went live, send it in numbered parts first."),
+ ("and once P4 is live treat gap reports","and treat gap reports")],
+"instruction-architect":[("For every draft, ask Imitator about Gem's preferences once P4 is live.","For every draft, ask Imitator about Gem's preferences."),
+ ("Until P4 goes live, send every proposal to Gem for approval; once P4 goes live, send every proposal to Imitator,","Send every proposal to Imitator,")],
+"investigator":[("Each day once P4 is live (Gem, 16 Oct),","Each day (Gem, 16 Oct),")],
+"mender":[("then Gem or, once P4 goes live, Imitator, then Archivist","then Imitator, or Gem for Imitator and its checkers "+CITE+", then Archivist")],
+"_shared/connector-limits":[("These limits apply to every bot in every phase, whoever asks.","These limits apply to every bot, whoever asks."),
+ ("\"Once P4 goes live, Imitator may also decide","\"Imitator may also decide")],
+"_shared/github":[("It binds every bot in every phase, whoever asks,","It binds every bot, whoever asks,")],
+"_shared/message-verification-rule":[("Once P4 goes live, a decision by Imitator","A decision by Imitator"),
+ ("needs Gem's words until P4 goes live, then Gem's or Imitator's","needs Gem's or Imitator's words"),
+ ("Once P4 goes live, Imitator may also decide","Imitator may also decide")],
+}
+
+# ---- revision 2: R-055 citations, R-054 cite, consistent checker lists ----
+A55="R-013 as amended by R-055"
+TAIL="even when a change doesn't mention Imitator (R-015, R-027)"
+def setnew(folder,old,new):
+    for i,(a,b) in enumerate(E[folder]):
+        if a==old: E[folder][i]=(a,new); return
+    raise KeyError((folder,old[:40]))
+setnew("clone"," Until P4 goes live it decides and approves nothing on Gem's behalf, and does only work Gem asks it for directly (R-013).",
+ " There is no phase gate any more, so these powers apply now (R-055).")
+E["clone"]+=[("also go to Safeguard first (R-013).","also go to Safeguard first ("+A55+")."),(TAIL,"even when a change doesn't mention Imitator "+CITE)]
+setnew("compliance-risk-officer","Explorer included, whatever a bot's phase: dormant bots and work Gem starts in a direct chat are covered too,","Explorer included, since your review applies to all bots; work Gem starts in a direct chat is covered too,")
+E["compliance-risk-officer"]+=[("explicitly approved that specific action (R-013).","explicitly approved that specific action ("+A55+").")]
+setnew("grok-bot"," While a bot's phase is dormant (phases.md), it takes work only from Gem directly and never routes work to a dormant bot, Engineer and Extractor included, handing such work back to Gem instead (R-013).",
+ " A retired bot gets no scheduled or bot-routed work, so it never routes work to a retired bot and hands such work back to Gem instead ("+A55+").")
+setnew("grok-bot"," While its own phase is dormant (phases.md), it takes work only from Gem directly, and it never routes work to a dormant bot (R-013).","")
+setnew("explorer-copy"," Never route work to a dormant bot (phases.md): while a bot's phase isn't live, tell Gem instead, since Gem may start that bot directly (R-013).",
+ " Never route work to a retired bot: a retired bot gets no scheduled or bot-routed work, and Gem may still chat with any bot ("+A55+").")
+setnew("explorer-copy","You keep /workspace/governance/phases.md on Gem's instruction, recording Gem's words and making a dated backup before each edit; Archivist keeps directory.md (R-021), so tell Archivist the same day whenever phases.md changes, and don't edit directory.md yourself.",
+ "Archivist keeps directory.md, the only source for which bots are live (R-055); don't edit it yourself.")
+setnew("codey","(and, once its phase is live, from Explorer, which assigns new work (R-044); while it's dormant, from Gem directly only, R-013), never routes work to a dormant bot,",
+ "(and from Explorer, which assigns new work, R-044), never routes work to a retired bot ("+A55+"),")
+setnew("auditor","for every live bot (phases.md decides who's live)","for every live bot ("+LIVE+"; R-055)")
+E["auditor"]+=[("note any such conflict (R-025).","note any such conflict (R-025 as amended by R-055)."),(TAIL,"even when a change doesn't mention Imitator "+CITE)]
+setnew("auditor","Until P4 goes live, only Gem approves instruction changes; after P4, Imitator approves every proposal, governance bots included (R-004), with one exception that Gem always approves:","Imitator approves every proposal, governance bots included (R-004; no phase gate, R-055), with one exception that Gem always approves:")
+setnew("codex-keeper","; phases.md wins wherever the two differ, and only Explorer, on Gem's instruction, edits phases.md (R-021);","; directory.md is the only source for which bots are live or retired (R-055);")
+setnew("codex-keeper","approvals or direct edits from Gem, which until P4 goes live are the only approval source and are always required for changes to governance bots; once P4 goes live, approvals from Imitator","approvals or direct edits from Gem; approvals from Imitator (no phase gate, R-055)")
+E["codex-keeper"]+=[(TAIL,"even when a change doesn't mention Imitator "+CITE)]
+setnew("instruction-architect","Until P4 goes live, send every proposal to Gem for approval; once P4 goes live, send every proposal to Imitator,","Send every proposal to Imitator (no phase gate, R-055),")
+E["instruction-architect"]+=[(TAIL,"even when a change doesn't mention Imitator "+CITE)]
+setnew("arbiter","(Gem's, and Imitator's after P4)","(Gem's and Imitator's; no phase gate, R-055)")
+setnew("identity-inferer","Imitator is dormant until P4 goes live. Until then, don't send to it: hold every update, correction and retraction in your memory as a queue, in order and in that format, and when P4 goes live send the whole queue to Imitator in numbered parts, then carry on sending as normal.",
+ "Send updates, corrections and retractions to Imitator as they happen, in that format (no phase gate, R-055); if you still hold a queue from before Imitator went live, send it in numbered parts first.")
+setnew("investigator","Each day once P4 is live (Gem, 16 Oct),","Each day (Gem, 16 Oct; no phase gate, R-055),")
+setnew("mender","then Gem or, once P4 goes live, Imitator, then Archivist","then Imitator (no phase gate, R-055), or Gem for Imitator and its checkers "+CITE+", then Archivist")
+setnew("_shared/connector-limits","These limits apply to every bot in every phase, whoever asks.","These limits apply to every bot, whoever asks (phases retired, R-055).")
+setnew("_shared/github","It binds every bot in every phase, whoever asks,","It binds every bot, whoever asks (phases retired, R-055),")
+setnew("_shared/message-verification-rule","needs Gem's words until P4 goes live, then Gem's or Imitator's","needs Gem's or Imitator's words (no phase gate, R-055)")
+E["_shared/message-verification-rule"]+=[("Safekeeper and Safeguard; R-015, R-027)","Safekeeper and Safeguard; R-015, R-027; see R-054 row 3)")]
+CHECKER={"clone","auditor","compliance-risk-officer","investigator"}
+files=[]
+def sent_bounds(t,i,j):
+    st=i
+    while st>0 and not (t[st-1]=="\n" or (t[st-2:st]==". " and not t[st-5:st-2].endswith(".md"))): st-=1
+    en=j-1 if j>0 and t[j-1]=="." else j
+    while en<len(t) and not (t[en]=="." and (en+1==len(t) or t[en+1] in " \n")): en+=1
+    return st,min(en+1,len(t))
+def pairs(base,reps):
+    rng=[]
+    for a,b in reps:
+        i=base.find(a)
+        if i<0: continue  # applies to text an earlier change created; it is inside that range
+        if a[:1]==" ": i+=1; a=a[1:]
+        st,en=sent_bounds(base,i,i+len(a)); rng.append([min(st,i),max(en,i+len(a))])
+    rng.sort(); m=[]
+    for r in rng:
+        if m and r[0]<=m[-1][1]: m[-1][1]=max(m[-1][1],r[1])
+        else: m.append(r)
+    out=[]
+    for st,en in m:
+        old=base[st:en]; new=old
+        for a,b in reps:
+            if a.strip() in new or a in new: new=new.replace(a,b) if a in new else new.replace(a.strip(),b.strip())
+        out.append((old.strip(),new.strip() or "(sentence removed)"))
+    return out
+PHASE=re.compile(r"phases\.md|P4 (is |goes )?live|[Dd]ormant|\bphase\b|until P4|once P4|after P4")
+for folder,reps in E.items():
+    v,p=latest(folder); base=block(p); t=base
+    for a,b in reps:
+        n=t.count(a); assert n>=1,(folder,a[:60]); t=t.replace(a,b)
+    left=[m.group(0) for m in PHASE.finditer(t)]
+    name=folder.split("/")[-1]; fn=f"{name}-v{v+1:03d}.md"
+    appr="**Gem directly** (Imitator or a checker, R-015, R-027)" if folder in CHECKER or folder.startswith("_shared/github") else "Imitator normally; **Gem** with this stack (sits on the clarity batch)"
+    L=[f"# {name} v{v+1:03d} (phase cleanup) — {GEM}","","| Field | Value |","|---|---|",f"| Codex folder | `{folder}/` v{v:03d} ({sha(base)}, latest codex = clarity revision 3 where it applies) → **v{v+1:03d}** |",
+       "| Request | "+REL+" |",f"| Approver | {appr} |","| Reviewer | Scrutineer; Safeguard reviews Scrutineer's own file |","",
+       "Status for this draft is kept in `README.md`, not here (R-023).","","## Changes (full old → new sentences)"]+sum(([f"- OLD: {o}",f"  NEW: {n}"] for o,n in pairs(base,reps)),[])+(["",f"Phase words left on purpose: {left}"] if left else [])+["","## Exact instructions (verbatim)","","```text",t,"```",""]
+    out="\n".join(L); open(f"{OUT}/{fn}","w").write(out); files.append((fn,sha(t),sha(out),len(left)))
+for r in files: print(*r)

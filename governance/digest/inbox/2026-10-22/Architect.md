@@ -23,3 +23,10 @@
 - 8:31pm: r3 review fixes (Safeguard, Scrutineer): redesign rev 4 (healthchecks.io scrapped, watchdog local), imitator-v008 R-052 wording, GitHub 5f; PASTE-LINES updated; refrozen.
 - 8:33pm: Gem's 8:32pm direct gvmw words applied (v003 rev 10, GitHub 5g, redesign rev 5); PASTE-LINES updated; refrozen.
 - 8:36pm: Scrutineer final-check fixes (GitHub 5h, redesign rev 6, r044 README); PASTE-LINES updated; refrozen.
+- 10:16pm: clarity batch drafted and frozen (proposals/2026-10-22-clarity/, 18 drafts, all Gem); relayed request (Explorer, 10:13pm); Scrutineer review still to be requested by the parent.
+- 10:17pm: redesign README status line corrected (recorded 9:45pm, deploy approved 10:15pm); clarity README notes Engineer's 10:16pm relay.
+- 10:22pm: clarity revision 2 (v002 shared rules, free-only reworded, clone v010 for R-054); frozen.
+- 10:25pm: clarity revision 3 (clone-v010 self-contradiction fixed, README corrected); frozen.
+- 10:49pm: phase-cleanup batch drafted and frozen (15 drafts; relayed request, Explorer 10:47pm); optional name-prefix line separate.
+- 10:54pm: phase-cleanup revision 2 (R-055 citations, R-054 cite, full sentences); frozen.
+- 10:57pm: phase-cleanup revision 3 frozen.

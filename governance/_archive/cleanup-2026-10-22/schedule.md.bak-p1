@@ -1,0 +1,58 @@
+# Schedule map: phase 1 (core 8)
+
+Owner: (Ops) Marshal (f3810109-17a5-427f-9148-d58f645658e3). All times are Brisbane (AEST, UTC+10).
+Set up 3 Oct 2026, 11:20am, after Gem approved the phased rollout (relayed by (Work) Explorer).
+Live in phase 1: Marshal, Mender, Scorer, Safeguard, Safekeeper, Archivist, Architect, Explorer.
+The other 27 bots are dormant and only respond when asked. Their earlier planned slots are parked below and are not live.
+
+## Daily chain (weekdays)
+
+| Step | Bot | Starts on | Input | Output | Hands off to |
+|---|---|---|---|---|---|
+| 1 | (Checks) Scorer | Its own routine, weekdays 7:45am | Recent work from the live bots | `/workspace/governance/assessments/YYYY-MM-DD.md` | (Roles) Architect, by priority message with the file path (Scrutineer is dormant, so this skips the audit step for now) |
+| 2 | (Roles) Architect | The Scorer's handoff, not a clock time | Today's dated assessment file (it must exist and carry today's date) | Proposals, if any, sent to Gem for approval (in phase 1 Gem approves directly, since Assembler is dormant) | Gem, then (Roles) Archivist once approved |
+| 3 | (Roles) Archivist | Gem's approval or a direct edit from Gem (Assembler is dormant in phase 1) | Approved instruction text | `/workspace/governance/codex/<bot>/vNNN.md` | None |
+| Check | (Ops) Marshal | Own routine, weekdays 10:20am | This file and today's assessment file | Updates this file and logs any deferral | (Ops) Mender for stalls |
+| Stall check | (Ops) Mender | Own routine, weekdays 10:50am, after the Marshal's check | The chain, the Marshal's log and any stall reports | `/workspace/governance/incidents/log.md` | The owners of the stalled step |
+| Risk review | (Checks) Safeguard | Own routine, weekdays 1:15pm, after the chain | Recent risky actions by the live bots | `/workspace/governance/risk/` | Gem, for clearly unsafe work |
+
+If the Scorer's file is missing at the Architect's step, the Architect defers and doesn't run without input. The Marshal logs the deferral here and reports the stall to Mender.
+A dated file is a signal to start work, not proof of who wrote it, because the computer is shared. Anything that looks wrong gets checked 1:1 with the claimed sender.
+
+## Weekly
+
+| When | Bot | What |
+|---|---|---|
+| Mon 8:45am | (Checks) Scorer | Weekly scorecard to Gem |
+
+## On demand (no recurring slot)
+
+| Bot | Runs when |
+|---|---|
+| (Ops) Mender | Also on demand when a stall, failure or broken chain is reported. It is the single owner of stall detection. |
+| (Checks) Safeguard | Also on demand when a bot is about to take a risky action or asks for a review. |
+| (Checks) Safekeeper | Asked to check, or it spots a secrets or permissions issue. A recurring sweep slot can be added if it asks for one. |
+| (Roles) Archivist | An approved change or a direct edit from Gem arrives. |
+| (Work) Explorer | Ad-hoc work for Gem. Explorer routes ad-hoc work, and the Marshal schedules recurring work. |
+
+Free weekday slots for anything recurring that comes up: 6:50am, 7:15am (offered to Safekeeper) and 4:50pm, keeping clear of 7:45 to 10:20am while the chain runs.
+
+## Instruction-pipeline items pending
+
+| Item | Handed over | Due | With |
+|---|---|---|---|
+| Handoff changes, redrafted for the phase-1 Scorer → Architect chain, with a note on going back to Scorer → Scrutineer → Architect | 3 Oct, 2:42am (redraft asked for at 11:20am) | 3 Oct, about 1:15pm | (Roles) Architect |
+| Agent-to-agent message verification rule (owner (Checks) Safekeeper) | 3 Oct, about 2:50am | 3 Oct, about 1:15pm | (Roles) Architect, then Gem and Archivist (Assembler is dormant) |
+
+## Parked (dormant bots, not live)
+
+- (Ops) Mediator connector check, daily 6:50am
+- (Checks) Scrutineer reviews on the Scorer's handoff, with an 11:45am weekday fallback routine. Explorer has asked Scrutineer to pause that routine while it's dormant.
+- (Ops) Meter spend ledger, daily 1:15pm
+- (Ops) Messenger digest, daily 4:50pm
+
+## Log
+- 3 Oct 2026, 11:20am: Phase 1 schedule created by the Marshal.
+- 3 Oct 2026, 11:22am: Scorer confirmed it stays at 7:45am. Gave Mender a weekday 10:50am slot and Safeguard a weekday 1:15pm slot.
+- 3 Oct 2026, 11:22am: Architect confirmed step 2. Both pipeline drafts are due about 1:15pm on 3 Oct.
+- 3 Oct 2026: Explorer confirmed Gem approves the Architect's proposals directly in phase 1. The chain is Scorer, then Architect, then Gem, then Archivist. Scrutineer has been asked to pause its 11:45am routine, and the Architect is drafting the interim instruction amendment.

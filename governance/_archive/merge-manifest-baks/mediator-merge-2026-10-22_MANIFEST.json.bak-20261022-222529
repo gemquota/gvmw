@@ -1,0 +1,72 @@
+{
+  "name": "Mediator",
+  "agent_id": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+  "codex_folder": "connector-steward",
+  "archive_path": "/workspace/backups/governance-merge-2026-10-22/mediator-merge-2026-10-22/",
+  "file_count": 10,
+  "files": [
+    {
+      "path": "codex/connector-steward/CHANGELOG.md",
+      "source": "codex/connector-steward/CHANGELOG.md",
+      "bytes": 6493,
+      "sha256": "2ab8135763185545f38c73d3b7ed6aeaf71a9338cf664e62755dcc4ef247436f"
+    },
+    {
+      "path": "codex/connector-steward/v001.md",
+      "source": "codex/connector-steward/v001.md",
+      "bytes": 2073,
+      "sha256": "f5d41fe7461d9db98fe826928acc4841d2036816987539a42acbf7cd0d932d91"
+    },
+    {
+      "path": "codex/connector-steward/v002.md",
+      "source": "codex/connector-steward/v002.md",
+      "bytes": 3083,
+      "sha256": "1949d6b4e9128db2b746cb13bbdf8f7ddec1a29918559d7785cbaaec4aeea2f7"
+    },
+    {
+      "path": "codex/connector-steward/v003.md",
+      "source": "codex/connector-steward/v003.md",
+      "bytes": 3629,
+      "sha256": "1c0fc10af7967b9096a71340cdb2a8b8772fa1aaff79e7e306a9868104d31405"
+    },
+    {
+      "path": "codex/connector-steward/v004.md",
+      "source": "codex/connector-steward/v004.md",
+      "bytes": 4301,
+      "sha256": "22a7823b1be58e7abc73603042c634b65700171c9e5f1c7905e2d6745129ad69"
+    },
+    {
+      "path": "codex/connector-steward/v005.md",
+      "source": "codex/connector-steward/v005.md",
+      "bytes": 4206,
+      "sha256": "3313c543d9e83e591cbdb240703a2d234bf2c7d8bdcec158702c6e4a3f2b0280"
+    },
+    {
+      "path": "codex/connector-steward/v006.md",
+      "source": "codex/connector-steward/v006.md",
+      "bytes": 4811,
+      "sha256": "138c1c046c664750254b97872653857419d22b031c8ede11d6095a25c3e3210d"
+    },
+    {
+      "path": "working-notes/2026-10-16/Mediator.md",
+      "source": "digest/inbox/2026-10-16/Mediator.md",
+      "bytes": 565,
+      "sha256": "b88687f88e98b778b2323b8e78eb17e60fdf926473a00a271f733a836167d785"
+    },
+    {
+      "path": "working-notes/2026-10-22/Mediator.md",
+      "source": "digest/inbox/2026-10-22/Mediator.md",
+      "bytes": 3764,
+      "sha256": "8cfd8a6d5e9041a37cfc2b1a6727dd9933e38b3c2c640f0aa06796026e38e68f"
+    },
+    {
+      "path": "memory/store.db",
+      "source": "/home/box/agent-data/agents/90f9eb20-ff8f-456b-b94f-cc11bb33fc29/store.db (sqlite backup; blobEncryptionKey stripped 10:16pm per Gem 10:15pm t79s449)",
+      "bytes": 49152,
+      "sha256": "0422552eae3e8628f64d0d06c689ddc8502829b6929c758c0efc91172dcc78be",
+      "integrity_check": "ok"
+    }
+  ],
+  "notes": "Safekeeper's in-place secret scan (10:10pm 22 Oct, as relayed to Archivist) cleared the memory (store.db) of Mediator, Scorer, Inquirer and Extractor. Safekeeper's own memory is NOT copied: it waits for Safeguard's double-check. No attachments are copied. Extractor's attachments/cce63877\u2026.zip contains session tokens and must never be copied; a01de55c\u2026.xlsx also stays out. Memory copied 10:11:10pm AEST with SQLite's online backup API (consistent snapshot including the WAL); the source databases were opened read-only and not changed. Nothing uploaded to Drive (no confirmed folder). Gem 10:15pm (t79s449): 'Strip the key from the copies, then archive'. Key stripped 10:16pm; hash recomputed 10:16:51pm. Safekeeper's memory copied (stripped) at 10:16pm.",
+  "moved": "moved from /workspace/governance/_archive/mediator-merge-2026-10-22/ to /workspace/backups/governance-merge-2026-10-22/mediator-merge-2026-10-22/ at 10:12pm 22 Oct (gvmw publish risk); manifest paths updated 10:16:24pm AEST; all hashes rechecked"
+}

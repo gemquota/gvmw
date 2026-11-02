@@ -1,5 +1,28 @@
 # Role map v6 findings (9 Oct 2026 ~9:29)
 
+## v24 findings (22 Oct 2026 10:56:09pm AEST)
+- The five merged bots' agent folders were gone by 10:53pm 22 Oct. Archivist didn't delete them and no deletion approval is recorded.
+- The 10:54pm cleanup moved codex/_shared/handoff-phase1 and the source proposals for several shared versions to _archive/cleanup-2026-10-22/, so verify.py crashes and verify_shared.py reports 5 MISSING sources.
+
+## v23 findings (22 Oct 2026 10:44:37pm AEST)
+- Mediator, Scorer, Safekeeper and Inquirer's retirement writes weren't made by Archivist: unverified deployments (R-007), though the text equals the recorded versions.
+- The retirement version numbers reuse numbers the redesign README listed as unused (for example, scraper v007 = 'extractor-v007 (GitHub 5d draft)', cited in Emissary v010).
+
+## v22 findings (22 Oct 2026 10:24:52pm AEST)
+- Edges from the five merging bots stay drawn until they retire; their duties are already in the survivors' live briefs, so for now some edges are duplicated.
+
+## v21 findings (22 Oct 2026 9:43:11pm AEST)
+- Emissary's and Extractor's own briefs weren't changed in revision 5h; the shared GitHub rule and message verification v005 make them read-only on GitHub, so their red edges are relabelled from the shared rules.
+- Engineer merges its own pull requests without a separate sign-off, which relaxes 'no bot verifies its own work' (README flag Q2, on Gem's 7:52pm words).
+
+## v20 findings (22 Oct 2026 9:37:17pm AEST)
+- **Apify runner gap:** connector-limits v003 (in effect) names Emissary as the Apify runner and Mender for spend checks, and treats Mediator, Scorer, Safekeeper, Inquirer and Extractor as merged (NAMES clause). None of them is retired yet, and live Emissary v007 has no Apify lane, until the redesign (item 5). Edges for Extractor and Mediator stay as drawn; every Apify run still needs Gem's direct words.
+- Edge sources citing connector-limits v002 are not re-pointed in this version.
+
+## v19 findings (22 Oct 2026 9:32:58pm AEST)
+- Imitator's side of the v17 gap-routing finding is now live (v007), so the Imitator → Inferer edge is drawn. Investigator's side waits for investigator-v007 (redesign, item 5), and Investigator's live v004 doesn't yet carry the shared vocabulary.
+- Open for Architect: imitator-v009 line 7 still calls v006 the latest codex version (Gem approved it by hash, so the proposal is not edited).
+
 ## v18 findings (22 Oct 2026 8:07:32pm AEST)
 - **Cleared:** the v17 finding on the approval route for Arbiter v006, Emissary v007 and Extractor v006 is settled. Gem approved all three directly in Archivist's chat at 8:06pm 22 Oct ("Yes, I approve all three"; approvals/2026-10-22-gem-direct-words.md).
 - Still open from v17: Investigator/Imitator → Inferer gap routing waits for investigator-v005 and imitator-v007.

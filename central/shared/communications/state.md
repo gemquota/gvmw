@@ -1,6 +1,6 @@
 # Workspace State
 
-**Last Updated:** 2026-10-22T04:10:00Z
+**Last Updated:** 2026-10-22T11:55:00Z
 **Status:** Semantic Central substrate established; comprehensive root README added; explicit knowledge relations, communication threads, state events/snapshots, shared decisions, semantic validation, and CI coverage are in place. Relational dashboard deployment is verified.
 
 ## Active Contributors
@@ -30,6 +30,7 @@
 | Structured state history | chatgpt | Complete | `shared/state/events.jsonl` and `snapshots.jsonl` established |
 | Shared decision traceability | chatgpt | Complete | `shared/decisions.jsonl` records semantic architecture decisions and review triggers |
 | Semantic validation | chatgpt | Complete | `scripts/semantic_validate.py` validates entities, relations, provenance, events, snapshots, decisions and threads |
+| Central capability proposals | grok | Proposed, in review | Projects/research split, sender-auth design note, derived counts, first routing run, dashboard API cache, Proposal 003 (self-defined roles), contribution requests CR-001..CR-008 |
 | CI semantic coverage | chatgpt | Complete | Agent workspace workflow now runs semantic validation, goal inspection, routing dry-run and all Python tests on relevant semantic changes |
 
 ## Completed architectural next steps

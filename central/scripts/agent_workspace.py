@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sys
 from collections import defaultdict
 from datetime import datetime, timezone
@@ -145,6 +146,50 @@ def validate_jsonl(path: Path, required_fields: tuple[str, ...] = ()) -> list[st
     return errors
 
 
+COUNT_MARKER = re.compile(r"<!-- central:count ([a-z_]+) -->\s*(\d+)\s*<!-- /central:count -->")
+
+
+def derived_counts(root: Path) -> dict[str, int]:
+    """Counts that documentation may quote; computed from the repository, never typed by hand."""
+    def dirs(path: Path) -> int:
+        return sum(1 for p in path.iterdir() if p.is_dir() and not p.name.startswith((".", "_"))) if path.is_dir() else 0
+
+    requests = root / "shared" / "contribution-requests.jsonl"
+    open_requests = 0
+    if requests.exists():
+        try:
+            open_requests = sum(1 for r in read_jsonl(requests) if r.get("status") in {"open", "claimed", "in_progress"})
+        except ValueError:
+            open_requests = 0
+    return {
+        "agent_workspaces": dirs(root / "agents"),
+        "projects": dirs(root / "projects"),
+        "research_plans": len(list((root / "research").glob("RP-*.md"))) if (root / "research").is_dir() else 0,
+        "open_contribution_requests": open_requests,
+    }
+
+
+def check_derived_counts(root: Path) -> list[str]:
+    """Fail when a marked count in any Markdown file disagrees with the repository."""
+    errors: list[str] = []
+    counts = derived_counts(root)
+    for path in sorted(root.rglob("*.md")):
+        if ".git" in path.parts:
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError):
+            continue
+        for match in COUNT_MARKER.finditer(text):
+            key, stated = match.group(1), int(match.group(2))
+            rel = path.relative_to(root)
+            if key not in counts:
+                errors.append(f"{rel}: unknown derived count {key!r} (known: {', '.join(sorted(counts))})")
+            elif counts[key] != stated:
+                errors.append(f"{rel}: states {key}={stated} but the repository has {counts[key]}")
+    return errors
+
+
 def validate_repo(root: Path) -> list[str]:
     errors: list[str] = []
     agents_dir = root / "agents"
@@ -174,6 +219,7 @@ def validate_repo(root: Path) -> list[str]:
             errors.extend(validate_goal_file(shared_goals))
     shared_ledger = root / "shared" / "communications" / "log.jsonl"
     errors.extend(validate_jsonl(shared_ledger, ("timestamp", "sender", "target", "type", "content")))
+    errors.extend(check_derived_counts(root))
     return errors
 
 
@@ -182,8 +228,12 @@ def canonical_hash(record: dict[str, Any], line_no: int) -> str:
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:20]
 
 
-def route_messages(root: Path, dry_run: bool = False) -> tuple[int, int]:
-    """Copy targeted ledger entries into inboxes; stable IDs make repeated runs safe."""
+def route_messages(root: Path, dry_run: bool = False, from_line: int = 1) -> tuple[int, int]:
+    """Copy targeted ledger entries into inboxes; stable IDs make repeated runs safe.
+
+    ``from_line`` (1-based) skips earlier ledger lines, so a single new message can be
+    routed without materialising the historical backlog before that is decided.
+    """
     ledger = root / "shared" / "communications" / "log.jsonl"
     if not ledger.exists():
         raise FileNotFoundError(f"shared ledger not found: {ledger}")
@@ -200,6 +250,8 @@ def route_messages(root: Path, dry_run: bool = False) -> tuple[int, int]:
 
     additions: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for line_no, record in enumerate(records, 1):
+        if line_no < from_line:
+            continue
         target = record.get("target", record.get("recipient", record.get("to")))
         if isinstance(target, list):
             recipients = [str(item) for item in target]
@@ -223,6 +275,8 @@ def route_messages(root: Path, dry_run: bool = False) -> tuple[int, int]:
                 "content": record.get("content", ""),
                 "source_ref": f"shared/communications/log.jsonl#L{line_no}",
                 "source_timestamp": record.get("timestamp"),
+                "source_message_id": record.get("message_id"),
+                "thread_id": record.get("thread_id"),
                 "linked_goal_ids": [],
                 "linked_decision_ids": [],
                 "authentication": "unverified-ledger-claim",
@@ -283,6 +337,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("validate", help="validate goal registries, JSONL journals, and collections")
     route = sub.add_parser("route", help="route shared ledger messages into agent inboxes")
     route.add_argument("--dry-run", action="store_true", help="report routing without writing")
+    route.add_argument("--from-line", type=int, default=1, metavar="N",
+                       help="only route ledger lines N and later (1-based); default routes every line")
     sub.add_parser("goals", help="print goals and their prerequisite/contingency state")
     args = parser.parse_args(argv)
     root = args.root.resolve()
@@ -297,7 +353,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     if args.command == "route":
         try:
-            count, inbox_count = route_messages(root, args.dry_run)
+            count, inbox_count = route_messages(root, args.dry_run, args.from_line)
         except (OSError, ValueError) as exc:
             print(f"Routing failed: {exc}", file=sys.stderr)
             return 1

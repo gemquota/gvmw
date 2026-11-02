@@ -24,6 +24,10 @@ Solid knowledge-map links indicate that two domains share a listed source docume
 
 State history is derived from committed versions of `shared/communications/state.md`. The line-set comparison is intentionally simple: reordering and duplicate lines can be simplified, and the file is a human-maintained summary rather than a complete event-sourced state store. Event counts do not measure all agent activity, and correlations do not prove causality.
 
+## GitHub API rate limits
+
+The dashboard reads the repository through GitHub's public REST API without logging in, and GitHub allows about 60 such calls per hour per IP address. Every page loads [`api-cache.js`](api-cache.js) before its own scripts. It caches successful `GET` responses from `api.github.com` in `localStorage` for 15 minutes, serves the cached copy when the API refuses (403/429) or the network fails, and prefers cached copies once 45 calls have been made in the current hour. Embedded views share the same cache. File contents from `raw.githubusercontent.com` don't count against the API limit and are not cached by this file. Only public API JSON is stored. Run `CentralApiCache.clear()` in the browser console to force fresh data. `tests/dashboard_api_cache_check.js` checks this behaviour under Node.
+
 ## Deployment
 
 The workflow at `.github/workflows/deploy-central-dashboard.yml` publishes this directory to GitHub Pages when dashboard files or the workflow change, and supports manual dispatch.

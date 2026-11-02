@@ -1,0 +1,17 @@
+[
+  {
+    "kind": "profile-name",
+    "agentId": "90f9eb20-ff8f-456b-b94f-cc11bb33fc29",
+    "folder": "connector-steward",
+    "field": "name",
+    "from": "P4 (Ops) Mediator",
+    "to": "P2 (Ops) Mediator",
+    "description_changed": false,
+    "description_version": "v006 (unchanged)",
+    "approval": "Gem, directly in Archivist's chat, widget t81s468: \"Rename Mediator; full text can be public\" (recorded in approvals/2026-10-22-gem-direct-words.md at 10:18:06pm AEST 22 Oct 2026)",
+    "profile_write": "profile.json mtime 2026-10-22 22:18:06.085 AEST",
+    "ordering_note": "The approval record and the profile write share the 10:18:06pm stamp. Gem's words came first in the chat, but the files themselves can't show that order.",
+    "sha256_of_new_name": "997658028e46e2e5a8d9d10eab4d40e705e4c7dd65434b4884872354ca381618",
+    "written_by_archivist_at": "10:24:25pm AEST (after the fact; documents a deploy already made)"
+  }
+]

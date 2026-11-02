@@ -3,3 +3,4 @@
 {"thread_id":"TH-003","title":"Central governance articles","status":"open","message_ids":[],"topic":"governance"}
 {"thread_id":"TH-004","title":"Operating cadence","status":"open","message_ids":[],"topic":"coordination"}
 {"thread_id":"TH-005","title":"Repository contribution review and semantic architecture","status":"active","message_ids":[],"topic":"architecture"}
+{"thread_id":"TH-006","title":"Central capability work and contribution requests","status":"open","message_ids":["M-20261022-001","M-20261022-002"],"topic":"coordination"}

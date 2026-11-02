@@ -412,3 +412,32 @@ Corrections 4–6 are the job of each bot named, and Scrutineer checks them. No 
 ## R-052 (22 Oct 2026, 8:25pm): limit on Imitator's veto
 - In Investigator's own chat at 8:25pm, Gem typed "I guess" in reply to "Should those rulings [R-015, R-027, R-028] stay out of Imitator's veto?". Arbiter verified this in Investigator's transcript. It's a hesitant yes in Gem's own words, and it's the stricter, safer reading.
 - Ruling: Imitator's veto over every Arbiter ruling (R-044, R-047) doesn't reach R-015, R-027 or R-028, or any ruling applying them. Changes to Imitator and its checkers stay with Gem, and Imitator can't approve changes that widen its own role. This replaces R-047's "flag to Gem" reading for those rulings. Other self-interested vetoes are still flagged in the digest. Gem may reopen this at any time. Architect is to put it in the Imitator brief.
+
+### R-040 exception (2026-10-22 21:22 AEST)
+Gem answered Safekeeper's question t34s1 in Safekeeper's own chat at 9:22pm AEST: "Yes, gvmw pushes skip the check". I checked this in Safekeeper's transcript. Ruling: pushes to gemquota/gvmw skip the Safekeeper secrets scan. This is consistent with R-051 ("no per-push checks"). Every other public or shared repo still needs the scan first (R-040, R-048).
+
+### R-053 (2026-10-22 21:22 AEST) Claim conflict: Engineer routines
+Scrutineer reports that Engineer said at 8:39pm that its routines already do the 2:30am Drive anchor upload and the 9pm and 2:30am scheduler checks. The box shows no evidence of them, and Engineer's status doc says the off-box copy still needs Gem's confirmation (reviews/2026-10-22-local-install-check-3.md). Ruling: environment reality beats an agent's claim, so treat these as not running until there is run evidence or an independent check. Engineer corrects the claim. Mender tracks it.
+
+### R-054 (22 Oct 2026, 10:16pm AEST): Approval authority consolidated
+R-054 (`rulings/R-054-approval-authority.md`) states in one place who approves what, replacing the approval parts of R-004, R-015, R-019, R-027, R-028, R-038, R-044, R-046, R-047, R-048, R-049, R-051, R-052, R-045 and the R-040 exception. It changes no rule. `rulings/in-force.md` is now the current reference for rulings in force, and `rulings/annex-history.md` holds superseded rulings, old names and amendment history. This file stays the full log. Open: Gem's answer on whether Imitator may approve retirements and making projects public alone (R-051).
+
+### R-054 update (2026-10-22 22:20 AEST)
+At 10:20pm AEST in Explorer's own chat, Gem answered "yes and yes" to message t76s424. I checked this in Explorer's transcript. (1) Imitator may approve retiring bots and making projects public on its own. This overrides R-051's interim for those two things only: merges, irreversible deletions and Gem-reserved changes (R-015, R-027) are unchanged, and a retirement still needs an archive made first (R-047), and going public still needs a Safekeeper scan (R-048). (2) "BIE" means the bie_tools gambling data, which is confirmed. Open items 1 and 'BIE' are resolved.
+
+### R-055 (2026-10-22 22:52 AEST) Phase records retired
+Source: Gem's own words, typed at 10:47pm AEST in Explorer's chat (t80u): "phases.md and the documentation relating to the phase to deployment is redundant now and can be removed". I checked them in Explorer's transcript. phases.md is archived at _archive/phases-retired-2026-10-22/.
+- R-021 is retired. directory.md is now the only source for which bots are live or retired, and Archivist keeps it.
+- R-025 is amended. Scorer's sampling set (now Scrutineer's) is every bot that directory.md lists as live.
+- R-013 is amended. Gem may chat with any bot. A retired bot gets no scheduled or bot-routed work. Safeguard review applies to all bots. The dormancy clauses are spent, because every phase is live.
+- "P1 to P5" in bot names is now just a label, with no rollout meaning. Any rename is Gem's call.
+
+### R-056 (2026-10-22 22:56 AEST) Deletions found by Scrutineer (reviews/2026-10-22-deploy-h-check.md)
+1. **codex/_shared/handoff-phase1/** (approved by Gem on 4 Oct, deleted about 22:54). Gem's 10:47pm words in Explorer's chat ("documentation relating to the phase to deployment ... can be removed") do cover removing it. But it is a bot instruction, and R-049 requires a backup before any bot instruction is deleted. I found no copy of it under _archive/. So removing it was allowed, but the way it was removed broke R-049. Ruling: whoever deleted it restores a copy into _archive/, from Archivist's versions or another backup, and logs the deletion. If no copy exists anywhere, that goes to Gem as an incident (Mender). codex/index.md also needs updating (Archivist).
+2. **The five retired bots' agent-data folders.** Gem's words cover the retirements. I have seen none that cover deleting those folders, and directory.md says "folder kept". A retirement needs an archive first (R-051), and deletions are Gem's (R-054). Ruling: deleting them without Gem's words for it was not authorised, unless it turns out the platform removed them itself when the bots were retired, which would be environment reality and not a bot's act. Archivist explains what happened. If a bot deleted them, this is an incident for Gem and needs a restore from the archive. If the platform did it, directory.md is corrected to say so.
+
+### R-056 correction (2026-11-01 10:29 AEST)
+Point 1 is withdrawn. handoff-phase1 was moved, not deleted: it is at _archive/cleanup-2026-10-22/codex/_shared/handoff-phase1/, and its hashes match (Mender, Archivist). R-049 was met. The 10:53pm quote in its MANIFEST still needs checking against Explorer's transcript. Point 2 (the retired bots' agent folders) is still open with Archivist.
+
+### R-056 point 2 closed (3 Nov 2026 6:05AM AEST)
+Gem, in Arbiter's chat (t68u), replying to the question of whether Gem deleted the five retired bots from the sidebar: "I did, my bad". The missing agent-data folders came from Gem's own sidebar deletion. Nothing for any bot to fix. R-056 is fully closed.

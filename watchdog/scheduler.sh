@@ -15,7 +15,7 @@ while true; do
   slot="$(date +%F) $(date +%H:%M)"
   if [ "$slot" != "$last" ]; then
     case ${slot#* } in
-      09:30|21:30) last="$slot"; echo "$(date -Iseconds) watchdog"; [ -e $D/WATCHDOG_DISABLED ] || python3 $D/watchdog.py ;;
+      09:30|21:30) last="$slot"; echo "$(date -Iseconds) watchdog"; [ -e $D/WATCHDOG_DISABLED ] || python3 $D/watchdog.py ; $D/heartbeat.sh ;;
       02:00) last="$slot"; echo "$(date -Iseconds) snapshot"; python3 $D/snapshot.py ;;
     esac
   fi

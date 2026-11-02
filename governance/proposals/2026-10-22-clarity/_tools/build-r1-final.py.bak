@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+"""Clarity batch (22 Oct 2026). Reads codex/ and the redesign proposal (read-only); writes only here. No tokens."""
+import re, glob, hashlib, os
+G="/workspace/governance"; C=G+"/codex/"; RD=G+"/proposals/2026-10-22-redesign/"; OUT=G+"/proposals/2026-10-22-clarity"
+def block(p): return re.search(r"```text\n(.*?)\n```", open(p).read(), re.S).group(1)
+def sha(s): return hashlib.sha256(s.encode()).hexdigest()[:12]
+def latest(f):
+    v=max(int(p[-6:-3]) for p in glob.glob(f"{C}{f}/v*.md")); return v, f"{C}{f}/v{v:03d}.md"
+SH="/workspace/governance/codex/_shared/"
+# ---- exact texts moved into shared rules (verbatim, so meaning is identical) ----
+FREE='Everything here is free: no paid plans, storage or services (Gem: "No, free options only"; spending without asking is $0, R-051).'
+NAMES1="NAMES: a retired bot's name in any brief or shared rule means the bot it merged into (Mediator = Mender, Scorer = Scrutineer, Safekeeper = Safeguard, Inquirer = Inferer, Extractor = Emissary; R-051)."
+NAMES2="NAMES: a retired bot's name anywhere in a shared rule or brief means the bot it merged into: Mediator means Mender, Scorer means Scrutineer, Safekeeper means Safeguard, Inquirer means Inferer, Extractor means Emissary (R-051)."
+GHRO="On GitHub you only read (view, list, search, clone into /workspace, git history and read-only remote checks), following the shared GitHub rule at /workspace/governance/codex/_shared/github/ (highest version; owner Safeguard, tokens section Safekeeper); you never sign in, switch accounts or change anything there."
+PREC="Precedence: Gem's authority, then environment reality, then deterministic checks, then agent interpretation."
+P_FREE=f"Cost: follow the shared free-only rule at {SH}free-only/ (highest version)."
+P_NAMES=f"Retired bot names: follow the shared retired-names rule at {SH}retired-names/ (highest version)."
+P_GHRO=f"GitHub: you are read-only; follow the shared GitHub read-only rule at {SH}github-read-only/ (highest version)."
+P_PREC=f"Precedence: follow the shared precedence rule at {SH}precedence/ (highest version)."
+MOVES=[(FREE,P_FREE),(NAMES1,P_NAMES),(NAMES2,P_NAMES),(GHRO,P_GHRO),(PREC,P_PREC)]
+# ---- chat and card codes made plain (wording only) ----
+CODES=[("(message t72u)","(Gem's pasted message)"),("Imitator's card t56s1","the question card in Imitator's chat"),("your card t56s1","the question card in your chat")]
+GEM="NEEDS GEM'S DIRECT APPROVAL (Gem's own words in Archivist's chat; never Imitator; R-027)"
+REL=("RELAYED request: Explorer relayed Gem's words from Explorer's chat, 10:13pm 22 Oct 2026: \"can you please address all of the redundant or confusing things that you just mentioned and push and commit and deploy\". "
+     "Under R-008 and R-018 the approver confirms with Gem directly. This batch only drafts: no recording, deploy or git push.")
+files=[]
+def emit(fn,title,meta,txt,notes):
+    L=[f"# {title} — {GEM}","","| Field | Value |","|---|---|"]+[f"| {k} | {v} |" for k,v in meta]+["| Request | "+REL+" |","| Approver | **Gem directly** (sits on unrecorded batches; checkers per R-027) |","| Reviewer | Scrutineer; Safeguard reviews Scrutineer's own file |",""]
+    L+=["Status for this draft is kept in `README.md`, not here (R-023).","","## Notes"]+[f"- {n}" for n in notes]+["","## Exact instructions (verbatim)","","```text",txt,"```",""]
+    out="\n".join(L); open(f"{OUT}/{fn}","w").write(out); files.append((fn,sha(txt),sha(out)))
+
+# ---- shared rules (Purpose/Scope/Rules/Relationships/Limits) ----
+def rule(fn,name,purpose,scope,rules,rel,limits,notes):
+    txt="\n".join([f"{name.upper()} v001",f"PURPOSE. {purpose}",f"SCOPE. {scope}",f"RULES. {rules}",f"RELATIONSHIPS. {rel}",f"LIMITS. {limits}"])
+    emit(fn,f"Shared rule: {name} v001 (new `_shared/{fn[:-9]}/`)",[("Owner","Archivist keeps the text; changes are drafted by Architect")],txt,notes)
+    return txt
+RULES={}
+RULES["free-only"]=rule("free-only-v001.md","Free only",
+ "Hold the one cost line that was pasted into 10 briefs and shared rules, word for word.",
+ "Every bot and shared rule that points here.",
+ "Binding text, unchanged: "+FREE,
+ "Mender tracks spend; Safeguard reviews breaches; Gem alone changes this line.",
+ "Moving the line here changes no meaning; a brief's pointer means exactly this text.",["Was in: mender, scrutineer, safeguard, inferer, emissary, investigator, archivist, deterministic-checks, approval-objects, resilience."])
+RULES["retired-names"]=rule("retired-names-v001.md","Retired names",
+ "Hold the one note that maps retired bot names to the bots they merged into.",
+ "Every brief and shared rule, including older text that names a retired bot.",
+ "Binding text, unchanged: "+NAMES2+" The same mapping was also pasted as: "+NAMES1,
+ "Archivist keeps the mapping in step with retirements.",
+ "Moving the note here changes no meaning.",["Was in 8 places: the 7 redesign briefs and connector-limits v003."])
+RULES["github-read-only"]=rule("github-read-only-v001.md","GitHub read-only",
+ "Hold the one paragraph for bots that only read GitHub.",
+ "Bots whose brief points here (not Engineer, which writes under the shared GitHub rule).",
+ "Binding text, unchanged (\"you\" is the bot whose brief points here): "+GHRO,
+ "Safeguard owns the shared GitHub rule; Safekeeper's tokens section is held by Safeguard after the merge (retired-names rule).",
+ "Moving the paragraph here changes no meaning.",[])
+RULES["precedence"]=rule("precedence-v001.md","Precedence",
+ "Hold the one precedence statement used across briefs, directory.md and the swarm brief.",
+ "Every bot.",
+ "Binding text, unchanged: "+PREC,
+ "Arbiter applies it in rulings; Archivist points directory.md and the swarm brief here.",
+ "Moving the statement here changes no meaning.",[])
+
+# ---- briefs and shared rules that change ----
+TARGETS=[("mender","Mender"),("auditor","Scrutineer"),("compliance-risk-officer","Safeguard"),("identity-inferer","Inferer"),("grok-bot","Emissary"),
+         ("investigator","Investigator"),("codex-keeper","Archivist"),("arbiter","Arbiter"),("instruction-architect","Architect"),("explorer-copy","Explorer"),("_shared/connector-limits","connector-limits")]
+def expand(t):  # pointer -> original, to prove the meaning is unchanged
+    for a,b in MOVES[::-1]: t=t.replace(b,a) if b!=P_NAMES else t
+    return t
+for folder,label in TARGETS:
+    v,p=latest(folder); base=block(p); t=base; used=[]
+    for a,b in MOVES:
+        if a in t: used.append((a,b)); t=t.replace(a,b)
+    for a,b in CODES:
+        if a in t: t=t.replace(a,b)
+    assert used or t!=base, folder
+    # proof: put every moved text back (and the codes back) and get the base again
+    back=t
+    for a,b in CODES: back=back.replace(b,a)
+    for a,b in used: back=back.replace(b,a,base.count(a))
+    assert back==base,(folder,"meaning check failed")
+    fn=f"{os.path.basename(folder)}-v{v+1:03d}.md"
+    emit(fn,f"{label} v{v+1:03d} (clarity)",[("Codex folder",f"`{folder}/` v{v:03d} ({sha(base)}, latest codex) → **v{v+1:03d}**"),("Changes",", ".join(sorted({'free-only' if a==FREE else 'retired-names' if a.startswith('NAMES') else 'github-read-only' if a==GHRO else 'precedence' for a,_ in used}))+" pointers; chat/card codes made plain" if t!=base else "")],
+         t,["Only the moved texts and code words change. The build proves it: putting the shared texts back gives the base text byte for byte."])
+# ---- the three redesign shared rules (approved, not yet in codex/_shared) ----
+for n in ("deterministic-checks","approval-objects","resilience"):
+    base=block(RD+f"{n}-v001.md"); t=base.replace(FREE,P_FREE).replace(NAMES1,P_NAMES); assert t!=base
+    assert t.replace(P_FREE,FREE).replace(P_NAMES,NAMES1)==base
+    emit(f"{n}-v001.md",f"Shared rule: {n} v001 (clarity rebase of the redesign text)",[("Base",f"proposals/2026-10-22-redesign/{n}-v001.md ({sha(base)}); not yet in codex/_shared/, so it stays v001")],t,["Only the moved texts change (meaning check passed)."])
+for r in files: print(*r)

@@ -51,3 +51,7 @@ A message-level `handshake` may be useful for coordination after authentication,
 The currently documented protocol defines `timestamp`, `sender`, `target`, `type`, and `content`. It does not define credential issuance, token validation, signature verification, key distribution, authorization policy, or revocation. No runtime implementation of these controls has been established from the files in this repository.
 
 Do not describe the workspace as authenticated or secure until the relevant enforcement code and configuration exist and have been tested.
+
+## Proposed sender authentication
+
+A proposed (not adopted) design for proving who sent a message, covering signed commits, per-agent signing keys and CI verification, is in [`system/sender-authentication.md`](system/sender-authentication.md) and tracked as [PJ-001](projects/sender-authentication/README.md). `python3 scripts/semantic_validate.py --check-signatures` currently only *reports* signed and unsigned records. It verifies nothing and never fails, so nothing in this document's status changes until verification is implemented and adopted.

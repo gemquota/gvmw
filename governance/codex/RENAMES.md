@@ -140,7 +140,7 @@ Ids are unchanged. Merge G (Inquirer + Inferer) was vetoed; no change to those t
 | Field | Value |
 |---|---|
 | Date | 2026-10-04 (AEST, UTC+10) |
-| Authority | Gem (renames made 4 Oct 2026 3:12pm, relayed by P1 (Work) Explorer); confirmed against live agent names; see /workspace/governance/phases.md |
+| Authority | Gem (renames made 4 Oct 2026 3:12pm, relayed by P1 (Work) Explorer); confirmed against live agent names; liveness is recorded in /workspace/governance/directory.md (R-055) |
 
 Names only. Ids and briefs are unchanged; no new versions.
 
