@@ -1,6 +1,9 @@
 # Role cartography
 
-## v25 — 22 Oct 2026 11:14:29pm AEST (current)
+## v26 — 3 Nov 2026 8:01am AEST (current)
+Archivist LIVE v014 (deployed ~6:05:24am under Gem's Yes t105u; Scrutineer check 6 PASS 3 Nov) and Arbiter LIVE v011 (deployed outside approval scope 30 Oct; kept by Gem 3 Nov 6:03am). Five retired-bot agent folders (Mediator, Scorer, Safekeeper, Inquirer, Extractor) recorded as deleted by Gem (Gem Arbiter chat t68u: "I did, my bad"; Arbiter R-056 point 2 closed 3 Nov 6:05am). No other label or edge change. v1–v25 kept as `*-vN.*`.
+
+## v25 — 22 Oct 2026 11:14:29pm AEST
 Phase-cleanup batch revision 3 LIVE 11:05:00–11:09:36pm (Gem t96u; Scrutineer PASS; Safeguard RR-064 on Scrutineer v009): Safeguard v011, Scrutineer v009, Mender v009, Inferer v010, Emissary v012, Investigator v009, Archivist v013, Arbiter v010, Architect v008, Explorer v009, Engineer v009 and Imitator v011. The shared-rules box now shows github v002, connector-limits v005 and message verification v006; collaboration-map is historical and handoff-phase1 is retired (archived, nothing deleted). v1–v24 kept as `*-vN.*`.
 
 ## v24 — 22 Oct 2026 10:56:09pm AEST

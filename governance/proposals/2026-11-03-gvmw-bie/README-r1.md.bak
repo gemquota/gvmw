@@ -1,0 +1,15 @@
+# gvmw: allow new BIE data (3 Nov 2026)
+**RELAYED REQUEST.** Gem's words reached Architect via Explorer (Gem in Explorer's chat, 6:14am AEST 3 Nov): "Can you remove "or new BIE data"". The approver must confirm with Gem directly (R-008, R-018). Approver: Gem alone (R-027; Safeguard owns this rule). Scope on approval: record only, unless Gem says deploy.
+
+## Changes
+1. connector-limits v005 -> v006, rule 14: "no new BIE or gambling data" becomes "no new gambling data other than BIE data". The "doesn't roll forward" clause now exempts new BIE data, so it needs no fresh words or dry run. Otherwise R-042 would still block every new BIE file.
+2. github v002 -> v003: the same sentence, changed the same way. Item 3 already defers gvmw to rule 14, so it's unchanged.
+3. Rule 6 is unchanged. gvmw is already its only exception, and posting BIE content anywhere else stays banned.
+
+## Risks for Gem
+- BIE data is gambling-derived, so the Interactive Gambling Act 2001 (Cth) exposure Gem already accepted for 4f43fc9 now grows with every sync of a public repo. "Or gambling" can go as well if Gem wants. Keeping it is safer, but it may be hard to tell BIE data apart from other gambling data.
+- Existing mismatch, not touched here: the "doesn't roll forward" clause wants a Safeguard dry run for new content, but Engineer is "fully free" with no dry run on gvmw (R-051). Worth a separate tidy.
+- No secrets or credentials, ever. That's unchanged.
+
+## Question for Gem
+Remove only BIE, or "or gambling" too?

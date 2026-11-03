@@ -31,3 +31,12 @@ Updated 30 Oct 2026, about 10:55am by Mender: INC-010 opened (lookback 23 to 29 
 - INC-010 stays open. Cause per Scrutineer: its 11:45am routine failed on the unpaid invoice from 22 Oct. The github.com DNS failure (third day) remains open, owner Gem (Update Bot's Computer).
 
 Updated 2 Nov 2026, about 10:58am by Mender: INC-010 extended. Mon 2 Nov scores and reviews missing at 10:58am while other bots ran (platform up); same scores-step stall as 30 Oct (Scrutineer's scheduled runs failing, recorded cause unpaid invoice). Scrutineer notified, Gem told. Still open; Scrutineer or Gem closes. Backup: `log.md.bak-20261102-1050`.
+
+| INC-011 | 3 Nov 2026, ~11:00 AM (stall first reported by Scrutineer, reviews/2026-11-03.md, ~7:55am) | Box watchdog and heartbeat silent since 22 Oct 9:30pm AEST: `box-heartbeat/heartbeat.txt` still reads 2026-10-22T11:30:06Z. Scheduler was down after the ~7:34am reboot; Engineer restarted it at 7:53:55am (pid 21787) and corrected its 6:07am "Scheduler: running" claim. But the 9:30am slot still left no watchdog line in `watchdog/scheduler.log` and no heartbeat. Box uptime starts 8:47:54am and the process start reads 9:08am, so the box restarted or was restored again after 7:53am. Who owns restarts (check 11 says "Mender writes") is unclear; Architect may propose a fix. | (watchdog/scheduler.log, box-heartbeat/heartbeat.txt) | **Open.** Engineer asked 3 Nov ~11:00am to find why 9:30am didn't fire and confirm the 9:30pm slot. Gem told; Gem's "keep or retire the scheduler" call outstanding (per Imitator). Scrutineer or Gem closes. |
+
+Updated 3 Nov 2026, about 11:00am by Mender: INC-011 opened. INC-010 note: scores and reviews on time 3 Nov (7:52am); stays open until Scrutineer sees a sustained run. Backup: `log.md.bak-20261103-1050`.
+
+
+## INC-011 update, 3 Nov 2026, about 11:07am AEST
+
+Cause as reported by Engineer: scheduler.sh fired only if its loop was awake at exactly 09:30, with no catch-up. The box restarted after the 7:53am restart (uptime from 8:47:54am), and pid 21787 resumed at 9:08 holding a stale log handle, so it missed 09:30. Fix: 15-minute catch-up windows (09:30, 21:30 and 02:00 slots); backup at backups/scheduler.sh.bak-20261103-1104; clean restart at 11:05:53 (pid 93405). Evidence: digest/inbox/2026-11-03/Engineer.md. Remaining risk: nothing restarts the scheduler after a reboot (no cron on the box). Stays open until the 21:30 heartbeat is verified by Scrutineer; Engineer checks after 9:45pm.

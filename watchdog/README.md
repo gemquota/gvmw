@@ -30,8 +30,9 @@ Writes `/workspace/backups/governance/<date>.tar.gz` and `<date>.manifest.json` 
 
 ## Schedule: `scheduler.sh` (the box has no cron and no systemd --user)
 Watchdog at 9:30am and 9:30pm AEST, snapshot at 2:00am AEST.
+Each slot keeps a 15-minute catch-up window so a short freeze that skips the exact minute still runs once.
 Start: `nohup /workspace/watchdog/scheduler.sh >> /workspace/watchdog/scheduler.log 2>&1 &`
-It doesn't survive a reboot; run the Start line again after one.
+It doesn't survive a reboot; run the Start line again after one. (`crontab` is not installed on this box, so no @reboot hook is available.)
 
 ## Off switches (one line each, undo with `rm` of the same file)
 - Everything scheduled: `touch /workspace/watchdog/SCHEDULER_DISABLED`

@@ -1,5 +1,10 @@
 # Role map v6 findings (9 Oct 2026 ~9:29)
 
+## v26 findings (3 Nov 2026 8:01am AEST)
+- Archivist v014 and Arbiter v011 are LIVE; no structural edge change.
+- Five retired-bot agent folders were deleted by Gem (Arbiter chat t68u: "I did, my bad"); R-056 point 2 closed 3 Nov 6:05am. Codex folders kept.
+- Engineer's claimed 154-file GitHub restore: path list was not recorded in governance notes; cannot confirm whether any restored path sits under /workspace/governance/.
+
 ## v24 findings (22 Oct 2026 10:56:09pm AEST)
 - The five merged bots' agent folders were gone by 10:53pm 22 Oct. Archivist didn't delete them and no deletion approval is recorded.
 - The 10:54pm cleanup moved codex/_shared/handoff-phase1 and the source proposals for several shared versions to _archive/cleanup-2026-10-22/, so verify.py crashes and verify_shared.py reports 5 MISSING sources.

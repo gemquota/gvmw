@@ -1,6 +1,6 @@
 # Open stalls and waits (owner: P1 (Ops) Mender)
 
-Last updated: 2 Nov 2026, about 10:58am AEST (Mender weekday watchdog). Previous version: `open.md.bak-20261102-1050`.
+Last updated: 3 Nov 2026, about 11:00am AEST (Mender weekday watchdog). Previous version: `open.md.bak-20261103-1050`.
 
 ## Stalls and incidents
 
@@ -8,6 +8,7 @@ Last updated: 2 Nov 2026, about 10:58am AEST (Mender weekday watchdog). Previous
 |---|---|---|---|---|
 | INC-010 | Fri 23 Oct 2026 | No chain 23 to 29 Oct (likely platform stop); scores missing at 10:52am 30 Oct (ran ~11:00am after Mender's message) and again at 10:58am Mon 2 Nov. Scrutineer's scheduled runs fail (unpaid invoice since 22 Oct). | Scrutineer to run 2 Nov scores and reviews now; its scheduled runs need fixing (invoice B6, Gem). Scrutineer or Gem closes. | Open, Scrutineer |
 | INC-007 (reopened) | Mon 12 Oct 2026; reopened 22 Oct | Mender watchdog missed 12, 14, 15 and 19 Oct. | Reopened 22 Oct 2026, 6:49pm on Scrutineer's evidence (catch-up review reviews/2026-10-22.md). The reopen condition was met because the 19 Oct watchdog run was missed. Linked to INC-009. Both close after the first successful weekday 10:50am run, on Scrutineer's evidence or Gem's call. Mender doesn't close them. 30 Oct: the 10:50am watchdog ran successfully (state/chain/2026-10-30.md), which is the closing evidence. | Scrutineer or Gem |
+| INC-011 | Tue 3 Nov 2026 (heartbeat silent since 22 Oct 9:30pm) | Box scheduler restarted 7:53am by Engineer, but the 9:30am slot left no watchdog line or heartbeat; box restarted or restored again after 7:53am (uptime from 8:47am). | Engineer to find why 9:30am didn't fire and confirm 9:30pm writes a heartbeat; Gem to decide keep or retire the scheduler. Scrutineer or Gem closes. | Open, Engineer |
 | INC-008 | Thu 22 Oct 2026, ~6:38pm | Box restarted; governance/ recreated 6:39:29pm. Role map v15 and `approvals/2026-10-22-gem-direct-words.md` (first copy) missing with no copy; restore source unknown. | Find restore source; Archivist re-recorded the 22 Oct words at 6:42pm. Notes: `/workspace/agent-tools/inc-restore-20261022/` | Open, Mender. |
 | INC-009 | Mon 19 Oct 2026 | Platform stop 19–22 Oct (unpaid invoice): no chain files, Mender watchdog failed. Linked to INC-008. | Scrutineer or Gem to close (Mender does not). Invoice question B6 with Gem. | Open. |
 | INC-005 | Fri 9 Oct 2026, between 9:20 and 9:26am | Nine agent folders present at 9:20am were gone by about 9:26am. No deletion quote in `approvals/`. Cause not stated. | Gem (Scrutineer already asked). | Open, waiting on Gem. |
@@ -42,3 +43,20 @@ Last updated: 2 Nov 2026, about 10:58am AEST (Mender weekday watchdog). Previous
 ## Correction, 2 Nov 2026, about 10:59am AEST
 
 Scrutineer reports that today's cause is not the invoice: its scheduled run succeeded on 30 Oct. The gap is that no scoring runs at 7:45am any more. Scorer's 7:45am routine retired with Scorer, and Scrutineer's 11:45am routine only reviews. Scrutineer is changing its routine to score and then review. The 2 Nov scores and reviews were started by hand at about 10:57am.
+
+
+## Update, 3 Nov 2026, about 7:55am AEST (from Scrutineer's reviews/2026-11-03.md)
+
+- **Stall: box watchdog and heartbeat silent since 22 Oct 9:30pm.** The scheduler has not been running since the reboot at about 7:34am on 3 Nov. Routing: Engineer owns and runs the scheduler, so Engineer restarts it. Mender writes heartbeats at the end of its own scheduled runs and checks that the scheduler is alive. Asked Engineer at 7:55am. Next step: Engineer.
+- **INC-010:** stays open. Scores were on time on 3 Nov. Close only after Scrutineer sees a sustained run.
+- **Emissary:** no visible work for two days. Watching; not a stall.
+- **Platform event:** every box file time was reset between 6:55 and 6:59am on 3 Nov. Scrutineer found no governance loss. Cause not established.
+- **Conflicts noted for the record, not owned by Mender:** Archivist's directory shows v013 while v014 is live; its retired rows conflict with the R-056 closure (which may bear on INC-005); its 30 Oct dry-run claim is still uncorrected; Engineer's "Scheduler: running" claim conflicts with the log; Engineer's restore of 154 files may overlap Archivist's restore authority (for Safeguard and Arbiter).
+
+
+## Update, 3 Nov 2026, about 11:00am AEST (Mender watchdog)
+
+- Chain for 3 Nov healthy: scores and reviews 7:52am, Architect 7:53am (state/chain/2026-11-03.md). INC-010 stays open until a sustained run.
+- Scheduler stall logged as INC-011 (row above). Engineer asked again.
+- Wait added: proposals/2026-11-03-gvmw-bie/ needs Gem's own words to Archivist (R-027); HIGH legal risk per Safeguard.
+- Emissary: still watching, not a stall.

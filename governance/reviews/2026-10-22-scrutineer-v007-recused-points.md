@@ -9,4 +9,4 @@ Text reviewed: codex/auditor/v007.md, deployed text block, lines 18 to 24.
 - Finding (d) (nobody audits Scrutineer's deploy, restore and check audits, or checks 1 and 10): Safeguard is now named for all of these. FIXED.
 - Fix 3 ("Safeguard checks those" handover): SCOPE says "deploy and restore checks (never your own deploy or a restore of your own files: Safeguard checks those)". FIXED.
 - Other recused lines: "Gem reviews Scrutineer's and Safeguard's own briefs and spot-checks both" is present. The cross-check sentence matches safeguard-v009 L22 word for word (checked in the proposal at 8:31pm). README migration step 4 matches (checked at 8:31pm).
-- Advisory: the cross-check line has Scrutineer audit Safeguard's deterministic checks 2, 4 and 8, but safeguard-v009's SCOPE lists only checks 2 and 4. That sentence assigns check 8 to Safeguard, but SCOPE should match. This doesn't block the verdict.
+- Advisory withdrawn (3 Nov): I had checked an older draft. Live safeguard-v009 SCOPE (63bda951af2e) does list deterministic checks 2, 4 and 8, so it matches. No open issues.

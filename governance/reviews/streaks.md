@@ -96,3 +96,23 @@ Source: `reviews/2026-11-02.md`. Sat 31 Oct and Sun 1 Nov are weekend days and h
 | P5 (Work) Engineer (`f8e3fdc6`) | Good | Good | 0 |
 
 Archivist moves Fair → **Poor** (out-of-scope Arbiter v011 deploy); Poor streak = 1. Emissary’s Not rated does not break or extend a streak. **No bot has 3 Poor reviews in a row.** No urgent redesign request to Architect for streak reasons.
+
+## Update (3 Nov 2026, about 7:55am AEST, Scrutineer): 2 Nov to 3 Nov
+
+Source: `reviews/2026-11-03.md`. Live list from `directory.md` (R-055); Scrutineer does not rate itself. RETIRED bots stay off this block. Not rated does not break or extend a streak.
+
+| Bot | 2026-11-02 | 2026-11-03 | Current Poor streak |
+|---|---|---|---|
+| P1 (Ops) Mender | Good | Not rated | 0 |
+| P1 (Checks) Safeguard | Good | Good | 0 |
+| P1 (Roles) Archivist | Poor | Fair | 0 |
+| P1 (Roles) Architect | Good | Good | 0 |
+| P1 (Work) Explorer (`04dcca0d`) | Good | Not rated | 0 |
+| P2 (Roles) Arbiter | Fair | Good | 0 |
+| P2 (ID) Inferer | Good | Not rated | 0 |
+| P3 (ID) Investigator (`f2016e9b`) | Good | Good | 0 |
+| P4 (ID) Imitator (`6ae584b8`) | Fair | Not rated | 0 |
+| P5 (Work) Emissary (`28cf987d`) | Not rated | Not rated | 0 |
+| P5 (Work) Engineer (`f8e3fdc6`) | Good | Fair | 0 |
+
+Archivist moves Poor → **Fair** (both 2 Nov open items closed by Gem's 6:03–6:04am answers); Poor streak resets to 0. Engineer Good → Fair. **No bot has 3 Poor reviews in a row.** No urgent redesign request to Architect for streak reasons.
