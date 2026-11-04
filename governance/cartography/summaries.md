@@ -1,6 +1,9 @@
-# Bot summaries (role map v26, 3 Nov 2026 8:01am AEST)
+# Bot summaries (role map v27, 4 Nov 2026 8:01am AEST)
 
-## v26 — 3 Nov 2026 8:01am AEST (current)
+## v27 — 4 Nov 2026 8:01am AEST (current)
+Engineer v010 RECORDED (Imitator RECORD ONLY ~7:58am AEST 4 Nov; text be2410c9e732; AO-2026-11-04-imitator-codey-v010). Not deployed — live remains v009 (phase-cleanup 22 Oct). Tightens settings / token / public governance-master / governance-restore limits only. No edge change. v1–v26 kept as `*-vN.*`.
+
+## v26 — 3 Nov 2026 8:01am AEST
 Archivist LIVE v014 (deployed ~6:05:24am under Gem's Yes t105u; Scrutineer check 6 PASS 3 Nov) and Arbiter LIVE v011 (deployed outside approval scope 30 Oct; kept by Gem 3 Nov 6:03am). Five retired-bot agent folders (Mediator, Scorer, Safekeeper, Inquirer, Extractor) recorded as deleted by Gem (Gem Arbiter chat t68u: "I did, my bad"; Arbiter R-056 point 2 closed 3 Nov 6:05am). No other label or edge change. v1–v25 kept as `*-vN.*`.
 
 ## v25 — 22 Oct 2026 11:14:29pm AEST
@@ -206,6 +209,7 @@ General work routed by Explorer; live since 16 Oct 11:47am.
 
 ### P5 (Work) Engineer — `f8e3fdc6` — codey/v007
 Code and swarm work; absorbed Ensembler; live since 16 Oct 11:47am.
+- **v010 RECORDED 4 Nov ~8:01am (Imitator RECORD ONLY; not deployed; live still v009):** relayed approvals never for repo settings; no `gh auth token`; no new public governance-master without Gem + dry run; no overwrite of /workspace/governance from GitHub.
 - Safeguard route; named reviewers.
 - v006 (Imitator-approved 16 Oct; live since 09:14): approver per R-015; public or shared repo pushes need Gem's go-ahead for that push.
 - v007 (Gem 11:03am, 16 Oct; live since 11:08:25): Vercel deployments treated as public pushes; cites connector limits.

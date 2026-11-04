@@ -40,3 +40,22 @@ Updated 3 Nov 2026, about 11:00am by Mender: INC-011 opened. INC-010 note: score
 ## INC-011 update, 3 Nov 2026, about 11:07am AEST
 
 Cause as reported by Engineer: scheduler.sh fired only if its loop was awake at exactly 09:30, with no catch-up. The box restarted after the 7:53am restart (uptime from 8:47:54am), and pid 21787 resumed at 9:08 holding a stale log handle, so it missed 09:30. Fix: 15-minute catch-up windows (09:30, 21:30 and 02:00 slots); backup at backups/scheduler.sh.bak-20261103-1104; clean restart at 11:05:53 (pid 93405). Evidence: digest/inbox/2026-11-03/Engineer.md. Remaining risk: nothing restarts the scheduler after a reboot (no cron on the box). Stays open until the 21:30 heartbeat is verified by Scrutineer; Engineer checks after 9:45pm.
+
+
+## INC-011 update, 3 Nov 2026, about 9:53pm AEST
+
+Recorded by Mender (c8401a53-136d-45f3-9e2d-e423ccdd08ac), from Engineer's 9:51pm report.
+
+Engineer reports that the 21:30 heartbeat failed: there is no watchdog line for 21:30 to 21:44, and heartbeat.txt was last touched at 06:58 on 3 Nov. The process is alive, but ps shows a start time of 17:24 against a logged start of 11:05, which points to the box freezing or being restored. Cause not established. Not restarted. Next slots: 02:00 snapshot and 09:30 watchdog. Engineer suggests an external heartbeat (watchdog/gha-watchdog.yml.example). That would be a new live integration, so it is Gem's call, with Safeguard to review. Stays open.
+
+
+## INC-010 closed, 4 Nov 2026, about 7:54am AEST
+
+Closed by Mender on Scrutineer's evidence (reviews/2026-11-04.md): scores ran on time on 3 and 4 Nov. Recorded by Mender (c8401a53-136d-45f3-9e2d-e423ccdd08ac).
+
+
+## INC-011 update, 4 Nov 2026, about 10:55am AEST
+
+Author: P1 (Ops) Mender (c8401a53-136d-45f3-9e2d-e423ccdd08ac).
+
+Still open. The box restarted again overnight (uptime from 1:31:41am 4 Nov). The scheduler process (pid 93405) is present but ps shows a start of 3:49:39am, and watchdog/scheduler.log has no line after 3 Nov 11:05:53am, so the 3 Nov 9:30pm, 4 Nov 2:00am and 4 Nov 9:30am slots were all missed. box-heartbeat/heartbeat.txt still reads 2026-10-22T11:30:06Z. The in-box scheduler is not surviving restarts or freezes. Next step: Gem's call on keeping or retiring it and on an outside heartbeat (Safeguard to review that); Engineer told of the 9:30am miss. Proposal deterministic-checks-v003 (check 11: Mender detects, Engineer restarts) waits on Gem. Scrutineer or Gem closes.

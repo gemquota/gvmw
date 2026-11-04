@@ -1,0 +1,33 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v26 (3 Nov 2026 8:01am; P5 live) detail A — governance / checks / ops
+flowchart TB
+  GEM(("Gem"))
+  ARX["Architect v008"] --> GEM
+  GEM ==>|chat or voice call R-018| ARC["Archivist v014 · owns directory.md"]
+  ASM["RETIRED Assembler"] -.-> ARC
+  SCR["Scrutineer v009"]
+  SCO["RETIRED P1 (Checks) Scorer"]
+  SCR --> ARX
+  SCR --> MEN["Mender"]
+  SCR --> ARB["Arbiter"]
+  ARB --> ARX
+  SFG["Safeguard v011 · owns connector limits v005<br/>all public/shared repo pushes first (R-020)"] --> GEM
+  IMI["Imitator v011 · LIVE since 9:40pm 22 Oct"] ==>|approvals, 1:1 check; deploy after Safeguard dry run| ARC
+  ARX ==>|proposes, not Imitator/Investigator| IMI
+  IMI -.->|spending · drastic/irreversible · Imitator + checkers Gem-only · not widening own role R-028| GEM
+  BOTS["Any bot pushing to a public/shared repo"] -->|first| SFG
+  SFK["RETIRED P1 (Checks) Safekeeper"]
+  MAR["RETIRED Marshal"] -.-> MEN
+  MEN --> GEM
+  MED["RETIRED P2 (Ops) Mediator"]
+  SCR -.->|checks Imitator, R-027| IMI
+  SFG -.->|checks Imitator, R-027| IMI
+  ALL["Every bot and helper"] -->|connector limits, RR-028| SFG
+  ARC -->|deploy plan for dry run, case b| SFG
+  IMI -->|veto, not R-015/027/028| ARB
+  MED -.->|merged into| MEN
+  SCO -.->|merged into| SCR
+  SFK -.->|merged into| SFG
+  linkStyle 19,20,21 stroke:#9e9e9e,stroke-dasharray:3 3
+  classDef retiredMerged fill:#eeeeee,stroke:#9e9e9e,color:#757575
+  class MED,SCO,SFK retiredMerged

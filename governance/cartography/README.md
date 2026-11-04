@@ -1,6 +1,10 @@
 # Role cartography
 
-## v26 — 3 Nov 2026 8:01am AEST (current)
+## v27 — 4 Nov 2026 8:01am AEST (current)
+Engineer v010 RECORDED (Imitator RECORD ONLY ~7:58am AEST 4 Nov; text be2410c9e732; AO-2026-11-04-imitator-codey-v010). Not deployed — live remains v009 (phase-cleanup 22 Oct). Tightens settings / token / public governance-master / governance-restore limits only. No edge change. v1–v26 kept as `*-vN.*`.
+- Interactive view rebuilt from v27: `role-map-interactive.html`.
+
+## v26 — 3 Nov 2026 8:01am AEST
 Archivist LIVE v014 (deployed ~6:05:24am under Gem's Yes t105u; Scrutineer check 6 PASS 3 Nov) and Arbiter LIVE v011 (deployed outside approval scope 30 Oct; kept by Gem 3 Nov 6:03am). Five retired-bot agent folders (Mediator, Scorer, Safekeeper, Inquirer, Extractor) recorded as deleted by Gem (Gem Arbiter chat t68u: "I did, my bad"; Arbiter R-056 point 2 closed 3 Nov 6:05am). No other label or edge change. v1–v25 kept as `*-vN.*`.
 
 ## v25 — 22 Oct 2026 11:14:29pm AEST

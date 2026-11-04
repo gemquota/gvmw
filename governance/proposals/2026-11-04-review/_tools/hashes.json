@@ -1,0 +1,14 @@
+{
+  "codey-v010.md": {
+    "text_sha256": "be2410c9e732439c3d02c953c9f577ac071eb8cce5ef9a5b066dff839dd2f1b6",
+    "file_sha256": "ae61f6b408925e63fe78c859b68de97699004aad270997630ba1da062ea6ec90",
+    "text_bytes": 9481,
+    "file_bytes": 10356
+  },
+  "deterministic-checks-v003.md": {
+    "text_sha256": "159ce1814bd5dbcd487a087e59b20990e79224a3cf09c582c9c572b183c5c912",
+    "file_sha256": "c4e73475ac118994706998261acd75f210a1f65f9bea96e742e8305b9327eef4",
+    "text_bytes": 3527,
+    "file_bytes": 4514
+  }
+}

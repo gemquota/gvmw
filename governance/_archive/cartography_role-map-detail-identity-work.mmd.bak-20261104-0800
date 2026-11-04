@@ -1,0 +1,27 @@
+%%{init: {"flowchart": {"wrappingWidth": 220}}}%%
+%% Role map v26 (3 Nov 2026 8:01am; unchanged from v14 detail; P5 live) detail B — identity + explorers + work
+flowchart TB
+  GEM(("Gem"))
+  INQ0["e613112b former · verified"] -.->|v003 re-key| INQ["RETIRED P2 (ID) Inquirer"]
+  INF["Inferer v010 · one owner-only profile file"]
+  INF --> INV["Investigator v009 · LIVE · daily Imitator check"]
+  INV -->|daily check, reviews after the fact| IMI["Imitator v011 · LIVE · decides within limits"]
+  INT["RETIRED Interrogator"] -.-> INV
+  EXP0["82a2c15a former"] -.-> EXP["Explorer v009 04dcca0d ACTIVE · never writes profiles"]
+  MSG["RETIRED Messenger"] -.-> EXP
+  EXP --> EMI["Emissary v012 · LIVE · only postiz poster"]
+  EXP --> ENG["Engineer v009 · LIVE · only GitHub writer · Vercel = public deploy"]
+  EXT["RETIRED P5 (Work) Extractor"]
+  EXP --> GEM
+  MED["RETIRED P2 (Ops) Mediator"]
+  ENS["RETIRED Ensembler"] -.-> ENG
+  INQ0 -.->|series accepted if it reappears| INF
+  EMI -.->|decisions within limits| IMI
+  IMI -.->|limits stay with| GEM
+  GEM ==>|exact post text| EMI
+  IMI -->|gaps, Inferer only| INF
+  MED -.->|merged into| MEN
+  EXT -.->|merged into| EMI
+  linkStyle 15,16 stroke:#9e9e9e,stroke-dasharray:3 3
+  classDef retiredMerged fill:#eeeeee,stroke:#9e9e9e,color:#757575
+  class MED,EXT retiredMerged

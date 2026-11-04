@@ -1,11 +1,10 @@
 {
   "unread": [
-    "2026-11-03"
+    "2026-11-04"
   ],
-  "last_compiled_through": "2026-11-02",
+  "last_compiled_through": "2026-11-03",
   "compiled_today_files": [
-    "inbox/2026-11-03/Engineer.md",
-    "inbox/2026-11-03/Investigator.md"
+    "inbox/2026-11-04/Investigator.md"
   ],
-  "note": "3 Nov: earlier digests kept in unread because this run can't see whether Gem messaged since; parent clears them if Gem did. 3 Nov Engineer and Investigator already included; only add new 3 Nov lines next run."
+  "note": "4 Nov: 3 Nov digest kept in unread because this run can't see whether Gem messaged since; parent clears it if Gem did. 4 Nov Investigator already included; only add new 4 Nov lines next run."
 }

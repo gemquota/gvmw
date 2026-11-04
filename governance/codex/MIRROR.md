@@ -7,11 +7,13 @@
 | URL | https://docs.google.com/document/d/1FgxqvRThNVcmHFxBIPrAxKiKXyoj-ne-6IFJBw9Np_0/edit |
 | Owner | Gem's Google account (created via the Google Docs connector) |
 | Sharing | Not shared with anyone |
-| Last sync | 2026-11-03 8:02am AEST (UTC+10), status append via plain user-Google-docs (gemquota connector 403): Archivist LIVE v014; Arbiter LIVE v011 kept. Inserted heading [866978,867062) + body [867063,868404). Previous: 2026-10-22 9:42:31pm (GitHub revision 5h). |
+| Last sync | 2026-11-04 8:02am AEST (UTC+10), status append via plain user-Google-docs: Engineer v010 RECORDED (not deployed; live v009). Inserted heading [868405,868481) + body [868482,868989). Previous: 2026-11-03 8:02am (Archivist LIVE v014; Arbiter LIVE v011 kept). |
 | Synced content | 2 Oct: README essentials, index, v001 for the original 13 bots. 4 Oct 17:55: appended section 'Sync 2026-10-04 (current state, supersedes the sections above)' with the current index (36 bots, 23 active, 13 retired, plus 2 shared entries), every rename and retirement from RENAMES.md, each bot's current recorded version verbatim (with author, approver, reason, status), the live text where an approved version is not yet deployed (10 bots), the Imitator approval confirmation, and both _shared/ entries verbatim. 9 Oct morning deploy: 9 live bot versions + R-009 + tools delta appended. |
 | Sync check | 22 Oct 9:42pm: 1 append via the default Google Docs connection, guarded by the 9:36pm revisionId (unchanged since). Inserted [458362, 506097) = 47735 UTF-16, equal to local (`_tools/doc_sync_2026-10-22d/m00.txt`). Prior: 22 Oct 9:36pm, 33296. |
 
 The files in this folder are the master copy. The Doc is a mirror only; on each new version, append/update the Doc and bump "Last sync".
+
+**Sync (2026-11-04 ~8:02am AEST):** appended 'Sync 2026-11-04 ~8:01am AEST — status: Engineer v010 RECORDED (not deployed)' (heading + body) via plain `user-Google-docs`. Status only (no verbatim brief dump). End marker text included. Not shared.
 
 **Sync (2026-11-03 ~8:02am AEST):** appended 'Sync 2026-11-03 ~8:01am AEST — status: Archivist LIVE v014; Arbiter LIVE v011 (kept)' (heading + body) via plain `user-Google-docs` (gemquota namespace returned 403 PERMISSION_DENIED). Status only (no verbatim brief dump). End marker text included. Not shared.
 

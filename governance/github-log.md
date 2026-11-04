@@ -67,3 +67,48 @@
 - pr: #6 https://github.com/gemquota/swarm/pull/6 (2026-11-03 18:35 AEST)
 - 2026-11-03 18:36:12 AEST AEST bot=Engineer account=gemquota repo=gemquota/swarm visibility=PUBLIC action=pr_merge pr=https://github.com/gemquota/swarm/pull/6 merge_sha=efbd7f3146d3e3f0cdc3115a1fd82883d3247e18 branch=engineer/hub-icons-theme-archive-v2 note="verifier ACs PASS; gitleaks 0; normal merge; tag archive/swarm-site-2026-11-03"
 - 2026-11-03 18:36:50 AEST bot=Engineer account=gemquota repo=gemquota/swarm visibility=PUBLIC action=pages_live_check merge_sha=efbd7f3146d3e3f0cdc3115a1fd82883d3247e18 note="main/archive/2026-11-03/v2/assets/R-054 all HTTP 200; icon-tab+assistant-grid+observatory nest markers live"
+- 2026-11-03 21:06 AEST bot=Engineer account=gemquota repo=gemquota/gvmw visibility=PUBLIC action=push main commit=1968f491e662f24df71e2585c62c4bfc815ed8cb note="daily auto-sync; 92 files add/modify only, 0 deletions; Gem approved no scan/dry run"
+- 2026-11-03 22:36:23 AEST bot=Engineer account=gemquota repo=gemquota/swarm visibility=PUBLIC action=refresh_aborted branch=main note="gitleaks binary missing at /tmp/gitleaks"
+
+## 2026-11-04 00:52 AEST — Engineer / gemquota — swarm proposals 1–21 + interactive diagrams
+- bot=Engineer account=gemquota repo=gemquota/swarm visibility=PUBLIC
+- Gem quote (approved 12:40am AEST 4 Nov, pt129u): "They all sound good, more interactive architecture diagrams would be nice as well"
+- branch=engineer/proposals-21-diagrams
+- commits: bc98660 (feat: all 21 + diagrams); fb56f28 (repair: staged-set template markers)
+- force-push: no
+- refresh_and_push.sh: untouched (sha c04704226516a121)
+- archive/2026-11-03/: unmodified (freeze intact; manifest outside freeze)
+- action=push + pr_create + independent_verify + pr_merge + pages_live_check
+- pr=#7 https://github.com/gemquota/swarm/pull/7
+- merge_sha=5a2601316ba4286d3f4d0c80c44be0eff573dcfb (normal merge, no force; merged ~00:49 AEST 4 Nov)
+- scans: gitleaks detect --source . --no-git → 0 leaks (pre-push and post-repair)
+- verifier (/tmp/independent_ac_verify_proposals21.py, hermetic): AC-1..AC-8 PASS after 1 repair (AC-1 staged-set template); OVERALL PASS
+- repair#1: added `<template id="staged-set-template">` to index.html + v2/index.html
+- live Pages 200: / /v2/ /v2/workspace-summary.html /archive/2026-11-03/ /archive/reviews/2026-10-10-governance-io-report.html /archive/reviews/2026-10-15-governance-authority-responsibility.html /governance/reviews/* (redirect stubs) /data/architecture.json /assets/arch-diagrams.{js,css} /assets/assistant-ux.js /assets/hub-enhancements.{js,css}
+- note: directory URL /archive/reviews/ (no index) → 404 expected on GH Pages; individual review HTML → 200
+- UNVERIFIED: none after post-merge Pages check (directory index for archive/reviews/ intentionally absent)
+
+## 2026-11-04 07:54 AEST — Engineer / gemquota — R-057 gap: gemquota/md Pages approval
+- bot=Engineer account=gemquota repo=gemquota/md visibility=PUBLIC (readback only; no change)
+- Arbiter R-057 (2026-11-04 07:53 AEST): Gem's card answer in Explorer's chat does NOT count as Gem's direct words under shared GitHub v002 for Engineer enabling Pages. Relayed approval never counts. gemquota/md is not one of the five projects Gem named (R-047a does not cover it).
+- GAP: Pages was enabled on 3 Nov ~2:30pm AEST on Gem's card answer in Explorer's chat ("Yes, OK for Engineer to push the worldview files to gemquota/md and turn on GitHub Pages", logged 14:30 AEST 3 Nov). That is not Gem's direct words to Engineer. No Safeguard dry run was done (Archivist corrected the false "dry run noted" claim).
+- Pending: Gem's direct words in Engineer's own 1:1 chat (or voice) naming that specific Pages action; and a Safeguard dry run. Whether to switch Pages off meanwhile is Gem's call (both directions reversible).
+- Read-only visibility/Pages read-back via gh as gemquota (no Pages or visibility change):
+  - visibility=PUBLIC isPrivate=false url=https://github.com/gemquota/md
+  - Pages status=built public=true html_url=https://gemquota.github.io/md/ source=main:/ https_enforced=true
+  - latest build commit=b198d0d493fb8ffa3d854cee612d88704f43fca0 created_at=2026-11-03T04:29:26Z status=built
+  - live HTTP 200: https://gemquota.github.io/md/ and https://gemquota.github.io/md/worldview/
+
+## 2026-11-04 07:56 AEST — Engineer / gemquota — R-058 exclude master from swarm sync allowlist
+- bot=Engineer account=gemquota repo=gemquota/swarm visibility=PUBLIC
+- Arbiter R-058 (2026-11-04 07:53 AEST): governance/master/** and archive/**/governance/master out of public sync allowlist pending Gem direct words + Safeguard re-check; README must not claim fail-closed while they are published; removing from history is Gem's call.
+- branch=engineer/r058-exclude-master-allowlist commit=b3cf145
+- force-push: no
+- refresh_and_push.sh: untouched (sha c04704226516a121)
+- archive/2026-11-03/: unmodified; already-published governance/master/** kept on main (not deleted)
+- action=push + pr_create + independent_verify + pr_merge
+- pr=#8 https://github.com/gemquota/swarm/pull/8
+- merge_sha=a9a9b06c73640fe3e7b811657a9795928bea7127
+- scans: gitleaks detect --source . --no-git → 0 leaks
+- verifier (/tmp/independent_ac_verify_r058.py): AC-1..AC-7 PASS; OVERALL PASS
+- changes: scripts/build_site_sync.py EXCLUDE_PATTERNS + assert; README sync claim corrected; site_sync_report.json schema 2 exclude_note

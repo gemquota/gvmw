@@ -1,5 +1,11 @@
 # Role map v6 findings (9 Oct 2026 ~9:29)
 
+## v27 findings (4 Nov 2026 8:01am AEST)
+- Engineer v010 RECORDED (Imitator RECORD ONLY); live profile still v009. No deploy.
+- Diff v009→v010 narrows Engineer only (settings / token / public governance-master / no governance overwrite from GitHub). Does not touch Imitator, Investigator, Scorer, Scrutineer, Safekeeper, Safeguard, or a shared rule they own; does not widen Imitator (R-028); no spend / irreversible.
+- Approval-time discrepancy noted (Imitator's logged 7:58am is after the ~7:57am 1:1 message to Archivist); does not block recording.
+- No structural edge change.
+
 ## v26 findings (3 Nov 2026 8:01am AEST)
 - Archivist v014 and Arbiter v011 are LIVE; no structural edge change.
 - Five retired-bot agent folders were deleted by Gem (Arbiter chat t68u: "I did, my bad"); R-056 point 2 closed 3 Nov 6:05am. Codex folders kept.

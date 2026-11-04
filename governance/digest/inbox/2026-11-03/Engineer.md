@@ -34,3 +34,18 @@
 - **Not done (by design):** No manual heartbeat push (must go through the scheduler slot). No cron/system service install. No git push of watchdog scripts. No secret values read/printed.
 - **Expect at 9:30pm AEST (21:30, catch-up until 21:44):** a `watchdog` line in `scheduler.log`, updated `box-heartbeat/heartbeat.txt` (UTC), and a push to private `gemquota/box-heartbeat` via `heartbeat.sh` (using `gh auth token --user gemquota`). Watchdog.md FYI/alert append for today.
 - **Remaining risk for 9:30pm:** Another box reboot/restore before 21:44 with nobody re-running the Start line → miss again (no cron/@reboot). A freeze longer than the 15-minute catch-up window would also miss. Active `gh`/DNS/proxy failure could let the local heartbeat write+commit succeed while the push fails (`heartbeat.sh` does not retry). Gem's keep-or-retire-scheduler call still outstanding.
+
+## gvmw daily auto-sync, 3 Nov 2026, about 9:06pm AEST
+- Result: SUCCESS. Pushed main 1968f49 (2bbe601..1968f49), normal push as gemquota.
+- Remote to workspace: nothing new (origin/main was still 2bbe601, which already matched the clone).
+- Workspace to clone: 92 files (59 new, 33 modified, 0 deleted), almost all governance/ plus watchdog/README.md, watchdog/scheduler.sh and id-investigator/imitator-accuracy-2026-11-03.md. 19 gitignored paths skipped and not copied (secret-named files, medb/data, pstats jsonl, trace zips). No logs/pids, no out/, no golf, no new BIE data.
+- Repo tracked files after push: 5,512. Visibility readback: PUBLIC (unchanged).
+- No force-push, no history rewrite, no deletions on either side, no visibility change.
+- Scheduler: running (pid 93405, --check-scheduler-only). No SCHEDULER_DISABLED flag; no restart needed.
+
+## INC-011 follow-up: 9:30pm box heartbeat check (run 9:51pm AEST, 3 Nov)
+- Result: FAILED. No `watchdog` line in /workspace/watchdog/scheduler.log for 21:30–21:44 AEST today; last log line is "2026-11-03T11:05:53+10:00 scheduler started pid 93405".
+- /workspace/box-heartbeat/heartbeat.txt was not updated tonight (last modified 3 Nov 06:58:11 AEST).
+- Scheduler process pid 93405 is alive (in its `sleep 20` loop); no SCHEDULER_DISABLED flag. `ps` reports its start as 17:24 AEST although it logged 11:05, which points to a box freeze/restore. Likely cause: the box was frozen or the loop was not ticking through the 21:30–21:44 window, so the slot was skipped.
+- Not restarted (it's still running, so a restart wouldn't help and wouldn't recover tonight's slot). Tonight's 21:30 heartbeat is missed; next slot is 02:00 snapshot, then 09:30 watchdog.
+- Suggest Mender consider an external heartbeat (e.g. the gha-watchdog.yml.example GitHub Action) since an in-box loop can't fire while the box is frozen.

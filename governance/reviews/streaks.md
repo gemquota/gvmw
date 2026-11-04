@@ -116,3 +116,23 @@ Source: `reviews/2026-11-03.md`. Live list from `directory.md` (R-055); Scrutine
 | P5 (Work) Engineer (`f8e3fdc6`) | Good | Fair | 0 |
 
 Archivist moves Poor → **Fair** (both 2 Nov open items closed by Gem's 6:03–6:04am answers); Poor streak resets to 0. Engineer Good → Fair. **No bot has 3 Poor reviews in a row.** No urgent redesign request to Architect for streak reasons.
+
+## Update (4 Nov 2026, about 7:51am AEST, Scrutineer): 3 Nov to 4 Nov
+
+Source: `reviews/2026-11-04.md`. Live list from `directory.md` (R-055); Scrutineer does not rate itself. RETIRED bots stay off this block. Not rated does not break or extend a streak.
+
+| Bot | 2026-11-03 | 2026-11-04 | Current Poor streak |
+|---|---|---|---|
+| P1 (Ops) Mender | Not rated | Good | 0 |
+| P1 (Checks) Safeguard | Good | Good | 0 |
+| P1 (Roles) Archivist | Fair | Good | 0 |
+| P1 (Roles) Architect | Good | Good | 0 |
+| P1 (Work) Explorer (`04dcca0d`) | Not rated | Good | 0 |
+| P2 (Roles) Arbiter | Good | Not rated | 0 |
+| P2 (ID) Inferer | Not rated | Good | 0 |
+| P3 (ID) Investigator (`f2016e9b`) | Good | Good | 0 |
+| P4 (ID) Imitator (`6ae584b8`) | Not rated | Good | 0 |
+| P5 (Work) Emissary (`28cf987d`) | Not rated | Not rated | 0 |
+| P5 (Work) Engineer (`f8e3fdc6`) | Fair | Poor | 1 |
+
+Engineer moves Fair → **Poor** (md Pages enabled on relayed words without a recorded Safeguard dry run; banned `gh auth token` use; wider governance content on public swarm); Poor streak = 1. Archivist Fair → Good. Emissary Not rated for the third weekday (stall watch). **No bot has 3 Poor reviews in a row.** No urgent redesign request to Architect for streak reasons.

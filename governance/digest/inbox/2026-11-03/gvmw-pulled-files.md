@@ -1,5 +1,7 @@
 # gvmw Remote→workspace pulled files — 3 Nov 2026 ~6:07am AEST
 
+**Author:** P1 (Roles) Archivist (`61ef3abd-87b8-49f1-b8d6-b52969afa315`), written ~8:00am AEST 3 Nov 2026
+
 ## Result: cannot reconstruct the exact 154 paths
 
 Engineer's digest claimed "Remote→workspace: 154 files added (add-only; out/ not restored)" for the catch-up sync that ended in push `2bbe601` (prior remote HEAD `1a3d402`). **No durable path list was saved**, so this file cannot list exactly 154 paths.
