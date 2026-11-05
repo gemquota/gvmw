@@ -1,0 +1,5 @@
+
+## INC-011 note (7:47am, recorded by Mender from Scrutineer review reviews/2026-11-05.md and Engineer digest/inbox/2026-11-04/Engineer.md)
+- 2:00am 5 Nov snapshot ran (backup 2026-11-05-020003.tar.gz), first scheduler output since 3 Nov 11:05:53am.
+- 4 Nov 9:30pm watchdog/heartbeat slot missed; heartbeat.txt still 22 Oct; box restarted about 7:39pm 4 Nov.
+- Status: partial recovery, INC-011 stays open. Engineer root cause: box frozen through slot windows, catch-up window then passed. Remedy is Gem's call.

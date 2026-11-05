@@ -112,3 +112,76 @@
 - scans: gitleaks detect --source . --no-git → 0 leaks
 - verifier (/tmp/independent_ac_verify_r058.py): AC-1..AC-7 PASS; OVERALL PASS
 - changes: scripts/build_site_sync.py EXCLUDE_PATTERNS + assert; README sync claim corrected; site_sync_report.json schema 2 exclude_note
+
+## 2026-11-04 ~21:08 AEST, Engineer: gvmw daily auto-sync
+- repo: gemquota/gvmw (PUBLIC, readback unchanged); push main 1968f49..1cf0ed1 as gemquota, normal push
+- 110 files (77 added, 33 modified, 0 deleted); no per-push scan or dry run (R-051); nothing pulled from remote
+
+## 2026-11-04 22:04 AEST — Engineer / gemquota — disable GitHub Pages on gemquota/md
+- bot=Engineer account=gemquota repo=gemquota/md
+- trigger: Gem's direct words in Engineer's chat ("Turn GitHub Pages off for gemquota/md")
+- action=pages_disable: DELETE /repos/gemquota/md/pages → HTTP 204
+- read-back: Pages API 404 (disabled); repo visibility=PUBLIC (unchanged)
+- Safeguard was told; R-057's dry run covered the effect
+
+## 2026-11-04 22:10 AEST — Engineer / gemquota — vepa-consolidation all-versions PUSH BLOCKED
+- bot=Engineer account=gemquota repo=gemquota/vepa-consolidation
+- trigger: Gem yes at 22:05 AEST 4 Nov ("Vepa consolidation should have all vepa versions")
+- planned: namespaced tags/branches for gemquota/vepa (47+tip), DayneK/vepa (12), local/codey-complete-plans, gemquota/vepa4, gemquota/vepa-v3, DayneK/v5; VERSION_LEDGER + README; no force-push; keep PRIVATE
+- local prep: DONE in /workspace/_repo-staging/vepa-consolidation
+  - .codey/intent.md written
+  - refs prepared locally: 48 gemquota/* tags (47 upstream + v9.1.2 tip), 12 dayneK/* tags, branches gemquota/master, dayneK/main, local/codey-complete-plans, gemquota/vepa4/main, gemquota/vepa-v3/main, dayneK/v5/main
+  - VERSION_LEDGER.csv (66 rows) + README corpus section + local commit on main (NOT pushed)
+- gitleaks (/usr/local/bin/gitleaks 8.21.2): BLOCK — secrets found; push aborted (Safekeeper owns secrets)
+  - gemquota/vepa: 0 findings (208 commits)
+  - gemquota/vepa4: 0 findings
+  - gemquota/vepa-v3: 0 findings
+  - consolidation main tree: 0 findings
+  - DayneK/vepa: 1 finding — RuleID=generic-api-key File=src/ui/narrativePanel.js:26 Commit=daae7c093d1865758ca3c58611b1cfec1f738377 (v9.3.0)
+  - local /workspace/vepa: 2 findings — (1) RuleID=generic-api-key File=src/state/worldParams.js:148 Commit=46f2abf43430e5e720556b8d3c5c7d4716411821; (2) same narrativePanel.js finding as DayneK (shared history)
+  - DayneK/v5: 1 finding — RuleID=generic-api-key File=src/ui/narrativePanel.js:26 Commit=01b34c7fcbf1c354ac2503a998247990e7dfd8c3
+  - secret values NOT logged; reports under /tmp/gitleaks-vepa-consol/*.json for Safekeeper
+- Safeguard keyword note (do not block; repo private): gambling/BIE-ish line hits present in donor trees (counts only: gq-vepa 76, daynek-vepa 84, local-vepa 154, vepa4 85, vepa-v3 1, v5 83)
+- action=push: NOT performed
+- force-push: no
+- visibility read-back: PRIVATE (unchanged)
+- verifier: not run (nothing pushed)
+
+## 2026-11-04 22:13 AEST — Engineer / gemquota — vepa-consolidation all-versions corpus push
+- bot=Engineer account=gemquota repo=gemquota/vepa-consolidation
+- trigger: Gem yes 22:05 AEST 4 Nov; Safeguard cleared 4 gitleaks hits as FALSE POSITIVES (narrativePanel.js:26 localStorage key; worldParams.js:148 slider key; nothing to rotate)
+- precondition: fingerprint-only .gitleaksignore on main (3 unique fingerprints covering 4 hits); gitleaks re-run → 0 findings on all donors + consolidation main
+- action=push (normal, no force):
+  - main 2100e4b..87ce7cd (docs corpus map + .gitleaksignore)
+  - tags gemquota/*: **48** new (47 upstream + tip gemquota/v9.1.2)
+  - tags dayneK/*: **12** new
+  - branches: gemquota/master, dayneK/main, local/codey-complete-plans, gemquota/vepa4/main, gemquota/vepa-v3/main, dayneK/v5/main (**6** new)
+- force-push: no; deletes: no; visibility/settings: unchanged
+- scans: gitleaks 8.21.2 with .gitleaksignore → 0 leaks (pre-push)
+- visibility read-back: PRIVATE visibility=private isPrivate=true url=https://github.com/gemquota/vepa-consolidation
+- fresh-context verifier (ls-remote vs source SHAs): EXPECTED=66 PASS=66 MISMATCH=0 MISSING=0 OVERALL PASS
+  - gemquota/vepa: 49 refs (47 tags + v9.1.2 tip + master)
+  - DayneK/vepa: 13 refs (12 tags + main)
+  - local codey-complete-plans: 1; vepa4: 1; vepa-v3: 1; DayneK/v5: 1
+- main tip: 87ce7cd83c21ce95c594fd12ff568d6c57263999
+- 2026-11-04 22:38:04 AEST bot=Engineer account=gemquota repo=gemquota/swarm visibility=PUBLIC action=refresh_aborted branch=main note="gitleaks binary missing at /tmp/gitleaks"
+- 2026-11-04 22:38:14 AEST bot=Engineer account=gemquota repo=gemquota/swarm visibility=PUBLIC action=refresh_push branch=main commit=e6c5a9fe4ecf6cfa4ba99e5eef3f2e1baca66043 note="data/ only"
+- 2026-11-04 22:38:26 AEST bot=Engineer repo=gemquota/swarm action=visibility_readback visibility=public commit=e6c5a9f note="post-push API readback; rerun used GITLEAKS_BIN=/usr/local/bin/gitleaks (v8.21.2) after /tmp/gitleaks was missing"
+
+## 2026-11-05 01:47:12 AEST (Australia/Brisbane) — Engineer / gemquota — vepa-next 9.3.5 super-parity rebuild
+- bot=Engineer account=gemquota repo=gemquota/vepa-next
+- trigger: Gem Ye t138u 5 Nov 2026; Codey I-vepa-next-935-super-parity
+- action=push (normal, no force): branch `rebuild/v9.3.5-super-parity` @ 8af053599f83324828b256c4e12510bcc4e3bd25
+- action=pr_create: https://github.com/gemquota/vepa-next/pull/31 (base=main; **not merged**)
+- base product: DayneK/vepa v9.3.5 / consolidation `dayneK/v9.3.5` / SHA d24301cdcf95a6142ffa98d9808dffaacb1d8523
+- SIM layer: `sim-foundation/` from prior main @ 6122eb7
+- scans: gitleaks 8.21.2 → 0 leaks (no-git + origin/main..); personal/BIE/gambling **data** heuristic → 0 blocks (intent.md prose-only keyword mentions)
+- force-push: no; deletes: no; visibility/settings: unchanged; deploy: no
+- visibility read-back: {"default_branch":"main","html_url":"https://github.com/gemquota/vepa-next","private":false,"visibility":"public"}
+- tests: product 1571/1571 PASS; sim-foundation 254/254 PASS; verifier AC-1..8 PASS, AC-9 post-push
+
+## 2026-11-05 07:48 AEST — Engineer — append-only corrections (originals left above unchanged)
+- 2026-11-05 07:48 AEST CORRECTION bot=Engineer ref="2026-11-04 22:04 AEST — disable GitHub Pages on gemquota/md", line "Safeguard was told; R-057's dry run covered the effect": Safeguard's R-057 report to Engineer (7:53am AEST 4 Nov) predicted the effect ("Turning Pages off removes the site but not the public repo"), and the read-back (Pages API 404, repo still PUBLIC) matched it; Safeguard says no retrospective dry run is needed (RR-079). Arbiter's R-059 holds that a dedicated Safeguard dry run under v002's settings row was still required. The phrase "R-057's dry run covered the effect" is withdrawn as overstated. Pages stays off; Safeguard has been asked to confirm.
+- 2026-11-05 07:48 AEST CORRECTION bot=Engineer ref="2026-11-04 22:10 AEST — vepa-consolidation all-versions PUSH BLOCKED", lines "(Safekeeper owns secrets)" and "for Safekeeper": the secrets owner is Safeguard, not Safekeeper (Safekeeper is retired). Read both as Safeguard.
+- 2026-11-05 07:48 AEST CORRECTION bot=Engineer ref="## 2026-11-04 ~21:08 AEST, Engineer: gvmw daily auto-sync" (and the Engineer.md note "about 9:08pm"): the stamp is later than the actual write. Commit 1cf0ed1475356bb971d0c017a7a59541131a35ac is dated 2026-11-04 21:05:08 +1000 (git log in _repo-sync/gvmw.tmp), and the note was written 21:05:42 AEST (assessments/2026-11-05.md check 7). Corrected stamp: 2026-11-04 21:05 AEST.
+- 2026-11-05 07:50 AEST — Engineer — approvals/2026-11-04-gem-direct-words.md: verification addendum (a)/(b) VERIFIED from Engineer chat; Safeguard R-059 after-the-fact check passed (RR-079). No GitHub write.

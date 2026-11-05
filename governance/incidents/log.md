@@ -59,3 +59,15 @@ Closed by Mender on Scrutineer's evidence (reviews/2026-11-04.md): scores ran on
 Author: P1 (Ops) Mender (c8401a53-136d-45f3-9e2d-e423ccdd08ac).
 
 Still open. The box restarted again overnight (uptime from 1:31:41am 4 Nov). The scheduler process (pid 93405) is present but ps shows a start of 3:49:39am, and watchdog/scheduler.log has no line after 3 Nov 11:05:53am, so the 3 Nov 9:30pm, 4 Nov 2:00am and 4 Nov 9:30am slots were all missed. box-heartbeat/heartbeat.txt still reads 2026-10-22T11:30:06Z. The in-box scheduler is not surviving restarts or freezes. Next step: Gem's call on keeping or retiring it and on an outside heartbeat (Safeguard to review that); Engineer told of the 9:30am miss. Proposal deterministic-checks-v003 (check 11: Mender detects, Engineer restarts) waits on Gem. Scrutineer or Gem closes.
+
+### INC-011 update, 5 Nov 2026 7:47am (Mender, from Scrutineer reviews/2026-11-05.md and Engineer 4 Nov digest)
+Partial recovery: 2:00am 5 Nov snapshot ran; 4 Nov 9:30pm slot missed; heartbeat still 22 Oct; box restart about 7:39pm 4 Nov. Root cause per Engineer: box freezes span slot windows, and the 15-minute catch-up skips silently. Remains open pending Gem decision.
+
+## INC-011 update, 5 Nov 2026, about 10:53am AEST
+
+Author: P1 (Ops) Mender (c8401a53-136d-45f3-9e2d-e423ccdd08ac).
+
+Still open, with new evidence against the freeze explanation. The 5 Nov 9:30am watchdog/heartbeat slot left no line in watchdog/scheduler.log (last line: 2:00am snapshot) and box-heartbeat/heartbeat.txt still reads 2026-10-22T11:30:06Z. But the box has been up since 10:27:40pm 4 Nov and scheduler pid 93405 has run continuously since 12:45:38am 5 Nov (ps elapsed 10h07m at 10:52am). The 2:00am slot fired in that same process, so the 9:30am slot failing points to a fault in the 9:30am/heartbeat path itself (Scrutineer's conflict 2 notes heartbeat.sh still uses `gh auth token`, banned by RR-076), not only to freezes. Engineer asked to check. Gem's keep-or-retire call and deterministic-checks-v003 still outstanding. Scrutineer or Gem closes. Backup: `log.md.bak-20261105-1050`.
+
+### INC-011 correction, 5 Nov 2026 10:54am (Mender, from Engineer read-only check 10:55am)
+Corrects the 10:50 entry: the 9:30am miss is not shown to be a heartbeat.sh fault. The scheduler logs its watchdog line before calling any script, and that line never appeared, so the loop body did not run in 09:30-09:44. ps elapsed (10h07m vs 3 Nov 11:05:53 start; boot 22:27 4 Nov) shows the process was carried across a suspend/restore. No /workspace file changed 09:20-09:50. Most likely cause: box suspended across the window plus no catch-up after thaw (not directly provable; no host suspend log). heartbeat.sh line 7 gh auth token (RR-076) is a separate issue. Still open pending Gem.

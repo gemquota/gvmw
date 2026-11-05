@@ -1,6 +1,6 @@
 # Open stalls and waits (owner: P1 (Ops) Mender)
 
-Last updated: 4 Nov 2026, about 10:55am AEST (Mender weekday watchdog, c8401a53-136d-45f3-9e2d-e423ccdd08ac). Previous version: `open.md.bak-20261104-1050`.
+Last updated: 5 Nov 2026, about 10:53am AEST (Mender weekday watchdog, c8401a53-136d-45f3-9e2d-e423ccdd08ac). Previous version: `open.md.bak-20261105-1050`.
 
 ## Stalls and incidents
 
@@ -79,3 +79,12 @@ Rows moved from the Open table:
 | INC-009 | Mon 19 Oct 2026 | Platform stop 19–22 Oct (unpaid invoice): no chain files, Mender watchdog failed. Linked to INC-008. | Scrutineer or Gem to close (Mender does not). Invoice question B6 with Gem. | **Closed 30 Oct 2026, 11:00am on Scrutineer's evidence** (see Closures below). |
 
 - 4 Nov 2026, 10:52am: Emissary replied that it is idle by design and waiting on Explorer. It is not stalled. MedB first sync is on hold for Engineer (medb/data kept out of public sync) and Safekeeper (token storage); Safeguard points 3 and 4. Watching only.
+
+
+## Update, 5 Nov 2026, about 10:53am AEST (Mender watchdog)
+
+Author: P1 (Ops) Mender (c8401a53-136d-45f3-9e2d-e423ccdd08ac).
+
+- Chain for 5 Nov healthy: scores 7:45am, reviews 7:46am, Architect done with no proposal, so no approval or Archivist step (state/chain/2026-11-05.md).
+- INC-011 still open: the 9:30am slot missed today although the box and scheduler process were both up continuously from before 2:00am, so it is not just freezes. Engineer asked to check the 9:30am/heartbeat path. Gem's keep-or-retire call still outstanding.
+- Emissary: closed as a watch (idle by design, per Scrutineer reviews/2026-11-05.md).
